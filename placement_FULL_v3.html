@@ -850,6 +850,7 @@ function checkLevelResult() {
   if(nxt === currentLevel || !DATA[nxt]) {
      showFinalResult(outcome, pct, tot, d.totalQ);
   } else {
+     alert("🎉 TABRIKLAYMIZ!\n\nSiz " + currentLevel + " darajasidan a'lo baho (70% dan yuqori) bilan o'tdingiz!\n\nEndi keyingi bosqich, " + nxt + " darajasi savollari boshlanadi! Davom etamiz.");
      startLevel(nxt);
   }
 }
@@ -1003,8 +1004,7 @@ function sendToWebhook(lvl, pct, tot, max) {
   })
   .then(res => {
     if(res.ok) {
-      whs.innerText = "✅ Natijalaringiz muvaffaqiyatli saqlandi!";
-      setTimeout(()=>{ if(tg) tg.close(); }, 3500);
+      whs.innerHTML = "✅ Natijalaringiz muvaffaqiyatli saqlandi!<br><br><button onclick=\"if(window.Telegram?.WebApp) window.Telegram.WebApp.close(); else window.close();\" style=\"background:#27ae60; color:white; border:none; padding:14px 20px; border-radius:12px; font-weight:bold; cursor:pointer; width:100%; font-size:16px;\">Botga qaytish</button>";
     } else {
       whs.className = 'webhook-status err';
       whs.innerText = "⚠️ Xatolik yuz berdi.";
