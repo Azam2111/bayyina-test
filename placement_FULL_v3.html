@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bayyina Arabic — Daraja Testi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+/* RESET & BASE */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100vh;color:#1a1a1a}
+.watermark-logo {position:fixed;bottom:20px;right:20px;width:120px;opacity:0.12;z-index:1;pointer-events:none}
+.watermark-text {position:fixed;bottom:20px;right:20px;font-size:24px;font-weight:800;color:#000;opacity:0.05;text-align:right;line-height:1.2;user-select:none;z-index:1;pointer-events:none}
+
+/* LANDING */
+#landing{min-height:100vh;background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 50%,#0f0f14 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;position:relative;z-index:2}
+.land-logo{font-size:48px;margin-bottom:8px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.land-title{font-size:28px;font-weight:800;color:white;text-align:center;line-height:1.2;margin-bottom:6px}
+.land-title span{background:linear-gradient(135deg,#f5c842,#f08a2a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.land-sub{font-size:14px;color:rgba(255,255,255,.55);text-align:center;margin-bottom:24px;line-height:1.6}
+.land-cards{display:flex;justify-content:center;max-width:400px;width:100%;margin:0 auto 20px}
+.lcard{border-radius:14px;padding:24px;cursor:pointer;border:2px solid transparent;transition:all .2s;text-align:center;width:100%}
+.lcard:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.3)}
+.lcard-icon{font-size:36px;margin-bottom:10px}
+.lcard-lvl{font-size:24px;font-weight:800;color:white;margin-bottom:5px}
+.lcard-qs{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:12px}
+
+/* WARNING BANNER */
+.warning-box {background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.4);border-radius:12px;padding:16px;max-width:400px;width:100%;text-align:center;margin-bottom:24px}
+.warning-box h4 {color:#e74c3c;font-size:15px;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:6px}
+.warning-box p {color:rgba(255,255,255,0.8);font-size:13px;line-height:1.5}
+.warning-box p strong {color:white}
+
+/* TEST WRAPPER */
+#testWrap{display:none;background:#f4f1ec;min-height:100vh;position:relative;z-index:2;padding-bottom:60px}
+.hdr{background:#1a1a1a;color:white;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;gap:8px}
+.hdr-left h1{font-size:14px;font-weight:700}
+.hdr-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.level-pill{font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px;color:white;flex-shrink:0}
+
+/* TIMER */
+.timer-badge{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.18);border-radius:10px;padding:4px 9px;font-size:14px;font-weight:800;color:white;font-variant-numeric:tabular-nums;transition:all .4s}
+.timer-badge.warn{background:rgba(245,200,66,.15);border-color:rgba(245,200,66,.5);color:#f5c842}
+.timer-badge.danger{background:rgba(192,65,90,.25);border-color:#c0415a;color:#ff6b8a;animation:timerPulse .8s infinite}
+@keyframes timerPulse{0%,100%{box-shadow:0 0 0 0 rgba(192,65,90,.4)}50%{box-shadow:0 0 0 6px rgba(192,65,90,0)}}
+
+/* SEC NAV */
+.sec-nav{background:white;border-bottom:1px solid #e0d8cc;display:flex;overflow-x:auto;gap:0;position:sticky;top:43px;z-index:99}
+.sn-item{padding:10px 13px;font-size:12px;font-weight:500;color:#888;border-bottom:3px solid transparent;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s}
+.sn-item.active{color:#1a1a1a;border-bottom-color:#1a1a1a}
+.sn-item.done{color:#27ae60}
+
+/* PROGRESS BAR */
+.gbar-wrap{background:white;padding:7px 14px;border-bottom:1px solid #e0d8cc;display:flex;align-items:center;gap:10px}
+.gbar{flex:1;height:5px;background:#e8e0d0;border-radius:3px;overflow:hidden}
+.gbar-fill{height:100%;background:#27ae60;border-radius:3px;transition:width .35s}
+.gbar-txt{font-size:11px;color:#666;font-weight:600;min-width:45px;text-align:right}
+
+/* MAIN CONTENT */
+.q-container {padding:14px;max-width:680px;margin:0 auto;animation:fadeIn 0.3s ease}
+@keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.sec-header{margin-bottom:14px}
+.sec-header h2{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
+.sec-header p{font-size:12.5px;color:#666;line-height:1.5}
+
+/* TEXT BOX */
+.text-box{background:white;border-radius:10px;padding:14px;margin-bottom:13px;border:.5px solid #ddd}
+.tbh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.tar{font-size:15px;direction:rtl;line-height:2.1;color:#1a1a1a}
+.tkw{font-size:12px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid #f0ede8;line-height:1.6}
+
+/* AUDIO PLAYER */
+.audio-player{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:14px;padding:16px 18px;margin-bottom:14px;border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 20px rgba(0,0,0,.3)}
+.ap-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:12px}
+.ap-main{display:flex;align-items:center;gap:12px}
+.ap-play-btn{width:46px;height:46px;min-width:46px;border-radius:50%;background:linear-gradient(135deg,#c0415a,#8b1a3a);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;color:white;box-shadow:0 4px 14px rgba(192,65,90,.4);transition:all .2s}
+.ap-play-btn:disabled{background:rgba(255,255,255,.07);cursor:not-allowed;box-shadow:none;color:rgba(255,255,255,.25)}
+.ap-info{flex:1}
+.ap-progress-wrap{position:relative;height:4px;background:rgba(255,255,255,.1);border-radius:2px;margin-bottom:7px;cursor:pointer}
+.ap-progress-fill{height:100%;background:linear-gradient(90deg,#c0415a,#f5c842);border-radius:2px;transition:width .3s linear;width:0%}
+.ap-times{display:flex;justify-content:space-between;font-size:10px;color:rgba(255,255,255,.35)}
+.ap-attempts{display:flex;align-items:center;gap:6px;margin-top:11px;font-size:12px;color:rgba(255,255,255,.55)}
+.ap-attempt-dots{display:flex;gap:4px}
+.ap-dot{width:9px;height:9px;border-radius:50%;background:#c0415a;transition:all .3s}
+.ap-dot.used{background:rgba(255,255,255,.12)}
+.ap-blocked-msg{margin-top:10px;font-size:11px;font-weight:600;color:#ff6b8a;display:none;text-align:center;padding:7px;background:rgba(192,65,90,.1);border-radius:7px}
+
+/* Q CARD */
+.q-card{background:white;border-radius:10px;padding:16px;margin-bottom:9px;border:.5px solid #e0d8cc}
+.q-num{font-size:11px;color:#888;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
+.q-ar{font-size:24px;direction:rtl;text-align:center;padding:10px 0;color:#1a1a1a;font-weight:500;line-height:1.5}
+.q-text{font-size:14.5px;color:#2a2a2a;line-height:1.5;white-space:pre-line;font-weight:600;margin-bottom:12px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{border:2px solid #e8e0d0;border-radius:10px;padding:12px 14px;font-size:14.5px;cursor:pointer;display:flex;align-items:center;gap:10px;text-align:left;background:white;width:100%;transition:all .15s;color:#2a2a2a;white-space:pre-line;font-weight:500}
+.opt:hover{background:#fdfcfb;border-color:#ccc}
+.opt.ok{background:#e8f9ee!important;border-color:#27ae60!important;color:#1a6b3a!important}
+.opt.no{background:#fce8e8!important;border-color:#e74c3c!important;color:#8b1a1a!important}
+.ltr{width:24px;height:24px;min-width:24px;border-radius:50%;background:#f0ede8;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.ok .ltr{background:#27ae60;color:white}
+.no .ltr{background:#e74c3c;color:white}
+.opts.locked .opt{pointer-events:none}
+
+/* RESULTS */
+#resultScreen{display:none;background:linear-gradient(135deg,#0f0f14,#1a1a2e);min-height:100vh;padding:24px 16px;position:relative;z-index:2}
+.res-inner{max-width:520px;margin:0 auto}
+.res-card{background:white;border-radius:18px;padding:28px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.res-tag{font-size:12px;color:#888;margin-bottom:8px}
+.res-lvl{font-size:64px;font-weight:800;line-height:1;margin:8px 0 4px}
+.res-name{font-size:20px;font-weight:700;margin-bottom:4px}
+.res-pct{font-size:36px;font-weight:800;color:#333;margin:8px 0}
+.res-total{font-size:13px;color:#666;margin-bottom:18px}
+.bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
+.bd-item{border-radius:10px;padding:13px;text-align:left}
+.bd-lbl{font-size:11px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px}
+.bd-num{font-size:22px;font-weight:800;color:white}
+.res-desc{font-size:14px;font-weight:600;color:#1a6b3a;line-height:1.65;text-align:center;padding:16px;background:#e8f9ee;border:1px solid #27ae60;border-radius:10px;margin:18px 0}
+.bot-action{background:#1a1a1a;border-radius:10px;padding:14px;font-size:12px;color:rgba(255,255,255,.8);line-height:1.7;text-align:left}
+.webhook-status{font-size:12px;margin-top:10px;padding:8px 12px;border-radius:8px;background:rgba(39,174,96,.1);color:#27ae60;display:none}
+.webhook-status.err{background:rgba(192,65,90,.1);color:#c0415a}
+
+/* TIME UP */
+#timeUpOverlay{display:none;position:fixed;inset:0;z-index:9999;background:rgba(10,10,16,.97);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:32px}
+#timeUpOverlay.show{display:flex}
+.tuo-icon{font-size:72px;margin-bottom:20px;animation:pulse 1.5s infinite}
+.tuo-title{font-size:28px;font-weight:800;color:white;margin-bottom:10px}
+.tuo-sub{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:28px}
+</style>
+</head>
+<body>
+
+<!-- WATERMARK LOGO -->
+<!-- Agar rasmli logotip bo'lsa mana shu <img> dan foydalaning va src ga URL qo'ying -->
+<!-- <img class="watermark-logo" src="RASM_URL_SHU_YERGA.png"> -->
+<div class="watermark-text">
+  BAYYINA<br><span style="font-size:12px">Onlayn arab tili akademiyasi</span>
+</div>
+
+<div id="timeUpOverlay">
+  <div class="tuo-icon">⏰</div>
+  <div class="tuo-title">Vaqt tugadi!</div>
+  <div class="tuo-sub">Javoblaringiz yakunlandi.<br>Natijalaringiz yuborilmoqda...</div>
+</div>
+
+<div id="landing">
+  <div class="land-logo">🎯</div>
+  <h1 class="land-title">Bayyina Arabic<br><span>Daraja Testi</span></h1>
+  <p class="land-sub">Arab tilingiz darajasini aniqlang — 4 bo'lim:<br>Mufradat · Qovaid · Qiroat · Istima'</p>
+  
+  <div class="warning-box">
+    <h4>⚠️ Diqqat! Test 60 daqiqa davom etadi.</h4>
+    <p>Testni <strong>bitta o'tirishda</strong> to'xtovsiz ishlab tugatishingiz shart. Javobni belgilagach <strong>orqaga qaytish imkoni yo'q</strong>.</p>
+  </div>
+
+  <div class="land-cards">
+    <div class="lcard" style="background:linear-gradient(135deg,#1a6a35,#27ae60)" onclick="startAdaptiveTest()">
+      <div class="lcard-icon">🚀</div>
+      <div class="lcard-lvl">Tushundim, Boshlash</div>
+      <div class="lcard-qs">Test A0 dan C1 gacha davom etishi mumkin</div>
+    </div>
+  </div>
+</div>
+
+<div id="testWrap">
+  <div class="hdr">
+    <div class="hdr-left">
+      <h1>Bayyina Arabic Test</h1>
+    </div>
+    <div class="hdr-right">
+      <span class="timer-badge" id="timerBadge"><span>⏱</span><span id="timerDisplay">60:00</span></span>
+      <div class="level-pill" id="lvlPill">A0</div>
+    </div>
+  </div>
+
+  <div class="sec-nav">
+    <div class="sn-item" id="nav0">📚 Mufradat</div>
+    <div class="sn-item" id="nav1">📐 Qovaid</div>
+    <div class="sn-item" id="nav2">📖 Qiroat</div>
+    <div class="sn-item" id="nav3">🎧 Istima'</div>
+  </div>
+
+  <div class="gbar-wrap">
+    <div class="gbar"><div class="gbar-fill" id="gbarFill" style="width:0%"></div></div>
+    <div class="gbar-txt" id="gbarTxt">0/0</div>
+  </div>
+
+  <div class="q-container">
+    <div class="sec-header">
+      <h2 id="secTitle">...</h2>
+      <p id="secSub">...</p>
+    </div>
+
+    <!-- Bu yerda bitta savol yoki matn + savol chiqadi -->
+    <div id="questionBody"></div>
+  </div>
+</div>
+
+<!-- AUDIO CONTAINER YASHIRIN HOLDA -->
+<div id="audioContainer" style="display:none;">
+  <div class="audio-player">
+    <div class="ap-title">🎧 Tinglang (Faqat 2 marta)</div>
+    <div class="ap-main">
+      <button class="ap-play-btn" id="apPlayBtn" onclick="toggleAudio()">▶</button>
+      <div class="ap-info">
+        <div class="ap-progress-wrap" onclick="seekAudio(event)">
+          <div class="ap-progress-fill" id="apProgress"></div>
+        </div>
+        <div class="ap-times">
+          <span id="apCurr">0:00</span>
+          <span id="apDur">0:00</span>
+        </div>
+      </div>
+    </div>
+    <div class="ap-attempts">
+      <span>Urinishlar:</span>
+      <div class="ap-attempt-dots">
+        <div class="ap-dot" id="dot1"></div>
+        <div class="ap-dot" id="dot2"></div>
+      </div>
+    </div>
+    <div class="ap-blocked-msg" id="apBlockedMsg">Audio limit tugadi. Savollarga javob bering.</div>
+  </div>
+</div>
+
+<div id="resultScreen">
+  <div class="res-inner">
+    <div class="res-card" id="resCard"></div>
+  </div>
+</div>
+
+<script>
+// --- SETTINGS ---
+const WEBHOOK_URL = 'https://hook.us2.make.com/ekg9971ofyu11lfw8jxrf98awh819y2b';
+const AUDIO_URLS = {
+  A0: 'https://AUDIO_HOST.com/bayyina/a0_istima.mp3',  // ← A0 daraja audio
+  A1: 'https://AUDIO_HOST.com/bayyina/a1_istima.mp3',  // ← A1 daraja audio
+  A2: 'https://AUDIO_HOST.com/bayyina/a2_istima.mp3',  // ← A2 daraja audio
+  B1: 'https://AUDIO_HOST.com/bayyina/b1_istima.mp3',  // ← B1 daraja audio
+  B2: 'https://AUDIO_HOST.com/bayyina/b2_istima.mp3',  // ← B2 daraja audio
+  C1: 'https://AUDIO_HOST.com/bayyina/c1_istima.mp3',  // ← C1 daraja audio
+};
+const TIMER_DURATION = 60 * 60; // 60 mins
+
+// --- DATA ---
+const DATA = {
+
+// ─────────────────────────────── A0 ───────────────────────────────
+A0: {
+  color:'#27ae60', pillBg:'#27ae60',
+  gbarColor:'#1a1a1a',
+  totalQ: 29,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'6 ta darsdan tanlangan asosiy so\'zlar. Har bir so\'z 4 ta variantdan to\'g\'risini tanlang.',
+  qovTitle:'Grammatika testi — 13 ta savol',
+  qovSub:'Arab tili grammatikasi asosiy qoidalari. To\'g\'ri variantni belgilang.',
+  qirTitle:'Matnni o\'qib savollarga javob bering — 3 ta savol',
+  qirSub:'Quyidagi matnni diqqat bilan o\'qing, so\'ng savollarga javob bering.',
+  istTitle:'Audio matn bo\'yicha savollar — 3 ta savol',
+  istSub:'Quyidagi transkriptni o\'qing (botda audio yuboriladi).',
+  qirText:{
+    title:'📄 O\'quv matni — Diqqat bilan o\'qing',
+    titleColor:'#8b4000',
+    ar:'اِسْمِي عَلِيٌّ. أَنَا مُهَنْدِسٌ جَدِيدٌ. أَسْكُنُ فِي بَيْتٍ كَبِيرٍ وَوَاسِعٍ مَعَ عَائِلَتِي. فِي الْبَيْتِ خَمْسُ غُرَفٍ وَمَطْبَخٌ صَغِيرٌ. أَنَا أَذْهَبُ إِلَى الْعَمَلِ صَبَاحًا، وَأَرْجِعُ مَسَاءً. عِنْدِي صَدِيقٌ، اِسْمُهُ حَسَنٌ. هُوَ طَبِيبٌ نَشِيطٌ. نَحْنُ نَلْتَقِي أَحْيَانًا بَعْدَ الْعَمَلِ فِي الْمَقْهَى. الْحَمْدُ لِلَّهِ، حَيَاتُنَا جَمِيلَةٌ.',
+    kw:'أَسْكُنُ = yashayman · خَمْسُ غُرَفٍ = besh xona · أَرْجِعُ = qaytaman · نَلْتَقِي = uchrashamiz · الْمَقْهَى = kafe · حَيَاتُنَا = hayotimiz',
+    borderColor:'#8b4000'
+  },
+  istText:{
+    title:'🎙 Audio matn transkripti',
+    titleColor:'#c0415a',
+    ar:'عُمَرُ طَالِبٌ فِي الْجَامِعَةِ. هُوَ يَسْكُنُ فِي غُرْفَةٍ صَغِيرَةٍ. عُمَرُ يَقْرَأُ الْكِتَابَ قَبْلَ النَّوْمِ دَائِمًا. وَفِي الصَّبَاحِ، يَشْرَبُ الْقَهْوَةَ مَعَ أَخِيهِ الْكَبِيرِ ثُمَّ يَذْهَبُ إِلَى الدِّرَاسَةِ.',
+    kw:'يَسْكُنُ = yashaydi · قَبْلَ النَّوْمِ = uxlashdan oldin · الْقَهْوَةَ = kofe · أَخِيهِ الْكَبِيرِ = katta akasi · الدِّرَاسَةِ = o\'qish/ta\'lim',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'a0m1',ar:'مَرْحَبًا',q:'Bu iboraning ma\'nosi?',o:['Xayrli tong!','Salom / Xush kelibsiz','Ko\'rishguncha!','Rahmat!'],c:1,f:'مَرْحَبًا — "Salom!" yoki "Xush kelibsiz" ma\'nosida ishlatiladigan tabassum iborasi.'},
+    {id:'a0m2',ar:'مُهَنْدِسٌ',q:'Bu kasbning ma\'nosi?',o:['Shifokor','Savdogar','Muhandis','O\'qituvchi'],c:2,f:'مُهَنْدِسٌ = Muhandis. مُدَرِّسٌ = O\'qituvchi, طَبِيبٌ = Shifokor.'},
+    {id:'a0m3',ar:'أُخْتٌ',q:'Bu so\'zning ma\'nosi?',o:['Aka / Uka','Opa / Singil','O\'g\'il','Qiz'],c:1,f:'أُخْتٌ = Opa yoki Singil. أَخٌ = Aka / Uka.'},
+    {id:'a0m4',ar:'يَذْهَبُ',q:'Bu fe\'lning ma\'nosi (hozirgi zamon)?',o:['Ketmoqda / Ketyapti','Yemoqda','O\'qimoqda','Yozmoqda'],c:0,f:'ذَهَبَ / يَذْهَبُ = Ketmoq. يَقْرَأُ = O\'qimoqda, يَكْتُبُ = Yozmoqda.'},
+    {id:'a0m5',ar:'مَطْبَخٌ',q:'Bu so\'zning ma\'nosi?',o:['Deraza','Uy','Xona','Oshxona'],c:3,f:'مَطْبَخٌ = Oshxona. غُرْفَةٌ = Xona, بَيْتٌ = Uy, نَافِذَةٌ = Deraza.'},
+    {id:'a0m6',ar:'صَبَاحًا',q:'Bu vaqt so\'zining ma\'nosi?',o:['Kechqurun','Kecha','Ertalab','Tushdan keyin'],c:2,f:'صَبَاحًا = Ertalab. مَسَاءً = Kechqurun.'},
+    {id:'a0m7',ar:'وَاسِعٌ',q:'Bu sifatning ma\'nosi?',o:['Kichik','Eski','Yangi','Keng'],c:3,f:'وَاسِعٌ = Keng. صَغِيرٌ = Kichik, كَبِيرٌ = Katta.'},
+    {id:'a0m8',ar:'أُسْبُوعٌ',q:'Bu so\'zning ma\'nosi?',o:['Kun','Hafta','Oy','Yil'],c:1,f:'أُسْبُوعٌ = Hafta. يَوْمٌ = Kun, شَهْرٌ = Oy, سَنَةٌ = Yil.'},
+    {id:'a0m9',ar:'عَادَةً',q:'Bu so\'zning ma\'nosi?',o:['Doim','Ba\'zida','Hech qachon','Odatda'],c:3,f:'عَادَةً = Odatda. دَائِمًا = Doim, أَحْيَانًا = Ba\'zida.'},
+    {id:'a0m10',ar:'جَدٌّ',q:'Bu so\'zning ma\'nosi?',o:['Ota','Amaki','Bobo','Tog\'a'],c:2,f:'جَدٌّ = Bobo. جَدَّةٌ = Buvi, أَبٌ = Ota.'}
+  ],
+  QQ:[
+    {id:'a0q1',q:'Arab tilida so\'z turkumlari (aqsam al-kalam) qaysilar?',o:['اِسْمٌ، فِعْلٌ، حَرْفٌ\n(Ism, Fe\'l, Harf)','اِسْمٌ، فِعْلٌ، صِفَةٌ\n(Ism, Fe\'l, Sifat)','اِسْمٌ، مُبْتَدَأٌ، خَبَرٌ\n(Ism, Mubtada, Xabar)','فِعْلٌ، جُمْلَةٌ، كَلِمَةٌ\n(Fe\'l, Gap, So\'z)'],c:0,f:'Arab tilida uch asosiy so\'z turkumi bor: اِسْمٌ (ot/ism), فِعْلٌ (fe\'l), حَرْفٌ (harf/ko\'makchi).'},
+    {id:'a0q2',q:'Ayol jinsini (muannas) ifodalovchi asosiy harf — تَاء مَرْبُوطَة qaysi?',o:['ة (taa marbutah)','ال (aniqlik harfi)','ون (ko\'plik qo\'shimchasi)','ي (nisbat harfi)'],c:0,f:'ة (Taa marbutah) — ayol jinsi shaklini ifodalovchi asosiy harf. Masalan: مُدَرِّسٌ → مُدَرِّسَةٌ.'},
+    {id:'a0q3',q:'"Sening kitobing" (ayol kishiga nisbatan) arabchada qanday bo\'ladi?',o:['كِتَابُكِ (kitabuki)','كِتَابُكَ (kitabuka)','كِتَابُهَا (kitabuha)','كِتَابِي (kitabi)'],c:0,f:'Ayol kishiga murojaat: ـكِ qo\'shimchasi ishlatiladi. كِتَابُكِ = "Sening kitobing" (ayolga). كِتَابُكَ = erkakka.'},
+    {id:'a0q4',q:'"Uning do\'sti" (erkak kishiga nisbatan) arabchada qanday yoziladi?',o:['صَدِيقُهَا','صَدِيقُهُ','صَدِيقُكَ','صَدِيقِي'],c:1,f:'Erkak uchun egalik qo\'shimchasi ـهُ. صَدِيقُهُ = "Uning do\'sti" (erkak). صَدِيقُهَا = ayol uchun.'},
+    {id:'a0q5',q:'"3 ta talaba qiz" birikmasining to\'g\'ri grammatik shakli qaysi?',o:['ثَلَاثُ طَالِبَاتٍ','ثَلَاثَةُ طَالِبَاتٍ','ثَلَاثُ طُلَّابٍ','ثَلَاثَةُ طُلَّابٍ'],c:0,f:'Arabchada muannas (ayol) uchun son — muzakkar shaklida keladi: ثَلَاثُ (3) + طَالِبَاتٍ (talaba qizlar).'},
+    {id:'a0q6',q:'"Ikki dona kitob" (ikkilik — muthanna shakli) arabchada qanday yoziladi?',o:['كِتَابَانِ (rafʿ holati)','كِتَابَيْنِ (nasb/jarr holati)','كِتَابَاتٌ (ko\'plik)','كُتُبٌ (kasriy ko\'plik)'],c:0,f:'Rafʿ holatida ikkilik shakli ـَانِ qo\'shimchasi bilan: كِتَابَانِ = ikki kitob.'},
+    {id:'a0q7',q:'"Mening mashinam bor" gapida egalikni ifodalash uchun qaysi zarf ishlatiladi?',o:['عِنْدِي (ʿindi)','فِي (fi)','عَلَى (ʿala)','مِنْ (min)'],c:0,f:'عِنْدِي = "menda bor / mening ... bor" ma\'nosini beradi. Masalan: عِنْدِي سَيَّارَةٌ = Mening mashinam bor.'},
+    {id:'a0q8',q:'"U o\'qiyapti" (erkak, hozirgi zamon) fe\'li qaysi?',o:['يَقْرَأُ','تَقْرَأُ','قَرَأَ','أَقْرَأُ'],c:0,f:'Hozirgi zamon, erkak 3-shaxs: يَـ prefiksi. يَقْرَأُ = u (erkak) o\'qiyapti. تَقْرَأُ = u (ayol) o\'qiyapti.'},
+    {id:'a0q9',q:'"Ular (erkaklar) ketyaptilar" jumlasi arabchada qanday bo\'ladi?',o:['يَذْهَبُونَ','تَذْهَبُونَ','يَذْهَبَانِ','هُمْ ذَهَبُوا'],c:0,f:'Ko\'plik erkak, hozirgi zamon: يَـ + ـُونَ. يَذْهَبُونَ = ular (erkaklar) ketyaptilar.'},
+    {id:'a0q10',q:'"Kitob stolning ustida" gapida "ustida" ma\'nosini beradigan harfi jar qaysi?',o:['عَلَى','فِي','مِنْ','إِلَى'],c:0,f:'عَلَى = ustida, ustiga. فِي = ichida. مِنْ = dan. إِلَى = ga/tomonga.'},
+    {id:'a0q11',q:'"Uyning oldida" makon zarfi birikmasi arabchada qanday bo\'ladi?',o:['أَمَامَ الْبَيْتِ','فِي الْبَيْتِ','عَلَى الْبَيْتِ','مِنَ الْبَيْتِ'],c:0,f:'أَمَامَ = oldida, qarshisida. أَمَامَ الْبَيْتِ = uyning oldida.'},
+    {id:'a0q12',q:'كَمْ (Nechta?) so\'rog\'idan keyin keladigan ism qanday holatda kelishi kerak?',o:['Birlik, nakirah (مُفْرَد نَكِرَة)','Ko\'plik','Ikkilik','Ma\'rifah (ال bilan)'],c:0,f:'كَمْ dan keyin ism birlik nakirah holida keladi: كَمْ كِتَابًا؟ (Nechta kitob?)'},
+    {id:'a0q13',q:'"Ular (ayollar) yozyaptilar" fe\'lining to\'g\'ri shakli qaysi?',o:['يَكْتُبْنَ','يَكْتُبُونَ','تَكْتُبُونَ','تَكْتُبَانِ'],c:0,f:'Ko\'plik ayol, hozirgi zamon: يَـ + ـْنَ. يَكْتُبْنَ = ular (ayollar) yozyaptilar.'}
+  ],
+  RQ:[
+    {id:'a0r1',q:'Matnda Alining kasbi nima?',o:['Muallim — مُدَرِّسٌ','Muhandis — مُهَنْدِسٌ','Shifokor — طَبِيبٌ','Savdogar — تَاجِرٌ'],c:1,f:'Matnda: أَنَا مُهَنْدِسٌ جَدِيدٌ — "Men yangi muhandisман."'},
+    {id:'a0r2',q:'Alining uyida nechta xona bor?',o:['3 ta xona','4 ta xona','5 ta xona','6 ta xona'],c:2,f:'Matnda: فِي الْبَيْتِ خَمْسُ غُرَفٍ — "Uyda besh xona bor." خَمْسُ = besh.'},
+    {id:'a0r3',q:'Ali va do\'sti Hasan qachon va qaerda uchrashadilar?',o:['Har ertalab universitetda','Ishdan keyin ba\'zida kafeda','Har kechqurun uyida','Har hafta masjidda'],c:1,f:'Matnda: نَلْتَقِي أَحْيَانًا بَعْدَ الْعَمَلِ فِي الْمَقْهَى — "Ishdan keyin ba\'zan kafeda uchrashamiz."'}
+  ],
+  IQ:[
+    {id:'a0i1',q:'Umar qayerda ta\'lim oladi?',o:['Maktabda — فِي الْمَدْرَسَةِ','Kollejda — فِي الْكُلِّيَّةِ','Universitetda — فِي الْجَامِعَةِ','Uyda — فِي الْبَيْتِ'],c:2,f:'Matnda: عُمَرُ طَالِبٌ فِي الْجَامِعَةِ — "Umar universitetda talaba."'},
+    {id:'a0i2',q:'Umar kitobni qachon o\'qiydi?',o:['Ertalab darsga ketishdan oldin','Uxlashdan oldin — doim','Kechqurun — ba\'zida','Tushdan keyin'],c:1,f:'Matnda: يَقْرَأُ الْكِتَابَ قَبْلَ النَّوْمِ دَائِمًا — "Doim uxlashdan oldin kitob o\'qiydi."'},
+    {id:'a0i3',q:'Umar ertalab kim bilan kofe ichadi?',o:['Do\'sti bilan','Otasi bilan','Katta akasi bilan','O\'zi yolg\'iz'],c:2,f:'Matnda: يَشْرَبُ الْقَهْوَةَ مَعَ أَخِيهِ الْكَبِيرِ — "Katta akasi bilan kofe ichadi."'}
+  ],
+  levels:[
+    {max:49,lvl:'A0',name:"Boshlang'ich",color:'#27ae60',desc:"Siz arabcha asoslarini endilikda o\'rganayapsiz. A0 darslari siz uchun to\'g\'ri tanlov! Lug\'at va grammatika asoslaridan boshlaymiz.",next:'A0',action:'📚 A0 darslari ochiladi → 1-bolim boshlanadi'},
+    {max:69,lvl:'A0+',name:"Kuchaytirilgan boshlang'ich",color:'#3d6dbf',desc:"Siz A0 darajasining bir qismini bilasiz. Ayrim mavzularni mustahkamlash zarur. A0/A1 oralig\'i siz uchun mos.",next:'A0',action:'📚 A0 darslari ochiladi'},
+    {max:100,lvl:'A1',name:'Elementar',color:'#8b4000',desc:"Barakalloh! Siz A0 darajasini muvaffaqiyatli topshirdingiz. A1 darslari siz uchun ochiladi!",next:'A1',action:'✅ A1 darslari ochiladi → 1-dars PDF + Audio yuboriladi'}
+  ]
+},
+
+// ─────────────────────────────── A1 ───────────────────────────────
+A1: {
+  color:'#3d8bcd', pillBg:'#3d8bcd',
+  gbarColor:'#3d8bcd',
+  totalQ: 29,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'60 ta asosiy A1 so\'zidan tanlab olingan. To\'g\'ri ma\'noni belgilang.',
+  qovTitle:'Grammatika testi — 12 ta savol',
+  qovSub:'A1 darajasi grammatik qoidalari: jinsi, son, fe\'l shakllari va gap tuzilishi.',
+  qirTitle:'Matnni o\'qib savollarga javob bering — 3 ta savol',
+  qirSub:'Quyidagi matnni diqqat bilan o\'qing, so\'ng savollarga javob bering.',
+  istTitle:'Audio matn bo\'yicha savollar — 4 ta savol',
+  istSub:'Quyidagi audio matnni tinglang (botda audio yuboriladi).',
+  qirText:{
+    title:'📄 الْبَرْنَامَجُ الْيَوْمِيُّ لِأَحْمَدَ — Ahmad\'s Daily Programme',
+    titleColor:'#8b4000',
+    ar:'يَسْتَيْقِظُ أَحْمَدُ مُبَكِّرًا فِي السَّاعَةِ الخَامِسَةِ صَبَاحًا. يُصَلِّي الفَجْرَ فِي الْمَسْجِدِ مَعَ الْجَمَاعَةِ، ثُمَّ يَقْرَأُ الْقُرْآنَ الْكَرِيمَ فِي بَيْتِهِ. فِي السَّاعَةِ السَّابِعَةِ، يَتَنَاوَلُ أَحْمَدُ الْفَطُورَ مَعَ زَوْجَتِهِ وَابْنَتِهِ فِي الْمَطْبَخِ، وَيَشْرَبُ الشَّايَ الدَّافِئَ. يَذْهَبُ أَحْمَدُ إِلَى مَعْهَدِ اللُّغَاتِ فِي السَّاعَةِ الثَّامِنَةِ صَبَاحًا بِالسَّيَّارَةِ، لِأَنَّهُ يَعْمَلُ هُنَاكَ مُعَلِّمًا لِلُّغَةِ الْعَرَبِيَّةِ. يَرْجِعُ إِلَى الْبَيْتِ بَعْدَ صَلَاةِ الْعَصْرِ، وَيَجْلِسُ مَعَ أُسْرَتِهِ سَعِيدًا.',
+    kw:'مُبَكِّرًا = erta · يُصَلِّي = namoz o\'qiydi · الجَمَاعَةِ = jamoa · يَتَنَاوَلُ = yeydi (rasmiy) · الفَطُورَ = nonushta · الدَّافِئَ = iliq · مَعْهَدُ اللُّغَاتِ = Til instituti · أُسْرَتِهِ = oilasi',
+    borderColor:'#8b4000'
+  },
+  istText:{
+    title:'🎙 Audio matn transkripti — نَادِيَةُ الْمُعَلِّمَةُ',
+    titleColor:'#c0415a',
+    ar:'نَادِيَةُ مُعَلِّمَةٌ فِي الْمَدْرَسَةِ. هِيَ تَسْتَيْقِظُ فِي السَّاعَةِ السَّادِسَةِ صَبَاحًا. تَتَنَاوَلُ نَادِيَةُ الْفُطُورَ فِي الْمَطْبَخِ — تَشْرَبُ شَايًا دَافِئًا وَتَأْكُلُ خُبْزًا. تَذْهَبُ إِلَى الْمَدْرَسَةِ بِالْحَافِلَةِ، لِأَنَّ الْجَوَّ بَارِدٌ الْيَوْمَ. هِوَايَةُ نَادِيَةَ الْقِرَاءَةُ — تَقْرَأُ كُتُبًا كَثِيرَةً فِي الْمَكْتَبَةِ. أَبُوهَا طَيَّارٌ مَشْهُورٌ، وَأُمُّهَا تَعْمَلُ فِي شَرِكَةٍ كَبِيرَةٍ.',
+    kw:'تَتَنَاوَلُ = yeydi · خُبْزًا = non · دَافِئًا = iliq · مَشْهُورٌ = mashhur · شَرِكَةٍ = kompaniya',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'a1m1',ar:'جَوٌّ',q:'Bu so\'zning ma\'nosi?',o:['Osmon','Ob-havo','Yomg\'ir','Soat'],c:1,f:'جَوٌّ = Ob-havo. سَمَاءٌ = Osmon, مَطَرٌ = Yomg\'ir.'},
+    {id:'a1m2',ar:'جَوَازُ سَفَرٍ',q:'Bu ibora nima?',o:['Samolyot','Poyezd','Pasport','Sayohat'],c:2,f:'جَوَازُ سَفَرٍ = Pasport. طَائِرَةٌ = Samolyot, قِطَارٌ = Poyezd.'},
+    {id:'a1m3',ar:'مُسْتَشْفَى',q:'Bu so\'zning ma\'nosi?',o:['Dori','Kasalxona','Og\'riq','Shifokor'],c:1,f:'مُسْتَشْفَى = Kasalxona. دَوَاءٌ = Dori, أَلَمٌ = Og\'riq.'},
+    {id:'a1m4',ar:'هِوَايَةٌ',q:'Bu so\'zning ma\'nosi?',o:['Sport','Xobbi / Qiziqish','Futbol','Suzish'],c:1,f:'هِوَايَةٌ = Xobbi. رِيَاضَةٌ = Sport, سِبَاحَةٌ = Suzish.'},
+    {id:'a1m5',ar:'أَثَاثٌ',q:'Bu so\'zning ma\'nosi?',o:['Xona','Krovat','Uy jihozlari','Parda'],c:2,f:'أَثَاثٌ = Uy jihozlari / Mebel. سَرِيرٌ = Krovat, سِتَارَةٌ = Parda.'},
+    {id:'a1m6',ar:'اِمْتِحَانٌ',q:'Bu so\'zning ma\'nosi?',o:['Sinf','Kutubxona','Lug\'at kitobi','Imtihon'],c:3,f:'اِمْتِحَانٌ = Imtihon. صَفٌّ = Sinf, مَكْتَبَةٌ = Kutubxona.'},
+    {id:'a1m7',ar:'طَيَّارٌ',q:'Bu kasbning ma\'nosi?',o:['Muhandis','Direktor','Uchuvchi','Shifokor'],c:2,f:'طَيَّارٌ = Uchuvchi. مُهَنْدِسٌ = Muhandis, مُدِيرٌ = Direktor.'},
+    {id:'a1m8',ar:'سُوقٌ',q:'Bu so\'zning ma\'nosi?',o:['Ko\'ylak','Narx / Qiymat','Bozor','Kiyim'],c:2,f:'سُوقٌ = Bozor. قَمِيصٌ = Ko\'ylak, ثَمَنٌ = Narx.'},
+    {id:'a1m9',ar:'اِسْتَيْقَظَ',q:'Bu fe\'lning ma\'nosi?',o:['Uxlamoq','Uyg\'onmoq','Namoz o\'qimoq','Sayohat qilmoq'],c:1,f:'اِسْتَيْقَظَ = Uyg\'ondi. نَامَ = Uxladi / Uxlamoq.'},
+    {id:'a1m10',ar:'صَلَاةٌ',q:'Bu so\'zning ma\'nosi?',o:['Soat','Avtobus','Namoz','Sport'],c:2,f:'صَلَاةٌ = Namoz. سَاعَةٌ = Soat, حَافِلَةٌ = Avtobus.'}
+  ],
+  QQ:[
+    {id:'a1q1',q:'Muzakkar (erkak jinsi) uchun qaysi ko\'rsatma olmoshi to\'g\'ri ishlatilgan?',o:['هَذِهِ','هَذَا','هُمَا','أَنْتِ'],c:1,f:'هَذَا = Bu (erkak uchun). هَذِهِ = Bu (ayol uchun).'},
+    {id:'a1q2',q:'"مَدْرَسَةٌ" (Maktab) so\'zining ikkilik (مثنى) shakli qaysi?',o:['مَدْرَسَاتٌ','مَدْرَسَتَانِ','مَدْرَسُونَ','مَدَارِسُ'],c:1,f:'مَدْرَسَتَانِ = ikki maktab (rafʿ holati). مَدْرَسَاتٌ = ko\'plik (ayol).'},
+    {id:'a1q3',q:'"Tanaffus vaqti" iborasi arabchada qanday to\'g\'ri ifodalanadi?',o:['حَصَلَ عَلَى دَرَجَةٍ','أَيَّامُ الأُسْبُوعِ','وَقْتُ الاسْتِرَاحَةِ','مَعْهَدُ اللُّغَاتِ'],c:2,f:'وَقْتُ الاسْتِرَاحَةِ = tanaffus vaqti. وَقْتُ = vaqt, اسْتِرَاحَةٌ = tanaffus/dam olish.'},
+    {id:'a1q4',q:'Quyidagi gaplardan qaysi birida fe\'l muzakkar (erkak) jinsida to\'g\'ri ishlatilgan?',o:['يَعْمَلُ أَحْمَدُ فِي الشَّرِكَةِ.','تَعْمَلُ أَحْمَدُ فِي الشَّرِكَةِ.','يَعْمَلُ فَاطِمَةُ فِي المَكْتَبِ.','أَنَا تَعْمَلُ فِي المَسْجِدِ.'],c:0,f:'يَعْمَلُ — erkak 3-shaxs hozirgi zamon (يَـ prefiksi). أَحْمَدُ = erkak ism → يَعْمَلُ to\'g\'ri.'},
+    {id:'a1q5',q:'"Xonada krovat bor" gapining to\'g\'ri arabcha ko\'rinishi:',o:['السَّرِيرُ فِي الغُرْفَةِ.','فِي الغُرْفَةِ سَرِيرٌ.','الغُرْفَةُ السَّرِيرُ.','هَذَا سَرِيرُ الغُرْفَةِ.'],c:1,f:'Jar-majrur (فِي الغُرْفَةِ) oldinga chiqib, ot nakirah (سَرِيرٌ) kelishi: wujudni bildiradi — "Xonada krovat bor".'},
+    {id:'a1q6',q:'"الجَوُّ بَارِدٌ اليَوْمَ" gapida Mubtado va Xabar:',o:['الجَوُّ (Xabar) / بَارِدٌ (Mubtado)','الجَوُّ (Mubtado) / بَارِدٌ (Xabar)','اليَوْمَ (Mubtado) / الجَوُّ (Xabar)','بَارِدٌ (Mubtado) / اليَوْمَ (Xabar)'],c:1,f:'الجَوُّ = Mubtado (ega), بَارِدٌ = Xabar (kesim). Ismli gapda: Mubtado+Xabar tartib.'},
+    {id:'a1q7',q:'"Men sayohat qilyapman" hozirgi zamon fe\'li to\'g\'ri shakli:',o:['تُسَافِرُ','يُسَافِرُ','أُسَافِرُ','نُسَافِرُ'],c:2,f:'أُسَافِرُ = men sayohat qilyapman (1-shaxs birlik → أَـ prefiksi).'},
+    {id:'a1q8',q:'"Mening taomim" iborasi:',o:['طَعَامُكَ','طَعَامُهُ','طَعَامِي','طَعَامُهَا'],c:2,f:'طَعَامِي = "mening taomim" (ـي = 1-shaxs egalik qo\'shimchasi).'},
+    {id:'a1q9',q:'"Bu kiyimning narxi qancha?" so\'rog\'i uchun to\'g\'ri variant:',o:['كَمْ ثَمَنُ هَذَا الثَّوْبِ؟','مَنْ هَذَا الثَّوْبُ؟','أَيْنَ هَذَا الثَّوْبُ؟','كَيْفَ هَذَا الثَّوْبُ؟'],c:0,f:'كَمْ = qancha (miqdor so\'rog\'i). كَمْ ثَمَنُ...؟ = narxi qancha?'},
+    {id:'a1q10',q:'"أَشْعُرُ بِأَلَمٍ فِي رَأْسِي" gapidagi o\'rin-joy predlogi:',o:['أَشْعُرُ','بِأَلَمٍ','فِي','رَأْسِي'],c:2,f:'فِي = ichida / da (o\'rin bildiruvchi harfi jar). فِي رَأْسِي = boshimda.'},
+    {id:'a1q11',q:'"Men futbol o\'ynamayman" inkor shakli:',o:['لَا أَلْعَبُ كُرَةَ القَدَمِ.','أَلْعَبُ كُرَةَ القَدَمِ.','هَلْ تَلْعَبُ كُرَةَ القَدَمِ؟','لَمْ تَلْعَبْ كُرَةَ القَدَمِ.'],c:0,f:'لَا + hozirgi zamon = inkor. لَا أَلْعَبُ = men o\'ynamayman.'},
+    {id:'a1q12',q:'Arab tilida soatni ifodalashda qaysi sonlar ishlatiladi?',o:['Sanoq sonlar (أعداد أصلية)','Tartib sonlar (أعداد ترتيبية)','Kasr sonlar (كسور)','Donali sonlar'],c:1,f:'Soat raqami uchun TARTIB sonlar: الأَوَّلُ، الثَّانِيَةُ، الخَامِسَةُ... Sanoq emas.'}
+  ],
+  RQ:[
+    {id:'a1r1',q:'مَتَى يَسْتَيْقِظُ أَحْمَدُ؟\n(Ahmad qachon uyg\'onadi?)',o:['فِي السَّاعَةِ السَّابِعَةِ\n(soat yettida)','فِي السَّاعَةِ الخَامِسَةِ صَبَاحًا\n(ertalab soat beshda)','بَعْدَ صَلَاةِ الْعَصْرِ\n(asr namozidan keyin)','فِي السَّاعَةِ الثَّامِنَةِ\n(soat sakkizda)'],c:1,f:'Matnda: يَسْتَيْقِظُ مُبَكِّرًا فِي السَّاعَةِ الخَامِسَةِ صَبَاحًا — "Ertalab soat beshda erta uyg\'onadi."'},
+    {id:'a1r2',q:'أَيْنَ يُصَلِّي أَحْمَدُ الفَجْرَ؟\n(Ahmad bomdod namozini qayerda o\'qiydi?)',o:['فِي الْمَطْبَخِ\n(oshxonada)','فِي الْمَعْهَدِ\n(institutda)','فِي الْمَسْجِدِ\n(masjidda)','فِي الشَّقَّةِ\n(kvartirada)'],c:2,f:'Matnda: يُصَلِّي الْفَجْرَ فِي الْمَسْجِدِ مَعَ الْجَمَاعَةِ — "Bomdod namozini jamoa bilan masjidda o\'qiydi."'},
+    {id:'a1r3',q:'كَيْفَ يَذْهَبُ أَحْمَدُ إِلَى مَعْهَدِ اللُّغَاتِ؟\n(Ahmad til institutiga qanday boradi?)',o:['بِالْحَافِلَةِ\n(avtobus bilan)','مَشْيًا\n(piyoda)','بِالطَّائِرَةِ\n(samolyotda)','بِالسَّيَّارَةِ\n(mashina bilan)'],c:3,f:'Matnda: يَذْهَبُ إِلَى مَعْهَدِ اللُّغَاتِ بِالسَّيَّارَةِ — "Til institutiga mashina bilan boradi."'}
+  ],
+  IQ:[
+    {id:'a1i1',q:'مَا مِهْنَةُ نَادِيَةَ؟\n(Nadianing kasbi nima?)',o:['طَبِيبَةٌ\n(Shifokor)','مُعَلِّمَةٌ\n(O\'qituvchi)','طَيَّارَةٌ\n(Uchuvchi)','مُهَنْدِسَةٌ\n(Muhandis)'],c:1,f:'Matnda: نَادِيَةُ مُعَلِّمَةٌ فِي الْمَدْرَسَةِ — "Nadia maktabda o\'qituvchi."'},
+    {id:'a1i2',q:'كَيْفَ تَذْهَبُ نَادِيَةُ إِلَى الْمَدْرَسَةِ؟\n(Nadia maktabga qanday boradi?)',o:['بِالسَّيَّارَةِ\n(Mashina bilan)','بِالْقِطَارِ\n(Poyezd bilan)','بِالْحَافِلَةِ\n(Avtobus bilan)','مَشْيًا\n(Piyoda)'],c:2,f:'Matnda: تَذْهَبُ إِلَى الْمَدْرَسَةِ بِالْحَافِلَةِ — "Maktabga avtobus bilan boradi."'},
+    {id:'a1i3',q:'مَا هِوَايَةُ نَادِيَةَ؟\n(Nadianing xobbisi nima?)',o:['السِّبَاحَةُ\n(Suzish)','الْقِرَاءَةُ\n(O\'qish / Mutolaa)','كُرَةُ الْقَدَمِ\n(Futbol)','الرِّيَاضَةُ\n(Sport)'],c:1,f:'Matnda: هِوَايَةُ نَادِيَةَ الْقِرَاءَةُ — "Nadianing xobbisi o\'qish."'},
+    {id:'a1i4',q:'مَا مِهْنَةُ أَبِي نَادِيَةَ؟\n(Nadianing otasining kasbi nima?)',o:['مُعَلِّمٌ\n(O\'qituvchi)','طَبِيبٌ\n(Shifokor)','مُهَنْدِسٌ\n(Muhandis)','طَيَّارٌ\n(Uchuvchi)'],c:3,f:'Matnda: أَبُوهَا طَيَّارٌ مَشْهُورٌ — "Otasi mashhur uchuvchi."'}
+  ],
+  levels:[
+    {max:44,lvl:'A0+',name:"Mustahkamlash kerak",color:'#27ae60',desc:"A1 uchun ba\'zi mavzular qiyin bo\'ldi. A0 ni mustahkamlab qaytadan urinib ko\'ring.",next:'A0',action:'📚 A0 darslari ochiladi'},
+    {max:69,lvl:'A1',name:'Elementar',color:'#3d8bcd',desc:"A1 darajasiga mos! Arabcha elementar kommunikatsiya qila olasiz. A1 darslari ochiladi.",next:'A1',action:'✅ A1 darslari ochiladi'},
+    {max:100,lvl:'A2',name:"Boshlang'ich o'rta",color:'#8b4000',desc:"Barakalloh! A1 ni a\'lo topshirdingiz. A2 darslari siz uchun ochiladi!",next:'A2',action:'✅ A2 darslari ochiladi'}
+  ]
+},
+
+// ─────────────────────────────── A2 ───────────────────────────────
+A2: {
+  color:'#2e8b57', pillBg:'#2e8b57',
+  gbarColor:'#2e8b57',
+  totalQ: 25,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'4 ta wahdadan olingan kalit so\'zlar. To\'g\'ri ma\'noni belgilang.',
+  qovTitle:'Grammatika testi — 8 ta savol',
+  qovSub:'Kitobdagi 3 ta wahda qoidalari: otli gap, olmoshlar, fa\'il va maf\'ul.',
+  qirTitle:'Matnni o\'qib savollarga javob bering — 4 ta savol',
+  qirSub:'Ona va Lubna o\'rtasidagi dialog. Diqqat bilan o\'qing.',
+  istTitle:'Audio matn bo\'yicha savollar — 3 ta savol',
+  istSub:'Botda audio fayl yuboriladi. Bu yerda o\'qing.',
+  qirText:{
+    title:'📄 الجوُّ بارِدٌ اليومَ — Dialog',
+    titleColor:'#1a4a2e',
+    ar:'الأُمُّ: اِلْبَسِي مِعْطَفَكِ وَالشَّالَ؛ فَالْجَوُّ سَيَكُونُ بَارِدًا الْيَوْمَ يَا لُبْنَى.\nلُبْنَى: كَيْفَ عَرَفْتِ يَا أُمِّي؟!\nالأُمُّ: سَمِعْتُ ذَلِكَ فِي نَشْرَةِ الْأَخْبَارِ.\nلُبْنَى: أَعْرِفُ يَا أُمِّي، رَأَيْتُ ذَلِكَ فِي بَرْنَامَجِ الْهَاتِفِ، سَأَأْخُذُهُ مَعِي فِي السَّيَّارَةِ.\nالأُمُّ: اِهْتَمِّي بِنَفْسِكِ؛ فَالْجَوُّ مُتَقَلِّبٌ هَذِهِ الْأَيَّامَ، فَأَحْيَانًا يَكُونُ حَارًّا، وَأَحْيَانًا يَكُونُ بَارِدًا، وَأَحْيَانًا يَكُونُ مُعْتَدِلًا.\nلُبْنَى: يَا أُمِّي، أَنَا أَرَى الْفُصُولَ الْأَرْبَعَةَ فِي الْيَوْمِ الْوَاحِدِ فِي الْجَامِعَةِ!\nالأُمُّ: إِذًا يَجِبُ عَلَيْكِ أَنْ تَسْتَعِدِّي لِتَقَلُّبِ الْأَجْوَاءِ، وَلَا تَنْسَيْ أَنْ تَأْخُذِي الْمِظَلَّةَ مَعَكِ أَيْضًا.',
+    kw:'اِلْبَسِي = Kiy (buyruq) · الشَّالَ = Sharf · نَشْرَةُ الأَخْبَارِ = Yangiliklar eshittirishi · مُتَقَلِّبٌ = O\'zgaruvchan · الْفُصُولَ الْأَرْبَعَةَ = To\'rt fasl · تَسْتَعِدِّي = Tayyorlan · الْمِظَلَّةَ = Soyabon',
+    borderColor:'#1a4a2e'
+  },
+  istText:{
+    title:'🎙 Audio matn transkripti — كَرِيمٌ يَبْحَثُ عَنْ شُقَّةٍ',
+    titleColor:'#c0415a',
+    ar:'يَبْحَثُ كَرِيمٌ عَنْ شُقَّةٍ جَدِيدَةٍ فِي الْمَدِينَةِ. اتَّصَلَ بِوَكَالَةِ الْعَقَارَاتِ وَسَأَلَ عَنِ الشِّقَقِ الْمُتَاحَةِ. قَالَ لَهُ الْوَكِيلُ: «عِنْدَنَا شُقَّةٌ وَاسِعَةٌ بِهَا ثَلَاثُ غُرَفٍ وَشُرْفَةٌ جَمِيلَةٌ، وَالْأَثَاثُ جَدِيدٌ.» سَأَلَ كَرِيمٌ: «مَا الْمُوَاصَفَاتُ؟» أَجَابَ الْوَكِيلُ: «الشُّقَّةُ فِي الطَّابِقِ الثَّالِثِ، قَرِيبَةٌ مِنَ الْمَدْرَسَةِ وَالسُّوقِ.» قَالَ كَرِيمٌ: «أَنَا مُرْهَقٌ مِنَ الْبَحْثِ — سَأَحْجُزُهَا الْآنَ!»',
+    kw:'وَكَالَةُ الْعَقَارَاتِ = Ko\'chmas mulk agentligi · الْمُتَاحَةِ = Mavjud/Bo\'sh · الطَّابِقِ الثَّالِثِ = Uchinchi qavat · مُرْهَقٌ = Charchagan',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'a2m1',ar:'الْمُتْحَفُ',q:'Bu so\'zning ma\'nosi?',o:['Bozor','Kutubxona','Muzey','Institut'],c:2,f:'الْمُتْحَفُ = Muzey. 1-Wahda (Do\'stlik) mavzusidan.'},
+    {id:'a2m2',ar:'حَفْلُ زِفَافٍ',q:'Bu ibora nima?',o:['Tug\'ilgan kun','Muvaffaqiyat','Imtihon','To\'y marosimi'],c:3,f:'حَفْلُ زِفَافٍ = To\'y marosimi. 2-Wahda mavzusidan.'},
+    {id:'a2m3',ar:'هَدِيَّةٌ',q:'Bu so\'zning ma\'nosi?',o:['Kuch-g\'ayrat','Bezak','Sovg\'a','Muvaffaqiyat'],c:2,f:'هَدِيَّةٌ = Sovg\'a. جُهْدٌ = Harakat/Kuch.'},
+    {id:'a2m4',ar:'شُرْفَةٌ',q:'Bu so\'zning ma\'nosi?',o:['Kvartira','Balkon','Mebel','Charchagan'],c:1,f:'شُرْفَةٌ = Balkon. شُقَّةٌ = Kvartira, أَثَاثٌ = Mebel.'},
+    {id:'a2m5',ar:'مُرْهَقٌ',q:'Bu sifatning ma\'nosi?',o:['Qulay','Yangi','Katta','Charchagan / Horigan'],c:3,f:'مُرْهَقٌ = Charchagan. 3-Wahda (Kvartira qidirish) mavzusidan.'},
+    {id:'a2m6',ar:'مُعْتَدِلٌ',q:'Bu ob-havo sifatining ma\'nosi?',o:['Yomg\'irli','Sovuq','Mo\'tadil / Normal','Issiq'],c:2,f:'مُعْتَدِلٌ = Mo\'tadil. مُمْطِرٌ = Yomg\'irli, 4-Wahda mavzusidan.'},
+    {id:'a2m7',ar:'مِعْطَفٌ',q:'Bu kiyimning ma\'nosi?',o:['Soyabon','Sharf','Ko\'ylak','Palto'],c:3,f:'مِعْطَفٌ = Palto. مِظَلَّةٌ = Soyabon.'},
+    {id:'a2m8',ar:'تَوَاصُلٌ',q:'Bu so\'zning ma\'nosi?',o:['Bezovta qilmoq','Chidamoq','Aloqa / Muloqot','Band qilish'],c:2,f:'تَوَاصُلٌ = Aloqa/Muloqot. يُزْعِجُ = Bezovta.'},
+    {id:'a2m9',ar:'نَجَاحٌ',q:'Bu so\'zning ma\'nosi?',o:['Sovg\'a','Bezak','Harakat','Muvaffaqiyat'],c:3,f:'نَجَاحٌ = Muvaffaqiyat.'},
+    {id:'a2m10',ar:'مُتَقَلِّبٌ',q:'Bu sifatning ma\'nosi?',o:['Mo\'tadil','O\'zgaruvchan','Quyoshli','Yomg\'irli'],c:1,f:'مُتَقَلِّبٌ = O\'zgaruvchan havo.'}
+  ],
+  QQ:[
+    {id:'a2q1',q:'«الامتحاناتُ قريبةٌ» — Otli gapda mubtada (المبتدأ) qaysi?',o:['قريبةٌ (xabar)','الامتحاناتُ (mubtada)','الامتحانُ (birlik)','قريبٌ (muzakkar)'],c:1,f:'الامتحاناتُ = mubtada (rafʿ holati), قريبةٌ = xabar.'},
+    {id:'a2q2',q:'«عائلةُ سعيدٍ تسكنُ في مدينتِهِ» — "-هُ" olmoshi qaysi mustaqil olmosh o\'rnida kelmoqda?',o:['أَنَا (men)','أَنْتَ (sen — erkak)','هُوَ (u — erkak)','هِيَ (u — ayol)'],c:2,f:'"-هُ" = uning (u—erkak egalik qo\'shimchasi). Mustaqil olmoshi هُوَ.'},
+    {id:'a2q3',q:'«عَمِلتُم إلى وقتٍ متأخرٍ أمسِ» — Fe\'l qaysi zamonda va shaxsi kim?',o:['Hozirgi zamon, biz (نحن)','O\'tgan zamon, siz ko\'plik','Buyruq, siz ko\'plik','O\'tgan zamon, ular (هم)'],c:1,f:'-تُم qo\'shimchasi = o\'tgan zamon, 2-shaxs ko\'plik erkak (أَنْتُم).'},
+    {id:'a2q4',q:'«يَبْحَثُ الوَلَدَانِ عَنِ الحَقِيبَةِ» — Fa\'il (ega) qaysi va turi?',o:['يَبْحَثُ — zamir mustatir','الوَلَدَانِ — ism zahir, ikkilik','الحَقِيبَةِ — maf\'ul bih','عَنِ — harfi jar'],c:1,f:'الوَلَدَانِ = fa\'il (ism zahir, ikkilik, rafʿ holati).'},
+    {id:'a2q5',q:'«اسْتَقْبَلنَا الضُّيوفَ أمامَ البيتِ» — "-نا" olmoshi qaysi vazifani bajaradi?',o:['Maf\'ulun bih olmoshi','Fa\'il (ega) olmoshi','Sifat','Mubtada'],c:1,f:'اسْتَقْبَلنَا — "-نَا" fe\'lga birikib fa\'il (ega) vazifasini bajaradi: "biz kutib oldik".'},
+    {id:'a2q6',q:'«حَجَزتُ غُرفةً في الفُندُقِ» — Maf\'ulun bih (to\'ldiruvchi) qaysi?',o:['فِي (harfi jar)','الفُندُقِ (jar-majrur)','حَجَزتُ (fe\'l+fa\'il)','غُرفةً'],c:3,f:'غُرفةً = maf\'ulun bih (nasb holati, to\'ldiruvchi).'},
+    {id:'a2q7',q:'«يَبحثُ المستأجرُ عَن بيتٍ» — Bu fe\'l qaysi turga kiradi?',o:['O\'timli (متعدي) — to\'ldiruvchi bevosita','O\'timsiz (لازم) — ko\'makchi bilan','Majhul fe\'l (passive)','Buyruq fe\'li'],c:1,f:'يَبحثُ عَنْ — "عَنْ" ko\'makchisi bilan kelgan, demak o\'timsiz (لازم).'},
+    {id:'a2q8',q:'«المديرُ يَدعو (أَنتُما) إلى حفلةٍ» — (أَنتُما) o\'rniga fe\'lga birikvchi to\'g\'ri olmosh qaysi?',o:['يَدعُوكُم (ko\'plik)','يَدعُوكُمَا (ikkilik)','يَدعُوهُمَا (u ikkalasi)','يَدعُوانِ (fe\'l ikkilik)'],c:1,f:'أَنْتُمَا = siz ikkingiz → fe\'lga biriksa: يَدعُوكُمَا.'}
+  ],
+  RQ:[
+    {id:'a2r1',q:'مَاذَا قَالَتِ الأُمُّ لِلُبْنَى أَوَّلًا؟\n(Ona Lubnoga avval nima dedi?)',o:['«خُذِي الْمِظَلَّةَ» (Soyabonni ol)','«اِلْبَسِي مِعْطَفَكِ وَالشَّالَ» (Palto va sharf kiy)','«لَا تَذْهَبِي بِالسَّيَّارَةِ» (Mashinada borma)','«اِسْمَعِي نَشْرَةَ الأَخْبَارِ» (Yangiliklar tinglang)'],c:1,f:'Dialog boshi: اِلْبَسِي مِعْطَفَكِ وَالشَّالَ؛ فَالْجَوُّ سَيَكُونُ بَارِدًا — "Palto va sharfingni kiy, havo sovuq bo\'ladi."'},
+    {id:'a2r2',q:'كَيْفَ عَرَفَتِ الأُمُّ أَنَّ الْجَوَّ سَيَكُونُ بَارِدًا؟\n(Ona havo sovuq bo\'lishini qayerdan bildi?)',o:['Lubna aytdi','Tashqaridan ko\'rdi','Yangiliklar eshittirishida eshitdi','Telefon ilovasidan ko\'rdi'],c:2,f:'Matnda: سَمِعْتُ ذَلِكَ فِي نَشْرَةِ الْأَخْبَارِ — "Uni yangiliklar eshittirishida eshitdim."'},
+    {id:'a2r3',q:'مَاذَا سَتَأْخُذُ لُبْنَى مَعَهَا فِي السَّيَّارَةِ؟\n(Lubna mashinaga nima olib boradi?)',o:['Palto','Soyabon','Sharf','Telefoni'],c:3,f:'Matnda: رَأَيْتُ ذَلِكَ فِي بَرْنَامَجِ الْهَاتِفِ، سَأَأْخُذُهُ مَعِي فِي السَّيَّارَةِ.'},
+    {id:'a2r4',q:'مَاذَا تَرَى لُبْنَى فِي الْجَامِعَةِ؟\n(Lubna universitetda nimani ko\'radi?)',o:['Ko\'p do\'stlarini','Qor yog\'ishini','Bir kunda to\'rt faslni','Yomg\'irli havoni'],c:2,f:'Matnda: أَرَى الْفُصُولَ الْأَرْبَعَةَ فِي الْيَوْمِ الْوَاحِدِ — "Bir kunda to\'rt faslni ko\'raman".'}
+  ],
+  IQ:[
+    {id:'a2i1',q:'كَمْ غُرْفَةً فِي الشُّقَّةِ؟\n(Kvartirada nechta xona bor?)',o:['غُرْفَتَانِ (2 ta)','ثَلَاثُ غُرَفٍ (3 ta)','أَرْبَعُ غُرَفٍ (4 ta)','خَمْسُ غُرَفٍ (5 ta)'],c:1,f:'Audio matnda: شُقَّةٌ وَاسِعَةٌ بِهَا ثَلَاثُ غُرَفٍ — "3 ta xonali keng kvartira."'},
+    {id:'a2i2',q:'فِي أَيِّ طَابِقٍ الشُّقَّةُ؟\n(Kvartira nechánchi qavatda?)',o:['Birinchi qavat (الأَوَّل)','Ikkinchi qavat (الثَّانِي)','Uchinchi qavat (الثَّالِث)','To\'rtinchi qavat (الرَّابِع)'],c:2,f:'Audio matnda: الشُّقَّةُ فِي الطَّابِقِ الثَّالِثِ — "Kvartira uchinchi qavatda."'},
+    {id:'a2i3',q:'لِمَاذَا قَرَّرَ كَرِيمٌ حَجْزَ الشُّقَّةِ؟\n(Karim kvartirani nima uchun bronlamoqchi?)',o:['Narxi arzon','Joylashuvi juda yaxshi','Charchadi va shu kvartirani oldi','Hamkasbi tavsiya qildi'],c:2,f:'Audio matnda: أَنَا مُرْهَقٌ مِنَ الْبَحْثِ — "Qidirishdan charchadim".'}
+  ],
+  levels:[
+    {max:44,lvl:'A1+',name:'Mustahkamlash kerak',color:'#3d8bcd',desc:'A2 mavzulari qiyin bo\'ldi. A1 ni mustahkamlab, A2 ga qaytarib ko\'ring.',next:'A1',action:'📚 A1 darslari ochiladi'},
+    {max:69,lvl:'A2',name:"Boshlang'ich o'rta",color:'#2e8b57',desc:'A2 darajasiga mos! Arabcha asosiy grammatika va kundalik suhbatni bilasiz. A2 darslari ochiladi.',next:'A2',action:'✅ A2 darslari ochiladi'},
+    {max:100,lvl:'B1',name:"O'rta daraja",color:'#8b4000',desc:'Barakalloh! A2 ni a\'lo topshirdingiz. B1 darslari ochiladi!',next:'B1',action:'✅ B1 darslari ochiladi'}
+  ]
+},
+
+// ─────────────────────────────── B1 ───────────────────────────────
+B1: {
+  color:'#6a35c4', pillBg:'#6a35c4',
+  gbarColor:'#6a35c4',
+  totalQ: 25,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'5 ta vahdadan olingan B1 darajasi kalit so\'zlari.',
+  qovTitle:'Grammatika testi — 8 ta savol',
+  qovSub:'5 vahdaning grammatik qoidalari: xabar muqaddam, noqis fe\'llar, إن va boshqalar.',
+  qirTitle:'Ibn Battuta matni bo\'yicha — 4 ta savol',
+  qirSub:'5-vahdadan olingan matn. Diqqat bilan o\'qing.',
+  istTitle:'Audio matn bo\'yicha — 3 ta savol',
+  istSub:'Botda audio yuboriladi. Bu yerda faqat o\'rganish uchun ko\'rsatilmoqda.',
+  qirText:{
+    title:'📄 الرَّحَّالَةُ ابْنُ بَطُّوطَة',
+    titleColor:'#3a1a6e',
+    ar:'هُوَ أَبُو عَبْدِ اللهِ مُحَمَّدُ بْنُ عَبْدِ اللهِ، وُلِدَ فِي طَنْجَةَ سَنَةَ ٧٠٣هـ بِالْمَغْرِبِ. سُمِّيَ بِابْنِ بَطُّوطَةَ نِسْبَةً إِلَى أُمِّهِ، وَلُقِّبَ بِأَمِيرِ الرَّحَّالِينَ الْمُسْلِمِينَ.\n\nخَرَجَ مِنْ مَدِينَةِ طَنْجَةَ سَنَةَ ٧٢٥هـ قَاصِدًا حَجَّ بَيْتِ اللهِ الْحَرَامِ، فَطَافَ بِبِلَادِ الْمَغْرِبِ وَكَثِيرٍ مِنَ الْبِلَادِ مِثْلَ: مِصْرَ، وَالسُّودَانِ، وَالشَّامِ، ثُمَّ إِلَى الْحِجَازِ، وَالْعِرَاقِ، وَفَارِسَ، وَالْيَمَنِ.\n\nأَلَّفَ كِتَابًا اسْمُهُ «تُحْفَةُ النُّظَّارِ فِي غَرَائِبِ الْأَمْصَارِ وَعَجَائِبِ الْأَسْفَارِ» بَعْدَ أَنْ أَمْضَى ٣٠ عَامًا فِي الرِّحْلَاتِ بَيْنَ بُلْدَانِ الْعَالَمِ.',
+    kw:'نِسْبَةً إِلَى = nisbatan · أَمِيرُ الرَّحَّالِينَ = Sayohlar amiri · قَاصِدًا = niyat qilib · فَطَافَ = aylandi/sayr qildi · أَمْضَى = o\'tkazdi · يَصِفُ = ta\'riflaydi',
+    borderColor:'#3a1a6e'
+  },
+  istText:{
+    title:'🎙 Audio transkript — سَامِي يَتَحَدَّثُ عَنْ صِحَّتِهِ',
+    titleColor:'#c0415a',
+    ar:'«أَنَا سَامِي، طَالِبٌ فِي الْجَامِعَةِ. فِي الْمَاضِي، كُنْتُ كَسُولاً جِدًّا — كُنْتُ أَجْلِسُ أَمَامَ الشَّاشَةِ لِسَاعَاتٍ طَوِيلَةٍ، وَكُنْتُ أَنَامُ مُتَأَخِّرًا. بِسَبَبِ ذَلِكَ، كُنْتُ أَشْعُرُ بِصُدَاعٍ دَائِمٍ وَكُنْتُ مُرْهَقًا. قَرَّرْتُ تَغْيِيرَ حَيَاتِي: بَدَأْتُ أُمَارِسُ الرِّيَاضَةَ كُلَّ يَوْمٍ، وَبَدَأْتُ أَنَامُ فِي وَقْتٍ مُبَكِّرٍ. الْآنَ، طَاقَتِي عَادَتْ، وَأَصْبَحْتُ أَكْثَرَ تَرْكِيزًا فِي دِرَاسَتِي.»',
+    kw:'الشَّاشَةِ = ekran · صُدَاعٍ دَائِمٍ = doimiy bosh og\'rig\'i · مُرْهَقًا = charchagan · قَرَّرْتُ تَغْيِيرَ = o\'zgartirishga qaror qildim · تَرْكِيزًا = diqqat/e\'tibor',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'b1m1',ar:'مَسْحَرَاتِي',q:'Bu so\'zning ma\'nosi? (1-Vahda: Hayit mavzusi)',o:['Bayram taomi','Saharlikka uyg\'otuvchi shaxs','Qurbonlik hayvoni','Hayitlik puli'],c:1,f:'مَسْحَرَاتِي = Saharlik oldidan uyg\'otib yuruvchi shaxs. Ramazon bayramiga xos an\'ana.'},
+    {id:'b1m2',ar:'الْعِيدِيَّة',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Bezatish','Qurbonlik','Hayitlik (pul/sovg\'a)','Suhbat'],c:2,f:'الْعِيدِيَّة = Hayit kuni kattalardan beriluvchi pul yoki sovg\'a.'},
+    {id:'b1m3',ar:'الرَّفَاهِيَة',q:'Bu so\'zning ma\'nosi? (2-Vahda)',o:['Dangasalik','Kechiktirish','Nafas olish','Farovonlik / Qulaylik'],c:3,f:'الرَّفَاهِيَة = Farovonlik, qulaylik.'},
+    {id:'b1m4',ar:'تَأْجِيل',q:'Bu so\'zning ma\'nosi? (2-Vahda)',o:['Suhbat','Kechiktirish / Qoldirish','Farovonlik','Oddiylik'],c:1,f:'تَأْجِيل = Kechiktirish, muddatni keyinga surish.'},
+    {id:'b1m5',ar:'اللَّهْجَة',q:'Bu so\'zning ma\'nosi? (3-Vahda)',o:['Xotirjamlik','Kamchilik (xalq)','Lahja / Sheva','Turli-tumanlik'],c:2,f:'اللَّهْجَة = Lahja yoki sheva (mintaqaviy til o\'zgarishi).'},
+    {id:'b1m6',ar:'طَمَأْنِينَة',q:'Bu so\'zning ma\'nosi? (3-Vahda)',o:['Intilish','Xotirjamlik / Tinchlik','Kamtarlik','Sayyoh'],c:1,f:'طَمَأْنِينَة = Xotirjamlik, ruhiy tinchlik.'},
+    {id:'b1m7',ar:'الْكَسَل',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Quvvat/Energiya','Bosh og\'rig\'i','Me\'yor','Dangasalik'],c:3,f:'الْكَسَل = Dangasalik. الطَّاقَة = quvvat, صُدَاع = bosh og\'rig\'i.'},
+    {id:'b1m8',ar:'تَوَاضُع',q:'Bu so\'zning ma\'nosi? (5-Vahda)',o:['Ilmning kengligi','Sayyoh','Kamtarlik / Tavozulilik','Voyaga yetish'],c:2,f:'تَوَاضُع = Kamtarlik, tavozulilik.'},
+    {id:'b1m9',ar:'الرَّحَّالَة',q:'Bu so\'zning ma\'nosi? (5-Vahda)',o:['Muallim','Sayyoh / Sayohatchi','Olim','Muhandis'],c:1,f:'الرَّحَّالَة = Sayyoh.'},
+    {id:'b1m10',ar:'تَلَقَّى',q:'Bu fe\'lning ma\'nosi? (5-Vahda)',o:['Safar qildi','Yozdi','Ta\'lim oldi / Qabul qildi','Uyg\'aldi'],c:2,f:'تَلَقَّى = Ta\'lim oldi, qabul qildi.'}
+  ],
+  QQ:[
+    {id:'b1q1',q:'«فِي الْمَسَاجِدِ مُصَلُّونَ» — Xabar muqaddam (الخبر المقدم) qaysi?',o:['مُصَلُّونَ (rafʿ)','فِي الْمَسَاجِدِ','مَسَاجِدَ','فِي'],c:1,f:'فِي الْمَسَاجِدِ = xabar muqaddam. مُصَلُّونَ = mubtada muaxhar.'},
+    {id:'b1q2',q:'«نَجَحَ الطَّالِبُ الَّذِي دَرَسَ جَيِّدًا» — Bo\'sh joyga qaysi nisbiy olmosh to\'g\'ri?',o:['مَا','مَنْ','الَّتِي','الَّذِي'],c:3,f:'الَّذِي = erkak uchun nisbiy olmosh. الَّتِي = ayol uchun.'},
+    {id:'b1q3',q:'«أَصْبَحَ الرَّجُلُ فَقِيرًا» — noqis fe\'l qo\'shilgandan keyin qaysi o\'zgarish?',o:['الرَّجُلُ nasb bo\'ladi','فَقِيرًا nasb bo\'ladi','Ikkalasi rafʿ qoladi','Ikkalasi nasb bo\'ladi'],c:1,f:'كَانَ va uxshoshlari: ism rafʿ, xabar nasb.'},
+    {id:'b1q4',q:'«أَكَلَ الْوَلَدُ فَاكِهَةً لَذِيذَةً» — Sifat (الصفة) qaysi so\'z?',o:['أَكَلَ (fe\'l)','الْوَلَدُ (mubtada)','فَاكِهَةً (maf\'ul)','لَذِيذَةً (sifat)'],c:3,f:'لَذِيذَةً = sifat, فَاكِهَةً ga muvofiq (nasb+muannas+nakirah).'},
+    {id:'b1q5',q:'«يَتَكَلَّمُونَ» — Bu fe\'lning ildizi (جذر) qaysi?',o:['تَكَلَّمَ','كَلَّمَ','كَلَمَ / كلم','يَتَكَلَّ'],c:2,f:'كَلَمَ (ك-ل-م) = asl ildiz (3 harf).'},
+    {id:'b1q6',q:'«أَعْجَبَنِي ______ قُلْتَهُ مِنْ كَلَامٍ» — Bo\'sh joyga مَنْ yoki مَا?',o:['مَنْ (shaxs uchun)','مَا (narsa/gap uchun)','الَّذِي','الَّتِي'],c:1,f:'مَا = narsa, so\'z, gap uchun nisbiy olmosh.'},
+    {id:'b1q7',q:'«إِنَّ التَّدْخِينَ مَمْنُوعٌ» — إِنَّ qo\'shilgandan keyin nima o\'zgaradi?',o:['التَّدْخِينَ rafʿ qoladi','مَمْنُوعٌ nasb bo\'ladi','التَّدْخِينَ nasb bo\'ladi','Hech narsa o\'zgarmaydi'],c:2,f:'إِنَّ va uxshoshlari mubtadoni nasb qiladi.'},
+    {id:'b1q8',q:'«جَاءَ مُدِيرُ الْمَدْرَسَةِ» — مضاف إليه qaysi va uning harakati?',o:['مُدِيرُ (rafʿ — مضاف)','الْمَدْرَسَةِ (jar holati — مضاف إليه)','مُدِيرُ (jar holati)','الْمَدْرَسَةِ (nasb holati)'],c:1,f:'مضاف إليه har doim مجرور (jar) holatida keladi.'}
+  ],
+  RQ:[
+    {id:'b1r1',q:'أَيْنَ وُلِدَ ابْنُ بَطُّوطَة وَمَتَى؟\n(Ibn Battuta qayerda va qachon tug\'ilgan?)',o:['Misrda, 703 hijriy','Tanjada (Marokash), 703 hijriy','Damashqda, 725 hijriy','Makkada, 703 hijriy'],c:1,f:'Matnda: وُلِدَ فِي طَنْجَةَ سَنَةَ ٧٠٣هـ بِالْمَغْرِبِ.'},
+    {id:'b1r2',q:'مَاذَا قَصَدَ ابْنُ بَطُّوطَة حِينَ خَرَجَ مِنْ طَنْجَة؟\n(Tanjadan chiqqanida maqsadi nima edi?)',o:['Ilm o\'rganish','Savdo qilish','Haj qilish','Urushda qatnashish'],c:2,f:'Matnda: خَرَجَ قَاصِدًا حَجَّ بَيْتِ اللهِ الْحَرَامِ.'},
+    {id:'b1r3',q:'كَمْ سَنَةً أَمْضَى ابْنُ بَطُّوطَة فِي رِحْلَاتِهِ؟\n(Sayohatlarida necha yil o\'tkazdi?)',o:['10 yil','20 yil','25 yil','30 yil'],c:3,f:'Matnda: بَعْدَ أَنْ أَمْضَى ٣٠ عَامًا فِي الرِّحْلَاتِ.'},
+    {id:'b1r4',q:'مَا اسْمُ كِتَابِ ابْنِ بَطُّوطَة الْمَشْهُور؟\n(Uning mashhur kitobi nomi nima?)',o:['رِحْلَةُ ابْنِ جُبَيْر','الْمُقَدِّمَة','تُحْفَةُ النُّظَّار','أَلْفُ لَيْلَةٍ وَلَيْلَة'],c:2,f:'Matnda: أَلَّفَ كِتَابًا اسْمُهُ «تُحْفَةُ النُّظَّارِ فِي غَرَائِبِ الْأَمْصَارِ».'}
+  ],
+  IQ:[
+    {id:'b1i1',q:'لِمَاذَا كَانَ سَامِي يَشْعُرُ بِالصُّدَاع؟\n(Sami nima uchun bosh og\'rig\'i his qilardi?)',o:['Ko\'p o\'qigani uchun','Ekran oldida ko\'p o\'tirishi va kech uxlagani uchun','Sport qilgani uchun','Ovqat yemasligidan'],c:1,f:'Audio matnda: كُنْتُ أَجْلِسُ أَمَامَ الشَّاشَةِ لِسَاعَاتٍ وَأَنَامُ مُتَأَخِّرًا.'},
+    {id:'b1i2',q:'مَاذَا فَعَلَ سَامِي لِتَغْيِيرِ حَيَاتِهِ؟\n(Hayotini o\'zgartirish uchun nima qildi?)',o:['Dorilar ichdi','Universitetni tark etdi','Har kuni sport qilib, erta yotdi','Ko\'p uxladi'],c:2,f:'Audio matnda: بَدَأْتُ أُمَارِسُ الرِّيَاضَةَ + بَدَأْتُ أَنَامُ فِي وَقْتٍ مُبَكِّرٍ.'},
+    {id:'b1i3',q:'مَا النَّتِيجَةُ بَعْدَ تَغْيِيرِ سَامِي لِعَادَاتِهِ؟\n(O\'zgarishdan keyin nima bo\'ldi?)',o:['Bosh og\'rig\'i davom etdi','Uyqusi yomonlashdi','Quvvati qaytdi va diqqati yaxshilandi','Vazni ko\'paydi'],c:2,f:'Audio matnda: طَاقَتِي عَادَتْ، وَأَصْبَحْتُ أَكْثَرَ تَرْكِيزًا فِي دِرَاسَتِي.'}
+  ],
+  levels:[
+    {max:44,lvl:'A2+',name:'Mustahkamlash kerak',color:'#2e8b57',desc:'B1 mavzulari qiyin bo\'ldi. A2 ni mustahkamlab, B1 ga qaytarib ko\'ring.',next:'A2',action:'📚 A2 darslari ochiladi'},
+    {max:69,lvl:'B1',name:"O'rta daraja",color:'#6a35c4',desc:'B1 darajasiga mos! Arabcha murakkab grammatika va matnlarni o\'qiy olasiz. B1 darslari ochiladi.',next:'B1',action:'✅ B1 darslari ochiladi'},
+    {max:100,lvl:'B2',name:"Yuqori o'rta daraja",color:'#c0415a',desc:'Barakalloh! B1 ni a\'lo topshirdingiz. B2 darslari ochiladi!',next:'B2',action:'✅ B2 darslari ochiladi'}
+  ]
+},
+
+// ─────────────────────────────── B2 ───────────────────────────────
+B2: {
+  color:'#c0411a', pillBg:'#c0411a',
+  gbarColor:'#c0411a',
+  totalQ: 25,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'4 ta vahdadan olingan B2 darajasi murakkab lug\'at.',
+  qovTitle:'Grammatika testi — 8 ta savol',
+  qovSub:'Masdarlar (3–6 harfli fe\'llar), الأسماء الخمسة, i\'rob belgilari, ikki to\'ldiruvchili fe\'llar.',
+  qirTitle:'Psixologik sog\'liq matni — 4 ta savol',
+  qirSub:'Uch mutaxassisning fikri keltirilgan maqola.',
+  istTitle:'Audio matn bo\'yicha — 3 ta savol',
+  istSub:'Botda audio yuboriladi.',
+  qirText:{
+    title:'📄 صِحَّتُنَا وَالْمُشْكِلَاتُ النَّفْسِيَّة',
+    titleColor:'#6b2010',
+    ar:'فِي مَقَالٍ بِعُنْوَانِ «صِحَّتُنَا النَّفْسِيَّةُ»:\n\nيَرَى الدُّكْتُورُ مَحْمُودٌ أَنَّ الْمُشْكِلَاتِ النَّفْسِيَّةَ تَأْتِي مِنْ سَبَبَيْنِ: الْأَوَّلُ: تَأَثُّرُ النَّاسِ بِمَا يَرَوْنَهُ عَلَى مَوَاقِعِ التَّوَاصُلِ وَعَمَلُ مُقَارَنَةٍ بَيْنَهُ وَبَيْنَ حَيَاتِهِمْ. وَالثَّانِي: كِتْمَانُ مَا يَشْعُرُونَ بِهِ مِنْ أَذًى وَتَأْخِيرُ عِلَاجِهِ.\n\nوَيَرَى سَمِيرٌ الْبَاهِي: أَنَّ أَفْضَلَ طُرُقِ الْوِقَايَةِ أَنْ يَضَعَ الْإِنْسَانُ هَدَفًا لِنَفْسِهِ، وَأَنْ يُمَارِسَ الرِّيَاضَةَ بِاسْتِمْرَارٍ.\n\nوَيَرَى عَلِيٌّ النَّبْهَانِ: أَنَّ كُلَّ إِنْسَانٍ أَعْطَاهُ اللهُ مُمَيِّزَاتٍ، وَمُشْكِلَتُنَا أَنَّنَا نَنْظُرُ إِلَى غَيْرِنَا وَنَنْسَى مَا نَتَمَيَّزُ بِهِ.',
+    kw:'كِتْمَانُ = yashirish · أَذًى = aziyat · الْوِقَايَةُ = profilaktika · مُقَارَنَةٌ = taqqoslash · مُمَيِّزَاتٌ = imtiyozlar',
+    borderColor:'#6b2010'
+  },
+  istText:{
+    title:'🎙 Audio transkript — كَمَالٌ يُحَدِّثُ عَنْ تَجْرِبَتِهِ الْمِهْنِيَّة',
+    titleColor:'#c0415a',
+    ar:'«عَمِلْتُ فِي شَرِكَةٍ كَبِيرَةٍ مُدَّةَ عَشْرِ سَنَوَاتٍ، وَكُنْتُ أَتَقَاضَى رَاتِبًا جَيِّدًا. لَكِنَّ الشَّرِكَةَ كَانَتْ تَسْتَخْدِمُ أَسَالِيبَ دِعَايَةٍ مَشْبُوهَةً. شَعَرْتُ أَنَّ اسْتِمْرَارِي سَيُؤَثِّرُ عَلَى مَصِيرِي الْمِهْنِيِّ وَالْأَخْلَاقِيِّ. قَرَّرْتُ أَنْ أَسْتَقِيلَ، رَغْمَ أَنَّ قَرَارِي أَزْعَجَ كَثِيرًا مِنَ الزُّمَلَاءِ. بَعْدَ اسْتِقَالَتِي، أَسَّسْتُ مَشْرُوعِي الْخَاصَّ. كَانَ الطَّرِيقُ صَعْبًا، لَكِنَّنِي أَصْبَحْتُ الْآنَ أَكْثَرَ رَاحَةً وَأَكْثَرَ ثِقَةً فِي مُسْتَقْبَلِي.»',
+    kw:'أَتَقَاضَى رَاتِبًا = maosh olaman · مَشْبُوهَةً = shubhali · مَصِيرٌ = taqdir · أَسَّسْتُ = asos soldim · ثِقَةً = ishonch',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'b2m1',ar:'مُغَامَرَةٌ',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Reklama','Sarguzasht / Muvaffaqiyat izlash','Bo\'lib to\'lash','Bog\'lanib qolmoq'],c:1,f:'مُغَامَرَةٌ = Sarguzasht.'},
+    {id:'b2m2',ar:'الدِّعَايَة',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Qurbonlik','Sarguzasht','Reklama / Targʻibot','Bo\'lib to\'lash'],c:2,f:'الدِّعَايَةُ = Reklama, targʻibot.'},
+    {id:'b2m3',ar:'اِسْتَقَالَ',q:'Bu fe\'lning ma\'nosi? (2-Vahda)',o:['Sayohat qildi','Iste\'foga chiqdi','Ulgʻaydi','Ta\'lim oldi'],c:1,f:'اِسْتَقَالَ = Iste\'foga chiqdi (Form X).'},
+    {id:'b2m4',ar:'مَصِيرٌ',q:'Bu so\'zning ma\'nosi? (2-Vahda)',o:['Kamtarlik','Mukammallik','Taqdir / Oqibat','Notinch'],c:2,f:'مَصِيرٌ = Taqdir, pirovard natija.'},
+    {id:'b2m5',ar:'عَاطِلٌ',q:'Bu so\'zning ma\'nosi? (3-Vahda)',o:['Jarimalar','Qonunbuzarlik','Taklif etdi','Ishsiz'],c:3,f:'عَاطِلٌ = Ishsiz (عَاطِلٌ عَنِ الْعَمَلِ).'},
+    {id:'b2m6',ar:'تَتَفَكَّكُ',q:'Bu fe\'lning ma\'nosi? (3-Vahda)',o:['Moslashadi','Kirishib ketadi','Parchalanadi / Ajraladi','Taklif kiritadi'],c:2,f:'تَتَفَكَّكُ = Parchalanadi (Form V).'},
+    {id:'b2m7',ar:'اِكْتِئَابٌ',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Uyalchanlik','Bulling/Kamsitish','Moslashish','Tushkunlik / Depressiya'],c:3,f:'اِكْتِئَابٌ = Tushkunlik, depressiya.'},
+    {id:'b2m8',ar:'اَلتَّنَمُّر',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Depressiya','Uyalchanlik','Bulling / Kamsitish','O\'ziga bekilgan'],c:2,f:'اَلتَّنَمُّرُ = Bulling, mazax qilish.'},
+    {id:'b2m9',ar:'إِتْقَانٌ',q:'Bu so\'zning ma\'nosi? (2-Vahda)',o:['Taqdir','Notinch holat','Qishloq/Qishki dam olish','Mukammal egallash / Puxtalik'],c:3,f:'إِتْقَانٌ = Puxtalik, mukammal o\'zlashtirish.'},
+    {id:'b2m10',ar:'اِنْدِمَاجٌ',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Kamsitish','Tushkunlik','O\'ziga bekilganlik','Moslashish / Kirishib ketish'],c:3,f:'اِنْدِمَاجٌ = Moslashish, jamiyatga kirishib ketish.'}
+  ],
+  QQ:[
+    {id:'b2q1',q:'«كَتَبَ» 3-harfli fe\'lining to\'g\'ri masdari qaysi?',o:['كَتْبٌ','كِتَابَةٌ','كَتَابَةٌ','كِتَابٌ (ism, mastar emas)'],c:1,f:'كَتَبَ → كِتَابَةٌ (3-harfli, فَعَلَ vazni → فِعَالَةٌ).'},
+    {id:'b2q2',q:'«جَاءَ حَمُوكَ لِزِيَارَتِكَ» — «حَمُوكَ» الأسماء الخمسة dan. Rafʿ belgisi qaysi?',o:['Kasra (ـِ)','Fatha (ـَ)','Vov (وَ)','Alif (ـَا)'],c:2,f:'الأسماء الخمسة: rafʿ = وَ, nasb = أَ, jar = ي.'},
+    {id:'b2q3',q:'«جَهَّزَ» (Form II) fe\'lining to\'g\'ri masdari qaysi?',o:['جِهَازٌ (ism)','تَجْهِيزٌ','مُجَاهَزَةٌ','جَهَازَةٌ'],c:1,f:'Form II (فَعَّلَ) masdari = تَفْعِيلٌ. جَهَّزَ → تَجْهِيزٌ.'},
+    {id:'b2q4',q:'«إِنَّ الطَّبِيبَاتِ رَحِيمَاتٌ» — «الطَّبِيبَاتِ» ning nasb belgisi qaysi?',o:['Fatha (ـَ) — عَلَامَة أَصْلِيَّة','Kasra (ـِ) — جمع مؤنث سالم nasb belgisi','Damma (ـُ) — rafʿ holati','Alif (ـَا) — ikkilik'],c:1,f:'جَمْعُ الْمُؤَنَّثِ السَّالِمُ: nasb va jar = كَسْرَة. إِنَّ ism ni nasb qiladi → كَسْرَة.'},
+    {id:'b2q5',q:'«أُرِيدُ أَنْ أَسْتَشِيرَ أَصْدِقَائِي» — المصدر المؤوَّل ni صريح masdarga aylantirish:',o:['شَوْرَى أَصْدِقَائِي','مُشَاوَرَةُ أَصْدِقَائِي','اِسْتِشَارَةُ أَصْدِقَائِي','مَشُورَةُ أَصْدِقَائِي'],c:2,f:'أَنْ + يَسْتَشِيرَ = اِسْتِشَارَةٌ (Form X: اِسْتِفْعَالٌ).'},
+    {id:'b2q6',q:'«جَعَلَ النَّجَّارُ الْخَشَبَ كُرْسِيًّا» — Ikkinchi to\'ldiruvchi qaysi?',o:['النَّجَّارُ (fa\'il)','الْخَشَبَ (maf\'ul awwal)','كُرْسِيًّا (maf\'ul thani)','جَعَلَ (fe\'l)'],c:2,f:'جَعَلَ ikki to\'ldiruvchi oluvchi fe\'l.'},
+    {id:'b2q7',q:'الأسماء الخمسة to\'liq ro\'yxati qaysi?',o:['أَبٌ، أَخٌ، أُمٌّ، جَدٌّ، عَمٌّ','أَبٌ، أَخٌ، حَمٌّ، فُو، ذُو','أَبٌ، أَخٌ، اِبْنٌ، زَوْجٌ، أُمٌّ','أَبٌ، أَخٌ، أُخْتٌ، حَمٌّ، ذُو'],c:1,f:'الأسماء الخمسة: أَبٌ، أَخٌ، حَمٌّ، فُو (og\'iz), ذُو (egasi). أُمٌّ ulardan emas!'},
+    {id:'b2q8',q:'«تَعَلَّمَ» (Form V) fe\'lining masdari qaysi?',o:['عِلْمٌ (Form I)','تَعْلِيمٌ (Form II)','تَعَلُّمٌ (Form V)','اِسْتِعْلَامٌ (Form X)'],c:2,f:'Form V (تَفَعَّلَ) masdari = تَفَعُّلٌ. تَعَلَّمَ → تَعَلُّمٌ.'}
+  ],
+  RQ:[
+    {id:'b2r1',q:'مَا أَوَّلُ سَبَبٍ لِلْمُشْكِلَاتِ النَّفْسِيَّةِ حَسَبَ دكتور محمود؟\n(Birinchi sabab?)',o:['Sport qilmaslik','Uyqu yetishmovchiligi','Ijtimoiy tarmoqlarda o\'zini boshqalar bilan taqqoslash','Ko\'p ishlash'],c:2,f:'Matnda: تَأَثُّرُ النَّاسِ بِمَا يَرَوْنَهُ عَلَى مَوَاقِعِ التَّوَاصُلِ وَعَمَلُ مُقَارَنَةٍ.'},
+    {id:'b2r2',q:'مَا رَأْيُ سَمِير الْبَاهِي فِي الْوِقَايَةِ مِنَ الأَمْرَاضِ النَّفْسِيَّةِ؟\n(Samir al-Bohiy ning tavsiyasi?)',o:['Ko\'p dori ichish','Ijtimoiy tarmoqlarni o\'chirish','Maqsad qo\'yish va muntazam sport qilish','Ko\'p uxlash'],c:2,f:'Matnda: يَضَعَ الإِنْسَانُ هَدَفًا لِنَفْسِهِ + يُمَارِسَ الرِّيَاضَةَ بِاسْتِمْرَارٍ.'},
+    {id:'b2r3',q:'عَلَامَ يَتَأَسَّفُ عَلِيٌّ النَّبْهَانِ؟\n(Ali an-Nabhon qaysi muammoni aytadi?)',o:['Boshqalarga yordam bermaymiz','Ko\'p ishlash uchun uyquni qisqartiramiz','O\'z imtiyozlarimizni unutib boshqalarga qaraymiz','Ijtimoiy tarmoqlarga mubtalo bo\'lamiz'],c:2,f:'Matnda: نَنْظُرُ إِلَى غَيْرِنَا وَنَنْسَى مَا نَتَمَيَّزُ بِهِ.'},
+    {id:'b2r4',q:'مَاذَا يَجِبُ فِعْلُهُ مَعَ الْمُشْكِلَةِ النَّفْسِيَّةِ حَسَبَ د.محمود؟\n(Nima qilish kerak?)',o:['Dori ichish','O\'zi hal qilishi kerak','Ko\'p uxlash','Psixolog yoki ishonchli kishiga murojaat qilish'],c:3,f:'Matnda: يُسَارِعَ الإِنْسَانُ لِعَرْضِ الْمُشْكِلَةِ عَلَى طَبِيبٍ نَفْسِيٍّ أَوْ مَنْ يَثِقُ بِهِ.'}
+  ],
+  IQ:[
+    {id:'b2i1',q:'لِمَاذَا قَرَّرَ كَمَالٌ أَنْ يَسْتَقِيلَ؟\n(Kamal nima uchun iste\'fo berdi?)',o:['Yaxshiroq maosh uchun','Kompaniya yopilgani uchun','Shubhali reklama usullari axloqiga zid kelgani uchun','Xorijga ketish uchun'],c:2,f:'Audio: الشَّرِكَةُ تَسْتَخْدِمُ أَسَالِيبَ دِعَايَةٍ مَشْبُوهَةً.'},
+    {id:'b2i2',q:'مَاذَا فَعَلَ كَمَالٌ بَعْدَ اسْتِقَالَتِهِ؟\n(Iste\'fodan keyin nima qildi?)',o:['Uyda dam oldi','O\'z shaxsiy biznesini boshladi','Boshqa kompaniyaga o\'tdi','Xorijda o\'qishni boshladi'],c:1,f:'Audio: بَدَأْتُ مُغَامَرَةً جَدِيدَةً — أَسَّسْتُ مَشْرُوعِي الْخَاصَّ.'},
+    {id:'b2i3',q:'كَيْفَ يَصِفُ كَمَالٌ حَالَتَهُ النَّفْسِيَّةَ الْآن؟\n(Kamal hozir o\'zini qanday his qiladi?)',o:['Hali ham qiyin va charchoq','Xavotirli va noaniq','Pushaymon','Ruhi tinch va kelajagiga ishonchli'],c:3,f:'Audio: أَصْبَحْتُ أَكْثَرَ رَاحَةً + أَكْثَرَ ثِقَةً فِي مُسْتَقْبَلِي.'}
+  ],
+  levels:[
+    {max:44,lvl:'B1+',name:'Mustahkamlash kerak',color:'#6a35c4',desc:'B2 mavzulari murakkab keldi. B1 ni mustahkamlab, B2 ga qaytarib ko\'ring.',next:'B1',action:'📚 B1 darslari ochiladi'},
+    {max:69,lvl:'B2',name:"Yuqori o'rta daraja",color:'#c0411a',desc:'B2 darajasiga mos! Murakkab lug\'at va nahv qoidalarini bilasiz. B2 darslari ochiladi.',next:'B2',action:'✅ B2 darslari ochiladi'},
+    {max:100,lvl:'C1',name:'Rivojlangan daraja',color:'#1a3a6e',desc:'Barakalloh! B2 ni a\'lo topshirdingiz. C1 darslari siz uchun ochiladi!',next:'C1',action:'✅ C1 darslari ochiladi'}
+  ]
+},
+
+// ─────────────────────────────── C1 ───────────────────────────────
+C1: {
+  color:'#3535a0', pillBg:'#3535a0',
+  gbarColor:'#3535a0',
+  totalQ: 25,
+  mufTitle:'Lug\'at testi — 10 ta savol',
+  mufSub:'4 ta vahdadan olingan C1 darajasi yuqori lug\'at. Kontekstga e\'tibor bering.',
+  qovTitle:'Grammatika testi — 8 ta savol',
+  qovSub:'Munfasil/muttasil zamirlari, mubalaghah, ism makan, badal, taukid va ism olah.',
+  qirTitle:'Markaziy Afrika haqida matn — 4 ta savol',
+  qirSub:'4-vahdadan olingan publitsistik matn.',
+  istTitle:'Audio matn bo\'yicha — 3 ta savol',
+  istSub:'Botda audio yuboriladi.',
+  qirText:{
+    title:'📄 جُمْهُورِيَّةُ إِفْرِيقِيَا الْوُسْطَى',
+    titleColor:'#1a1a4e',
+    ar:'وَاحِدَةٌ مِنْ أَغْنَى دُوَلِ الْعَالَمِ فِي الثَّرَوَاتِ الْمَعْدِنِيَّةِ، وَرَغْمَ احْتِيَاطِيَّاتِ (الْيُورَانِيُوم - النِّفْطِ - الذَّهَبِ - الْمَاسِ - وَالْخَشَبِ)، بِالْإِضَافَةِ إِلَى وَفْرَةِ الْمِيَاهِ وَالْأَرَاضِي الصَّالِحَةِ لِلزِّرَاعَةِ، إِلَّا أَنَّهَا مَا تَزَالُ وَاحِدَةً مِنْ أَفْقَرِ دُوَلِ الْعَالَمِ، بِسَبَبِ النِّزَاعَاتِ وَالْحُرُوبِ الْأَهْلِيَّةِ.\n\nوَيَكْفِي أَنْ تَعْلَمَ أَنَّ ٦٢٪ مِنْ سُكَّانِهَا الْبَالِغِ عَدَدُهُمْ ٤٫٧ مِلْيُونَ نَسَمَةٍ يَعِيشُونَ بِمُعَدَّلِ دُولَارٍ أَمْرِيكِيٍّ وَاحِدٍ فَقَطْ يَوْمِيًّا!',
+    kw:'الثَّرَوَاتُ الْمَعْدِنِيَّةُ = mineral boyliklar · احْتِيَاطِيَّات = zahiralar · وَفْرَةُ = mo\'llik · الأَرَاضِي الصَّالِحَة = yer-suv · النِّزَاعَات = nizolar · نَسَمَة = nafar/kishi',
+    borderColor:'#1a1a4e'
+  },
+  istText:{
+    title:'🎙 Audio transkript — رَامِي يَتَحَدَّثُ عَنِ الْعَمَلِ الْحُرِّ',
+    titleColor:'#c0415a',
+    ar:'«بَدَأْتُ الْعَمَلَ الْحُرَّ قَبْلَ ثَلَاثِ سَنَوَاتٍ، بَعْدَ أَنْ تَرَكْتُ وَظِيفَتِي الثَّابِتَةَ. فِي الْبِدَايَةِ، كَانَتِ الْأَرْبَاحُ ضَعِيفَةً، وَكُنْتُ أَعْتَمِدُ عَلَى مُدَّخَرَاتِي. لَكِنَّنِي عَمِلْتُ تَدْرِيجِيًّا عَلَى بِنَاءِ مَصْدَاقِيَّتِي فِي السُّوقِ، وَعَرَضْتُ أَفْكَارًا مُبْتَكَرَةً جَذَبَتْ كَثِيرًا مِنَ الْعُمَلَاءِ. الْآنَ، أَرْبَاحِي أَفْضَلُ بِكَثِيرٍ مِنْ رَاتِبِي الْقَدِيمِ. نَصِيحَتِي: لَا تَتْرُكِ الْوَظِيفَةَ دَفْعَةً وَاحِدَةً — اِنْتَقِلْ تَدْرِيجِيًّا حَتَّى تَسْتَقِرَّ.»',
+    kw:'الْعَمَلُ الْحُرُّ = Frilans ish · أَرْبَاح = daromadlar · مُدَّخَرَات = jamg\'armalar · مَصْدَاقِيَّة = ishonchlilik · دَفْعَةً وَاحِدَةً = birdaniga',
+    borderColor:'#c0415a',
+    warn:true
+  },
+  MQ:[
+    {id:'c1m1',ar:'ابْتِكَار',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Jamg\'arma','Bosqichma-bosqich','Innovatsiya / Yangilik yaratish','Ishonchlilik'],c:2,f:'ابْتِكَار = Innovatsiya, yangilik yaratish.'},
+    {id:'c1m2',ar:'مُدَّخَرَات',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Daromadlar','Jamg\'armalar','Soliqlar','Investitsiya'],c:1,f:'مُدَّخَرَات = Jamg\'armalar (to\'plangan pul).'},
+    {id:'c1m3',ar:'قَانِع',q:'Bu sifatning ma\'nosi? (2-Vahda)',o:['Boy/Farovon','Qanoatli / Boriga shukr qiluvchi','G\'amgin','Hurmatli'],c:1,f:'قَانِع = Qanoatli, boriga shukr qiluvchi.'},
+    {id:'c1m4',ar:'الْوَرَثَة',q:'Bu so\'zning ma\'nosi? (2-Vahda)',o:['Foyda','Baraka','Merosxo\'rlar','Hurmat'],c:2,f:'الْوَرَثَة = Merosxo\'rlar (وَارِث ning ko\'pligi).'},
+    {id:'c1m5',ar:'يَنْصِت',q:'Bu fe\'lning ma\'nosi? (3-Vahda)',o:['Yaqinlashmoq','Yo\'l ochmoq','Diqqat bilan quloq solmoq','Qarishi'],c:2,f:'يَنْصِتُ = Diqqat bilan quloq solmoq.'},
+    {id:'c1m6',ar:'الْبَرَكَة',q:'Bu so\'zning ma\'nosi? (3-Vahda)',o:['Keksalik','Ro\'zg\'or','Baraka / Ilohiy ne\'mat','Yaqinlik'],c:2,f:'الْبَرَكَة = Baraka, ilohiy ne\'mat.'},
+    {id:'c1m7',ar:'تَنْمِيَة',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Soliqlar','Investitsiya','Rivojlanish / Taraqqiyot','Gullab-yashnayotgan'],c:2,f:'تَنْمِيَة = Rivojlanish, taraqqiyot.'},
+    {id:'c1m8',ar:'مُزْدَهِر',q:'Bu sifatning ma\'nosi? (4-Vahda)',o:['Kambag\'al','Urushayotgan','Gullab-yashnayotgan / Rivojlangan','Barqaror'],c:2,f:'مُزْدَهِر = Gullab-yashnayotgan, rivojlangan.'},
+    {id:'c1m9',ar:'مَصْدَاقِيَّة',q:'Bu so\'zning ma\'nosi? (1-Vahda)',o:['Jamg\'arma','Foyda','Innovatsiya','Ishonchlilik / Shaffoflik'],c:3,f:'مَصْدَاقِيَّة = Ishonchlilik, obro\'.'},
+    {id:'c1m10',ar:'مُقَوِّمَات',q:'Bu so\'zning ma\'nosi? (4-Vahda)',o:['Soliqlar','Daromadlar','Asosiy omillar / Ustunlar','Investitsiyalar'],c:2,f:'مُقَوِّمَات = Asosiy omillar, poydevor bo\'luvchi ustunlar.'}
+  ],
+  QQ:[
+    {id:'c1q1',q:'«إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ» — «إِيَّاكَ» ning i\'rob holati?',o:['Fa\'il (rafʿ)','Mubtada (rafʿ)','Maf\'ulun bih (nasb) — ضمير نصب منفصل','Xabar (rafʿ)'],c:2,f:'إِيَّاكَ = munfasil nasb zamiri, maf\'ulun bih vazifasida.'},
+    {id:'c1q2',q:'«صَابِر» ismi fa\'ilini (فَعُول) mubalaghah vazniga o\'tkazilsa?',o:['صَبَّار (فَعَّال)','صَبُور (فَعُول)','مِصْبَار (مِفْعَال)','صَبِير (فَعِيل)'],c:1,f:'صَابِر → صَبُور (فَعُول vazni). Mubalaghah vaznlari: فَعَّال، فَعُول، فَعِيل، مِفْعَال، فَعِل.'},
+    {id:'c1q3',q:'«يَحْمِلُ الصَّيَّادُ الشَّبَكَةَ عَلَى كَتِفِهِ» — «هُ» zamirining i\'rob holati?',o:['Maf\'ulun bih (nasb)','Fa\'il (rafʿ)','مضاف إليه (jar holati)','Hal (nasb)'],c:2,f:'«كَتِفِهِ» = كَتِف (مضاف) + هُ (مضاف إليه). مضاف إليه doim jar holatida.'},
+    {id:'c1q4',q:'«نَزَلَ» 3-harfli fe\'lidan ism makan (اسم مكان) qanday hosil qilinadi?',o:['نَازِلٌ (ism fa\'il)','مَنْزُولٌ (ism maf\'ul)','مَنْزَلٌ (ism makan: مَفْعَل)','نُزُولٌ (masdar)'],c:2,f:'3-harfli fe\'ldan ism makan: مَفْعَل yoki مَفْعِل vazni. نَزَلَ → مَنْزَلٌ.'},
+    {id:'c1q5',q:'«أَعْجَبَتْنِي الْحَدِيقَةُ أَزْهَارُهَا» — «أَزْهَارُهَا» badal turi?',o:['Badal mutabiq (to\'liq moslik)','Badal ba\'d min kull (qism-butun)','Badal ishtimol (tarkib)','Badal ghalayt (xato tuzatish)'],c:1,f:'أَزْهَارُهَا = الْحَدِيقَة ning bir qismi → badal ba\'d min kull.'},
+    {id:'c1q6',q:'«وَضَعَتْ أُمِّي الْمَلَابِسَ فِي الْغَسَّالَةِ» — «الْغَسَّالَةُ» qaysi ism olah vazni?',o:['فَاعِلَةٌ (ism fa\'il)','مِفْعَلٌ','مِفْعَالٌ','مِفْعَلَةٌ'],c:3,f:'الْغَسَّالَةُ = غَسَلَ (yuvmoq) → مِفْعَلَةٌ vazni.'},
+    {id:'c1q7',q:'«وَصَلَ الْمُسَافِرُونَ جَمِيعُهُمْ إِلَى الْمَطَارِ» — «جَمِيعُهُمْ» taukid turi?',o:['Taukid lafziy (bir xil so\'z takrori)','Taukid ma\'navi (الجميع,كل,عين,نفس)','Badal','Hal'],c:1,f:'جَمِيعُهُمْ = taukid ma\'navi. Taukid ma\'navi: نَفْس، عَيْن، كُلّ، جَمِيع.'},
+    {id:'c1q8',q:'«كَذُوبٌ» so\'zi qaysi mubalaghah vaznida?',o:['فَعَّالٌ (كَذَّاب)','فَعُولٌ (كَذُوب)','فَعِيلٌ (كَذِيب)','مِفْعَالٌ (مِكْذَاب)'],c:1,f:'كَذُوب = فَعُول vazni (ko\'p yolg\'on gapiruvchi).'}
+  ],
+  RQ:[
+    {id:'c1r1',q:'بِمَ تَتَمَيَّزُ جُمْهُورِيَّةُ إِفْرِيقِيَا الْوُسْطَى طَبِيعِيًّا؟\n(Mamlakat qanday tabiiy boylikka ega?)',o:['Faqat neft va gaz','Yoran, neft, oltin, olmos va yog\'och','Faqat suv resurslari','Ko\'p qishloq xo\'jaligi yer-suvlari'],c:1,f:'Matnda: احْتِيَاطِيَّاتِ (الْيُورَانِيُوم - النِّفْطِ - الذَّهَبِ - الْمَاسِ - وَالْخَشَبِ) — 5 ta boylik.'},
+    {id:'c1r2',q:'لِمَاذَا تُعَدُّ الدَّوْلَةُ مِنْ أَفْقَرِ دُوَلِ الْعَالَمِ رَغْمَ ثَرَوَاتِهَا؟\n(Boyligiga qaramasdan nega kambag\'al?)',o:['Sanoati rivojlanmaganligi','Aholisi juda ko\'pligi','Urushlar va ichki nizolar','Ta\'lim tizimi zaif'],c:2,f:'Matnda: بِسَبَبِ النِّزَاعَاتِ وَالْحُرُوبِ الْأَهْلِيَّةِ.'},
+    {id:'c1r3',q:'كَمْ عَدَدُ سُكَّانِ جُمْهُورِيَّةِ إِفْرِيقِيَا الْوُسْطَى؟\n(Aholisi necha million?)',o:['2,7 million','4,7 million','6,7 million','8,7 million'],c:1,f:'Matnda: سُكَّانِهَا الْبَالِغِ عَدَدُهُمْ ٤٫٧ مِلْيُونَ نَسَمَةٍ.'},
+    {id:'c1r4',q:'كَمْ نِسْبَةُ السُّكَّانِ الَّذِينَ يَعِيشُونَ بِدُولَارٍ وَاحِدٍ يَوْمِيًّا؟\n(Kuniga 1 dollar bilan yashovchilar foizi?)',o:['42%','52%','62%','72%'],c:2,f:'Matnda: ٦٢٪ مِنْ سُكَّانِهَا يَعِيشُونَ بِمُعَدَّلِ دُولَارٍ وَاحِدٍ يَوْمِيًّا.'}
+  ],
+  IQ:[
+    {id:'c1i1',q:'مَتَى بَدَأَ رَامِي الْعَمَلَ الْحُرَّ؟\n(Rami frilansi qachon boshladi?)',o:['1 yil oldin','2 yil oldin','3 yil oldin','5 yil oldin'],c:2,f:'Audio matnda: بَدَأْتُ الْعَمَلَ الْحُرَّ قَبْلَ ثَلَاثِ سَنَوَاتٍ.'},
+    {id:'c1i2',q:'كَيْفَ بَنَى رَامِي مَكَانَتَهُ فِي السُّوقِ؟\n(Rami bozorda qanday obro\' qozondi?)',o:['Ko\'p reklama xarajati bilan','Narxlarni tushirib mijoz jalb qilib','Innovatsion g\'oyalar va ishonchlilik qurib','Davlat yordami orqali'],c:2,f:'Audio: عَمِلْتُ عَلَى بِنَاءِ مَصْدَاقِيَّتِي + عَرَضْتُ أَفْكَارًا مُبْتَكَرَةً.'},
+    {id:'c1i3',q:'مَا نَصِيحَةُ رَامِي لِمَنْ يُرِيدُ الْبَدْءَ بِالْعَمَلِ الْحُرِّ؟\n(Maslahat?)',o:['Ko\'p jamg\'arma to\'plash','Sherik topib birga boshlash','Darhol ishni tashlab ketish','Bosqichma-bosqich o\'tish'],c:3,f:'Audio: لَا تَتْرُكِ الْوَظِيفَةَ دَفْعَةً وَاحِدَةً — اِنْتَقِلْ تَدْرِيجِيًّا.'}
+  ],
+  levels:[
+    {max:44,lvl:'B2+',name:'Mustahkamlash kerak',color:'#c0411a',desc:'C1 mavzulari murakkab keldi. B2 ni mustahkamlab, C1 ga qaytarib ko\'ring.',next:'B2',action:'📚 B2 darslari ochiladi'},
+    {max:69,lvl:'C1',name:'Rivojlangan daraja',color:'#3535a0',desc:'C1 darajasiga mos! Arabchani rivojlangan darajada bilasiz. C1 kurslari ochiladi.',next:'C1',action:'✅ C1 darslari ochiladi'},
+    {max:100,lvl:'C1+',name:'Ilg\'or C1 daraja',color:'#1a1a4e',desc:'Barakalloh! C1 ni a\'lo topshirdingiz. Siz arabcha ilg\'or darajada biluvchisiz!',next:'C1',action:'✅ Barcha daraja testlari tugallandi!'}
+  ]
+}
+
+}; // end DATA
+
+// ══════════════════════════════════════════════════════════════
+//  HOLAT O'ZGARUVCHILARI
+// ══════════════════════════════════════════════════════════════
+const LEVEL_ORDER = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1'];
+const PASS_PERCENT = 70;
+
+let currentLevelIdx = 0;
+
+
+// --- LOGIC ---
+let tg = window.Telegram?.WebApp || null;
+if(tg && tg.expand) { tg.expand(); tg.ready(); }
+
+let currentLevel = 'A0';
+let allQuestions = [];
+let currentQIndex = 0;
+let levelScore = {M:0, Q:0, R:0, I:0};
+let timerInt = null;
+let timeLeft = TIMER_DURATION;
+
+// Audio state
+let audioEl = new Audio();
+let audioPlaysLeft = 2;
+let isAudioPlaying = false;
+
+function shuffleArray(array) {
+  let arr = [...array];
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function startAdaptiveTest() {
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('testWrap').style.display = 'block';
+  startTimer();
+  startLevel('A0');
+}
+
+function startLevel(lvl) {
+  currentLevel = lvl;
+  levelScore = {M:0, Q:0, R:0, I:0};
+  
+  const d = DATA[lvl];
+  document.getElementById('lvlPill').innerText = lvl;
+  document.getElementById('lvlPill').style.background = d.pillBg;
+
+  // Audio setup
+  audioEl.src = AUDIO_URLS[lvl] || '';
+  audioEl.load();
+  audioPlaysLeft = 2;
+  isAudioPlaying = false;
+  document.getElementById('apPlayBtn').innerText = '▶';
+  document.getElementById('apPlayBtn').disabled = false;
+  document.getElementById('dot1').className = 'ap-dot';
+  document.getElementById('dot2').className = 'ap-dot';
+  document.getElementById('apBlockedMsg').style.display = 'none';
+
+  // Prepare questions
+  let qs = [];
+  let mQs = shuffleArray(d.MQ).map(q => ({...q, sec:0, type:'M', title: d.mufTitle, sub: d.mufSub}));
+  qs.push(...mQs);
+  
+  let qQs = shuffleArray(d.QQ).map(q => ({...q, sec:1, type:'Q', title: d.qovTitle, sub: d.qovSub}));
+  qs.push(...qQs);
+  
+  let rQs = shuffleArray(d.RQ).map((q, idx) => ({...q, sec:2, type:'R', title: d.qirTitle, sub: d.qirSub, txt: d.qirText}));
+  qs.push(...rQs);
+  
+  let iQs = shuffleArray(d.IQ).map((q, idx) => ({...q, sec:3, type:'I', title: d.istTitle, sub: d.istSub, txt: d.istText}));
+  qs.push(...iQs);
+
+  allQuestions = qs;
+  currentQIndex = 0;
+  
+  renderQuestion();
+}
+
+function renderQuestion() {
+  if(currentQIndex >= allQuestions.length) {
+    checkLevelResult();
+    return;
+  }
+  
+  const q = allQuestions[currentQIndex];
+  const total = allQuestions.length;
+  
+  document.getElementById('gbarFill').style.width = (((currentQIndex) / total) * 100) + '%';
+  document.getElementById('gbarTxt').innerText = currentQIndex + '/' + total;
+  
+  document.getElementById('secTitle').innerText = q.title;
+  document.getElementById('secSub').innerText = q.sub;
+  
+  document.querySelectorAll('.sn-item').forEach((el, i) => {
+    if(i < q.sec) el.className = 'sn-item done';
+    else if(i === q.sec) el.className = 'sn-item active';
+    else el.className = 'sn-item';
+  });
+
+  let html = '';
+  if(q.txt) {
+    html += `
+      <div class="text-box" style="border-left:3px solid ${q.txt.borderColor}">
+        <div class="tbh" style="color:${q.txt.titleColor}">${q.txt.title}</div>
+        <div class="tar">${q.txt.ar}</div>
+        ${q.txt.kw ? `<div class="tkw">${q.txt.kw}</div>` : ''}
+      </div>
+    `;
+  }
+
+  // Shuffle options
+  let opts = [...q.o];
+  let correctOpt = opts[q.c];
+  opts = shuffleArray(opts);
+  let newCorrectIndex = opts.indexOf(correctOpt);
+  
+  let letters = ['A','B','C','D'];
+  let optsHtml = opts.map((optText, i) => {
+      let isCorrect = (i === newCorrectIndex);
+      return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}')">
+                <div class="ltr">${letters[i]}</div>
+                <div>${optText}</div>
+              </div>`;
+  }).join('');
+
+  html += `
+    <div class="q-card">
+      <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
+      ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
+      <div class="q-text">${q.q}</div>
+      <div class="opts">${optsHtml}</div>
+    </div>
+  `;
+  
+  const qBody = document.getElementById('questionBody');
+  qBody.innerHTML = html;
+  
+  if(q.type === 'I') {
+    qBody.prepend(document.getElementById('audioContainer'));
+    document.getElementById('audioContainer').style.display = 'block';
+  } else {
+    document.getElementById('audioContainer').style.display = 'none';
+    if(isAudioPlaying) toggleAudio();
+  }
+}
+
+function selectOption(el, isCorrect, type) {
+  let optsDiv = el.parentElement;
+  if(optsDiv.classList.contains('locked')) return;
+  optsDiv.classList.add('locked');
+  
+  if(isCorrect) {
+    el.classList.add('ok');
+    levelScore[type]++;
+  } else {
+    el.classList.add('no');
+  }
+  
+  setTimeout(() => {
+    currentQIndex++;
+    // Add slide animation
+    const container = document.querySelector('.q-container');
+    container.style.animation = 'none';
+    container.offsetHeight; // trigger reflow
+    container.style.animation = null; 
+    
+    renderQuestion();
+  }, 700);
+}
+
+function checkLevelResult() {
+  const d = DATA[currentLevel];
+  let tot = levelScore.M + levelScore.Q + levelScore.R + levelScore.I;
+  let pct = Math.round((tot / d.totalQ) * 100);
+  
+  let outcome = null;
+  for(let l of d.levels) {
+    if(pct <= l.max) { outcome = l; break; }
+  }
+  if(!outcome) outcome = d.levels[d.levels.length-1];
+
+  let nxt = outcome.next;
+  if(nxt === currentLevel || !DATA[nxt]) {
+     showFinalResult(outcome, pct, tot, d.totalQ);
+  } else {
+     startLevel(nxt);
+  }
+}
+
+function showFinalResult(outcome, pct, tot, maxQs) {
+  clearInterval(timerInt);
+  document.getElementById('testWrap').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'block';
+  
+  let d = DATA[currentLevel];
+  
+  // Custom motivating descriptions
+  let motDesc = outcome.desc;
+  if(outcome.lvl === 'A2') motDesc = "🔥 Barakallah, juda ajoyib! Siz A1 darajasidan muvaffaqiyatli o'tib A2 darajasiga yetdingiz!";
+  if(outcome.lvl === 'B1') motDesc = "🌟 Mashallah, tabriklaymiz! Siz arab tili grammatikasi va lug'at boyligingiz bilan B1 darajasiga ko'tarildingiz!";
+  if(outcome.lvl === 'B2') motDesc = "🎓 Qoyilmaqom natija! Siz murakkab qoidalarni ham yaxshi tushunganingiz sababli B2 darajasiga erishdingiz!";
+  if(outcome.lvl === 'C1' || outcome.lvl === 'C1+') motDesc = "🏆 Mo'jiza! Siz C1 (Mukammal) darajadasiz! Arab tilini chuqur va ravon o'zlashtirgansiz. Tabriklaymiz!";
+
+  let html = `
+    <div class="res-tag">TEST YAKUNLANDI</div>
+    <h3>Sizning darajangiz:</h3>
+    <div class="res-lvl" style="color:${outcome.color}">${outcome.lvl}</div>
+    <div class="res-name" style="color:${outcome.color}">${outcome.name}</div>
+    <div class="res-pct">${pct}%</div>
+    <div class="res-total">Jami: ${tot}/${maxQs} ta to'g'ri</div>
+    
+    <div class="bd-grid">
+      <div class="bd-item" style="background:#3d6dbf">
+        <div class="bd-lbl">Mufradat</div>
+        <div class="bd-num">${levelScore.M}/${d.MQ.length}</div>
+      </div>
+      <div class="bd-item" style="background:#27ae60">
+        <div class="bd-lbl">Qovaid</div>
+        <div class="bd-num">${levelScore.Q}/${d.QQ.length}</div>
+      </div>
+      <div class="bd-item" style="background:#8b4000">
+        <div class="bd-lbl">Qiroat</div>
+        <div class="bd-num">${levelScore.R}/${d.RQ.length}</div>
+      </div>
+      <div class="bd-item" style="background:#c0415a">
+        <div class="bd-lbl">Istima'</div>
+        <div class="bd-num">${levelScore.I}/${d.IQ.length}</div>
+      </div>
+    </div>
+    
+    <div class="res-desc">${motDesc}</div>
+    
+    <div class="bot-action">
+      <strong>Keyingi qadam:</strong><br>
+      Daraja: ${outcome.lvl} • Ball: ${pct}%<br>
+      Natijalaringiz CRM tizimiga yuborilmoqda...
+    </div>
+    <div id="whStatus" class="webhook-status">Natijalar yuborilmoqda...</div>
+  `;
+  document.getElementById('resCard').innerHTML = html;
+  
+  sendToWebhook(outcome.lvl, pct, tot, maxQs);
+}
+
+// Timer
+function startTimer(){
+  timerInt = setInterval(()=>{
+    timeLeft--;
+    if(timeLeft<=0){
+      clearInterval(timerInt);
+      document.getElementById('timeUpOverlay').classList.add('show');
+      checkLevelResult();
+    }
+    
+    let m = Math.floor(timeLeft/60);
+    let s = timeLeft%60;
+    document.getElementById('timerDisplay').innerText = m+':'+(s<10?'0':'')+s;
+    
+    let tb = document.getElementById('timerBadge');
+    if(timeLeft < 300) tb.className = 'timer-badge danger';
+    else if(timeLeft < 600) tb.className = 'timer-badge warn';
+  }, 1000);
+}
+
+// Audio logic
+function toggleAudio() {
+  if(audioPlaysLeft <= 0) return;
+  if(!isAudioPlaying) {
+    audioEl.play().then(()=>{
+      isAudioPlaying = true;
+      document.getElementById('apPlayBtn').innerText = '⏸';
+      if(audioPlaysLeft === 2) document.getElementById('dot1').classList.add('used');
+      else document.getElementById('dot2').classList.add('used');
+    }).catch(e=>console.log(e));
+  } else {
+    audioEl.pause();
+    isAudioPlaying = false;
+    document.getElementById('apPlayBtn').innerText = '▶';
+  }
+}
+audioEl.addEventListener('ended', ()=>{
+  isAudioPlaying = false;
+  document.getElementById('apPlayBtn').innerText = '▶';
+  audioPlaysLeft--;
+  if(audioPlaysLeft <= 0) {
+    document.getElementById('apPlayBtn').disabled = true;
+    document.getElementById('apBlockedMsg').style.display = 'block';
+  }
+});
+audioEl.addEventListener('timeupdate', ()=>{
+  let p = (audioEl.currentTime / audioEl.duration) * 100;
+  if(!isNaN(p)) document.getElementById('apProgress').style.width = p + '%';
+  document.getElementById('apCurr').innerText = fmtTime(audioEl.currentTime);
+});
+audioEl.addEventListener('loadedmetadata', ()=>{
+  document.getElementById('apDur').innerText = fmtTime(audioEl.duration);
+});
+function seekAudio(e) {
+  if(audioPlaysLeft<=0) return;
+  let rect = e.currentTarget.getBoundingClientRect();
+  let x = e.clientX - rect.left;
+  let p = x / rect.width;
+  audioEl.currentTime = p * audioEl.duration;
+}
+function fmtTime(sec){
+  if(isNaN(sec)) return '0:00';
+  let m = Math.floor(sec/60);
+  let s = Math.floor(sec%60);
+  return m+':'+(s<10?'0':'')+s;
+}
+
+// Webhook
+function sendToWebhook(lvl, pct, tot, max) {
+  let tgId = 'UNKNOWN';
+  let name = 'Web User';
+  let un = '';
+  if(tg && tg.initDataUnsafe && tg.initDataUnsafe.user) {
+    tgId = tg.initDataUnsafe.user.id;
+    name = tg.initDataUnsafe.user.first_name || '';
+    un = tg.initDataUnsafe.user.username || '';
+  }
+  
+  let payload = {
+    tg_id: tgId, name: name, username: un,
+    level: lvl, score_pct: pct, correct: tot, total: max,
+    muf: levelScore.M, qov: levelScore.Q, qir: levelScore.R, ist: levelScore.I
+  };
+  
+  let whs = document.getElementById('whStatus');
+  whs.style.display = 'block';
+  
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(payload)
+  })
+  .then(res => {
+    if(res.ok) {
+      whs.innerText = "✅ Natijalaringiz muvaffaqiyatli saqlandi!";
+      setTimeout(()=>{ if(tg) tg.close(); }, 3500);
+    } else {
+      whs.className = 'webhook-status err';
+      whs.innerText = "⚠️ Xatolik yuz berdi.";
+    }
+  })
+  .catch(e => {
+    whs.className = 'webhook-status err';
+    whs.innerText = "⚠️ Tarmoq xatosi. Saqlanmadi.";
+  });
+}
+</script>
+</body>
+</html>
