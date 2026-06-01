@@ -190,12 +190,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
       <p id="secSub">...</p>
     </div>
 
-    <!-- Bu yerda bitta savol yoki matn + savol chiqadi -->
-    <div id="questionBody"></div>
-  </div>
-</div>
-
-<!-- AUDIO CONTAINER YASHIRIN HOLDA -->
+    <!-- AUDIO CONTAINER YASHIRIN HOLDA -->
 <div id="audioContainer" style="display:none;">
   <div class="audio-player">
     <div class="ap-title">🎧 Tinglang (Faqat 2 marta)</div>
@@ -221,6 +216,13 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
     <div class="ap-blocked-msg" id="apBlockedMsg">Audio limit tugadi. Savollarga javob bering.</div>
   </div>
 </div>
+
+    <!-- Bu yerda bitta savol yoki matn + savol chiqadi -->
+    <div id="questionBody"></div>
+  </div>
+</div>
+
+
 
 <div id="resultScreen">
   <div class="res-inner">
@@ -802,7 +804,6 @@ function renderQuestion() {
   qBody.innerHTML = html;
   
   if(q.type === 'I') {
-    qBody.prepend(document.getElementById('audioContainer'));
     document.getElementById('audioContainer').style.display = 'block';
   } else {
     document.getElementById('audioContainer').style.display = 'none';
