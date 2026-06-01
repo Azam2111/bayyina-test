@@ -5,7 +5,43 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Bayyina Arabic — Daraja Testi</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://telegram.org/js/telegram-web-app.js">
+let _nextLevelKey = null;
+
+function showLevelTransition(fromLvl, toLvl, pct, tot, totalQ, d) {
+  document.getElementById('testWrap').style.display = 'none';
+  const el = document.getElementById('levelTransition');
+  el.style.display = 'flex';
+  
+  _nextLevelKey = toLvl;
+  
+  document.getElementById('ltEmoji').innerText = pct >= 85 ? '🏆' : '🎉';
+  document.getElementById('ltTitle').innerText = 'Tabriklaymiz! ' + fromLvl + ' darajasidan o\'tdingiz!';
+  document.getElementById('ltSub').innerText = 
+    'Siz ' + fromLvl + ' darajasini muvaffaqiyatli topshirdingiz. ' +
+    'Endi ' + toLvl + ' darajasi savollari boshlanadi!';
+  
+  document.getElementById('ltStatsHeader').innerText = '📊 ' + fromLvl + ' daraja natijalari';
+  document.getElementById('ltPct').innerText = pct;
+  document.getElementById('ltCorrect').innerText = tot;
+  document.getElementById('ltTotal').innerText = totalQ;
+  document.getElementById('ltM').innerText = levelScore.M + '/' + d.MQ.length;
+  document.getElementById('ltQ').innerText = levelScore.Q + '/' + d.QQ.length;
+  document.getElementById('ltR').innerText = levelScore.R + '/' + d.RQ.length;
+  document.getElementById('ltI').innerText = levelScore.I + '/' + d.IQ.length;
+  document.getElementById('ltNextLvl').innerText = toLvl;
+  document.getElementById('ltNextInfo').innerText = toLvl + ' darajasi: ' + DATA[toLvl].totalQ + ' ta savol';
+}
+
+function proceedToNextLevel() {
+  if (!_nextLevelKey) return;
+  document.getElementById('levelTransition').style.display = 'none';
+  document.getElementById('testWrap').style.display = 'block';
+  startLevel(_nextLevelKey);
+  _nextLevelKey = null;
+}
+
+</script>
 <style>
 /* RESET & BASE */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -126,6 +162,125 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .tuo-icon{font-size:72px;margin-bottom:20px;animation:pulse 1.5s infinite}
 .tuo-title{font-size:28px;font-weight:800;color:white;margin-bottom:10px}
 .tuo-sub{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:28px}
+
+/* LEVEL TRANSITION SCREEN */
+#levelTransition {
+  display:none;
+  min-height:100vh;
+  background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 60%,#0f0f14 100%);
+  padding:32px 20px;
+  position:relative;
+  z-index:2;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+}
+.lt-wrap {
+  max-width:420px;
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+}
+.lt-badge {
+  display:inline-block;
+  background:linear-gradient(135deg,#f5c842,#f08a2a);
+  color:#1a1a1a;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  padding:6px 18px;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+.lt-emoji { font-size:64px; margin-bottom:16px; animation:bouncePop .6s ease; }
+@keyframes bouncePop {
+  0%{transform:scale(0.5);opacity:0}
+  70%{transform:scale(1.15)}
+  100%{transform:scale(1);opacity:1}
+}
+.lt-title {
+  font-size:26px;
+  font-weight:800;
+  color:white;
+  margin-bottom:8px;
+  line-height:1.3;
+}
+.lt-sub {
+  font-size:14px;
+  color:rgba(255,255,255,.55);
+  margin-bottom:28px;
+  line-height:1.6;
+}
+.lt-stats-card {
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:16px;
+  padding:20px;
+  margin-bottom:24px;
+  text-align:left;
+}
+.lt-stats-header {
+  font-size:12px;
+  font-weight:700;
+  color:rgba(255,255,255,.45);
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.lt-stats-row {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.07);
+  font-size:14px;
+  color:rgba(255,255,255,.85);
+}
+.lt-stats-row:last-child { border-bottom:none; }
+.lt-stats-row .lt-val {
+  font-weight:700;
+  color:white;
+  font-size:15px;
+}
+.lt-pct-big {
+  font-size:48px;
+  font-weight:900;
+  background:linear-gradient(135deg,#f5c842,#f08a2a);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin-bottom:4px;
+  display:block;
+}
+.lt-pct-label {
+  font-size:13px;
+  color:rgba(255,255,255,.5);
+  margin-bottom:20px;
+}
+.lt-btn {
+  width:100%;
+  background:linear-gradient(135deg,#f5c842,#f08a2a);
+  color:#1a1a1a;
+  border:none;
+  border-radius:14px;
+  padding:18px 20px;
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  transition:all .2s;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+}
+.lt-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(245,200,66,.35); }
+.lt-next-info {
+  font-size:12px;
+  color:rgba(255,255,255,.35);
+  margin-top:12px;
+}
+
 </style>
 </head>
 <body>
@@ -850,8 +1005,7 @@ function checkLevelResult() {
   if(nxt === currentLevel || !DATA[nxt]) {
      showFinalResult(outcome, pct, tot, d.totalQ);
   } else {
-     alert("🎉 TABRIKLAYMIZ!\n\nSiz " + currentLevel + " darajasidan a'lo baho (70% dan yuqori) bilan o'tdingiz!\n\nEndi keyingi bosqich, " + nxt + " darajasi savollari boshlanadi! Davom etamiz.");
-     startLevel(nxt);
+     showLevelTransition(currentLevel, nxt, pct, tot, d.totalQ, d);
   }
 }
 
@@ -1016,5 +1170,48 @@ function sendToWebhook(lvl, pct, tot, max) {
   });
 }
 </script>
+
+<div id="levelTransition" style="display:none;">
+  <div class="lt-wrap">
+    <div class="lt-badge">Daraja o'tdi! ✅</div>
+    <div class="lt-emoji" id="ltEmoji">🎉</div>
+    <div class="lt-title" id="ltTitle">Tabriklaymiz!</div>
+    <div class="lt-sub" id="ltSub">Siz keyingi bosqichga o'tdingiz!</div>
+    
+    <div class="lt-stats-card">
+      <div class="lt-stats-header" id="ltStatsHeader">📊 A0 daraja natijalari</div>
+      <div class="lt-stats-row">
+        <span>Jami ball</span>
+        <span class="lt-val"><span id="ltPct">0</span>%</span>
+      </div>
+      <div class="lt-stats-row">
+        <span>To'g'ri javoblar</span>
+        <span class="lt-val"><span id="ltCorrect">0</span> / <span id="ltTotal">0</span></span>
+      </div>
+      <div class="lt-stats-row">
+        <span>📖 Mufradat (Lug'at)</span>
+        <span class="lt-val" id="ltM">0/0</span>
+      </div>
+      <div class="lt-stats-row">
+        <span>✏️ Qovaid (Grammatika)</span>
+        <span class="lt-val" id="ltQ">0/0</span>
+      </div>
+      <div class="lt-stats-row">
+        <span>📄 Qiroat (O'qish)</span>
+        <span class="lt-val" id="ltR">0/0</span>
+      </div>
+      <div class="lt-stats-row">
+        <span>🎧 Istima' (Tinglash)</span>
+        <span class="lt-val" id="ltI">0/0</span>
+      </div>
+    </div>
+    
+    <button class="lt-btn" id="ltNextBtn" onclick="proceedToNextLevel()">
+      Keyingi bosqich → <span id="ltNextLvl">A1</span>
+    </button>
+    <div class="lt-next-info" id="ltNextInfo">Keyingi daraja savollari tayyor</div>
+  </div>
+</div>
+
 </body>
 </html>
