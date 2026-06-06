@@ -1,53 +1,16 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Bayyina Arabic — Daraja Testi</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://telegram.org/js/telegram-web-app.js">
-let _nextLevelKey = null;
-
-function showLevelTransition(fromLvl, toLvl, pct, tot, totalQ, d) {
-  document.getElementById('testWrap').style.display = 'none';
-  const el = document.getElementById('levelTransition');
-  el.style.display = 'flex';
-  
-  _nextLevelKey = toLvl;
-  
-  document.getElementById('ltEmoji').innerText = pct >= 85 ? '🏆' : '🎉';
-  document.getElementById('ltTitle').innerText = 'Tabriklaymiz! ' + fromLvl + ' darajasidan o\'tdingiz!';
-  document.getElementById('ltSub').innerText = 
-    'Siz ' + fromLvl + ' darajasini muvaffaqiyatli topshirdingiz. ' +
-    'Endi ' + toLvl + ' darajasi savollari boshlanadi!';
-  
-  document.getElementById('ltStatsHeader').innerText = '📊 ' + fromLvl + ' daraja natijalari';
-  document.getElementById('ltPct').innerText = pct;
-  document.getElementById('ltCorrect').innerText = tot;
-  document.getElementById('ltTotal').innerText = totalQ;
-  document.getElementById('ltM').innerText = levelScore.M + '/' + d.MQ.length;
-  document.getElementById('ltQ').innerText = levelScore.Q + '/' + d.QQ.length;
-  document.getElementById('ltR').innerText = levelScore.R + '/' + d.RQ.length;
-  document.getElementById('ltI').innerText = levelScore.I + '/' + d.IQ.length;
-  document.getElementById('ltNextLvl').innerText = toLvl;
-  document.getElementById('ltNextInfo').innerText = toLvl + ' darajasi: ' + DATA[toLvl].totalQ + ' ta savol';
-}
-
-function proceedToNextLevel() {
-  if (!_nextLevelKey) return;
-  document.getElementById('levelTransition').style.display = 'none';
-  document.getElementById('testWrap').style.display = 'block';
-  startLevel(_nextLevelKey);
-  _nextLevelKey = null;
-}
-
-</script>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 /* RESET & BASE */
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100vh;color:#1a1a1a}
-.watermark-logo {position:fixed;bottom:20px;right:20px;width:150px;opacity:0.25;mix-blend-mode:multiply;z-index:1;pointer-events:none}
-.watermark-text {position:fixed;bottom:20px;right:20px;font-size:24px;font-weight:800;color:#000;opacity:0.05;text-align:right;line-height:1.2;user-select:none;z-index:1;pointer-events:none}
+.watermark-logo {position:fixed;bottom:20px;right:20px;width:120px;opacity:0.2;z-index:1;pointer-events:none}
 
 /* LANDING */
 #landing{min-height:100vh;background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 50%,#0f0f14 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;position:relative;z-index:2}
@@ -62,8 +25,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .lcard-icon{font-size:36px;margin-bottom:10px}
 .lcard-lvl{font-size:24px;font-weight:800;color:white;margin-bottom:5px}
 .lcard-qs{font-size:12px;color:rgba(255,255,255,.5);margin-bottom:12px}
-
-/* WARNING BANNER */
 .warning-box {background:rgba(231,76,60,0.15);border:1px solid rgba(231,76,60,0.4);border-radius:12px;padding:16px;max-width:400px;width:100%;text-align:center;margin-bottom:24px}
 .warning-box h4 {color:#e74c3c;font-size:15px;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:6px}
 .warning-box p {color:rgba(255,255,255,0.8);font-size:13px;line-height:1.5}
@@ -75,39 +36,27 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .hdr-left h1{font-size:14px;font-weight:700}
 .hdr-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
 .level-pill{font-size:11px;font-weight:800;padding:4px 10px;border-radius:20px;color:white;flex-shrink:0}
-
-/* TIMER */
 .timer-badge{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.1);border:1.5px solid rgba(255,255,255,.18);border-radius:10px;padding:4px 9px;font-size:14px;font-weight:800;color:white;font-variant-numeric:tabular-nums;transition:all .4s}
 .timer-badge.warn{background:rgba(245,200,66,.15);border-color:rgba(245,200,66,.5);color:#f5c842}
 .timer-badge.danger{background:rgba(192,65,90,.25);border-color:#c0415a;color:#ff6b8a;animation:timerPulse .8s infinite}
 @keyframes timerPulse{0%,100%{box-shadow:0 0 0 0 rgba(192,65,90,.4)}50%{box-shadow:0 0 0 6px rgba(192,65,90,0)}}
-
-/* SEC NAV */
 .sec-nav{background:white;border-bottom:1px solid #e0d8cc;display:flex;overflow-x:auto;gap:0;position:sticky;top:43px;z-index:99}
 .sn-item{padding:10px 13px;font-size:12px;font-weight:500;color:#888;border-bottom:3px solid transparent;white-space:nowrap;display:flex;align-items:center;gap:4px;transition:all .15s}
 .sn-item.active{color:#1a1a1a;border-bottom-color:#1a1a1a}
 .sn-item.done{color:#27ae60}
-
-/* PROGRESS BAR */
 .gbar-wrap{background:white;padding:7px 14px;border-bottom:1px solid #e0d8cc;display:flex;align-items:center;gap:10px}
 .gbar{flex:1;height:5px;background:#e8e0d0;border-radius:3px;overflow:hidden}
 .gbar-fill{height:100%;background:#27ae60;border-radius:3px;transition:width .35s}
 .gbar-txt{font-size:11px;color:#666;font-weight:600;min-width:45px;text-align:right}
-
-/* MAIN CONTENT */
 .q-container {padding:14px;max-width:680px;margin:0 auto;animation:fadeIn 0.3s ease}
 @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .sec-header{margin-bottom:14px}
 .sec-header h2{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
 .sec-header p{font-size:12.5px;color:#666;line-height:1.5}
-
-/* TEXT BOX */
 .text-box{background:white;border-radius:10px;padding:14px;margin-bottom:13px;border:.5px solid #ddd}
 .tbh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
 .tar{font-size:15px;direction:rtl;line-height:2.1;color:#1a1a1a}
 .tkw{font-size:12px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid #f0ede8;line-height:1.6}
-
-/* AUDIO PLAYER */
 .audio-player{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:14px;padding:16px 18px;margin-bottom:14px;border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 20px rgba(0,0,0,.3)}
 .ap-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:12px}
 .ap-main{display:flex;align-items:center;gap:12px}
@@ -122,8 +71,6 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .ap-dot{width:9px;height:9px;border-radius:50%;background:#c0415a;transition:all .3s}
 .ap-dot.used{background:rgba(255,255,255,.12)}
 .ap-blocked-msg{margin-top:10px;font-size:11px;font-weight:600;color:#ff6b8a;display:none;text-align:center;padding:7px;background:rgba(192,65,90,.1);border-radius:7px}
-
-/* Q CARD */
 .q-card{background:white;border-radius:10px;padding:16px;margin-bottom:9px;border:.5px solid #e0d8cc}
 .q-num{font-size:11px;color:#888;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
 .q-ar{font-size:24px;direction:rtl;text-align:center;padding:10px 0;color:#1a1a1a;font-weight:500;line-height:1.5}
@@ -137,23 +84,77 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .ok .ltr{background:#27ae60;color:white}
 .no .ltr{background:#e74c3c;color:white}
 .opts.locked .opt{pointer-events:none}
+.feedback-box{margin-top:12px;padding:12px;border-radius:8px;font-size:13px;line-height:1.6;background:#fffbf0;border:1px solid #f5c842;color:#5a4a00}
 
-/* RESULTS */
-#resultScreen{display:none;background:linear-gradient(135deg,#0f0f14,#1a1a2e);min-height:100vh;padding:24px 16px;position:relative;z-index:2}
+/* LEVEL TRANSITION SCREEN */
+#levelTransition{
+  display:none;
+  min-height:100vh;
+  background:linear-gradient(160deg,#0a0a14 0%,#0d1a2e 50%,#0a0a14 100%);
+  padding:28px 16px 40px;
+  position:relative;
+  z-index:10;
+  overflow-y:auto;
+}
+.lt-inner{max-width:480px;margin:0 auto;text-align:center}
+.lt-confetti{font-size:56px;margin-bottom:12px;animation:ltBounce 0.7s cubic-bezier(.36,.07,.19,.97)}
+@keyframes ltBounce{0%{transform:scale(0.3);opacity:0}60%{transform:scale(1.2)}80%{transform:scale(0.9)}100%{transform:scale(1);opacity:1}}
+.lt-badge{display:inline-block;background:linear-gradient(135deg,#f5c842,#f08a2a);color:#1a1a1a;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:16px}
+.lt-title{font-size:22px;font-weight:800;color:white;margin-bottom:6px;line-height:1.3}
+.lt-sub{font-size:13px;color:rgba(255,255,255,.55);margin-bottom:24px;line-height:1.6}
+
+/* Big score circle */
+.lt-score-circle{
+  width:120px;height:120px;border-radius:50%;
+  background:linear-gradient(135deg,#f5c842,#f08a2a);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  margin:0 auto 24px;
+  box-shadow:0 0 40px rgba(245,200,66,.3);
+  animation:ltPop 0.5s ease 0.2s both;
+}
+@keyframes ltPop{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}
+.lt-score-num{font-size:38px;font-weight:900;color:#1a1a1a;line-height:1}
+.lt-score-label{font-size:11px;font-weight:700;color:rgba(26,26,26,0.7);margin-top:2px}
+
+/* Stats grid */
+.lt-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;text-align:left}
+.lt-stat-item{border-radius:14px;padding:14px;position:relative;overflow:hidden}
+.lt-stat-item::before{content:'';position:absolute;top:0;right:0;width:40px;height:40px;border-radius:50%;opacity:0.15;transform:translate(10px,-10px)}
+.lt-stat-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.lt-stat-score{font-size:26px;font-weight:900;color:white;line-height:1}
+.lt-stat-total{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+
+/* Next button */
+.lt-next-btn{
+  width:100%;
+  background:linear-gradient(135deg,#f5c842,#f08a2a);
+  color:#1a1a1a;border:none;border-radius:16px;
+  padding:20px;font-size:18px;font-weight:800;
+  cursor:pointer;transition:all .2s;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  box-shadow:0 8px 30px rgba(245,200,66,.35);
+  margin-top:8px;
+}
+.lt-next-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(245,200,66,.45)}
+.lt-next-btn:active{transform:translateY(0)}
+.lt-next-hint{font-size:12px;color:rgba(255,255,255,.3);margin-top:12px}
+
+/* FINAL RESULT SCREEN */
+#resultScreen{display:none;background:linear-gradient(135deg,#0f0f14,#1a1a2e);min-height:100vh;padding:24px 16px;position:relative;z-index:2;overflow-y:auto}
 .res-inner{max-width:520px;margin:0 auto}
 .res-card{background:white;border-radius:18px;padding:28px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.4)}
-.res-tag{font-size:12px;color:#888;margin-bottom:8px}
+.res-tag{font-size:12px;color:#888;margin-bottom:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .res-lvl{font-size:64px;font-weight:800;line-height:1;margin:8px 0 4px}
 .res-name{font-size:20px;font-weight:700;margin-bottom:4px}
 .res-pct{font-size:36px;font-weight:800;color:#333;margin:8px 0}
 .res-total{font-size:13px;color:#666;margin-bottom:18px}
 .bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0}
-.bd-item{border-radius:10px;padding:13px;text-align:left}
+.bd-item{border-radius:12px;padding:14px;text-align:left}
 .bd-lbl{font-size:11px;font-weight:700;color:rgba(255,255,255,.8);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px}
-.bd-num{font-size:22px;font-weight:800;color:white}
+.bd-num{font-size:24px;font-weight:800;color:white}
 .res-desc{font-size:14px;font-weight:600;color:#1a6b3a;line-height:1.65;text-align:center;padding:16px;background:#e8f9ee;border:1px solid #27ae60;border-radius:10px;margin:18px 0}
 .bot-action{background:#1a1a1a;border-radius:10px;padding:14px;font-size:12px;color:rgba(255,255,255,.8);line-height:1.7;text-align:left}
-.webhook-status{font-size:12px;margin-top:10px;padding:8px 12px;border-radius:8px;background:rgba(39,174,96,.1);color:#27ae60;display:none}
+.webhook-status{font-size:12px;margin-top:10px;padding:10px 14px;border-radius:8px;background:rgba(39,174,96,.1);color:#27ae60;display:none}
 .webhook-status.err{background:rgba(192,65,90,.1);color:#c0415a}
 
 /* TIME UP */
@@ -162,134 +163,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .tuo-icon{font-size:72px;margin-bottom:20px;animation:pulse 1.5s infinite}
 .tuo-title{font-size:28px;font-weight:800;color:white;margin-bottom:10px}
 .tuo-sub{font-size:14px;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:28px}
-
-/* LEVEL TRANSITION SCREEN */
-#levelTransition {
-  display:none;
-  min-height:100vh;
-  background:linear-gradient(135deg,#0f0f14 0%,#1a1a2e 60%,#0f0f14 100%);
-  padding:32px 20px;
-  position:relative;
-  z-index:2;
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-}
-.lt-wrap {
-  max-width:420px;
-  width:100%;
-  margin:0 auto;
-  text-align:center;
-}
-.lt-badge {
-  display:inline-block;
-  background:linear-gradient(135deg,#f5c842,#f08a2a);
-  color:#1a1a1a;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  padding:6px 18px;
-  border-radius:20px;
-  margin-bottom:20px;
-}
-.lt-emoji { font-size:64px; margin-bottom:16px; animation:bouncePop .6s ease; }
-@keyframes bouncePop {
-  0%{transform:scale(0.5);opacity:0}
-  70%{transform:scale(1.15)}
-  100%{transform:scale(1);opacity:1}
-}
-.lt-title {
-  font-size:26px;
-  font-weight:800;
-  color:white;
-  margin-bottom:8px;
-  line-height:1.3;
-}
-.lt-sub {
-  font-size:14px;
-  color:rgba(255,255,255,.55);
-  margin-bottom:28px;
-  line-height:1.6;
-}
-.lt-stats-card {
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:16px;
-  padding:20px;
-  margin-bottom:24px;
-  text-align:left;
-}
-.lt-stats-header {
-  font-size:12px;
-  font-weight:700;
-  color:rgba(255,255,255,.45);
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-.lt-stats-row {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:8px 0;
-  border-bottom:1px solid rgba(255,255,255,.07);
-  font-size:14px;
-  color:rgba(255,255,255,.85);
-}
-.lt-stats-row:last-child { border-bottom:none; }
-.lt-stats-row .lt-val {
-  font-weight:700;
-  color:white;
-  font-size:15px;
-}
-.lt-pct-big {
-  font-size:48px;
-  font-weight:900;
-  background:linear-gradient(135deg,#f5c842,#f08a2a);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  background-clip:text;
-  margin-bottom:4px;
-  display:block;
-}
-.lt-pct-label {
-  font-size:13px;
-  color:rgba(255,255,255,.5);
-  margin-bottom:20px;
-}
-.lt-btn {
-  width:100%;
-  background:linear-gradient(135deg,#f5c842,#f08a2a);
-  color:#1a1a1a;
-  border:none;
-  border-radius:14px;
-  padding:18px 20px;
-  font-size:17px;
-  font-weight:800;
-  cursor:pointer;
-  transition:all .2s;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-}
-.lt-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(245,200,66,.35); }
-.lt-next-info {
-  font-size:12px;
-  color:rgba(255,255,255,.35);
-  margin-top:12px;
-}
-
 </style>
 </head>
 <body>
 
-<!-- WATERMARK LOGO -->
 <img class="watermark-logo" src="https://Azam2111.github.io/bayyina-test/logo.jpg" alt="Bayyina Logo">
-<!-- <div class="watermark-text">
-  BAYYINA<br><span style="font-size:12px">Onlayn arab tili akademiyasi</span>
-</div> -->
 
 <div id="timeUpOverlay">
   <div class="tuo-icon">⏰</div>
@@ -301,12 +179,10 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
   <div class="land-logo">🎯</div>
   <h1 class="land-title">Bayyina Arabic<br><span>Daraja Testi</span></h1>
   <p class="land-sub">Arab tilingiz darajasini aniqlang — 4 bo'lim:<br>Mufradat · Qovaid · Qiroat · Istima'</p>
-  
   <div class="warning-box">
     <h4>⚠️ Diqqat! Test 60 daqiqa davom etadi.</h4>
     <p>Testni <strong>bitta o'tirishda</strong> to'xtovsiz ishlab tugatishingiz shart. Javobni belgilagach <strong>orqaga qaytish imkoni yo'q</strong>.</p>
   </div>
-
   <div class="land-cards">
     <div class="lcard" style="background:linear-gradient(135deg,#1a6a35,#27ae60)" onclick="startAdaptiveTest()">
       <div class="lcard-icon">🚀</div>
@@ -318,67 +194,102 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 
 <div id="testWrap">
   <div class="hdr">
-    <div class="hdr-left">
-      <h1>Bayyina Arabic Test</h1>
-    </div>
+    <div class="hdr-left"><h1>Bayyina Arabic Test</h1></div>
     <div class="hdr-right">
       <span class="timer-badge" id="timerBadge"><span>⏱</span><span id="timerDisplay">60:00</span></span>
       <div class="level-pill" id="lvlPill">A0</div>
     </div>
   </div>
-
   <div class="sec-nav">
     <div class="sn-item" id="nav0">📚 Mufradat</div>
     <div class="sn-item" id="nav1">📐 Qovaid</div>
     <div class="sn-item" id="nav2">📖 Qiroat</div>
     <div class="sn-item" id="nav3">🎧 Istima'</div>
   </div>
-
   <div class="gbar-wrap">
     <div class="gbar"><div class="gbar-fill" id="gbarFill" style="width:0%"></div></div>
     <div class="gbar-txt" id="gbarTxt">0/0</div>
   </div>
-
   <div class="q-container">
     <div class="sec-header">
       <h2 id="secTitle">...</h2>
       <p id="secSub">...</p>
     </div>
-
-    <!-- AUDIO CONTAINER YASHIRIN HOLDA -->
-<div id="audioContainer" style="display:none;">
-  <div class="audio-player">
-    <div class="ap-title">🎧 Tinglang (Faqat 2 marta)</div>
-    <div class="ap-main">
-      <button class="ap-play-btn" id="apPlayBtn" onclick="toggleAudio()">▶</button>
-      <div class="ap-info">
-        <div class="ap-progress-wrap" onclick="seekAudio(event)">
-          <div class="ap-progress-fill" id="apProgress"></div>
+    <div id="audioContainer" style="display:none;">
+      <div class="audio-player">
+        <div class="ap-title">🎧 Tinglang (Faqat 2 marta)</div>
+        <div class="ap-main">
+          <button class="ap-play-btn" id="apPlayBtn" onclick="toggleAudio()">▶</button>
+          <div class="ap-info">
+            <div class="ap-progress-wrap" onclick="seekAudio(event)">
+              <div class="ap-progress-fill" id="apProgress"></div>
+            </div>
+            <div class="ap-times">
+              <span id="apCurr">0:00</span>
+              <span id="apDur">0:00</span>
+            </div>
+          </div>
         </div>
-        <div class="ap-times">
-          <span id="apCurr">0:00</span>
-          <span id="apDur">0:00</span>
+        <div class="ap-attempts">
+          <span>Urinishlar:</span>
+          <div class="ap-attempt-dots">
+            <div class="ap-dot" id="dot1"></div>
+            <div class="ap-dot" id="dot2"></div>
+          </div>
         </div>
+        <div class="ap-blocked-msg" id="apBlockedMsg">Audio limit tugadi. Savollarga javob bering.</div>
       </div>
     </div>
-    <div class="ap-attempts">
-      <span>Urinishlar:</span>
-      <div class="ap-attempt-dots">
-        <div class="ap-dot" id="dot1"></div>
-        <div class="ap-dot" id="dot2"></div>
-      </div>
-    </div>
-    <div class="ap-blocked-msg" id="apBlockedMsg">Audio limit tugadi. Savollarga javob bering.</div>
-  </div>
-</div>
-
-    <!-- Bu yerda bitta savol yoki matn + savol chiqadi -->
     <div id="questionBody"></div>
   </div>
 </div>
 
+<!-- LEVEL TRANSITION SCREEN (oraliq natija ekrani) -->
+<div id="levelTransition">
+  <div class="lt-inner">
+    <div class="lt-badge" id="ltBadge">Daraja o'tdi! ✅</div>
+    <div class="lt-confetti" id="ltConfetti">🎉</div>
+    <div class="lt-title" id="ltTitle">Tabriklaymiz!</div>
+    <div class="lt-sub" id="ltSub">Siz keyingi bosqichga o'tdingiz!</div>
+    <div class="lt-score-circle">
+      <div class="lt-score-num" id="ltPct">0%</div>
+      <div class="lt-score-label" id="ltPctLabel">Ball</div>
+    </div>
+    <div class="lt-stats-grid">
+      <div class="lt-stat-item" style="background:#2563a8;">
+        <div class="lt-stat-label">📖 Mufradat</div>
+        <div class="lt-stat-score" id="ltM">0</div>
+        <div class="lt-stat-total" id="ltMt">/ 0 ta savol</div>
+      </div>
+      <div class="lt-stat-item" style="background:#1a7a3c;">
+        <div class="lt-stat-label">✏️ Qovaid</div>
+        <div class="lt-stat-score" id="ltQ">0</div>
+        <div class="lt-stat-total" id="ltQt">/ 0 ta savol</div>
+      </div>
+      <div class="lt-stat-item" style="background:#7a3800;">
+        <div class="lt-stat-label">📄 Qiroat</div>
+        <div class="lt-stat-score" id="ltR">0</div>
+        <div class="lt-stat-total" id="ltRt">/ 0 ta savol</div>
+      </div>
+      <div class="lt-stat-item" style="background:#8b1a3a;">
+        <div class="lt-stat-label">🎧 Istima'</div>
+        <div class="lt-stat-score" id="ltI">0</div>
+        <div class="lt-stat-total" id="ltIt">/ 0 ta savol</div>
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:16px;margin-bottom:20px;text-align:left;">
+      <div style="font-size:11px;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px;">Keyingi bosqich</div>
+      <div style="font-size:16px;font-weight:800;color:white;" id="ltNextInfo">A1 daraja savollari</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.4);margin-top:4px;" id="ltNextCount">29 ta savol</div>
+    </div>
+    <button class="lt-next-btn" onclick="proceedToNextLevel()">
+      Keyingi bosqichga o'tish <span id="ltNextArrow">→</span>
+    </button>
+    <div class="lt-next-hint">Tayyor bo'lsangiz bosing</div>
+  </div>
+</div>
 
-
+<!-- FINAL RESULT SCREEN -->
 <div id="resultScreen">
   <div class="res-inner">
     <div class="res-card" id="resCard"></div>
@@ -386,17 +297,17 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 </div>
 
 <script>
-// --- SETTINGS ---
+const tg = window.Telegram?.WebApp;
 const WEBHOOK_URL = 'https://hook.us2.make.com/ekg9971ofyu11lfw8jxrf98awh819y2b';
 const AUDIO_URLS = {
-  A0: 'https://AUDIO_HOST.com/bayyina/a0_istima.mp3',  // ← A0 daraja audio
-  A1: 'https://AUDIO_HOST.com/bayyina/a1_istima.mp3',  // ← A1 daraja audio
-  A2: 'https://AUDIO_HOST.com/bayyina/a2_istima.mp3',  // ← A2 daraja audio
-  B1: 'https://AUDIO_HOST.com/bayyina/b1_istima.mp3',  // ← B1 daraja audio
-  B2: 'https://AUDIO_HOST.com/bayyina/b2_istima.mp3',  // ← B2 daraja audio
-  C1: 'https://AUDIO_HOST.com/bayyina/c1_istima.mp3',  // ← C1 daraja audio
+  A0: 'https://AUDIO_HOST.com/bayyina/a0_istima.mp3',
+  A1: 'https://AUDIO_HOST.com/bayyina/a1_istima.mp3',
+  A2: 'https://AUDIO_HOST.com/bayyina/a2_istima.mp3',
+  B1: 'https://AUDIO_HOST.com/bayyina/b1_istima.mp3',
+  B2: 'https://AUDIO_HOST.com/bayyina/b2_istima.mp3',
+  C1: 'https://AUDIO_HOST.com/bayyina/c1_istima.mp3',
 };
-const TIMER_DURATION = 60 * 60; // 60 mins
+const TIMER_DURATION = 60 * 60;
 
 // --- DATA ---
 const DATA = {
@@ -836,13 +747,19 @@ let currentLevel = 'A0';
 let allQuestions = [];
 let currentQIndex = 0;
 let levelScore = {M:0, Q:0, R:0, I:0};
+
+
+// --- STATE ---
+let currentLevel = 'A0';
+let levelScore = {M:0, Q:0, R:0, I:0};
+let allQuestions = [];
+let currentQIndex = 0;
 let timerInt = null;
 let timeLeft = TIMER_DURATION;
-
-// Audio state
 let audioEl = new Audio();
 let audioPlaysLeft = 2;
 let isAudioPlaying = false;
+let _nextLevelKey = null;
 
 function shuffleArray(array) {
   let arr = [...array];
@@ -863,12 +780,10 @@ function startAdaptiveTest() {
 function startLevel(lvl) {
   currentLevel = lvl;
   levelScore = {M:0, Q:0, R:0, I:0};
-  
   const d = DATA[lvl];
   document.getElementById('lvlPill').innerText = lvl;
   document.getElementById('lvlPill').style.background = d.pillBg;
 
-  // Audio setup
   audioEl.src = AUDIO_URLS[lvl] || '';
   audioEl.load();
   audioPlaysLeft = 2;
@@ -879,23 +794,18 @@ function startLevel(lvl) {
   document.getElementById('dot2').className = 'ap-dot';
   document.getElementById('apBlockedMsg').style.display = 'none';
 
-  // Prepare questions
   let qs = [];
   let mQs = shuffleArray(d.MQ).map(q => ({...q, sec:0, type:'M', title: d.mufTitle, sub: d.mufSub}));
   qs.push(...mQs);
-  
   let qQs = shuffleArray(d.QQ).map(q => ({...q, sec:1, type:'Q', title: d.qovTitle, sub: d.qovSub}));
   qs.push(...qQs);
-  
-  let rQs = shuffleArray(d.RQ).map((q, idx) => ({...q, sec:2, type:'R', title: d.qirTitle, sub: d.qirSub, txt: d.qirText}));
+  let rQs = shuffleArray(d.RQ).map(q => ({...q, sec:2, type:'R', title: d.qirTitle, sub: d.qirSub, txt: d.qirText}));
   qs.push(...rQs);
-  
-  let iQs = shuffleArray(d.IQ).map((q, idx) => ({...q, sec:3, type:'I', title: d.istTitle, sub: d.istSub, txt: d.istText}));
+  let iQs = shuffleArray(d.IQ).map(q => ({...q, sec:3, type:'I', title: d.istTitle, sub: d.istSub, txt: d.istText}));
   qs.push(...iQs);
 
   allQuestions = qs;
   currentQIndex = 0;
-  
   renderQuestion();
 }
 
@@ -904,17 +814,16 @@ function renderQuestion() {
     checkLevelResult();
     return;
   }
-  
   const q = allQuestions[currentQIndex];
   const total = allQuestions.length;
-  
-  document.getElementById('gbarFill').style.width = (((currentQIndex) / total) * 100) + '%';
+
+  document.getElementById('gbarFill').style.width = ((currentQIndex / total) * 100) + '%';
   document.getElementById('gbarTxt').innerText = currentQIndex + '/' + total;
-  
   document.getElementById('secTitle').innerText = q.title;
   document.getElementById('secSub').innerText = q.sub;
-  
-  document.querySelectorAll('.sn-item').forEach((el, i) => {
+
+  const navItems = document.querySelectorAll('.sn-item');
+  navItems.forEach((el, i) => {
     if(i < q.sec) el.className = 'sn-item done';
     else if(i === q.sec) el.className = 'sn-item active';
     else el.className = 'sn-item';
@@ -922,185 +831,233 @@ function renderQuestion() {
 
   let html = '';
   if(q.txt) {
-    html += `
-      <div class="text-box" style="border-left:3px solid ${q.txt.borderColor}">
-        <div class="tbh" style="color:${q.txt.titleColor}">${q.txt.title}</div>
-        <div class="tar">${q.txt.ar}</div>
-        ${q.txt.kw ? `<div class="tkw">${q.txt.kw}</div>` : ''}
-      </div>
-    `;
+    html += `<div class="text-box" style="border-left:3px solid ${q.txt.borderColor}">
+      <div class="tbh" style="color:${q.txt.titleColor}">${q.txt.title}</div>
+      <div class="tar">${q.txt.ar}</div>
+      ${q.txt.kw ? `<div class="tkw">${q.txt.kw}</div>` : ''}
+    </div>`;
   }
 
-  // Shuffle options
   let opts = [...q.o];
   let correctOpt = opts[q.c];
   opts = shuffleArray(opts);
   let newCorrectIndex = opts.indexOf(correctOpt);
-  
   let letters = ['A','B','C','D'];
+  let feedbackText = q.f ? q.f.replace(/'/g, "\'") : '';
   let optsHtml = opts.map((optText, i) => {
-      let isCorrect = (i === newCorrectIndex);
-      return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}')">
-                <div class="ltr">${letters[i]}</div>
-                <div>${optText}</div>
-              </div>`;
+    let isCorrect = (i === newCorrectIndex);
+    return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}', '${feedbackText}')" >
+      <div class="ltr">${letters[i]}</div>
+      <div>${optText}</div>
+    </div>`;
   }).join('');
 
-  html += `
-    <div class="q-card">
-      <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
-      ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
-      <div class="q-text">${q.q}</div>
-      <div class="opts">${optsHtml}</div>
-    </div>
-  `;
-  
+  html += `<div class="q-card">
+    <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
+    ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
+    <div class="q-text">${q.q}</div>
+    <div class="opts">${optsHtml}</div>
+  </div>`;
+
   const qBody = document.getElementById('questionBody');
   qBody.innerHTML = html;
-  
+
   if(q.type === 'I') {
     document.getElementById('audioContainer').style.display = 'block';
   } else {
     document.getElementById('audioContainer').style.display = 'none';
-    if(isAudioPlaying) toggleAudio();
+    if(isAudioPlaying) { audioEl.pause(); isAudioPlaying = false; }
   }
+
+  // scroll to top
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function selectOption(el, isCorrect, type) {
+function selectOption(el, isCorrect, type, feedbackText) {
   let optsDiv = el.parentElement;
   if(optsDiv.classList.contains('locked')) return;
   optsDiv.classList.add('locked');
-  
+
   if(isCorrect) {
     el.classList.add('ok');
     levelScore[type]++;
   } else {
     el.classList.add('no');
+    // show correct answer
+    optsDiv.querySelectorAll('.opt').forEach(opt => {
+      if(opt !== el && !opt.classList.contains('no') && !opt.classList.contains('ok')) {
+        // find correct opt by data
+      }
+    });
   }
-  
+
+  // Show feedback if available
+  if(feedbackText) {
+    let fb = document.createElement('div');
+    fb.className = 'feedback-box';
+    fb.innerText = '💡 ' + feedbackText;
+    optsDiv.parentElement.appendChild(fb);
+  }
+
   setTimeout(() => {
     currentQIndex++;
-    // Add slide animation
     const container = document.querySelector('.q-container');
-    container.style.animation = 'none';
-    container.offsetHeight; // trigger reflow
-    container.style.animation = null; 
-    
+    if(container) {
+      container.style.animation = 'none';
+      void container.offsetHeight;
+      container.style.animation = '';
+    }
     renderQuestion();
-  }, 700);
+  }, 900);
 }
 
 function checkLevelResult() {
+  if(isAudioPlaying) { audioEl.pause(); isAudioPlaying = false; }
   const d = DATA[currentLevel];
   let tot = levelScore.M + levelScore.Q + levelScore.R + levelScore.I;
   let pct = Math.round((tot / d.totalQ) * 100);
-  
+
   let outcome = null;
   for(let l of d.levels) {
     if(pct <= l.max) { outcome = l; break; }
   }
-  if(!outcome) outcome = d.levels[d.levels.length-1];
+  if(!outcome) outcome = d.levels[d.levels.length - 1];
 
   let nxt = outcome.next;
   if(nxt === currentLevel || !DATA[nxt]) {
-     showFinalResult(outcome, pct, tot, d.totalQ);
+    showFinalResult(outcome, pct, tot, d.totalQ);
   } else {
-     showLevelTransition(currentLevel, nxt, pct, tot, d.totalQ, d);
+    showLevelTransition(currentLevel, nxt, pct, tot, d);
   }
+}
+
+function showLevelTransition(fromLvl, toLvl, pct, tot, d) {
+  _nextLevelKey = toLvl;
+
+  // Hide test, show transition
+  document.getElementById('testWrap').style.display = 'none';
+  document.getElementById('levelTransition').style.display = 'block';
+
+  // Confetti emoji
+  document.getElementById('ltConfetti').innerText = pct >= 85 ? '🏆' : '🎉';
+  document.getElementById('ltBadge').innerText = fromLvl + ' daraja — Muvaffaqiyatli tugallandi! ✅';
+  document.getElementById('ltTitle').innerText = "Barakalloh! Siz " + fromLvl + " darajasidan o'tdingiz!";
+  document.getElementById('ltSub').innerText = 'Arabcha bilimingiz yuqoriroq darajaga mos. Endi ' + toLvl + ' darajasi savollari boshlanadi.';
+
+  // Score circle
+  document.getElementById('ltPct').innerText = pct + '%';
+  document.getElementById('ltPctLabel').innerText = tot + '/' + d.totalQ + " to'g'ri";
+
+  // Stats
+  document.getElementById('ltM').innerText = levelScore.M;
+  document.getElementById('ltMt').innerText = '/ ' + d.MQ.length + ' ta savol';
+  document.getElementById('ltQ').innerText = levelScore.Q;
+  document.getElementById('ltQt').innerText = '/ ' + d.QQ.length + ' ta savol';
+  document.getElementById('ltR').innerText = levelScore.R;
+  document.getElementById('ltRt').innerText = '/ ' + d.RQ.length + ' ta savol';
+  document.getElementById('ltI').innerText = levelScore.I;
+  document.getElementById('ltIt').innerText = '/ ' + d.IQ.length + ' ta savol';
+
+  // Next level info
+  const nextD = DATA[toLvl];
+  document.getElementById('ltNextInfo').innerText = toLvl + ' daraja savollari';
+  document.getElementById('ltNextCount').innerText = nextD.totalQ + ' ta savol · ' + nextD.mufTitle.split('—')[0].trim();
+
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function proceedToNextLevel() {
+  if (!_nextLevelKey) return;
+  const nxt = _nextLevelKey;
+  _nextLevelKey = null;
+  document.getElementById('levelTransition').style.display = 'none';
+  document.getElementById('testWrap').style.display = 'block';
+  startLevel(nxt);
 }
 
 function showFinalResult(outcome, pct, tot, maxQs) {
   clearInterval(timerInt);
   document.getElementById('testWrap').style.display = 'none';
+  document.getElementById('levelTransition').style.display = 'none';
   document.getElementById('resultScreen').style.display = 'block';
-  
+
   let d = DATA[currentLevel];
-  
-  // Custom motivating descriptions
   let motDesc = outcome.desc;
-  if(outcome.lvl === 'A2') motDesc = "🔥 Barakallah, juda ajoyib! Siz A1 darajasidan muvaffaqiyatli o'tib A2 darajasiga yetdingiz!";
-  if(outcome.lvl === 'B1') motDesc = "🌟 Mashallah, tabriklaymiz! Siz arab tili grammatikasi va lug'at boyligingiz bilan B1 darajasiga ko'tarildingiz!";
-  if(outcome.lvl === 'B2') motDesc = "🎓 Qoyilmaqom natija! Siz murakkab qoidalarni ham yaxshi tushunganingiz sababli B2 darajasiga erishdingiz!";
-  if(outcome.lvl === 'C1' || outcome.lvl === 'C1+') motDesc = "🏆 Mo'jiza! Siz C1 (Mukammal) darajadasiz! Arab tilini chuqur va ravon o'zlashtirgansiz. Tabriklaymiz!";
+  if(outcome.lvl === 'A2') motDesc = "🔥 Barakallah! Siz A1 darajasidan muvaffaqiyatli o'tib A2 darajasiga yetdingiz!";
+  if(outcome.lvl === 'B1') motDesc = "🌟 Mashallah! Siz B1 darajasiga ko'tarildingiz!";
+  if(outcome.lvl === 'B2') motDesc = "🎓 Qoyilmaqom! Siz B2 darajasiga erishdingiz!";
+  if(outcome.lvl === 'C1' || outcome.lvl === 'C1+') motDesc = "🏆 Mo'jiza! Siz C1 darajadasiz!";
 
   let html = `
     <div class="res-tag">TEST YAKUNLANDI</div>
-    <h3>Sizning darajangiz:</h3>
+    <h3 style="font-size:16px;color:#666;margin-bottom:8px;">Sizning darajangiz:</h3>
     <div class="res-lvl" style="color:${outcome.color}">${outcome.lvl}</div>
     <div class="res-name" style="color:${outcome.color}">${outcome.name}</div>
     <div class="res-pct">${pct}%</div>
     <div class="res-total">Jami: ${tot}/${maxQs} ta to'g'ri</div>
-    
     <div class="bd-grid">
-      <div class="bd-item" style="background:#3d6dbf">
+      <div class="bd-item" style="background:#2563a8">
         <div class="bd-lbl">Mufradat</div>
         <div class="bd-num">${levelScore.M}/${d.MQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#27ae60">
+      <div class="bd-item" style="background:#1a7a3c">
         <div class="bd-lbl">Qovaid</div>
         <div class="bd-num">${levelScore.Q}/${d.QQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#8b4000">
+      <div class="bd-item" style="background:#7a3800">
         <div class="bd-lbl">Qiroat</div>
         <div class="bd-num">${levelScore.R}/${d.RQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#c0415a">
+      <div class="bd-item" style="background:#8b1a3a">
         <div class="bd-lbl">Istima'</div>
         <div class="bd-num">${levelScore.I}/${d.IQ.length}</div>
       </div>
     </div>
-    
     <div class="res-desc">${motDesc}</div>
-    
     <div class="bot-action">
       <strong>Keyingi qadam:</strong><br>
       Daraja: ${outcome.lvl} • Ball: ${pct}%<br>
-      Natijalaringiz CRM tizimiga yuborilmoqda...
+      ${outcome.action || 'Natijalar bot orqali yuboriladi.'}
     </div>
     <div id="whStatus" class="webhook-status">Natijalar yuborilmoqda...</div>
   `;
   document.getElementById('resCard').innerHTML = html;
-  
   sendToWebhook(outcome.lvl, pct, tot, maxQs);
 }
 
-// Timer
-function startTimer(){
-  timerInt = setInterval(()=>{
+function startTimer() {
+  timerInt = setInterval(() => {
     timeLeft--;
-    if(timeLeft<=0){
+    if(timeLeft <= 0) {
       clearInterval(timerInt);
       document.getElementById('timeUpOverlay').classList.add('show');
       checkLevelResult();
     }
-    
     let m = Math.floor(timeLeft/60);
-    let s = timeLeft%60;
-    document.getElementById('timerDisplay').innerText = m+':'+(s<10?'0':'')+s;
-    
+    let s = timeLeft % 60;
+    document.getElementById('timerDisplay').innerText = m + ':' + (s < 10 ? '0' : '') + s;
     let tb = document.getElementById('timerBadge');
     if(timeLeft < 300) tb.className = 'timer-badge danger';
     else if(timeLeft < 600) tb.className = 'timer-badge warn';
   }, 1000);
 }
 
-// Audio logic
 function toggleAudio() {
   if(audioPlaysLeft <= 0) return;
   if(!isAudioPlaying) {
-    audioEl.play().then(()=>{
+    audioEl.play().then(() => {
       isAudioPlaying = true;
       document.getElementById('apPlayBtn').innerText = '⏸';
       if(audioPlaysLeft === 2) document.getElementById('dot1').classList.add('used');
       else document.getElementById('dot2').classList.add('used');
-    }).catch(e=>console.log(e));
+    }).catch(e => console.log(e));
   } else {
     audioEl.pause();
     isAudioPlaying = false;
     document.getElementById('apPlayBtn').innerText = '▶';
   }
 }
-audioEl.addEventListener('ended', ()=>{
+audioEl.addEventListener('ended', () => {
   isAudioPlaying = false;
   document.getElementById('apPlayBtn').innerText = '▶';
   audioPlaysLeft--;
@@ -1109,109 +1066,52 @@ audioEl.addEventListener('ended', ()=>{
     document.getElementById('apBlockedMsg').style.display = 'block';
   }
 });
-audioEl.addEventListener('timeupdate', ()=>{
+audioEl.addEventListener('timeupdate', () => {
   let p = (audioEl.currentTime / audioEl.duration) * 100;
   if(!isNaN(p)) document.getElementById('apProgress').style.width = p + '%';
   document.getElementById('apCurr').innerText = fmtTime(audioEl.currentTime);
 });
-audioEl.addEventListener('loadedmetadata', ()=>{
+audioEl.addEventListener('loadedmetadata', () => {
   document.getElementById('apDur').innerText = fmtTime(audioEl.duration);
 });
 function seekAudio(e) {
-  if(audioPlaysLeft<=0) return;
+  if(audioPlaysLeft <= 0) return;
   let rect = e.currentTarget.getBoundingClientRect();
   let x = e.clientX - rect.left;
-  let p = x / rect.width;
-  audioEl.currentTime = p * audioEl.duration;
+  audioEl.currentTime = (x / rect.width) * audioEl.duration;
 }
-function fmtTime(sec){
+function fmtTime(sec) {
   if(isNaN(sec)) return '0:00';
-  let m = Math.floor(sec/60);
-  let s = Math.floor(sec%60);
-  return m+':'+(s<10?'0':'')+s;
+  let m = Math.floor(sec/60), s = Math.floor(sec%60);
+  return m + ':' + (s < 10 ? '0' : '') + s;
 }
 
-// Webhook
 function sendToWebhook(lvl, pct, tot, max) {
-  let tgId = 'UNKNOWN';
-  let name = 'Web User';
-  let un = '';
+  let tgId = 'UNKNOWN', name = 'Web User', un = '';
   if(tg && tg.initDataUnsafe && tg.initDataUnsafe.user) {
     tgId = tg.initDataUnsafe.user.id;
     name = tg.initDataUnsafe.user.first_name || '';
     un = tg.initDataUnsafe.user.username || '';
   }
-  
-  let payload = {
-    tg_id: tgId, name: name, username: un,
-    level: lvl, score_pct: pct, correct: tot, total: max,
-    muf: levelScore.M, qov: levelScore.Q, qir: levelScore.R, ist: levelScore.I
-  };
-  
+  let payload = { tg_id: tgId, name, username: un, level: lvl, score_pct: pct, correct: tot, total: max,
+    muf: levelScore.M, qov: levelScore.Q, qir: levelScore.R, ist: levelScore.I };
   let whs = document.getElementById('whStatus');
+  if(!whs) return;
   whs.style.display = 'block';
-  
-  fetch(WEBHOOK_URL, {
-    method: 'POST',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(payload)
-  })
+  fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
   .then(res => {
     if(res.ok) {
-      whs.innerHTML = "✅ Natijalaringiz muvaffaqiyatli saqlandi!<br><br><button onclick=\"if(window.Telegram?.WebApp) window.Telegram.WebApp.close(); else window.close();\" style=\"background:#27ae60; color:white; border:none; padding:14px 20px; border-radius:12px; font-weight:bold; cursor:pointer; width:100%; font-size:16px;\">Botga qaytish</button>";
+      whs.innerHTML = '✅ Natijalaringiz muvaffaqiyatli saqlandi!<br><br><button onclick="if(window.Telegram?.WebApp)window.Telegram.WebApp.close();else window.close();" style="background:#27ae60;color:white;border:none;padding:14px 20px;border-radius:12px;font-weight:800;cursor:pointer;width:100%;font-size:16px;margin-top:4px;">Botga qaytish ✓</button>';
     } else {
       whs.className = 'webhook-status err';
-      whs.innerText = "⚠️ Xatolik yuz berdi.";
+      whs.innerText = '⚠️ Xatolik yuz berdi. Bot orqali yuboriladi.';
     }
-  })
-  .catch(e => {
+  }).catch(() => {
     whs.className = 'webhook-status err';
-    whs.innerText = "⚠️ Tarmoq xatosi. Saqlanmadi.";
+    whs.innerText = '⚠️ Tarmoq xatosi. Natijangiz bot orqali saqlanadi.';
   });
 }
 </script>
-
-<div id="levelTransition" style="display:none;">
-  <div class="lt-wrap">
-    <div class="lt-badge">Daraja o'tdi! ✅</div>
-    <div class="lt-emoji" id="ltEmoji">🎉</div>
-    <div class="lt-title" id="ltTitle">Tabriklaymiz!</div>
-    <div class="lt-sub" id="ltSub">Siz keyingi bosqichga o'tdingiz!</div>
-    
-    <div class="lt-stats-card">
-      <div class="lt-stats-header" id="ltStatsHeader">📊 A0 daraja natijalari</div>
-      <div class="lt-stats-row">
-        <span>Jami ball</span>
-        <span class="lt-val"><span id="ltPct">0</span>%</span>
-      </div>
-      <div class="lt-stats-row">
-        <span>To'g'ri javoblar</span>
-        <span class="lt-val"><span id="ltCorrect">0</span> / <span id="ltTotal">0</span></span>
-      </div>
-      <div class="lt-stats-row">
-        <span>📖 Mufradat (Lug'at)</span>
-        <span class="lt-val" id="ltM">0/0</span>
-      </div>
-      <div class="lt-stats-row">
-        <span>✏️ Qovaid (Grammatika)</span>
-        <span class="lt-val" id="ltQ">0/0</span>
-      </div>
-      <div class="lt-stats-row">
-        <span>📄 Qiroat (O'qish)</span>
-        <span class="lt-val" id="ltR">0/0</span>
-      </div>
-      <div class="lt-stats-row">
-        <span>🎧 Istima' (Tinglash)</span>
-        <span class="lt-val" id="ltI">0/0</span>
-      </div>
-    </div>
-    
-    <button class="lt-btn" id="ltNextBtn" onclick="proceedToNextLevel()">
-      Keyingi bosqich → <span id="ltNextLvl">A1</span>
-    </button>
-    <div class="lt-next-info" id="ltNextInfo">Keyingi daraja savollari tayyor</div>
-  </div>
-</div>
-
 </body>
 </html>
+
