@@ -843,10 +843,12 @@ function renderQuestion() {
   opts = shuffleArray(opts);
   let newCorrectIndex = opts.indexOf(correctOpt);
   let letters = ['A','B','C','D'];
-  let feedbackText = q.f ? q.f.replace(/'/g, "\'") : '';
+  window._feedbacks = window._feedbacks || {};
+  window._feedbacks[currentQIndex] = q.f || '';
+  let qIdx = currentQIndex;
   let optsHtml = opts.map((optText, i) => {
     let isCorrect = (i === newCorrectIndex);
-    return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}', '${feedbackText}')" >
+    return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
       <div class="ltr">${letters[i]}</div>
       <div>${optText}</div>
     </div>`;
@@ -873,7 +875,8 @@ function renderQuestion() {
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function selectOption(el, isCorrect, type, feedbackText) {
+function selectOption(el, isCorrect, type, qIdx) {
+  let feedbackText = (window._feedbacks && window._feedbacks[qIdx]) || '';
   let optsDiv = el.parentElement;
   if(optsDiv.classList.contains('locked')) return;
   optsDiv.classList.add('locked');
