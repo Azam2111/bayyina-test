@@ -730,26 +730,9 @@ C1: {
 
 }; // end DATA
 
-// ══════════════════════════════════════════════════════════════
-//  HOLAT O'ZGARUVCHILARI
-// ══════════════════════════════════════════════════════════════
-const LEVEL_ORDER = ['A0', 'A1', 'A2', 'B1', 'B2', 'C1'];
-const PASS_PERCENT = 70;
-
-let currentLevelIdx = 0;
-
-
-// --- LOGIC ---
-let tg = window.Telegram?.WebApp || null;
+// --- STATE ---
 if(tg && tg.expand) { tg.expand(); tg.ready(); }
 
-let currentLevel = 'A0';
-let allQuestions = [];
-let currentQIndex = 0;
-let levelScore = {M:0, Q:0, R:0, I:0};
-
-
-// --- STATE ---
 let currentLevel = 'A0';
 let levelScore = {M:0, Q:0, R:0, I:0};
 let allQuestions = [];
