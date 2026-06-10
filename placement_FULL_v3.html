@@ -51,12 +51,12 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .q-container {padding:14px;max-width:680px;margin:0 auto;animation:fadeIn 0.3s ease}
 @keyframes fadeIn {from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .sec-header{margin-bottom:14px}
-.sec-header h2{font-size:15px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
-.sec-header p{font-size:12.5px;color:#666;line-height:1.5}
+.sec-header h2{font-size:18px;font-weight:700;color:#1a1a1a;margin-bottom:3px}
+.sec-header p{font-size:14.5px;color:#666;line-height:1.55}
 .text-box{background:white;border-radius:10px;padding:14px;margin-bottom:13px;border:.5px solid #ddd}
-.tbh{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
-.tar{font-size:15px;direction:rtl;line-height:2.1;color:#1a1a1a}
-.tkw{font-size:12px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid #f0ede8;line-height:1.6}
+.tbh{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.tar{font-size:20px;direction:rtl;line-height:2.25;color:#1a1a1a}
+.tkw{font-size:14px;color:#888;margin-top:8px;padding-top:8px;border-top:1px solid #f0ede8;line-height:1.7}
 .audio-player{background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:14px;padding:16px 18px;margin-bottom:14px;border:1px solid rgba(255,255,255,.08);box-shadow:0 4px 20px rgba(0,0,0,.3)}
 .ap-title{font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:12px}
 .ap-main{display:flex;align-items:center;gap:12px}
@@ -72,19 +72,19 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0f0f14;min-height:100v
 .ap-dot.used{background:rgba(255,255,255,.12)}
 .ap-blocked-msg{margin-top:10px;font-size:11px;font-weight:600;color:#ff6b8a;display:none;text-align:center;padding:7px;background:rgba(192,65,90,.1);border-radius:7px}
 .q-card{background:white;border-radius:10px;padding:16px;margin-bottom:9px;border:.5px solid #e0d8cc}
-.q-num{font-size:11px;color:#888;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
-.q-ar{font-size:24px;direction:rtl;text-align:center;padding:10px 0;color:#1a1a1a;font-weight:500;line-height:1.5}
-.q-text{font-size:14.5px;color:#2a2a2a;line-height:1.5;white-space:pre-line;font-weight:600;margin-bottom:12px}
-.opts{display:flex;flex-direction:column;gap:8px}
-.opt{border:2px solid #e8e0d0;border-radius:10px;padding:12px 14px;font-size:14.5px;cursor:pointer;display:flex;align-items:center;gap:10px;text-align:left;background:white;width:100%;transition:all .15s;color:#2a2a2a;white-space:pre-line;font-weight:500}
+.q-num{font-size:13px;color:#888;font-weight:600;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center}
+.q-ar{font-size:30px;direction:rtl;text-align:center;padding:12px 0;color:#1a1a1a;font-weight:500;line-height:1.6}
+.q-text{font-size:18px;color:#2a2a2a;line-height:1.6;white-space:pre-line;font-weight:600;margin-bottom:14px}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{border:2px solid #e8e0d0;border-radius:10px;padding:14px 16px;font-size:17px;cursor:pointer;display:flex;align-items:center;gap:12px;text-align:left;background:white;width:100%;transition:all .15s;color:#2a2a2a;white-space:pre-line;font-weight:500;line-height:1.45}
 .opt:hover{background:#fdfcfb;border-color:#ccc}
 .opt.ok{background:#e8f9ee!important;border-color:#27ae60!important;color:#1a6b3a!important}
 .opt.no{background:#fce8e8!important;border-color:#e74c3c!important;color:#8b1a1a!important}
-.ltr{width:24px;height:24px;min-width:24px;border-radius:50%;background:#f0ede8;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.ltr{width:28px;height:28px;min-width:28px;border-radius:50%;background:#f0ede8;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0}
 .ok .ltr{background:#27ae60;color:white}
 .no .ltr{background:#e74c3c;color:white}
 .opts.locked .opt{pointer-events:none}
-.feedback-box{margin-top:12px;padding:12px;border-radius:8px;font-size:13px;line-height:1.6;background:#fffbf0;border:1px solid #f5c842;color:#5a4a00}
+.feedback-box{margin-top:12px;padding:13px;border-radius:8px;font-size:15px;line-height:1.7;background:#fffbf0;border:1px solid #f5c842;color:#5a4a00}
 
 /* LEVEL TRANSITION SCREEN */
 #levelTransition{
@@ -733,6 +733,8 @@ C1: {
 // --- STATE ---
 if(tg && tg.expand) { tg.expand(); tg.ready(); }
 
+const LEVEL_ORDER = ['A0','A1','A2','B1','B2','C1'];
+let timedOut = false;
 let currentLevel = 'A0';
 let levelScore = {M:0, Q:0, R:0, I:0};
 let allQuestions = [];
@@ -756,6 +758,8 @@ function shuffleArray(array) {
 function startAdaptiveTest() {
   document.getElementById('landing').style.display = 'none';
   document.getElementById('testWrap').style.display = 'block';
+  timedOut = false;
+  timeLeft = TIMER_DURATION;
   startTimer();
   startLevel('A0');
 }
@@ -831,7 +835,7 @@ function renderQuestion() {
   let qIdx = currentQIndex;
   let optsHtml = opts.map((optText, i) => {
     let isCorrect = (i === newCorrectIndex);
-    return `<div class="opt" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
+    return `<div class="opt" data-correct="${isCorrect}" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
       <div class="ltr">${letters[i]}</div>
       <div>${optText}</div>
     </div>`;
@@ -869,12 +873,9 @@ function selectOption(el, isCorrect, type, qIdx) {
     levelScore[type]++;
   } else {
     el.classList.add('no');
-    // show correct answer
-    optsDiv.querySelectorAll('.opt').forEach(opt => {
-      if(opt !== el && !opt.classList.contains('no') && !opt.classList.contains('ok')) {
-        // find correct opt by data
-      }
-    });
+    // To'g'ri javobni yashil rangda ko'rsatamiz
+    const correctEl = optsDiv.querySelector('.opt[data-correct="true"]');
+    if(correctEl) correctEl.classList.add('ok');
   }
 
   // Show feedback if available
@@ -910,10 +911,13 @@ function checkLevelResult() {
   if(!outcome) outcome = d.levels[d.levels.length - 1];
 
   let nxt = outcome.next;
-  if(nxt === currentLevel || !DATA[nxt]) {
-    showFinalResult(outcome, pct, tot, d.totalQ);
-  } else {
+  // Faqat YUQORI darajaga o'tishda transition ko'rsatamiz.
+  // Past ball (next quyi/teng daraja) yoki vaqt tugaganda — yakuniy natija.
+  const goingUp = LEVEL_ORDER.indexOf(nxt) > LEVEL_ORDER.indexOf(currentLevel);
+  if(goingUp && DATA[nxt] && !timedOut) {
     showLevelTransition(currentLevel, nxt, pct, tot, d);
+  } else {
+    showFinalResult(outcome, pct, tot, d.totalQ);
   }
 }
 
@@ -1016,8 +1020,16 @@ function startTimer() {
     timeLeft--;
     if(timeLeft <= 0) {
       clearInterval(timerInt);
-      document.getElementById('timeUpOverlay').classList.add('show');
-      checkLevelResult();
+      timedOut = true;
+      document.getElementById('timerDisplay').innerText = '0:00';
+      const ov = document.getElementById('timeUpOverlay');
+      ov.classList.add('show');
+      // "Vaqt tugadi" xabarini ko'rsatib, so'ng natijani ochamiz
+      setTimeout(() => {
+        ov.classList.remove('show');
+        checkLevelResult();
+      }, 2200);
+      return;
     }
     let m = Math.floor(timeLeft/60);
     let s = timeLeft % 60;
@@ -1079,8 +1091,20 @@ function sendToWebhook(lvl, pct, tot, max) {
     name = tg.initDataUnsafe.user.first_name || '';
     un = tg.initDataUnsafe.user.username || '';
   }
-  let payload = { tg_id: tgId, name, username: un, level: lvl, score_pct: pct, correct: tot, total: max,
-    muf: levelScore.M, qov: levelScore.Q, qir: levelScore.R, ist: levelScore.I };
+  // Bot kutayotgan format: telegram_id, full_name, recommended_level, total_score_pct
+  let payload = {
+    telegram_id: tgId,
+    full_name: name,
+    username: un,
+    recommended_level: lvl,
+    total_score_pct: pct,
+    correct: tot,
+    total: max,
+    muf: levelScore.M,
+    qov: levelScore.Q,
+    qir: levelScore.R,
+    ist: levelScore.I
+  };
   let whs = document.getElementById('whStatus');
   if(!whs) return;
   whs.style.display = 'block';
