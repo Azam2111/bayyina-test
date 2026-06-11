@@ -324,7 +324,7 @@ A0: {
   qirTitle:'Matnni o\'qib savollarga javob bering — 3 ta savol',
   qirSub:'Quyidagi matnni diqqat bilan o\'qing, so\'ng savollarga javob bering.',
   istTitle:'Audio matn bo\'yicha savollar — 3 ta savol',
-  istSub:'Quyidagi transkriptni o\'qing (botda audio yuboriladi).',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 O\'quv matni — Diqqat bilan o\'qing',
     titleColor:'#8b4000',
@@ -394,7 +394,7 @@ A1: {
   qirTitle:'Matnni o\'qib savollarga javob bering — 3 ta savol',
   qirSub:'Quyidagi matnni diqqat bilan o\'qing, so\'ng savollarga javob bering.',
   istTitle:'Audio matn bo\'yicha savollar — 4 ta savol',
-  istSub:'Quyidagi audio matnni tinglang (botda audio yuboriladi).',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 الْبَرْنَامَجُ الْيَوْمِيُّ لِأَحْمَدَ — Ahmad\'s Daily Programme',
     titleColor:'#8b4000',
@@ -464,7 +464,7 @@ A2: {
   qirTitle:'Matnni o\'qib savollarga javob bering — 4 ta savol',
   qirSub:'Ona va Lubna o\'rtasidagi dialog. Diqqat bilan o\'qing.',
   istTitle:'Audio matn bo\'yicha savollar — 3 ta savol',
-  istSub:'Botda audio fayl yuboriladi. Bu yerda o\'qing.',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 الجوُّ بارِدٌ اليومَ — Dialog',
     titleColor:'#1a4a2e',
@@ -530,7 +530,7 @@ B1: {
   qirTitle:'Ibn Battuta matni bo\'yicha — 4 ta savol',
   qirSub:'5-vahdadan olingan matn. Diqqat bilan o\'qing.',
   istTitle:'Audio matn bo\'yicha — 3 ta savol',
-  istSub:'Botda audio yuboriladi. Bu yerda faqat o\'rganish uchun ko\'rsatilmoqda.',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 الرَّحَّالَةُ ابْنُ بَطُّوطَة',
     titleColor:'#3a1a6e',
@@ -596,7 +596,7 @@ B2: {
   qirTitle:'Psixologik sog\'liq matni — 4 ta savol',
   qirSub:'Uch mutaxassisning fikri keltirilgan maqola.',
   istTitle:'Audio matn bo\'yicha — 3 ta savol',
-  istSub:'Botda audio yuboriladi.',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 صِحَّتُنَا وَالْمُشْكِلَاتُ النَّفْسِيَّة',
     titleColor:'#6b2010',
@@ -662,7 +662,7 @@ C1: {
   qirTitle:'Markaziy Afrika haqida matn — 4 ta savol',
   qirSub:'4-vahdadan olingan publitsistik matn.',
   istTitle:'Audio matn bo\'yicha — 3 ta savol',
-  istSub:'Botda audio yuboriladi.',
+  istSub:'Audio yozuvni diqqat bilan tinglang (2 marta tinglash imkoni bor), so\'ng savollarga javob bering.',
   qirText:{
     title:'📄 جُمْهُورِيَّةُ إِفْرِيقِيَا الْوُسْطَى',
     titleColor:'#1a1a4e',
@@ -776,7 +776,7 @@ function startLevel(lvl) {
   qs.push(...qQs);
   let rQs = shuffleArray(d.RQ).map(q => ({...q, sec:2, type:'R', title: d.qirTitle, sub: d.qirSub, txt: d.qirText}));
   qs.push(...rQs);
-  let iQs = shuffleArray(d.IQ).map(q => ({...q, sec:3, type:'I', title: d.istTitle, sub: d.istSub, txt: d.istText}));
+  let iQs = shuffleArray(d.IQ).map(q => ({...q, sec:3, type:'I', title: d.istTitle, sub: d.istSub}));
   qs.push(...iQs);
 
   allQuestions = qs;
