@@ -329,43 +329,57 @@ body.error-bg::after {
 }
 
 
+
 /* MOBILE OPTIMIZATIONS FOR PLACEMENT TEST */
 @media (max-width: 600px) {
-  .q-container { padding: 10px; }
-  .q-card { padding: 20px 15px; border-radius: 20px; margin-bottom: 15px; }
-  .q-num { font-size: 14px; margin-bottom: 12px; padding-bottom: 10px; }
-  .q-ar { font-size: 30px; padding: 10px 0; line-height: 1.4; }
-  .q-text { font-size: 18px; margin-bottom: 15px; }
+  /* Extreme compaction to fit everything on a phone screen */
+  .q-container { padding: 5px 8px; }
+  
+  /* The big instruction block */
+  .text-box { padding: 12px; border-radius: 16px; margin-bottom: 10px; }
+  .tbh { font-size: 14px; margin-bottom: 6px; letter-spacing: 0px; }
+  .tkw { font-size: 13px; margin-top: 8px; padding-top: 8px; line-height: 1.4; }
+  .tar { font-size: 24px; line-height: 1.4; }
+  
+  /* Question Card */
+  .q-card { padding: 16px 12px; border-radius: 16px; margin-bottom: 10px; }
+  .q-num { font-size: 13px; margin-bottom: 8px; padding-bottom: 8px; }
+  
+  /* Arabic Question Text */
+  .q-ar { font-size: 36px; padding: 5px 0; line-height: 1.2; margin-bottom: 15px; }
+  
+  /* Uzbek Question Text */
+  .q-text { font-size: 16px; margin-bottom: 15px; line-height: 1.3; }
+  
+  /* Options */
   .opt { 
-    padding: 12px 15px; 
+    padding: 10px 12px; 
     font-size: 16px; 
-    border-radius: 16px; 
-    gap: 12px; 
-    margin-bottom: 10px; 
-    line-height: 1.4;
-     
+    border-radius: 12px; 
+    gap: 10px; 
+    margin-bottom: 8px; 
+    line-height: 1.3;
   }
+  .ltr { width: 32px; height: 32px; min-width: 32px; font-size: 14px; }
   
-  .ltr { width: 36px; height: 36px; min-width: 36px; font-size: 16px; }
+  /* Header UI */
+  .app-header { padding: 12px 16px; }
+  .logo { font-size: 18px; }
+  .timer-badge { padding: 4px 10px; font-size: 14px; }
+  .level-badge { padding: 4px 10px; font-size: 14px; }
+  .nav { padding: 0 5px; }
+  .sn-item { padding: 8px 10px; font-size: 13px; }
+  .gbar-wrap { padding: 8px 12px; }
+  .gbar-txt { font-size: 13px; }
   
-  .audio-player { padding: 20px; border-radius: 24px; margin-bottom: 20px; }
-  .ap-play-btn { width: 60px; height: 60px; min-width: 60px; font-size: 24px; }
+  /* Audio Player */
+  .audio-player { padding: 15px; border-radius: 16px; margin-bottom: 15px; }
+  .ap-play-btn { width: 50px; height: 50px; min-width: 50px; font-size: 20px; }
+  .ap-title { margin-bottom: 15px; font-size: 13px; }
   
-  .feedback-box { font-size: 16px; padding: 20px; margin-top: 20px; border-radius: 20px; }
-  
-  .text-box { padding: 24px 20px; border-radius: 24px; margin-bottom: 20px; }
-  .tar { font-size: 28px; line-height: 1.8; }
-  .tkw { font-size: 16px; margin-top: 15px; padding-top: 15px; }
+  /* Feedback block */
+  .feedback-box { font-size: 15px; padding: 15px; margin-top: 15px; border-radius: 16px; }
 }
-
-
-/* ARABIC FONT FIX */
-[dir="rtl"], .q-ar, .opt span[dir="rtl"] {
-    font-family: 'Amiri', 'Times New Roman', serif !important;
-    font-weight: 400 !important;
-    letter-spacing: 0px !important;
-}
-
 </style>
 
 
