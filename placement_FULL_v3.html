@@ -11,6 +11,7 @@
 
 
 
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 <style>
 /* RESET & BASE */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -161,7 +162,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 
 .text-box{border-radius:36px;padding:36px;margin-bottom:32px}
 .tbh{font-size:17px;font-weight:700;color:#5c3a21;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
-.tar{font-size:40px;direction:rtl;line-height:2.2;color:#000000;font-family:'Greta Text Arabic', 'Amiri', serif;text-shadow: 0 2px 4px rgba(255,255,255,1)}
+.tar{font-size:40px;direction:rtl;line-height:2.2;color:#000000;font-family:'Greta Text Arabic', 'Cairo', serif;text-shadow: 0 2px 4px rgba(255,255,255,1)}
 .tkw{font-size:18px;color:#4a2912;margin-top:24px;padding-top:20px;border-top:2px dashed rgba(0,0,0,0.1);line-height:1.7;font-weight:700}
 
 .audio-player{border-radius:36px;padding:32px;margin-bottom:32px}
@@ -182,7 +183,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 
 .q-card{border-radius:40px;padding:48px 36px;margin-bottom:32px;position:relative;overflow:hidden}
 .q-num{font-size:17px;color:#4a2912;font-weight:700;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid rgba(0,0,0,0.06);padding-bottom:20px}
-.q-ar{font-size:52px;direction:rtl;text-align:center;padding:28px 0;color:#000000;line-height:1.6;font-family:'Greta Text Arabic', 'Amiri', serif;}
+.q-ar{font-size:52px;direction:rtl;text-align:center;padding:28px 0;color:#000000;line-height:1.6;font-family:'Greta Text Arabic', 'Cairo', serif;}
 .q-text{font-size:30px;color:#000000;line-height:1.6;white-space:pre-line;font-weight:700;margin-bottom:40px;text-align:center;letter-spacing:-0.5px}
 
 .opts{display:flex;flex-direction:column;gap:20px}
@@ -476,6 +477,42 @@ body.error-bg::after {
   
   .lt-next-btn { padding: 14px 20px !important; font-size: 18px !important; border-radius: 16px !important; }
   .lt-next-hint { margin-top: 8px !important; font-size: 12px !important; }
+}
+
+
+/* Super squish level transition for mobile & High Contrast Stats */
+.lt-stat-item {
+  background: rgba(255, 255, 255, 0.95) !important;
+}
+.lt-stat-item .lt-stat-label { color: #000 !important; }
+.lt-stat-item .lt-stat-score { color: #000 !important; }
+.lt-stat-item .lt-stat-total { color: #333 !important; }
+
+@media (max-width: 900px) {
+  #levelTransition { padding-top: 5px !important; }
+  .lt-inner { padding: 0 5px !important; }
+  .lt-title { font-size: 26px !important; margin-bottom: 2px !important; }
+  .lt-badge { padding: 4px 10px !important; margin-bottom: 4px !important; font-size: 12px !important; }
+  .lt-confetti { font-size: 30px !important; margin-bottom: 2px !important; }
+  .lt-sub { font-size: 14px !important; margin-bottom: 5px !important; }
+  
+  .lt-score-circle { width: 80px !important; height: 80px !important; margin: 5px auto 5px auto !important; }
+  .lt-score-num { font-size: 28px !important; }
+  .lt-score-label { font-size: 10px !important; }
+  
+  .lt-stats-grid { gap: 6px !important; margin-bottom: 8px !important; }
+  .lt-stat-item { padding: 8px !important; border-radius: 12px !important; }
+  .lt-stat-item .lt-stat-label { font-size: 11px !important; margin-bottom: 2px !important; }
+  .lt-stat-item .lt-stat-score { font-size: 22px !important; margin: 2px 0 !important; }
+  .lt-stat-item .lt-stat-total { font-size: 9px !important; }
+  
+  #levelTransition > div > div[style*="background:rgba(255,255,255,.06)"] { padding: 8px !important; margin-bottom: 8px !important; }
+  #levelTransition > div > div[style*="background:rgba(255,255,255,.06)"] > div:nth-child(1) { margin-bottom: 4px !important; font-size: 10px !important; }
+  #levelTransition > div > div[style*="background:rgba(255,255,255,.06)"] > div:nth-child(2) { font-size: 14px !important; }
+  #levelTransition > div > div[style*="background:rgba(255,255,255,.06)"] > div:nth-child(3) { margin-top: 2px !important; font-size: 11px !important; }
+  
+  .lt-next-btn { padding: 10px 16px !important; font-size: 16px !important; margin-bottom: 0 !important; }
+  .lt-next-hint { margin-top: 4px !important; font-size: 11px !important; }
 }
 
 </style>
@@ -1131,7 +1168,7 @@ function renderQuestion() {
   if(q.txt) {
     html += `<div class="qir-text-box liquid-glass" style="border-left:4px solid ${q.txt.borderColor}; margin-bottom:20px; padding:20px; border-radius:20px; text-align:right; direction:rtl; background: rgba(255, 255, 255, 0.7);">
     <div style="color:${q.txt.titleColor}; font-weight:bold; font-size:22px; margin-bottom:10px;">${q.txt.title}</div>
-    <div style="font-family:'Greta Text Arabic', 'Amiri', serif; font-size:32px; line-height:2.2; color:#000; margin-bottom:15px;">${q.txt.ar}</div>
+    <div style="font-family:'Greta Text Arabic', 'Cairo', serif; font-size:32px; line-height:2.2; color:#000; margin-bottom:15px;">${q.txt.ar}</div>
     <div style="font-size:18px; line-height:1.5; color:#555; text-align:left; direction:ltr;">${q.txt.uz}</div>
     </div>`;
   }
@@ -1147,7 +1184,7 @@ function renderQuestion() {
   let optsHtml = opts.map((optText, i) => {
     let isCorrect = (i === newCorrectIndex);
     let isAr = /[؀-ۿ]/.test(optText);
-    let textStyle = isAr ? "font-family:'Greta Text Arabic', 'Amiri', serif; font-size: 28px; line-height: 1.6;" : "";
+    let textStyle = isAr ? "font-family:'Greta Text Arabic', 'Cairo', serif; font-size: 28px; line-height: 1.6;" : "";
     return `<div class="opt" data-correct="${isCorrect}" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
       <div class="ltr">${letters[i]}</div>
       <div style="${textStyle}">${optText}</div>
