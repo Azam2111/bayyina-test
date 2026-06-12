@@ -11,7 +11,7 @@
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
 <style>
 /* RESET & BASE */
 *{box-sizing:border-box;margin:0;padding:0}
@@ -513,6 +513,35 @@ body.error-bg::after {
   
   .lt-next-btn { padding: 10px 16px !important; font-size: 16px !important; margin-bottom: 0 !important; }
   .lt-next-hint { margin-top: 4px !important; font-size: 11px !important; }
+}
+
+
+/* Fix Final Result bd-item Contrast */
+.bd-item.liquid-glass {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+.bd-item .bd-lbl { color: #000 !important; font-weight: 800; }
+.bd-item .bd-num { color: #000 !important; font-weight: 900; }
+
+@media (max-width: 900px) {
+  /* Extreme compress for Result Screen to fit mobile screen */
+  .res-card { padding: 15px 10px !important; margin-bottom: 5px !important; }
+  .res-tag { font-size: 10px !important; padding: 4px 10px !important; margin-bottom: 5px !important; }
+  .res-lvl { font-size: 64px !important; margin: 0 !important; }
+  .res-name { font-size: 20px !important; margin-bottom: 8px !important; }
+  .res-pct { font-size: 42px !important; margin-bottom: 5px !important; }
+  .res-total { font-size: 14px !important; margin-bottom: 12px !important; }
+  
+  .bd-grid { gap: 6px !important; margin-bottom: 12px !important; }
+  .bd-item { padding: 8px !important; border-radius: 12px !important; }
+  .bd-lbl { font-size: 11px !important; margin-bottom: 2px !important; }
+  .bd-num { font-size: 18px !important; }
+  
+  .res-desc { font-size: 12px !important; padding: 8px !important; margin-bottom: 8px !important; }
+  .bot-action { font-size: 11px !important; padding: 8px !important; }
+  #whStatus { margin-top: 5px !important; font-size: 11px !important; }
 }
 
 </style>
@@ -1339,19 +1368,19 @@ function showFinalResult(outcome, pct, tot, maxQs) {
     <div class="res-pct">${pct}%</div>
     <div class="res-total">Jami: ${tot}/${maxQs} ta to'g'ri</div>
     <div class="bd-grid">
-      <div class="bd-item" style="background:#2563a8">
+      <div class="bd-item liquid-glass">
         <div class="bd-lbl">Mufradat</div>
         <div class="bd-num">${levelScore.M}/${d.MQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#1a7a3c">
+      <div class="bd-item liquid-glass">
         <div class="bd-lbl">Qovaid</div>
         <div class="bd-num">${levelScore.Q}/${d.QQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#7a3800">
+      <div class="bd-item liquid-glass">
         <div class="bd-lbl">Qiroat</div>
         <div class="bd-num">${levelScore.R}/${d.RQ.length}</div>
       </div>
-      <div class="bd-item" style="background:#8b1a3a">
+      <div class="bd-item liquid-glass">
         <div class="bd-lbl">Istima'</div>
         <div class="bd-num">${levelScore.I}/${d.IQ.length}</div>
       </div>
