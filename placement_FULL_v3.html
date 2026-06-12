@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Bayyina Arabic — Daraja Testi</title>
+<title>Bayyina akademiyasi - Daraja Testi</title>
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 
@@ -332,6 +332,46 @@ body.error-bg::after {
 
 
 
+
+/* HIDE TEXT BOXES AS REQUESTED */
+.text-box { display: none !important; }
+
+/* MAKE NAV MORE COMPACT GLOBALLY */
+.nav { margin-bottom: 0 !important; }
+.sn-item { padding: 10px 15px !important; font-size: 14px !important; }
+.q-container { padding: 15px 20px !important; }
+.q-card { margin-top: 5px !important; }
+
+/* REDESIGN START BUTTON */
+.start-btn {
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.4) 0%, rgba(52, 199, 89, 0.1) 100%) !important;
+    border: 1px solid rgba(52, 199, 89, 0.6) !important;
+    border-top: 1.5px solid rgba(52, 199, 89, 0.9) !important;
+    border-radius: 28px !important;
+    padding: 20px 40px !important;
+    font-size: 22px !important;
+    color: #1e8c33 !important;
+    font-weight: 900 !important;
+    box-shadow: 0 15px 35px rgba(52, 199, 89, 0.15), inset 0 6px 15px rgba(255,255,255,0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    transition: all 0.3s ease !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 10px !important;
+}
+.start-btn:active {
+    transform: scale(0.96) !important;
+}
+
+/* COMPACT START SCREEN */
+#introScreen { padding: 20px 15px !important; }
+.hero h1 { font-size: 32px !important; margin-bottom: 10px !important; }
+.hero p { font-size: 16px !important; margin-bottom: 20px !important; }
+.info-card { padding: 20px !important; margin-bottom: 20px !important; border-radius: 24px !important; }
+.rocket-box { padding: 20px !important; border-radius: 24px !important; background: transparent !important; border: none !important; box-shadow: none !important; }
+.rocket-icon { font-size: 60px !important; margin-bottom: 15px !important; }
+
 /* MOBILE OPTIMIZATIONS FOR PLACEMENT TEST */
 @media (max-width: 900px) {
   .q-container { padding: 10px 15px !important; }
@@ -353,6 +393,7 @@ body.error-bg::after {
   .app-header { padding: 15px !important; }
   .logo { font-size: 18px !important; }
 }
+
 </style>
 
 
@@ -374,18 +415,18 @@ body.error-bg::after {
 
 <div id="landing">
   <div class="land-logo">🎯</div>
-  <h1 class="land-title">Bayyina Arabic<br><span>Daraja Testi</span></h1>
+  <h1 class="land-title" style="font-size:28px; line-height:1.4;">Bayyina akademiyasining<br><span>daraja testi</span></h1>
   <p class="land-sub">Arab tilingiz darajasini aniqlang — 4 bo'lim:<br>Mufradat · Qovaid · Qiroat · Istima'</p>
   <div class="warning-box">
     <h4>⚠️ Diqqat! Test 60 daqiqa davom etadi.</h4>
     <p>Testni <strong>bitta o'tirishda</strong> to'xtovsiz ishlab tugatishingiz shart. Javobni belgilagach <strong>orqaga qaytish imkoni yo'q</strong>.</p>
   </div>
-  <div class="land-cards">
-    <div class="lcard liquid-glass" style="background:linear-gradient(135deg,#1a6a35,#27ae60)" onclick="startAdaptiveTest()">
-      <div class="lcard-icon">🚀</div>
-      <div class="lcard-lvl">Tushundim, Boshlash</div>
-      <div class="lcard-qs">Test A0 dan C1 gacha davom etishi mumkin</div>
-    </div>
+  
+  <div class="land-cards" style="text-align: center; margin-top: 30px;">
+    <div style="font-size: 80px; margin-bottom: 20px; animation: pulse 2s infinite;">🚀</div>
+    <button class="start-btn" onclick="startAdaptiveTest()">Testni boshlash</button>
+  </div>
+
   </div>
 </div>
 
@@ -1002,13 +1043,6 @@ function renderQuestion() {
   });
 
   let html = '';
-  if(q.txt) {
-    html += `<div class="text-box liquid-glass" style="border-left:3px solid ${q.txt.borderColor}">
-      <div class="tbh" style="color:${q.txt.titleColor}">${q.txt.title}</div>
-      <div class="tar">${q.txt.ar}</div>
-      ${q.txt.kw ? `<div class="tkw">${q.txt.kw}</div>` : ''}
-    </div>`;
-  }
 
   let opts = [...q.o];
   let correctOpt = opts[q.c];
