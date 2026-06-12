@@ -408,6 +408,33 @@ body.error-bg::after {
   .opts { gap: 8px !important; }
 }
 
+
+@media (max-width: 900px) {
+  /* Fix audio player size */
+  .audio-player { padding: 15px !important; margin-bottom: 15px !important; border-radius: 20px !important; }
+  .ap-play { width: 55px !important; height: 55px !important; font-size: 24px !important; border-width: 2px !important; }
+  .audio-player span[style*="font-size:24px"] { font-size: 18px !important; }
+  .audio-player div[style*="font-size:18px"] { font-size: 14px !important; }
+  .ap-progress { height: 6px !important; margin-bottom: 10px !important; }
+  .ap-time { font-size: 12px !important; }
+
+  /* Fix results screen size */
+  .res-card { padding: 20px 15px !important; border-radius: 20px !important; margin-bottom: 15px !important; }
+  .res-header div { font-size: 12px !important; padding: 6px 12px !important; }
+  .res-level { font-size: 70px !important; margin: 10px 0 !important; }
+  .res-name { font-size: 22px !important; margin-bottom: 20px !important; }
+  .res-pct { font-size: 50px !important; margin-bottom: 10px !important; }
+  .res-grid { grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+  .res-item { padding: 12px 8px !important; border-radius: 16px !important; }
+  .res-item-val { font-size: 20px !important; }
+  .bd-item { padding: 15px !important; border-radius: 20px !important; margin-bottom: 10px !important; }
+  .bd-item .rocket-icon { font-size: 40px !important; margin-bottom: 10px !important; }
+
+  /* Fix option hover issue on mobile */
+  .opt:hover { transform: none !important; background: rgba(255,255,255,0.85) !important; box-shadow: none !important; }
+  .opt:hover .ltr { background: rgba(0,0,0,0.04) !important; color: #7f8c8d !important; box-shadow: none !important; }
+}
+
 </style>
 
 
@@ -1057,6 +1084,14 @@ function renderQuestion() {
   });
 
   let html = '';
+
+  if(q.txt) {
+    html += `<div class="qir-text-box liquid-glass" style="border-left:4px solid ${q.txt.borderColor}; margin-bottom:20px; padding:20px; border-radius:20px; text-align:right; direction:rtl; background: rgba(255, 255, 255, 0.7);">
+    <div style="color:${q.txt.titleColor}; font-weight:bold; font-size:22px; margin-bottom:10px;">${q.txt.title}</div>
+    <div style="font-family:'Amiri', serif; font-size:32px; line-height:1.6; color:#000; margin-bottom:15px;">${q.txt.ar}</div>
+    <div style="font-size:18px; line-height:1.5; color:#555; text-align:left; direction:ltr;">${q.txt.uz}</div>
+    </div>`;
+  }
 
   let opts = [...q.o];
   let correctOpt = opts[q.c];
