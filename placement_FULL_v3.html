@@ -394,6 +394,9 @@ body.error-bg::after {
   .logo { font-size: 18px !important; }
 }
 
+
+#secTitle, #secSub { display: none !important; }
+
 </style>
 
 
@@ -450,8 +453,8 @@ body.error-bg::after {
   </div>
   <div class="q-container">
     <div class="sec-header">
-      <h2 id="secTitle">...</h2>
-      <p id="secSub">...</p>
+      
+      
     </div>
     <div id="audioContainer" style="display:none;">
       <div class="audio-player liquid-glass">
@@ -1032,8 +1035,8 @@ function renderQuestion() {
 
   document.getElementById('gbarFill').style.width = ((currentQIndex / total) * 100) + '%';
   document.getElementById('gbarTxt').innerText = currentQIndex + '/' + total;
-  document.getElementById('secTitle').innerText = q.title;
-  document.getElementById('secSub').innerText = q.sub;
+  
+  
 
   const navItems = document.querySelectorAll('.sn-item');
   navItems.forEach((el, i) => {
