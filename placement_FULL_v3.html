@@ -544,6 +544,35 @@ body.error-bg::after {
   #whStatus { margin-top: 5px !important; font-size: 11px !important; }
 }
 
+
+/* Fix .q-text containing Arabic */
+.q-text.ar-text {
+  font-size: 38px !important;
+  font-family: 'Noto Naskh Arabic', 'Cairo', serif !important;
+  direction: rtl !important;
+  line-height: 1.6 !important;
+}
+
+@media (max-width: 900px) {
+  .q-text.ar-text {
+    font-size: 36px !important;
+    font-family: 'Noto Naskh Arabic', 'Cairo', serif !important;
+    direction: rtl !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Pulsing animation for Next Level button */
+@keyframes pulseNextBtn {
+  0% { transform: scale(1); box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3); }
+  50% { transform: scale(1.04); box-shadow: 0 15px 30px rgba(46, 204, 113, 0.5); }
+  100% { transform: scale(1); box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3); }
+}
+.lt-next-btn {
+  animation: pulseNextBtn 2s infinite ease-in-out !important;
+  will-change: transform, box-shadow;
+}
+
 </style>
 
 
@@ -1220,10 +1249,13 @@ function renderQuestion() {
     </div>`;
   }).join('');
 
+  let isArQ = /[\u0600-\u06FF]/.test(q.q);
+  let qClass = isArQ ? "q-text ar-text" : "q-text";
+  
   html += `<div class="q-card liquid-glass">
     <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
     ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
-    <div class="q-text">${q.q}</div>
+    <div class="${qClass}">${q.q}</div>
     <div class="opts">${optsHtml}</div>
   </div>`;
 
