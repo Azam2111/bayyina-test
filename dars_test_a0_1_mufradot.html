@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bayyina — 1-Dars: Mufradot Testi</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+  --gold:#cda35b;
+  --cream:#f6f1e8; --cream-dim:#e8ddca;
+  --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+  --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+  --ink:#2c2014;
+}
+*{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent}
+body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased; overflow-x:hidden}
+.arabic{font-family:'Amiri','Scheherazade New',serif}
+
+.geo-pattern{position:absolute; inset:0; opacity:.07; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ============ MATERIAL SCREEN ============ */
+#materialScreen{position:relative; min-height:100vh; background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 55%,var(--brown-deep) 100%); padding-bottom:120px; overflow:hidden}
+.mat-header{position:relative; z-index:1; padding:30px 20px 18px; text-align:center; color:#fff}
+.mat-brand{display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:18px}
+.mat-logo{width:46px; height:46px; border-radius:11px; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.mat-brand-name{font-size:19px; font-weight:800; color:var(--cream); letter-spacing:1.5px; text-transform:uppercase}
+.mat-badge{display:inline-block; background:var(--cream); color:var(--brown-deep); font-weight:800; font-size:12px; padding:6px 16px; border-radius:20px; letter-spacing:1.5px; text-transform:uppercase}
+.mat-title-ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(34px,9vw,52px); margin:16px 0 6px; color:var(--cream); line-height:1.6; font-weight:700; text-shadow:0 2px 14px rgba(0,0,0,.25)}
+.mat-title-uz{font-size:15px; color:var(--tan); font-weight:600}
+.mat-desc{max-width:640px; margin:18px auto 0; padding:0 24px; font-size:14px; color:#e8dac8; line-height:1.7; text-align:center}
+.mat-desc b{color:var(--gold)}
+
+.pdf-card{position:relative; z-index:1; max-width:640px; margin:24px auto 0; padding:0 16px}
+.pdf-card-inner{display:flex; align-items:center; gap:14px; background:var(--cream); border-radius:16px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.18); border:1px solid var(--cream-dim)}
+.pdf-icon{flex-shrink:0; width:50px; height:50px; border-radius:12px; background:var(--brown); color:var(--cream); display:flex; align-items:center; justify-content:center; font-size:24px}
+.pdf-info{flex:1; min-width:0}
+.pdf-title{font-size:15px; font-weight:800; color:var(--ink)}
+.pdf-sub{font-size:12.5px; color:#8a7a68; margin-top:2px}
+.pdf-btn{flex-shrink:0; display:inline-flex; align-items:center; gap:6px; padding:11px 18px; border-radius:10px; background:var(--brown); color:var(--cream); font-size:13.5px; font-weight:800; text-decoration:none; white-space:nowrap}
+.pdf-btn:active{opacity:.85}
+
+.mat-tip{position:relative; z-index:1; max-width:640px; margin:16px auto 0; padding:0 16px; font-size:13px; color:#e8dac8; line-height:1.7; text-align:center}
+
+.sticky-bar{position:fixed; bottom:0; left:0; right:0; padding:14px 16px calc(14px + env(safe-area-inset-bottom)); background:rgba(58,39,22,.92); backdrop-filter:blur(10px); border-top:1px solid rgba(255,255,255,.08); z-index:50}
+.btn-primary{display:block; width:100%; max-width:640px; margin:0 auto; padding:17px; border:none; border-radius:14px; background:var(--cream); color:var(--brown-deep); font-size:17px; font-weight:800; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,.25); font-family:inherit}
+.btn-primary:active{transform:scale(.98)}
+
+/* ============ TEST SCREEN ============ */
+#testScreen{min-height:100vh; background-color:var(--cream); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); display:none}
+.t-hdr{position:sticky; top:0; z-index:20; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); color:#fff; padding:13px 16px; display:flex; align-items:center; justify-content:space-between}
+.t-hdr-title{display:flex; align-items:center; font-size:13px; font-weight:700; color:var(--tan); letter-spacing:.3px}
+.t-hdr-icon{height:24px; width:24px; border-radius:6px; margin-right:9px}
+.t-hdr-title b{color:var(--cream)}
+.t-hdr-brand{color:var(--cream); font-weight:800; letter-spacing:1px; margin-right:6px}
+.timer-badge{font-variant-numeric:tabular-nums; font-weight:800; font-size:16px; padding:7px 16px; border-radius:20px; background:var(--brown); color:#fff; min-width:64px; text-align:center}
+.timer-badge.warn{background:var(--gold); color:var(--brown-deep)}
+.timer-badge.danger{background:var(--red2); color:#fff; animation:timerPulse 1s infinite}
+@keyframes timerPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+.gbar-wrap{padding:10px 16px 0; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+.gbar{height:6px; background:rgba(255,255,255,.12); border-radius:4px; overflow:hidden}
+.gbar-fill{height:100%; width:0%; background:linear-gradient(90deg,var(--gold),var(--cream)); transition:width .35s ease}
+.q-counter{text-align:center; font-size:12px; color:var(--tan); padding:9px 0; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); font-weight:600; letter-spacing:.5px}
+
+.q-wrap{max-width:680px; margin:0 auto; padding:24px 16px 50px}
+.q-card{background:#fff; border-radius:18px; padding:30px 20px; box-shadow:0 4px 24px rgba(60,40,20,.08); animation:fadeIn .4s ease; border:1px solid var(--cream-dim)}
+@keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
+
+.q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:18px; text-transform:uppercase; letter-spacing:1px}
+.q-prompt.ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
+.q-prompt.uz{font-size:clamp(22px,6.5vw,30px); text-align:center; line-height:1.55; color:var(--ink); font-weight:700; padding:8px 4px}
+
+.opts{display:flex; flex-direction:column; gap:13px; margin-top:26px}
+.opts.locked .opt{pointer-events:none}
+.opt{display:flex; align-items:center; gap:14px; padding:18px 18px; border:2px solid var(--cream-dim); border-radius:14px; cursor:pointer; transition:all .15s ease; background:#fff}
+.opt:active{transform:scale(.98)}
+.opt .opt-text{font-size:clamp(17px,4.8vw,21px); font-weight:600; color:#333; line-height:1.45; flex:1}
+.opt.opt-ar .opt-text{font-family:'Amiri',serif; direction:rtl; font-size:clamp(25px,7vw,34px); font-weight:700; text-align:right; line-height:1.8}
+.opt.ok{background:var(--green-bg); border-color:var(--green)}
+.opt.ok .opt-text{color:var(--green-text)}
+.opt.no{background:var(--red-bg); border-color:var(--red)}
+.opt.no .opt-text{color:var(--red-text)}
+.ltr{flex-shrink:0; width:34px; height:34px; border-radius:50%; background:var(--cream); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; color:var(--brown-mid)}
+.opt.ok .ltr{background:var(--green); color:#fff}
+.opt.no .ltr{background:var(--red); color:#fff}
+
+.feedback-box{margin-top:20px; padding:15px 17px; border:1.5px solid var(--gold); background:#fbf3e6; border-radius:12px; font-size:14.5px; color:#5a4326; line-height:1.65; animation:fadeIn .3s ease}
+
+/* ============ RESULT SCREEN ============ */
+#resultScreen{position:relative; min-height:100vh; display:none; background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 50%,var(--brown-deep) 100%); align-items:center; justify-content:center; padding:40px 20px; flex-direction:column; text-align:center; color:#fff; overflow:hidden}
+.res-logo{position:relative; z-index:1; width:52px; height:52px; border-radius:12px; margin-bottom:12px; box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.res-brand{position:relative; z-index:1; font-size:13px; font-weight:800; letter-spacing:5px; color:var(--tan); margin-bottom:16px; text-transform:uppercase}
+.res-icon{position:relative; z-index:1; font-size:54px; margin-bottom:6px}
+.res-circle{position:relative; z-index:1; width:148px; height:148px; border-radius:50%; background:var(--cream); display:flex; flex-direction:column; align-items:center; justify-content:center; margin:18px auto; box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.res-circle .pct{font-size:40px; font-weight:800; color:var(--brown-deep); line-height:1}
+.res-circle .lbl{font-size:11px; color:var(--brown-mid); font-weight:700; margin-top:4px}
+.res-title{position:relative; z-index:1; font-size:21px; font-weight:800; margin:16px 0 10px}
+.res-sub{position:relative; z-index:1; font-size:14px; color:var(--tan); max-width:420px; line-height:1.7; margin-bottom:22px}
+.res-msg{position:relative; z-index:1; padding:14px 18px; border-radius:12px; font-size:14px; font-weight:600; max-width:420px; margin-bottom:26px; line-height:1.7}
+.res-msg.pass{background:rgba(39,174,96,.16); border:1.5px solid var(--green); color:#a8f0c6}
+.res-msg.fail{background:rgba(231,76,60,.16); border:1.5px solid var(--red); color:#ffb3a8}
+.res-btns{position:relative; z-index:1; display:flex; flex-direction:column; gap:12px; width:100%; max-width:340px}
+.btn-secondary{padding:15px; border-radius:12px; border:1.5px solid rgba(255,255,255,.25); background:transparent; color:#fff; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit}
+.btn-secondary:active{background:rgba(255,255,255,.08)}
+.btn-locked{padding:15px; border-radius:12px; border:1.5px dashed rgba(205,163,91,.5); background:rgba(205,163,91,.1); color:var(--gold); font-size:14px; font-weight:700; opacity:.9}
+</style>
+</head>
+<body>
+
+<!-- ============ MATERIAL SCREEN (PDF-first) ============ -->
+<div id="materialScreen">
+  <div class="geo-pattern"></div>
+  <div class="mat-header">
+    <div class="mat-brand">
+      <img class="mat-logo" src="logo_icon_cream.png" alt="Bayyina">
+      <span class="mat-brand-name">Bayyina</span>
+    </div>
+    <span class="mat-badge">A0 · 1-Dars · Mufradot</span>
+    <div class="mat-title-ar">اَلتَّعَارُفُ</div>
+    <div class="mat-title-uz">Tanishuv — 1-dars lug'ati (34 ta so'z/ibora)</div>
+    <div class="mat-desc">
+      Quyidagi <b>34 ta so'z va iborani</b> lug'at faylidan diqqat bilan o'qib, ovoz chiqarib bir necha marta takrorlang.
+      Tayyor bo'lgach, pastdagi <b>"Men testga tayyorman"</b> tugmasini bosing — test <b>10 daqiqa</b> bilan cheklangan.
+    </div>
+  </div>
+
+  <div class="pdf-card">
+    <div class="pdf-card-inner">
+      <div class="pdf-icon">📄</div>
+      <div class="pdf-info">
+        <div class="pdf-title">1-Dars — Mufradot lug'ati</div>
+        <div class="pdf-sub">34 ta so'z va ibora · PDF</div>
+      </div>
+      <a class="pdf-btn" href="a0_dars1_lugat.pdf" target="_blank" rel="noopener">Ochish ↗</a>
+    </div>
+  </div>
+
+  <div class="mat-tip">💡 Maslahat: har bir so'zni ovozli o'qing va arabcha shaklini xotirada tasvirlang — test xuddi shu so'z/iboralar asosida tuziladi.</div>
+
+  <div class="sticky-bar">
+    <button class="btn-primary" onclick="startTest()">✅ Men testga tayyorman</button>
+  </div>
+</div>
+
+<!-- ============ TEST SCREEN ============ -->
+<div id="testScreen">
+  <div class="t-hdr">
+    <div class="t-hdr-title"><img class="t-hdr-icon" src="logo_icon_cream.png" alt=""><span class="t-hdr-brand">Bayyina</span> · 1-Dars · <b>Mufradot Testi</b></div>
+    <div class="timer-badge" id="timerBadge">10:00</div>
+  </div>
+  <div class="gbar-wrap">
+    <div class="gbar"><div class="gbar-fill" id="gbarFill"></div></div>
+  </div>
+  <div class="q-counter" id="qCounter">Savol 1 / 34</div>
+
+  <div class="q-wrap">
+    <div class="q-card" id="qCard">
+      <div class="q-label" id="qLabel">Bu so'z/ibora qanday ma'noni anglatadi?</div>
+      <div class="q-prompt" id="qPrompt"></div>
+      <div class="opts" id="optsContainer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ RESULT SCREEN ============ -->
+<div id="resultScreen">
+  <div class="geo-pattern"></div>
+  <img class="res-logo" src="logo_icon_cream.png" alt="Bayyina">
+  <div class="res-brand">BAYYINA</div>
+  <div class="res-icon" id="resIcon">🎉</div>
+  <div class="res-circle">
+    <div class="pct" id="resPct">0%</div>
+    <div class="lbl" id="resFrac">0/34</div>
+  </div>
+  <div class="res-title" id="resTitle">Natija tayyor!</div>
+  <div class="res-msg" id="resMsg"></div>
+  <div class="res-btns" id="resBtns"></div>
+</div>
+
+<script>
+/* =====================================================
+   1-DARS (A0) — اَلتَّعَارُفُ — MUFRADOT (34 ta so'z)
+===================================================== */
+/* type: 'ar2uz' -> prompt=Arabic, options=Uzbek | 'uz2ar' -> prompt=Uzbek, options=Arabic
+   c = to'g'ri javob indeksi (0-based), f = izoh */
+const QUESTIONS = [
+  {type:'ar2uz', prompt:"اَلسَّلَامُ عَلَيْكُمْ", opts:["Assalomu alaykum (sizga salomatlik bo'lsin)","Xayrli kech","Ko'rishguncha!","Tanishganimdan xursandman!"], c:0,
+    f:"اَلسَّلَامُ عَلَيْكُمْ — musulmonlarning bir-biriga beradigan asosiy salomi: 'Sizga tinchlik-omonlik bo'lsin'."},
+  {type:'ar2uz', prompt:"وَعَلَيْكُمُ السَّلَامُ", opts:["Vaalaykum assalom (sizga ham salomatlik bo'lsin)","Assalomu alaykum (sizga salomatlik bo'lsin)","Xayrli tong!","Salomat bo'ling!"], c:0,
+    f:"وَعَلَيْكُمُ السَّلَامُ — salomga javob: 'Sizga ham tinchlik-omonlik bo'lsin'. وَ — 'ham' ma'nosini qo'shadi."},
+  {type:'ar2uz', prompt:"كَيْفَ حَالُكَ؟", opts:["Ismingiz nima?","Ahvolingiz qanday?","Siz qayerdansiz?","Xayrli kech"], c:1,
+    f:"كَيْفَ = qanday, حَالُكَ = sizning ahvolingiz → 'Ahvolingiz qanday?'"},
+  {type:'uz2ar', prompt:"Yaxshi, Allohga shukr!", opts:["بِخَيْرٍ وَالْحَمْدُ لِلَّهِ","كَيْفَ حَالُكَ؟","تَشَرَّفْتُ","أَهْلًا وَسَهْلًا"], c:0,
+    f:"بِخَيْرٍ = yaxshi holatda, وَالْحَمْدُ لِلَّهِ = Allohga hamdu sanolar bo'lsin."},
+  {type:'ar2uz', prompt:"مَا اسْمُكَ؟", opts:["Siz qayerdansiz?","Ismim...","Ismingiz nima?","Kim?"], c:2,
+    f:"مَا = nima, اسْمُكَ = sizning ismingiz → 'Ismingiz nima?'"},
+  {type:'uz2ar', prompt:"Ismim...", opts:["اِسْمِي...","أَنَا مِنْ...","مَا اسْمُكَ؟","أَنَا"], c:0,
+    f:"اِسْمِي = mening ismim. -ي qo'shimchasi 'mening' egalik ma'nosini bildiradi."},
+  {type:'ar2uz', prompt:"مِنْ أَيْنَ أَنْتَ؟", opts:["Men ...danman","Xush kelibsiz!","Siz qayerdansiz?","Tanishganimdan xursandman!"], c:2,
+    f:"مِنْ أَيْنَ = qayerdan, أَنْتَ = sen → 'Siz qayerdansiz?'"},
+  {type:'uz2ar', prompt:"Men ...danman", opts:["أَنَا مِنْ...","مِنْ أَيْنَ أَنْتَ؟","أَهْلًا بِكَ","إِلَى اللِّقَاءِ"], c:0,
+    f:"أَنَا = men, مِنْ = -dan → 'Men ...danman'."},
+  {type:'ar2uz', prompt:"أَهْلًا وَسَهْلًا", opts:["Xush kelibsiz!","Tanishganimdan xursandman!","Ko'rishguncha!","Salomat bo'ling!"], c:0,
+    f:"أَهْلًا وَسَهْلًا — yangi kelgan mehmonni iliq kutib olish iborasi: 'Xush kelibsiz!'"},
+  {type:'ar2uz', prompt:"أَهْلًا بِكَ", opts:["Tanishganimdan xursandman!","Xush ko'rdik!","Xayrli kech","Rahmat"], c:1,
+    f:"أَهْلًا بِكَ — بِكَ ('sen bilan') qo'shilib, 'Xush ko'rdik (seni)!' ma'nosini beradi."},
+  {type:'ar2uz', prompt:"تَشَرَّفْتُ", opts:["Tanishganimdan xursandman!","Ismim...","Arzimaydi","...mi?"], c:0,
+    f:"تَشَرَّفْتُ — kimdir bilan tanishgandan keyin aytiladi: 'sharaflandim / tanishganimdan xursandman'."},
+  {type:'ar2uz', prompt:"صَبَاحُ الْخَيْرِ", opts:["Xayrli kech","Ko'rishguncha!","Xayrli tong!","Salomat bo'ling!"], c:2,
+    f:"صَبَاحُ الْخَيْرِ (yoki صَبَاحُ النُّورِ) — ertalab aytiladigan salom: 'Xayrli tong!'"},
+  {type:'uz2ar', prompt:"Xayrli kech", opts:["مَسَاءُ الْخَيْرِ","صَبَاحُ الْخَيْرِ","إِلَى اللِّقَاءِ","مَعَ السَّلَامَةِ"], c:0,
+    f:"مَسَاءُ الْخَيْرِ (yoki مَسَاءُ النُّورِ) — kechqurun aytiladigan salom: 'Xayrli kech'."},
+  {type:'ar2uz', prompt:"إِلَى اللِّقَاءِ", opts:["Salomat bo'ling!","Ko'rishguncha!","Xayrli tong!","Rahmat"], c:1,
+    f:"إِلَى اللِّقَاءِ — so'zma-so'z 'uchrashuvgacha' → 'Ko'rishguncha!'"},
+  {type:'ar2uz', prompt:"مَعَ السَّلَامَةِ", opts:["Ko'rishguncha!","Xayrli kech","Salomat bo'ling!","Xush kelibsiz!"], c:2,
+    f:"مَعَ السَّلَامَةِ — xayrlashganda aytiladi: 'Salomat/Omon bo'ling!'"},
+  {type:'ar2uz', prompt:"أَنَا", opts:["Sen","Men","U","Bu"], c:1,
+    f:"أَنَا = Men — 1-shaxs birlik kishilik olmoshi."},
+  {type:'uz2ar', prompt:"Sen", opts:["أَنْتَ / أَنْتِ","أَنَا","هُوَ / هِيَ","هَذَا / هَذِهِ"], c:0,
+    f:"أَنْتَ — erkakka, أَنْتِ — ayolga nisbatan ishlatiladigan 'sen'."},
+  {type:'ar2uz', prompt:"هُوَ / هِيَ", opts:["Bu","Sen","U","Men"], c:2,
+    f:"هُوَ = u (erkak), هِيَ = u (ayol) — 3-shaxs birlik kishilik olmoshlari."},
+  {type:'ar2uz', prompt:"هَذَا / هَذِهِ", opts:["U","Bu","Men","Sen"], c:1,
+    f:"هَذَا = bu (erkak jins), هَذِهِ = bu (ayol jins) — ko'rsatish olmoshlari."},
+  {type:'uz2ar', prompt:"...mi? (savol yuklamasi)", opts:["هَلْ","مَا","مَنْ","نَعَمْ"], c:0,
+    f:"هَلْ — gap boshida kelib, uni 'ha/yo'q' javobli so'roq gapga aylantiradi."},
+  {type:'ar2uz', prompt:"نَعَمْ", opts:["Yo'q","Ha","Rahmat","Arzimaydi"], c:1,
+    f:"نَعَمْ = Ha — tasdiq javobi."},
+  {type:'uz2ar', prompt:"Yo'q", opts:["لَا","نَعَمْ","هَلْ","مَا"], c:0,
+    f:"لَا = Yo'q — inkor javobi."},
+  {type:'ar2uz', prompt:"شُكْرًا", opts:["Arzimaydi","Rahmat","Ha","Yo'q"], c:1,
+    f:"شُكْرًا = Rahmat — minnatdorchilik bildirish."},
+  {type:'ar2uz', prompt:"عَفْوًا", opts:["Rahmat","Arzimaydi","Ha","Yo'q"], c:1,
+    f:"عَفْوًا = Arzimaydi/Hechqisi yo'q — 'rahmat'ga javoban aytiladi."},
+  {type:'ar2uz', prompt:"طَالِبٌ", opts:["Muallim","Talaba","Shifokor","Kitob"], c:1,
+    f:"طَالِبٌ = Talaba — o'qituvchidan ta'lim oluvchi."},
+  {type:'uz2ar', prompt:"Muallim", opts:["مُعَلِّمٌ","طَالِبٌ","طَبِيبٌ","كِتَابٌ"], c:0,
+    f:"مُعَلِّمٌ = Muallim/O'qituvchi — عَلَّمَ (o'rgatmoq) fe'lidan."},
+  {type:'ar2uz', prompt:"كِتَابٌ", opts:["Daftar","Qalam","Kitob","Surat"], c:2,
+    f:"كِتَابٌ = Kitob."},
+  {type:'uz2ar', prompt:"Qalam", opts:["قَلَمٌ","كِتَابٌ","دَفْتَرٌ","صُورَةٌ"], c:0,
+    f:"قَلَمٌ = Qalam — yozish quroli."},
+  {type:'ar2uz', prompt:"دَفْتَرٌ", opts:["Kitob","Qalam","Surat","Daftar"], c:3,
+    f:"دَفْتَرٌ = Daftar."},
+  {type:'ar2uz', prompt:"طَبِيبٌ", opts:["Talaba","Muallim","Shifokor","Surat"], c:2,
+    f:"طَبِيبٌ = Shifokor/Doktor."},
+  {type:'ar2uz', prompt:"صُورَةٌ", opts:["Daftar","Surat","Kitob","Qalam"], c:1,
+    f:"صُورَةٌ = Surat/Rasm."},
+  {type:'uz2ar', prompt:"Ham", opts:["أَيْضًا","مَنْ","مَا","هَلْ"], c:0,
+    f:"أَيْضًا = Ham/Shuningdek."},
+  {type:'ar2uz', prompt:"مَنْ", opts:["Nima","Kim","Ham","...mi?"], c:1,
+    f:"مَنْ = Kim? — shaxslar haqida so'rash uchun."},
+  {type:'uz2ar', prompt:"Nima", opts:["مَا","مَنْ","أَيْضًا","هَلْ"], c:0,
+    f:"مَا = Nima? — narsalar haqida so'rash uchun."}
+];
+
+const TIMER_SECONDS = 600; // 10 daqiqa
+const PASS_PCT = 70;
+
+let order = [];
+let qIndex = 0;
+let score = 0;
+let timeLeft = TIMER_SECONDS;
+let timerInterval = null;
+let answered = false;
+
+/* ---------- Telegram WebApp init (xavfsiz) ---------- */
+try{
+  if(window.Telegram && window.Telegram.WebApp){
+    Telegram.WebApp.ready();
+    Telegram.WebApp.expand();
+  }
+}catch(e){}
+
+/* ---------- Fisher-Yates shuffle ---------- */
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i=a.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+/* ---------- Test flow ---------- */
+function startTest(){
+  document.getElementById('materialScreen').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'none';
+  document.getElementById('testScreen').style.display = 'block';
+
+  order = shuffleArray(QUESTIONS.map((_,i)=>i));
+  qIndex = 0;
+  score = 0;
+  timeLeft = TIMER_SECONDS;
+  answered = false;
+
+  startTimer();
+  renderQuestion();
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+function startTimer(){
+  updateTimerDisplay();
+  if(timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(()=>{
+    timeLeft--;
+    updateTimerDisplay();
+    if(timeLeft <= 0){
+      clearInterval(timerInterval);
+      finishTest();
+    }
+  },1000);
+}
+
+function updateTimerDisplay(){
+  const m = Math.floor(Math.max(timeLeft,0)/60);
+  const s = Math.max(timeLeft,0) % 60;
+  const el = document.getElementById('timerBadge');
+  el.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  el.classList.remove('warn','danger');
+  if(timeLeft <= 60) el.classList.add('danger');
+  else if(timeLeft <= 120) el.classList.add('warn');
+}
+
+function renderQuestion(){
+  if(qIndex >= order.length){ finishTest(); return; }
+  answered = false;
+
+  const q = QUESTIONS[order[qIndex]];
+
+  document.getElementById('qCounter').textContent = `Savol ${qIndex+1} / ${order.length}`;
+  document.getElementById('gbarFill').style.width = (qIndex/order.length*100) + '%';
+
+  const promptEl = document.getElementById('qPrompt');
+  const labelEl = document.getElementById('qLabel');
+  if(q.type === 'ar2uz'){
+    promptEl.className = 'q-prompt ar arabic';
+    labelEl.textContent = "Bu so'z/ibora qanday ma'noni anglatadi?";
+  } else {
+    promptEl.className = 'q-prompt uz';
+    labelEl.textContent = "Bu so'z/iboraning arabchasi qaysi?";
+  }
+  promptEl.textContent = q.prompt;
+
+  // shuffle options, remap correct flag
+  const withFlags = q.opts.map((text,i)=>({text, correct: i===q.c}));
+  const shuffled = shuffleArray(withFlags);
+
+  const optsDiv = document.getElementById('optsContainer');
+  optsDiv.innerHTML = '';
+  optsDiv.classList.remove('locked');
+
+  const letters = ['A','B','C','D'];
+  shuffled.forEach((o,i)=>{
+    const btn = document.createElement('div');
+    btn.className = 'opt' + (q.type === 'uz2ar' ? ' opt-ar' : '');
+    btn.dataset.correct = o.correct ? 'true' : 'false';
+    const textClass = q.type === 'uz2ar' ? 'opt-text arabic' : 'opt-text';
+    btn.innerHTML = `<span class="ltr">${letters[i]}</span><span class="${textClass}">${o.text}</span>`;
+    btn.onclick = ()=> selectOption(btn, o.correct, q.f);
+    optsDiv.appendChild(btn);
+  });
+
+  const oldFb = document.getElementById('qCard').querySelector('.feedback-box');
+  if(oldFb) oldFb.remove();
+
+  const container = document.getElementById('qCard');
+  container.style.animation = 'none';
+  void container.offsetHeight;
+  container.style.animation = '';
+}
+
+function selectOption(el, isCorrect, feedbackText){
+  if(answered) return;
+  answered = true;
+
+  const optsDiv = document.getElementById('optsContainer');
+  optsDiv.classList.add('locked');
+
+  if(isCorrect){
+    el.classList.add('ok');
+    score++;
+  } else {
+    el.classList.add('no');
+    const correctEl = optsDiv.querySelector('.opt[data-correct="true"]');
+    if(correctEl) correctEl.classList.add('ok');
+  }
+
+  if(feedbackText){
+    const fb = document.createElement('div');
+    fb.className = 'feedback-box';
+    fb.innerHTML = '💡 ' + feedbackText;
+    document.getElementById('qCard').appendChild(fb);
+  }
+
+  setTimeout(()=>{
+    qIndex++;
+    if(qIndex >= order.length){
+      document.getElementById('gbarFill').style.width = '100%';
+      setTimeout(finishTest, 400);
+    } else {
+      renderQuestion();
+    }
+  }, 1700);
+}
+
+function finishTest(){
+  clearInterval(timerInterval);
+  document.getElementById('testScreen').style.display = 'none';
+
+  const total = order.length;
+  const pct = Math.round(score/total*100);
+  const passThreshold = Math.ceil(total * PASS_PCT/100);
+  const passed = score >= passThreshold;
+
+  document.getElementById('resPct').textContent = pct + '%';
+  document.getElementById('resFrac').textContent = score + '/' + total;
+  document.getElementById('resIcon').textContent = passed ? (pct>=90 ? '🏆' : '🎉') : '📚';
+  document.getElementById('resTitle').textContent = passed
+    ? "Barakalloh! Mufradot bosqichidan o'tdingiz!"
+    : "Hali yetarli emas — qayta urinib ko'ring";
+
+  const msgEl = document.getElementById('resMsg');
+  if(passed){
+    msgEl.className = 'res-msg pass';
+    msgEl.innerHTML = `Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz — talab qilingan ${PASS_PCT}% chegarasidan o'tdingiz. Endi <b>Qovaid (Grammatika)</b> bosqichiga o'tishga tayyorsiz.`;
+  } else {
+    msgEl.className = 'res-msg fail';
+    msgEl.innerHTML = `Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz. Keyingi bosqichga o'tish uchun kamida <b>${PASS_PCT}%</b> (${passThreshold}/${total}) kerak. Lug'atni qayta ko'rib chiqing va testni qayta ishlang.`;
+  }
+
+  const btnsEl = document.getElementById('resBtns');
+  btnsEl.innerHTML = '';
+  if(passed){
+    const lockedBtn = document.createElement('div');
+    lockedBtn.className = 'btn-locked';
+    lockedBtn.textContent = '🔒 Qovaid bosqichi — tez orada';
+    btnsEl.appendChild(lockedBtn);
+  }
+  const retryBtn = document.createElement('button');
+  retryBtn.className = 'btn-secondary';
+  retryBtn.textContent = passed ? '🔁 Testni qayta ishlash' : '🔄 Qayta urinish';
+  retryBtn.onclick = startTest;
+  btnsEl.appendChild(retryBtn);
+
+  const reviewBtn = document.createElement('button');
+  reviewBtn.className = 'btn-secondary';
+  reviewBtn.textContent = "📖 Lug'atga qaytish";
+  reviewBtn.onclick = ()=>{
+    document.getElementById('resultScreen').style.display = 'none';
+    document.getElementById('materialScreen').style.display = 'block';
+    window.scrollTo({top:0, behavior:'instant'});
+  };
+  btnsEl.appendChild(reviewBtn);
+
+  document.getElementById('resultScreen').style.display = 'flex';
+  window.scrollTo({top:0, behavior:'instant'});
+}
+</script>
+</body>
+</html>
