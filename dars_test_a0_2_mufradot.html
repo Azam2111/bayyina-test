@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Bayyina — 1-Dars: Mufradot Testi</title>
+<title>Bayyina — 2-Dars: Mufradot Testi</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,11 +124,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       <img class="mat-logo" src="logo_icon_cream.png" alt="Bayyina">
       <span class="mat-brand-name">Bayyina</span>
     </div>
-    <span class="mat-badge">A0 · 1-Dars · Mufradot</span>
-    <div class="mat-title-ar">اَلتَّعَارُفُ</div>
-    <div class="mat-title-uz">Tanishuv — 1-dars lug'ati (34 ta so'z/ibora)</div>
+    <span class="mat-badge">A0 · 2-Dars · Mufradot</span>
+    <div class="mat-title-ar">اَلْمِهَنُ</div>
+    <div class="mat-title-uz">Kasblar — 2-dars lug'ati (18 ta so'z/ibora)</div>
     <div class="mat-desc">
-      Quyidagi <b>34 ta so'z va iborani</b> lug'at faylidan diqqat bilan o'qib, ovoz chiqarib bir necha marta takrorlang.
+      Quyidagi <b>18 ta so'z va iborani</b> lug'at faylidan diqqat bilan o'qib, ovoz chiqarib bir necha marta takrorlang.
       Tayyor bo'lgach, pastdagi <b>"Men testga tayyorman"</b> tugmasini bosing — test <b>10 daqiqa</b> bilan cheklangan.
     </div>
   </div>
@@ -137,10 +137,10 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     <div class="pdf-card-inner">
       <div class="pdf-icon">📄</div>
       <div class="pdf-info">
-        <div class="pdf-title">1-Dars — Mufradot lug'ati</div>
-        <div class="pdf-sub">34 ta so'z va ibora · PDF</div>
+        <div class="pdf-title">2-Dars — Mufradot lug'ati</div>
+        <div class="pdf-sub">18 ta so'z va ibora · PDF</div>
       </div>
-      <a class="pdf-btn" href="a0_dars1_lugat.pdf" target="_blank" rel="noopener">Ochish ↗</a>
+      <a class="pdf-btn" href="a0_dars2_lugat.pdf" target="_blank" rel="noopener">Ochish ↗</a>
     </div>
   </div>
 
@@ -154,13 +154,13 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 <!-- ============ TEST SCREEN ============ -->
 <div id="testScreen">
   <div class="t-hdr">
-    <div class="t-hdr-title"><img class="t-hdr-icon" src="logo_icon_cream.png" alt=""><span class="t-hdr-brand">Bayyina</span> · 1-Dars · <b>Mufradot Testi</b></div>
+    <div class="t-hdr-title"><img class="t-hdr-icon" src="logo_icon_cream.png" alt=""><span class="t-hdr-brand">Bayyina</span> · 2-Dars · <b>Mufradot Testi</b></div>
     <div class="timer-badge" id="timerBadge">10:00</div>
   </div>
   <div class="gbar-wrap">
     <div class="gbar"><div class="gbar-fill" id="gbarFill"></div></div>
   </div>
-  <div class="q-counter" id="qCounter">Savol 1 / 34</div>
+  <div class="q-counter" id="qCounter">Savol 1 / 18</div>
 
   <div class="q-wrap">
     <div class="q-card" id="qCard">
@@ -179,7 +179,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   <div class="res-icon" id="resIcon">🎉</div>
   <div class="res-circle">
     <div class="pct" id="resPct">0%</div>
-    <div class="lbl" id="resFrac">0/34</div>
+    <div class="lbl" id="resFrac">0/18</div>
   </div>
   <div class="res-title" id="resTitle">Natija tayyor!</div>
   <div class="res-msg" id="resMsg"></div>
@@ -188,147 +188,129 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
 <script>
 /* =====================================================
-   1-DARS (A0) — اَلتَّعَارُفُ — MUFRADOT (34 ta so'z)
+   2-DARS (A0) — اَلْمِهَنُ — MUFRADOT (18 ta so'z)
 ===================================================== */
 /* type: 'ar2uz' -> prompt=Arabic, options=Uzbek | 'uz2ar' -> prompt=Uzbek, options=Arabic
    c = to'g'ri javob indeksi (0-based), f = izoh */
 const QUESTIONS = [
-  {type:'ar2uz', prompt:"اَلسَّلَامُ عَلَيْكُمْ", opts:["Assalomu alaykum (sizga salomatlik bo'lsin)","Xayrli kech","Ko'rishguncha!","Tanishganimdan xursandman!"], c:0,
-    f:"اَلسَّلَامُ عَلَيْكُمْ — musulmonlarning bir-biriga beradigan asosiy salomi: 'Sizga tinchlik-omonlik bo'lsin'."},
-  {type:'ar2uz', prompt:"وَعَلَيْكُمُ السَّلَامُ", opts:["Vaalaykum assalom (sizga ham salomatlik bo'lsin)","Assalomu alaykum (sizga salomatlik bo'lsin)","Xayrli tong!","Salomat bo'ling!"], c:0,
-    f:"وَعَلَيْكُمُ السَّلَامُ — salomga javob: 'Sizga ham tinchlik-omonlik bo'lsin'. وَ — 'ham' ma'nosini qo'shadi."},
-  {type:'ar2uz', prompt:"كَيْفَ حَالُكَ؟", opts:["Ismingiz nima?","Ahvolingiz qanday?","Siz qayerdansiz?","Xayrli kech"], c:1,
-    f:"كَيْفَ = qanday, حَالُكَ = sizning ahvolingiz → 'Ahvolingiz qanday?'"},
-  {type:'uz2ar', prompt:"Yaxshi, Allohga shukr!", opts:["بِخَيْرٍ وَالْحَمْدُ لِلَّهِ","كَيْفَ حَالُكَ؟","تَشَرَّفْتُ","أَهْلًا وَسَهْلًا"], c:0,
-    f:"بِخَيْرٍ = yaxshi holatda, وَالْحَمْدُ لِلَّهِ = Allohga hamdu sanolar bo'lsin."},
-  {type:'ar2uz', prompt:"مَا اسْمُكَ؟", opts:["Siz qayerdansiz?","Ismim...","Ismingiz nima?","Kim?"], c:2,
-    f:"مَا = nima, اسْمُكَ = sizning ismingiz → 'Ismingiz nima?'"},
-  {type:'uz2ar', prompt:"Ismim...", opts:["اِسْمِي...","أَنَا مِنْ...","مَا اسْمُكَ؟","أَنَا"], c:0,
-    f:"اِسْمِي = mening ismim. -ي qo'shimchasi 'mening' egalik ma'nosini bildiradi."},
-  {type:'ar2uz', prompt:"مِنْ أَيْنَ أَنْتَ؟", opts:["Men ...danman","Xush kelibsiz!","Siz qayerdansiz?","Tanishganimdan xursandman!"], c:2,
-    f:"مِنْ أَيْنَ = qayerdan, أَنْتَ = sen → 'Siz qayerdansiz?'"},
-  {type:'uz2ar', prompt:"Men ...danman", opts:["أَنَا مِنْ...","مِنْ أَيْنَ أَنْتَ؟","أَهْلًا بِكَ","إِلَى اللِّقَاءِ"], c:0,
-    f:"أَنَا = men, مِنْ = -dan → 'Men ...danman'."},
-  {type:'ar2uz', prompt:"أَهْلًا وَسَهْلًا", opts:["Xush kelibsiz!","Tanishganimdan xursandman!","Ko'rishguncha!","Salomat bo'ling!"], c:0,
-    f:"أَهْلًا وَسَهْلًا — yangi kelgan mehmonni iliq kutib olish iborasi: 'Xush kelibsiz!'"},
-  {type:'ar2uz', prompt:"أَهْلًا بِكَ", opts:["Tanishganimdan xursandman!","Xush ko'rdik!","Xayrli kech","Rahmat"], c:1,
-    f:"أَهْلًا بِكَ — بِكَ ('sen bilan') qo'shilib, 'Xush ko'rdik (seni)!' ma'nosini beradi."},
-  {type:'ar2uz', prompt:"تَشَرَّفْتُ", opts:["Tanishganimdan xursandman!","Ismim...","Arzimaydi","...mi?"], c:0,
-    f:"تَشَرَّفْتُ — kimdir bilan tanishgandan keyin aytiladi: 'sharaflandim / tanishganimdan xursandman'."},
-  {type:'ar2uz', prompt:"صَبَاحُ الْخَيْرِ", opts:["Xayrli kech","Ko'rishguncha!","Xayrli tong!","Salomat bo'ling!"], c:2,
-    f:"صَبَاحُ الْخَيْرِ (yoki صَبَاحُ النُّورِ) — ertalab aytiladigan salom: 'Xayrli tong!'"},
-  {type:'uz2ar', prompt:"Xayrli kech", opts:["مَسَاءُ الْخَيْرِ","صَبَاحُ الْخَيْرِ","إِلَى اللِّقَاءِ","مَعَ السَّلَامَةِ"], c:0,
-    f:"مَسَاءُ الْخَيْرِ (yoki مَسَاءُ النُّورِ) — kechqurun aytiladigan salom: 'Xayrli kech'."},
-  {type:'ar2uz', prompt:"إِلَى اللِّقَاءِ", opts:["Salomat bo'ling!","Ko'rishguncha!","Xayrli tong!","Rahmat"], c:1,
-    f:"إِلَى اللِّقَاءِ — so'zma-so'z 'uchrashuvgacha' → 'Ko'rishguncha!'"},
-  {type:'ar2uz', prompt:"مَعَ السَّلَامَةِ", opts:["Ko'rishguncha!","Xayrli kech","Salomat bo'ling!","Xush kelibsiz!"], c:2,
-    f:"مَعَ السَّلَامَةِ — xayrlashganda aytiladi: 'Salomat/Omon bo'ling!'"},
-  {type:'ar2uz', prompt:"أَنَا", opts:["Sen","Men","U","Bu"], c:1,
-    f:"أَنَا = Men — 1-shaxs birlik kishilik olmoshi."},
-  {type:'uz2ar', prompt:"Sen", opts:["أَنْتَ / أَنْتِ","أَنَا","هُوَ / هِيَ","هَذَا / هَذِهِ"], c:0,
-    f:"أَنْتَ — erkakka, أَنْتِ — ayolga nisbatan ishlatiladigan 'sen'."},
-  {type:'ar2uz', prompt:"هُوَ / هِيَ", opts:["Bu","Sen","U","Men"], c:2,
-    f:"هُوَ = u (erkak), هِيَ = u (ayol) — 3-shaxs birlik kishilik olmoshlari."},
-  {type:'ar2uz', prompt:"هَذَا / هَذِهِ", opts:["U","Bu","Men","Sen"], c:1,
-    f:"هَذَا = bu (erkak jins), هَذِهِ = bu (ayol jins) — ko'rsatish olmoshlari."},
-  {type:'uz2ar', prompt:"...mi? (savol yuklamasi)", opts:["هَلْ","مَا","مَنْ","نَعَمْ"], c:0,
-    f:"هَلْ — gap boshida kelib, uni 'ha/yo'q' javobli so'roq gapga aylantiradi."},
-  {type:'ar2uz', prompt:"نَعَمْ", opts:["Yo'q","Ha","Rahmat","Arzimaydi"], c:1,
-    f:"نَعَمْ = Ha — tasdiq javobi."},
-  {type:'uz2ar', prompt:"Yo'q", opts:["لَا","نَعَمْ","هَلْ","مَا"], c:0,
-    f:"لَا = Yo'q — inkor javobi."},
-  {type:'ar2uz', prompt:"شُكْرًا", opts:["Arzimaydi","Rahmat","Ha","Yo'q"], c:1,
-    f:"شُكْرًا = Rahmat — minnatdorchilik bildirish."},
-  {type:'ar2uz', prompt:"عَفْوًا", opts:["Rahmat","Arzimaydi","Ha","Yo'q"], c:1,
-    f:"عَفْوًا = Arzimaydi/Hechqisi yo'q — 'rahmat'ga javoban aytiladi."},
-  {type:'ar2uz', prompt:"طَالِبٌ", opts:["Muallim","Talaba","Shifokor","Kitob"], c:1,
-    f:"طَالِبٌ = Talaba — o'qituvchidan ta'lim oluvchi."},
-  {type:'uz2ar', prompt:"Muallim", opts:["مُعَلِّمٌ","طَالِبٌ","طَبِيبٌ","كِتَابٌ"], c:0,
-    f:"مُعَلِّمٌ = Muallim/O'qituvchi — عَلَّمَ (o'rgatmoq) fe'lidan."},
-  {type:'ar2uz', prompt:"كِتَابٌ", opts:["Daftar","Qalam","Kitob","Surat"], c:2,
-    f:"كِتَابٌ = Kitob."},
-  {type:'uz2ar', prompt:"Qalam", opts:["قَلَمٌ","كِتَابٌ","دَفْتَرٌ","صُورَةٌ"], c:0,
-    f:"قَلَمٌ = Qalam — yozish quroli."},
-  {type:'ar2uz', prompt:"دَفْتَرٌ", opts:["Kitob","Qalam","Surat","Daftar"], c:3,
-    f:"دَفْتَرٌ = Daftar."},
-  {type:'ar2uz', prompt:"طَبِيبٌ", opts:["Talaba","Muallim","Shifokor","Surat"], c:2,
-    f:"طَبِيبٌ = Shifokor/Doktor."},
-  {type:'ar2uz', prompt:"صُورَةٌ", opts:["Daftar","Surat","Kitob","Qalam"], c:1,
-    f:"صُورَةٌ = Surat/Rasm."},
-  {type:'uz2ar', prompt:"Ham", opts:["أَيْضًا","مَنْ","مَا","هَلْ"], c:0,
-    f:"أَيْضًا = Ham/Shuningdek."},
-  {type:'ar2uz', prompt:"مَنْ", opts:["Nima","Kim","Ham","...mi?"], c:1,
-    f:"مَنْ = Kim? — shaxslar haqida so'rash uchun."},
-  {type:'uz2ar', prompt:"Nima", opts:["مَا","مَنْ","أَيْضًا","هَلْ"], c:0,
-    f:"مَا = Nima? — narsalar haqida so'rash uchun."},
+  {type:'ar2uz', prompt:"مِهْنَةٌ", opts:["Ishchi","Direktor","Kasb","Talaba"], c:2,
+    f:"مِهْنَةٌ = Kasb (ko'plik: مِهَنٌ). Mavzu nomi اَلْمِهَنُ — aynan shu so'zning ko'plik + artikl 'al' shakli."},
+  {type:'uz2ar', prompt:"Ishchi", opts:["مُهَنْدِسٌ","عَامِلٌ","حَلَّاقٌ","بَائِعٌ"], c:1,
+    f:"عَامِلٌ = Ishchi (ko'plik: عُمَّالٌ) — عَمِلَ (ishlamoq) fe'lidan yasalgan."},
+  {type:'ar2uz', prompt:"مُعَلِّمٌ", opts:["Muhandis","Haydovchi","Sartarosh","O'qituvchi"], c:3,
+    f:"مُعَلِّمٌ = O'qituvchi/Muallim (ko'plik: مُعَلِّمُونَ) — عَلَّمَ (o'rgatmoq) fe'lidan."},
+  {type:'uz2ar', prompt:"Shifokor", opts:["دُكْتُورٌ","مُهَنْدِسٌ","تَاجِرٌ","مُدِيرٌ"], c:0,
+    f:"دُكْتُورٌ = Shifokor/Doktor (ko'plik: دَكَاتِرَة) — boshqa tildan arabchaga kirgan so'z."},
+  {type:'ar2uz', prompt:"مُهَنْدِسٌ", opts:["Sotuvchi","Muhandis","Direktor","Do'st"], c:1,
+    f:"مُهَنْدِسٌ = Muhandis (ko'plik: مُهَنْدِسُونَ)."},
+  {type:'uz2ar', prompt:"Haydovchi", opts:["طَبَّاخٌ","عَامِلٌ","حَلَّاقٌ","سَائِقٌ"], c:3,
+    f:"سَائِقٌ = Haydovchi (ko'plik: سَائِقُونَ) — سَاقَ (haydamoq) fe'lidan."},
+  {type:'ar2uz', prompt:"طَبَّاخٌ", opts:["Oshpaz","Sartarosh","Ishchi","Talaba"], c:0,
+    f:"طَبَّاخٌ = Oshpaz (ko'plik: طَبَّاخُونَ) — طَبَخَ (pishirmoq) fe'lidan."},
+  {type:'uz2ar', prompt:"Talaba", opts:["تِلْمِيذٌ","صَدِيقٌ","طَالِبٌ / طَالِبَةٌ","مُدِيرٌ"], c:2,
+    f:"طَالِبٌ (erkak) / طَالِبَةٌ (ayol) = Talaba (ko'plik: طُلَّابٌ / طَالِبَاتٌ) — odatda oliy ta'lim talabasiga nisbatan ishlatiladi."},
+  {type:'ar2uz', prompt:"تِلْمِيذٌ", opts:["Talaba","O'quvchi","Do'st","Sotuvchi"], c:1,
+    f:"تِلْمِيذٌ = O'quvchi (ko'plik: تَلَامِيذُ) — طَالِبٌ dan farqli, ko'pincha maktab o'quvchisiga nisbatan ishlatiladi."},
+  {type:'uz2ar', prompt:"Do'st", opts:["تَاجِرٌ","حَلَّاقٌ","صَدِيقٌ","عَامِلٌ"], c:2,
+    f:"صَدِيقٌ = Do'st (ko'plik: أَصْدِقَاءُ)."},
+  {type:'ar2uz', prompt:"تَاجِرٌ", opts:["Direktor","Muhandis","Haydovchi","Savdogar / Tadbirkor"], c:3,
+    f:"تَاجِرٌ = Savdogar/Tadbirkor (ko'plik: تُجَّارٌ) — تِجَارَةٌ (savdo) so'zi bilan bir o'zakdan."},
+  {type:'uz2ar', prompt:"Sartarosh", opts:["طَبَّاخٌ","حَلَّاقٌ","سَائِقٌ","بَائِعٌ"], c:1,
+    f:"حَلَّاقٌ = Sartarosh (ko'plik: حَلَّاقُونَ) — حَلَقَ (soch olmoq) fe'lidan."},
+  {type:'ar2uz', prompt:"مُدِيرٌ", opts:["Direktor","Sotuvchi","Ishchi","O'quvchi"], c:0,
+    f:"مُدِيرٌ = Direktor/Boshqaruvchi (ko'plik: مُدِيرُونَ) — أَدَارَ (boshqarmoq) fe'lidan."},
+  {type:'uz2ar', prompt:"Sotuvchi", opts:["تَاجِرٌ","مُعَلِّمٌ","طَبَّاخٌ","بَائِعٌ"], c:3,
+    f:"بَائِعٌ = Sotuvchi (ko'plik: بَائِعُونَ) — بَاعَ (sotmoq) fe'lidan."},
+  {type:'uz2ar', prompt:"...da (ichida)", opts:["مَطْعَمٌ","حَسَنًا","فِي","أَعْمَلُ"], c:2,
+    f:"فِي = ...da/ichida — joy yoki vaqtni bildiruvchi old ko'makchi (harfi jar). Mas: أَنَا فِي الْبَيْتِ — Men uydaman."},
+  {type:'ar2uz', prompt:"مَطْعَمٌ", opts:["Oshxona / restoran","...da (ichida)","Yaxshi!","Ishlayman"], c:0,
+    f:"مَطْعَمٌ = Oshxona/Restoran — طَعِمَ (taom yemoq) so'zi bilan bir o'zakdan."},
+  {type:'uz2ar', prompt:"Yaxshi!", opts:["فِي","حَسَنًا","مَطْعَمٌ","أَعْمَلُ"], c:1,
+    f:"حَسَنًا = Yaxshi!/Mayli! — rozilik yoki tasdiq bildiradi."},
+  {type:'ar2uz', prompt:"أَعْمَلُ", opts:["...da (ichida)","Oshxona / restoran","Ishlayman","Yaxshi!"], c:2,
+    f:"أَعْمَلُ = Ishlayman — عَمِلَ - يَعْمَلُ (ishlamoq) fe'lining 'men' (1-shaxs birlik) shakli. Mas: أَنَا أَعْمَلُ مُهَنْدِسًا — Men muhandis bo'lib ishlayman."},
 
   /* --- Rasmli savollar (img2ar) --- */
-  {type:'img2ar', img:'book', opts:["كِتَابٌ","دَفْتَرٌ","قَلَمٌ","صُورَةٌ"], c:0,
-    f:"كِتَابٌ = Kitob."},
-  {type:'img2ar', img:'pen', opts:["قَلَمٌ","كِتَابٌ","دَفْتَرٌ","طَالِبٌ"], c:0,
-    f:"قَلَمٌ = Qalam — yozish quroli."},
-  {type:'img2ar', img:'notebook', opts:["دَفْتَرٌ","كِتَابٌ","قَلَمٌ","صُورَةٌ"], c:0,
-    f:"دَفْتَرٌ = Daftar."},
-  {type:'img2ar', img:'picture', opts:["صُورَةٌ","كِتَابٌ","دَفْتَرٌ","قَلَمٌ"], c:0,
-    f:"صُورَةٌ = Surat/Rasm."},
-  {type:'img2ar', img:'doctor', opts:["طَبِيبٌ","طَالِبٌ","مُعَلِّمٌ","كِتَابٌ"], c:0,
-    f:"طَبِيبٌ = Shifokor/Doktor."}
+  {type:'img2ar', img:'teacher', opts:["مُعَلِّمٌ","مُهَنْدِسٌ","طَبَّاخٌ","تَاجِرٌ"], c:0,
+    f:"مُعَلِّمٌ = O'qituvchi/Muallim."},
+  {type:'img2ar', img:'engineer', opts:["مُهَنْدِسٌ","مُعَلِّمٌ","سَائِقٌ","طَبَّاخٌ"], c:0,
+    f:"مُهَنْدِسٌ = Muhandis."},
+  {type:'img2ar', img:'cook', opts:["طَبَّاخٌ","حَلَّاقٌ","سَائِقٌ","بَائِعٌ"], c:0,
+    f:"طَبَّاخٌ = Oshpaz — طَبَخَ (pishirmoq) fe'lidan."},
+  {type:'img2ar', img:'driver', opts:["سَائِقٌ","طَبَّاخٌ","مُهَنْدِسٌ","حَلَّاقٌ"], c:0,
+    f:"سَائِقٌ = Haydovchi — سَاقَ (haydamoq) fe'lidan."},
+  {type:'img2ar', img:'barber', opts:["حَلَّاقٌ","طَبَّاخٌ","بَائِعٌ","مُدِيرٌ"], c:0,
+    f:"حَلَّاقٌ = Sartarosh — حَلَقَ (soch olmoq) fe'lidan."},
+  {type:'img2ar', img:'restaurant', opts:["مَطْعَمٌ","مُدِيرٌ","تَاجِرٌ","سَائِقٌ"], c:0,
+    f:"مَطْعَمٌ = Oshxona/Restoran."}
 ];
 
 const ICONS = {
-  book: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <path d="M100 48 C78 38 50 38 30 46 L30 152 C50 144 78 144 100 154 Z" fill="#a9805a"/>
-  <path d="M100 48 C122 38 150 38 170 46 L170 152 C150 144 122 144 100 154 Z" fill="#805a36"/>
-  <path d="M100 56 C82 49 60 49 42 54 L42 144 C60 139 82 139 100 146 Z" fill="#f6f1e8"/>
-  <path d="M100 56 C118 49 140 49 158 54 L158 144 C140 139 118 139 100 146 Z" fill="#faf6ee"/>
-  <g stroke="#cdb892" stroke-width="2.4">
-    <line x1="54" y1="70" x2="92" y2="66"/><line x1="54" y1="84" x2="92" y2="80"/><line x1="54" y1="98" x2="92" y2="94"/><line x1="54" y1="112" x2="92" y2="108"/>
-    <line x1="108" y1="66" x2="146" y2="70"/><line x1="108" y1="80" x2="146" y2="84"/><line x1="108" y1="94" x2="146" y2="98"/><line x1="108" y1="108" x2="146" y2="112"/>
+  teacher: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="26" y="28" width="112" height="80" rx="6" fill="#2f4a39"/>
+  <rect x="26" y="28" width="112" height="80" rx="6" fill="none" stroke="#a9805a" stroke-width="6"/>
+  <g stroke="#e8ddca" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M40 50 h22"/><path d="M40 64 h34"/><path d="M40 78 h26"/><path d="M88 56 l12 12 M100 56 l-12 12"/>
   </g>
-  <rect x="96" y="50" width="8" height="104" rx="3" fill="#cda35b"/>
+  <circle cx="150" cy="92" r="20" fill="#e6b98f"/>
+  <path d="M130 86 a20 20 0 0 1 40 0 l0 -3 a20 17 0 0 0 -40 0 Z" fill="#3a2716"/>
+  <path d="M118 176 C118 138 132 120 150 120 C168 120 182 138 182 176 Z" fill="#805a36"/>
+  <line x1="150" y1="120" x2="96" y2="74" stroke="#cda35b" stroke-width="5" stroke-linecap="round"/>
 </svg>`,
-  pen: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <g transform="rotate(38 100 100)">
-    <rect x="86" y="30" width="28" height="120" rx="6" fill="#cda35b"/>
-    <rect x="86" y="30" width="11" height="120" fill="#dcb877"/>
-    <rect x="86" y="44" width="28" height="9" fill="#805a36"/>
-    <rect x="86" y="124" width="28" height="10" fill="#805a36"/>
-    <polygon points="86,150 114,150 100,178" fill="#d9c3a3"/>
-    <polygon points="94,164 106,164 100,178" fill="#3a2716"/>
-    <rect x="93" y="14" width="14" height="18" rx="5" fill="#805a36"/>
-  </g>
-</svg>`,
-  notebook: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="48" y="34" width="108" height="132" rx="8" fill="#a9805a"/>
-  <rect x="60" y="34" width="96" height="132" rx="6" fill="#f6f1e8"/>
-  <g stroke="#bcd3e0" stroke-width="2.2">
-    <line x1="74" y1="58" x2="146" y2="58"/><line x1="74" y1="74" x2="146" y2="74"/><line x1="74" y1="90" x2="146" y2="90"/><line x1="74" y1="106" x2="146" y2="106"/><line x1="74" y1="122" x2="146" y2="122"/><line x1="74" y1="138" x2="146" y2="138"/>
-  </g>
-  <line x1="66" y1="42" x2="66" y2="160" stroke="#c0532f" stroke-width="2.4"/>
-  <g fill="#cda35b">
-    <circle cx="48" cy="50" r="6"/><circle cx="48" cy="74" r="6"/><circle cx="48" cy="98" r="6"/><circle cx="48" cy="122" r="6"/><circle cx="48" cy="146" r="6"/>
+  engineer: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="84" cy="74" r="26" fill="#e6b98f"/>
+  <path d="M56 70 a28 24 0 0 1 56 0 l8 0 a4 4 0 0 1 0 8 l-72 0 a4 4 0 0 1 0 -8 Z" fill="#f4c046"/>
+  <rect x="80" y="40" width="8" height="14" fill="#d99b1c"/>
+  <path d="M42 182 C42 138 60 116 84 116 C108 116 126 138 126 182 Z" fill="#cda35b"/>
+  <rect x="74" y="116" width="20" height="40" fill="#e8ddca"/>
+  <g transform="translate(150 138)">
+    <circle cx="0" cy="0" r="22" fill="#9aa3a8"/>
+    <circle cx="0" cy="0" r="9" fill="#f6f1e8"/>
+    <g fill="#9aa3a8"><rect x="-3" y="-30" width="6" height="12"/><rect x="-3" y="18" width="6" height="12"/><rect x="-30" y="-3" width="12" height="6"/><rect x="18" y="-3" width="12" height="6"/></g>
   </g>
 </svg>`,
-  picture: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="30" y="40" width="140" height="120" rx="8" fill="#cda35b"/>
-  <rect x="30" y="40" width="140" height="120" rx="8" fill="none" stroke="#a9805a" stroke-width="3"/>
-  <rect x="44" y="54" width="112" height="92" rx="3" fill="#bfe0f2"/>
-  <circle cx="128" cy="78" r="14" fill="#f4c95d"/>
-  <polygon points="44,146 84,96 112,128 134,108 156,146" fill="#8aab6e"/>
-  <polygon points="44,146 90,110 122,146" fill="#6f9457"/>
-</svg>`,
-  doctor: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="58" r="26" fill="#e6b98f"/>
-  <path d="M74 50 a26 26 0 0 1 52 0 l0 -4 a26 22 0 0 0 -52 0 Z" fill="#3a2716"/>
-  <path d="M58 176 C58 132 76 110 100 110 C124 110 142 132 142 176 Z" fill="#ffffff"/>
-  <path d="M100 110 L86 134 L100 150 L114 134 Z" fill="#f6f1e8"/>
-  <path d="M100 110 L86 134 L100 150 L114 134 Z" fill="none" stroke="#dfd6c4" stroke-width="2"/>
-  <g fill="none" stroke="#4a7fb5" stroke-width="4">
-    <path d="M88 112 C84 140 96 150 108 142"/>
+  cook: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="92" cy="86" r="26" fill="#e6b98f"/>
+  <path d="M64 78 q-14 -2 -10 -20 q2 -14 16 -12 q6 -16 22 -10 q14 -10 26 2 q16 -2 14 16 q10 6 2 24 Z" fill="#ffffff"/>
+  <rect x="64" y="74" width="56" height="12" rx="3" fill="#f0ece2"/>
+  <path d="M52 182 C52 140 70 120 92 120 C114 120 132 140 132 182 Z" fill="#ffffff"/>
+  <path d="M92 120 l0 62" stroke="#e2dccd" stroke-width="2"/>
+  <g transform="rotate(24 150 130)">
+    <rect x="146" y="120" width="8" height="56" rx="4" fill="#a9805a"/>
+    <ellipse cx="150" cy="118" rx="13" ry="17" fill="#cda35b"/>
   </g>
-  <circle cx="108" cy="140" r="6" fill="#4a7fb5"/>
-  <rect x="120" y="128" width="16" height="16" rx="3" fill="#c0532f"/>
-  <rect x="126" y="130" width="4" height="12" fill="#fff"/><rect x="122" y="134" width="12" height="4" fill="#fff"/>
+</svg>`,
+  driver: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="58" r="24" fill="#e6b98f"/>
+  <path d="M76 52 a24 22 0 0 1 48 0 l0 -3 a24 18 0 0 0 -48 0 Z" fill="#3a2716"/>
+  <path d="M58 132 C58 100 76 88 100 88 C124 88 142 100 142 132 Z" fill="#4a7fb5"/>
+  <circle cx="100" cy="150" r="46" fill="none" stroke="#3a2716" stroke-width="12"/>
+  <circle cx="100" cy="150" r="14" fill="#3a2716"/>
+  <g stroke="#3a2716" stroke-width="10" stroke-linecap="round"><line x1="100" y1="150" x2="62" y2="138"/><line x1="100" y1="150" x2="138" y2="138"/><line x1="100" y1="150" x2="100" y2="194"/></g>
+</svg>`,
+  barber: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <g transform="rotate(-18 100 100)">
+    <circle cx="74" cy="66" r="16" fill="none" stroke="#9aa3a8" stroke-width="9"/>
+    <circle cx="74" cy="134" r="16" fill="none" stroke="#9aa3a8" stroke-width="9"/>
+    <path d="M82 74 L150 116" stroke="#c9ced2" stroke-width="9" stroke-linecap="round"/>
+    <path d="M82 126 L150 84" stroke="#c9ced2" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g transform="rotate(20 140 110)">
+    <rect x="120" y="60" width="14" height="92" rx="5" fill="#805a36"/>
+    <g stroke="#a9805a" stroke-width="3">
+      <line x1="134" y1="66" x2="150" y2="66"/><line x1="134" y1="76" x2="150" y2="76"/><line x1="134" y1="86" x2="150" y2="86"/><line x1="134" y1="96" x2="150" y2="96"/><line x1="134" y1="106" x2="150" y2="106"/><line x1="134" y1="116" x2="150" y2="116"/><line x1="134" y1="126" x2="150" y2="126"/><line x1="134" y1="136" x2="150" y2="136"/>
+    </g>
+  </g>
+</svg>`,
+  restaurant: `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect x="38" y="78" width="124" height="100" rx="6" fill="#a9805a"/>
+  <polygon points="30,78 170,78 150,48 50,48" fill="#c0532f"/>
+  <g fill="#e2bca6"><polygon points="50,48 70,48 64,78 44,78"/><polygon points="90,48 110,48 108,78 88,78"/><polygon points="130,48 150,48 156,78 134,78"/></g>
+  <rect x="86" y="128" width="28" height="50" rx="3" fill="#5a3f27"/>
+  <rect x="52" y="98" width="26" height="22" rx="3" fill="#bfe0f2"/>
+  <rect x="122" y="98" width="26" height="22" rx="3" fill="#bfe0f2"/>
+  <circle cx="100" cy="104" r="20" fill="#f6f1e8"/>
+  <g stroke="#805a36" stroke-width="3" stroke-linecap="round"><line x1="92" y1="96" x2="92" y2="112"/><line x1="89" y1="96" x2="89" y2="104"/><line x1="95" y1="96" x2="95" y2="104"/><line x1="108" y1="96" x2="108" y2="112"/><path d="M108 96 q-5 4 0 10" fill="none"/></g>
 </svg>`
 };
 
