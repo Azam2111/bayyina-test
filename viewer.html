@@ -107,6 +107,7 @@
   let PASS = parseInt(P.get("otish") || "70", 10);
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
   let timerInt = null;
+  let hasBook = true;   // JSON'da kitob bo'lmasa → faqat test rejimi
 
   // ====== NAMUNA TEST (JSON topilmasa zaxira) ======
   const SAMPLE = [
@@ -123,6 +124,7 @@
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
         if(r.ok){ const j = await r.json();
           if(Array.isArray(j.questions)) QUESTIONS = j.questions;
+          hasBook = !!j.kitob;
           if(j.kitob) bookName  = j.kitob;
           if(j.bet)   startPage = parseInt(j.bet,10);
           if(j.otish) PASS      = parseInt(j.otish,10);
@@ -274,8 +276,17 @@
   }
 
   // ====== Ishga tushirish ======
+  function applyLayout(){
+    if(hasBook) return;                       // kitobli rejim — o'zgartirmaymiz
+    // Faqat test rejimi: kitob paneli va tablarni yashiramiz
+    const tabs=document.querySelector('.tabs'); if(tabs) tabs.style.display='none';
+    const pr=document.getElementById('paneRead'); if(pr) pr.style.display='none';
+    const pt=document.getElementById('paneTest');
+    pt.classList.add('active'); pt.style.position='static'; pt.style.flex='1'; pt.style.display='block';
+  }
+
   if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
-  (async()=>{ await loadConfig(); startTimer(); loadPdf(); })();
+  (async()=>{ await loadConfig(); applyLayout(); startTimer(); if(hasBook) loadPdf(); })();
 </script>
 </body>
 </html>
