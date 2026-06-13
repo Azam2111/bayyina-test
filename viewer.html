@@ -203,13 +203,21 @@
     rendering=false; if(pend!==null){const p=pend;pend=null;gotoPage(p);}
   }
   let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>gotoPage(curPage),200);});
-  const cw=document.getElementById('cwrap'); let pinchStart=null,zoomStart=1;
-  cw.addEventListener('touchstart',e=>{if(e.touches.length===2){pinchStart=dist(e.touches);zoomStart=userZoom;}},{passive:true});
+  const cw=document.getElementById('cwrap'); const pcv=document.getElementById('pdfCanvas');
+  let pinchStart=null,zoomStart=1,liveScale=1;
+  cw.addEventListener('touchstart',e=>{if(e.touches.length===2){pinchStart=dist(e.touches);zoomStart=userZoom;liveScale=1;pcv.style.transformOrigin='center center';}},{passive:true});
   cw.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinchStart){e.preventDefault();
-    setZoomLive(zoomStart*dist(e.touches)/pinchStart);}},{passive:false});
-  cw.addEventListener('touchend',e=>{if(e.touches.length<2&&pinchStart){pinchStart=null;gotoPage(curPage);}});
+    liveScale=dist(e.touches)/pinchStart;
+    const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
+    pcv.style.transform='scale('+(target/zoomStart)+')';   // jarayon davomida darhol yaqinlashadi
+    document.getElementById('zlabel').textContent=Math.round(target*100)+'%';
+  }},{passive:false});
+  cw.addEventListener('touchend',e=>{if(e.touches.length<2&&pinchStart){
+    const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
+    pinchStart=null; pcv.style.transform='none';            // barmoq olingach tiniq qayta chizamiz
+    setZoom(target);
+  }});
   function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);}
-  function setZoomLive(z){userZoom=Math.max(0.5,Math.min(6,z));document.getElementById('zlabel').textContent=Math.round(userZoom*100)+'%';}
   let lastTap=0; cw.addEventListener('click',()=>{const now=Date.now();if(now-lastTap<300){setZoom(userZoom>1.2?1:2);}lastTap=now;});
 
   function showPane(w){
