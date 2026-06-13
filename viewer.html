@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bayyina — Qiroat</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+  :root{ --bg:#0e1621; --panel:#17212b; --accent:#2b5278; --accent2:#34618c; --green:#1f6f43; --txt:#e9eef3; --mut:#7d8fa0; }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html,body{margin:0;height:100%;overflow:hidden;}
+  body{font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--txt);}
+  .app{display:flex;flex-direction:column;height:100vh;max-width:1200px;margin:0 auto;}
+  .top{background:var(--panel);padding:10px 14px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #0b1320;flex-wrap:wrap;}
+  .ttl{font-size:15px;font-weight:700;}
+  .ttl small{display:block;color:var(--mut);font-weight:400;font-size:12px;}
+  .timer{margin-left:auto;background:#0e1621;border:1px solid #2b3b4d;border-radius:20px;padding:6px 14px;font-weight:700;font-variant-numeric:tabular-nums;}
+  .timer.warn{color:#ffb347;border-color:#6b4b1a;}
+  .tabs{display:none;background:var(--panel);border-bottom:1px solid #0b1320;}
+  .tabs button{flex:1;background:none;border:none;color:var(--mut);padding:12px;font-size:14px;font-weight:600;cursor:pointer;border-bottom:3px solid transparent;}
+  .tabs button.active{color:#6ab3f3;border-bottom-color:#6ab3f3;}
+  .body{flex:1;display:flex;min-height:0;}
+  .pane{min-height:0;}
+  .reader{flex:1.15;background:#2a2a2a;display:flex;flex-direction:column;border-right:1px solid #0b1320;min-width:0;}
+  .r-bar{background:#1f1f1f;padding:6px 10px;display:flex;gap:6px;align-items:center;font-size:13px;flex-wrap:wrap;}
+  .r-bar button{background:#3a3a3a;color:#fff;border:none;border-radius:7px;padding:7px 11px;cursor:pointer;font-size:14px;}
+  .r-bar button:active{background:#555;}
+  .r-bar input{width:42px;text-align:center;border:none;border-radius:6px;padding:5px;}
+  .zlabel{min-width:46px;text-align:center;color:#cfe;font-variant-numeric:tabular-nums;}
+  .canvas-wrap{flex:1;overflow:auto;display:block;text-align:center;padding:12px;-webkit-overflow-scrolling:touch;touch-action:pan-x pan-y;}
+  #pdfCanvas{background:#fff;box-shadow:0 4px 20px rgba(0,0,0,.5);display:inline-block;}
+  .test{flex:1;background:var(--bg);padding:16px;overflow:auto;}
+  .q{background:var(--panel);border-radius:14px;padding:14px;margin-bottom:14px;border:1px solid #22303f;}
+  .q .qn{font-size:12px;color:#6ab3f3;font-weight:700;margin-bottom:6px;}
+  .q .qt{font-size:15px;line-height:1.5;margin-bottom:10px;}
+  .opt{display:block;background:#0e1621;border:1.5px solid #2b3b4d;border-radius:10px;padding:11px 13px;margin-bottom:8px;cursor:pointer;font-size:14px;transition:.12s;}
+  .opt:hover{border-color:var(--accent2);}
+  .opt.sel{border-color:#6ab3f3;background:#13283d;}
+  .opt.correct{border-color:#3fb068;background:#11331f;}
+  .opt.wrong{border-color:#d65d5d;background:#331414;}
+  .opt input{margin-right:8px;}
+  .ar{direction:rtl;font-family:"Amiri","Traditional Arabic",serif;font-size:20px;}
+  .submit{width:100%;background:var(--green);color:#fff;border:none;border-radius:12px;padding:14px;font-size:16px;font-weight:700;cursor:pointer;margin-top:4px;}
+  .submit:disabled{opacity:.5;cursor:not-allowed;}
+  .result{display:none;text-align:center;padding:24px 16px;}
+  .result.show{display:block;}
+  .score-ring{font-size:44px;font-weight:800;margin:10px 0;}
+  .pass{color:#3fb068;} .fail{color:#d65d5d;}
+  .result p{color:var(--mut);}
+  .result button{background:var(--accent);color:#fff;border:none;border-radius:12px;padding:13px 22px;font-size:15px;font-weight:700;cursor:pointer;margin-top:14px;}
+  .loading{color:#bbb;text-align:center;padding:40px;}
+  .err{color:#ff8c8c;padding:16px;font-size:13px;line-height:1.5;}
+  @media(max-width:840px){
+    .tabs{display:flex;}
+    .body{position:relative;}
+    .pane{position:absolute;inset:0;display:none;}
+    .reader.active{display:flex;border-right:none;}
+    .test.active{display:block;}
+  }
+  @media(min-width:841px){ .reader,.test{display:flex;} .test{flex-direction:column;} }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div class="ttl" id="lessonTitle">📄 Qiroat <small>Matnni o'qing va savollarga javob bering</small></div>
+    <div class="timer" id="timer">10:00</div>
+  </div>
+  <div class="tabs">
+    <button id="tabRead" class="active" onclick="showPane('read')">📖 Matn</button>
+    <button id="tabTest" onclick="showPane('test')">📝 Savollar (<span id="ansCount">0</span>/<span id="qTotal">0</span>)</button>
+  </div>
+  <div class="body">
+    <div class="pane reader active" id="paneRead">
+      <div class="r-bar">
+        <button onclick="gotoPage(curPage-1)">◀</button>
+        <button onclick="gotoPage(curPage+1)">▶</button>
+        <span>Bet <input id="pageInput" type="number" min="1" onchange="gotoPage(+this.value)"> / <span id="pageTotal">?</span></span>
+        <button onclick="setZoom(userZoom-0.25)">－</button>
+        <span class="zlabel" id="zlabel">100%</span>
+        <button onclick="setZoom(userZoom+0.25)">＋</button>
+        <button onclick="setZoom(1)">Fit</button>
+      </div>
+      <div class="canvas-wrap" id="cwrap"><canvas id="pdfCanvas"></canvas><div class="loading" id="loadingMsg">Kitob yuklanmoqda…</div><div class="err" id="errMsg" style="display:none;"></div></div>
+    </div>
+    <div class="pane test" id="paneTest">
+      <div id="quizArea"></div>
+      <button class="submit" id="submitBtn" disabled onclick="submitQuiz()">Natijani yuborish</button>
+      <div class="result" id="resultBox"></div>
+    </div>
+  </div>
+</div>
+<script>
+  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
+  // ====== SOZLAMA ======
+  const BOOK_BASE = "https://pub-fa6fab51991c40578a5947add75bc74e.r2.dev/";  // R2 public URL
+  const DEFAULT_BOOK = "A0 Bayyina_compressed (1).pdf";
+
+  // URL parametrlari: ?kitob=<fayl nomi>&bet=<son>&dars=<id>
+  const P = new URLSearchParams(location.search);
+  const bookName = P.get("kitob") || DEFAULT_BOOK;
+  const startPage = parseInt(P.get("bet") || "21", 10);   // A0 1-dars qiroat ~21-bet
+  const darsId   = P.get("dars") || "";
+  const PASS = parseInt(P.get("otish") || "70", 10);
+  const MINUTES = parseInt(P.get("vaqt") || "10", 10);
+
+  // ====== NAMUNA TEST (A0 1-dars: التعارف) ======
+  // Haqiqiy ishda bu testlar/<dars>.json dan yuklanadi (generator chiqaradi).
+  const SAMPLE = [
+    {q:"«Assalomu alaykum» ga to'g'ri javob qaysi?",opts:["وَعَلَيْكُمُ السَّلَامُ","مَا اسْمُكَ؟","صَبَاحُ الْخَيْرِ","شُكْرًا"],correct:0,ar:true,bet:21},
+    {q:"«Ismingiz nima?» — arabchasi qaysi?",opts:["مَا اسْمُكَ؟","كَيْفَ حَالُكَ؟","مِنْ أَيْنَ؟","مَا هَذَا؟"],correct:0,ar:true,bet:21},
+    {q:"«شُكْرًا» so'zining ma'nosi nima?",opts:["Rahmat","Salom","Xayr","Kechirasiz"],correct:0,bet:21},
+  ];
+
+  let QUESTIONS = SAMPLE;
+
+  // ====== Test JSON yuklash (agar ?dars= bo'lsa) ======
+  async function loadQuiz(){
+    if(darsId){
+      try{
+        const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
+        if(r.ok){ const j = await r.json();
+          if(Array.isArray(j.questions)) QUESTIONS = j.questions;
+          if(j.title) document.getElementById('lessonTitle').innerHTML = `📄 ${j.title} <small>Matnni o'qing va savollarga javob bering</small>`;
+        }
+      }catch(e){ /* fallback SAMPLE */ }
+    }
+    renderQuiz();
+  }
+  function renderQuiz(){
+    const area=document.getElementById('quizArea'); area.innerHTML="";
+    document.getElementById('qTotal').textContent=QUESTIONS.length;
+    QUESTIONS.forEach((item,qi)=>{
+      const box=document.createElement('div'); box.className='q'; let opt='';
+      item.opts.forEach((o,oi)=>{const arc=item.ar?' ar':'';
+        opt+=`<label class="opt${arc}" data-q="${qi}" data-o="${oi}"><input type="radio" name="q${qi}" value="${oi}"> ${o}</label>`;});
+      box.innerHTML=`<div class="qn">SAVOL ${qi+1}${item.bet?` · 📄 ${item.bet}-betga qarang`:''}</div><div class="qt${item.ar?' ar':''}">${item.q}</div>${opt}`;
+      area.appendChild(box);
+    });
+  }
+  document.getElementById('quizArea').addEventListener('change',e=>{
+    if(e.target.type!=='radio')return;
+    const qi=+e.target.name.slice(1); answers[qi]=+e.target.value;
+    document.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(l=>l.classList.remove('sel'));
+    e.target.closest('.opt').classList.add('sel');
+    document.getElementById('ansCount').textContent=Object.keys(answers).length;
+    document.getElementById('submitBtn').disabled=Object.keys(answers).length<QUESTIONS.length;
+  });
+  let answers={};
+  function submitQuiz(){
+    let correct=0;
+    QUESTIONS.forEach((item,qi)=>{
+      document.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(l=>{l.style.pointerEvents='none';
+        const oi=+l.dataset.o; if(oi===item.correct)l.classList.add('correct'); else if(answers[qi]===oi)l.classList.add('wrong');});
+      if(answers[qi]===item.correct)correct++;
+    });
+    const pct=Math.round(correct/QUESTIONS.length*100), passed=pct>=PASS;
+    clearInterval(timerInt); document.getElementById('submitBtn').style.display='none';
+    const r=document.getElementById('resultBox'); r.className='result show';
+    r.innerHTML=`<div class="score-ring ${passed?'pass':'fail'}">${pct}%</div><p>${correct} / ${QUESTIONS.length} to'g'ri</p>
+      <h3 class="${passed?'pass':'fail'}">${passed?"✅ O'tdingiz!":"❌ O'ta olmadingiz"}</h3>
+      <p>${passed?"Keyingi bosqich ochiladi.":"Qayta urinib ko'ring (o'tish: "+PASS+"%)."}</p>
+      <button onclick="finish(${pct},${passed})">${passed?'Keyingi bosqich ▶':'🔄 Qayta'}</button>`;
+    if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.sendData(JSON.stringify({type:'qiroat',dars:darsId,score:pct,passed}));
+  }
+  function finish(p,passed){ if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();
+    else alert("DEMO: bot bu yerda "+(passed?"keyingi bosqichni ochadi":"qayta urinish beradi")+". Natija: "+p+"%"); }
+
+  // ====== PDF (R2 dan, range-so'rov bilan) ======
+  let pdfDoc=null,curPage=1,userZoom=1,rendering=false,pend=null;
+  async function loadPdf(){
+    const url = BOOK_BASE + encodeURIComponent(bookName);
+    try{
+      pdfDoc = await pdfjsLib.getDocument({url, rangeChunkSize: 262144}).promise;
+      document.getElementById('loadingMsg').style.display='none';
+      document.getElementById('pageTotal').textContent=pdfDoc.numPages;
+      document.getElementById('pageInput').max=pdfDoc.numPages;
+      gotoPage(Math.min(startPage, pdfDoc.numPages));
+    }catch(e){
+      document.getElementById('loadingMsg').style.display='none';
+      const el=document.getElementById('errMsg'); el.style.display='block';
+      el.innerHTML="⚠️ Kitob yuklanmadi.<br>Sabab: "+(e&&e.message?e.message:e)+
+        "<br><br>Tekshiring: (1) R2 da fayl nomi to'g'rimi, (2) Public URL yoqilganmi, (3) CORS sozlamasi qo'shilganmi (github.io ruxsati).";
+    }
+  }
+  function setZoom(z){ userZoom=Math.max(0.5,Math.min(6,Math.round(z*100)/100));
+    document.getElementById('zlabel').textContent=Math.round(userZoom*100)+'%'; gotoPage(curPage); }
+  async function gotoPage(n){
+    if(!pdfDoc)return; n=Math.max(1,Math.min(pdfDoc.numPages,n));
+    if(rendering){pend=n;return;} rendering=true;curPage=n;
+    document.getElementById('pageInput').value=n;
+    const page=await pdfDoc.getPage(n);
+    const cv=document.getElementById('pdfCanvas'),ctx=cv.getContext('2d');
+    const wrapW=document.getElementById('cwrap').clientWidth-24;
+    const base=page.getViewport({scale:1});
+    const fitW=wrapW/base.width, dpr=window.devicePixelRatio||1;
+    const vp=page.getViewport({scale:fitW*userZoom*dpr});
+    cv.width=vp.width; cv.height=vp.height;
+    cv.style.width=(vp.width/dpr)+'px'; cv.style.height=(vp.height/dpr)+'px';
+    await page.render({canvasContext:ctx,viewport:vp}).promise;
+    rendering=false; if(pend!==null){const p=pend;pend=null;gotoPage(p);}
+  }
+  let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>gotoPage(curPage),200);});
+  const cw=document.getElementById('cwrap'); let pinchStart=null,zoomStart=1;
+  cw.addEventListener('touchstart',e=>{if(e.touches.length===2){pinchStart=dist(e.touches);zoomStart=userZoom;}},{passive:true});
+  cw.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinchStart){e.preventDefault();
+    setZoomLive(zoomStart*dist(e.touches)/pinchStart);}},{passive:false});
+  cw.addEventListener('touchend',e=>{if(e.touches.length<2&&pinchStart){pinchStart=null;gotoPage(curPage);}});
+  function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);}
+  function setZoomLive(z){userZoom=Math.max(0.5,Math.min(6,z));document.getElementById('zlabel').textContent=Math.round(userZoom*100)+'%';}
+  let lastTap=0; cw.addEventListener('click',()=>{const now=Date.now();if(now-lastTap<300){setZoom(userZoom>1.2?1:2);}lastTap=now;});
+
+  function showPane(w){
+    document.getElementById('paneRead').classList.toggle('active',w==='read');
+    document.getElementById('paneTest').classList.toggle('active',w==='test');
+    document.getElementById('tabRead').classList.toggle('active',w==='read');
+    document.getElementById('tabTest').classList.toggle('active',w==='test');
+    if(w==='read')setTimeout(()=>gotoPage(curPage),50);
+  }
+  let left=MINUTES*60,timerInt=setInterval(()=>{ left--;
+    const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');
+    const t=document.getElementById('timer'); t.textContent=`${m}:${s}`; if(left<=60)t.classList.add('warn');
+    if(left<=0){clearInterval(timerInt);submitQuiz();}
+  },1000);
+  document.getElementById('timer').textContent=String(MINUTES).padStart(2,'0')+":00";
+
+  if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
+  loadPdf(); loadQuiz();
+</script>
+</body>
+</html>
