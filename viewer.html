@@ -204,18 +204,29 @@
   }
   let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>gotoPage(curPage),200);});
   const cw=document.getElementById('cwrap'); const pcv=document.getElementById('pdfCanvas');
-  let pinchStart=null,zoomStart=1,liveScale=1;
-  cw.addEventListener('touchstart',e=>{if(e.touches.length===2){pinchStart=dist(e.touches);zoomStart=userZoom;liveScale=1;pcv.style.transformOrigin='center center';}},{passive:true});
+  let pinchStart=null,zoomStart=1,liveScale=1,focal={x:0.5,y:0.5},midScreen={x:0,y:0};
+  cw.addEventListener('touchstart',e=>{if(e.touches.length===2){
+    pinchStart=dist(e.touches); zoomStart=userZoom; liveScale=1;
+    const mx=(e.touches[0].clientX+e.touches[1].clientX)/2, my=(e.touches[0].clientY+e.touches[1].clientY)/2;
+    const r=pcv.getBoundingClientRect();
+    focal={x:(mx-r.left)/r.width, y:(my-r.top)/r.height};   // chimchilangan nuqta (sahifaga nisbatan)
+    midScreen={x:mx,y:my};
+    pcv.style.transformOrigin=(focal.x*100)+'% '+(focal.y*100)+'%';
+  }},{passive:true});
   cw.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinchStart){e.preventDefault();
     liveScale=dist(e.touches)/pinchStart;
     const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
-    pcv.style.transform='scale('+(target/zoomStart)+')';   // jarayon davomida darhol yaqinlashadi
+    pcv.style.transform='scale('+(target/zoomStart)+')';   // barmoq nuqtasidan darhol yaqinlashadi
     document.getElementById('zlabel').textContent=Math.round(target*100)+'%';
   }},{passive:false});
-  cw.addEventListener('touchend',e=>{if(e.touches.length<2&&pinchStart){
+  cw.addEventListener('touchend',async e=>{if(e.touches.length<2&&pinchStart){
     const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
-    pinchStart=null; pcv.style.transform='none';            // barmoq olingach tiniq qayta chizamiz
-    setZoom(target);
+    pinchStart=null; pcv.style.transform='none';
+    userZoom=target; document.getElementById('zlabel').textContent=Math.round(target*100)+'%';
+    await gotoPage(curPage);                                 // tiniq qayta chizamiz
+    const r=pcv.getBoundingClientRect();                     // fokus nuqtasini barmoq tagida ushlab qolamiz
+    cw.scrollLeft += (r.left + focal.x*r.width)  - midScreen.x;
+    cw.scrollTop  += (r.top  + focal.y*r.height) - midScreen.y;
   }});
   function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);}
   let lastTap=0; cw.addEventListener('click',()=>{const now=Date.now();if(now-lastTap<300){setZoom(userZoom>1.2?1:2);}lastTap=now;});
