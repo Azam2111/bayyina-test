@@ -175,12 +175,18 @@
     const r=document.getElementById('resultBox'); r.className='result show';
     r.innerHTML=`<div class="score-ring ${passed?'pass':'fail'}">${pct}%</div><p>${correct} / ${QUESTIONS.length} to'g'ri</p>
       <h3 class="${passed?'pass':'fail'}">${passed?"✅ O'tdingiz!":"❌ O'ta olmadingiz"}</h3>
-      <p>${passed?"Keyingi bosqich ochiladi.":"Qayta urinib ko'ring (o'tish: "+PASS+"%)."}</p>
-      <button onclick="finish(${pct},${passed})">${passed?'Keyingi bosqich ▶':'🔄 Qayta'}</button>`;
-    if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.sendData(JSON.stringify({type:'qiroat',dars:darsId,score:pct,passed}));
+      <p>${passed?"Tugmani bossangiz keyingi bosqich ochiladi.":"Qayta urinib ko'ring (o'tish: "+PASS+"%)."}</p>
+      <button onclick="${passed?`sendResult(${pct},true)`:'location.reload()'}">${passed?'Keyingi bosqich ▶':'🔄 Qayta urinish'}</button>`;
+    // DIQQAT: sendData WebApp'ni darhol yopadi — shuning uchun uni natija ekrani
+    // ko'rsatilgandan keyin, tugma bosilganda yuboramiz (submitQuiz ichida emas).
   }
-  function finish(p,passed){ if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();
-    else alert("DEMO: bot bu yerda "+(passed?"keyingi bosqichni ochadi":"qayta urinish beradi")+". Natija: "+p+"%"); }
+  function sendResult(p,passed){
+    if(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.sendData){
+      Telegram.WebApp.sendData(JSON.stringify({type:'qiroat',dars:darsId,score:p,passed:passed})); // yuboradi va yopadi
+    } else {
+      alert("DEMO: bot keyingi bosqichni ochadi. Natija: "+p+"%");
+    }
+  }
 
   // ====== PDF (R2 dan, range-so'rov bilan) ======
   let pdfDoc=null,curPage=1,userZoom=1,rendering=false,pend=null;
