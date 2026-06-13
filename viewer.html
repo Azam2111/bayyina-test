@@ -34,6 +34,7 @@
   .q{background:var(--panel);border-radius:14px;padding:14px;margin-bottom:14px;border:1px solid #22303f;}
   .q .qn{font-size:12px;color:#6ab3f3;font-weight:700;margin-bottom:6px;}
   .q .qt{font-size:15px;line-height:1.5;margin-bottom:10px;}
+  .qmatn{background:#0e1621;border-left:3px solid #6ab3f3;padding:8px 10px;border-radius:6px;margin-bottom:8px;color:#cfe;font-size:14px;line-height:1.6;}
   .opt{display:block;background:#0e1621;border:1.5px solid #2b3b4d;border-radius:10px;padding:11px 13px;margin-bottom:8px;cursor:pointer;font-size:14px;transition:.12s;}
   .opt:hover{border-color:var(--accent2);}
   .opt.sel{border-color:#6ab3f3;background:#13283d;}
@@ -98,48 +99,61 @@
   const BOOK_BASE = "https://pub-fa6fab51991c40578a5947add75bc74e.r2.dev/";  // R2 public URL
   const DEFAULT_BOOK = "A0 Bayyina_compressed (1).pdf";
 
-  // URL parametrlari: ?kitob=<fayl nomi>&bet=<son>&dars=<id>
+  // URL parametrlari: ?dars=<id>  (yoki ?kitob=&bet=&otish=&vaqt= bilan to'g'ridan)
   const P = new URLSearchParams(location.search);
-  const bookName = P.get("kitob") || DEFAULT_BOOK;
-  const startPage = parseInt(P.get("bet") || "21", 10);   // A0 1-dars qiroat ~21-bet
-  const darsId   = P.get("dars") || "";
-  const PASS = parseInt(P.get("otish") || "70", 10);
-  const MINUTES = parseInt(P.get("vaqt") || "10", 10);
+  let bookName = P.get("kitob") || DEFAULT_BOOK;
+  let startPage = parseInt(P.get("bet") || "21", 10);   // JSON kelsa undan olinadi
+  const darsId  = P.get("dars") || "";
+  let PASS = parseInt(P.get("otish") || "70", 10);
+  let MINUTES = parseInt(P.get("vaqt") || "10", 10);
+  let timerInt = null;
 
-  // ====== NAMUNA TEST (A0 1-dars: التعارف) ======
-  // Haqiqiy ishda bu testlar/<dars>.json dan yuklanadi (generator chiqaradi).
+  // ====== NAMUNA TEST (JSON topilmasa zaxira) ======
   const SAMPLE = [
     {q:"«Assalomu alaykum» ga to'g'ri javob qaysi?",opts:["وَعَلَيْكُمُ السَّلَامُ","مَا اسْمُكَ؟","صَبَاحُ الْخَيْرِ","شُكْرًا"],correct:0,ar:true,bet:21},
     {q:"«Ismingiz nima?» — arabchasi qaysi?",opts:["مَا اسْمُكَ؟","كَيْفَ حَالُكَ؟","مِنْ أَيْنَ؟","مَا هَذَا؟"],correct:0,ar:true,bet:21},
     {q:"«شُكْرًا» so'zining ma'nosi nima?",opts:["Rahmat","Salom","Xayr","Kechirasiz"],correct:0,bet:21},
   ];
-
   let QUESTIONS = SAMPLE;
+  let answers = {};
 
-  // ====== Test JSON yuklash (agar ?dars= bo'lsa) ======
-  async function loadQuiz(){
+  async function loadConfig(){
     if(darsId){
       try{
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
         if(r.ok){ const j = await r.json();
           if(Array.isArray(j.questions)) QUESTIONS = j.questions;
-          if(j.title) document.getElementById('lessonTitle').innerHTML = `📄 ${j.title} <small>Matnni o'qing va savollarga javob bering</small>`;
+          if(j.kitob) bookName  = j.kitob;
+          if(j.bet)   startPage = parseInt(j.bet,10);
+          if(j.otish) PASS      = parseInt(j.otish,10);
+          if(j.vaqt)  MINUTES   = parseInt(j.vaqt,10);
+          if(j.title) document.getElementById('lessonTitle').innerHTML =
+            `📄 ${j.title} <small>Matnni o'qing va savollarga javob bering</small>`;
         }
-      }catch(e){ /* fallback SAMPLE */ }
+      }catch(e){ /* SAMPLE bilan davom etadi */ }
     }
     renderQuiz();
   }
+
+  function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
   function renderQuiz(){
     const area=document.getElementById('quizArea'); area.innerHTML="";
     document.getElementById('qTotal').textContent=QUESTIONS.length;
     QUESTIONS.forEach((item,qi)=>{
+      if(!item._order){                                   // variantlarni bir marta aralashtiramiz
+        const idxs=item.opts.map((_,i)=>i);
+        for(let i=idxs.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[idxs[i],idxs[j]]=[idxs[j],idxs[i]];}
+        item._order=idxs; item._correct=idxs.indexOf(item.correct);
+      }
       const box=document.createElement('div'); box.className='q'; let opt='';
-      item.opts.forEach((o,oi)=>{const arc=item.ar?' ar':'';
+      item._order.forEach((orig,oi)=>{const o=item.opts[orig]; const arc=isAr(o)?' ar':'';
         opt+=`<label class="opt${arc}" data-q="${qi}" data-o="${oi}"><input type="radio" name="q${qi}" value="${oi}"> ${o}</label>`;});
-      box.innerHTML=`<div class="qn">SAVOL ${qi+1}${item.bet?` · 📄 ${item.bet}-betga qarang`:''}</div><div class="qt${item.ar?' ar':''}">${item.q}</div>${opt}`;
+      const matnHtml = item.matn ? `<div class="qmatn${isAr(item.matn)?' ar':''}">${item.matn}</div>` : '';
+      box.innerHTML=`<div class="qn">SAVOL ${qi+1}${item.bet?` · 📄 ${item.bet}-betga qarang`:''}</div>${matnHtml}<div class="qt${isAr(item.q)?' ar':''}">${item.q}</div>${opt}`;
       area.appendChild(box);
     });
   }
+
   document.getElementById('quizArea').addEventListener('change',e=>{
     if(e.target.type!=='radio')return;
     const qi=+e.target.name.slice(1); answers[qi]=+e.target.value;
@@ -148,16 +162,16 @@
     document.getElementById('ansCount').textContent=Object.keys(answers).length;
     document.getElementById('submitBtn').disabled=Object.keys(answers).length<QUESTIONS.length;
   });
-  let answers={};
+
   function submitQuiz(){
     let correct=0;
     QUESTIONS.forEach((item,qi)=>{
       document.querySelectorAll(`.opt[data-q="${qi}"]`).forEach(l=>{l.style.pointerEvents='none';
-        const oi=+l.dataset.o; if(oi===item.correct)l.classList.add('correct'); else if(answers[qi]===oi)l.classList.add('wrong');});
-      if(answers[qi]===item.correct)correct++;
+        const oi=+l.dataset.o; if(oi===item._correct)l.classList.add('correct'); else if(answers[qi]===oi)l.classList.add('wrong');});
+      if(answers[qi]===item._correct)correct++;
     });
     const pct=Math.round(correct/QUESTIONS.length*100), passed=pct>=PASS;
-    clearInterval(timerInt); document.getElementById('submitBtn').style.display='none';
+    if(timerInt)clearInterval(timerInt); document.getElementById('submitBtn').style.display='none';
     const r=document.getElementById('resultBox'); r.className='result show';
     r.innerHTML=`<div class="score-ring ${passed?'pass':'fail'}">${pct}%</div><p>${correct} / ${QUESTIONS.length} to'g'ri</p>
       <h3 class="${passed?'pass':'fail'}">${passed?"✅ O'tdingiz!":"❌ O'ta olmadingiz"}</h3>
@@ -182,7 +196,7 @@
       document.getElementById('loadingMsg').style.display='none';
       const el=document.getElementById('errMsg'); el.style.display='block';
       el.innerHTML="⚠️ Kitob yuklanmadi.<br>Sabab: "+(e&&e.message?e.message:e)+
-        "<br><br>Tekshiring: (1) R2 da fayl nomi to'g'rimi, (2) Public URL yoqilganmi, (3) CORS sozlamasi qo'shilganmi (github.io ruxsati).";
+        "<br><br>Tekshiring: (1) R2 da fayl nomi to'g'rimi, (2) Public URL yoqilganmi, (3) CORS sozlamasi (github.io ruxsati).";
     }
   }
   function setZoom(z){ userZoom=Math.max(0.5,Math.min(6,Math.round(z*100)/100));
@@ -203,34 +217,37 @@
     rendering=false; if(pend!==null){const p=pend;pend=null;gotoPage(p);}
   }
   let rt; window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>gotoPage(curPage),200);});
+
+  // ====== Pinch zoom (fokusli, silliq) ======
   const cw=document.getElementById('cwrap'); const pcv=document.getElementById('pdfCanvas');
   let pinchStart=null,zoomStart=1,liveScale=1,focal={x:0.5,y:0.5},midScreen={x:0,y:0};
   cw.addEventListener('touchstart',e=>{if(e.touches.length===2){
     pinchStart=dist(e.touches); zoomStart=userZoom; liveScale=1;
     const mx=(e.touches[0].clientX+e.touches[1].clientX)/2, my=(e.touches[0].clientY+e.touches[1].clientY)/2;
     const r=pcv.getBoundingClientRect();
-    focal={x:(mx-r.left)/r.width, y:(my-r.top)/r.height};   // chimchilangan nuqta (sahifaga nisbatan)
+    focal={x:(mx-r.left)/r.width, y:(my-r.top)/r.height};
     midScreen={x:mx,y:my};
     pcv.style.transformOrigin=(focal.x*100)+'% '+(focal.y*100)+'%';
   }},{passive:true});
   cw.addEventListener('touchmove',e=>{if(e.touches.length===2&&pinchStart){e.preventDefault();
     liveScale=dist(e.touches)/pinchStart;
     const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
-    pcv.style.transform='scale('+(target/zoomStart)+')';   // barmoq nuqtasidan darhol yaqinlashadi
+    pcv.style.transform='scale('+(target/zoomStart)+')';
     document.getElementById('zlabel').textContent=Math.round(target*100)+'%';
   }},{passive:false});
   cw.addEventListener('touchend',async e=>{if(e.touches.length<2&&pinchStart){
     const target=Math.max(0.5,Math.min(6,zoomStart*liveScale));
     pinchStart=null; pcv.style.transform='none';
     userZoom=target; document.getElementById('zlabel').textContent=Math.round(target*100)+'%';
-    await gotoPage(curPage);                                 // tiniq qayta chizamiz
-    const r=pcv.getBoundingClientRect();                     // fokus nuqtasini barmoq tagida ushlab qolamiz
+    await gotoPage(curPage);
+    const r=pcv.getBoundingClientRect();
     cw.scrollLeft += (r.left + focal.x*r.width)  - midScreen.x;
     cw.scrollTop  += (r.top  + focal.y*r.height) - midScreen.y;
   }});
   function dist(t){return Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);}
   let lastTap=0; cw.addEventListener('click',()=>{const now=Date.now();if(now-lastTap<300){setZoom(userZoom>1.2?1:2);}lastTap=now;});
 
+  // ====== Mobil tab ======
   function showPane(w){
     document.getElementById('paneRead').classList.toggle('active',w==='read');
     document.getElementById('paneTest').classList.toggle('active',w==='test');
@@ -238,15 +255,21 @@
     document.getElementById('tabTest').classList.toggle('active',w==='test');
     if(w==='read')setTimeout(()=>gotoPage(curPage),50);
   }
-  let left=MINUTES*60,timerInt=setInterval(()=>{ left--;
-    const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');
-    const t=document.getElementById('timer'); t.textContent=`${m}:${s}`; if(left<=60)t.classList.add('warn');
-    if(left<=0){clearInterval(timerInt);submitQuiz();}
-  },1000);
-  document.getElementById('timer').textContent=String(MINUTES).padStart(2,'0')+":00";
 
+  // ====== Taymer ======
+  function startTimer(){
+    let left=MINUTES*60;
+    document.getElementById('timer').textContent=String(MINUTES).padStart(2,'0')+":00";
+    timerInt=setInterval(()=>{ left--;
+      const m=String(Math.floor(left/60)).padStart(2,'0'),s=String(left%60).padStart(2,'0');
+      const t=document.getElementById('timer'); t.textContent=`${m}:${s}`; if(left<=60)t.classList.add('warn');
+      if(left<=0){clearInterval(timerInt);submitQuiz();}
+    },1000);
+  }
+
+  // ====== Ishga tushirish ======
   if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
-  loadPdf(); loadQuiz();
+  (async()=>{ await loadConfig(); startTimer(); loadPdf(); })();
 </script>
 </body>
 </html>
