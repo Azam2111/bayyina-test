@@ -1,1 +1,46 @@
-
+{
+  "title": "Qiroat — 1-dars: At-Taoruf (Tanishuv)",
+  "kitob": "A0 Bayyina_compressed (1).pdf",
+  "bet": 21,
+  "otish": 70,
+  "vaqt": 10,
+  "questions": [
+    {
+      "q": "Ushbu salomga to'g'ri javob qaysi?",
+      "opts": ["وَعَلَيْكُمُ السَّلَامُ", "صَبَاحُ الْخَيْرِ", "شُكْرًا", "مَعَ السَّلَامَةِ"],
+      "correct": 0,
+      "matn": "السَّلَامُ عَلَيْكُمْ",
+      "izoh": "Salomga «vaalaykum assalom» deb javob beriladi.",
+      "bet": 21
+    },
+    {
+      "q": "«كَيْفَ حَالُكَ؟» iborasi nimani anglatadi?",
+      "opts": ["Ahvolingiz qanday?", "Ismingiz nima?", "Qayerdansiz?", "Rahmat"],
+      "correct": 0,
+      "izoh": "كَيْفَ حَالُكَ = ahvolingiz qanday.",
+      "bet": 21
+    },
+    {
+      "q": "«Men O'zbekistondanman» — arabchasi qaysi?",
+      "opts": ["أَنَا مِنْ أُوزْبَكِسْتَانَ", "أَنَا مِنْ مِصْرَ", "أَهْلًا وَسَهْلًا", "مَا اسْمُكَ؟"],
+      "correct": 0,
+      "izoh": "مِنْ = …dan.",
+      "bet": 22
+    },
+    {
+      "q": "«تَشَرَّفْتُ» so'zi qaysi holatda aytiladi?",
+      "opts": ["Tanishganda (xursandman)", "Xayrlashganda", "Ovqatdan oldin", "Uyga kirganda"],
+      "correct": 0,
+      "izoh": "تَشَرَّفْتُ = tanishganimdan xursandman.",
+      "bet": 22
+    },
+    {
+      "q": "«صَبَاحُ الْخَيْرِ» ga an'anaviy javob qaysi?",
+      "opts": ["صَبَاحُ النُّورِ", "مَسَاءُ الْخَيْرِ", "شُكْرًا", "وَعَلَيْكُمُ السَّلَامُ"],
+      "correct": 0,
+      "matn": "صَبَاحُ الْخَيْرِ",
+      "izoh": "صباح الخير → صباح النور.",
+      "bet": 23
+    }
+  ]
+}
