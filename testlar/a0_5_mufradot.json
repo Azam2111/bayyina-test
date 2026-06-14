@@ -1,22 +1,348 @@
 {
   "title": "Mufradot — 5-dars: Al-Bayt (Uy va joy hollari)",
   "otish": 70,
-  "vaqt": 10,
+  "vaqt": 19,
   "questions": [
-    { "q": "«بَابٌ» so'zining ma'nosi?", "opts": ["Eshik", "Stol", "Shkaf", "Kursi"], "correct": 0, "izoh": "بَاب = eshik." },
-    { "q": "«طَاوِلَةٌ» so'zining ma'nosi?", "opts": ["Stol", "Kursi", "Shkaf", "Eshik"], "correct": 0, "izoh": "طَاوِلَة = stol." },
-    { "q": "«خِزَانَةٌ» so'zining ma'nosi?", "opts": ["Shkaf", "Stol", "Zal", "Eshik"], "correct": 0, "izoh": "خِزَانَة = shkaf." },
-    { "q": "«كُرْسِيٌّ» so'zining ma'nosi?", "opts": ["Kursi (stul)", "Stol", "Shkaf", "Eshik"], "correct": 0, "izoh": "كُرْسِيّ = kursi/stul." },
-    { "q": "«كَبِيرٌ» so'zining ma'nosi?", "opts": ["Katta", "Kichik", "Yangi", "Toza"], "correct": 0, "izoh": "كَبِير = katta. صَغِير = kichik." },
-    { "q": "«صَغِيرٌ» so'zining ma'nosi?", "opts": ["Kichik", "Katta", "Keng", "Eski"], "correct": 0, "izoh": "صَغِير = kichik." },
-    { "q": "«نَظِيفٌ» so'zining ma'nosi?", "opts": ["Toza", "Kir", "Chiroyli", "Yangi"], "correct": 0, "izoh": "نَظِيف = toza. وَسِخ = kir." },
-    { "q": "«جَمِيلٌ» so'zining ma'nosi?", "opts": ["Chiroyli", "Kichik", "Eski", "Tor"], "correct": 0, "izoh": "جَمِيل = chiroyli." },
-    { "q": "«وَاسِعٌ» so'zining ma'nosi?", "opts": ["Keng", "Tor", "Kichik", "Eski"], "correct": 0, "izoh": "وَاسِع = keng. ضَيِّق = tor." },
-    { "q": "«أَمَامَ» so'zining ma'nosi?", "opts": ["Oldida", "Orqasida", "Tagida", "Ustida"], "correct": 0, "izoh": "أَمَامَ = oldida. وَرَاءَ = orqasida." },
-    { "q": "«فَوْقَ» so'zining ma'nosi?", "opts": ["Tepasida (ustida)", "Tagida", "Yonida", "Orqasida"], "correct": 0, "izoh": "فَوْقَ = tepasida. تَحْتَ = tagida." },
-    { "q": "«تَحْتَ» so'zining ma'nosi?", "opts": ["Tagida (ostida)", "Tepasida", "Oldida", "Yonida"], "correct": 0, "izoh": "تَحْتَ = tagida/ostida." },
-    { "q": "🔁 «يَقْرَأُ» fe'lining ma'nosi?", "opts": ["O'qiydi", "Yozadi", "Ichadi", "Ketadi"], "correct": 0, "izoh": "🔁 Takror (4-dars): يَقْرَأُ = o'qiydi." },
-    { "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?", "opts": ["Xona", "Uy", "Eshik", "Maktab"], "correct": 0, "izoh": "🔁 Takror (3-dars): غُرْفَة = xona." },
-    { "q": "🔁 «يَشْرَبُ» fe'lining ma'nosi?", "opts": ["Ichadi", "Yeydi", "O'ynaydi", "Yozadi"], "correct": 0, "izoh": "🔁 Takror (4-dars): يَشْرَبُ = ichadi." }
+    {
+      "q": "«بَابٌ» so'zining ma'nosi?",
+      "opts": [
+        "Eshik",
+        "Orasida",
+        "Tepasida",
+        "Kir"
+      ],
+      "correct": 0,
+      "izoh": "بَابٌ = Eshik."
+    },
+    {
+      "q": "«طَاوِلَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Stol",
+        "Shkaf",
+        "Yangi",
+        "Tepasida"
+      ],
+      "correct": 0,
+      "izoh": "طَاوِلَةٌ = Stol."
+    },
+    {
+      "q": "«خِزَانَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Shkaf",
+        "Chap tomonida",
+        "Zal",
+        "Orqasida"
+      ],
+      "correct": 0,
+      "izoh": "خِزَانَةٌ = Shkaf."
+    },
+    {
+      "q": "«كُرْسِيٌّ» so'zining ma'nosi?",
+      "opts": [
+        "Kursi",
+        "Oldida",
+        "Chiroyli",
+        "Toza"
+      ],
+      "correct": 0,
+      "izoh": "كُرْسِيٌّ = Kursi."
+    },
+    {
+      "q": "«صَالَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Zal",
+        "Tepasida",
+        "Chiroyli",
+        "Katta"
+      ],
+      "correct": 0,
+      "izoh": "صَالَةٌ = Zal."
+    },
+    {
+      "q": "«كَبِيرٌ» so'zining ma'nosi?",
+      "opts": [
+        "Katta",
+        "Tepasida",
+        "Tor",
+        "Toza"
+      ],
+      "correct": 0,
+      "izoh": "كَبِيرٌ = Katta."
+    },
+    {
+      "q": "«صَغِيرٌ» so'zining ma'nosi?",
+      "opts": [
+        "Kichik",
+        "Kursi",
+        "Eshik",
+        "Tepasida"
+      ],
+      "correct": 0,
+      "izoh": "صَغِيرٌ = Kichik."
+    },
+    {
+      "q": "«نَظِيفٌ» so'zining ma'nosi?",
+      "opts": [
+        "Toza",
+        "Ustida",
+        "Katta",
+        "Kichik"
+      ],
+      "correct": 0,
+      "izoh": "نَظِيفٌ = Toza."
+    },
+    {
+      "q": "«وَسِخٌ» so'zining ma'nosi?",
+      "opts": [
+        "Kir",
+        "Tor",
+        "Zal",
+        "Chap tomonida"
+      ],
+      "correct": 0,
+      "izoh": "وَسِخٌ = Kir."
+    },
+    {
+      "q": "«جَمِيلٌ» so'zining ma'nosi?",
+      "opts": [
+        "Chiroyli",
+        "Eski",
+        "Yangi",
+        "Katta"
+      ],
+      "correct": 0,
+      "izoh": "جَمِيلٌ = Chiroyli."
+    },
+    {
+      "q": "«جَدِيدٌ» so'zining ma'nosi?",
+      "opts": [
+        "Yangi",
+        "Toza",
+        "Stol",
+        "O'ng tomonida"
+      ],
+      "correct": 0,
+      "izoh": "جَدِيدٌ = Yangi."
+    },
+    {
+      "q": "«قَدِيمٌ» so'zining ma'nosi?",
+      "opts": [
+        "Eski",
+        "Shkaf",
+        "O'ng tomonida",
+        "Chiroyli"
+      ],
+      "correct": 0,
+      "izoh": "قَدِيمٌ = Eski."
+    },
+    {
+      "q": "«وَاسِعٌ» so'zining ma'nosi?",
+      "opts": [
+        "Keng",
+        "Eshik",
+        "Orqasida",
+        "Tagida"
+      ],
+      "correct": 0,
+      "izoh": "وَاسِعٌ = Keng."
+    },
+    {
+      "q": "«ضَيِّقٌ» so'zining ma'nosi?",
+      "opts": [
+        "Tor",
+        "Zal",
+        "Chiroyli",
+        "Tepasida"
+      ],
+      "correct": 0,
+      "izoh": "ضَيِّقٌ = Tor."
+    },
+    {
+      "q": "«أَمَامَ» so'zining ma'nosi?",
+      "opts": [
+        "Oldida",
+        "Yangi",
+        "Keng",
+        "Orqasida"
+      ],
+      "correct": 0,
+      "izoh": "أَمَامَ = Oldida."
+    },
+    {
+      "q": "«فَوْقَ» so'zining ma'nosi?",
+      "opts": [
+        "Tepasida",
+        "O'ng tomonida",
+        "Zal",
+        "Eski"
+      ],
+      "correct": 0,
+      "izoh": "فَوْقَ = Tepasida."
+    },
+    {
+      "q": "«عَلَى» so'zining ma'nosi?",
+      "opts": [
+        "Ustida",
+        "Oldida",
+        "Stol",
+        "Eshik"
+      ],
+      "correct": 0,
+      "izoh": "عَلَى = Ustida."
+    },
+    {
+      "q": "«وَرَاءَ» so'zining ma'nosi?",
+      "opts": [
+        "Orqasida",
+        "Tepasida",
+        "Keng",
+        "Kursi"
+      ],
+      "correct": 0,
+      "izoh": "وَرَاءَ = Orqasida."
+    },
+    {
+      "q": "«تَحْتَ» so'zining ma'nosi?",
+      "opts": [
+        "Tagida",
+        "Kichik",
+        "Chiroyli",
+        "Kursi"
+      ],
+      "correct": 0,
+      "izoh": "تَحْتَ = Tagida."
+    },
+    {
+      "q": "«جَانِبَ» so'zining ma'nosi?",
+      "opts": [
+        "Yonida",
+        "Stol",
+        "Orqasida",
+        "Eski"
+      ],
+      "correct": 0,
+      "izoh": "جَانِبَ = Yonida."
+    },
+    {
+      "q": "«بَيْنَ» so'zining ma'nosi?",
+      "opts": [
+        "Orasida",
+        "Yonida",
+        "Toza",
+        "Eski"
+      ],
+      "correct": 0,
+      "izoh": "بَيْنَ = Orasida."
+    },
+    {
+      "q": "«عَنْ يَمِينِ» so'zining ma'nosi?",
+      "opts": [
+        "O'ng tomonida",
+        "Kir",
+        "Chap tomonida",
+        "Tepasida"
+      ],
+      "correct": 0,
+      "izoh": "عَنْ يَمِينِ = O'ng tomonida."
+    },
+    {
+      "q": "«عَنْ يَسَارِ» so'zining ma'nosi?",
+      "opts": [
+        "Chap tomonida",
+        "Kichik",
+        "Orqasida",
+        "Tagida"
+      ],
+      "correct": 0,
+      "izoh": "عَنْ يَسَارِ = Chap tomonida."
+    },
+    {
+      "q": "🔁 «يَقْرَأُ» so'zining ma'nosi?",
+      "opts": [
+        "O'qiydi",
+        "Tor",
+        "Yonida",
+        "Orqasida"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (4-dars): يَقْرَأُ = O'qiydi."
+    },
+    {
+      "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Xona",
+        "Tagida",
+        "Kir",
+        "Oldida"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
+    },
+    {
+      "q": "🔁 «يَشْرَبُ» so'zining ma'nosi?",
+      "opts": [
+        "Ichadi",
+        "Kursi",
+        "Yonida",
+        "Chiroyli"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (4-dars): يَشْرَبُ = Ichadi."
+    },
+    {
+      "q": "🔁 «جَدٌّ» so'zining ma'nosi?",
+      "opts": [
+        "Bobo",
+        "Eski",
+        "Keng",
+        "Toza"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (3-dars): جَدٌّ = Bobo."
+    },
+    {
+      "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
+      "opts": [
+        "Restoran",
+        "Chap tomonida",
+        "O'ng tomonida",
+        "Eski"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
+    },
+    {
+      "q": "🔁 «كِتَابٌ» so'zining ma'nosi?",
+      "opts": [
+        "Kitob",
+        "Tor",
+        "Yangi",
+        "Kir"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): كِتَابٌ = Kitob."
+    },
+    {
+      "q": "🔁 «يَجْلِسُ» so'zining ma'nosi?",
+      "opts": [
+        "O'tiradi",
+        "Stol",
+        "Kir",
+        "Zal"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (4-dars): يَجْلِسُ = O'tiradi."
+    },
+    {
+      "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
+      "opts": [
+        "Do'st",
+        "Orasida",
+        "Chap tomonida",
+        "Chiroyli"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
+    }
   ]
 }

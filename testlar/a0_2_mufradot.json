@@ -1,22 +1,249 @@
 {
   "title": "Mufradot — 2-dars: Al-Mihan (Kasblar)",
   "otish": 70,
-  "vaqt": 10,
+  "vaqt": 13,
   "questions": [
-    { "q": "«مِهْنَةٌ» so'zining ma'nosi?", "opts": ["Kasb", "Ism", "Uy", "Do'st"], "correct": 0, "izoh": "مِهْنَة = kasb." },
-    { "q": "«مُهَنْدِسٌ» so'zining ma'nosi?", "opts": ["Muhandis", "Shifokor", "Oshpaz", "Haydovchi"], "correct": 0, "izoh": "مُهَنْدِس = muhandis." },
-    { "q": "«طَبَّاخٌ» so'zining ma'nosi?", "opts": ["Oshpaz", "Sotuvchi", "Sartarosh", "Talaba"], "correct": 0, "izoh": "طَبَّاخ = oshpaz." },
-    { "q": "«بَائِعٌ» so'zining ma'nosi?", "opts": ["Sotuvchi", "Haydovchi", "Oshpaz", "Shifokor"], "correct": 0, "izoh": "بَائِع = sotuvchi." },
-    { "q": "«سَائِقٌ» so'zining ma'nosi?", "opts": ["Haydovchi", "Sotuvchi", "Muhandis", "O'qituvchi"], "correct": 0, "izoh": "سَائِق = haydovchi." },
-    { "q": "«تَاجِرٌ» so'zining ma'nosi?", "opts": ["Savdogar (tadbirkor)", "Sartarosh", "Direktor", "Talaba"], "correct": 0, "izoh": "تَاجِر = savdogar." },
-    { "q": "«حَلَّاقٌ» so'zining ma'nosi?", "opts": ["Sartarosh", "Oshpaz", "Haydovchi", "Sotuvchi"], "correct": 0, "izoh": "حَلَّاق = sartarosh." },
-    { "q": "«مُدِيرٌ» so'zining ma'nosi?", "opts": ["Direktor (rahbar)", "Ishchi", "O'quvchi", "Do'st"], "correct": 0, "izoh": "مُدِير = direktor." },
-    { "q": "«تِلْمِيذٌ» so'zining ma'nosi?", "opts": ["O'quvchi (maktab)", "Muhandis", "Sotuvchi", "Bobo"], "correct": 0, "izoh": "تِلْمِيذ = (maktab) o'quvchisi." },
-    { "q": "«صَدِيقٌ» so'zining ma'nosi?", "opts": ["Do'st", "Aka", "Direktor", "Ustoz"], "correct": 0, "izoh": "صَدِيق = do'st." },
-    { "q": "«مَطْعَمٌ» so'zining ma'nosi?", "opts": ["Restoran (oshxona)", "Kutubxona", "Maktab", "Uy"], "correct": 0, "izoh": "مَطْعَم = restoran/oshxona." },
-    { "q": "«أَعْمَلُ» so'zining ma'nosi?", "opts": ["Ishlayman", "O'qiyman", "Boraman", "Yozaman"], "correct": 0, "izoh": "أَعْمَل = ishlayman (عَمِلَ — ishlamoq)." },
-    { "q": "🔁 «قَلَمٌ» so'zining ma'nosi?", "opts": ["Qalam", "Kitob", "Stol", "Eshik"], "correct": 0, "izoh": "🔁 Takror (1-dars): قَلَم = qalam." },
-    { "q": "🔁 «دَفْتَرٌ» so'zining ma'nosi?", "opts": ["Daftar", "Surat", "Kitob", "Qalam"], "correct": 0, "izoh": "🔁 Takror (1-dars): دَفْتَر = daftar." },
-    { "q": "🔁 «شُكْرًا» so'zining ma'nosi?", "opts": ["Rahmat", "Arzimaydi", "Salom", "Xayr"], "correct": 0, "izoh": "🔁 Takror (1-dars): شكرًا = rahmat." }
+    {
+      "q": "«مِهْنَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Kasb",
+        "Ishchi",
+        "Restoran",
+        "Yaxshi!"
+      ],
+      "correct": 0,
+      "izoh": "مِهْنَةٌ = Kasb."
+    },
+    {
+      "q": "«عَامِلٌ» so'zining ma'nosi?",
+      "opts": [
+        "Ishchi",
+        "Sotuvchi",
+        "Savdogar",
+        "Haydovchi"
+      ],
+      "correct": 0,
+      "izoh": "عَامِلٌ = Ishchi."
+    },
+    {
+      "q": "«دُكْتُورٌ» so'zining ma'nosi?",
+      "opts": [
+        "Shifokor (doktor)",
+        "Sotuvchi",
+        "...da (ichida)",
+        "Sartarosh"
+      ],
+      "correct": 0,
+      "izoh": "دُكْتُورٌ = Shifokor (doktor)."
+    },
+    {
+      "q": "«مُهَنْدِسٌ» so'zining ma'nosi?",
+      "opts": [
+        "Muhandis",
+        "O'quvchi",
+        "Talaba (qiz)",
+        "Shifokor (doktor)"
+      ],
+      "correct": 0,
+      "izoh": "مُهَنْدِسٌ = Muhandis."
+    },
+    {
+      "q": "«سَائِقٌ» so'zining ma'nosi?",
+      "opts": [
+        "Haydovchi",
+        "O'quvchi",
+        "Ishlayman",
+        "...da (ichida)"
+      ],
+      "correct": 0,
+      "izoh": "سَائِقٌ = Haydovchi."
+    },
+    {
+      "q": "«طَبَّاخٌ» so'zining ma'nosi?",
+      "opts": [
+        "Oshpaz",
+        "Muhandis",
+        "Direktor",
+        "Shifokor (doktor)"
+      ],
+      "correct": 0,
+      "izoh": "طَبَّاخٌ = Oshpaz."
+    },
+    {
+      "q": "«طَالِبَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Talaba (qiz)",
+        "O'quvchi",
+        "Sartarosh",
+        "Ishlayman"
+      ],
+      "correct": 0,
+      "izoh": "طَالِبَةٌ = Talaba (qiz)."
+    },
+    {
+      "q": "«تِلْمِيذٌ» so'zining ma'nosi?",
+      "opts": [
+        "O'quvchi",
+        "Savdogar",
+        "Haydovchi",
+        "Sotuvchi"
+      ],
+      "correct": 0,
+      "izoh": "تِلْمِيذٌ = O'quvchi."
+    },
+    {
+      "q": "«صَدِيقٌ» so'zining ma'nosi?",
+      "opts": [
+        "Do'st",
+        "Restoran",
+        "Yaxshi!",
+        "Sotuvchi"
+      ],
+      "correct": 0,
+      "izoh": "صَدِيقٌ = Do'st."
+    },
+    {
+      "q": "«تَاجِرٌ» so'zining ma'nosi?",
+      "opts": [
+        "Savdogar",
+        "Ishchi",
+        "Talaba (qiz)",
+        "Sartarosh"
+      ],
+      "correct": 0,
+      "izoh": "تَاجِرٌ = Savdogar."
+    },
+    {
+      "q": "«حَلَّاقٌ» so'zining ma'nosi?",
+      "opts": [
+        "Sartarosh",
+        "Ishlayman",
+        "Yaxshi!",
+        "Shifokor (doktor)"
+      ],
+      "correct": 0,
+      "izoh": "حَلَّاقٌ = Sartarosh."
+    },
+    {
+      "q": "«مُدِيرٌ» so'zining ma'nosi?",
+      "opts": [
+        "Direktor",
+        "Savdogar",
+        "Yaxshi!",
+        "Kasb"
+      ],
+      "correct": 0,
+      "izoh": "مُدِيرٌ = Direktor."
+    },
+    {
+      "q": "«بَائِعٌ» so'zining ma'nosi?",
+      "opts": [
+        "Sotuvchi",
+        "Sartarosh",
+        "Shifokor (doktor)",
+        "Yaxshi!"
+      ],
+      "correct": 0,
+      "izoh": "بَائِعٌ = Sotuvchi."
+    },
+    {
+      "q": "«فِي» so'zining ma'nosi?",
+      "opts": [
+        "...da (ichida)",
+        "Haydovchi",
+        "Ishchi",
+        "Restoran"
+      ],
+      "correct": 0,
+      "izoh": "فِي = ...da (ichida)."
+    },
+    {
+      "q": "«مَطْعَمٌ» so'zining ma'nosi?",
+      "opts": [
+        "Restoran",
+        "Oshpaz",
+        "Muhandis",
+        "Ishchi"
+      ],
+      "correct": 0,
+      "izoh": "مَطْعَمٌ = Restoran."
+    },
+    {
+      "q": "«حَسَنًا» so'zining ma'nosi?",
+      "opts": [
+        "Yaxshi!",
+        "Do'st",
+        "Ishlayman",
+        "Haydovchi"
+      ],
+      "correct": 0,
+      "izoh": "حَسَنًا = Yaxshi!."
+    },
+    {
+      "q": "«أَعْمَلُ» so'zining ma'nosi?",
+      "opts": [
+        "Ishlayman",
+        "Direktor",
+        "Muhandis",
+        "Restoran"
+      ],
+      "correct": 0,
+      "izoh": "أَعْمَلُ = Ishlayman."
+    },
+    {
+      "q": "🔁 «قَلَمٌ» so'zining ma'nosi?",
+      "opts": [
+        "Qalam",
+        "Do'st",
+        "Yaxshi!",
+        "Restoran"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): قَلَمٌ = Qalam."
+    },
+    {
+      "q": "🔁 «دَفْتَرٌ» so'zining ma'nosi?",
+      "opts": [
+        "Daftar",
+        "O'quvchi",
+        "Sotuvchi",
+        "Oshpaz"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): دَفْتَرٌ = Daftar."
+    },
+    {
+      "q": "🔁 «طَبِيبٌ» so'zining ma'nosi?",
+      "opts": [
+        "Shifokor",
+        "Muhandis",
+        "Shifokor (doktor)",
+        "Talaba (qiz)"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): طَبِيبٌ = Shifokor."
+    },
+    {
+      "q": "🔁 «شُكْرًا» so'zining ma'nosi?",
+      "opts": [
+        "Rahmat",
+        "Kasb",
+        "Ishlayman",
+        "Oshpaz"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): شُكْرًا = Rahmat."
+    },
+    {
+      "q": "🔁 «كِتَابٌ» so'zining ma'nosi?",
+      "opts": [
+        "Kitob",
+        "Direktor",
+        "Muhandis",
+        "Do'st"
+      ],
+      "correct": 0,
+      "izoh": "🔁 Takror (1-dars): كِتَابٌ = Kitob."
+    }
   ]
 }
