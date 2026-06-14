@@ -1,0 +1,152 @@
+{
+  "title": "Qiroat — 6-dars: Maktabda (Sinf va restoran)",
+  "kitob": "A0 Bayyina_compressed (1).pdf",
+  "bet": 126,
+  "otish": 70,
+  "vaqt": 18,
+  "questions": [
+    {
+      "q": "Ular maktabga qachon borishadi?",
+      "opts": ["Ertalab", "Kechqurun", "Tushda", "Kechasi"],
+      "correct": 0,
+      "matn": "نَذْهَبُ مَعَ أَصْدِقَائِي إِلَى الْمَدْرَسَةِ صَبَاحًا",
+      "izoh": "«صَبَاحًا» — ertalab.",
+      "bet": 126
+    },
+    {
+      "q": "Sinf (الصَّفّ) qanday tasvirlangan?",
+      "opts": ["Katta va keng", "Kichik va tor", "Eski va qorong'i", "Yangi va baland"],
+      "correct": 0,
+      "matn": "صَفُّنَا كَبِيرٌ وَوَاسِعٌ",
+      "izoh": "«كَبِيرٌ وَوَاسِعٌ» — katta va keng.",
+      "bet": 126
+    },
+    {
+      "q": "O'quvchilar nimaning ustida o'tirishadi?",
+      "opts": ["Stullarida", "Polda", "Stol ustida", "Gilamda"],
+      "correct": 0,
+      "matn": "الطُّلَّابُ يَجْلِسُونَ عَلَى كَرَاسِيِّهِمْ",
+      "izoh": "«كَرَاسِيِّهِمْ» — ularning stullari. كُرْسِيّ = stul.",
+      "bet": 126
+    },
+    {
+      "q": "Sinfga kim kirib darsni boshlaydi?",
+      "opts": ["Ustoz (o'qituvchi)", "Direktor", "Otasi", "Bir o'quvchi"],
+      "correct": 0,
+      "matn": "ثُمَّ يَدْخُلُ الْأُسْتَاذُ وَيَبْدَأُ الدَّرْسَ",
+      "izoh": "«الْأُسْتَاذُ» — ustoz/o'qituvchi. «يَبْدَأُ الدَّرْسَ» — darsni boshlaydi.",
+      "bet": 126
+    },
+    {
+      "q": "Ahmad va Zayd qayerda o'tirishadi?",
+      "opts": ["Ustozning oldida", "Ustozning orqasida", "Eshik yonida", "Oxirgi qatorda"],
+      "correct": 0,
+      "matn": "أَحْمَدُ وَزَيْدٌ يَجْلِسَانِ أَمَامَ الْأُسْتَاذِ",
+      "izoh": "«أَمَامَ» — oldida.",
+      "bet": 126
+    },
+    {
+      "q": "«أَمَامَ» so'zining ma'nosi nima?",
+      "opts": ["Oldida", "Orqasida", "Yonida", "Ostida"],
+      "correct": 0,
+      "izoh": "أَمَامَ = oldida. Aksi: وَرَاءَ = orqasida.",
+      "bet": 126
+    },
+    {
+      "q": "Muallif (men) va Umar qayerda o'tirishadi?",
+      "opts": ["Ahmad va Zaydning orqasida", "Ustozning oldida", "Eshik oldida", "Birinchi qatorda"],
+      "correct": 0,
+      "matn": "أَنَا وَعُمَرُ نَجْلِسُ وَرَاءَهُمَا",
+      "izoh": "«وَرَاءَهُمَا» — ikkisining orqasida (Ahmad va Zayd).",
+      "bet": 126
+    },
+    {
+      "q": "Muhammad qayerda o'tiradi?",
+      "opts": ["O'ng tomonida", "Chap tomonida", "Oldida", "Orqasida"],
+      "correct": 0,
+      "matn": "عَنْ يَمِينِي يَجْلِسُ مُحَمَّدٌ",
+      "izoh": "«عَنْ يَمِينِي» — mening o'ng tomonimda.",
+      "bet": 126
+    },
+    {
+      "q": "Fatima qayerda o'tiradi?",
+      "opts": ["Chap tomonida", "O'ng tomonida", "Oldida", "Orqasida"],
+      "correct": 0,
+      "matn": "وَعَنْ يَسَارِي تَجْلِسُ فَاطِمَةُ",
+      "izoh": "«عَنْ يَسَارِي» — mening chap tomonimda.",
+      "bet": 126
+    },
+    {
+      "q": "O'g'il o'quvchilar (الطُّلَّاب) dars vaqtida ba'zan nima qilishadi?",
+      "opts": ["Ba'zan o'ynashadi", "Doim uxlashadi", "Ovqatlanishadi", "Chiqib ketishadi"],
+      "correct": 0,
+      "matn": "الطُّلَّابُ يَلْعَبُونَ أَحْيَانًا وَقْتَ الدَّرْسِ",
+      "izoh": "«يَلْعَبُونَ أَحْيَانًا» — ba'zan o'ynashadi. أحيانًا = ba'zan.",
+      "bet": 126
+    },
+    {
+      "q": "Qiz o'quvchilar (الطَّالِبَات) dars vaqtida nima qilishadi?",
+      "opts": ["O'ynashmaydi, yozadi va tinglashadi", "O'ynashadi", "Uxlashadi", "Gaplashishadi"],
+      "correct": 0,
+      "matn": "الطَّالِبَاتِ لَا يَلْعَبْنَ فِي الدَّرْسِ وَيَكْتُبْنَ ... وَيَسْمَعْنَ الْأُسْتَاذَ",
+      "izoh": "Qizlar darsda o'ynamaydi, so'zlarni yozadi va ustozni tinglaydi.",
+      "bet": 126
+    },
+    {
+      "q": "Qizlar so'zlarni (الْكَلِمَات) qayerdan ko'chirib yozishadi?",
+      "opts": ["Doskadan", "Kitobdan", "Daftardan", "Devordan"],
+      "correct": 0,
+      "matn": "وَيَكْتُبْنَ الْكَلِمَاتِ مِنَ السَّبُّورَةِ",
+      "izoh": "«السَّبُّورَة» — doska.",
+      "bet": 126
+    },
+    {
+      "q": "Imtihon vaqtida (أَوْقَاتِ الِامْتِحَانِ) ular javobni kimdan olishadi?",
+      "opts": ["Qizlardan", "Ustozdan", "Kitobdan", "Bir-biridan"],
+      "correct": 0,
+      "matn": "غَالِبًا فِي أَوْقَاتِ الِامْتِحَانِ نَأْخُذُ الْجَوَابَ مِنْهُنَّ",
+      "izoh": "«مِنْهُنَّ» — ulardan (qizlardan). Chunki qizlar doim tinglab, yozib o'tiradi.",
+      "bet": 126
+    },
+    {
+      "q": "Darsdan keyin (بَعْدَ الدَّرْسِ) ular nima qilishadi?",
+      "opts": ["Maktabdan chiqishadi", "Uxlashadi", "Yana o'qishadi", "Doskani yozishadi"],
+      "correct": 0,
+      "matn": "بَعْدَ الدَّرْسِ نَخْرُجُ مِنَ الْمَدْرَسَةِ",
+      "izoh": "«نَخْرُجُ» — chiqamiz. بَعْدَ = keyin.",
+      "bet": 127
+    },
+    {
+      "q": "Ahmad do'stlarini nimaga taklif qiladi?",
+      "opts": ["Birga restoranda ovqatlanishga", "Futbol o'ynashga", "Kutubxonaga", "Uyiga"],
+      "correct": 0,
+      "matn": "هَلْ تَأْكُلَانِ فِي الْمَطْعَمِ مَعَنَا؟",
+      "izoh": "«الْمَطْعَم» — restoran; Ahmad birga ovqatlanishga taklif qiladi.",
+      "bet": 127
+    },
+    {
+      "q": "Mahmud tavsiya qilgan restoran qayerda?",
+      "opts": ["Kutubxona yonida", "Maktab ichida", "Uy yonida", "Bozorda"],
+      "correct": 0,
+      "matn": "هَلْ تَنْصَحُونَ الْمَطْعَمَ جَانِبَ الْمَكْتَبَةِ؟",
+      "izoh": "«جَانِبَ الْمَكْتَبَةِ» — kutubxona yonida. مكتبة = kutubxona.",
+      "bet": 127
+    },
+    {
+      "q": "Mahmud o'sha restoran taomi haqida nima deydi?",
+      "opts": ["Juda mazali", "Juda qimmat", "Sovuq", "Yoqimsiz"],
+      "correct": 0,
+      "matn": "طَعَامُهُ لَذِيذٌ جِدًّا",
+      "izoh": "«لَذِيذٌ جِدًّا» — juda mazali.",
+      "bet": 127
+    },
+    {
+      "q": "Ovqatdan oldin (قَبْلَ الطَّعَامِ) ular nima ichishadi?",
+      "opts": ["Sharbat (sok)", "Choy", "Qahva", "Suv"],
+      "correct": 0,
+      "matn": "قَبْلَ الطَّعَامِ نَشْرَبُ الْعَصِيرَ",
+      "izoh": "«الْعَصِير» — sharbat/sok. قَبْلَ = oldin. (Ovqatdan keyin esa uylariga qaytishadi.)",
+      "bet": 127
+    }
+  ]
+}
