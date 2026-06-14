@@ -6,66 +6,41 @@
   "vaqt": 10,
   "questions": [
     {
-      "q": "Ushbu salomga to'g'ri javob qaysi?",
-      "opts": [
-        "وَعَلَيْكُمُ السَّلَامُ",
-        "صَبَاحُ الْخَيْرِ",
-        "شُكْرًا",
-        "مَعَ السَّلَامَةِ"
-      ],
+      "q": "Ushbu suhbat (dialog) kim bilan kim o'rtasida boradi?",
+      "opts": ["Ahmad va Anvar", "Ali va Vali", "Umar va Zayd", "Maryam va Fotima"],
       "correct": 0,
-      "matn": "السَّلَامُ عَلَيْكُمْ",
-      "izoh": "Salomga «vaalaykum assalom» deb javob beriladi.",
+      "izoh": "Dialog أَحْمَد (Ahmad) va أَنْوَر (Anvar) o'rtasida boradi.",
       "bet": 21
     },
     {
-      "q": "«كَيْفَ حَالُكَ؟» iborasi nimani anglatadi?",
-      "opts": [
-        "Ahvolingiz qanday?",
-        "Ismingiz nima?",
-        "Qayerdansiz?",
-        "Rahmat"
-      ],
-      "correct": 0,
-      "izoh": "كَيْفَ حَالُكَ = ahvolingiz qanday.",
-      "bet": 21
-    },
-    {
-      "q": "«Men O'zbekistondanman» — arabchasi qaysi?",
-      "opts": [
-        "أَنَا مِنْ أُوزْبَكِسْتَانَ",
-        "أَنَا مِنْ مِصْرَ",
-        "أَهْلًا وَسَهْلًا",
-        "مَا اسْمُكَ؟"
-      ],
-      "correct": 0,
-      "izoh": "مِنْ = …dan.",
-      "bet": 22
-    },
-    {
-      "q": "«تَشَرَّفْتُ» so'zi qaysi holatda aytiladi?",
-      "opts": [
-        "Tanishganda (xursandman)",
-        "Xayrlashganda",
-        "Ovqatdan oldin",
-        "Uyga kirganda"
-      ],
-      "correct": 0,
-      "izoh": "تَشَرَّفْتُ = tanishganimdan xursandman.",
-      "bet": 22
-    },
-    {
-      "q": "«صَبَاحُ الْخَيْرِ» ga an'anaviy javob qaysi?",
-      "opts": [
-        "صَبَاحُ النُّورِ",
-        "مَسَاءُ الْخَيْرِ",
-        "شُكْرًا",
-        "وَعَلَيْكُمُ السَّلَامُ"
-      ],
+      "q": "«صَبَاحُ الْخَيْرِ» ga matnda qanday javob berildi?",
+      "opts": ["صَبَاحُ النُّورِ", "مَسَاءُ الْخَيْرِ", "مَعَ السَّلَامَةِ", "شُكْرًا"],
       "correct": 0,
       "matn": "صَبَاحُ الْخَيْرِ",
-      "izoh": "صباح الخير → صباح النور.",
-      "bet": 23
+      "izoh": "«صباح الخير» (xayrli tong) ga «صباح النور» deb javob beriladi.",
+      "bet": 21
+    },
+    {
+      "q": "Ahmad qayerdan ekan?",
+      "opts": ["Toshkentdan", "Misrdan", "Samarqanddan", "Madinadan"],
+      "correct": 0,
+      "matn": "أَنَا مِنْ طَشْقَنْدَ",
+      "izoh": "«أَنَا مِنْ طَشْقَنْدَ» — men Toshkentdanman.",
+      "bet": 21
+    },
+    {
+      "q": "«تَشَرَّفْتُ» so'zi nimani bildiradi?",
+      "opts": ["Tanishganimdan xursandman", "Ko'rishguncha", "Rahmat", "Ahvolingiz qanday"],
+      "correct": 0,
+      "izoh": "تَشَرَّفْتُ = tanishganimdan xursandman.",
+      "bet": 21
+    },
+    {
+      "q": "Suhbat oxirida ular qanday xayrlashdi?",
+      "opts": ["مَعَ السَّلَامَةِ — إِلَى اللِّقَاءِ", "صَبَاحُ الْخَيْرِ", "أَهْلًا وَسَهْلًا", "كَيْفَ حَالُكَ"],
+      "correct": 0,
+      "izoh": "Oxirida «مع السلامة» (salomat bo'ling) va «إلى اللقاء» (ko'rishguncha) bilan xayrlashishadi.",
+      "bet": 21
     }
   ]
 }
