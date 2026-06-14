@@ -35,6 +35,9 @@
   .q .qn{font-size:12px;color:#6ab3f3;font-weight:700;margin-bottom:6px;}
   .q .qt{font-size:15px;line-height:1.5;margin-bottom:10px;}
   .qmatn{background:#0e1621;border-left:3px solid #6ab3f3;padding:8px 10px;border-radius:6px;margin-bottom:8px;color:#cfe;font-size:14px;line-height:1.6;}
+  .audiowrap{background:var(--panel);border:1px solid #22303f;border-radius:14px;padding:14px;margin-bottom:14px;}
+  .audiolbl{font-size:13px;color:#6ab3f3;font-weight:700;margin-bottom:10px;}
+  .audiowrap audio{width:100%;display:block;}
   .opt{display:block;background:#0e1621;border:1.5px solid #2b3b4d;border-radius:10px;padding:11px 13px;margin-bottom:8px;cursor:pointer;font-size:14px;transition:.12s;}
   .opt:hover{border-color:var(--accent2);}
   .opt.sel{border-color:#6ab3f3;background:#13283d;}
@@ -86,6 +89,7 @@
       <div class="canvas-wrap" id="cwrap"><canvas id="pdfCanvas"></canvas><div class="loading" id="loadingMsg">Kitob yuklanmoqda…</div><div class="err" id="errMsg" style="display:none;"></div></div>
     </div>
     <div class="pane test" id="paneTest">
+      <div id="audioBox"></div>
       <div id="quizArea"></div>
       <button class="submit" id="submitBtn" disabled onclick="submitQuiz()">Natijani yuborish</button>
       <div class="result" id="resultBox"></div>
@@ -97,6 +101,7 @@
 
   // ====== SOZLAMA ======
   const BOOK_BASE = "https://pub-fa6fab51991c40578a5947add75bc74e.r2.dev/";  // R2 public URL
+  const AUDIO_BASE = BOOK_BASE;  // istima audiolari ham shu R2 bucketda (kerak bo'lsa o'zgartiring)
   const DEFAULT_BOOK = "A0 Bayyina_compressed (1).pdf";
 
   // URL parametrlari: ?dars=<id>  (yoki ?kitob=&bet=&otish=&vaqt= bilan to'g'ridan)
@@ -108,6 +113,8 @@
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
   let timerInt = null;
   let hasBook = true;   // JSON'da kitob bo'lmasa → faqat test rejimi
+  let audioUrl = "";    // JSON'da audio bo'lsa → istima rejimi (pleer ko'rsatiladi)
+  let audioPlaysLeft = 2;  // istima: necha marta tinglash mumkin (JSON 'tinglash'; 0/manfiy = cheksiz)
 
   // ====== NAMUNA TEST (JSON topilmasa zaxira) ======
   const SAMPLE = [
@@ -129,15 +136,43 @@
           if(j.bet)   startPage = parseInt(j.bet,10);
           if(j.otish) PASS      = parseInt(j.otish,10);
           if(j.vaqt)  MINUTES   = parseInt(j.vaqt,10);
-          if(j.title) document.getElementById('lessonTitle').innerHTML =
-            `📄 ${j.title} <small>Matnni o'qing va savollarga javob bering</small>`;
+          if(j.audio) audioUrl = /^https?:/i.test(j.audio) ? j.audio : AUDIO_BASE + encodeURIComponent(j.audio);
+          if(j.tinglash!=null){ const n=parseInt(j.tinglash,10); audioPlaysLeft = (isNaN(n)||n<=0) ? Infinity : n; }
+          if(j.title){
+            const icon = audioUrl ? "🎧" : "📄";
+            const sub  = audioUrl ? "Audioni tinglang va savollarga javob bering"
+                       : (j.kitob ? "Matnni o'qing va savollarga javob bering"
+                                  : "Savollarga javob bering");
+            document.getElementById('lessonTitle').innerHTML = `${icon} ${j.title} <small>${sub}</small>`;
+          }
         }
       }catch(e){ /* SAMPLE bilan davom etadi */ }
     }
+    renderAudio();
     renderQuiz();
   }
 
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
+  function renderAudio(){
+    const box=document.getElementById('audioBox'); if(!box) return;
+    if(!audioUrl){ box.style.display='none'; return; }
+    box.style.display='block';
+    box.innerHTML=`<div class="audiowrap"><div class="audiolbl" id="audioLbl"></div>`+
+      `<audio id="istimaAudio" controls preload="metadata" controlsList="nodownload" src="${audioUrl}"></audio></div>`;
+    const au=document.getElementById('istimaAudio');
+    updateAudioLabel();
+    au.addEventListener('play',()=>{
+      if(audioPlaysLeft<=0){ au.pause(); au.currentTime=0; updateAudioLabel(); return; }
+      if(au.currentTime < 1){ audioPlaysLeft--; updateAudioLabel(); }   // boshidan boshlangani = 1 marta
+    });
+  }
+  function updateAudioLabel(){
+    const l=document.getElementById('audioLbl'); if(!l) return;
+    if(audioPlaysLeft===Infinity){ l.innerHTML="🎧 Audioni tinglang"; return; }
+    l.innerHTML = audioPlaysLeft>0
+      ? `🎧 Audioni tinglang — qolgan: <b>${audioPlaysLeft}</b> marta`
+      : "🎧 Tinglash limiti tugadi";
+  }
   function renderQuiz(){
     const area=document.getElementById('quizArea'); area.innerHTML="";
     document.getElementById('qTotal').textContent=QUESTIONS.length;
