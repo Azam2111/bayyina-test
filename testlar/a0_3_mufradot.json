@@ -1,48 +1,15 @@
 {
   "title": "Mufradot — 3-dars: Al-Aila (Oila)",
   "otish": 70,
-  "vaqt": 14,
+  "vaqt": 16,
   "questions": [
-    {
-      "q": "«عَائِلَةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Oila",
-        "Besh (5)",
-        "Aka/uka",
-        "Opa/singil"
-      ],
-      "correct": 0,
-      "izoh": "عَائِلَةٌ = Oila."
-    },
-    {
-      "q": "«جَدٌّ» so'zining ma'nosi?",
-      "opts": [
-        "Bobo",
-        "Bola",
-        "Buvi",
-        "Oila"
-      ],
-      "correct": 0,
-      "izoh": "جَدٌّ = Bobo."
-    },
-    {
-      "q": "«جَدَّةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Buvi",
-        "Uch (3)",
-        "To'rt (4)",
-        "Oila"
-      ],
-      "correct": 0,
-      "izoh": "جَدَّةٌ = Buvi."
-    },
     {
       "q": "«أَبٌ» so'zining ma'nosi?",
       "opts": [
         "Ota",
-        "Buvi",
-        "Nabira",
-        "Uch (3)"
+        "Xola",
+        "Mehmon",
+        "Daraxt"
       ],
       "correct": 0,
       "izoh": "أَبٌ = Ota."
@@ -51,20 +18,42 @@
       "q": "«أُمٌّ» so'zining ma'nosi?",
       "opts": [
         "Ona",
-        "Bola",
-        "Ikki (2)",
-        "Opa/singil"
+        "Tog'a (ona tomondan)",
+        "Bola (umumiy)",
+        "O'g'il"
       ],
       "correct": 0,
       "izoh": "أُمٌّ = Ona."
     },
     {
+      "q": "«جَدٌّ» so'zining ma'nosi?",
+      "opts": [
+        "Bobo",
+        "O'g'il",
+        "Mehmon",
+        "Uy"
+      ],
+      "correct": 0,
+      "izoh": "جَدٌّ = Bobo."
+    },
+    {
+      "q": "«جَدَّةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Buvi",
+        "Xotin",
+        "Mehmon",
+        "Er"
+      ],
+      "correct": 0,
+      "izoh": "جَدَّةٌ = Buvi."
+    },
+    {
       "q": "«أَخٌ» so'zining ma'nosi?",
       "opts": [
         "Aka/uka",
-        "Xona",
-        "Oila",
-        "Ikki (2)"
+        "Uy",
+        "Bola (umumiy)",
+        "Amma"
       ],
       "correct": 0,
       "izoh": "أَخٌ = Aka/uka."
@@ -73,9 +62,9 @@
       "q": "«أُخْتٌ» so'zining ma'nosi?",
       "opts": [
         "Opa/singil",
-        "Ikki (2)",
-        "Uch (3)",
-        "To'rt (4)"
+        "Buvi",
+        "Qiz",
+        "Xona"
       ],
       "correct": 0,
       "izoh": "أُخْتٌ = Opa/singil."
@@ -84,9 +73,9 @@
       "q": "«اِبْنٌ» so'zining ma'nosi?",
       "opts": [
         "O'g'il",
-        "Bola",
-        "To'rt (4)",
-        "Aka/uka"
+        "Buvi",
+        "Ona",
+        "Qiz"
       ],
       "correct": 0,
       "izoh": "اِبْنٌ = O'g'il."
@@ -95,9 +84,9 @@
       "q": "«بِنْتٌ» so'zining ma'nosi?",
       "opts": [
         "Qiz",
-        "Besh (5)",
-        "To'rt (4)",
-        "O'g'il"
+        "Buvi",
+        "Tog'a (ona tomondan)",
+        "Ona"
       ],
       "correct": 0,
       "izoh": "بِنْتٌ = Qiz."
@@ -105,98 +94,142 @@
     {
       "q": "«وَلَدٌ» so'zining ma'nosi?",
       "opts": [
-        "Bola",
-        "Aka/uka",
-        "Ota",
-        "O'g'il"
+        "Bola (umumiy)",
+        "Daraxt",
+        "O'g'il",
+        "Opa/singil"
       ],
       "correct": 0,
-      "izoh": "وَلَدٌ = Bola."
+      "izoh": "وَلَدٌ = Bola (umumiy)."
+    },
+    {
+      "q": "«عَمٌّ» so'zining ma'nosi?",
+      "opts": [
+        "Amaki (ota tomondan)",
+        "Uy",
+        "Opa/singil",
+        "Qiz"
+      ],
+      "correct": 0,
+      "izoh": "عَمٌّ = Amaki (ota tomondan)."
+    },
+    {
+      "q": "«عَمَّةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Amma",
+        "Ona",
+        "Ota",
+        "Daraxt"
+      ],
+      "correct": 0,
+      "izoh": "عَمَّةٌ = Amma."
+    },
+    {
+      "q": "«خَالٌ» so'zining ma'nosi?",
+      "opts": [
+        "Tog'a (ona tomondan)",
+        "O'g'il",
+        "Xotin",
+        "Er"
+      ],
+      "correct": 0,
+      "izoh": "خَالٌ = Tog'a (ona tomondan)."
+    },
+    {
+      "q": "«خَالَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Xola",
+        "Tog'a (ona tomondan)",
+        "Qiz",
+        "Ona"
+      ],
+      "correct": 0,
+      "izoh": "خَالَةٌ = Xola."
     },
     {
       "q": "«حَفِيدٌ» so'zining ma'nosi?",
       "opts": [
         "Nabira",
-        "Aka/uka",
-        "Ikki (2)",
-        "Xona"
+        "Ota",
+        "Amaki (ota tomondan)",
+        "Qiz"
       ],
       "correct": 0,
       "izoh": "حَفِيدٌ = Nabira."
     },
     {
+      "q": "«زَوْجٌ» so'zining ma'nosi?",
+      "opts": [
+        "Er",
+        "Amma",
+        "Daraxt",
+        "Xola"
+      ],
+      "correct": 0,
+      "izoh": "زَوْجٌ = Er."
+    },
+    {
+      "q": "«زَوْجَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Xotin",
+        "Nabira",
+        "Daraxt",
+        "Qiz"
+      ],
+      "correct": 0,
+      "izoh": "زَوْجَةٌ = Xotin."
+    },
+    {
+      "q": "«شَجَرَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Daraxt",
+        "Xola",
+        "Bola (umumiy)",
+        "Xona"
+      ],
+      "correct": 0,
+      "izoh": "شَجَرَةٌ = Daraxt."
+    },
+    {
+      "q": "«ضَيْفٌ» so'zining ma'nosi?",
+      "opts": [
+        "Mehmon",
+        "Xona",
+        "Ona",
+        "Daraxt"
+      ],
+      "correct": 0,
+      "izoh": "ضَيْفٌ = Mehmon."
+    },
+    {
+      "q": "«بَيْتٌ» so'zining ma'nosi?",
+      "opts": [
+        "Uy",
+        "Daraxt",
+        "Amma",
+        "Aka/uka"
+      ],
+      "correct": 0,
+      "izoh": "بَيْتٌ = Uy."
+    },
+    {
       "q": "«غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
         "Xona",
-        "Uch (3)",
-        "Buvi",
-        "Besh (5)"
+        "Mehmon",
+        "Amma",
+        "Nabira"
       ],
       "correct": 0,
       "izoh": "غُرْفَةٌ = Xona."
     },
     {
-      "q": "«وَاحِدٌ» so'zining ma'nosi?",
-      "opts": [
-        "Bir (1)",
-        "Oila",
-        "Ota",
-        "Xona"
-      ],
-      "correct": 0,
-      "izoh": "وَاحِدٌ = Bir (1)."
-    },
-    {
-      "q": "«اِثْنَانِ» so'zining ma'nosi?",
-      "opts": [
-        "Ikki (2)",
-        "Oila",
-        "Ona",
-        "Aka/uka"
-      ],
-      "correct": 0,
-      "izoh": "اِثْنَانِ = Ikki (2)."
-    },
-    {
-      "q": "«ثَلَاثَةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Uch (3)",
-        "Besh (5)",
-        "O'g'il",
-        "To'rt (4)"
-      ],
-      "correct": 0,
-      "izoh": "ثَلَاثَةٌ = Uch (3)."
-    },
-    {
-      "q": "«أَرْبَعَةٌ» so'zining ma'nosi?",
-      "opts": [
-        "To'rt (4)",
-        "Opa/singil",
-        "Uch (3)",
-        "Ona"
-      ],
-      "correct": 0,
-      "izoh": "أَرْبَعَةٌ = To'rt (4)."
-    },
-    {
-      "q": "«خَمْسَةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Besh (5)",
-        "Buvi",
-        "Bir (1)",
-        "Oila"
-      ],
-      "correct": 0,
-      "izoh": "خَمْسَةٌ = Besh (5)."
-    },
-    {
       "q": "🔁 «مُهَنْدِسٌ» so'zining ma'nosi?",
       "opts": [
         "Muhandis",
-        "Nabira",
-        "Bobo",
-        "Besh (5)"
+        "Xona",
+        "Amaki (ota tomondan)",
+        "Mehmon"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مُهَنْدِسٌ = Muhandis."
@@ -205,9 +238,9 @@
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
         "Do'st",
-        "Qiz",
-        "Ota",
-        "O'g'il"
+        "Buvi",
+        "Ona",
+        "Nabira"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
@@ -216,9 +249,9 @@
       "q": "🔁 «صُورَةٌ» so'zining ma'nosi?",
       "opts": [
         "Surat",
-        "Bola",
-        "Ota",
-        "Besh (5)"
+        "Bola (umumiy)",
+        "Aka/uka",
+        "Er"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (1-dars): صُورَةٌ = Surat."
@@ -227,9 +260,9 @@
       "q": "🔁 «بَائِعٌ» so'zining ma'nosi?",
       "opts": [
         "Sotuvchi",
-        "To'rt (4)",
-        "Aka/uka",
-        "Bobo"
+        "Uy",
+        "Tog'a (ona tomondan)",
+        "O'g'il"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): بَائِعٌ = Sotuvchi."
@@ -238,9 +271,9 @@
       "q": "🔁 «طَبِيبٌ» so'zining ma'nosi?",
       "opts": [
         "Shifokor",
-        "O'g'il",
-        "Aka/uka",
-        "Ikki (2)"
+        "Bola (umumiy)",
+        "Nabira",
+        "Ota"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (1-dars): طَبِيبٌ = Shifokor."
@@ -249,9 +282,9 @@
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
         "Restoran",
-        "Aka/uka",
-        "Ikki (2)",
-        "Bobo"
+        "Qiz",
+        "O'g'il",
+        "Mehmon"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."

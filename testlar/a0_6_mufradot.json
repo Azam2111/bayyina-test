@@ -7,9 +7,9 @@
       "q": "«صَفٌّ» so'zining ma'nosi?",
       "opts": [
         "Sinf",
-        "Yeydi",
-        "Kutubxona",
-        "Kuladi"
+        "Yil",
+        "Hafta",
+        "Ba'zi"
       ],
       "correct": 0,
       "izoh": "صَفٌّ = Sinf."
@@ -18,9 +18,9 @@
       "q": "«مَكْتَبَةٌ» so'zining ma'nosi?",
       "opts": [
         "Kutubxona",
-        "Yodlaydi",
-        "Hech qachon",
-        "Ba'zan"
+        "Nima (fe'l uchun)",
+        "U yerda",
+        "Yodlaydi"
       ],
       "correct": 0,
       "izoh": "مَكْتَبَةٌ = Kutubxona."
@@ -29,9 +29,9 @@
       "q": "«شَارِعٌ» so'zining ma'nosi?",
       "opts": [
         "Ko'cha",
-        "Qiziqarli",
+        "Sinf",
         "Birga",
-        "Sinf"
+        "Yil"
       ],
       "correct": 0,
       "izoh": "شَارِعٌ = Ko'cha."
@@ -40,9 +40,9 @@
       "q": "«طَرِيقٌ» so'zining ma'nosi?",
       "opts": [
         "Yo'l",
-        "Ko'pincha",
-        "Qani ketdik",
-        "Kuladi"
+        "Ba'zan",
+        "Ba'zi",
+        "Qani ketdik"
       ],
       "correct": 0,
       "izoh": "طَرِيقٌ = Yo'l."
@@ -52,8 +52,8 @@
       "opts": [
         "Tushunadi",
         "Tavsiya qiladi",
-        "Qani ketdik",
-        "Birga"
+        "Ba'zi",
+        "Ba'zan"
       ],
       "correct": 0,
       "izoh": "يَفْهَمُ = Tushunadi."
@@ -62,9 +62,9 @@
       "q": "«يَضْحَكُ» so'zining ma'nosi?",
       "opts": [
         "Kuladi",
-        "Nima (fe'l uchun)",
-        "Iltimos",
-        "Ba'zan"
+        "Birga",
+        "Ba'zi",
+        "Qani ketdik"
       ],
       "correct": 0,
       "izoh": "يَضْحَكُ = Kuladi."
@@ -73,9 +73,9 @@
       "q": "«يَنْصَحُ» so'zining ma'nosi?",
       "opts": [
         "Tavsiya qiladi",
-        "Sinf",
         "Kamdan-kam",
-        "Yodlaydi"
+        "Ko'cha",
+        "Iltimos"
       ],
       "correct": 0,
       "izoh": "يَنْصَحُ = Tavsiya qiladi."
@@ -84,9 +84,9 @@
       "q": "«يَحْفَظُ» so'zining ma'nosi?",
       "opts": [
         "Yodlaydi",
-        "Yo'l",
         "Iltimos",
-        "Kuladi"
+        "Yil",
+        "Yeydi"
       ],
       "correct": 0,
       "izoh": "يَحْفَظُ = Yodlaydi."
@@ -95,9 +95,9 @@
       "q": "«يَأْكُلُ» so'zining ma'nosi?",
       "opts": [
         "Yeydi",
-        "Oy",
-        "Tavsiya qiladi",
-        "Ko'cha"
+        "Hech qachon",
+        "Kamdan-kam",
+        "U yerda"
       ],
       "correct": 0,
       "izoh": "يَأْكُلُ = Yeydi."
@@ -106,9 +106,9 @@
       "q": "«يَوْمٌ» so'zining ma'nosi?",
       "opts": [
         "Kun",
-        "Hech qachon",
-        "Birga",
-        "Sinf"
+        "Ba'zan",
+        "Hafta",
+        "Qani ketdik"
       ],
       "correct": 0,
       "izoh": "يَوْمٌ = Kun."
@@ -117,9 +117,9 @@
       "q": "«أُسْبُوعٌ» so'zining ma'nosi?",
       "opts": [
         "Hafta",
-        "Iltimos",
-        "Kamdan-kam",
-        "Qani ketdik"
+        "Ko'cha",
+        "Doim",
+        "Ko'pincha"
       ],
       "correct": 0,
       "izoh": "أُسْبُوعٌ = Hafta."
@@ -128,9 +128,9 @@
       "q": "«شَهْرٌ» so'zining ma'nosi?",
       "opts": [
         "Oy",
-        "Birga",
         "Kutubxona",
-        "Ba'zi"
+        "Kuladi",
+        "Nima (fe'l uchun)"
       ],
       "correct": 0,
       "izoh": "شَهْرٌ = Oy."
@@ -139,8 +139,8 @@
       "q": "«سَنَةٌ» so'zining ma'nosi?",
       "opts": [
         "Yil",
-        "Kutubxona",
-        "Oy",
+        "Ba'zan",
+        "Birga",
         "Tushunadi"
       ],
       "correct": 0,
@@ -150,9 +150,9 @@
       "q": "«دَائِمًا» so'zining ma'nosi?",
       "opts": [
         "Doim",
-        "Yil",
-        "Hech qachon",
-        "Yodlaydi"
+        "Tavsiya qiladi",
+        "Qiziqarli",
+        "Kun"
       ],
       "correct": 0,
       "izoh": "دَائِمًا = Doim."
@@ -161,9 +161,9 @@
       "q": "«غَالِبًا» so'zining ma'nosi?",
       "opts": [
         "Ko'pincha",
-        "Yil",
-        "Qiziqarli",
-        "Yeydi"
+        "Ba'zan",
+        "Bu yerda",
+        "Sinf"
       ],
       "correct": 0,
       "izoh": "غَالِبًا = Ko'pincha."
@@ -172,9 +172,9 @@
       "q": "«أَحْيَانًا» so'zining ma'nosi?",
       "opts": [
         "Ba'zan",
-        "Iltimos",
-        "Yeydi",
-        "Kamdan-kam"
+        "Tushunadi",
+        "Doim",
+        "Birga"
       ],
       "correct": 0,
       "izoh": "أَحْيَانًا = Ba'zan."
@@ -183,9 +183,9 @@
       "q": "«نَادِرًا» so'zining ma'nosi?",
       "opts": [
         "Kamdan-kam",
-        "Qani ketdik",
-        "Hech qachon",
-        "U yerda"
+        "Birga",
+        "Ba'zi",
+        "Qiziqarli"
       ],
       "correct": 0,
       "izoh": "نَادِرًا = Kamdan-kam."
@@ -194,9 +194,9 @@
       "q": "«أَبَدًا» so'zining ma'nosi?",
       "opts": [
         "Hech qachon",
-        "Ko'cha",
-        "Birga",
-        "Tavsiya qiladi"
+        "Hafta",
+        "Tushunadi",
+        "Ko'pincha"
       ],
       "correct": 0,
       "izoh": "أَبَدًا = Hech qachon."
@@ -205,9 +205,9 @@
       "q": "«مَعًا» so'zining ma'nosi?",
       "opts": [
         "Birga",
-        "Nima (fe'l uchun)",
-        "Kun",
-        "Bu yerda"
+        "Yo'l",
+        "Bu yerda",
+        "Nima (fe'l uchun)"
       ],
       "correct": 0,
       "izoh": "مَعًا = Birga."
@@ -216,9 +216,9 @@
       "q": "«مُمْتِعٌ» so'zining ma'nosi?",
       "opts": [
         "Qiziqarli",
-        "Qani ketdik",
-        "Yo'l",
-        "Ba'zi"
+        "Birga",
+        "Oy",
+        "Yo'l"
       ],
       "correct": 0,
       "izoh": "مُمْتِعٌ = Qiziqarli."
@@ -227,9 +227,9 @@
       "q": "«هُنَا» so'zining ma'nosi?",
       "opts": [
         "Bu yerda",
-        "Nima (fe'l uchun)",
-        "Doim",
-        "Hech qachon"
+        "U yerda",
+        "Qiziqarli",
+        "Kun"
       ],
       "correct": 0,
       "izoh": "هُنَا = Bu yerda."
@@ -238,9 +238,9 @@
       "q": "«هُنَاكَ» so'zining ma'nosi?",
       "opts": [
         "U yerda",
-        "Tavsiya qiladi",
-        "Iltimos",
-        "Yo'l"
+        "Kun",
+        "Kuladi",
+        "Qiziqarli"
       ],
       "correct": 0,
       "izoh": "هُنَاكَ = U yerda."
@@ -249,9 +249,9 @@
       "q": "«هَيَّا بِنَا» so'zining ma'nosi?",
       "opts": [
         "Qani ketdik",
-        "Iltimos",
-        "Kun",
-        "Nima (fe'l uchun)"
+        "Birga",
+        "Yeydi",
+        "Bu yerda"
       ],
       "correct": 0,
       "izoh": "هَيَّا بِنَا = Qani ketdik."
@@ -260,9 +260,9 @@
       "q": "«مِنْ فَضْلِكَ» so'zining ma'nosi?",
       "opts": [
         "Iltimos",
-        "Tavsiya qiladi",
-        "Oy",
-        "Ba'zi"
+        "Qiziqarli",
+        "Tushunadi",
+        "Yo'l"
       ],
       "correct": 0,
       "izoh": "مِنْ فَضْلِكَ = Iltimos."
@@ -271,9 +271,9 @@
       "q": "«مَاذَا» so'zining ma'nosi?",
       "opts": [
         "Nima (fe'l uchun)",
-        "Kutubxona",
-        "Ba'zi",
-        "Doim"
+        "Ko'pincha",
+        "Ba'zan",
+        "Sinf"
       ],
       "correct": 0,
       "izoh": "مَاذَا = Nima (fe'l uchun)."
@@ -282,9 +282,9 @@
       "q": "«بَعْضٌ» so'zining ma'nosi?",
       "opts": [
         "Ba'zi",
-        "Hafta",
         "Oy",
-        "Hech qachon"
+        "Ba'zan",
+        "Qiziqarli"
       ],
       "correct": 0,
       "izoh": "بَعْضٌ = Ba'zi."
@@ -293,9 +293,9 @@
       "q": "🔁 «بَابٌ» so'zining ma'nosi?",
       "opts": [
         "Eshik",
-        "Tavsiya qiladi",
-        "Qani ketdik",
-        "Kuladi"
+        "Ko'cha",
+        "Sinf",
+        "Qiziqarli"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (5-dars): بَابٌ = Eshik."
@@ -304,9 +304,9 @@
       "q": "🔁 «أَمَامَ» so'zining ma'nosi?",
       "opts": [
         "Oldida",
-        "Birga",
-        "Yodlaydi",
-        "Qiziqarli"
+        "Qiziqarli",
+        "Nima (fe'l uchun)",
+        "Birga"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (5-dars): أَمَامَ = Oldida."
@@ -315,9 +315,9 @@
       "q": "🔁 «يَجْلِسُ» so'zining ma'nosi?",
       "opts": [
         "O'tiradi",
-        "Qani ketdik",
-        "Iltimos",
-        "Tushunadi"
+        "Tavsiya qiladi",
+        "Ba'zi",
+        "Iltimos"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَجْلِسُ = O'tiradi."
@@ -326,9 +326,9 @@
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
         "Restoran",
-        "Ba'zan",
-        "Nima (fe'l uchun)",
-        "Kuladi"
+        "Iltimos",
+        "Tavsiya qiladi",
+        "Yeydi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
@@ -337,9 +337,9 @@
       "q": "🔁 «يَشْرَبُ» so'zining ma'nosi?",
       "opts": [
         "Ichadi",
-        "Kamdan-kam",
         "Oy",
-        "Yil"
+        "Yo'l",
+        "Kun"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَشْرَبُ = Ichadi."
@@ -348,9 +348,9 @@
       "q": "🔁 «جَمِيلٌ» so'zining ma'nosi?",
       "opts": [
         "Chiroyli",
-        "Kutubxona",
-        "Tavsiya qiladi",
-        "Qiziqarli"
+        "Nima (fe'l uchun)",
+        "Sinf",
+        "Hech qachon"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (5-dars): جَمِيلٌ = Chiroyli."
@@ -359,9 +359,9 @@
       "q": "🔁 «جَانِبَ» so'zining ma'nosi?",
       "opts": [
         "Yonida",
-        "Hafta",
-        "Qiziqarli",
-        "Tavsiya qiladi"
+        "Tavsiya qiladi",
+        "Ko'pincha",
+        "Birga"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (5-dars): جَانِبَ = Yonida."
@@ -370,9 +370,9 @@
       "q": "🔁 «كِتَابٌ» so'zining ma'nosi?",
       "opts": [
         "Kitob",
-        "Tushunadi",
-        "Doim",
-        "Oy"
+        "Kamdan-kam",
+        "Ba'zi",
+        "Yil"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (1-dars): كِتَابٌ = Kitob."
@@ -381,9 +381,9 @@
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
         "Do'st",
-        "Kun",
-        "Ba'zan",
-        "Sinf"
+        "Sinf",
+        "Qani ketdik",
+        "Kamdan-kam"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
@@ -392,9 +392,9 @@
       "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
         "Xona",
-        "Bu yerda",
-        "Doim",
-        "Hafta"
+        "Ko'pincha",
+        "Tavsiya qiladi",
+        "Nima (fe'l uchun)"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
@@ -403,9 +403,9 @@
       "q": "🔁 «يَقْرَأُ» so'zining ma'nosi?",
       "opts": [
         "O'qiydi",
-        "Yodlaydi",
         "Iltimos",
-        "Qiziqarli"
+        "Yo'l",
+        "Kun"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَقْرَأُ = O'qiydi."

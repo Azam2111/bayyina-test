@@ -7,9 +7,9 @@
       "q": "«بَابٌ» so'zining ma'nosi?",
       "opts": [
         "Eshik",
-        "Orasida",
-        "Tepasida",
-        "Kir"
+        "Tagida",
+        "Ustida",
+        "Chiroyli"
       ],
       "correct": 0,
       "izoh": "بَابٌ = Eshik."
@@ -18,9 +18,9 @@
       "q": "«طَاوِلَةٌ» so'zining ma'nosi?",
       "opts": [
         "Stol",
-        "Shkaf",
-        "Yangi",
-        "Tepasida"
+        "Eshik",
+        "Keng",
+        "Tor"
       ],
       "correct": 0,
       "izoh": "طَاوِلَةٌ = Stol."
@@ -29,9 +29,9 @@
       "q": "«خِزَانَةٌ» so'zining ma'nosi?",
       "opts": [
         "Shkaf",
-        "Chap tomonida",
-        "Zal",
-        "Orqasida"
+        "Tepasida",
+        "O'ng tomonida",
+        "Orasida"
       ],
       "correct": 0,
       "izoh": "خِزَانَةٌ = Shkaf."
@@ -40,8 +40,8 @@
       "q": "«كُرْسِيٌّ» so'zining ma'nosi?",
       "opts": [
         "Kursi",
-        "Oldida",
-        "Chiroyli",
+        "Kir",
+        "Eshik",
         "Toza"
       ],
       "correct": 0,
@@ -51,9 +51,9 @@
       "q": "«صَالَةٌ» so'zining ma'nosi?",
       "opts": [
         "Zal",
-        "Tepasida",
-        "Chiroyli",
-        "Katta"
+        "Tagida",
+        "Yangi",
+        "Orasida"
       ],
       "correct": 0,
       "izoh": "صَالَةٌ = Zal."
@@ -62,9 +62,9 @@
       "q": "«كَبِيرٌ» so'zining ma'nosi?",
       "opts": [
         "Katta",
-        "Tepasida",
-        "Tor",
-        "Toza"
+        "Chap tomonida",
+        "Eski",
+        "Zal"
       ],
       "correct": 0,
       "izoh": "كَبِيرٌ = Katta."
@@ -73,9 +73,9 @@
       "q": "«صَغِيرٌ» so'zining ma'nosi?",
       "opts": [
         "Kichik",
-        "Kursi",
-        "Eshik",
-        "Tepasida"
+        "Yangi",
+        "Tagida",
+        "O'ng tomonida"
       ],
       "correct": 0,
       "izoh": "صَغِيرٌ = Kichik."
@@ -84,9 +84,9 @@
       "q": "«نَظِيفٌ» so'zining ma'nosi?",
       "opts": [
         "Toza",
-        "Ustida",
-        "Katta",
-        "Kichik"
+        "Yangi",
+        "Kursi",
+        "Orqasida"
       ],
       "correct": 0,
       "izoh": "نَظِيفٌ = Toza."
@@ -95,9 +95,9 @@
       "q": "«وَسِخٌ» so'zining ma'nosi?",
       "opts": [
         "Kir",
-        "Tor",
-        "Zal",
-        "Chap tomonida"
+        "Yonida",
+        "Kursi",
+        "Tagida"
       ],
       "correct": 0,
       "izoh": "وَسِخٌ = Kir."
@@ -106,9 +106,9 @@
       "q": "«جَمِيلٌ» so'zining ma'nosi?",
       "opts": [
         "Chiroyli",
-        "Eski",
+        "Oldida",
         "Yangi",
-        "Katta"
+        "Yonida"
       ],
       "correct": 0,
       "izoh": "جَمِيلٌ = Chiroyli."
@@ -117,9 +117,9 @@
       "q": "«جَدِيدٌ» so'zining ma'nosi?",
       "opts": [
         "Yangi",
-        "Toza",
         "Stol",
-        "O'ng tomonida"
+        "Tepasida",
+        "Kir"
       ],
       "correct": 0,
       "izoh": "جَدِيدٌ = Yangi."
@@ -128,9 +128,9 @@
       "q": "«قَدِيمٌ» so'zining ma'nosi?",
       "opts": [
         "Eski",
-        "Shkaf",
+        "Yonida",
         "O'ng tomonida",
-        "Chiroyli"
+        "Stol"
       ],
       "correct": 0,
       "izoh": "قَدِيمٌ = Eski."
@@ -139,9 +139,9 @@
       "q": "«وَاسِعٌ» so'zining ma'nosi?",
       "opts": [
         "Keng",
-        "Eshik",
-        "Orqasida",
-        "Tagida"
+        "Eski",
+        "Chiroyli",
+        "Orasida"
       ],
       "correct": 0,
       "izoh": "وَاسِعٌ = Keng."
@@ -150,9 +150,9 @@
       "q": "«ضَيِّقٌ» so'zining ma'nosi?",
       "opts": [
         "Tor",
-        "Zal",
-        "Chiroyli",
-        "Tepasida"
+        "Kir",
+        "Kichik",
+        "Oldida"
       ],
       "correct": 0,
       "izoh": "ضَيِّقٌ = Tor."
@@ -161,9 +161,9 @@
       "q": "«أَمَامَ» so'zining ma'nosi?",
       "opts": [
         "Oldida",
-        "Yangi",
-        "Keng",
-        "Orqasida"
+        "Zal",
+        "Tor",
+        "Stol"
       ],
       "correct": 0,
       "izoh": "أَمَامَ = Oldida."
@@ -172,9 +172,9 @@
       "q": "«فَوْقَ» so'zining ma'nosi?",
       "opts": [
         "Tepasida",
-        "O'ng tomonida",
-        "Zal",
-        "Eski"
+        "Orqasida",
+        "Eshik",
+        "Chap tomonida"
       ],
       "correct": 0,
       "izoh": "فَوْقَ = Tepasida."
@@ -183,9 +183,9 @@
       "q": "«عَلَى» so'zining ma'nosi?",
       "opts": [
         "Ustida",
-        "Oldida",
-        "Stol",
-        "Eshik"
+        "Tepasida",
+        "Yonida",
+        "Toza"
       ],
       "correct": 0,
       "izoh": "عَلَى = Ustida."
@@ -194,9 +194,9 @@
       "q": "«وَرَاءَ» so'zining ma'nosi?",
       "opts": [
         "Orqasida",
-        "Tepasida",
-        "Keng",
-        "Kursi"
+        "O'ng tomonida",
+        "Eski",
+        "Yonida"
       ],
       "correct": 0,
       "izoh": "وَرَاءَ = Orqasida."
@@ -205,9 +205,9 @@
       "q": "«تَحْتَ» so'zining ma'nosi?",
       "opts": [
         "Tagida",
-        "Kichik",
-        "Chiroyli",
-        "Kursi"
+        "Stol",
+        "Eski",
+        "Shkaf"
       ],
       "correct": 0,
       "izoh": "تَحْتَ = Tagida."
@@ -216,9 +216,9 @@
       "q": "«جَانِبَ» so'zining ma'nosi?",
       "opts": [
         "Yonida",
-        "Stol",
-        "Orqasida",
-        "Eski"
+        "Tor",
+        "Oldida",
+        "Kir"
       ],
       "correct": 0,
       "izoh": "جَانِبَ = Yonida."
@@ -227,9 +227,9 @@
       "q": "«بَيْنَ» so'zining ma'nosi?",
       "opts": [
         "Orasida",
-        "Yonida",
-        "Toza",
-        "Eski"
+        "Yangi",
+        "Eshik",
+        "Tor"
       ],
       "correct": 0,
       "izoh": "بَيْنَ = Orasida."
@@ -238,9 +238,9 @@
       "q": "«عَنْ يَمِينِ» so'zining ma'nosi?",
       "opts": [
         "O'ng tomonida",
-        "Kir",
-        "Chap tomonida",
-        "Tepasida"
+        "Keng",
+        "Zal",
+        "Katta"
       ],
       "correct": 0,
       "izoh": "عَنْ يَمِينِ = O'ng tomonida."
@@ -249,9 +249,9 @@
       "q": "«عَنْ يَسَارِ» so'zining ma'nosi?",
       "opts": [
         "Chap tomonida",
-        "Kichik",
-        "Orqasida",
-        "Tagida"
+        "Toza",
+        "Ustida",
+        "Keng"
       ],
       "correct": 0,
       "izoh": "عَنْ يَسَارِ = Chap tomonida."
@@ -260,9 +260,9 @@
       "q": "🔁 «يَقْرَأُ» so'zining ma'nosi?",
       "opts": [
         "O'qiydi",
-        "Tor",
-        "Yonida",
-        "Orqasida"
+        "Orasida",
+        "Stol",
+        "Yangi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَقْرَأُ = O'qiydi."
@@ -271,9 +271,9 @@
       "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
         "Xona",
+        "Shkaf",
         "Tagida",
-        "Kir",
-        "Oldida"
+        "Eshik"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
@@ -282,9 +282,9 @@
       "q": "🔁 «يَشْرَبُ» so'zining ma'nosi?",
       "opts": [
         "Ichadi",
-        "Kursi",
-        "Yonida",
-        "Chiroyli"
+        "Toza",
+        "Eski",
+        "Oldida"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَشْرَبُ = Ichadi."
@@ -293,9 +293,9 @@
       "q": "🔁 «جَدٌّ» so'zining ma'nosi?",
       "opts": [
         "Bobo",
+        "Chiroyli",
         "Eski",
-        "Keng",
-        "Toza"
+        "Stol"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): جَدٌّ = Bobo."
@@ -304,9 +304,9 @@
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
         "Restoran",
-        "Chap tomonida",
-        "O'ng tomonida",
-        "Eski"
+        "Yonida",
+        "Eshik",
+        "Kursi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
@@ -315,9 +315,9 @@
       "q": "🔁 «كِتَابٌ» so'zining ma'nosi?",
       "opts": [
         "Kitob",
-        "Tor",
-        "Yangi",
-        "Kir"
+        "Toza",
+        "Kursi",
+        "Chap tomonida"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (1-dars): كِتَابٌ = Kitob."
@@ -326,9 +326,9 @@
       "q": "🔁 «يَجْلِسُ» so'zining ma'nosi?",
       "opts": [
         "O'tiradi",
-        "Stol",
-        "Kir",
-        "Zal"
+        "Keng",
+        "Kursi",
+        "Eski"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (4-dars): يَجْلِسُ = O'tiradi."
@@ -337,9 +337,9 @@
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
         "Do'st",
-        "Orasida",
+        "Tor",
         "Chap tomonida",
-        "Chiroyli"
+        "Eski"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."

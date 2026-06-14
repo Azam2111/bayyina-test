@@ -8,7 +8,7 @@
       "opts": [
         "Yozadi",
         "Ular",
-        "O'ynaydi",
+        "Kiradi",
         "Ichadi"
       ],
       "correct": 0,
@@ -18,9 +18,9 @@
       "q": "«يَدْرُسُ» so'zining ma'nosi?",
       "opts": [
         "Dars qiladi",
-        "Biz",
-        "So'ng",
-        "Yozadi"
+        "Sizlar",
+        "Ichadi",
+        "Ishlaydi"
       ],
       "correct": 0,
       "izoh": "يَدْرُسُ = Dars qiladi."
@@ -29,9 +29,9 @@
       "q": "«يَقْرَأُ» so'zining ma'nosi?",
       "opts": [
         "O'qiydi",
-        "Biz",
-        "Hozir",
-        "Sizlar"
+        "O'ynaydi",
+        "Ertalab",
+        "Eshitadi"
       ],
       "correct": 0,
       "izoh": "يَقْرَأُ = O'qiydi."
@@ -41,8 +41,8 @@
       "opts": [
         "Ketadi",
         "Sizlar",
-        "Eshitadi",
-        "Kechqurun"
+        "Pishiradi",
+        "Hozir"
       ],
       "correct": 0,
       "izoh": "يَذْهَبُ = Ketadi."
@@ -52,8 +52,8 @@
       "opts": [
         "Kiradi",
         "O'ynaydi",
-        "Kechqurun",
-        "O'tiradi"
+        "Oladi",
+        "Qaytadi"
       ],
       "correct": 0,
       "izoh": "يَدْخُلُ = Kiradi."
@@ -62,9 +62,9 @@
       "q": "«يَخْرُجُ» so'zining ma'nosi?",
       "opts": [
         "Chiqadi",
-        "Oladi",
-        "Ketadi",
-        "Eshitadi"
+        "Eshitadi",
+        "Hozir",
+        "So'ng"
       ],
       "correct": 0,
       "izoh": "يَخْرُجُ = Chiqadi."
@@ -73,9 +73,9 @@
       "q": "«يَرْجِعُ» so'zining ma'nosi?",
       "opts": [
         "Qaytadi",
-        "Oladi",
-        "Eshitadi",
-        "Biz"
+        "O'qiydi",
+        "Hozir",
+        "U ikkisi"
       ],
       "correct": 0,
       "izoh": "يَرْجِعُ = Qaytadi."
@@ -84,9 +84,9 @@
       "q": "«يَجْلِسُ» so'zining ma'nosi?",
       "opts": [
         "O'tiradi",
-        "Yozadi",
-        "Choy",
-        "Eshitadi"
+        "Chiqadi",
+        "Dars qiladi",
+        "Qaytadi"
       ],
       "correct": 0,
       "izoh": "يَجْلِسُ = O'tiradi."
@@ -95,9 +95,9 @@
       "q": "«يَسْمَعُ» so'zining ma'nosi?",
       "opts": [
         "Eshitadi",
-        "U ikkisi",
-        "Hozir",
-        "Yozadi"
+        "O'qiydi",
+        "Ertalab",
+        "Ichadi"
       ],
       "correct": 0,
       "izoh": "يَسْمَعُ = Eshitadi."
@@ -106,9 +106,9 @@
       "q": "«يَشْرَبُ» so'zining ma'nosi?",
       "opts": [
         "Ichadi",
-        "Pishiradi",
-        "O'ynaydi",
-        "Chiqadi"
+        "Ishlaydi",
+        "Qaytadi",
+        "O'tiradi"
       ],
       "correct": 0,
       "izoh": "يَشْرَبُ = Ichadi."
@@ -117,9 +117,9 @@
       "q": "«يَلْعَبُ» so'zining ma'nosi?",
       "opts": [
         "O'ynaydi",
-        "Qaytadi",
-        "Kiradi",
-        "Ichadi"
+        "Dars qiladi",
+        "Pishiradi",
+        "Choy"
       ],
       "correct": 0,
       "izoh": "يَلْعَبُ = O'ynaydi."
@@ -128,9 +128,9 @@
       "q": "«يَطْبُخُ» so'zining ma'nosi?",
       "opts": [
         "Pishiradi",
-        "Ichadi",
-        "Biz",
-        "Hozir"
+        "U ikkisi",
+        "O'ynaydi",
+        "Choy"
       ],
       "correct": 0,
       "izoh": "يَطْبُخُ = Pishiradi."
@@ -139,9 +139,9 @@
       "q": "«يَأْخُذُ» so'zining ma'nosi?",
       "opts": [
         "Oladi",
-        "Dars qiladi",
-        "O'ynaydi",
-        "Sizlar"
+        "Ketadi",
+        "Yozadi",
+        "Ular"
       ],
       "correct": 0,
       "izoh": "يَأْخُذُ = Oladi."
@@ -150,9 +150,9 @@
       "q": "«يَعْمَلُ» so'zining ma'nosi?",
       "opts": [
         "Ishlaydi",
-        "Ichadi",
-        "Qaytadi",
-        "Sizlar"
+        "U ikkisi",
+        "Oldin",
+        "Choy"
       ],
       "correct": 0,
       "izoh": "يَعْمَلُ = Ishlaydi."
@@ -161,9 +161,9 @@
       "q": "«قَبْلَ» so'zining ma'nosi?",
       "opts": [
         "Oldin",
-        "U ikkisi",
+        "O'qiydi",
         "Ichadi",
-        "O'ynaydi"
+        "Chiqadi"
       ],
       "correct": 0,
       "izoh": "قَبْلَ = Oldin."
@@ -172,9 +172,9 @@
       "q": "«بَعْدَ» so'zining ma'nosi?",
       "opts": [
         "Keyin",
-        "Choy",
-        "Ular",
-        "Yozadi"
+        "Ishlaydi",
+        "Kechqurun",
+        "Kiradi"
       ],
       "correct": 0,
       "izoh": "بَعْدَ = Keyin."
@@ -183,9 +183,9 @@
       "q": "«ثُمَّ» so'zining ma'nosi?",
       "opts": [
         "So'ng",
-        "Pishiradi",
-        "Dars qiladi",
-        "Yozadi"
+        "Choy",
+        "O'ynaydi",
+        "Qaytadi"
       ],
       "correct": 0,
       "izoh": "ثُمَّ = So'ng."
@@ -194,9 +194,9 @@
       "q": "«صَبَاحًا» so'zining ma'nosi?",
       "opts": [
         "Ertalab",
-        "Ketadi",
-        "Kechqurun",
-        "Qaytadi"
+        "U ikkisi",
+        "Ishlaydi",
+        "O'qiydi"
       ],
       "correct": 0,
       "izoh": "صَبَاحًا = Ertalab."
@@ -205,9 +205,9 @@
       "q": "«مَسَاءً» so'zining ma'nosi?",
       "opts": [
         "Kechqurun",
-        "Oladi",
-        "Ichadi",
-        "So'ng"
+        "Ishlaydi",
+        "Hozir",
+        "Oldin"
       ],
       "correct": 0,
       "izoh": "مَسَاءً = Kechqurun."
@@ -216,9 +216,9 @@
       "q": "«الآنَ» so'zining ma'nosi?",
       "opts": [
         "Hozir",
-        "Sizlar",
-        "Kiradi",
-        "Biz"
+        "Yozadi",
+        "Keyin",
+        "Ular"
       ],
       "correct": 0,
       "izoh": "الآنَ = Hozir."
@@ -227,9 +227,9 @@
       "q": "«شَايٌ» so'zining ma'nosi?",
       "opts": [
         "Choy",
-        "Ishlaydi",
-        "Hozir",
-        "Keyin"
+        "Kechqurun",
+        "Biz",
+        "Ichadi"
       ],
       "correct": 0,
       "izoh": "شَايٌ = Choy."
@@ -238,9 +238,9 @@
       "q": "«نَحْنُ» so'zining ma'nosi?",
       "opts": [
         "Biz",
-        "Pishiradi",
-        "Ketadi",
-        "Yozadi"
+        "O'ynaydi",
+        "U ikkisi",
+        "Chiqadi"
       ],
       "correct": 0,
       "izoh": "نَحْنُ = Biz."
@@ -249,9 +249,9 @@
       "q": "«هُمْ» so'zining ma'nosi?",
       "opts": [
         "Ular",
-        "Oladi",
-        "Qaytadi",
-        "Yozadi"
+        "So'ng",
+        "Chiqadi",
+        "Ertalab"
       ],
       "correct": 0,
       "izoh": "هُمْ = Ular."
@@ -260,9 +260,9 @@
       "q": "«أَنْتُمْ» so'zining ma'nosi?",
       "opts": [
         "Sizlar",
-        "Choy",
-        "Biz",
-        "Keyin"
+        "Oladi",
+        "Hozir",
+        "Ishlaydi"
       ],
       "correct": 0,
       "izoh": "أَنْتُمْ = Sizlar."
@@ -271,9 +271,9 @@
       "q": "«هُمَا» so'zining ma'nosi?",
       "opts": [
         "U ikkisi",
-        "Kechqurun",
-        "Yozadi",
-        "Biz"
+        "Ular",
+        "So'ng",
+        "Kiradi"
       ],
       "correct": 0,
       "izoh": "هُمَا = U ikkisi."
@@ -282,9 +282,9 @@
       "q": "🔁 «جَدَّةٌ» so'zining ma'nosi?",
       "opts": [
         "Buvi",
-        "Chiqadi",
-        "Ishlaydi",
-        "Hozir"
+        "So'ng",
+        "Oldin",
+        "Ishlaydi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): جَدَّةٌ = Buvi."
@@ -293,9 +293,9 @@
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
         "Restoran",
-        "Dars qiladi",
-        "Sizlar",
-        "Qaytadi"
+        "Ular",
+        "Qaytadi",
+        "Hozir"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
@@ -304,9 +304,9 @@
       "q": "🔁 «كِتَابٌ» so'zining ma'nosi?",
       "opts": [
         "Kitob",
-        "O'ynaydi",
-        "Yozadi",
-        "Kechqurun"
+        "O'qiydi",
+        "Sizlar",
+        "Yozadi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (1-dars): كِتَابٌ = Kitob."
@@ -315,31 +315,31 @@
       "q": "🔁 «أُخْتٌ» so'zining ma'nosi?",
       "opts": [
         "Opa/singil",
-        "Kechqurun",
-        "Choy",
-        "Sizlar"
+        "Ishlaydi",
+        "Ketadi",
+        "Qaytadi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): أُخْتٌ = Opa/singil."
     },
     {
-      "q": "🔁 «عَائِلَةٌ» so'zining ma'nosi?",
+      "q": "🔁 «بَيْتٌ» so'zining ma'nosi?",
       "opts": [
-        "Oila",
-        "O'qiydi",
-        "Oldin",
+        "Uy",
+        "Kechqurun",
+        "Yozadi",
         "Ertalab"
       ],
       "correct": 0,
-      "izoh": "🔁 Takror (3-dars): عَائِلَةٌ = Oila."
+      "izoh": "🔁 Takror (3-dars): بَيْتٌ = Uy."
     },
     {
       "q": "🔁 «مُهَنْدِسٌ» so'zining ma'nosi?",
       "opts": [
         "Muhandis",
-        "O'ynaydi",
-        "Ertalab",
-        "O'qiydi"
+        "Pishiradi",
+        "Ketadi",
+        "O'ynaydi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): مُهَنْدِسٌ = Muhandis."
@@ -349,8 +349,8 @@
       "opts": [
         "Xona",
         "Yozadi",
-        "Ishlaydi",
-        "Ichadi"
+        "Keyin",
+        "Ertalab"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
@@ -359,9 +359,9 @@
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
         "Do'st",
-        "Ketadi",
-        "Kiradi",
-        "Oldin"
+        "O'tiradi",
+        "Kechqurun",
+        "O'ynaydi"
       ],
       "correct": 0,
       "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
