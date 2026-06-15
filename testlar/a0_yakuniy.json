@@ -1,0 +1,155 @@
+{
+  "title": "A0 — Yakuniy imtihon",
+  "otish": 85,
+  "vaqt": 25,
+  "questions": [
+    {
+      "q": "«مُعَلِّمٌ» so'zining ma'nosi nima?",
+      "opts": ["O'qituvchi", "Talaba", "Shifokor", "Muhandis"],
+      "correct": 0,
+      "izoh": "مُعَلِّمٌ = o'qituvchi. طَالِبٌ esa talaba."
+    },
+    {
+      "q": "«هِيَ» olmoshining ma'nosi nima?",
+      "opts": ["U (ayol)", "U (erkak)", "Men", "Sen"],
+      "correct": 0,
+      "izoh": "هِيَ = u (ayol), هُوَ = u (erkak)."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «اَلسَّلَامُ ... » (salomlashish).",
+      "opts": ["عَلَيْكُمْ", "الْخَيْرِ", "حَالُكَ", "أَيْنَ"],
+      "correct": 0,
+      "izoh": "اَلسَّلَامُ عَلَيْكُمْ = Assalomu alaykum."
+    },
+    {
+      "q": "Quyidagi gapning ma'nosi nima?",
+      "matn": "أَنَا مِنْ طَشْقَنْدَ.",
+      "opts": ["Men Toshkentdanman", "Men talabaman", "U Samarqanddan", "Sen qayerdansan?"],
+      "correct": 0,
+      "izoh": "أَنَا مِنْ طَشْقَنْدَ = Men Toshkentdanman. طَشْقَنْد = Toshkent."
+    },
+    {
+      "q": "«مُهَنْدِسٌ» so'zining ma'nosi nima?",
+      "opts": ["Muhandis", "O'qituvchi", "Oshpaz", "Haydovchi"],
+      "correct": 0,
+      "izoh": "مُهَنْدِسٌ = muhandis."
+    },
+    {
+      "q": "«طَبَّاخٌ» so'zining ma'nosi nima?",
+      "opts": ["Oshpaz", "Sotuvchi", "Tojir", "Direktor"],
+      "correct": 0,
+      "izoh": "طَبَّاخٌ = oshpaz. بَائِعٌ = sotuvchi."
+    },
+    {
+      "q": "«سَائِقٌ» so'zining ma'nosi nima?",
+      "opts": ["Haydovchi", "Sotuvchi", "Shifokor", "Talaba"],
+      "correct": 0,
+      "izoh": "سَائِقٌ = haydovchi."
+    },
+    {
+      "q": "Quyidagi gapning ma'nosi nima?",
+      "matn": "أَعْمَلُ فِي الْمُسْتَشْفَى.",
+      "opts": ["Men kasalxonada ishlayman", "Men maktabda o'qiyman", "U restoranda ishlaydi", "Men shifokorman"],
+      "correct": 0,
+      "izoh": "أَعْمَلُ فِي = ...da ishlayman. مُسْتَشْفَى = kasalxona."
+    },
+    {
+      "q": "«جَدٌّ» so'zining ma'nosi nima?",
+      "opts": ["Bobo", "Buvi", "Ota", "Aka"],
+      "correct": 0,
+      "izoh": "جَدٌّ = bobo. جَدَّةٌ = buvi."
+    },
+    {
+      "q": "«أُخْتٌ» so'zining ma'nosi nima?",
+      "opts": ["Opa/singil", "Aka/uka", "O'g'il", "Amaki"],
+      "correct": 0,
+      "izoh": "أُخْتٌ = opa/singil. أَخٌ = aka/uka."
+    },
+    {
+      "q": "«خَمْسَةٌ» raqamining ma'nosi nima?",
+      "opts": ["Besh", "Uch", "To'rt", "Bir"],
+      "correct": 0,
+      "izoh": "وَاحِدٌ-1, اِثْنَانِ-2, ثَلَاثَةٌ-3, أَرْبَعَةٌ-4, خَمْسَةٌ-5."
+    },
+    {
+      "q": "Quyidagi savolning ma'nosi nima?",
+      "matn": "كَمْ غُرْفَةً فِي الْبَيْتِ؟",
+      "opts": ["Uyda nechta xona bor?", "Uy qayerda?", "Bu kimning uyi?", "Xona kattami?"],
+      "correct": 0,
+      "izoh": "كَمْ = nechta, غُرْفَةٌ = xona, بَيْتٌ = uy."
+    },
+    {
+      "q": "«يَذْهَبُ» fe'lining ma'nosi nima?",
+      "opts": ["Boradi/ketadi", "Qaytadi", "O'tiradi", "Yozadi"],
+      "correct": 0,
+      "izoh": "يَذْهَبُ = boradi. يَرْجِعُ = qaytadi."
+    },
+    {
+      "q": "«يَقْرَأُ» fe'lining ma'nosi nima?",
+      "opts": ["O'qiydi", "Yozadi", "Ichadi", "O'ynaydi"],
+      "correct": 0,
+      "izoh": "يَقْرَأُ = o'qiydi. يَكْتُبُ = yozadi."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «... القُرْآنَ» (Qur'on o'qiydi).",
+      "opts": ["يَقْرَأُ", "يَشْرَبُ", "يَلْعَبُ", "يَطْبُخُ"],
+      "correct": 0,
+      "izoh": "يَقْرَأُ القُرْآنَ = Qur'on o'qiydi."
+    },
+    {
+      "q": "«صَبَاحًا» so'zining ma'nosi nima?",
+      "opts": ["Ertalab", "Kechqurun", "Keyin", "Oldin"],
+      "correct": 0,
+      "izoh": "صَبَاحًا = ertalab. مَسَاءً = kechqurun."
+    },
+    {
+      "q": "«كُرْسِيٌّ» so'zining ma'nosi nima?",
+      "opts": ["Stul", "Stol", "Eshik", "Shkaf"],
+      "correct": 0,
+      "izoh": "كُرْسِيٌّ = stul. طَاوِلَةٌ = stol."
+    },
+    {
+      "q": "«فَوْقَ» so'zining ma'nosi nima?",
+      "opts": ["Ustida", "Ostida", "Oldida", "Orqasida"],
+      "correct": 0,
+      "izoh": "فَوْقَ = ustida, تَحْتَ = ostida."
+    },
+    {
+      "q": "«كَبِيرٌ» sifatining ma'nosi nima?",
+      "opts": ["Katta", "Kichik", "Toza", "Chiroyli"],
+      "correct": 0,
+      "izoh": "كَبِيرٌ = katta. صَغِيرٌ = kichik."
+    },
+    {
+      "q": "Quyidagi gapning ma'nosi nima?",
+      "matn": "الْحَقِيبَةُ تَحْتَ الطَّاوِلَةِ.",
+      "opts": ["Sumka stol ostida", "Sumka stol ustida", "Stul eshik oldida", "Kitob shkafda"],
+      "correct": 0,
+      "izoh": "حَقِيبَةٌ = sumka, تَحْتَ = ostida, طَاوِلَةٌ = stol."
+    },
+    {
+      "q": "«أَصْدِقَاءُ» so'zining ma'nosi nima?",
+      "opts": ["Do'stlar", "O'qituvchilar", "Oila", "Talabalar"],
+      "correct": 0,
+      "izoh": "أَصْدِقَاءُ = do'stlar."
+    },
+    {
+      "q": "«عَصِيرٌ» so'zining ma'nosi nima?",
+      "opts": ["Sharbat", "Choy", "Suv", "Sut"],
+      "correct": 0,
+      "izoh": "عَصِيرٌ = sharbat. شَايٌ = choy."
+    },
+    {
+      "q": "«لَذِيذٌ» sifatining ma'nosi nima?",
+      "opts": ["Mazali", "Qiziqarli", "Katta", "Toza"],
+      "correct": 0,
+      "izoh": "لَذِيذٌ = mazali. مُمْتِعٌ = qiziqarli."
+    },
+    {
+      "q": "«هَيَّا بِنَا» iborasining ma'nosi nima?",
+      "opts": ["Qani, ketdik!", "Salomat bo'ling", "Rahmat", "Ko'rishguncha"],
+      "correct": 0,
+      "izoh": "هَيَّا بِنَا = qani ketdik / yuringlar."
+    }
+  ]
+}
