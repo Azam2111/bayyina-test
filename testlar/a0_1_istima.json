@@ -1,38 +1,64 @@
 {
   "title": "Istima — 1-dars: At-Taoruf (Tanishuv)",
-  "audio": "a0_istima.mp3",
+  "audio": "a0_1_istima.mp3",
   "otish": 70,
   "vaqt": 10,
+  "tinglash": 2,
   "questions": [
     {
-      "q": "Umar kim?",
-      "opts": ["Talaba", "Muallim", "Shifokor", "Muhandis"],
+      "q": "Suhbat (dialog) kim bilan kim o'rtasida boradi?",
+      "opts": [
+        "Ali va Xolid",
+        "Ahmad va Anvar",
+        "Umar va Zayd",
+        "Karim va Fotima"
+      ],
       "correct": 0,
-      "izoh": "«عُمَرُ طَالِبٌ فِي الْجَامِعَةِ» — Umar universitetda talaba."
+      "izoh": "Dialog Ali bilan Xolid o'rtasida boradi."
     },
     {
-      "q": "Umar qayerda yashaydi?",
-      "opts": ["Kichik xonada", "Katta uyda", "Universitetda", "Akasinikida"],
+      "q": "Xolid qayerdan ekan?",
+      "opts": [
+        "Toshkentdan",
+        "Samarqanddan",
+        "Misrdan",
+        "Madinadan"
+      ],
       "correct": 0,
-      "izoh": "«يَسْكُنُ فِي غُرْفَةٍ صَغِيرَةٍ» — kichik xonada yashaydi."
+      "izoh": "«أَنَا مِنْ طَشْقَنْدَ» — Xolid Toshkentdan."
     },
     {
-      "q": "Umar uxlashdan oldin doim nima qiladi?",
-      "opts": ["Kitob o'qiydi", "Qahva ichadi", "Darsga boradi", "Aka bilan suhbatlashadi"],
+      "q": "Ali qayerdan ekan?",
+      "opts": [
+        "Samarqanddan",
+        "Toshkentdan",
+        "Buxorodan",
+        "Qohiradan"
+      ],
       "correct": 0,
-      "izoh": "«يَقْرَأُ الْكِتَابَ قَبْلَ النَّوْمِ دَائِمًا» — uxlashdan oldin doim kitob o'qiydi."
+      "izoh": "«أَنَا مِنْ سَمَرْقَنْدَ» — Ali Samarqanddan."
     },
     {
-      "q": "Ertalab Umar kim bilan qahva ichadi?",
-      "opts": ["Katta akasi bilan", "Otasi bilan", "Do'sti bilan", "Yolg'iz"],
+      "q": "Karim — u kim?",
+      "opts": [
+        "O'qituvchi",
+        "Talaba",
+        "Shifokor",
+        "Sotuvchi"
+      ],
       "correct": 0,
-      "izoh": "«يَشْرَبُ الْقَهْوَةَ مَعَ أَخِيهِ الْكَبِيرِ» — katta akasi bilan."
+      "izoh": "«هَذَا مُعَلِّمٌ اسْمُهُ كَرِيمٌ» — Karim o'qituvchi (muallim)."
     },
     {
-      "q": "Qahvadan keyin Umar qayerga boradi?",
-      "opts": ["O'qishga (darsga)", "Uyga", "Bozorga", "Ishga"],
+      "q": "Suhbat oxirida qaysi o'quv buyumi tilga olindi?",
+      "opts": [
+        "Kitob",
+        "Qalam",
+        "Daftar",
+        "Sumka"
+      ],
       "correct": 0,
-      "izoh": "«ثُمَّ يَذْهَبُ إِلَى الدِّرَاسَةِ» — so'ng o'qishga boradi."
+      "izoh": "«هَلْ هَذَا كِتَابٌ؟ نَعَمْ هَذَا كِتَابٌ» — kitob haqida."
     }
   ]
 }
