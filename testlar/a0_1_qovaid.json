@@ -1,0 +1,97 @@
+{
+  "title": "Qovaid — 1-dars: At-Taoruf (Tanishuv)",
+  "otish": 70,
+  "vaqt": 15,
+  "questions": [
+    {
+      "q": "Ismning eng asosiy belgisi nima?",
+      "opts": ["Ma'lum bir zamonga bog'langan bo'lishi", "Harakatni ifodalashi", "O'z ma'nosini anglatishda hech qanday zamonga bog'lanmasligi", "Gapda faqat so'roq so'zlardan keyin kelishi"],
+      "correct": 2,
+      "izoh": "Ism (اِسْمٌ) — narsa, shaxs yoki tushuncha nomi; u zamonga bog'lanmaydi."
+    },
+    {
+      "q": "Quyidagilardan qaysi biri «narsa nomi» (ism) guruhiga kiradi?",
+      "opts": ["مُحَمَّدٌ (Muhammad)", "كِتَابٌ (Kitob)", "جَمِيلٌ (Chiroyli)", "طَشْقَنْدُ (Toshkent)"],
+      "correct": 1,
+      "izoh": "كِتَابٌ — narsa nomi. مُحَمَّدٌ — shaxs ismi, طَشْقَنْدُ — joy nomi, جَمِيلٌ — sifat."
+    },
+    {
+      "q": "«Biror ish-harakatni bildiradi va albatta ma'lum bir zamonga bog'langan bo'ladi» — bu ta'rif qaysi so'z turkumiga tegishli?",
+      "opts": ["Ism", "Harf", "Fe'l", "Ismi ishora"],
+      "correct": 2,
+      "izoh": "Fe'l (فِعْلٌ) — ish-harakatni va uning zamonini bildiradi."
+    },
+    {
+      "q": "«يَكْتُبُ» (yozyapti) fe'li qaysi zamonga tegishli?",
+      "opts": ["O'tgan zamon", "Hozirgi zamon", "Kelasi zamon", "Buyruq mayli"],
+      "correct": 1,
+      "izoh": "يَكْتُبُ — muzori' fe'l; bu yerda hozirgi zamon ma'nosida (yozyapti)."
+    },
+    {
+      "q": "Yolg'iz holida to'liq ma'no anglatmaydigan, faqat ism yoki fe'lga qo'shilgandagina gapni mazmunli qiladigan yordamchi so'z nima deyiladi?",
+      "opts": ["Harf", "Sifat", "Zamir", "Fe'l"],
+      "correct": 0,
+      "izoh": "Harf (حَرْفٌ) — yordamchi so'z, mustaqil ma'noga ega emas (masalan: مِنْ, فِي)."
+    },
+    {
+      "q": "Muannas (ayol) jinsidagi ismlar asosan qaysi qo'shimcha bilan yasaladi?",
+      "opts": ["Tanvin", "Ta marbuta (ة)", "Alif-lom (ال)", "Sukun"],
+      "correct": 1,
+      "izoh": "Ta marbuta (ة) — muannaslik belgisi: مُعَلِّمَةٌ, طَالِبَةٌ."
+    },
+    {
+      "q": "«U (erkak kishi)» ma'nosini anglatuvchi kishilik olmoshi qaysi?",
+      "opts": ["أَنْتَ", "هِيَ", "أَنَا", "هُوَ"],
+      "correct": 3,
+      "izoh": "هُوَ = u (erkak). هِيَ = u (ayol), أَنْتَ = sen, أَنَا = men."
+    },
+    {
+      "q": "«مُعَلِّمٌ» (o'qituvchi — erkak) va «صُورَةٌ» (rasm — ayol jinsi) so'zlari oldidan mos ravishda qaysi ko'rsatish olmoshlari qo'yiladi?",
+      "opts": ["هَذِهِ / هَذَا", "هَذَا / هَذِهِ", "هَذَا / هَذَا", "هَذِهِ / هَذِهِ"],
+      "correct": 1,
+      "izoh": "Muzakkar uchun هَذَا, muannas uchun هَذِهِ: هَذَا مُعَلِّمٌ، هَذِهِ صُورَةٌ."
+    },
+    {
+      "q": "Arab tilida so'roq olmoshlari gapning qayerida keladi va «كَيْفَ حَالُكَ؟» qanday tarjima qilinadi?",
+      "opts": ["Gap boshida keladi; «Ahvoling qanday?»", "Gap oxirida keladi; «U qayerdan?»", "Gap boshida keladi; «Bu nima?»", "Gap o'rtasida keladi; «Sen talabamisan?»"],
+      "correct": 0,
+      "izoh": "So'roq olmoshlari gap boshida keladi. كَيْفَ حَالُكَ؟ = Ahvoling qanday?"
+    },
+    {
+      "q": "Kundalik muloqotda «Xayrli tong!» iborasiga javoban qaysi jumla ishlatiladi?",
+      "opts": ["صَبَاحُ الْخَيْرِ — صَبَاحُ النُّورِ", "كَيْفَ حَالُكَ؟ — بِخَيْرٍ", "أَهْلاً وَسَهْلاً — أَهْلاً بِكَ", "مَعَ السَّلَامَةِ — سَلَامَاتٌ"],
+      "correct": 0,
+      "izoh": "«صَبَاحُ الْخَيْرِ» (Xayrli tong) ga an'anaviy javob: «صَبَاحُ النُّورِ»."
+    },
+    {
+      "q": "«Men O'zbekistondanman. Siz ham O'zbekistondanmisiz?» — to'g'ri muloqot variantini toping.",
+      "opts": ["أَنَا مِنْ مِصْرَ. هَلْ أَنْتَ مِنْ مِصْرَ؟", "أَنَا مِنْ أُوزْبَكِسْتَانَ. أَنْتَ مِنْ مِصْرَ.", "أَنَا مِنْ أُوزْبَكِسْتَانَ. هَلْ أَنْتَ أَيْضًا مِنْ أُوزْبَكِسْتَانَ؟", "أَنَا أُسْتَاذٌ. هَلْ أَنْتَ أُسْتَاذٌ؟"],
+      "correct": 2,
+      "izoh": "أَنَا مِنْ أُوزْبَكِسْتَانَ = Men O'zbekistondanman; هَلْ ... أَيْضًا = siz ham...mi?"
+    },
+    {
+      "q": "Quyidagi so'zlardan qaysi biri «harf» (yordamchi so'z) hisoblanadi?",
+      "opts": ["أَنْتَ", "طَالِبٌ", "صُورَةٌ", "مِنْ"],
+      "correct": 3,
+      "izoh": "مِنْ (…dan) — harf. أَنْتَ — zamir, طَالِبٌ va صُورَةٌ — ism."
+    },
+    {
+      "q": "«U qayerdan?» (ayol kishiga nisbatan) so'rog'ini tuzish uchun bo'sh joyga qaysi olmosh qo'yiladi: «مِنْ أَيْنَ ___ ؟»",
+      "opts": ["أَنْتَ", "هِيَ", "هُوَ", "أَنْتِ"],
+      "correct": 1,
+      "izoh": "«U» (ayol) = هِيَ: مِنْ أَيْنَ هِيَ؟ (أَنْتِ = sen, ayolga nisbatan)."
+    },
+    {
+      "q": "Jonli shaxsga nisbatan «Bu kim?» deb so'rash uchun qaysi so'roq olmoshi va ismi ishora to'g'ri juftlikda keladi?",
+      "opts": ["مَا هَذَا؟", "مَنْ هَذَا؟", "كَيْفَ هَذَا؟", "هَلْ أَنْتَ؟"],
+      "correct": 1,
+      "izoh": "Jonli shaxs uchun مَنْ (kim): مَنْ هَذَا؟ = Bu kim? مَا — jonsiz narsa uchun."
+    },
+    {
+      "q": "Muloqotni yakunlashda «Ko'rishguncha! — Salomat bo'ling!» iboralari qaysi javobda to'g'ri ko'rsatilgan?",
+      "opts": ["أَهْلاً وَسَهْلاً — أَهْلاً بِكَ", "إِلَى اللِّقَاءِ — سَلَامَاتٌ", "إِلَى اللِّقَاءِ — مَعَ السَّلَامَةِ", "صَبَاحُ الْخَيْرِ — صَبَاحُ النُّورِ"],
+      "correct": 2,
+      "izoh": "إِلَى اللِّقَاءِ = Ko'rishguncha; مَعَ السَّلَامَةِ = Salomat bo'ling."
+    }
+  ]
+}
