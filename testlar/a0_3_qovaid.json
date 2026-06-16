@@ -34,10 +34,10 @@
       "izoh": "Mukholafa qoidasi: muzakkar ma'dud → muannas son (ة bilan), muannas ma'dud → muzakkar son (ة-siz)."
     },
     {
-      "q": "3-10 sanashda ma'dud (sanalayotgan narsa) qaysi ko'rinishda va qaysi kelishikda bo'ladi?",
-      "opts": ["Ko'plik, majrur (jar)", "Birlik, marfu'", "Ikkilik, mansub", "Ko'plik, marfu'"],
+      "q": "3-10 sanashda ma'dud (sanalayotgan narsa) qaysi shaklda va so'z oxiri qanday harakatda bo'ladi?",
+      "opts": ["Ko'plik shaklda, oxiri kasrali (ـٍ)", "Birlik shaklda, oxiri dammali (ـٌ)", "Ikkilik shaklda", "Ko'plik shaklda, oxiri dammali (ـٌ)"],
       "correct": 0,
-      "izoh": "3-10 dan keyin ma'dud ko'plik va majrur (mudof ilayh) bo'ladi: ثَلَاثَةُ كُتُبٍ."
+      "izoh": "3–10 dan keyin sanalgan narsa ko'plik shaklda va so'z oxiri kasrali bo'ladi: ثَلَاثَةُ كُتُبٍ (kutub-in)."
     },
     {
       "q": "«لِي ثَلَاثَةُ أَعْمَامٍ» gapida «أَعْمَام» so'zining birligi va jinsi qaysi?",
@@ -70,10 +70,10 @@
       "izoh": "كَمْ = nechta/qancha. مَنْ = kim, مَا = nima, أَيْنَ = qayer."
     },
     {
-      "q": "«كَمْ» dan keyin so'ralayotgan narsa (tamyiz) qanday bo'ladi?",
-      "opts": ["Birlik, mansub tanvin (ـًا)", "Ko'plik, majrur", "Ikkilik, marfu'", "Birlik, marfu'"],
+      "q": "«كَمْ» dan keyin so'ralayotgan narsa (tamyiz) qanday shaklda va so'z oxiri qanday harakatda bo'ladi?",
+      "opts": ["Birlik shaklda, oxiri fathali tanvin (ـًا)", "Ko'plik shaklda, oxiri kasrali", "Ikkilik shaklda", "Birlik shaklda, oxiri dammali (ـٌ)"],
       "correct": 0,
-      "izoh": "كَمْ dan keyin tamyiz birlik va mansub bo'ladi: كَمْ كِتَابًا."
+      "izoh": "كَمْ dan keyin so'z birlik shaklda va so'z oxiri fathali tanvin bo'ladi: كَمْ كِتَابًا."
     },
     {
       "q": "«كَمْ صَدِيقًا لَكَ؟» so'rog'ining o'zbekcha tarjimasi qaysi?",
@@ -85,19 +85,19 @@
       "q": "«Senda (erkak) nechta kitob bor?» — to'g'ri arabcha variant.",
       "opts": ["كَمْ كِتَابًا عِنْدَكَ؟", "كَمْ كُتُبٌ عِنْدَكَ؟", "كَمْ عِنْدَكَ كُتُبٌ؟", "مَنْ كِتَابًا لَكَ؟"],
       "correct": 0,
-      "izoh": "كَمْ + birlik mansub: كَمْ كِتَابًا عِنْدَكَ؟"
+      "izoh": "كَمْ + birlik (oxiri fathali tanvin): كَمْ كِتَابًا عِنْدَكَ؟"
     },
     {
       "q": "«كَمْ مِفْتَاحًا مَعَهَا؟» savoliga «Unda beshta kalit bor» javobi qaysi?",
       "opts": ["مَعَهَا خَمْسَةُ مَفَاتِيحَ", "مَعَهَا خَمْسُ مَفَاتِيحَ", "مَعَهَا خَمْسَةُ مِفْتَاحٍ", "مَعَهُ خَمْسُ مَفَاتِيحَ"],
       "correct": 0,
-      "izoh": "kalit مِفْتَاح muzakkar → son muannas خَمْسَة; ma'dud ko'plik-majrur مَفَاتِيحَ."
+      "izoh": "kalit مِفْتَاح muzakkar → son muannas خَمْسَة; ma'dud ko'plik shaklda: مَفَاتِيحَ."
     },
     {
       "q": "«Muhammadning oltita amakisi bor» — to'g'ri arabcha variant.",
       "opts": ["لِمُحَمَّدٍ سِتَّةُ أَعْمَامٍ", "لِمُحَمَّدٍ سِتُّ أَعْمَامٍ", "لِمُحَمَّدٍ سِتَّةُ عَمٍّ", "لِمُحَمَّدٍ سِتَّةَ أَعْمَامٌ"],
       "correct": 0,
-      "izoh": "عَمّ muzakkar → son muannas سِتَّة; ma'dud ko'plik-majrur أَعْمَامٍ."
+      "izoh": "عَمّ muzakkar → son muannas سِتَّة; ma'dud ko'plik shaklda: أَعْمَامٍ."
     },
     {
       "q": "«مَعَ» (bilan) predlogining «u (ayol) bilan» shakli qaysi?",
@@ -137,9 +137,9 @@
     },
     {
       "q": "So'zning ikkilik (tasniya) shakli qaysi qo'shimchalar bilan yasaladi?",
-      "opts": ["ـَانِ (raf') / ـَيْنِ (nasb-jar)", "ـُونَ / ـِينَ", "ـَاتٌ", "ـِيٌّ"],
+      "opts": ["ـَانِ yoki ـَيْنِ", "ـُونَ / ـِينَ", "ـَاتٌ", "ـِيٌّ"],
       "correct": 0,
-      "izoh": "Ikkilik: ـَانِ (marfu') va ـَيْنِ (mansub/majrur). ـُونَ/ـِينَ — muzakkar ko'plik."
+      "izoh": "Ikkilik so'z ـَانِ yoki ـَيْنِ qo'shimchasi bilan yasaladi. ـُونَ/ـِينَ — muzakkar ko'plik qo'shimchasi."
     },
     {
       "q": "«اِبْنٌ» (o'g'il) so'zining ikkilik shakli qaysi?",
@@ -157,7 +157,7 @@
       "q": "«Oshxonada 3 ta oshpaz bor» — to'g'ri arabcha variant.",
       "opts": ["فِي الْمَطْبَخِ ثَلَاثَةُ طَبَّاخِينَ", "فِي الْمَطْبَخِ ثَلَاثُ طَبَّاخِينَ", "فِي الْمَطْبَخِ ثَلَاثَةُ طَبَّاخٌ", "فِي الْمَطْبَخِ ثَلَاثَةَ طَبَّاخِينَ"],
       "correct": 0,
-      "izoh": "oshpaz طَبَّاخ muzakkar → ثَلَاثَة; ma'dud ko'plik-majrur طَبَّاخِينَ."
+      "izoh": "oshpaz طَبَّاخ muzakkar → ثَلَاثَة; ma'dud ko'plik shaklda: طَبَّاخِينَ."
     },
     {
       "q": "«فِي الْمَدْرَسَةِ سِتَّةُ مُعَلِّمِينَ» gapining o'zbekcha tarjimasi qaysi?",
@@ -185,9 +185,9 @@
     },
     {
       "q": "«عِنْدِي خَمْسُ سَيَّارَاتٍ» gapida grammatik xato bormi?",
-      "opts": ["Yo'q, to'g'ri: سَيَّارَة muannas → son muzakkar (خَمْس, ة-siz)", "Ha, خَمْسَة bo'lishi kerak edi", "Ha, سَيَّارَاتٌ marfu' bo'lishi kerak", "Ha, «عِنْدِي» noto'g'ri"],
+      "opts": ["Yo'q, to'g'ri: سَيَّارَة muannas → son muzakkar (خَمْس, ة-siz)", "Ha, خَمْسَة (ة bilan) bo'lishi kerak edi", "Ha, سَيَّارَة birlikda bo'lishi kerak", "Ha, «عِنْدِي» noto'g'ri"],
       "correct": 0,
-      "izoh": "سَيَّارَة muannas → mukholafa bo'yicha son muzakkar (خَمْس), ma'dud ko'plik-majrur سَيَّارَاتٍ. Gap to'g'ri."
+      "izoh": "سَيَّارَة muannas → mukholafa bo'yicha son muzakkar (خَمْس), ma'dud ko'plik shaklda سَيَّارَاتٍ. Gap to'g'ri."
     }
   ]
 }
