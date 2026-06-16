@@ -63,7 +63,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .qmatn{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px; color:#5a4326; font-size:15px; line-height:1.7}
 .qmatn.ar{direction:rtl; font-family:'Amiri',serif; font-size:20px; line-height:2}
 .q-prompt.ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
-.q-prompt.uz{font-size:clamp(20px,6vw,28px); text-align:center; line-height:1.55; color:var(--ink); font-weight:700; padding:8px 4px}
+.q-prompt.uz{font-size:clamp(17px,4.4vw,23px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
+.ar-in{font-family:'Amiri','Scheherazade New',serif; font-weight:700; font-size:1.7em; line-height:1.3; unicode-bidi:isolate; direction:rtl}
+.opt .ar-in{font-size:1.5em}
 .q-prompt.img{display:flex; align-items:center; justify-content:center; padding:8px 4px}
 .q-img-box{width:100%; max-width:240px; aspect-ratio:1/1; border-radius:20px; background:var(--cream-dim); border:2px solid var(--tan); display:flex; align-items:center; justify-content:center; padding:22px}
 .q-img-box svg,.q-img-box img{width:100%; height:100%; display:block; object-fit:contain}
@@ -156,9 +158,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
 <div id="bookOverlay">
   <div class="book-bar">
-    <button onclick="gotoPage(curPage-1)">◀</button>
-    <button onclick="gotoPage(curPage+1)">▶</button>
-    <span>Bet <input id="pageInput" type="number" min="1" onchange="gotoPage(+this.value)"> / <span id="pageTotal">?</span></span>
+    <span id="pageNav" style="display:flex;gap:6px;align-items:center">
+      <button onclick="gotoPage(curPage-1)">◀</button>
+      <button onclick="gotoPage(curPage+1)">▶</button>
+      <span>Bet <input id="pageInput" type="number" min="1" onchange="gotoPage(+this.value)"> / <span id="pageTotal">?</span></span>
+    </span>
     <button onclick="setZoom(userZoom-0.25)">－</button>
     <span class="zlabel" id="zlabel">100%</span>
     <button onclick="setZoom(userZoom+0.25)">＋</button>
@@ -225,6 +229,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
 
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
+  function hasLatin(t){return /[A-Za-z]/.test(t||'');}
+  const ARX=/[«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿][«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*/g;
+  function wrapAr(t){return String(t).replace(ARX,function(m){return '<span class="ar-in">'+m+'</span>';});}
 
   // ====== AUDIO (istima) ======
   function renderAudio(){
@@ -262,12 +269,18 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
     let promptHtml;
     if(item.img){ promptHtml='<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>'; }
-    else{ const cls=isAr(item.q)?'ar':'uz'; promptHtml='<div class="q-prompt '+cls+'">'+item.q+'</div>'; }
+    else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
+    else if(isAr(item.q)){ promptHtml='<div class="q-prompt uz">'+wrapAr(item.q)+'</div>'; }
+    else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
     const matnHtml = item.matn ? '<div class="qmatn'+(isAr(item.matn)?' ar':'')+'">'+item.matn+'</div>' : '';
     const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
-      const o=item.opts[orig]; const arc=isAr(o)?' opt-ar':''; const letter=String.fromCharCode(65+oi);
-      return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pick('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text">'+o+'</span></button>';
+      const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
+      let arc='', otext;
+      if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
+      else if(isAr(o)){ otext=wrapAr(o); }
+      else { otext=o; }
+      return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pick('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text">'+otext+'</span></button>';
     }).join('');
 
     document.getElementById('qCard').innerHTML =
@@ -345,7 +358,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
 
   // ====== KITOB (pdf.js) ======
-  let pdfDoc=null,curPage=1,userZoom=1,rendering=false,pend=null,pdfLoaded=false;
+  let pdfDoc=null,curPage=1,userZoom=1,rendering=false,pend=null,pdfLoaded=false,lockPage=null;
   function openBook(){
     document.getElementById('bookOverlay').style.display='flex';
     if(!pdfLoaded){ pdfLoaded=true; loadPdf(); }
@@ -358,7 +371,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       document.getElementById('loadingMsg').style.display='none';
       document.getElementById('pageTotal').textContent=pdfDoc.numPages;
       document.getElementById('pageInput').max=pdfDoc.numPages;
-      gotoPage(Math.min(startPage, pdfDoc.numPages));
+      lockPage = Math.min(startPage, pdfDoc.numPages);   // qiroat: faqat shu bet ko'rsatiladi
+      const pn=document.getElementById('pageNav'); if(pn) pn.style.display='none';
+      gotoPage(lockPage);
     }catch(e){
       document.getElementById('loadingMsg').style.display='none';
       const el=document.getElementById('errMsg'); el.style.display='block';
@@ -369,7 +384,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function setZoom(z){ userZoom=Math.max(0.5,Math.min(6,Math.round(z*100)/100));
     document.getElementById('zlabel').textContent=Math.round(userZoom*100)+'%'; gotoPage(curPage); }
   async function gotoPage(n){
-    if(!pdfDoc)return; n=Math.max(1,Math.min(pdfDoc.numPages,n));
+    if(!pdfDoc)return; n = lockPage ? lockPage : Math.max(1,Math.min(pdfDoc.numPages,n));
     if(rendering){pend=n;return;} rendering=true;curPage=n;
     document.getElementById('pageInput').value=n;
     const page=await pdfDoc.getPage(n);
