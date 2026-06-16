@@ -70,7 +70,7 @@
       "izoh": "كَمْ = nechta/qancha. مَنْ = kim, مَا = nima, أَيْنَ = qayer."
     },
     {
-      "q": "«كَمْ» dan keyin so'ralayotgan narsa (tamyiz) qanday shaklda va so'z oxiri qanday harakatda bo'ladi?",
+      "q": "«كَمْ» (nechta) dan keyin sanaladigan narsa (ism) qanday shaklda va so'z oxiri qanday harakatda bo'ladi?",
       "opts": ["Birlik shaklda, oxiri fathali tanvin (ـًا)", "Ko'plik shaklda, oxiri kasrali", "Ikkilik shaklda", "Birlik shaklda, oxiri dammali (ـٌ)"],
       "correct": 0,
       "izoh": "كَمْ dan keyin so'z birlik shaklda va so'z oxiri fathali tanvin bo'ladi: كَمْ كِتَابًا."
@@ -118,10 +118,10 @@
       "izoh": "2-shaxs muzakkar: عِنْدَكَ. عِنْدَكِ = senda (ayol)."
     },
     {
-      "q": "«لَنَا» birikmasining o'zbekcha ma'nosi nima?",
-      "opts": ["Bizniki / biz uchun (bizda)", "Sizniki", "Meniki", "Ularniki"],
+      "q": "«لَهُ» birikmasining o'zbekcha ma'nosi nima?",
+      "opts": ["Uniki / u uchun (unda) — erkak", "Sizniki", "Meniki", "Sening"],
       "correct": 0,
-      "izoh": "لَنَا = لِ + نَا → bizga/bizniki."
+      "izoh": "لَهُ = لِ + ـهُ → unga/uniki (erkak). لَهَا = uniki (ayol)."
     },
     {
       "q": "«لَكِ» olmoshli birikma qaysi shaxs va jinsga qaratilgan?",
@@ -166,10 +166,10 @@
       "izoh": "سِتَّة = olti, مُعَلِّمِينَ = o'qituvchilar (muzakkar ko'plik)."
     },
     {
-      "q": "«لِفَاطِمَةَ ثَلَاثُ بَنَاتٍ» gapida «بَنَات» ma'nosi va nega son «ثَلَاثُ» (ة-siz)?",
-      "opts": ["Qizlar; ma'dud (بِنْت) muannas bo'lgani uchun son muzakkar (ة-siz)", "O'g'illar; ma'dud muzakkar bo'lgani uchun", "Qizlar; tasodifan", "Onalar; son doim ة-siz"],
+      "q": "«لِفَاطِمَةَ ثَلَاثُ بَنَاتٍ» (Fotimaning uchta qizi bor). Nega «ثَلَاثُ» ة-siz (muzakkar shaklda) kelgan?",
+      "opts": ["«بِنْت» (qiz) muannas bo'lgani uchun — mukholafa qoidasi", "«بِنْت» muzakkar bo'lgani uchun", "Son har doim ة-siz keladi", "Tasodifan"],
       "correct": 0,
-      "izoh": "بَنَات = qizlar (birligi بِنْت, muannas) → son teskari, ya'ni muzakkar ثَلَاث (ة-siz)."
+      "izoh": "Mukholafa: muannas ma'dud (بِنْت — qiz) → son muzakkar (ة-siz): ثَلَاثُ بَنَاتٍ."
     },
     {
       "q": "«فِي الْبَيْتِ تِسْعَةُ ضُيُوفٍ» gapida nechta mehmon haqida gap bormoqda?",
