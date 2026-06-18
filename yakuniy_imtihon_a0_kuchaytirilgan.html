@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bayyina — A0 Yakuniy Imtihon (Kuchaytirilgan)</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+  --gold:#cda35b;
+  --cream:#f6f1e8; --cream-dim:#e8ddca;
+  --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+  --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+  --ink:#2c2014;
+}
+*{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent}
+body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased; overflow-x:hidden}
+.arabic{font-family:'Amiri','Scheherazade New',serif}
+
+.geo-pattern{position:absolute; inset:0; opacity:.07; pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ============ MATERIAL SCREEN ============ */
+#materialScreen{position:relative; min-height:100vh; background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 55%,var(--brown-deep) 100%); padding-bottom:120px; overflow:hidden}
+.mat-header{position:relative; z-index:1; padding:30px 20px 18px; text-align:center; color:#fff}
+.mat-brand{display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:18px}
+.mat-logo{width:46px; height:46px; border-radius:11px; box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.mat-brand-name{font-size:19px; font-weight:800; color:var(--cream); letter-spacing:1.5px; text-transform:uppercase}
+.mat-badge{display:inline-block; background:var(--cream); color:var(--brown-deep); font-weight:800; font-size:12px; padding:6px 16px; border-radius:20px; letter-spacing:1.5px; text-transform:uppercase}
+.mat-title-ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(34px,9vw,52px); margin:16px 0 6px; color:var(--cream); line-height:1.6; font-weight:700; text-shadow:0 2px 14px rgba(0,0,0,.25)}
+.mat-title-uz{font-size:15px; color:var(--tan); font-weight:600}
+.mat-desc{max-width:640px; margin:18px auto 0; padding:0 24px; font-size:14px; color:#e8dac8; line-height:1.7; text-align:center}
+.mat-desc b{color:var(--gold)}
+
+.sec-list{position:relative; z-index:1; max-width:640px; margin:22px auto 0; padding:0 16px; display:flex; flex-direction:column; gap:10px}
+.sec-item{display:flex; align-items:center; gap:13px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:14px; padding:14px 16px}
+.sec-num{flex-shrink:0; width:38px; height:38px; border-radius:10px; background:var(--cream); color:var(--brown-deep); display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800}
+.sec-info{flex:1; min-width:0}
+.sec-name{font-size:14.5px; font-weight:800; color:var(--cream)}
+.sec-sub{font-size:12px; color:var(--tan); margin-top:2px}
+
+.pdf-card{position:relative; z-index:1; max-width:640px; margin:22px auto 0; padding:0 16px}
+.pdf-card-inner{display:flex; align-items:center; gap:14px; background:var(--cream); border-radius:16px; padding:18px; box-shadow:0 8px 24px rgba(0,0,0,.18); border:1px solid var(--cream-dim)}
+.pdf-icon{flex-shrink:0; width:50px; height:50px; border-radius:12px; background:var(--brown); color:var(--cream); display:flex; align-items:center; justify-content:center; font-size:24px}
+.pdf-info{flex:1; min-width:0}
+.pdf-title{font-size:15px; font-weight:800; color:var(--ink)}
+.pdf-sub{font-size:12.5px; color:#8a7a68; margin-top:2px}
+.pdf-btn{flex-shrink:0; display:inline-flex; align-items:center; gap:6px; padding:11px 18px; border-radius:10px; background:var(--brown); color:var(--cream); font-size:13.5px; font-weight:800; text-decoration:none; white-space:nowrap}
+.pdf-btn:active{opacity:.85}
+
+.mat-tip{position:relative; z-index:1; max-width:640px; margin:16px auto 0; padding:0 16px; font-size:13px; color:#e8dac8; line-height:1.7; text-align:center}
+
+.sticky-bar{position:fixed; bottom:0; left:0; right:0; padding:14px 16px calc(14px + env(safe-area-inset-bottom)); background:rgba(58,39,22,.92); backdrop-filter:blur(10px); border-top:1px solid rgba(255,255,255,.08); z-index:50}
+.btn-primary{display:block; width:100%; max-width:640px; margin:0 auto; padding:17px; border:none; border-radius:14px; background:var(--cream); color:var(--brown-deep); font-size:17px; font-weight:800; cursor:pointer; box-shadow:0 6px 20px rgba(0,0,0,.25); font-family:inherit}
+.btn-primary:active{transform:scale(.98)}
+
+/* ============ TEST SCREEN ============ */
+#testScreen{min-height:100vh; background-color:var(--cream); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); display:none}
+.t-hdr{position:sticky; top:0; z-index:20; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); color:#fff; padding:13px 16px; display:flex; align-items:center; justify-content:space-between}
+.t-hdr-title{display:flex; align-items:center; font-size:13px; font-weight:700; color:var(--tan); letter-spacing:.3px}
+.t-hdr-icon{height:24px; width:24px; border-radius:6px; margin-right:9px}
+.t-hdr-title b{color:var(--cream)}
+.t-hdr-brand{color:var(--cream); font-weight:800; letter-spacing:1px; margin-right:6px}
+.timer-badge{font-variant-numeric:tabular-nums; font-weight:800; font-size:16px; padding:7px 16px; border-radius:20px; background:var(--brown); color:#fff; min-width:64px; text-align:center}
+.timer-badge.warn{background:var(--gold); color:var(--brown-deep)}
+.timer-badge.danger{background:var(--red2); color:#fff; animation:timerPulse 1s infinite}
+@keyframes timerPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+.gbar-wrap{padding:10px 16px 0; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+.gbar{height:6px; background:rgba(255,255,255,.12); border-radius:4px; overflow:hidden}
+.gbar-fill{height:100%; width:0%; background:linear-gradient(90deg,var(--gold),var(--cream)); transition:width .35s ease}
+.q-counter{text-align:center; font-size:12px; color:var(--tan); padding:9px 0; background-color:var(--brown-deep); background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-opacity='0.08' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E"); font-weight:600; letter-spacing:.5px}
+
+.q-wrap{max-width:680px; margin:0 auto; padding:24px 16px 50px}
+.q-card{background:#fff; border-radius:18px; padding:28px 20px; box-shadow:0 4px 24px rgba(60,40,20,.08); animation:fadeIn .4s ease; border:1px solid var(--cream-dim)}
+@keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
+
+.q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:16px; text-transform:uppercase; letter-spacing:1px}
+.q-uztext{font-size:clamp(17px,4.6vw,22px); text-align:center; line-height:1.55; color:var(--ink); font-weight:700; padding:4px 4px}
+.q-ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(28px,7.5vw,44px); text-align:center; line-height:1.95; color:var(--ink); font-weight:700; padding:12px 6px 4px; word-break:break-word}
+
+.opts{display:flex; flex-direction:column; gap:13px; margin-top:24px}
+.opts.locked .opt{pointer-events:none}
+.opt{display:flex; align-items:center; gap:14px; padding:16px 16px; border:2px solid var(--cream-dim); border-radius:14px; cursor:pointer; transition:all .15s ease; background:#fff}
+.opt:active{transform:scale(.98)}
+.opt .opt-text{font-size:clamp(16px,4.4vw,20px); font-weight:600; color:#333; line-height:1.45; flex:1}
+.opt.opt-ar .opt-text{font-family:'Amiri',serif; direction:rtl; font-size:clamp(23px,6.4vw,31px); font-weight:700; text-align:right; line-height:1.8}
+.opt.ok{background:var(--green-bg); border-color:var(--green)}
+.opt.ok .opt-text{color:var(--green-text)}
+.opt.no{background:var(--red-bg); border-color:var(--red)}
+.opt.no .opt-text{color:var(--red-text)}
+.ltr{flex-shrink:0; width:34px; height:34px; border-radius:50%; background:var(--cream); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; color:var(--brown-mid)}
+.opt.ok .ltr{background:var(--green); color:#fff}
+.opt.no .ltr{background:var(--red); color:#fff}
+
+.feedback-box{margin-top:20px; padding:15px 17px; border:1.5px solid var(--gold); background:#fbf3e6; border-radius:12px; font-size:14.5px; color:#5a4326; line-height:1.65; animation:fadeIn .3s ease}
+.feedback-box .arabic{font-size:1.15em}
+
+/* ============ RESULT SCREEN ============ */
+#resultScreen{position:relative; min-height:100vh; display:none; background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 50%,var(--brown-deep) 100%); align-items:center; justify-content:center; padding:40px 20px; flex-direction:column; text-align:center; color:#fff; overflow:hidden}
+.res-logo{position:relative; z-index:1; width:52px; height:52px; border-radius:12px; margin-bottom:12px; box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.res-brand{position:relative; z-index:1; font-size:13px; font-weight:800; letter-spacing:5px; color:var(--tan); margin-bottom:16px; text-transform:uppercase}
+.res-icon{position:relative; z-index:1; font-size:54px; margin-bottom:6px}
+.res-circle{position:relative; z-index:1; width:148px; height:148px; border-radius:50%; background:var(--cream); display:flex; flex-direction:column; align-items:center; justify-content:center; margin:18px auto; box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.res-circle .pct{font-size:40px; font-weight:800; color:var(--brown-deep); line-height:1}
+.res-circle .lbl{font-size:11px; color:var(--brown-mid); font-weight:700; margin-top:4px}
+.res-title{position:relative; z-index:1; font-size:21px; font-weight:800; margin:16px 0 10px}
+.res-sub{position:relative; z-index:1; font-size:14px; color:var(--tan); max-width:420px; line-height:1.7; margin-bottom:22px}
+.res-msg{position:relative; z-index:1; padding:14px 18px; border-radius:12px; font-size:14px; font-weight:600; max-width:420px; margin-bottom:20px; line-height:1.7}
+.res-msg.pass{background:rgba(39,174,96,.16); border:1.5px solid var(--green); color:#a8f0c6}
+.res-msg.fail{background:rgba(231,76,60,.16); border:1.5px solid var(--red); color:#ffb3a8}
+.res-breakdown{position:relative; z-index:1; width:100%; max-width:420px; margin-bottom:24px; display:flex; flex-direction:column; gap:8px}
+.bd-row{display:flex; align-items:center; justify-content:space-between; gap:10px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:10px; padding:10px 14px; font-size:13px}
+.bd-name{color:var(--tan); font-weight:600; text-align:left}
+.bd-score{font-weight:800; color:var(--cream); font-variant-numeric:tabular-nums}
+.res-btns{position:relative; z-index:1; display:flex; flex-direction:column; gap:12px; width:100%; max-width:340px}
+.btn-secondary{padding:15px; border-radius:12px; border:1.5px solid rgba(255,255,255,.25); background:transparent; color:#fff; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit}
+.btn-secondary:active{background:rgba(255,255,255,.08)}
+.btn-locked{padding:15px; border-radius:12px; border:1.5px dashed rgba(205,163,91,.5); background:rgba(205,163,91,.1); color:var(--gold); font-size:14px; font-weight:700; opacity:.9}
+</style>
+</head>
+<body>
+
+<!-- ============ MATERIAL SCREEN ============ -->
+<div id="materialScreen">
+  <div class="geo-pattern"></div>
+  <div class="mat-header">
+    <div class="mat-brand">
+      <img class="mat-logo" src="data:image/png;base64,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" alt="Bayyina">
+      <span class="mat-brand-name">Bayyina</span>
+    </div>
+    <span class="mat-badge">A0 · Yakuniy Imtihon · Kuchaytirilgan</span>
+    <div class="mat-title-ar">اَلْاِمْتِحَانُ النِّهَائِيُّ</div>
+    <div class="mat-title-uz">Bayyina darsligi asosida — 60 ta murakkab test</div>
+    <div class="mat-desc">
+      Bu yakuniy imtihon <b>A0 darajaning barcha mavzularini</b> qamrab oladi: lug'at, grammatika, gap tuzish, tarjima va xatoni to'g'rilash. Jami <b>60 ta savol</b>, har biri 4 variantli.
+      Tayyor bo'lgach, pastdagi tugmani bosing — imtihon <b>30 daqiqa</b> bilan cheklangan, o'tish chegarasi <b>70%</b>.
+    </div>
+  </div>
+
+  <div class="sec-list">
+    <div class="sec-item"><div class="sec-num">I</div><div class="sec-info"><div class="sec-name">Lug'at va frazeologiya</div><div class="sec-sub">1–15 · so'z, ibora va antonimlar</div></div></div>
+    <div class="sec-item"><div class="sec-num">II</div><div class="sec-info"><div class="sec-name">Grammatika va qoidalar</div><div class="sec-sub">16–30 · fe'l, olmosh, son, harakat</div></div></div>
+    <div class="sec-item"><div class="sec-num">III</div><div class="sec-info"><div class="sec-name">Gap tuzish va to'ldirish</div><div class="sec-sub">31–45 · bo'sh joyni to'ldirish</div></div></div>
+    <div class="sec-item"><div class="sec-num">IV</div><div class="sec-info"><div class="sec-name">Tarjima</div><div class="sec-sub">46–55 · o'zbekchadan arabchaga</div></div></div>
+    <div class="sec-item"><div class="sec-num">V</div><div class="sec-info"><div class="sec-name">Xatoni to'g'rilash</div><div class="sec-sub">56–60 · noto'g'ri gapni aniqlash</div></div></div>
+  </div>
+
+  <div class="mat-tip">💡 Maslahat: imtihondan oldin A0 darajaning 1–6 darslari lug'at va grammatikasini bir marta takrorlab chiqing.</div>
+
+  <div class="sticky-bar">
+    <button class="btn-primary" onclick="startTest()">✅ Men imtihonga tayyorman</button>
+  </div>
+</div>
+
+<!-- ============ TEST SCREEN ============ -->
+<div id="testScreen">
+  <div class="t-hdr">
+    <div class="t-hdr-title"><img class="t-hdr-icon" src="data:image/png;base64,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" alt=""><span class="t-hdr-brand">Bayyina</span> · <b>A0 Yakuniy</b></div>
+    <div class="timer-badge" id="timerBadge">30:00</div>
+  </div>
+  <div class="gbar-wrap">
+    <div class="gbar"><div class="gbar-fill" id="gbarFill"></div></div>
+  </div>
+  <div class="q-counter" id="qCounter">Savol 1 / 60</div>
+
+  <div class="q-wrap">
+    <div class="q-card" id="qCard">
+      <div class="q-label" id="qLabel"></div>
+      <div class="q-prompt" id="qPrompt"></div>
+      <div class="opts" id="optsContainer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ RESULT SCREEN ============ -->
+<div id="resultScreen">
+  <div class="geo-pattern"></div>
+  <img class="res-logo" src="data:image/png;base64,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" alt="Bayyina">
+  <div class="res-brand">BAYYINA</div>
+  <div class="res-icon" id="resIcon">🎉</div>
+  <div class="res-circle">
+    <div class="pct" id="resPct">0%</div>
+    <div class="lbl" id="resFrac">0/60</div>
+  </div>
+  <div class="res-title" id="resTitle">Natija tayyor!</div>
+  <div class="res-msg" id="resMsg"></div>
+  <div class="res-breakdown" id="resBreakdown"></div>
+  <div class="res-btns" id="resBtns"></div>
+</div>
+
+<script>
+/* =====================================================
+   A0 — YAKUNIY IMTIHON (KUCHAYTIRILGAN, 60 TA SAVOL)
+   Manba: "Bayyina darsligi asosida 60 ta murakkab test" (PDF)
+   -----------------------------------------------------
+   Har savol obyekti:
+     s    -> bo'lim raqami (1..5)
+     uz   -> savol matni (o'zbekcha)
+     ar   -> ixtiyoriy arab matni (kattaroq, RTL ko'rinadi)
+     opts -> 4 ta variant
+     oar  -> variantlar arabchami (true=RTL Amiri)
+     c    -> to'g'ri javob indeksi (0=A, 1=B, 2=C, 3=D)
+     f    -> izoh (javobdan keyin chiqadi)
+===================================================== */
+const SECTIONS = [
+  "I. Lug'at va frazeologiya",
+  "II. Grammatika va qoidalar",
+  "III. Gap tuzish va to'ldirish",
+  "IV. Tarjima",
+  "V. Xatoni to'g'rilash"
+];
+
+const QUESTIONS = [
+  /* ---------- I. LUG'AT (1-15) ---------- */
+  {s:1, uz:"Quyidagi ko'makchilardan qaysi biri 'orqasida' yoki 'ortida' ma'nosini ifodalaydi?", opts:["أَمَامَ","بَيْنَ","خَلْفَ","تَحْتَ"], oar:true, c:2, f:"خَلْفَ = orqasida / ortida. أَمَامَ = oldida, بَيْنَ = orasida, تَحْتَ = tagida."},
+  {s:1, uz:"'Sartarosh' so'zining arabcha tarjimasi to'g'ri berilgan qatorni toping.", opts:["طَبَّاخٌ","حَلَّاقٌ","مُدِيرٌ","مُهَنْدِسٌ"], oar:true, c:1, f:"حَلَّاقٌ = sartarosh (حَلَقَ — soch olmoq). طَبَّاخٌ = oshpaz, مُدِيرٌ = direktor, مُهَنْدِسٌ = muhandis."},
+  {s:1, uz:"'Ba'zida' va 'ko'pincha' so'zlarining arab tilidagi to'g'ri tarjimalari ketma-ketligini aniqlang.", opts:["غَالِبًا - دَائِمًا","أَحْيَانًا - نَادِرًا","أَبَدًا - أَحْيَانًا","أَحْيَانًا - غَالِبًا"], oar:true, c:3, f:"Ba'zida = أَحْيَانًا, ko'pincha = غَالِبًا. Daraja: دَائِمًا (doim) ‹ غَالِبًا (ko'pincha) ‹ أَحْيَانًا (ba'zida) ‹ نَادِرًا (kamdan-kam) ‹ أَبَدًا (hech qachon)."},
+  {s:1, uz:"«عَصِيرٌ» so'zining o'zbekcha to'g'ri tarjimasini toping.", opts:["Ovqat","Sharbat","Choy","Suv"], oar:false, c:1, f:"عَصِيرٌ = sharbat (meva sharbati) — عَصَرَ (siqmoq) o'zagidan."},
+  {s:1, uz:"Quyidagi antonim juftliklardan qaysi biri XATO berilgan?", opts:["جَدِيدٌ - قَدِيمٌ","نَظِيفٌ - وَسِخٌ","وَاسِعٌ - ضَيِّقٌ","جَمِيلٌ - طَوِيلٌ"], oar:true, c:3, f:"جَمِيلٌ (chiroyli) va طَوِيلٌ (uzun) zid ma'noli emas. Qolganlari to'g'ri: yangi-eski, toza-kir, keng-tor."},
+  {s:1, uz:"'Kutubxona, sinf va ko'cha' so'zlarining arabcha ko'rinishlari to'g'ri berilgan qatorni ko'rsating.", opts:["مَكْتَبَةٌ ، صَفٌّ ، شَارِعٌ","مَطْعَمٌ ، غُرْفَةٌ ، طَرِيقٌ","صَالَةٌ ، مَدْرَسَةٌ ، بَيْتٌ","مَكْتَبَةٌ ، سَيَّارَةٌ ، صَفٌّ"], oar:true, c:0, f:"Kutubxona = مَكْتَبَةٌ, sinf = صَفٌّ, ko'cha = شَارِعٌ."},
+  {s:1, uz:"«نَادِرًا» va «أَبَدًا» so'zlarining lug'aviy ma'nosi nima?", opts:["Hamisha, Har doim","Kamdan-kam, Hech qachon","Ba'zan, Birgalikda","Ko'pincha, Tezgina"], oar:false, c:1, f:"نَادِرًا = kamdan-kam, أَبَدًا = hech qachon (inkor gaplarda)."},
+  {s:1, uz:"'Hafta' va 'Oy' so'zlarining arabcha ko'plik shakllari to'g'ri berilgan javobni tanlang.", opts:["أَيَّامٌ - سَنَوَاتٌ","أَعْوَامٌ - أَشْهُرٌ","أَسَابِيعُ - أَشْهُرٌ","أَسَابِيعُ - أَيَّامٌ"], oar:true, c:2, f:"Hafta (أُسْبُوعٌ) ko'pligi = أَسَابِيعُ; Oy (شَهْرٌ) ko'pligi = أَشْهُرٌ."},
+  {s:1, uz:"«نَصِيحَةٌ» so'zining o'zbekcha ma'nosi nima?", opts:["Maslahat, tavsiya, nasihat","Yordam, ko'mak","Tushunish, bilish","Kulgi, shodlik"], oar:false, c:0, f:"نَصِيحَةٌ = nasihat, maslahat, tavsiya (نَصَحَ — nasihat qilmoq)."},
+  {s:1, uz:"'Birgalikda' va 'Iltimos' so'zlarining arabcha ekvivalentini toping.", opts:["دَائِمًا - مَعًا","مَعًا - مِنْ فَضْلِكَ","عَفْوًا - شُكْرًا","هَيَّا بِنَا - مَعًا"], oar:true, c:1, f:"Birgalikda = مَعًا, Iltimos = مِنْ فَضْلِكَ."},
+  {s:1, uz:"Quyidagi so'zlardan qaysi biri 'Eshik yonida' birikmasini to'g'ri ifodalaydi?", opts:["جَانِبَ البَابِ","وَرَاءَ البَابِ","فَوْقَ البَابِ","تَحْتَ البَابِ"], oar:true, c:0, f:"جَانِبَ البَابِ = eshik yonida. جَانِبَ = yonida, وَرَاءَ = orqasida, فَوْقَ = tepasida, تَحْتَ = tagida."},
+  {s:1, uz:"'Shkaf' va 'Surat' so'zlarining arab tilidagi to'g'ri shaklini aniqlang.", opts:["خِزَانَةٌ - صُورَةٌ","طَاوِلَةٌ - كِتَابٌ","كُرْسِيٌّ - دَفْتَرٌ","غُرْفَةٌ - سَيَّارَةٌ"], oar:true, c:0, f:"Shkaf = خِزَانَةٌ, Surat = صُورَةٌ."},
+  {s:1, uz:"'Yeyish' va 'Tushunish' harakatlarining arabcha masdar (so'z asosi) qaysi qatorda to'g'ri berilgan?", opts:["فَهْمٌ - ضَحْكٌ","أَكْلٌ - فَهْمٌ","حِفْظٌ - نَصْرٌ","طَبْخٌ - أَكْلٌ"], oar:true, c:1, f:"Yeyish (أَكَلَ) masdari = أَكْلٌ; Tushunish (فَهِمَ) masdari = فَهْمٌ."},
+  {s:1, uz:"«عَمٌّ» va «خَالٌ» qarindoshlik so'zlarining farqi nimada?", opts:["Amaki - Tog'a","Tog'a - Amaki","Amaki - Xola","Bobo - Amaki"], oar:false, c:0, f:"عَمٌّ = amaki (otaning aka-ukasi), خَالٌ = tog'a (onaning aka-ukasi)."},
+  {s:1, uz:"Quyidagi so'zlardan qaysi biri 'Yangi' ma'nosini bildiradi?", opts:["قَدِيمٌ","نَظِيفٌ","جَدِيدٌ","جَمِيلٌ"], oar:true, c:2, f:"جَدِيدٌ = yangi. قَدِيمٌ = eski, نَظِيفٌ = toza, جَمِيلٌ = chiroyli."},
+
+  /* ---------- II. GRAMMATIKA (16-30) ---------- */
+  {s:2, uz:"Arab tilida joyni ifodalovchi 'zarf' va 'harfi jar'lar o'zidan keyin kelgan ismning oxirgi harakatini qanday holatga o'zgartiradi?", opts:["Fathali (a)","Kasrali (i)","Dammali (u)","Sukunli"], oar:false, c:1, f:"Harfi jar va zarflardan keyingi ism majrur bo'ladi — oxiri kasrali (i). Mas: فِي البَيْتِ."},
+  {s:2, uz:"Muzoriy (hozirgi-kelasi) zamon fe'li uchinchi shaxs ko'plik muannas (ayollar) shaklida qaysi qo'shimchani oladi?", opts:["يَـ...ـُونَ","تَـ...ـُونَ","يَـ...ـْنَ","تَـ...ـْنَ"], oar:true, c:2, f:"3-shaxs muannas ko'plik: يَفْعَلْنَ — ي prefiks + ـْنَ qo'shimcha. Mas: يَكْتُبْنَ (ular, ayollar, yozadilar)."},
+  {s:2, uz:"'Siz ikkingiz yozyapsizlar' jumlasi arab tilida qanday ko'rinishda bo'ladi?", opts:["تَكْتُبَانِ","يَكْتُبَانِ","تَكْتُبُونَ","تَكْتُبْنَ"], oar:true, c:0, f:"'Siz ikkingiz' (أَنْتُمَا) → تَكْتُبَانِ: تَ prefiks + ـَانِ ikkilik qo'shimchasi."},
+  {s:2, uz:"Arab tilida so'zlar nechta katta guruhga bo'linadi?", opts:["2 (Ism, Fe'l)","3 (Ism, Fe'l, Harf)","4 (Ism, Fe'l, Sifat, Zarf)","5 (Ism, Fe'l, Harf, Zarf, Zamir)"], oar:false, c:1, f:"So'zlar 3 turkumga bo'linadi: اِسْمٌ (ism), فِعْلٌ (fe'l), حَرْفٌ (harf)."},
+  {s:2, uz:"«نَحْنُ» (Biz) olmoshiga mos keluvchi muzoriy fe'lining boshlanish harfi qaysi?", opts:["أ","ت","ي","ن"], oar:true, c:3, f:"'Biz' (نَحْنُ) uchun muzoriy fe'l ن (nun) bilan boshlanadi. Mas: نَكْتُبُ (biz yozamiz)."},
+  {s:2, uz:"Quyidagilardan qaysi biri 'Zarf' (joy ko'makchisi) hisoblanadi?", opts:["فِي","عَلَى","أَمَامَ","إِلَى"], oar:true, c:2, f:"أَمَامَ — joy zarfi (zarful makon). فِي، عَلَى، إِلَى esa harfi jar (old ko'makchi). ⚠️ Eslatma: manba PDF kalitida bu savol javobi xato (فِي) ko'rsatilgan — to'g'risi أَمَامَ."},
+  {s:2, uz:"Muannas (ayol) jinsidagi 'Sen darsni yozyapsan' gapida qaysi fe'l shakli ishlatiladi?", opts:["تَكْتُبُ","تَكْتُبِينَ","يَكْتُبُ","أَكْتُبُ"], oar:true, c:1, f:"'Sen' (ayol, أَنْتِ) → تَكْتُبِينَ: تَ prefiks + ـِينَ qo'shimcha. تَكْتُبُ — erkak 'sen' uchun."},
+  {s:2, uz:"«كَتَبَ» fe'lining muzoriy uchinchi shaxs muzakkar (erkak) birlik shakli qaysi?", opts:["يَكْتُبُ","تَكْتُبُ","سَنَكْتُبُ","أَكْتُبُ"], oar:true, c:0, f:"3-shaxs muzakkar birlik muzoriy: يَكْتُبُ (u yozadi) — ي prefiks."},
+  {s:2, uz:"'Kamdan-kam kitob o'qiydi' gapidagi fe'l uchinchi shaxs ayol kishiga tegishli bo'lsa, qaysi fe'ldan boshlanadi?", opts:["يَقْرَأُ","تَقْرَأُ","أَقْرَأُ","نَقْرَأُ"], oar:true, c:1, f:"3-shaxs muannas (ayol) birlik muzoriy ت bilan boshlanadi: تَقْرَأُ (u, ayol, o'qiydi)."},
+  {s:2, uz:"Qavs ichidagi (4) soni «طَاوِلَةٌ» (stol) so'zi bilan kelganda qanday o'zgaradi?", opts:["أَرْبَعَةُ طَاوِلَاتٍ","أَرْبَعُ طَاوِلَاتٍ","أَرْبَعَةَ طَاوِلَةٍ","أَرْبَعُ طَاوِلَةٍ"], oar:true, c:1, f:"طَاوِلَةٌ — muannas. 3–10 sonlarda son sanaluvchining aksi jinsida bo'ladi, shuning uchun ـة-siz: أَرْبَعُ. Sanaluvchi esa ko'plik, majrur: طَاوِلَاتٍ."},
+  {s:2, uz:"'Sizlar (erkaklar) darsni tushunyapsizlar' gapida qaysi fe'l shakli to'g'ri?", opts:["تَفْهَمُونَ","يَفْهَمُونَ","تَفْهَمْنَ","تَفْهَمَانِ"], oar:true, c:0, f:"'Sizlar' (erkaklar, أَنْتُمْ) → تَفْهَمُونَ: تَ prefiks + ـُونَ ko'plik qo'shimchasi."},
+  {s:2, uz:"'Ular (ayollar) uydan chiqishyapti' gapidagi fe'lni aniqlang.", opts:["يَخْرُجُونَ","تَخْرُجْنَ","يَخْرُجْنَ","يَخْرُجَانِ"], oar:true, c:2, f:"'Ular' (ayollar, هُنَّ) → 3-shaxs muannas ko'plik: يَخْرُجْنَ (ي prefiks + ـْنَ)."},
+  {s:2, uz:"Egalik qo'shimchalaridan 'Sizlarning amakingiz' iborasida qaysi qo'shimcha amaki so'ziga qo'shiladi?", opts:["عَمُّهَا","عَمُّكُمْ","عَمُّكُنَّ","عَمُّهُمْ"], oar:true, c:1, f:"'Sizlarning' (erkaklar ko'pligi) egalik qo'shimchasi ـكُمْ: عَمُّكُمْ."},
+  {s:2, uz:"'Muzoriy fe'li' qaysi zamonlarni o'z ichiga oladi?", opts:["Faqat hozirgi zamon","Faqat o'tgan zamon","Hozirgi va kelasi zamon","O'tgan va kelasi zamon"], oar:false, c:2, f:"Muzoriy fe'l ham hozirgi, ham kelasi zamonni ifodalaydi."},
+  {s:2, uz:"'U ikkisining surati' birikmasi arab tilida qanday bo'ladi?", opts:["صُورَتُهُ","صُورَتُهُمَا","صُورَتُهُمْ","صُورَتُهَا"], oar:true, c:1, f:"'U ikkisining' ikkilik egalik qo'shimchasi ـهُمَا: صُورَتُهُمَا."},
+
+  /* ---------- III. GAP TUZISH (31-45) ---------- */
+  {s:3, uz:"Bo'sh joyga mos so'zni toping:", ar:"نَحْنُ ___ الدَّرْسَ بَعْدَ المَدْرَسَةِ", opts:["نَفْهَمُ","يَفْهَمُ","تَفْهَمُ","أَفْهَمُ"], oar:true, c:0, f:"Ega نَحْنُ (biz) bo'lgani uchun fe'l ن bilan boshlanadi: نَفْهَمُ (biz tushunamiz)."},
+  {s:3, uz:"'Zayd va Mahmud ___' gapidagi bo'shliqqa 'sharbat ichishyapti' iborasini qo'ying.", opts:["يَشْرَبُ العَصِيرَ","يَشْرَبَانِ العَصِيرَ","تَشْرَبَانِ العَصِيرَ","يَشْرَبُونَ العَصِيرَ"], oar:true, c:1, f:"Ega ikki kishi (Zayd va Mahmud) — ikkilik muzakkar fe'l: يَشْرَبَانِ."},
+  {s:3, uz:"Bo'sh joyni to'ldiring:", ar:"الطَّالِبَاتُ لَا ___ فِي الدَّرْسِ", opts:["يَلْعَبُونَ","تَلْعَبْنَ","يَلْعَبْنَ","تَلْعَبَانِ"], oar:true, c:2, f:"الطَّالِبَاتُ — 3-shaxs muannas ko'plik, fe'l يَلْعَبْنَ (ular, qizlar, o'ynamaydilar)."},
+  {s:3, uz:"'Sening xolalaring kechki payt ovqat pishirishadimi?' savoliga mos javobni toping.", opts:["هَلْ خَالَاتُكَ يَطْبُخْنَ الطَّعَامَ مَسَاءً؟","هَلْ خَالُكَ يَطْبُخُ الطَّعَامَ صَبَاحًا؟","هَلْ خَالَاتُكَ يَطْبُخُونَ الطَّعَامَ مَسَاءً؟","هَلْ أُخْتُكَ يَطْبُخُ الطَّعَامَ مَسَاءً؟"], oar:true, c:0, f:"خَالَاتُكَ (xolalaring — ayollar ko'pligi) → fe'l muannas ko'plik يَطْبُخْنَ, مَسَاءً (kechqurun)."},
+  {s:3, uz:"Bo'sh joyga mos predlogni tanlang (Kitob stol tagida):", ar:"الكِتَابُ ___ الطَّاوِلَةِ", opts:["فَوْقَ","عَلَى","تَحْتَ","خَلْفَ"], oar:true, c:2, f:"تَحْتَ = tagida. Kitob stol tagida → الكِتَابُ تَحْتَ الطَّاوِلَةِ."},
+  {s:3, uz:"'Ishchilar bu yerda olti oy ishlashadi' gapining to'g'ri arabcha shakli qaysi?", opts:["العُمَّالُ يَعْمَلُونَ هُنَا سِتَّةَ أَشْهُرٍ","العَامِلُ يَعْمَلُ هُنَا سِتَّةَ أَشْهُرٍ","العُمَّالُ نَعْمَلُ هُنَا سِتَّةَ أَشْهُرٍ","العُمَّالُ يَعْمَلُونَ هُنَاكَ سِتَّةَ أَشْهُرٍ"], oar:true, c:0, f:"العُمَّالُ (ishchilar, ko'plik) → يَعْمَلُونَ, هُنَا (bu yerda)."},
+  {s:3, uz:"Gapni to'ldiring:", ar:"هُنَاكَ عِدَّةُ ___ فِي المَكْتَبَةِ", opts:["كِتَابٌ","كُتُبٍ","كِتَابًا","الكُتُبُ"], oar:true, c:1, f:"عِدَّةُ (bir necha) muzofun ileyhi sifatida ko'plik, majrur ot oladi: كُتُبٍ."},
+  {s:3, uz:"'Mening bobom zalda, kursi ustida o'tiribdi' gapini arab tiliga tarjima qiling.", opts:["جَدِّي تَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ","جَدِّي يَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ","جَدِّي يَجْلِسُ فِي الغُرْفَةِ تَحْتَ الكُرْسِيِّ","أَبِي يَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ"], oar:true, c:1, f:"جَدِّي (bobom) muzakkar → يَجْلِسُ. A-variant تَجْلِسُ (muannas) xato; D-variant أَبِي (otam) ma'noni o'zgartiradi."},
+  {s:3, uz:"'Sinfdan qalamlarni olasizlarmi, ey talaba qizlar?' gapiga mos javob variantini toping.", opts:["هَلْ تَأْخُذُونَ الأَقْلَامَ مِنَ الصَّفِّ يَا مُعَلِّمُ؟","هَلْ تَأْخُذْنَ الأَقْلَامَ مِنَ الصَّفِّ يَا طَالِبَاتُ؟","هَلْ تَأْخُذِينَ القَلَمَ مِنَ المَكْتَبَةِ؟","هَلْ تَأْخُذْنَ الأَقْلَامَ مِنَ الصَّفِّ؟"], oar:true, c:1, f:"يَا طَالِبَاتُ (qizlar) → 2-shaxs muannas ko'plik fe'l تَأْخُذْنَ, الأَقْلَام (qalamlar) va الصَّفّ (sinf)."},
+  {s:3, uz:"Bo'sh joyga egalik qo'shimchasini qo'ying:", ar:"أَيْنَ دَرْسُ___ يَا طَالِبَانِ؟", opts:["كُمْ","كُمَا","كُنَّ","هُمَا"], oar:true, c:1, f:"يَا طَالِبَانِ (ikki talaba) — ikkilikka murojaat, egalik qo'shimchasi ـكُمَا: دَرْسُكُمَا."},
+  {s:3, uz:"'U (ayol) shifokor, u xonaga kiradi' gapining arabcha tarjimasini aniqlang.", opts:["هُوَ طَبِيبٌ يَدْخُلُ فِي الغُرْفَةِ","هِيَ طَبِيبَةٌ تَدْخُلُ الغُرْفَةَ","هِيَ مُعَلِّمَةٌ تَدْخُلُ المَدْرَسَةَ","أَنَا طَبِيبَةٌ أَدْخُلُ الغُرْفَةَ"], oar:true, c:1, f:"هِيَ طَبِيبَةٌ (u, ayol, shifokor) → muannas fe'l تَدْخُلُ الغُرْفَةَ (xonaga kiradi)."},
+  {s:3, uz:"'Ikki do'st bu hafta sartaroshga borishadi' gapidagi fe'l va foil (ega) mosligini toping.", opts:["الصَّدِيقَانِ يَذْهَبَانِ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ","الصَّدِيقُ يَذْهَبُ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ","الصَّدِيقَانِ تَذْهَبَانِ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ","الأَصْدِقَاءُ يَذْهَبُونَ إِلَى الحَلَّاقِ"], oar:true, c:0, f:"الصَّدِيقَانِ (ikki do'st) → ikkilik muzakkar fe'l يَذْهَبَانِ. C-variant تَذْهَبَانِ (muannas) xato."},
+  {s:3, uz:"Bo'sh joyga mos so'zni qo'ying:", ar:"أَنْتَ تَطْبُخُ الطَّعَامَ فِي ___", opts:["الصَّالَةِ","المَطْبَخِ","المَكْتَبَةِ","الشَّارِعِ"], oar:true, c:1, f:"Ovqatni odatda oshxonada pishiriladi: المَطْبَخِ (oshxona)."},
+  {s:3, uz:"'Bizning mudirimiz ba'zi talabalarga nasihat qildi' gapining arabcha tarjimasi qaysi?", opts:["مُدِيرُنَا نَصَحَ بَعْضَ الطُّلَّابِ","المُدِيرُ يَنْصَحُ بَعْضَ الطُّلَّابِ","مُدِيرُكُمْ نَصَحَ بَعْضَ الطَّالِبَاتِ","أَنَا أَنْصَحُ المُدِيرَ"], oar:true, c:0, f:"مُدِيرُنَا (bizning mudirimiz) + o'tgan zamon نَصَحَ (nasihat qildi) + بَعْضَ الطُّلَّابِ (ba'zi talabalar)."},
+  {s:3, uz:"Bo'sh joyni mantiqan to'ldiring:", ar:"هَذَا البَابُ صَغِيرٌ وَهُوَ ___", opts:["نَظِيفٌ","جَمِيلٌ","وَسِخٌ","وَاسِعٌ"], oar:true, c:2, f:"وَسِخٌ = kir/iflos. وَاسِعٌ (keng) صَغِيرٌ (kichik) ga zid bo'lgani uchun mantiqan to'g'ri kelmaydi."},
+
+  /* ---------- IV. TARJIMA (46-55) ---------- */
+  {s:4, uz:"'O'quvchilar yangi darsni eshitishyapti va uni tushunishyapti' — to'g'ri tarjimani toping.", opts:["الطُّلَّابُ يَسْتَمِعُونَ إِلَى الدَّرْسِ الجَدِيدِ وَيَفْهَمُونَهُ","الطُّلَّابُ يَكْتُبُونَ الدَّرْسَ الجَدِيدَ وَيَفْهَمُونَهُ","الطَّالِبَانِ يَسْتَمِعَانِ الدَّرْسَ الجَدِيدَ","الطَّالِبَاتُ يَسْتَمِعْنَ الدَّرْسَ القَدِيمَ"], oar:true, c:0, f:"الطُّلَّابُ يَسْتَمِعُونَ (eshitishadi) + وَيَفْهَمُونَهُ (uni tushunishadi). B 'yozishadi', D 'eski dars' — ma'no buziladi."},
+  {s:4, uz:"'Siz ikkingiz darsdan keyin uyga qaytasizlar, so'ng taom yeysizlar' — to'g'ri tarjimani toping.", opts:["أَنْتُمَا تَرْجِعَانِ إِلَى البَيْتِ بَعْدَ الدَّرْسِ ثُمَّ تَأْكُلَانِ الطَّعَامَ","أَنْتُمْ تَرْجِعُونَ إِلَى البَيْتِ بَعْدَ الدَّرْسِ ثُمَّ تَأْكُلُونَ","هُمَا يَرْجِعَانِ إِلَى البَيْتِ بَعْدَ الدَّرْسِ وَيَأْكُلَانِ","أَنْتُمَا تَذْهَبَانِ إِلَى المَدْرَسَةِ بَعْدَ الدَّرْسِ"], oar:true, c:0, f:"أَنْتُمَا (siz ikkingiz) → تَرْجِعَانِ ... ثُمَّ تَأْكُلَانِ. B ko'plik, C 3-shaxs — mos emas."},
+  {s:4, uz:"'Yangi darsni o'qiysizlarmi, ey talabalar?' — to'g'ri tarjimani toping.", opts:["هَلْ تَقْرَأْنَ الدَّرْسَ الجَدِيدَ يَا طَالِبَاتُ؟","هَلْ تَقْرَأُونَ الدَّرْسَ الجَدِيدَ يَا طُلَّابُ؟","هَلْ يَقْرَأُونَ الدَّرْسَ الجَدِيدَ يَا طُلَّابُ؟","هَلْ تَقْرَأُ الدَّرْسَ القَدِيمَ يَا زَيْدُ؟"], oar:true, c:1, f:"يَا طُلَّابُ (talabalar) → 2-shaxs ko'plik تَقْرَأُونَ. C يَقْرَأُونَ (3-shaxs) murojaatga mos emas."},
+  {s:4, uz:"'Uning nevaralari darsni yodlashadi, keyin uy yonida o'ynashadi' — to'g'ri tarjimani toping.", opts:["أَحْفَادُهُ يَحْفَظُونَ الدَّرْسَ ثُمَّ يَلْعَبُونَ جَانِبَ البَيْتِ","حَفِيدُهُ يَحْفَظُ الدَّرْسَ ثُمَّ يَلْعَبُ فِي البَيْتِ","أَحْفَادُهَا يَكْتُبُونَ الدَّرْسَ ثُمَّ يَلْعَبُونَ فِي الصَّفِّ","الأَوْلَادُ يَحْفَظُونَ الدَّرْسَ وَيَلْعَبُونَ أَمَامَ المَدْرَسَةِ"], oar:true, c:0, f:"أَحْفَادُهُ (uning nevaralari) → يَحْفَظُونَ ... يَلْعَبُونَ جَانِبَ البَيْتِ (uy yonida)."},
+  {s:4, uz:"'Stol ustida beshta yangi kitob bor' — to'g'ri tarjimani toping.", opts:["عَلَى الطَّاوِلَةِ خَمْسَةُ كُتُبٍ جَدِيدَةٍ","تَحْتَ الطَّاوِلَةِ خَمْسَةُ كُتُبٍ قَدِيمَةٍ","فِي الخِزَانَةِ خَمْسَةُ كُتُبٍ جَدِيدَةٍ","عَلَى الطَّاوِلَةِ ثَلَاثَةُ كُتُبٍ جَدِيدَةٍ"], oar:true, c:0, f:"عَلَى الطَّاوِلَةِ (stol ustida) + خَمْسَةُ كُتُبٍ جَدِيدَةٍ (beshta yangi kitob)."},
+  {s:4, uz:"'Sening eski qalaming stol tagida' — to'g'ri tarjimani toping.", opts:["قَلَمُكَ الجَدِيدُ فَوْقَ الطَّاوِلَةِ","قَلَمُكَ القَدِيمُ خَلْفَ الطَّاوِلَةِ","قَلَمُكَ القَدِيمُ تَحْتَ الطَّاوِلَةِ","دَفْتَرُكَ القَدِيمُ تَحْتَ الطَّاوِلَةِ"], oar:true, c:2, f:"قَلَمُكَ القَدِيمُ (eski qalaming) + تَحْتَ الطَّاوِلَةِ (stol tagida)."},
+  {s:4, uz:"'Eshik orqasida uchta xona bor' — to'g'ri tarjimani toping.", opts:["أَمَامَ البَابِ ثَلَاثُ غُرَفٍ","وَرَاءَ البَابِ ثَلَاثُ غُرَفٍ","وَرَاءَ البَابِ ثَلَاثَةُ غُرَفٍ","فِي البَيْتِ ثَلَاثُ غُرَفٍ"], oar:true, c:1, f:"وَرَاءَ البَابِ (eshik orqasida). غُرْفَة muannas bo'lgani uchun son ـة-siz: ثَلَاثُ غُرَفٍ."},
+  {s:4, uz:"'Oshxonada bitta katta stol va oltita kursi bor' — to'g'ri tarjimani toping.", opts:["فِي المَطْبَخِ طَاوِلَةٌ وَاحِدَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ","فِي الصَّالَةِ طَاوِلَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ","فِي المَطْبَخِ طَاوِلَةٌ صَغِيرَةٌ وَخَمْسَةُ كَرَاسِيَّ","فِي المَطْعَمِ طَاوِلَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ"], oar:true, c:0, f:"فِي المَطْبَخِ (oshxonada) + طَاوِلَةٌ كَبِيرَةٌ (katta stol) + سِتَّةُ كَرَاسِيَّ (oltita kursi)."},
+  {s:4, uz:"'Talaba ustozi oldida kitob o'qiyapti' — to'g'ri tarjimani toping.", opts:["الطَّالِبُ تَكْتُبُ الكِتَابَ أَمَامَ الأُسْتَاذِ","الطَّالِبُ يَقْرَأُ الكِتَابَ أَمَامَ الأُسْتَاذِ","الأُسْتَاذُ يَقْرَأُ الكِتَابَ أَمَامَ الطَّالِبِ","الطَّالِبُ يَقْرَأُ الكِتَابَ خَلْفَ الأُسْتَاذِ"], oar:true, c:1, f:"الطَّالِبُ يَقْرَأُ (talaba o'qiyapti) + أَمَامَ الأُسْتَاذِ (ustozi oldida)."},
+  {s:4, uz:"'Sizlarning amakingiz mashina oldiga ketyapti' — to'g'ri tarjimani toping.", opts:["عَمُّكُمْ يَذْهَبُ أَمَامَ السَّيَّارَةِ","خَالُكُمْ يَذْهَبُ أَمَامَ السَّيَّارَةِ","عَمُّهَا يَذْهَبُ خَلْفَ السَّيَّارَةِ","عَمُّكُمْ يَرْجِعُ مِنَ السَّيَّارَةِ"], oar:true, c:0, f:"عَمُّكُمْ (sizlarning amakingiz) + يَذْهَبُ أَمَامَ السَّيَّارَةِ (mashina oldiga ketyapti)."},
+
+  /* ---------- V. XATONI TO'G'RILASH (56-60) ---------- */
+  {s:5, uz:"Grammatik jihatdan XATO tuzilgan gapni aniqlang.", opts:["الكِتَابُ عَلَى الطَّاوِلَةِ","جَلَسَ زَيْدٌ عَلَى الكُرْسِيِّ","هُوَ تَكْتُبَانِ الدَّرْسَ","الطَّالِبَاتُ يَخْرُجْنَ مِنَ الصَّفِّ"], oar:true, c:2, f:"«هُوَ تَكْتُبَانِ» xato: «هُوَ» (u, birlik) ga ikkilik fe'l تَكْتُبَانِ mos kelmaydi. To'g'risi: هُوَ يَكْتُبُ."},
+  {s:5, uz:"Ushbu gapdagi xatoni toping:", ar:"الأُسْتَاذُ يَدْخُلُ فِي الصَّفُّ", opts:["«الأُسْتَاذُ» so'zi fathali bo'lishi kerak","«يَدْخُلُ» fe'li muannas bo'lishi kerak","«الصَّفّ» harfi jardan (فِي) keyin kelgani uchun kasrali — الصَّفِّ — bo'lishi kerak","Gapda umuman xato yo'q"], oar:false, c:2, f:"فِي (harfi jar) dan keyingi ism majrur — kasrali bo'ladi: فِي الصَّفِّ."},
+  {s:5, uz:"Qaysi qatorda olmosh va fe'l mosligi BUZILGAN?", opts:["أَنَا أَشْرَبُ","أَنْتِ تَكْتُبِينَ","هُمْ يَعْمَلُونَ","هِيَ يَجْلِسُ"], oar:true, c:3, f:"«هِيَ يَجْلِسُ» buzilgan: «هِيَ» (u, ayol) muzoriy fe'li ت bilan bo'lishi kerak — هِيَ تَجْلِسُ. يَجْلِسُ — muzakkar shakl."},
+  {s:5, uz:"Sifat va mavsuf (ot + sifat) mosligi buzilgan noto'g'ri birikmani toping.", opts:["المَكْتَبَةُ الوَاسِعَةُ","خِزَانَةٌ جَدِيدٌ","قَلَمٌ قَدِيمٌ","البَابُ الصَّغِيرُ"], oar:true, c:1, f:"«خِزَانَةٌ» — muannas ot, sifati ham muannas bo'lishi kerak: خِزَانَةٌ جَدِيدَةٌ. «جَدِيدٌ» muzakkar — moslik buzilgan."},
+  {s:5, uz:"Ushbu gapdagi xatolik nimada?", ar:"هَلْ تَذْهَبُونَ إِلَى المَدْرَسَةِ يَا طَالِبَاتُ؟", opts:["«إِلَى» o'rniga «عَلَى» bo'lishi kerak","«يَا طَالِبَاتُ» (ayollar) bo'lgani uchun fe'l «تَذْهَبْنَ» shaklida bo'lishi shart","«المَدْرَسَةِ» so'zi fathali bo'lishi kerak","«هَلْ» yuklamasi bu yerda ishlatilmaydi"], oar:false, c:1, f:"يَا طَالِبَاتُ (ayollar) ga murojaat — fe'l 2-shaxs muannas ko'plik bo'lishi kerak: تَذْهَبْنَ, تَذْهَبُونَ (erkaklar shakli) emas."}
+];
+
+const TIMER_SECONDS = 1800; // 30 daqiqa
+const PASS_PCT = 70;        // o'tish chegarasi (%)
+const SHUFFLE_OPTIONS = true; // variantlar tartibini aralashtirish
+
+let ACTIVE = [];
+let qIndex = 0;
+let score = 0;
+let secScore = [0,0,0,0,0];
+let secTotal = [0,0,0,0,0];
+let timeLeft = TIMER_SECONDS;
+let timerInterval = null;
+let answered = false;
+
+/* ---------- Telegram WebApp init (xavfsiz) ---------- */
+try{
+  if(window.Telegram && window.Telegram.WebApp){
+    Telegram.WebApp.ready();
+    Telegram.WebApp.expand();
+  }
+}catch(e){}
+
+/* ---------- Fisher-Yates shuffle ---------- */
+function shuffleArray(arr){
+  const a = arr.slice();
+  for(let i=a.length-1; i>0; i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]] = [a[j],a[i]];
+  }
+  return a;
+}
+
+/* ---------- Test flow ---------- */
+function startTest(){
+  document.getElementById('materialScreen').style.display = 'none';
+  document.getElementById('resultScreen').style.display = 'none';
+  document.getElementById('testScreen').style.display = 'block';
+
+  // Savollar manba tartibida (1..60), bo'limlar bo'yicha
+  ACTIVE = QUESTIONS.slice();
+
+  qIndex = 0;
+  score = 0;
+  secScore = [0,0,0,0,0];
+  secTotal = [0,0,0,0,0];
+  ACTIVE.forEach(q => secTotal[q.s-1]++);
+  timeLeft = TIMER_SECONDS;
+  answered = false;
+
+  startTimer();
+  renderQuestion();
+  window.scrollTo({top:0, behavior:'instant'});
+}
+
+function startTimer(){
+  updateTimerDisplay();
+  if(timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(()=>{
+    timeLeft--;
+    updateTimerDisplay();
+    if(timeLeft <= 0){
+      clearInterval(timerInterval);
+      finishTest();
+    }
+  },1000);
+}
+
+function updateTimerDisplay(){
+  const m = Math.floor(Math.max(timeLeft,0)/60);
+  const s = Math.max(timeLeft,0) % 60;
+  const el = document.getElementById('timerBadge');
+  el.textContent = String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0');
+  el.classList.remove('warn','danger');
+  if(timeLeft <= 120) el.classList.add('danger');
+  else if(timeLeft <= 300) el.classList.add('warn');
+}
+
+function renderQuestion(){
+  if(qIndex >= ACTIVE.length){ finishTest(); return; }
+  answered = false;
+
+  const q = ACTIVE[qIndex];
+
+  document.getElementById('qCounter').textContent = `Savol ${qIndex+1} / ${ACTIVE.length}`;
+  document.getElementById('qLabel').textContent = SECTIONS[q.s-1];
+  document.getElementById('gbarFill').style.width = (qIndex/ACTIVE.length*100) + '%';
+
+  // Prompt: o'zbekcha matn + (ixtiyoriy) arab matni
+  const promptEl = document.getElementById('qPrompt');
+  let html = '';
+  if(q.uz) html += `<div class="q-uztext">${q.uz}</div>`;
+  if(q.ar) html += `<div class="q-ar arabic">${q.ar}</div>`;
+  promptEl.innerHTML = html;
+
+  // Variantlar
+  const withFlags = q.opts.map((text,i)=>({text, correct: i===q.c}));
+  const shown = SHUFFLE_OPTIONS ? shuffleArray(withFlags) : withFlags;
+
+  const optsDiv = document.getElementById('optsContainer');
+  optsDiv.innerHTML = '';
+  optsDiv.classList.remove('locked');
+
+  const letters = ['A','B','C','D'];
+  shown.forEach((o,i)=>{
+    const btn = document.createElement('div');
+    btn.className = 'opt' + (q.oar ? ' opt-ar' : '');
+    btn.dataset.correct = o.correct ? 'true' : 'false';
+    const textClass = q.oar ? 'opt-text arabic' : 'opt-text';
+    btn.innerHTML = `<span class="ltr">${letters[i]}</span><span class="${textClass}">${o.text}</span>`;
+    btn.onclick = ()=> selectOption(btn, o.correct, q.f, q.s);
+    optsDiv.appendChild(btn);
+  });
+
+  const oldFb = document.getElementById('qCard').querySelector('.feedback-box');
+  if(oldFb) oldFb.remove();
+
+  const container = document.getElementById('qCard');
+  container.style.animation = 'none';
+  void container.offsetHeight;
+  container.style.animation = '';
+}
+
+function selectOption(el, isCorrect, feedbackText, secNum){
+  if(answered) return;
+  answered = true;
+
+  const optsDiv = document.getElementById('optsContainer');
+  optsDiv.classList.add('locked');
+
+  if(isCorrect){
+    el.classList.add('ok');
+    score++;
+    secScore[secNum-1]++;
+  } else {
+    el.classList.add('no');
+    const correctEl = optsDiv.querySelector('.opt[data-correct="true"]');
+    if(correctEl) correctEl.classList.add('ok');
+  }
+
+  if(feedbackText){
+    const fb = document.createElement('div');
+    fb.className = 'feedback-box';
+    fb.innerHTML = '💡 ' + feedbackText;
+    document.getElementById('qCard').appendChild(fb);
+  }
+
+  setTimeout(()=>{
+    qIndex++;
+    if(qIndex >= ACTIVE.length){
+      document.getElementById('gbarFill').style.width = '100%';
+      setTimeout(finishTest, 400);
+    } else {
+      renderQuestion();
+    }
+  }, 2200);
+}
+
+function finishTest(){
+  clearInterval(timerInterval);
+  document.getElementById('testScreen').style.display = 'none';
+
+  const total = ACTIVE.length;
+  const pct = Math.round(score/total*100);
+  const passThreshold = Math.ceil(total * PASS_PCT/100);
+  const passed = score >= passThreshold;
+
+  document.getElementById('resPct').textContent = pct + '%';
+  document.getElementById('resFrac').textContent = score + '/' + total;
+  document.getElementById('resIcon').textContent = passed ? (pct>=90 ? '🏆' : '🎓') : '📚';
+  document.getElementById('resTitle').textContent = passed
+    ? "Barakalloh! Yakuniy imtihondan o'tdingiz!"
+    : "Hali yetarli emas — qayta urinib ko'ring";
+
+  const msgEl = document.getElementById('resMsg');
+  if(passed){
+    msgEl.className = 'res-msg pass';
+    msgEl.innerHTML = `Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz — talab qilingan <b>${PASS_PCT}%</b> chegarasidan o'tdingiz. A0 darajani muvaffaqiyatli yakunladingiz!`;
+  } else {
+    msgEl.className = 'res-msg fail';
+    msgEl.innerHTML = `Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz. O'tish uchun kamida <b>${PASS_PCT}%</b> (${passThreshold}/${total}) kerak. Mavzularni qayta ko'rib chiqing va imtihonni qayta topshiring.`;
+  }
+
+  // Bo'limlar bo'yicha natija
+  const bdEl = document.getElementById('resBreakdown');
+  bdEl.innerHTML = '';
+  for(let i=0;i<SECTIONS.length;i++){
+    if(secTotal[i]===0) continue;
+    const row = document.createElement('div');
+    row.className = 'bd-row';
+    row.innerHTML = `<span class="bd-name">${SECTIONS[i]}</span><span class="bd-score">${secScore[i]}/${secTotal[i]}</span>`;
+    bdEl.appendChild(row);
+  }
+
+  const btnsEl = document.getElementById('resBtns');
+  btnsEl.innerHTML = '';
+  if(passed){
+    const lockedBtn = document.createElement('div');
+    lockedBtn.className = 'btn-locked';
+    lockedBtn.textContent = '🎓 A0 daraja yakunlandi — keyingi daraja tez orada';
+    btnsEl.appendChild(lockedBtn);
+  }
+  const retryBtn = document.createElement('button');
+  retryBtn.className = 'btn-secondary';
+  retryBtn.textContent = passed ? '🔁 Imtihonni qayta topshirish' : '🔄 Qayta urinish';
+  retryBtn.onclick = startTest;
+  btnsEl.appendChild(retryBtn);
+
+  const reviewBtn = document.createElement('button');
+  reviewBtn.className = 'btn-secondary';
+  reviewBtn.textContent = "📖 Bosh sahifaga qaytish";
+  reviewBtn.onclick = ()=>{
+    document.getElementById('resultScreen').style.display = 'none';
+    document.getElementById('materialScreen').style.display = 'block';
+    window.scrollTo({top:0, behavior:'instant'});
+  };
+  btnsEl.appendChild(reviewBtn);
+
+  document.getElementById('resultScreen').style.display = 'flex';
+  window.scrollTo({top:0, behavior:'instant'});
+}
+</script>
+</body>
+</html>
