@@ -1,15 +1,15 @@
 {
   "title": "Mufradot — A1 1-dars",
-  "otish": 80,
+  "otish": 70,
   "vaqt": 20,
   "questions": [
     {
       "q": "«Xayrli tong (javob)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَبْعَةٌ",
-        "بَيْت",
+        "مَرْحَبًا",
+        "فِي أَمَانِ الله",
         "صَبَاحُ النُّورِ",
-        "فِي أَمَانِ الله"
+        "مَسَاءُ النُّور"
       ],
       "correct": 2,
       "izoh": "Xayrli tong (javob) = صَبَاحُ النُّورِ"
@@ -17,43 +17,43 @@
     {
       "q": "«عَشَرَةٌ» so'zining ma'nosi?",
       "opts": [
-        "O'n (10)",
-        "Ayol",
-        "Sumka",
-        "Damashq"
+        "To'qqiz (9)",
+        "Olti (6)",
+        "O'ttiz (30)",
+        "O'n (10)"
       ],
-      "correct": 0,
+      "correct": 3,
       "izoh": "عَشَرَةٌ = O'n (10)"
     },
     {
       "q": "«القُدْس» so'zining ma'nosi?",
       "opts": [
+        "Quvayt",
+        "Dubay",
         "Quddus",
-        "Yetti (7)",
-        "Qohira",
-        "Salom / Marhaba"
+        "Suriya"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "القُدْس = Quddus"
     },
     {
       "q": "«سَعِيد» so'zining ma'nosi?",
       "opts": [
-        "Iroq",
         "Xursand",
-        "O'yinchi",
-        "Doska"
+        "Yashaydi",
+        "Har kuni",
+        "Qancha?"
       ],
-      "correct": 1,
+      "correct": 0,
       "izoh": "سَعِيد = Xursand"
     },
     {
       "q": "«Talabalar» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "الطُّلَّاب",
-        "دِمَشْق",
-        "عَمَّان",
-        "سَبْعَةٌ"
+        "لَاعِب",
+        "اللُّغَة العَرَبِيَّة",
+        "العُمْر"
       ],
       "correct": 0,
       "izoh": "Talabalar = الطُّلَّاب"
@@ -61,76 +61,76 @@
     {
       "q": "«Maktab» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "دُبَيّ",
-        "دِمَشْق",
+        "مَدْرَسَةٌ",
+        "مُدِيرَة",
         "مُمَرِّضَة",
-        "مَدْرَسَةٌ"
+        "مُهَنْدِسَة"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Maktab = مَدْرَسَةٌ"
     },
     {
       "q": "«Yosh (umr)» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "الطُّلَّاب",
         "العُمْر",
-        "سَبُّورَة",
-        "السُّودَان",
-        "مَعْهَد"
+        "عَلَم",
+        "مُعَلِّمَةٌ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Yosh (umr) = العُمْر"
     },
     {
       "q": "«Salomlashish» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَدْرَسَةٌ",
-        "وَاحِدٌ",
-        "التَّحِيَّة",
-        "عَلَم"
+        "صَبَاحُ النُّورِ",
+        "فِي أَمَانِ الله",
+        "مَرْحَبًا",
+        "التَّحِيَّة"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Salomlashish = التَّحِيَّة"
     },
     {
       "q": "«Xayrli kech (javob)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تَعْمَلُ",
+        "مَسَاءُ النُّور",
+        "فِي أَمَانِ الله",
         "مَرْحَبًا",
-        "أَرْبَعَةٌ",
-        "مَسَاءُ النُّور"
+        "صَبَاحُ النُّورِ"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Xayrli kech (javob) = مَسَاءُ النُّور"
     },
     {
       "q": "«Tanishganimdan xursandman» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُعَلِّمَةٌ",
-        "مُهَنْدِسَة",
         "سَعِيدٌ بِلِقَائِكَ",
-        "القُدْس"
+        "التَّحِيَّة",
+        "صَبَاحُ النُّورِ",
+        "مَسَاءُ النُّور"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "Tanishganimdan xursandman = سَعِيدٌ بِلِقَائِكَ"
     },
     {
       "q": "«O'ttiz (30)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "الكُوَيْت",
-        "مَسَاءُ النُّور",
         "ثَلَاثُون",
-        "البَلَد"
+        "اِثْنَانِ",
+        "ثَمَانِيَةٌ",
+        "ثَلَاثَةٌ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "O'ttiz (30) = ثَلَاثُون"
     },
     {
       "q": "«دِمَشْق» so'zining ma'nosi?",
       "opts": [
-        "Ikki (2)",
-        "Xayrli kech (javob)",
+        "Quddus",
+        "Amman",
         "Damashq",
-        "Sudan"
+        "Iordaniya"
       ],
       "correct": 2,
       "izoh": "دِمَشْق = Damashq"
@@ -138,21 +138,21 @@
     {
       "q": "«حَقِيبَة» so'zining ma'nosi?",
       "opts": [
-        "Saudiya Arabistoni",
-        "Bayroq",
         "Sumka",
-        "Doska"
+        "Shahar",
+        "Doska",
+        "Maktab"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "حَقِيبَة = Sumka"
     },
     {
       "q": "«اِثْنَانِ» so'zining ma'nosi?",
       "opts": [
         "Ikki (2)",
-        "Amman",
-        "Maktab",
-        "U ishlaydi (ayol)"
+        "Yetti (7)",
+        "Olti (6)",
+        "Sakkiz (8)"
       ],
       "correct": 0,
       "izoh": "اِثْنَانِ = Ikki (2)"
@@ -160,43 +160,43 @@
     {
       "q": "«Bayroq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "امْرَأَة",
-        "مِصْر",
-        "الإِمَارَات",
-        "عَلَم"
+        "العُمْر",
+        "عَلَم",
+        "تَعْمَلُ",
+        "مُعَلِّمَةٌ"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Bayroq = عَلَم"
     },
     {
       "q": "«مُدِيرَة» so'zining ma'nosi?",
       "opts": [
-        "Faol",
-        "To'rt (4)",
         "Direktrix (ayol direktor)",
-        "Amman"
+        "Muhandisa (ayol muhandis)",
+        "U ishlaydi (ayol)",
+        "Muallima (ayol o'qituvchi)"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "مُدِيرَة = Direktrix (ayol direktor)"
     },
     {
       "q": "«تَذْهَبُ» so'zining ma'nosi?",
       "opts": [
-        "Bir (1)",
-        "Sudan",
         "U boradi (ayol)",
-        "Misr"
+        "Direktrix (ayol direktor)",
+        "Muhandisa (ayol muhandis)",
+        "U ishlaydi (ayol)"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "تَذْهَبُ = U boradi (ayol)"
     },
     {
       "q": "«Muhandisa (ayol muhandis)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اِثْنَانِ",
+        "مَعْهَد",
         "مُهَنْدِسَة",
-        "جَامِعَةٌ",
-        "كُلَّ يَوْم"
+        "مَدْرَسَةٌ",
+        "مَدِينَةٌ"
       ],
       "correct": 1,
       "izoh": "Muhandisa (ayol muhandis) = مُهَنْدِسَة"
@@ -204,31 +204,31 @@
     {
       "q": "«Alloh panohida» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "السَّعُودِيَّة",
         "فِي أَمَانِ الله",
-        "تَذْهَبُ",
-        "اللُّغَة العَرَبِيَّة"
+        "مَسَاءُ النُّور",
+        "سَعِيدٌ بِلِقَائِكَ",
+        "التَّحِيَّة"
       ],
-      "correct": 1,
+      "correct": 0,
       "izoh": "Alloh panohida = فِي أَمَانِ الله"
     },
     {
       "q": "«الإِمَارَات» so'zining ma'nosi?",
       "opts": [
-        "Mehmonxona",
-        "Salomlashish",
-        "Xayrli kech (javob)",
-        "BAA"
+        "Amman",
+        "BAA",
+        "Damashq",
+        "Dubay"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "الإِمَارَات = BAA"
     },
     {
       "q": "«Saudiya Arabistoni» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَسَاءُ النُّور",
-        "ثَلَاثُون",
-        "اِثْنَانِ",
+        "الأُرْدُن",
+        "القُدْس",
+        "الكُوَيْت",
         "السَّعُودِيَّة"
       ],
       "correct": 3,
@@ -237,43 +237,43 @@
     {
       "q": "«Har kuni» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "يَسْكُنُ",
         "كُلَّ يَوْم",
-        "العُمْر",
-        "ثَلَاثُون",
-        "صَبَاحُ النُّورِ"
+        "مُدِيرَة",
+        "كَم؟"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Har kuni = كُلَّ يَوْم"
     },
     {
       "q": "«سَبْعَةٌ» so'zining ma'nosi?",
       "opts": [
+        "Ikki (2)",
         "Yetti (7)",
-        "Besh (5)",
-        "Shahar",
-        "O'ttiz (30)"
+        "O'ttiz (30)",
+        "Olti (6)"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "سَبْعَةٌ = Yetti (7)"
     },
     {
       "q": "«O'yinchi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "كُلَّ يَوْم",
-        "ثَلَاثَةٌ",
         "لَاعِب",
-        "رَجُل"
+        "الطُّلَّاب",
+        "العُمْر",
+        "تَعْمَلُ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "O'yinchi = لَاعِب"
     },
     {
       "q": "«Hamshira» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "يَسْكُنُ",
-        "عَلَم",
+        "مُدِيرَة",
+        "مَدِينَةٌ",
         "مُمَرِّضَة",
-        "فِي أَمَانِ الله"
+        "مَدْرَسَةٌ"
       ],
       "correct": 2,
       "izoh": "Hamshira = مُمَرِّضَة"
@@ -281,9 +281,9 @@
     {
       "q": "«Misr» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عَلَم",
-        "مُمَرِّضَة",
-        "القُدْس",
+        "عَمَّان",
+        "دِمَشْق",
+        "الإِمَارَات",
         "مِصْر"
       ],
       "correct": 3,
@@ -292,21 +292,21 @@
     {
       "q": "«رَجُل» so'zining ma'nosi?",
       "opts": [
+        "Sumka",
+        "Oyoq",
         "Erkak",
-        "Qohira",
-        "Arab tili",
-        "Har kuni"
+        "Qorin"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "رَجُل = Erkak"
     },
     {
       "q": "«سِتَّةٌ» so'zining ma'nosi?",
       "opts": [
         "Olti (6)",
-        "Ayol",
-        "U ishlaydi (ayol)",
-        "Institut"
+        "O'n (10)",
+        "Yetti (7)",
+        "Ikki (2)"
       ],
       "correct": 0,
       "izoh": "سِتَّةٌ = Olti (6)"
@@ -314,65 +314,65 @@
     {
       "q": "«مُعَلِّمَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Tush payt",
-        "Saudiya Arabistoni",
-        "Muallima (ayol o'qituvchi)",
-        "Erkak"
+        "Muhandisa (ayol muhandis)",
+        "U boradi (ayol)",
+        "Direktrix (ayol direktor)",
+        "Muallima (ayol o'qituvchi)"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "مُعَلِّمَةٌ = Muallima (ayol o'qituvchi)"
     },
     {
       "q": "«Besh (5)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَقِيبَة",
-        "وَاحِدٌ",
-        "خَمْسَةٌ",
-        "سَعِيد"
+        "سَبْعَةٌ",
+        "سِتَّةٌ",
+        "تِسْعَةٌ",
+        "خَمْسَةٌ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Besh (5) = خَمْسَةٌ"
     },
     {
       "q": "«الظُّهْر» so'zining ma'nosi?",
       "opts": [
-        "O'yinchi",
-        "Arab tili",
-        "Mamlakat",
-        "Tush payt"
+        "Quvayt",
+        "Yashaydi",
+        "Tush payt",
+        "Hamshira"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "الظُّهْر = Tush payt"
     },
     {
       "q": "«Yashaydi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُدِيرَة",
-        "تَذْهَبُ",
+        "كُلَّ يَوْم",
         "يَسْكُنُ",
-        "حَقِيبَة"
+        "نَشِيط",
+        "سَعِيد"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Yashaydi = يَسْكُنُ"
     },
     {
       "q": "«تَعْمَلُ» so'zining ma'nosi?",
       "opts": [
-        "Salom / Marhaba",
-        "O'yinchi",
-        "Ikki (2)",
-        "U ishlaydi (ayol)"
+        "U ishlaydi (ayol)",
+        "Muhandisa (ayol muhandis)",
+        "U boradi (ayol)",
+        "Muallima (ayol o'qituvchi)"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "تَعْمَلُ = U ishlaydi (ayol)"
     },
     {
       "q": "«كَم؟» so'zining ma'nosi?",
       "opts": [
-        "Talabalar",
-        "Salomlashish",
+        "O'yinchi",
+        "Xursand",
         "Qancha?",
-        "Maktab"
+        "Yashaydi"
       ],
       "correct": 2,
       "izoh": "كَم؟ = Qancha?"
@@ -380,30 +380,30 @@
     {
       "q": "«Faol» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "يَسْكُنُ",
-        "فِي أَمَانِ الله",
-        "السُّودَان",
-        "نَشِيط"
+        "سَعِيد",
+        "مَدِينَةٌ",
+        "نَشِيط",
+        "يَسْكُنُ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Faol = نَشِيط"
     },
     {
       "q": "«To'qqiz (9)» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "سَبْعَةٌ",
+        "عَشَرَةٌ",
         "تِسْعَةٌ",
-        "مَسَاءُ النُّور",
-        "مَدْرَسَةٌ",
-        "حَلَب"
+        "سِتَّةٌ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "To'qqiz (9) = تِسْعَةٌ"
     },
     {
       "q": "«مَعْهَد» so'zining ma'nosi?",
       "opts": [
-        "Misr",
-        "Dubay",
+        "Arab tili",
+        "O'yinchi",
         "Institut",
         "Universitet"
       ],
@@ -413,43 +413,43 @@
     {
       "q": "«اللُّغَة العَرَبِيَّة» so'zining ma'nosi?",
       "opts": [
-        "Iordaniya",
-        "Uy",
-        "Arab tili",
-        "Ikki (2)"
+        "Hamshira",
+        "Har kuni",
+        "Talabalar",
+        "Arab tili"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "اللُّغَة العَرَبِيَّة = Arab tili"
     },
     {
       "q": "«Uy» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "تَذْهَبُ",
+        "حَقِيبَة",
         "بِنْت",
-        "سَبْعَةٌ",
-        "بَيْت",
-        "كَم؟"
+        "بَيْت"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Uy = بَيْت"
     },
     {
       "q": "«Amman» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "كَم؟",
+        "الأُرْدُن",
+        "العِرَاق",
         "عَمَّان",
-        "بِنْت",
-        "السَّعُودِيَّة"
+        "دِمَشْق"
       ],
-      "correct": 1,
+      "correct": 2,
       "izoh": "Amman = عَمَّان"
     },
     {
       "q": "«الأُرْدُن» so'zining ma'nosi?",
       "opts": [
-        "Tush payt",
-        "Maktab",
+        "Dubay",
+        "Damashq",
         "Iordaniya",
-        "Mehmonxona"
+        "Suriya"
       ],
       "correct": 2,
       "izoh": "الأُرْدُن = Iordaniya"
@@ -457,53 +457,53 @@
     {
       "q": "«مَدِينَةٌ» so'zining ma'nosi?",
       "opts": [
-        "O'ttiz (30)",
-        "Sudan",
+        "Sumka",
         "Shahar",
-        "Hamshira"
+        "Bayroq",
+        "Maktab"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "مَدِينَةٌ = Shahar"
     },
     {
       "q": "«ثَمَانِيَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Mamlakat",
-        "U ishlaydi (ayol)",
         "Sakkiz (8)",
-        "Direktrix (ayol direktor)"
+        "Besh (5)",
+        "Ikki (2)",
+        "To'qqiz (9)"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "ثَمَانِيَةٌ = Sakkiz (8)"
     },
     {
       "q": "«Doska» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَلَب",
-        "المُسْتَشْفَى",
-        "خَمْسَةٌ",
-        "سَبُّورَة"
+        "مَدْرَسَةٌ",
+        "سَبُّورَة",
+        "مُمَرِّضَة",
+        "حَقِيبَة"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Doska = سَبُّورَة"
     },
     {
       "q": "«Quvayt» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مِصْر",
-        "الكُوَيْت",
-        "حَقِيبَة",
-        "جَامِعَةٌ"
+        "الإِمَارَات",
+        "السَّعُودِيَّة",
+        "العِرَاق",
+        "الكُوَيْت"
       ],
-      "correct": 1,
+      "correct": 3,
       "izoh": "Quvayt = الكُوَيْت"
     },
     {
       "q": "«سُورِيَا» so'zining ma'nosi?",
       "opts": [
-        "Muallima (ayol o'qituvchi)",
-        "Xayrli kech (javob)",
-        "Kasalxona",
+        "Quvayt",
+        "Misr",
+        "Iordaniya",
         "Suriya"
       ],
       "correct": 3,
@@ -512,10 +512,10 @@
     {
       "q": "«Mamlakat» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَعِيد",
+        "المُسْتَشْفَى",
         "البَلَد",
-        "ثَلَاثُون",
-        "عَشَرَةٌ"
+        "فُنْدُق",
+        "القُدْس"
       ],
       "correct": 1,
       "izoh": "Mamlakat = البَلَد"
@@ -523,42 +523,42 @@
     {
       "q": "«مَرْحَبًا» so'zining ma'nosi?",
       "opts": [
+        "Xayrli tong (javob)",
+        "Salomlashish",
         "Salom / Marhaba",
-        "Tush payt",
-        "Xursand",
-        "Bayroq"
+        "Alloh panohida"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "مَرْحَبًا = Salom / Marhaba"
     },
     {
       "q": "«فُنْدُق» so'zining ma'nosi?",
       "opts": [
+        "Kasalxona",
+        "Tush payt",
         "Mehmonxona",
-        "Faol",
-        "O'yinchi",
-        "Quvayt"
+        "Mamlakat"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "فُنْدُق = Mehmonxona"
     },
     {
       "q": "«العِرَاق» so'zining ma'nosi?",
       "opts": [
-        "Bayroq",
-        "Damashq",
+        "Iordaniya",
         "Iroq",
-        "Har kuni"
+        "Misr",
+        "Quddus"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "العِرَاق = Iroq"
     },
     {
       "q": "«المُسْتَشْفَى» so'zining ma'nosi?",
       "opts": [
-        "Uy",
-        "Maktab",
-        "U ishlaydi (ayol)",
+        "Salomlashish",
+        "Mehmonxona",
+        "Mamlakat",
         "Kasalxona"
       ],
       "correct": 3,
@@ -567,21 +567,21 @@
     {
       "q": "«Universitet» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَلَب",
-        "الظُّهْر",
-        "ثَمَانِيَةٌ",
-        "جَامِعَةٌ"
+        "جَامِعَةٌ",
+        "العُمْر",
+        "مُعَلِّمَةٌ",
+        "مَعْهَد"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Universitet = جَامِعَةٌ"
     },
     {
       "q": "«ثَلَاثَةٌ» so'zining ma'nosi?",
       "opts": [
         "Uch (3)",
-        "Amman",
-        "Mehmonxona",
-        "Xayrli kech (javob)"
+        "O'n (10)",
+        "Besh (5)",
+        "Ikki (2)"
       ],
       "correct": 0,
       "izoh": "ثَلَاثَةٌ = Uch (3)"
@@ -589,23 +589,23 @@
     {
       "q": "«Dubay» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "دُبَيّ",
-        "امْرَأَة",
-        "كُلَّ يَوْم",
-        "مَرْحَبًا"
+        "مِصْر",
+        "دِمَشْق",
+        "سُورِيَا",
+        "دُبَيّ"
       ],
-      "correct": 0,
+      "correct": 3,
       "izoh": "Dubay = دُبَيّ"
     },
     {
       "q": "«بِنْت» so'zining ma'nosi?",
       "opts": [
-        "Universitet",
-        "Qohira",
-        "Mamlakat",
-        "Qiz"
+        "Qiz",
+        "Institut",
+        "Qancha?",
+        "Bayroq"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "بِنْت = Qiz"
     }
   ]
