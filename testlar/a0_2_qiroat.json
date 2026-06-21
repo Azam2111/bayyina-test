@@ -2,14 +2,15 @@
   "title": "Qiroat — 2-dars: Al-Mihan (Kasblar)",
   "kitob": "A0 Bayyina_compressed (1).pdf",
   "bet": 40,
-  "otish": 70,
+  "otish": 80,
   "vaqt": 10,
   "questions": [
     {
       "q": "Zaydning kasbi (mihnati) nima?",
       "opts": ["Oshpaz", "Sotuvchi", "Talaba", "O'qituvchi"],
       "correct": 0,
-      "izoh": "Matnda «أَنَا طَبَّاخٌ» — men oshpazman.",
+      "matn": "أَنَا طَبَّاخٌ فِي الْمَطْعَمِ",
+      "izoh": "«أَنَا طَبَّاخٌ» — men oshpazman.",
       "bet": 40
     },
     {
@@ -23,14 +24,16 @@
       "q": "Anvarning do'sti Muhammadning kasbi nima?",
       "opts": ["Sotuvchi", "Oshpaz", "O'qituvchi", "Shifokor"],
       "correct": 0,
-      "izoh": "Matnda «مِهْنَتُهُ بَائِعٌ» — uning kasbi sotuvchi.",
+      "matn": "مِهْنَتُهُ بَائِعٌ",
+      "izoh": "«مِهْنَتُهُ بَائِعٌ» — uning kasbi sotuvchi.",
       "bet": 40
     },
     {
       "q": "Zayd qayerdan ekan?",
       "opts": ["Bahrayndan", "Misrdan", "Toshkentdan", "Saudiyadan"],
       "correct": 0,
-      "izoh": "Matnda «أَنَا مِنَ الْبَحْرَيْنِ» — men Bahrayndanman.",
+      "matn": "أَنَا مِنَ الْبَحْرَيْنِ",
+      "izoh": "«أَنَا مِنَ الْبَحْرَيْنِ» — men Bahrayndanman.",
       "bet": 40
     },
     {
