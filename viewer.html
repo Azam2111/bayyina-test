@@ -65,9 +65,20 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .qmatn.ar{direction:rtl; font-family:'Noto Naskh Arabic',serif; font-size:20px; line-height:2}
 .q-prompt.ar{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
 .q-prompt.uz{font-size:clamp(17px,4.4vw,23px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
-.ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.7em; line-height:1.3; unicode-bidi:isolate}
-.lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600; unicode-bidi:isolate}
-.q-prompt.mix{font-size:clamp(19px,5vw,27px); text-align:center; line-height:1.95; color:var(--ink); font-weight:700; padding:10px 4px; word-break:break-word}
+.ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.55em; line-height:1.4}
+.lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600}
+.q-prompt.mix{padding:10px 4px}
+.pl{display:block; text-align:center; word-break:break-word; margin:4px 0}
+.pl-ar{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700}
+.pl-lat{font-family:'Inter',system-ui,sans-serif; font-weight:700; color:var(--ink)}
+.q-prompt.mix .pl-ar{font-size:clamp(30px,8.5vw,46px); line-height:1.85}
+.q-prompt.mix .pl-lat{font-size:clamp(16px,4.4vw,22px); line-height:1.55}
+.qmatn.mix{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px}
+.qmatn.mix .pl-ar{font-size:19px; line-height:1.9; color:#5a4326}
+.qmatn.mix .pl-lat{font-size:14px; line-height:1.6; color:#5a4326}
+.opt .pl{margin:2px 0; text-align:inherit}
+.opt .pl-ar{font-size:1.4em; line-height:1.5}
+.opt .pl-lat{font-size:1em}
 .opt .ar-in{font-size:1.5em}
 .q-prompt.img{display:flex; align-items:center; justify-content:center; padding:8px 4px}
 .q-img-box{width:100%; max-width:240px; aspect-ratio:1/1; border-radius:20px; background:var(--cream-dim); border:2px solid var(--tan); display:flex; align-items:center; justify-content:center; padding:22px}
@@ -254,6 +265,28 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       buf+=ch; }
     flush(); return out;
   }
+  // Aralash savol: arabcha va lotincha qismlarni ALOHIDA markazlangan qatorlarga ajratadi.
+  // Shunda uzun lotincha izoh arabcha bilan o'ralib (bidi) tartib buzilmaydi.
+  function splitPrompt(t){
+    t=String(t); var first=-1,last=-1,i;
+    for(i=0;i<t.length;i++){ if(ARCHAR.test(t[i])){ if(first<0)first=i; last=i; } }
+    if(first<0) return '<div class="pl pl-lat" dir="auto">'+t.trim()+'</div>';
+    var a0=first,a1=last;
+    while(a0>0 && /[«»‹›"'(\s]/.test(t[a0-1])) a0--;
+    while(a1<t.length-1 && /[«»‹›"')\u061F?!.,\u061B:\s]/.test(t[a1+1])) a1++;
+    var before=t.slice(0,a0).trim(), arab=t.slice(a0,a1+1).trim(), after=t.slice(a1+1).trim();
+    var h='';
+    if(before) h+='<div class="pl pl-lat" dir="auto">'+before+'</div>';
+    h+='<div class="pl pl-ar" dir="rtl">'+arab+'</div>';
+    if(after) h+='<div class="pl pl-lat" dir="auto">'+after+'</div>';
+    return h;
+  }
+  // Izoh-matn (qmatn) uchun ham bir xil aralash-ishlov
+  function renderMatn(t){
+    if(isAr(t)&&hasLatin(t)) return '<div class="qmatn mix">'+splitPrompt(t)+'</div>';
+    if(isAr(t)) return '<div class="qmatn ar">'+t+'</div>';
+    return '<div class="qmatn">'+t+'</div>';
+  }
 
   // ====== AUDIO (istima) ======
   function renderAudio(){
@@ -292,15 +325,15 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     let promptHtml;
     if(item.img){ promptHtml='<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>'; }
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
-    else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix" dir="auto">'+wrapMixed(item.q)+'</div>'; }
+    else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
-    const matnHtml = item.matn ? '<div class="qmatn'+(isAr(item.matn)?' ar':'')+'">'+item.matn+'</div>' : '';
+    const matnHtml = item.matn ? renderMatn(item.matn) : '';
     const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
       let arc='', otext, odir='';
       if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
-      else if(isAr(o)){ otext=wrapMixed(o); odir=' dir="auto"'; }
+      else if(isAr(o)){ otext=splitPrompt(o); }
       else { otext=o; }
       return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pick('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text"'+odir+'>'+otext+'</span></button>';
     }).join('');
@@ -341,7 +374,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function buildPromptHtml(item){
     if(item.img) return '<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>';
     if(isAr(item.q) && !hasLatin(item.q)) return '<div class="q-prompt ar">'+item.q+'</div>';
-    if(isAr(item.q)) return '<div class="q-prompt mix" dir="auto">'+wrapMixed(item.q)+'</div>';
+    if(isAr(item.q)) return '<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>';
     return '<div class="q-prompt uz">'+item.q+'</div>';
   }
   function renderAllSingle(){
@@ -351,13 +384,13 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     let html='';
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
-      const matnHtml = item.matn ? '<div class="qmatn'+(isAr(item.matn)?' ar':'')+'">'+item.matn+'</div>' : '';
+      const matnHtml = item.matn ? renderMatn(item.matn) : '';
       const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
         let arc='', otext, odir='';
         if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
-        else if(isAr(o)){ otext=wrapMixed(o); odir=' dir="auto"'; }
+        else if(isAr(o)){ otext=splitPrompt(o); }
         else { otext=o; }
         return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pickSingle('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text"'+odir+'>'+otext+'</span></button>';
       }).join('');

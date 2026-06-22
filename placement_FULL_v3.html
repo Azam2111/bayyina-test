@@ -545,6 +545,12 @@ body.error-bg::after {
 }
 
 
+/* Aralash (arabcha+lotincha) — alohida qatorlar */
+.pl{display:block; text-align:center; word-break:break-word; margin:6px 0}
+.pl-ar{font-family:'Noto Naskh Arabic','Cairo',serif; font-weight:700; font-size:44px; line-height:1.65}
+.pl-lat{font-family:'Tajawal','Inter',sans-serif; font-weight:700; font-size:24px; line-height:1.4; color:#000}
+@media (max-width:900px){ .pl-ar{font-size:38px} .pl-lat{font-size:20px} }
+@media (max-width:480px){ .pl-ar{font-size:32px} .pl-lat{font-size:18px} }
 /* Fix .q-text containing Arabic */
 .q-text.ar-text {
   font-size: 38px !important;
@@ -1199,6 +1205,19 @@ function startLevel(lvl) {
   renderQuestion();
 }
 
+var PL_ARCHAR=/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
+function plMix(t){return PL_ARCHAR.test(t||'')&&/[A-Za-z]/.test(t||'');}
+function plSplit(t){t=String(t);var f=-1,l=-1,i;
+  for(i=0;i<t.length;i++){if(PL_ARCHAR.test(t[i])){if(f<0)f=i;l=i;}}
+  if(f<0)return '<div class="pl pl-lat" dir="auto">'+t.trim()+'</div>';
+  var a0=f,a1=l;
+  while(a0>0 && /[\u00AB\u00BB\u2039\u203A"'(\s]/.test(t[a0-1]))a0--;
+  while(a1<t.length-1 && /[\u00AB\u00BB\u2039\u203A"')\u061F?!.,\u061B:\s]/.test(t[a1+1]))a1++;
+  var b=t.slice(0,a0).trim(),ar=t.slice(a0,a1+1).trim(),af=t.slice(a1+1).trim(),h='';
+  if(b)h+='<div class="pl pl-lat" dir="auto">'+b+'</div>';
+  h+='<div class="pl pl-ar" dir="rtl">'+ar+'</div>';
+  if(af)h+='<div class="pl pl-lat" dir="auto">'+af+'</div>';
+  return h;}
 function renderQuestion() {
   if(currentQIndex >= allQuestions.length) {
     checkLevelResult();
@@ -1243,7 +1262,7 @@ function renderQuestion() {
     let textStyle = isAr ? "font-family:'Noto Naskh Arabic', 'Cairo', serif; font-size: 28px; line-height: 1.6;" : "";
     return `<div class="opt" data-correct="${isCorrect}" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
       <div class="ltr">${letters[i]}</div>
-      <div style="${textStyle}" dir="auto">${optText}</div>
+      ${ plMix(optText) ? `<div class="optmix">`+plSplit(optText)+`</div>` : `<div style="${textStyle}" dir="auto">${optText}</div>` }
     </div>`;
   }).join('');
 
@@ -1253,7 +1272,7 @@ function renderQuestion() {
   html += `<div class="q-card liquid-glass">
     <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
     ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
-    <div class="${qClass}" dir="auto">${q.q}</div>
+    ${ plMix(q.q) ? `<div class="${qClass} mix">`+plSplit(q.q)+`</div>` : `<div class="${qClass}" dir="auto">${q.q}</div>` }
     <div class="opts">${optsHtml}</div>
   </div>`;
 
