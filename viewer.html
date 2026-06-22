@@ -202,6 +202,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let bookName = P.get("kitob") || DEFAULT_BOOK;
   let startPage = parseInt(P.get("bet") || "21", 10);
   const darsId  = P.get("dars") || "";
+  const IS_QIROAT = /qiroat/i.test(darsId);   // qiroat: matn (shpargalka) ko'rsatilmaydi — o'quvchi kitobdan o'qiydi
   const SINGLE  = /istima/i.test(darsId);   // istima: barcha savollar bitta ekranda
   let PASS = parseInt(P.get("otish") || "70", 10);
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
@@ -327,7 +328,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
-    const matnHtml = item.matn ? renderMatn(item.matn) : '';
+    const matnHtml = (item.matn && !IS_QIROAT) ? renderMatn(item.matn) : '';
     const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
@@ -384,7 +385,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     let html='';
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
-      const matnHtml = item.matn ? renderMatn(item.matn) : '';
+      const matnHtml = (item.matn && !IS_QIROAT) ? renderMatn(item.matn) : '';
       const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
