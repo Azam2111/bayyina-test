@@ -162,7 +162,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 
 .text-box{border-radius:36px;padding:36px;margin-bottom:32px}
 .tbh{font-size:17px;font-weight:700;color:#5c3a21;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
-.tar{font-size:40px;direction:rtl;line-height:2.2;color:#000000;font-family:'Greta Text Arabic', 'Cairo', serif;text-shadow: 0 2px 4px rgba(255,255,255,1)}
+.tar{font-size:40px;direction:rtl;line-height:2.2;color:#000000;font-family:'Noto Naskh Arabic', 'Cairo', serif;text-shadow: 0 2px 4px rgba(255,255,255,1)}
 .tkw{font-size:18px;color:#4a2912;margin-top:24px;padding-top:20px;border-top:2px dashed rgba(0,0,0,0.1);line-height:1.7;font-weight:700}
 
 .audio-player{border-radius:36px;padding:32px;margin-bottom:32px}
@@ -183,7 +183,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 
 .q-card{border-radius:40px;padding:48px 36px;margin-bottom:32px;position:relative;overflow:hidden}
 .q-num{font-size:17px;color:#4a2912;font-weight:700;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid rgba(0,0,0,0.06);padding-bottom:20px}
-.q-ar{font-size:52px;direction:rtl;text-align:center;padding:28px 0;color:#000000;line-height:1.6;font-family:'Greta Text Arabic', 'Cairo', serif;}
+.q-ar{font-size:52px;direction:rtl;text-align:center;padding:28px 0;color:#000000;line-height:1.6;font-family:'Noto Naskh Arabic', 'Cairo', serif;}
 .q-text{font-size:30px;color:#000000;line-height:1.6;white-space:pre-line;font-weight:700;margin-bottom:40px;text-align:center;letter-spacing:-0.5px}
 
 .opts{display:flex;flex-direction:column;gap:20px}
@@ -549,7 +549,6 @@ body.error-bg::after {
 .q-text.ar-text {
   font-size: 38px !important;
   font-family: 'Noto Naskh Arabic', 'Cairo', serif !important;
-  direction: rtl !important;
   line-height: 1.6 !important;
 }
 
@@ -557,8 +556,7 @@ body.error-bg::after {
   .q-text.ar-text {
     font-size: 36px !important;
     font-family: 'Noto Naskh Arabic', 'Cairo', serif !important;
-    direction: rtl !important;
-    line-height: 1.6 !important;
+      line-height: 1.6 !important;
   }
 }
 
@@ -1226,7 +1224,7 @@ function renderQuestion() {
   if(q.txt) {
     html += `<div class="qir-text-box liquid-glass" style="border-left:4px solid ${q.txt.borderColor}; margin-bottom:20px; padding:20px; border-radius:20px; text-align:right; direction:rtl; background: rgba(255, 255, 255, 0.7);">
     <div style="color:${q.txt.titleColor}; font-weight:bold; font-size:22px; margin-bottom:10px;">${q.txt.title}</div>
-    <div style="font-family:'Greta Text Arabic', 'Cairo', serif; font-size:32px; line-height:2.2; color:#000; margin-bottom:15px;">${q.txt.ar}</div>
+    <div style="font-family:'Noto Naskh Arabic', 'Cairo', serif; font-size:32px; line-height:2.2; color:#000; margin-bottom:15px;">${q.txt.ar}</div>
     <div style="font-size:18px; line-height:1.5; color:#555; text-align:left; direction:ltr;">${q.txt.uz}</div>
     </div>`;
   }
@@ -1242,10 +1240,10 @@ function renderQuestion() {
   let optsHtml = opts.map((optText, i) => {
     let isCorrect = (i === newCorrectIndex);
     let isAr = /[؀-ۿ]/.test(optText);
-    let textStyle = isAr ? "font-family:'Greta Text Arabic', 'Cairo', serif; font-size: 28px; line-height: 1.6;" : "";
+    let textStyle = isAr ? "font-family:'Noto Naskh Arabic', 'Cairo', serif; font-size: 28px; line-height: 1.6;" : "";
     return `<div class="opt" data-correct="${isCorrect}" onclick="selectOption(this, ${isCorrect}, '${q.type}', ${qIdx})" >
       <div class="ltr">${letters[i]}</div>
-      <div style="${textStyle}">${optText}</div>
+      <div style="${textStyle}" dir="auto">${optText}</div>
     </div>`;
   }).join('');
 
@@ -1255,7 +1253,7 @@ function renderQuestion() {
   html += `<div class="q-card liquid-glass">
     <div class="q-num">Savol ${currentQIndex + 1} <span style="font-size:10px;color:#aaa;font-weight:400">/ ${total}</span></div>
     ${q.ar ? `<div class="q-ar">${q.ar}</div>` : ''}
-    <div class="${qClass}">${q.q}</div>
+    <div class="${qClass}" dir="auto">${q.q}</div>
     <div class="opts">${optsHtml}</div>
   </div>`;
 

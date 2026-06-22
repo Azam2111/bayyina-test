@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
@@ -21,7 +21,7 @@
 body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-smoothing:antialiased; overflow-x:hidden;
   min-height:100vh; background-color:var(--cream);
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
-.arabic{font-family:'Amiri','Scheherazade New',serif}
+.arabic{font-family:'Noto Naskh Arabic','Scheherazade New',serif}
 
 /* ===== HEADER ===== */
 .t-hdr{position:sticky; top:0; z-index:20; color:#fff; padding:13px 16px; display:flex; align-items:center; justify-content:space-between;
@@ -62,10 +62,12 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px}
 .bet-hint{font-size:12.5px; color:var(--brown-mid); text-align:center; margin-bottom:12px; font-weight:600}
 .qmatn{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px; color:#5a4326; font-size:15px; line-height:1.7}
-.qmatn.ar{direction:rtl; font-family:'Amiri',serif; font-size:20px; line-height:2}
-.q-prompt.ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
+.qmatn.ar{direction:rtl; font-family:'Noto Naskh Arabic',serif; font-size:20px; line-height:2}
+.q-prompt.ar{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
 .q-prompt.uz{font-size:clamp(17px,4.4vw,23px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
-.ar-in{font-family:'Amiri','Scheherazade New',serif; font-weight:700; font-size:1.7em; line-height:1.3; unicode-bidi:isolate; direction:rtl}
+.ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.7em; line-height:1.3; unicode-bidi:isolate}
+.lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600; unicode-bidi:isolate}
+.q-prompt.mix{font-size:clamp(19px,5vw,27px); text-align:center; line-height:1.95; color:var(--ink); font-weight:700; padding:10px 4px; word-break:break-word}
 .opt .ar-in{font-size:1.5em}
 .q-prompt.img{display:flex; align-items:center; justify-content:center; padding:8px 4px}
 .q-img-box{width:100%; max-width:240px; aspect-ratio:1/1; border-radius:20px; background:var(--cream-dim); border:2px solid var(--tan); display:flex; align-items:center; justify-content:center; padding:22px}
@@ -76,7 +78,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .opt{display:flex; align-items:center; gap:14px; padding:16px 16px; border:2px solid var(--cream-dim); border-radius:14px; cursor:pointer; transition:all .15s ease; background:#fff; text-align:left; width:100%; font-family:inherit}
 .opt:active{transform:scale(.98)}
 .opt .opt-text{font-size:clamp(16px,4.6vw,20px); font-weight:600; color:#333; line-height:1.45; flex:1}
-.opt.opt-ar .opt-text{font-family:'Amiri',serif; direction:rtl; font-size:clamp(24px,7vw,32px); font-weight:700; text-align:right; line-height:1.8}
+.opt.opt-ar .opt-text{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(24px,7vw,32px); font-weight:700; text-align:right; line-height:1.8}
 .opt.ok{background:var(--green-bg); border-color:var(--green)}
 .opt.ok .opt-text{color:var(--green-text)}
 .opt.no{background:var(--red-bg); border-color:var(--red)}
@@ -234,6 +236,24 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function hasLatin(t){return /[A-Za-z]/.test(t||'');}
   const ARX=/[«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿][«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*/g;
   function wrapAr(t){return String(t).replace(ARX,function(m){return '<span class="ar-in">'+m+'</span>';});}
+  // Aralash (arabcha+lotincha) matn: har yozuvni alohida span+izolyatsiya bilan o'rab,
+  // konteyner dir="auto" bilan to'g'ri tartibda (arabcha RTL buzilmaydi) chiqaradi.
+  var ARCHAR=/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
+  function wrapMixed(t){
+    t=String(t); var out='', buf='', cur=null, i, n=t.length;
+    function flush(){ if(buf==='')return;
+      if(cur==='A') out+='<span class="ar-in">'+buf+'</span>';
+      else if(/^\s+$/.test(buf)) out+=buf;
+      else out+='<span class="lat-in">'+buf+'</span>';
+      buf=''; }
+    for(i=0;i<n;i++){ var ch=t[i];
+      if(/\s/.test(ch)){ buf+=ch; continue; }
+      var k=ARCHAR.test(ch)?'A':'L';
+      if(cur===null) cur=k;
+      if(k!==cur){ flush(); cur=k; }
+      buf+=ch; }
+    flush(); return out;
+  }
 
   // ====== AUDIO (istima) ======
   function renderAudio(){
@@ -272,17 +292,17 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     let promptHtml;
     if(item.img){ promptHtml='<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>'; }
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
-    else if(isAr(item.q)){ promptHtml='<div class="q-prompt uz">'+wrapAr(item.q)+'</div>'; }
+    else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix" dir="auto">'+wrapMixed(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
     const matnHtml = item.matn ? '<div class="qmatn'+(isAr(item.matn)?' ar':'')+'">'+item.matn+'</div>' : '';
     const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
-      let arc='', otext;
+      let arc='', otext, odir='';
       if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
-      else if(isAr(o)){ otext=wrapAr(o); }
+      else if(isAr(o)){ otext=wrapMixed(o); odir=' dir="auto"'; }
       else { otext=o; }
-      return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pick('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text">'+otext+'</span></button>';
+      return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pick('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text"'+odir+'>'+otext+'</span></button>';
     }).join('');
 
     document.getElementById('qCard').innerHTML =
@@ -321,7 +341,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function buildPromptHtml(item){
     if(item.img) return '<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>';
     if(isAr(item.q) && !hasLatin(item.q)) return '<div class="q-prompt ar">'+item.q+'</div>';
-    if(isAr(item.q)) return '<div class="q-prompt uz">'+wrapAr(item.q)+'</div>';
+    if(isAr(item.q)) return '<div class="q-prompt mix" dir="auto">'+wrapMixed(item.q)+'</div>';
     return '<div class="q-prompt uz">'+item.q+'</div>';
   }
   function renderAllSingle(){
@@ -335,11 +355,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
-        let arc='', otext;
+        let arc='', otext, odir='';
         if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
-        else if(isAr(o)){ otext=wrapAr(o); }
+        else if(isAr(o)){ otext=wrapMixed(o); odir=' dir="auto"'; }
         else { otext=o; }
-        return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pickSingle('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text">'+otext+'</span></button>';
+        return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pickSingle('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text"'+odir+'>'+otext+'</span></button>';
       }).join('');
       html += '<div class="q-card sgl" id="card'+i+'">'+
                 '<div class="q-label">SAVOL '+(i+1)+'</div>'+betHint+matnHtml+buildPromptHtml(item)+
