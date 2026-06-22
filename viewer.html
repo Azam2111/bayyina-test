@@ -57,6 +57,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 /* ===== QUESTION CARD ===== */
 .q-wrap{max-width:680px; margin:0 auto; padding:24px 16px 60px}
 .q-card{background:#fff; border-radius:18px; padding:30px 20px; box-shadow:0 4px 24px rgba(60,40,20,.08); border:1px solid var(--cream-dim); animation:fadeIn .35s ease}
+.q-card.sgl{margin-bottom:16px}
 @keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
 .q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px}
 .bet-hint{font-size:12.5px; color:var(--brown-mid); text-align:center; margin-bottom:12px; font-weight:600}
@@ -188,6 +189,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let bookName = P.get("kitob") || DEFAULT_BOOK;
   let startPage = parseInt(P.get("bet") || "21", 10);
   const darsId  = P.get("dars") || "";
+  const SINGLE  = /istima/i.test(darsId);   // istima: barcha savollar bitta ekranda
   let PASS = parseInt(P.get("otish") || "70", 10);
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
   let hasBook = !!P.get("kitob");
@@ -225,7 +227,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
     for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
     renderAudio();
-    renderQuestion(0);
+    if(SINGLE){ renderAllSingle(); } else { renderQuestion(0); }
   }
 
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
@@ -314,6 +316,63 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(fb){ const izoh=item.izoh?' — '+item.izoh:'';
       fb.innerHTML='<div class="feedback-box '+(ok?'fb-ok':'fb-no')+'">'+(ok?"✅ To'g'ri":"❌ Noto'g'ri")+izoh+'</div>'; }
     document.getElementById('gfill').style.width=(answeredCount/QUESTIONS.length*100)+'%';
+  }
+  // ====== ISTIMA: BARCHA SAVOLLAR BITTA EKRANDA ======
+  function buildPromptHtml(item){
+    if(item.img) return '<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>';
+    if(isAr(item.q) && !hasLatin(item.q)) return '<div class="q-prompt ar">'+item.q+'</div>';
+    if(isAr(item.q)) return '<div class="q-prompt uz">'+wrapAr(item.q)+'</div>';
+    return '<div class="q-prompt uz">'+item.q+'</div>';
+  }
+  function renderAllSingle(){
+    const wrap=document.getElementById('qCard');
+    wrap.className='';
+    document.getElementById('navArea').innerHTML='';
+    let html='';
+    QUESTIONS.forEach(function(item,i){
+      ensureOrder(item);
+      const matnHtml = item.matn ? '<div class="qmatn'+(isAr(item.matn)?' ar':'')+'">'+item.matn+'</div>' : '';
+      const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
+      const optsHtml = item._order.map(function(orig,oi){
+        const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
+        let arc='', otext;
+        if(isAr(o) && !hasLatin(o)){ arc=' opt-ar'; otext=o; }
+        else if(isAr(o)){ otext=wrapAr(o); }
+        else { otext=o; }
+        return '<button class="opt'+arc+'" data-o="'+oi+'" onclick="pickSingle('+i+','+oi+')"><span class="ltr">'+letter+'</span><span class="opt-text">'+otext+'</span></button>';
+      }).join('');
+      html += '<div class="q-card sgl" id="card'+i+'">'+
+                '<div class="q-label">SAVOL '+(i+1)+'</div>'+betHint+matnHtml+buildPromptHtml(item)+
+                '<div class="opts" id="opts'+i+'">'+optsHtml+'</div><div id="fb'+i+'"></div></div>';
+    });
+    html += '<button class="btn-next" id="finishBtn" style="display:none" onclick="finish()">Natijani ko\'rish ▶</button>';
+    wrap.innerHTML=html;
+    updateSingleProgress();
+  }
+  function pickSingle(i,oi){
+    const item=QUESTIONS[i];
+    if(item._answered!=null) return;
+    item._answered=oi; answeredCount++;
+    if(oi===item._correct) correctCount++;
+    const opts=document.getElementById('opts'+i); if(opts) opts.classList.add('locked');
+    document.querySelectorAll('#opts'+i+' .opt').forEach(function(b){
+      const bo=+b.dataset.o;
+      if(bo===item._correct) b.classList.add('ok');
+      else if(bo===item._answered) b.classList.add('no');
+    });
+    const ok=(oi===item._correct);
+    const fb=document.getElementById('fb'+i);
+    if(fb){ const izoh=item.izoh?' — '+item.izoh:'';
+      fb.innerHTML='<div class="feedback-box '+(ok?'fb-ok':'fb-no')+'">'+(ok?"✅ To'g'ri":"❌ Noto'g'ri")+izoh+'</div>'; }
+    updateSingleProgress();
+    if(answeredCount>=QUESTIONS.length){
+      const fbtn=document.getElementById('finishBtn');
+      if(fbtn){ fbtn.style.display='block'; fbtn.scrollIntoView({behavior:'smooth',block:'center'}); }
+    }
+  }
+  function updateSingleProgress(){
+    const c=document.getElementById('qCounter'); if(c) c.textContent='Javob berildi: '+answeredCount+' / '+QUESTIONS.length;
+    const g=document.getElementById('gfill'); if(g) g.style.width=(answeredCount/QUESTIONS.length*100)+'%';
   }
   function goNext(){ if(cur<QUESTIONS.length-1) renderQuestion(cur+1); }
 
