@@ -1,155 +1,667 @@
 {
-  "title": "A0 — Yakuniy imtihon",
-  "otish": 85,
-  "vaqt": 25,
+  "title": "A0 — Yakuniy imtihon (kuchaytirilgan)",
+  "otish": 80,
+  "vaqt": 30,
   "questions": [
     {
-      "q": "«مُعَلِّمٌ» so'zining ma'nosi nima?",
-      "opts": ["O'qituvchi", "Talaba", "Shifokor", "Muhandis"],
-      "correct": 0,
-      "izoh": "مُعَلِّمٌ = o'qituvchi. طَالِبٌ esa talaba."
+      "q": "Quyidagi ko'makchilardan qaysi biri 'orqasida' yoki 'ortida' ma'nosini ifodalaydi?",
+      "opts": [
+        "أَمَامَ",
+        "بَيْنَ",
+        "خَلْفَ",
+        "تَحْتَ"
+      ],
+      "correct": 2,
+      "izoh": "خَلْفَ = orqasida / ortida. أَمَامَ = oldida, بَيْنَ = orasida, تَحْتَ = tagida."
     },
     {
-      "q": "«هِيَ» olmoshining ma'nosi nima?",
-      "opts": ["U (ayol)", "U (erkak)", "Men", "Sen"],
-      "correct": 0,
-      "izoh": "هِيَ = u (ayol), هُوَ = u (erkak)."
+      "q": "'Sartarosh' so'zining arabcha tarjimasi to'g'ri berilgan qatorni toping.",
+      "opts": [
+        "طَبَّاخٌ",
+        "حَلَّاقٌ",
+        "مُدِيرٌ",
+        "مُهَنْدِسٌ"
+      ],
+      "correct": 1,
+      "izoh": "حَلَّاقٌ = sartarosh (حَلَقَ — soch olmoq). طَبَّاخٌ = oshpaz, مُدِيرٌ = direktor, مُهَنْدِسٌ = muhandis."
     },
     {
-      "q": "Bo'sh joyni to'ldiring: «اَلسَّلَامُ ... » (salomlashish).",
-      "opts": ["عَلَيْكُمْ", "الْخَيْرِ", "حَالُكَ", "أَيْنَ"],
-      "correct": 0,
-      "izoh": "اَلسَّلَامُ عَلَيْكُمْ = Assalomu alaykum."
+      "q": "'Ba'zida' va 'ko'pincha' so'zlarining arab tilidagi to'g'ri tarjimalari ketma-ketligini aniqlang.",
+      "opts": [
+        "غَالِبًا - دَائِمًا",
+        "أَحْيَانًا - نَادِرًا",
+        "أَبَدًا - أَحْيَانًا",
+        "أَحْيَانًا - غَالِبًا"
+      ],
+      "correct": 3,
+      "izoh": "Ba'zida = أَحْيَانًا, ko'pincha = غَالِبًا. Daraja: دَائِمًا (doim) ‹ غَالِبًا (ko'pincha) ‹ أَحْيَانًا (ba'zida) ‹ نَادِرًا (kamdan-kam) ‹ أَبَدًا (hech qachon)."
     },
     {
-      "q": "Quyidagi gapning ma'nosi nima?",
-      "matn": "أَنَا مِنْ طَشْقَنْدَ.",
-      "opts": ["Men Toshkentdanman", "Men talabaman", "U Samarqanddan", "Sen qayerdansan?"],
-      "correct": 0,
-      "izoh": "أَنَا مِنْ طَشْقَنْدَ = Men Toshkentdanman. طَشْقَنْد = Toshkent."
+      "q": "«عَصِيرٌ» so'zining o'zbekcha to'g'ri tarjimasini toping.",
+      "opts": [
+        "Ovqat",
+        "Sharbat",
+        "Choy",
+        "Suv"
+      ],
+      "correct": 1,
+      "izoh": "عَصِيرٌ = sharbat (meva sharbati) — عَصَرَ (siqmoq) o'zagidan."
     },
     {
-      "q": "«مُهَنْدِسٌ» so'zining ma'nosi nima?",
-      "opts": ["Muhandis", "O'qituvchi", "Oshpaz", "Haydovchi"],
-      "correct": 0,
-      "izoh": "مُهَنْدِسٌ = muhandis."
+      "q": "Quyidagi antonim juftliklardan qaysi biri XATO berilgan?",
+      "opts": [
+        "جَدِيدٌ - قَدِيمٌ",
+        "نَظِيفٌ - وَسِخٌ",
+        "وَاسِعٌ - ضَيِّقٌ",
+        "جَمِيلٌ - طَوِيلٌ"
+      ],
+      "correct": 3,
+      "izoh": "جَمِيلٌ (chiroyli) va طَوِيلٌ (uzun) zid ma'noli emas. Qolganlari to'g'ri: yangi-eski, toza-kir, keng-tor."
     },
     {
-      "q": "«طَبَّاخٌ» so'zining ma'nosi nima?",
-      "opts": ["Oshpaz", "Sotuvchi", "Tojir", "Direktor"],
+      "q": "'Kutubxona, sinf va ko'cha' so'zlarining arabcha ko'rinishlari to'g'ri berilgan qatorni ko'rsating.",
+      "opts": [
+        "مَكْتَبَةٌ ، صَفٌّ ، شَارِعٌ",
+        "مَطْعَمٌ ، غُرْفَةٌ ، طَرِيقٌ",
+        "صَالَةٌ ، مَدْرَسَةٌ ، بَيْتٌ",
+        "مَكْتَبَةٌ ، سَيَّارَةٌ ، صَفٌّ"
+      ],
       "correct": 0,
-      "izoh": "طَبَّاخٌ = oshpaz. بَائِعٌ = sotuvchi."
+      "izoh": "Kutubxona = مَكْتَبَةٌ, sinf = صَفٌّ, ko'cha = شَارِعٌ."
     },
     {
-      "q": "«سَائِقٌ» so'zining ma'nosi nima?",
-      "opts": ["Haydovchi", "Sotuvchi", "Shifokor", "Talaba"],
-      "correct": 0,
-      "izoh": "سَائِقٌ = haydovchi."
+      "q": "«نَادِرًا» va «أَبَدًا» so'zlarining lug'aviy ma'nosi nima?",
+      "opts": [
+        "Hamisha, Har doim",
+        "Kamdan-kam, Hech qachon",
+        "Ba'zan, Birgalikda",
+        "Ko'pincha, Tezgina"
+      ],
+      "correct": 1,
+      "izoh": "نَادِرًا = kamdan-kam, أَبَدًا = hech qachon (inkor gaplarda)."
     },
     {
-      "q": "Quyidagi gapning ma'nosi nima?",
-      "matn": "أَعْمَلُ فِي الْمُسْتَشْفَى.",
-      "opts": ["Men kasalxonada ishlayman", "Men maktabda o'qiyman", "U restoranda ishlaydi", "Men shifokorman"],
-      "correct": 0,
-      "izoh": "أَعْمَلُ فِي = ...da ishlayman. مُسْتَشْفَى = kasalxona."
+      "q": "'Hafta' va 'Oy' so'zlarining arabcha ko'plik shakllari to'g'ri berilgan javobni tanlang.",
+      "opts": [
+        "أَيَّامٌ - سَنَوَاتٌ",
+        "أَعْوَامٌ - أَشْهُرٌ",
+        "أَسَابِيعُ - أَشْهُرٌ",
+        "أَسَابِيعُ - أَيَّامٌ"
+      ],
+      "correct": 2,
+      "izoh": "Hafta (أُسْبُوعٌ) ko'pligi = أَسَابِيعُ; Oy (شَهْرٌ) ko'pligi = أَشْهُرٌ."
     },
     {
-      "q": "«جَدٌّ» so'zining ma'nosi nima?",
-      "opts": ["Bobo", "Buvi", "Ota", "Aka"],
+      "q": "«نَصِيحَةٌ» so'zining o'zbekcha ma'nosi nima?",
+      "opts": [
+        "Maslahat, tavsiya, nasihat",
+        "Yordam, ko'mak",
+        "Tushunish, bilish",
+        "Kulgi, shodlik"
+      ],
       "correct": 0,
-      "izoh": "جَدٌّ = bobo. جَدَّةٌ = buvi."
+      "izoh": "نَصِيحَةٌ = nasihat, maslahat, tavsiya (نَصَحَ — nasihat qilmoq)."
     },
     {
-      "q": "«أُخْتٌ» so'zining ma'nosi nima?",
-      "opts": ["Opa/singil", "Aka/uka", "O'g'il", "Amaki"],
-      "correct": 0,
-      "izoh": "أُخْتٌ = opa/singil. أَخٌ = aka/uka."
+      "q": "'Birgalikda' va 'Iltimos' so'zlarining arabcha ekvivalentini toping.",
+      "opts": [
+        "دَائِمًا - مَعًا",
+        "مَعًا - مِنْ فَضْلِكَ",
+        "عَفْوًا - شُكْرًا",
+        "هَيَّا بِنَا - مَعًا"
+      ],
+      "correct": 1,
+      "izoh": "Birgalikda = مَعًا, Iltimos = مِنْ فَضْلِكَ."
     },
     {
-      "q": "«خَمْسَةٌ» raqamining ma'nosi nima?",
-      "opts": ["Besh", "Uch", "To'rt", "Bir"],
+      "q": "Quyidagi so'zlardan qaysi biri 'Eshik yonida' birikmasini to'g'ri ifodalaydi?",
+      "opts": [
+        "جَانِبَ البَابِ",
+        "وَرَاءَ البَابِ",
+        "فَوْقَ البَابِ",
+        "تَحْتَ البَابِ"
+      ],
       "correct": 0,
-      "izoh": "وَاحِدٌ-1, اِثْنَانِ-2, ثَلَاثَةٌ-3, أَرْبَعَةٌ-4, خَمْسَةٌ-5."
+      "izoh": "جَانِبَ البَابِ = eshik yonida. جَانِبَ = yonida, وَرَاءَ = orqasida, فَوْقَ = tepasida, تَحْتَ = tagida."
     },
     {
-      "q": "Quyidagi savolning ma'nosi nima?",
-      "matn": "كَمْ غُرْفَةً فِي الْبَيْتِ؟",
-      "opts": ["Uyda nechta xona bor?", "Uy qayerda?", "Bu kimning uyi?", "Xona kattami?"],
+      "q": "'Shkaf' va 'Surat' so'zlarining arab tilidagi to'g'ri shaklini aniqlang.",
+      "opts": [
+        "خِزَانَةٌ - صُورَةٌ",
+        "طَاوِلَةٌ - كِتَابٌ",
+        "كُرْسِيٌّ - دَفْتَرٌ",
+        "غُرْفَةٌ - سَيَّارَةٌ"
+      ],
       "correct": 0,
-      "izoh": "كَمْ = nechta, غُرْفَةٌ = xona, بَيْتٌ = uy."
+      "izoh": "Shkaf = خِزَانَةٌ, Surat = صُورَةٌ."
     },
     {
-      "q": "«يَذْهَبُ» fe'lining ma'nosi nima?",
-      "opts": ["Boradi/ketadi", "Qaytadi", "O'tiradi", "Yozadi"],
-      "correct": 0,
-      "izoh": "يَذْهَبُ = boradi. يَرْجِعُ = qaytadi."
+      "q": "'Yeyish' va 'Tushunish' harakatlarining arabcha masdar (so'z asosi) qaysi qatorda to'g'ri berilgan?",
+      "opts": [
+        "فَهْمٌ - ضَحْكٌ",
+        "أَكْلٌ - فَهْمٌ",
+        "حِفْظٌ - نَصْرٌ",
+        "طَبْخٌ - أَكْلٌ"
+      ],
+      "correct": 1,
+      "izoh": "Yeyish (أَكَلَ) masdari = أَكْلٌ; Tushunish (فَهِمَ) masdari = فَهْمٌ."
     },
     {
-      "q": "«يَقْرَأُ» fe'lining ma'nosi nima?",
-      "opts": ["O'qiydi", "Yozadi", "Ichadi", "O'ynaydi"],
+      "q": "«عَمٌّ» va «خَالٌ» qarindoshlik so'zlarining farqi nimada?",
+      "opts": [
+        "Amaki - Tog'a",
+        "Tog'a - Amaki",
+        "Amaki - Xola",
+        "Bobo - Amaki"
+      ],
       "correct": 0,
-      "izoh": "يَقْرَأُ = o'qiydi. يَكْتُبُ = yozadi."
+      "izoh": "عَمٌّ = amaki (otaning aka-ukasi), خَالٌ = tog'a (onaning aka-ukasi)."
     },
     {
-      "q": "Bo'sh joyni to'ldiring: «... القُرْآنَ» (Qur'on o'qiydi).",
-      "opts": ["يَقْرَأُ", "يَشْرَبُ", "يَلْعَبُ", "يَطْبُخُ"],
-      "correct": 0,
-      "izoh": "يَقْرَأُ القُرْآنَ = Qur'on o'qiydi."
+      "q": "Quyidagi so'zlardan qaysi biri 'Yangi' ma'nosini bildiradi?",
+      "opts": [
+        "قَدِيمٌ",
+        "نَظِيفٌ",
+        "جَدِيدٌ",
+        "جَمِيلٌ"
+      ],
+      "correct": 2,
+      "izoh": "جَدِيدٌ = yangi. قَدِيمٌ = eski, نَظِيفٌ = toza, جَمِيلٌ = chiroyli."
     },
     {
-      "q": "«صَبَاحًا» so'zining ma'nosi nima?",
-      "opts": ["Ertalab", "Kechqurun", "Keyin", "Oldin"],
-      "correct": 0,
-      "izoh": "صَبَاحًا = ertalab. مَسَاءً = kechqurun."
+      "q": "Arab tilida joyni ifodalovchi 'zarf' va 'harfi jar'lar o'zidan keyin kelgan ismning oxirgi harakatini qanday holatga o'zgartiradi?",
+      "opts": [
+        "Fathali (a)",
+        "Kasrali (i)",
+        "Dammali (u)",
+        "Sukunli"
+      ],
+      "correct": 1,
+      "izoh": "Harfi jar va zarflardan keyingi ism majrur bo'ladi — oxiri kasrali (i). Mas: فِي البَيْتِ."
     },
     {
-      "q": "«كُرْسِيٌّ» so'zining ma'nosi nima?",
-      "opts": ["Stul", "Stol", "Eshik", "Shkaf"],
-      "correct": 0,
-      "izoh": "كُرْسِيٌّ = stul. طَاوِلَةٌ = stol."
+      "q": "Muzoriy (hozirgi-kelasi) zamon fe'li uchinchi shaxs ko'plik muannas (ayollar) shaklida qaysi qo'shimchani oladi?",
+      "opts": [
+        "يَـ...ـُونَ",
+        "تَـ...ـُونَ",
+        "يَـ...ـْنَ",
+        "تَـ...ـْنَ"
+      ],
+      "correct": 2,
+      "izoh": "3-shaxs muannas ko'plik: يَفْعَلْنَ — ي prefiks + ـْنَ qo'shimcha. Mas: يَكْتُبْنَ (ular, ayollar, yozadilar)."
     },
     {
-      "q": "«فَوْقَ» so'zining ma'nosi nima?",
-      "opts": ["Ustida", "Ostida", "Oldida", "Orqasida"],
+      "q": "'Siz ikkingiz yozyapsizlar' jumlasi arab tilida qanday ko'rinishda bo'ladi?",
+      "opts": [
+        "تَكْتُبَانِ",
+        "يَكْتُبَانِ",
+        "تَكْتُبُونَ",
+        "تَكْتُبْنَ"
+      ],
       "correct": 0,
-      "izoh": "فَوْقَ = ustida, تَحْتَ = ostida."
+      "izoh": "'Siz ikkingiz' (أَنْتُمَا) → تَكْتُبَانِ: تَ prefiks + ـَانِ ikkilik qo'shimchasi."
     },
     {
-      "q": "«كَبِيرٌ» sifatining ma'nosi nima?",
-      "opts": ["Katta", "Kichik", "Toza", "Chiroyli"],
-      "correct": 0,
-      "izoh": "كَبِيرٌ = katta. صَغِيرٌ = kichik."
+      "q": "Arab tilida so'zlar nechta katta guruhga bo'linadi?",
+      "opts": [
+        "2 (Ism, Fe'l)",
+        "3 (Ism, Fe'l, Harf)",
+        "4 (Ism, Fe'l, Sifat, Zarf)",
+        "5 (Ism, Fe'l, Harf, Zarf, Zamir)"
+      ],
+      "correct": 1,
+      "izoh": "So'zlar 3 turkumga bo'linadi: اِسْمٌ (ism), فِعْلٌ (fe'l), حَرْفٌ (harf)."
     },
     {
-      "q": "Quyidagi gapning ma'nosi nima?",
-      "matn": "الْحَقِيبَةُ تَحْتَ الطَّاوِلَةِ.",
-      "opts": ["Sumka stol ostida", "Sumka stol ustida", "Stul eshik oldida", "Kitob shkafda"],
-      "correct": 0,
-      "izoh": "حَقِيبَةٌ = sumka, تَحْتَ = ostida, طَاوِلَةٌ = stol."
+      "q": "«نَحْنُ» (Biz) olmoshiga mos keluvchi muzoriy fe'lining boshlanish harfi qaysi?",
+      "opts": [
+        "أ",
+        "ت",
+        "ي",
+        "ن"
+      ],
+      "correct": 3,
+      "izoh": "'Biz' (نَحْنُ) uchun muzoriy fe'l ن (nun) bilan boshlanadi. Mas: نَكْتُبُ (biz yozamiz)."
     },
     {
-      "q": "«أَصْدِقَاءُ» so'zining ma'nosi nima?",
-      "opts": ["Do'stlar", "O'qituvchilar", "Oila", "Talabalar"],
-      "correct": 0,
-      "izoh": "أَصْدِقَاءُ = do'stlar."
+      "q": "Quyidagilardan qaysi biri 'Zarf' (joy ko'makchisi) hisoblanadi?",
+      "opts": [
+        "فِي",
+        "عَلَى",
+        "أَمَامَ",
+        "إِلَى"
+      ],
+      "correct": 2,
+      "izoh": "أَمَامَ — joy zarfi (zarful makon). فِي، عَلَى، إِلَى esa harfi jar (old ko'makchi). ⚠️ Eslatma: manba PDF kalitida bu savol javobi xato (فِي) ko'rsatilgan — to'g'risi أَمَامَ."
     },
     {
-      "q": "«عَصِيرٌ» so'zining ma'nosi nima?",
-      "opts": ["Sharbat", "Choy", "Suv", "Sut"],
-      "correct": 0,
-      "izoh": "عَصِيرٌ = sharbat. شَايٌ = choy."
+      "q": "Muannas (ayol) jinsidagi 'Sen darsni yozyapsan' gapida qaysi fe'l shakli ishlatiladi?",
+      "opts": [
+        "تَكْتُبُ",
+        "تَكْتُبِينَ",
+        "يَكْتُبُ",
+        "أَكْتُبُ"
+      ],
+      "correct": 1,
+      "izoh": "'Sen' (ayol, أَنْتِ) → تَكْتُبِينَ: تَ prefiks + ـِينَ qo'shimcha. تَكْتُبُ — erkak 'sen' uchun."
     },
     {
-      "q": "«لَذِيذٌ» sifatining ma'nosi nima?",
-      "opts": ["Mazali", "Qiziqarli", "Katta", "Toza"],
+      "q": "«كَتَبَ» fe'lining muzoriy uchinchi shaxs muzakkar (erkak) birlik shakli qaysi?",
+      "opts": [
+        "يَكْتُبُ",
+        "تَكْتُبُ",
+        "سَنَكْتُبُ",
+        "أَكْتُبُ"
+      ],
       "correct": 0,
-      "izoh": "لَذِيذٌ = mazali. مُمْتِعٌ = qiziqarli."
+      "izoh": "3-shaxs muzakkar birlik muzoriy: يَكْتُبُ (u yozadi) — ي prefiks."
     },
     {
-      "q": "«هَيَّا بِنَا» iborasining ma'nosi nima?",
-      "opts": ["Qani, ketdik!", "Salomat bo'ling", "Rahmat", "Ko'rishguncha"],
+      "q": "'Kamdan-kam kitob o'qiydi' gapidagi fe'l uchinchi shaxs ayol kishiga tegishli bo'lsa, qaysi fe'ldan boshlanadi?",
+      "opts": [
+        "يَقْرَأُ",
+        "تَقْرَأُ",
+        "أَقْرَأُ",
+        "نَقْرَأُ"
+      ],
+      "correct": 1,
+      "izoh": "3-shaxs muannas (ayol) birlik muzoriy ت bilan boshlanadi: تَقْرَأُ (u, ayol, o'qiydi)."
+    },
+    {
+      "q": "Qavs ichidagi (4) soni «طَاوِلَةٌ» (stol) so'zi bilan kelganda qanday o'zgaradi?",
+      "opts": [
+        "أَرْبَعَةُ طَاوِلَاتٍ",
+        "أَرْبَعُ طَاوِلَاتٍ",
+        "أَرْبَعَةَ طَاوِلَةٍ",
+        "أَرْبَعُ طَاوِلَةٍ"
+      ],
+      "correct": 1,
+      "izoh": "طَاوِلَةٌ — muannas. 3–10 sonlarda son sanaluvchining aksi jinsida bo'ladi, shuning uchun ـة-siz: أَرْبَعُ. Sanaluvchi esa ko'plik, majrur: طَاوِلَاتٍ."
+    },
+    {
+      "q": "'Sizlar (erkaklar) darsni tushunyapsizlar' gapida qaysi fe'l shakli to'g'ri?",
+      "opts": [
+        "تَفْهَمُونَ",
+        "يَفْهَمُونَ",
+        "تَفْهَمْنَ",
+        "تَفْهَمَانِ"
+      ],
       "correct": 0,
-      "izoh": "هَيَّا بِنَا = qani ketdik / yuringlar."
+      "izoh": "'Sizlar' (erkaklar, أَنْتُمْ) → تَفْهَمُونَ: تَ prefiks + ـُونَ ko'plik qo'shimchasi."
+    },
+    {
+      "q": "'Ular (ayollar) uydan chiqishyapti' gapidagi fe'lni aniqlang.",
+      "opts": [
+        "يَخْرُجُونَ",
+        "تَخْرُجْنَ",
+        "يَخْرُجْنَ",
+        "يَخْرُجَانِ"
+      ],
+      "correct": 2,
+      "izoh": "'Ular' (ayollar, هُنَّ) → 3-shaxs muannas ko'plik: يَخْرُجْنَ (ي prefiks + ـْنَ)."
+    },
+    {
+      "q": "Egalik qo'shimchalaridan 'Sizlarning amakingiz' iborasida qaysi qo'shimcha amaki so'ziga qo'shiladi?",
+      "opts": [
+        "عَمُّهَا",
+        "عَمُّكُمْ",
+        "عَمُّكُنَّ",
+        "عَمُّهُمْ"
+      ],
+      "correct": 1,
+      "izoh": "'Sizlarning' (erkaklar ko'pligi) egalik qo'shimchasi ـكُمْ: عَمُّكُمْ."
+    },
+    {
+      "q": "'Muzoriy fe'li' qaysi zamonlarni o'z ichiga oladi?",
+      "opts": [
+        "Faqat hozirgi zamon",
+        "Faqat o'tgan zamon",
+        "Hozirgi va kelasi zamon",
+        "O'tgan va kelasi zamon"
+      ],
+      "correct": 2,
+      "izoh": "Muzoriy fe'l ham hozirgi, ham kelasi zamonni ifodalaydi."
+    },
+    {
+      "q": "'U ikkisining surati' birikmasi arab tilida qanday bo'ladi?",
+      "opts": [
+        "صُورَتُهُ",
+        "صُورَتُهُمَا",
+        "صُورَتُهُمْ",
+        "صُورَتُهَا"
+      ],
+      "correct": 1,
+      "izoh": "'U ikkisining' ikkilik egalik qo'shimchasi ـهُمَا: صُورَتُهُمَا."
+    },
+    {
+      "q": "Bo'sh joyga mos so'zni toping:",
+      "opts": [
+        "نَفْهَمُ",
+        "يَفْهَمُ",
+        "تَفْهَمُ",
+        "أَفْهَمُ"
+      ],
+      "correct": 0,
+      "izoh": "Ega نَحْنُ (biz) bo'lgani uchun fe'l ن bilan boshlanadi: نَفْهَمُ (biz tushunamiz)."
+    },
+    {
+      "q": "'Zayd va Mahmud ___' gapidagi bo'shliqqa 'sharbat ichishyapti' iborasini qo'ying.",
+      "opts": [
+        "يَشْرَبُ العَصِيرَ",
+        "يَشْرَبَانِ العَصِيرَ",
+        "تَشْرَبَانِ العَصِيرَ",
+        "يَشْرَبُونَ العَصِيرَ"
+      ],
+      "correct": 1,
+      "izoh": "Ega ikki kishi (Zayd va Mahmud) — ikkilik muzakkar fe'l: يَشْرَبَانِ."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring:",
+      "opts": [
+        "يَلْعَبُونَ",
+        "تَلْعَبْنَ",
+        "يَلْعَبْنَ",
+        "تَلْعَبَانِ"
+      ],
+      "correct": 2,
+      "izoh": "الطَّالِبَاتُ — 3-shaxs muannas ko'plik, fe'l يَلْعَبْنَ (ular, qizlar, o'ynamaydilar)."
+    },
+    {
+      "q": "'Sening xolalaring kechki payt ovqat pishirishadimi?' savoliga mos javobni toping.",
+      "opts": [
+        "هَلْ خَالَاتُكَ يَطْبُخْنَ الطَّعَامَ مَسَاءً؟",
+        "هَلْ خَالُكَ يَطْبُخُ الطَّعَامَ صَبَاحًا؟",
+        "هَلْ خَالَاتُكَ يَطْبُخُونَ الطَّعَامَ مَسَاءً؟",
+        "هَلْ أُخْتُكَ يَطْبُخُ الطَّعَامَ مَسَاءً؟"
+      ],
+      "correct": 0,
+      "izoh": "خَالَاتُكَ (xolalaring — ayollar ko'pligi) → fe'l muannas ko'plik يَطْبُخْنَ, مَسَاءً (kechqurun)."
+    },
+    {
+      "q": "Bo'sh joyga mos predlogni tanlang (Kitob stol tagida):",
+      "opts": [
+        "فَوْقَ",
+        "عَلَى",
+        "تَحْتَ",
+        "خَلْفَ"
+      ],
+      "correct": 2,
+      "izoh": "تَحْتَ = tagida. Kitob stol tagida → الكِتَابُ تَحْتَ الطَّاوِلَةِ."
+    },
+    {
+      "q": "'Ishchilar bu yerda olti oy ishlashadi' gapining to'g'ri arabcha shakli qaysi?",
+      "opts": [
+        "العُمَّالُ يَعْمَلُونَ هُنَا سِتَّةَ أَشْهُرٍ",
+        "العَامِلُ يَعْمَلُ هُنَا سِتَّةَ أَشْهُرٍ",
+        "العُمَّالُ نَعْمَلُ هُنَا سِتَّةَ أَشْهُرٍ",
+        "العُمَّالُ يَعْمَلُونَ هُنَاكَ سِتَّةَ أَشْهُرٍ"
+      ],
+      "correct": 0,
+      "izoh": "العُمَّالُ (ishchilar, ko'plik) → يَعْمَلُونَ, هُنَا (bu yerda)."
+    },
+    {
+      "q": "Gapni to'ldiring:",
+      "opts": [
+        "كِتَابٌ",
+        "كُتُبٍ",
+        "كِتَابًا",
+        "الكُتُبُ"
+      ],
+      "correct": 1,
+      "izoh": "عِدَّةُ (bir necha) muzofun ileyhi sifatida ko'plik, majrur ot oladi: كُتُبٍ."
+    },
+    {
+      "q": "'Mening bobom zalda, kursi ustida o'tiribdi' gapini arab tiliga tarjima qiling.",
+      "opts": [
+        "جَدِّي تَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ",
+        "جَدِّي يَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ",
+        "جَدِّي يَجْلِسُ فِي الغُرْفَةِ تَحْتَ الكُرْسِيِّ",
+        "أَبِي يَجْلِسُ فِي الصَّالَةِ عَلَى الكُرْسِيِّ"
+      ],
+      "correct": 1,
+      "izoh": "جَدِّي (bobom) muzakkar → يَجْلِسُ. A-variant تَجْلِسُ (muannas) xato; D-variant أَبِي (otam) ma'noni o'zgartiradi."
+    },
+    {
+      "q": "'Sinfdan qalamlarni olasizlarmi, ey talaba qizlar?' gapiga mos javob variantini toping.",
+      "opts": [
+        "هَلْ تَأْخُذُونَ الأَقْلَامَ مِنَ الصَّفِّ يَا مُعَلِّمُ؟",
+        "هَلْ تَأْخُذْنَ الأَقْلَامَ مِنَ الصَّفِّ يَا طَالِبَاتُ؟",
+        "هَلْ تَأْخُذِينَ القَلَمَ مِنَ المَكْتَبَةِ؟",
+        "هَلْ تَأْخُذْنَ الأَقْلَامَ مِنَ الصَّفِّ؟"
+      ],
+      "correct": 1,
+      "izoh": "يَا طَالِبَاتُ (qizlar) → 2-shaxs muannas ko'plik fe'l تَأْخُذْنَ, الأَقْلَام (qalamlar) va الصَّفّ (sinf)."
+    },
+    {
+      "q": "Bo'sh joyga egalik qo'shimchasini qo'ying:",
+      "opts": [
+        "كُمْ",
+        "كُمَا",
+        "كُنَّ",
+        "هُمَا"
+      ],
+      "correct": 1,
+      "izoh": "يَا طَالِبَانِ (ikki talaba) — ikkilikka murojaat, egalik qo'shimchasi ـكُمَا: دَرْسُكُمَا."
+    },
+    {
+      "q": "'U (ayol) shifokor, u xonaga kiradi' gapining arabcha tarjimasini aniqlang.",
+      "opts": [
+        "هُوَ طَبِيبٌ يَدْخُلُ فِي الغُرْفَةِ",
+        "هِيَ طَبِيبَةٌ تَدْخُلُ الغُرْفَةَ",
+        "هِيَ مُعَلِّمَةٌ تَدْخُلُ المَدْرَسَةَ",
+        "أَنَا طَبِيبَةٌ أَدْخُلُ الغُرْفَةَ"
+      ],
+      "correct": 1,
+      "izoh": "هِيَ طَبِيبَةٌ (u, ayol, shifokor) → muannas fe'l تَدْخُلُ الغُرْفَةَ (xonaga kiradi)."
+    },
+    {
+      "q": "'Ikki do'st bu hafta sartaroshga borishadi' gapidagi fe'l va foil (ega) mosligini toping.",
+      "opts": [
+        "الصَّدِيقَانِ يَذْهَبَانِ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ",
+        "الصَّدِيقُ يَذْهَبُ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ",
+        "الصَّدِيقَانِ تَذْهَبَانِ إِلَى الحَلَّاقِ هَذَا الأُسْبُوعَ",
+        "الأَصْدِقَاءُ يَذْهَبُونَ إِلَى الحَلَّاقِ"
+      ],
+      "correct": 0,
+      "izoh": "الصَّدِيقَانِ (ikki do'st) → ikkilik muzakkar fe'l يَذْهَبَانِ. C-variant تَذْهَبَانِ (muannas) xato."
+    },
+    {
+      "q": "Bo'sh joyga mos so'zni qo'ying:",
+      "opts": [
+        "الصَّالَةِ",
+        "المَطْبَخِ",
+        "المَكْتَبَةِ",
+        "الشَّارِعِ"
+      ],
+      "correct": 1,
+      "izoh": "Ovqatni odatda oshxonada pishiriladi: المَطْبَخِ (oshxona)."
+    },
+    {
+      "q": "'Bizning mudirimiz ba'zi talabalarga nasihat qildi' gapining arabcha tarjimasi qaysi?",
+      "opts": [
+        "مُدِيرُنَا نَصَحَ بَعْضَ الطُّلَّابِ",
+        "المُدِيرُ يَنْصَحُ بَعْضَ الطُّلَّابِ",
+        "مُدِيرُكُمْ نَصَحَ بَعْضَ الطَّالِبَاتِ",
+        "أَنَا أَنْصَحُ المُدِيرَ"
+      ],
+      "correct": 0,
+      "izoh": "مُدِيرُنَا (bizning mudirimiz) + o'tgan zamon نَصَحَ (nasihat qildi) + بَعْضَ الطُّلَّابِ (ba'zi talabalar)."
+    },
+    {
+      "q": "Bo'sh joyni mantiqan to'ldiring:",
+      "opts": [
+        "نَظِيفٌ",
+        "جَمِيلٌ",
+        "وَسِخٌ",
+        "وَاسِعٌ"
+      ],
+      "correct": 2,
+      "izoh": "وَسِخٌ = kir/iflos. وَاسِعٌ (keng) صَغِيرٌ (kichik) ga zid bo'lgani uchun mantiqan to'g'ri kelmaydi."
+    },
+    {
+      "q": "'O'quvchilar yangi darsni eshitishyapti va uni tushunishyapti' — to'g'ri tarjimani toping.",
+      "opts": [
+        "الطُّلَّابُ يَسْتَمِعُونَ إِلَى الدَّرْسِ الجَدِيدِ وَيَفْهَمُونَهُ",
+        "الطُّلَّابُ يَكْتُبُونَ الدَّرْسَ الجَدِيدَ وَيَفْهَمُونَهُ",
+        "الطَّالِبَانِ يَسْتَمِعَانِ الدَّرْسَ الجَدِيدَ",
+        "الطَّالِبَاتُ يَسْتَمِعْنَ الدَّرْسَ القَدِيمَ"
+      ],
+      "correct": 0,
+      "izoh": "الطُّلَّابُ يَسْتَمِعُونَ (eshitishadi) + وَيَفْهَمُونَهُ (uni tushunishadi). B 'yozishadi', D 'eski dars' — ma'no buziladi."
+    },
+    {
+      "q": "'Siz ikkingiz darsdan keyin uyga qaytasizlar, so'ng taom yeysizlar' — to'g'ri tarjimani toping.",
+      "opts": [
+        "أَنْتُمَا تَرْجِعَانِ إِلَى البَيْتِ بَعْدَ الدَّرْسِ ثُمَّ تَأْكُلَانِ الطَّعَامَ",
+        "أَنْتُمْ تَرْجِعُونَ إِلَى البَيْتِ بَعْدَ الدَّرْسِ ثُمَّ تَأْكُلُونَ",
+        "هُمَا يَرْجِعَانِ إِلَى البَيْتِ بَعْدَ الدَّرْسِ وَيَأْكُلَانِ",
+        "أَنْتُمَا تَذْهَبَانِ إِلَى المَدْرَسَةِ بَعْدَ الدَّرْسِ"
+      ],
+      "correct": 0,
+      "izoh": "أَنْتُمَا (siz ikkingiz) → تَرْجِعَانِ ... ثُمَّ تَأْكُلَانِ. B ko'plik, C 3-shaxs — mos emas."
+    },
+    {
+      "q": "'Yangi darsni o'qiysizlarmi, ey talabalar?' — to'g'ri tarjimani toping.",
+      "opts": [
+        "هَلْ تَقْرَأْنَ الدَّرْسَ الجَدِيدَ يَا طَالِبَاتُ؟",
+        "هَلْ تَقْرَأُونَ الدَّرْسَ الجَدِيدَ يَا طُلَّابُ؟",
+        "هَلْ يَقْرَأُونَ الدَّرْسَ الجَدِيدَ يَا طُلَّابُ؟",
+        "هَلْ تَقْرَأُ الدَّرْسَ القَدِيمَ يَا زَيْدُ؟"
+      ],
+      "correct": 1,
+      "izoh": "يَا طُلَّابُ (talabalar) → 2-shaxs ko'plik تَقْرَأُونَ. C يَقْرَأُونَ (3-shaxs) murojaatga mos emas."
+    },
+    {
+      "q": "'Uning nevaralari darsni yodlashadi, keyin uy yonida o'ynashadi' — to'g'ri tarjimani toping.",
+      "opts": [
+        "أَحْفَادُهُ يَحْفَظُونَ الدَّرْسَ ثُمَّ يَلْعَبُونَ جَانِبَ البَيْتِ",
+        "حَفِيدُهُ يَحْفَظُ الدَّرْسَ ثُمَّ يَلْعَبُ فِي البَيْتِ",
+        "أَحْفَادُهَا يَكْتُبُونَ الدَّرْسَ ثُمَّ يَلْعَبُونَ فِي الصَّفِّ",
+        "الأَوْلَادُ يَحْفَظُونَ الدَّرْسَ وَيَلْعَبُونَ أَمَامَ المَدْرَسَةِ"
+      ],
+      "correct": 0,
+      "izoh": "أَحْفَادُهُ (uning nevaralari) → يَحْفَظُونَ ... يَلْعَبُونَ جَانِبَ البَيْتِ (uy yonida)."
+    },
+    {
+      "q": "'Stol ustida beshta yangi kitob bor' — to'g'ri tarjimani toping.",
+      "opts": [
+        "عَلَى الطَّاوِلَةِ خَمْسَةُ كُتُبٍ جَدِيدَةٍ",
+        "تَحْتَ الطَّاوِلَةِ خَمْسَةُ كُتُبٍ قَدِيمَةٍ",
+        "فِي الخِزَانَةِ خَمْسَةُ كُتُبٍ جَدِيدَةٍ",
+        "عَلَى الطَّاوِلَةِ ثَلَاثَةُ كُتُبٍ جَدِيدَةٍ"
+      ],
+      "correct": 0,
+      "izoh": "عَلَى الطَّاوِلَةِ (stol ustida) + خَمْسَةُ كُتُبٍ جَدِيدَةٍ (beshta yangi kitob)."
+    },
+    {
+      "q": "'Sening eski qalaming stol tagida' — to'g'ri tarjimani toping.",
+      "opts": [
+        "قَلَمُكَ الجَدِيدُ فَوْقَ الطَّاوِلَةِ",
+        "قَلَمُكَ القَدِيمُ خَلْفَ الطَّاوِلَةِ",
+        "قَلَمُكَ القَدِيمُ تَحْتَ الطَّاوِلَةِ",
+        "دَفْتَرُكَ القَدِيمُ تَحْتَ الطَّاوِلَةِ"
+      ],
+      "correct": 2,
+      "izoh": "قَلَمُكَ القَدِيمُ (eski qalaming) + تَحْتَ الطَّاوِلَةِ (stol tagida)."
+    },
+    {
+      "q": "'Eshik orqasida uchta xona bor' — to'g'ri tarjimani toping.",
+      "opts": [
+        "أَمَامَ البَابِ ثَلَاثُ غُرَفٍ",
+        "وَرَاءَ البَابِ ثَلَاثُ غُرَفٍ",
+        "وَرَاءَ البَابِ ثَلَاثَةُ غُرَفٍ",
+        "فِي البَيْتِ ثَلَاثُ غُرَفٍ"
+      ],
+      "correct": 1,
+      "izoh": "وَرَاءَ البَابِ (eshik orqasida). غُرْفَة muannas bo'lgani uchun son ـة-siz: ثَلَاثُ غُرَفٍ."
+    },
+    {
+      "q": "'Oshxonada bitta katta stol va oltita kursi bor' — to'g'ri tarjimani toping.",
+      "opts": [
+        "فِي المَطْبَخِ طَاوِلَةٌ وَاحِدَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ",
+        "فِي الصَّالَةِ طَاوِلَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ",
+        "فِي المَطْبَخِ طَاوِلَةٌ صَغِيرَةٌ وَخَمْسَةُ كَرَاسِيَّ",
+        "فِي المَطْعَمِ طَاوِلَةٌ كَبِيرَةٌ وَسِتَّةُ كَرَاسِيَّ"
+      ],
+      "correct": 0,
+      "izoh": "فِي المَطْبَخِ (oshxonada) + طَاوِلَةٌ كَبِيرَةٌ (katta stol) + سِتَّةُ كَرَاسِيَّ (oltita kursi)."
+    },
+    {
+      "q": "'Talaba ustozi oldida kitob o'qiyapti' — to'g'ri tarjimani toping.",
+      "opts": [
+        "الطَّالِبُ تَكْتُبُ الكِتَابَ أَمَامَ الأُسْتَاذِ",
+        "الطَّالِبُ يَقْرَأُ الكِتَابَ أَمَامَ الأُسْتَاذِ",
+        "الأُسْتَاذُ يَقْرَأُ الكِتَابَ أَمَامَ الطَّالِبِ",
+        "الطَّالِبُ يَقْرَأُ الكِتَابَ خَلْفَ الأُسْتَاذِ"
+      ],
+      "correct": 1,
+      "izoh": "الطَّالِبُ يَقْرَأُ (talaba o'qiyapti) + أَمَامَ الأُسْتَاذِ (ustozi oldida)."
+    },
+    {
+      "q": "'Sizlarning amakingiz mashina oldiga ketyapti' — to'g'ri tarjimani toping.",
+      "opts": [
+        "عَمُّكُمْ يَذْهَبُ أَمَامَ السَّيَّارَةِ",
+        "خَالُكُمْ يَذْهَبُ أَمَامَ السَّيَّارَةِ",
+        "عَمُّهَا يَذْهَبُ خَلْفَ السَّيَّارَةِ",
+        "عَمُّكُمْ يَرْجِعُ مِنَ السَّيَّارَةِ"
+      ],
+      "correct": 0,
+      "izoh": "عَمُّكُمْ (sizlarning amakingiz) + يَذْهَبُ أَمَامَ السَّيَّارَةِ (mashina oldiga ketyapti)."
+    },
+    {
+      "q": "Grammatik jihatdan XATO tuzilgan gapni aniqlang.",
+      "opts": [
+        "الكِتَابُ عَلَى الطَّاوِلَةِ",
+        "جَلَسَ زَيْدٌ عَلَى الكُرْسِيِّ",
+        "هُوَ تَكْتُبَانِ الدَّرْسَ",
+        "الطَّالِبَاتُ يَخْرُجْنَ مِنَ الصَّفِّ"
+      ],
+      "correct": 2,
+      "izoh": "«هُوَ تَكْتُبَانِ» xato: «هُوَ» (u, birlik) ga ikkilik fe'l تَكْتُبَانِ mos kelmaydi. To'g'risi: هُوَ يَكْتُبُ."
+    },
+    {
+      "q": "Ushbu gapdagi xatoni toping:",
+      "opts": [
+        "«الأُسْتَاذُ» so'zi fathali bo'lishi kerak",
+        "«يَدْخُلُ» fe'li muannas bo'lishi kerak",
+        "«الصَّفّ» harfi jardan (فِي) keyin kelgani uchun kasrali — الصَّفِّ — bo'lishi kerak",
+        "Gapda umuman xato yo'q"
+      ],
+      "correct": 2,
+      "izoh": "فِي (harfi jar) dan keyingi ism majrur — kasrali bo'ladi: فِي الصَّفِّ."
+    },
+    {
+      "q": "Qaysi qatorda olmosh va fe'l mosligi BUZILGAN?",
+      "opts": [
+        "أَنَا أَشْرَبُ",
+        "أَنْتِ تَكْتُبِينَ",
+        "هُمْ يَعْمَلُونَ",
+        "هِيَ يَجْلِسُ"
+      ],
+      "correct": 3,
+      "izoh": "«هِيَ يَجْلِسُ» buzilgan: «هِيَ» (u, ayol) muzoriy fe'li ت bilan bo'lishi kerak — هِيَ تَجْلِسُ. يَجْلِسُ — muzakkar shakl."
+    },
+    {
+      "q": "Sifat va mavsuf (ot + sifat) mosligi buzilgan noto'g'ri birikmani toping.",
+      "opts": [
+        "المَكْتَبَةُ الوَاسِعَةُ",
+        "خِزَانَةٌ جَدِيدٌ",
+        "قَلَمٌ قَدِيمٌ",
+        "البَابُ الصَّغِيرُ"
+      ],
+      "correct": 1,
+      "izoh": "«خِزَانَةٌ» — muannas ot, sifati ham muannas bo'lishi kerak: خِزَانَةٌ جَدِيدَةٌ. «جَدِيدٌ» muzakkar — moslik buzilgan."
+    },
+    {
+      "q": "Ushbu gapdagi xatolik nimada?",
+      "opts": [
+        "«إِلَى» o'rniga «عَلَى» bo'lishi kerak",
+        "«يَا طَالِبَاتُ» (ayollar) bo'lgani uchun fe'l «تَذْهَبْنَ» shaklida bo'lishi shart",
+        "«المَدْرَسَةِ» so'zi fathali bo'lishi kerak",
+        "«هَلْ» yuklamasi bu yerda ishlatilmaydi"
+      ],
+      "correct": 1,
+      "izoh": "يَا طَالِبَاتُ (ayollar) ga murojaat — fe'l 2-shaxs muannas ko'plik bo'lishi kerak: تَذْهَبْنَ, تَذْهَبُونَ (erkaklar shakli) emas."
     }
   ]
 }
