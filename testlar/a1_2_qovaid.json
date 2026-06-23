@@ -1,0 +1,187 @@
+{
+  "title": "Qovaid — A1 2-dars",
+  "otish": 80,
+  "vaqt": 30,
+  "questions": [
+    {
+      "q": "«مُدِيرٌ» (Direktor) so'zining ikkilik (musanno) shaklini toping.",
+      "opts": ["مُدِيرَاتٌ", "مُدِيرَانِ", "مُدِيرُونَ", "مُدِيرَتَانِ"],
+      "correct": 1,
+      "izoh": "Muzakkar ikkilik «ـَانِ» qo'shimchasi bilan: مُدِيرَانِ."
+    },
+    {
+      "q": "«جَدَّةٌ» (Buvi) so'zining ikkilik shakli qanday bo'ladi?",
+      "opts": ["جَدَّتَانِ", "جَدَّانِ", "جَدَّاتٌ", "جَدُودٌ"],
+      "correct": 0,
+      "izoh": "Muannas so'zda ة → ت bo'lib «ـَانِ» qo'shiladi: جَدَّتَانِ."
+    },
+    {
+      "q": "Bo'sh joyga mos ko'rsatish olmoshini qo'ying: «___ طَالِبَانِ مُجْتَهِدَانِ» (Ikki tirishqoq talaba).",
+      "opts": ["هَاتَانِ", "هَذَا", "هَذَانِ", "هَذِهِ"],
+      "correct": 2,
+      "izoh": "Muzakkar ikkilik uchun «هَذَانِ»."
+    },
+    {
+      "q": "Bo'sh joyga mos ko'rsatish olmoshini qo'ying: «___ بِنْتَانِ صَغِيرَتَانِ» (Ikki kichkina qiz).",
+      "opts": ["هَذَانِ", "هَاتَانِ", "هُنَا", "هُوَ"],
+      "correct": 1,
+      "izoh": "Muannas ikkilik uchun «هَاتَانِ»."
+    },
+    {
+      "q": "«هَاتَانِ حَقِيبَتَانِ» gapining o'zbek tilidagi to'g'ri tarjimasini toping.",
+      "opts": ["Bu — maktab sumkasi.", "Anavi ikkita sumka.", "Bu ikkitasi sumkalardir.", "Bu ikkisi sumkadir (muannas)."],
+      "correct": 3,
+      "izoh": "هَاتَانِ = bu ikkisi (muannas), حَقِيبَتَانِ = ikki sumka."
+    },
+    {
+      "q": "Quyidagi so'zlardan qaysi biri «Musanno» (ikkilik) shaklida EMAS?",
+      "opts": ["مُعَلِّمَانِ", "طَبِيبَتَانِ", "هُنَا", "وَلَدَانِ"],
+      "correct": 2,
+      "izoh": "«هُنَا» — joy ravishi (bu yerda), ikkilik shakl emas."
+    },
+    {
+      "q": "«بَيْتٌ» (Uy) so'zining ikkilik shaklini aniqlang.",
+      "opts": ["بَيْتَانِ", "بُيُوتٌ", "بَيْتَتَانِ", "بَيْتُونَ"],
+      "correct": 0,
+      "izoh": "Ikkilik «ـَانِ» bilan: بَيْتَانِ (بُيُوتٌ — ko'plik)."
+    },
+    {
+      "q": "Muzakkar (erkak) jinsidagi ikki shaxsga nisbatan «Ular ikkisi kim?» deb qanday so'raladi?",
+      "opts": ["مَنْ هَاتَانِ؟", "مَنْ هَذَانِ؟", "مَا هَذَانِ؟", "مَنْ هُوَ؟"],
+      "correct": 1,
+      "izoh": "Jonli shaxs uchun «مَنْ» + muzakkar ikkilik «هَذَانِ»."
+    },
+    {
+      "q": "«مَا هَاتَانِ؟» (Bular nima? — muannas) savoliga to'g'ri javobni toping.",
+      "opts": ["هَذَانِ قَلَمَانِ", "هَاتَانِ سَيَّارَتَانِ", "هُوَ كِتَابٌ", "هَاتَانِ طَالِبَتَانِ"],
+      "correct": 1,
+      "izoh": "«مَا» jonsiz narsa uchun; muannas ikkilik narsa — «هَاتَانِ سَيَّارَتَانِ»."
+    },
+    {
+      "q": "«مَدِينَةٌ» (Shahar) so'zining to'g'ri ikkilik shaklini ko'rsating.",
+      "opts": ["مَدِينُونَ", "مَدِينَانِ", "مَدِينَتَانِ", "مُدُنٌ"],
+      "correct": 2,
+      "izoh": "Muannas so'z: ة → ت, مَدِينَتَانِ (مُدُنٌ — ko'plik)."
+    },
+    {
+      "q": "«___ طَبِيبَتَانِ» gapida bo'sh joyga qaysi shaxs olmoshi mos keladi?",
+      "opts": ["أَنْتَ", "هُوَ", "هُمَا", "أَنَا"],
+      "correct": 2,
+      "izoh": "Ikkilik (ikki shaxs) uchun «هُمَا» = ular ikkisi."
+    },
+    {
+      "q": "Ikkinchi shaxs «Siz ikkingiz» olmoshining arabcha muqobili qaysi?",
+      "opts": ["نَحْنُ", "أَنْتُمَا", "هُمَا", "أَنْتُمْ"],
+      "correct": 1,
+      "izoh": "أَنْتُمَا = siz ikkingiz."
+    },
+    {
+      "q": "«Biz ikkimiz muallimmiz» gapining arabcha to'g'ri ifodasini toping.",
+      "opts": ["أَنَا مُعَلِّمٌ", "نَحْنُ مُعَلِّمَانِ", "هُمَا مُعَلِّمَانِ", "أَنْتُمَا مُعَلِّمَانِ"],
+      "correct": 1,
+      "izoh": "Biz = نَحْنُ, ikki muallim = مُعَلِّمَانِ."
+    },
+    {
+      "q": "«أَنْتُمَا طَالِبَانِ» gapining tarjimasi qaysi javobda to'g'ri ko'rsatilgan?",
+      "opts": ["Ular ikkisi talabadirlar.", "Biz talabalarmiz.", "Siz ikkingiz talabasiz.", "Sen talabasan."],
+      "correct": 2,
+      "izoh": "أَنْتُمَا = siz ikkingiz, طَالِبَانِ = ikki talaba."
+    },
+    {
+      "q": "Quyidagi birikmalardan qaysi biri grammatik jihatdan XATO?",
+      "opts": ["هُمَا صَدِيقَانِ", "أَنْتُمَا خَوْلَةُ وَخَدِيجَةُ", "هُوَ أَحْمَدُ وَخَالِدُ", "نَحْنُ طَالِبَاتٌ"],
+      "correct": 2,
+      "izoh": "«هُوَ» — birlik, ammo «أَحْمَدُ وَخَالِدُ» ikki kishi; «هُمَا» bo'lishi kerak."
+    },
+    {
+      "q": "«Ular ikkisi (muannas jinsida) yangi o'qituvchilar» gapini arab tiliga tarjima qiling.",
+      "opts": ["هُمَا مُعَلِّمَتَانِ جَدِيدَتَانِ", "هَذَانِ مُعَلِّمَانِ جَدِيدَانِ", "هُمَا مُعَلِّمَانِ جَدِيدَانِ", "أَنْتُمَا مُعَلِّمَتَانِ"],
+      "correct": 0,
+      "izoh": "Muannas ikkilik: هُمَا مُعَلِّمَتَانِ جَدِيدَتَانِ."
+    },
+    {
+      "q": "O'g'il bola va qiz bola birgalikda «Biz ikkimiz...» deb gapirsa, qaysi olmoshni ishlatadi?",
+      "opts": ["أَنَا", "أَنْتُمَا", "هُمَا", "نَحْنُ"],
+      "correct": 3,
+      "izoh": "«Biz» (so'zlovchi o'zini qo'shsa) — نَحْنُ."
+    },
+    {
+      "q": "«تَتَكَوَّنُ مِنْ» iborasining ma'nosi nima?",
+      "opts": ["...ni yaxshi ko'radi", "...dan tashkil topgan / iborat", "...da baraka bor", "...da o'qiydi"],
+      "correct": 1,
+      "izoh": "تَتَكَوَّنُ مِنْ = ...dan iborat / tashkil topgan."
+    },
+    {
+      "q": "«Oshxonadagi taom baliq va guruchdan iborat» gapidagi «guruch va baliq» so'zlarining arabcha tarjimasini toping.",
+      "opts": ["الْخُبْزُ وَاللَّحْمُ", "الرُّزُّ وَالسَّمَكُ", "الدَّجَاجُ وَالْمَاءُ", "الْفَاكِهَةُ وَالْخَضَارُ"],
+      "correct": 1,
+      "izoh": "الرُّزُّ = guruch, السَّمَكُ = baliq."
+    },
+    {
+      "q": "«أُحِبُّ أَنْ أَتَنَاوَلَ طَعَامَ السَّمَكِ» gapining to'g'ri tarjimasi qaysi?",
+      "opts": ["Men baliq taomini yeyishni yaxshi ko'raman.", "Men baliq ovlashni yaxshi ko'raman.", "Oila a'zolarim baliqni yaxshi ko'rishadi.", "Menga guruchli taomlar yoqadi."],
+      "correct": 0,
+      "izoh": "أَتَنَاوَلَ = yeyish, طَعَامَ السَّمَكِ = baliq taomi."
+    },
+    {
+      "q": "Birovning yangi mashinasini ko'rganda aytiladigan «بَارَكَ اللهُ فِي سَيَّارَتِكَ» iborasi qanday ma'noni anglatadi?",
+      "opts": ["Mashinangiz juda chiroyli ekan.", "Bu mashinani qayerdan oldingiz?", "Alloh mashinangizga baraka bersin (muborak bo'lsin).", "Mashinangiz xayrli bo'lmasin."],
+      "correct": 2,
+      "izoh": "بَارَكَ اللهُ فِي... = Alloh ...ga baraka bersin."
+    },
+    {
+      "q": "«أُحِبُّ أَنْ أُشَاهِدَ كُرَةَ الْقَدَمِ» gapidagi «كُرَةَ الْقَدَمِ» birikmasi nima degani?",
+      "opts": ["Basketbol", "Futbol tomosha qilish", "Futbol (futbol o'yini)", "Tennis o'ynash"],
+      "correct": 2,
+      "izoh": "كُرَةُ الْقَدَمِ = futbol; gap ma'nosi: futbol tomosha qilishni yaxshi ko'raman."
+    },
+    {
+      "q": "«Oilangiz necha kishidan iborat?» so'rovining arabcha shakli qaysi?",
+      "opts": ["كَمْ أَخًا لَكَ؟", "مَا عَدَدُ أَفْرَادِ أُسْرَتِكَ؟", "كَمْ عُمْرُ كُلِّ فَرْدٍ؟", "مَاذَا يَعْمَلُ الْوَالِدَانِ؟"],
+      "correct": 1,
+      "izoh": "عَدَدُ أَفْرَادِ أُسْرَتِكَ = oilang a'zolari soni."
+    },
+    {
+      "q": "«مَاذَا يَعْمَلُ الْوَالِدَانِ؟» savolining ma'nosi nima?",
+      "opts": ["Ota-onang nima ish qiladi (kasbi nima)?", "Ota-onang qayerda yashaydi?", "Oilangizda nechta odam bor?", "Akalaring qayerda o'qiydi?"],
+      "correct": 0,
+      "izoh": "الْوَالِدَانِ = ota-ona, مَاذَا يَعْمَلُ = nima ish qiladi."
+    },
+    {
+      "q": "«Akalaring nechta? Ular nima o'qishyapti?» savoli qaysi javobda to'g'ri ifodalangan?",
+      "opts": ["كَمْ عُمْرُ كُلِّ فَرْدٍ فِي أُسْرَتِكَ؟", "مَا عَدَدُ أَفْرَادِ أُسْرَتِكَ؟", "كَمْ أَخًا لَكَ؟ مَاذَا يَدْرُسُونَ؟", "مَنْ هَذَانِ وَمَاذَا يَعْمَلَانِ؟"],
+      "correct": 2,
+      "izoh": "كَمْ أَخًا لَكَ؟ = akalaring nechta?, مَاذَا يَدْرُسُونَ؟ = ular nima o'qiydi?"
+    },
+    {
+      "q": "«أُحِبُّ أُسْرَتِي كَثِيرًا» gapining tarjimasi:",
+      "opts": ["Oilamiz juda katta.", "Men oilamni juda yaxshi ko'raman.", "Do'stlarimni yaxshi ko'raman.", "Men maktabni yaxshi ko'raman."],
+      "correct": 1,
+      "izoh": "أُحِبُّ أُسْرَتِي = oilamni yaxshi ko'raman, كَثِيرًا = juda."
+    },
+    {
+      "q": "Qaysi qatorda ko'rsatish olmoshlari orasiga shaxs olmoshi aralashib qolgan (boshqalariga guruhdosh emas)?",
+      "opts": ["هَذَا ، هَذِهِ ، هَذَانِ ، هَاتَانِ", "هُوَ ، هِيَ ، هُمَا ، أَنْتَ", "هُنَا ، هَذَا ، هُوَ ، هَذِهِ", "نَحْنُ ، أَنْتُمَا ، أَنْتُمْ ، هُمَا"],
+      "correct": 2,
+      "izoh": "C qatorda ko'rsatish olmoshlari (هَذَا، هَذِهِ) orasiga shaxs olmoshi «هُوَ» aralashgan."
+    },
+    {
+      "q": "Quyidagi harflar [ ج ، د ، ا ، ن ] dan hosil bo'ladigan oila a'zosini toping.",
+      "opts": ["جَدَّةٌ", "جَدَّانِ", "وَلَدَانِ", "أَبَوَانِ"],
+      "correct": 1,
+      "izoh": "ج، د، ا، ن harflaridan «جَدَّانِ» (ikki bobo) hosil bo'ladi."
+    },
+    {
+      "q": "«Oila (أُسْرَة) — Ism (اِسْم) — Yosh (عُمْر) — Ish/Kasb (عَمَل) — O'qish (دِرَاسَة)» so'zlari ishtirok etgan mavzu darslikda nima deb nomlangan?",
+      "opts": ["عَرِّفْ بِنَفْسِكَ وَبِأَفْرَادِ أُسْرَتِكَ (O'zingni va oila a'zolaringni tanishtir)", "الْحِوَارُ فِي السُّوقِ (Bozordagi suhbat)", "الْأَلْوَانُ وَالْأَشْكَالُ (Ranglar va shakllar)", "فِي الْمَدْرَسَةِ (Maktabda)"],
+      "correct": 0,
+      "izoh": "Mavzu: «عَرِّفْ بِنَفْسِكَ وَبِأَفْرَادِ أُسْرَتِكَ»."
+    },
+    {
+      "q": "Arab tilida «Ikki sherik / Ikki do'st» ma'nosini anglatuvchi to'g'ri variantni tanlang.",
+      "opts": ["زَمِيلٌ", "زَمِيلَتَانِ", "زَمِيلَانِ", "زُمَلَاءُ"],
+      "correct": 2,
+      "izoh": "زَمِيلَانِ = ikki sherik (muzakkar ikkilik)."
+    }
+  ]
+}

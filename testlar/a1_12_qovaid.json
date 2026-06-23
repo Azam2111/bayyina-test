@@ -1,0 +1,187 @@
+{
+  "title": "Qovaid — A1 12-dars",
+  "otish": 80,
+  "vaqt": 30,
+  "questions": [
+    {
+      "q": "«أَسْرَعُ مِنْ» birikmasining o'zbek tilidagi to'g'ri tarjimasini toping.",
+      "opts": ["...dan sekinroq", "...dan tezroq", "...ga yaqinroq", "...dan kattaroq"],
+      "correct": 1,
+      "izoh": "أَسْرَعُ مِنْ = ...dan tezroq (qiyosiy daraja)."
+    },
+    {
+      "q": "Sifatlardan «اسم التفضيل» (orttirma daraja) hosil qilish qolipini ko'rsating.",
+      "opts": ["مَفْعُول", "أَفْعَل", "فَاعِل", "فَعِيل"],
+      "correct": 1,
+      "izoh": "Ismut-tafzil qolipi — أَفْعَل (masalan: أَكْبَر, أَسْرَع)."
+    },
+    {
+      "q": "Gapni to'g'ri to'ldiring: «الطَّائِرَةُ ___ مِنَ الْحَافِلَةِ» (Samolyot avtobusdan tezroq).",
+      "opts": ["أَبْطَأُ", "أَصْغَرُ", "أَسْرَعُ", "أَكْبَرُ"],
+      "correct": 2,
+      "izoh": "«tezroq» — أَسْرَعُ."
+    },
+    {
+      "q": "«كَبِير» (katta) sifatining ismut-tafzil shaklini toping.",
+      "opts": ["أَكْبَر", "كُبْرَى", "كَبِيرُونَ", "مَكْبُور"],
+      "correct": 0,
+      "izoh": "كَبِير → أَكْبَر (kattaroq / eng katta)."
+    },
+    {
+      "q": "Gapni to'g'ri to'ldiring: «الْفِيلُ أَكْبَرُ ___ الْبَقَرَةِ».",
+      "opts": ["فِي", "إِلَى", "عَنْ", "مِنْ"],
+      "correct": 3,
+      "izoh": "Qiyosiy darajadan keyin «مِنْ» keladi: أَكْبَرُ مِنْ."
+    },
+    {
+      "q": "«السُّلَحْفَاةُ أَبْطَأُ مِنَ الْبَطَّةِ» gapining tarjimasi qaysi javobda to'g'ri berilgan?",
+      "opts": ["Toshbaqa o'rdakdan tezroq.", "Toshbaqa o'rdakdan sekinroq.", "O'rdak toshbaqadan kichikroq.", "Toshbaqa va o'rdak sekindir."],
+      "correct": 1,
+      "izoh": "أَبْطَأُ مِنْ = ...dan sekinroq."
+    },
+    {
+      "q": "«قَصِير» (kalta/past bo'yli) sifatining qiyosiy darajasi qanday bo'ladi?",
+      "opts": ["أَقْصَر", "قَصِيرُونَ", "تَقْصِير", "مَقْصُور"],
+      "correct": 0,
+      "izoh": "قَصِير → أَقْصَر (kalta­roq)."
+    },
+    {
+      "q": "«الذَّهَبُ أَغْلَى مِنَ الْفِضَّةِ» gapidagi «أَغْلَى» so'zining ma'nosi nima?",
+      "opts": ["Arzonroq", "Chiroyliroq", "Qimmatroq", "Og'irroq"],
+      "correct": 2,
+      "izoh": "أَغْلَى = qimmatroq."
+    },
+    {
+      "q": "«غُرْفَتِي أَوْسَعُ مِنْ غُرْفَةِ أَخِي» gapining to'g'ri tarjimasini aniqlang.",
+      "opts": ["Mening xonam akamning xonasidan torroq.", "Mening xonam akamning xonasi kabi keng.", "Mening xonam akamning xonasidan kengroq.", "Akamning xonasi mening xonamdan kattaroq."],
+      "correct": 2,
+      "izoh": "أَوْسَعُ مِنْ = ...dan kengroq."
+    },
+    {
+      "q": "Berilgan so'zlardan to'g'ri qiyosiy gap tuzing: (اللُّغَةُ الْعَرَبِيَّةُ / سَهْل / الرِّيَاضِيَّات).",
+      "opts": ["اللُّغَةُ الْعَرَبِيَّةُ أَسْهَلُ مِنَ الرِّيَاضِيَّاتِ", "الرِّيَاضِيَّاتُ أَسْهَلُ مِنَ اللُّغَةِ الْعَرَبِيَّةِ", "اللُّغَةُ الْعَرَبِيَّةُ سَهْلٌ مِنَ الرِّيَاضِيَّاتِ", "الرِّيَاضِيَّاتُ سَهْلَةٌ مِنَ اللُّغَةِ الْعَرَبِيَّةِ"],
+      "correct": 0,
+      "izoh": "Qiyosiy gap: أَسْهَلُ مِنْ (ismut-tafzil + مِنْ)."
+    },
+    {
+      "q": "«وَبَعْدَ ذَلِكَ» iborasining ma'nosi nima?",
+      "opts": ["Undan oldin", "Shuning uchun", "Va undan keyin / so'ng", "Ammo u"],
+      "correct": 2,
+      "izoh": "وَبَعْدَ ذَلِكَ = va undan keyin / so'ng."
+    },
+    {
+      "q": "Gapni mantiqan to'ldiring: «تَنَاوَلْتُ طَعَامَ الْفُطُورِ ___ شَرِبْتُ الشَّايَ».",
+      "opts": ["قَبْلَ أَنْ", "وَبَعْدَ ذَلِكَ", "أَمَّا", "يَنْتَهِي"],
+      "correct": 1,
+      "izoh": "Ketma-ketlik bog'lovchisi: وَبَعْدَ ذَلِكَ (nonushta qildim, so'ng choy ichdim)."
+    },
+    {
+      "q": "«أَمَّا ___ فَـ» konstruksiyasi o'zbek tiliga qanday tarjima qilinadi?",
+      "opts": ["...ga kelsak, ...esa", "...dan keyin, chunki", "go'yoki ...dek", "birinchidan ... ikkinchidan"],
+      "correct": 0,
+      "izoh": "أَمَّا ... فَـ = ...ga kelsak, ...esa."
+    },
+    {
+      "q": "Gapni to'g'ri to'ldiring: «أَبِي عُمْرُهُ خَمْسُونَ عَامًا، ___ أُمِّي فَعُمْرُهَا أَرْبَعُونَ».",
+      "opts": ["قَبْلَ", "يَبْدَأُ", "بَعْدَ", "أَمَّا"],
+      "correct": 3,
+      "izoh": "«أَمَّا ... فَـ» tuzilishi: أَمَّا أُمِّي فَعُمْرُهَا..."
+    },
+    {
+      "q": "«أُمَارِسُ الرِّيَاضَةَ قَبْلَ الْفُطُورِ» gapining tarjimasi qaysi javobda to'g'ri?",
+      "opts": ["Nonushtadan keyin sport bilan shug'ullanaman.", "Nonushta vaqtida sport bilan shug'ullanaman.", "Nonushtadan oldin sport bilan shug'ullanaman.", "Sportdan keyin nonushta qilaman."],
+      "correct": 2,
+      "izoh": "قَبْلَ الْفُطُورِ = nonushtadan oldin."
+    },
+    {
+      "q": "«قَبْلَ أَنْ» birikmasidan keyin fe'lning qaysi shakli keladi?",
+      "opts": ["O'tgan zamon fe'li (الماضي)", "Muzoriy fe'li (المضارع)", "Buyruq fe'li (الأمر)", "Taqiq fe'li (النهي)"],
+      "correct": 1,
+      "izoh": "«أَنْ» dan keyin muzori' (mansub) keladi."
+    },
+    {
+      "q": "Gapni grammatik jihatdan to'g'ri to'ldiring: «أُمَارِسُ الرِّيَاضَةَ قَبْلَ أَنْ ___ الْفُطُورَ».",
+      "opts": ["أَتَنَاوَلَ", "تَنَاوَلْتُ", "تَنَاوُلٌ", "تَنَاوَلْ"],
+      "correct": 0,
+      "izoh": "«أَنْ» dan keyin muzori' mansub: أَتَنَاوَلَ."
+    },
+    {
+      "q": "«Dars soat sakkizda boshlanadi va o'nda tugaydi» gapining arabcha tarjimasini toping.",
+      "opts": ["يَبْدَأُ الدَّرْسُ فِي السَّاعَةِ الثَّامِنَةِ وَيَنْتَهِي فِي الْعَاشِرَةِ.", "يَنْتَهِي الدَّرْسُ فِي السَّاعَةِ الثَّامِنَةِ وَيَبْدَأُ فِي الْعَاشِرَةِ.", "يَبْدَأُ الدَّرْسُ قَبْلَ السَّاعَةِ الثَّامِنَةِ وَبَعْدَ الْعَاشِرَةِ.", "أَمَّا الدَّرْسُ يَبْدَأُ الثَّامِنَةَ وَأَمَّا يَنْتَهِي الْعَاشِرَةَ."],
+      "correct": 0,
+      "izoh": "يَبْدَأُ ... الثَّامِنَةِ (sakkizda boshlanadi) وَيَنْتَهِي ... الْعَاشِرَةِ (o'nda tugaydi)."
+    },
+    {
+      "q": "«اِجْلِسْ» fe'lining turi va ma'nosi nima?",
+      "opts": ["Taqiq fe'li — o'tirma", "Buyruq fe'li — o'tir (muannas)", "Buyruq fe'li — o'tir (muzakkar, birlik)", "O'tgan zamon — o'tirdi"],
+      "correct": 2,
+      "izoh": "اِجْلِسْ — buyruq fe'li, muzakkar birlik (sen o'tir)."
+    },
+    {
+      "q": "«لَا تَجْلِسْ» fe'li qanday ma'noni anglatadi?",
+      "opts": ["O'tir", "O'tirma", "O'tiryapti", "O'tirishdi"],
+      "correct": 1,
+      "izoh": "لَا + muzori' = taqiq: لَا تَجْلِسْ (o'tirma)."
+    },
+    {
+      "q": "«اِذْهَبْ» (Bor!) buyruq fe'lining ko'plik (muzakkar) shaklini ko'rsating.",
+      "opts": ["اِذْهَبِي", "اِذْهَبَا", "اِذْهَبْنَ", "اِذْهَبُوا"],
+      "correct": 3,
+      "izoh": "Muzakkar ko'plik buyrug'i: اِذْهَبُوا (boringlar)."
+    },
+    {
+      "q": "Qiz bolaga (أَنْتِ) qarata «Yozma!» demoqchi bo'lsak, qaysi shakldan foydalanamiz?",
+      "opts": ["لَا تَكْتُبْ", "لَا تَكْتُبِي", "لَا تَكْتُبُوا", "لَا تَكْتُبْنَ"],
+      "correct": 1,
+      "izoh": "Ayolga taqiq: لَا تَكْتُبِي (yozma)."
+    },
+    {
+      "q": "«اِشْرَبْنَ» fe'li kimga nisbatan aytilgan?",
+      "opts": ["Ko'plikdagi ayollarga (أَنْتُنَّ)", "Ikki kishiga (أَنْتُمَا)", "Ko'plikdagi erkaklarga (أَنْتُمْ)", "Bir ayolga (أَنْتِ)"],
+      "correct": 0,
+      "izoh": "«ـنَ» qo'shimchasi — ayollar ko'pligi (أَنْتُنَّ)."
+    },
+    {
+      "q": "«قَرَأَ» (o'qidi) fe'lining muzakkar birlik uchun buyruq shakli qanday bo'ladi?",
+      "opts": ["اِقْرَأْ", "لَا تَقْرَأْ", "اُقْرُؤُوا", "قَارِئ"],
+      "correct": 0,
+      "izoh": "Muzakkar birlik buyrug'i: اِقْرَأْ (o'qi)."
+    },
+    {
+      "q": "«لَا تَذْهَبْ إِلَى الْعَمَلِ مُتَأَخِّرًا يَا مَحْمُودُ» gapining to'g'ri tarjimasi qaysi?",
+      "opts": ["Ishga vaqtliroq bor, ey Mahmud!", "Ishga kechikib bor, ey Mahmud!", "Ishga kechikib borma, ey Mahmud!", "Mahmud ishga kechikib ketdi."],
+      "correct": 2,
+      "izoh": "لَا تَذْهَبْ ... مُتَأَخِّرًا = kechikib borma."
+    },
+    {
+      "q": "«أَخَذَ» (oldi) fe'lining buyruq (الأمر) shakli to'g'ri berilgan javobni toping.",
+      "opts": ["إِئْخَذْ", "خُذْ", "لَا تَأْخُذْ", "مَأْخُوذ"],
+      "correct": 1,
+      "izoh": "أَخَذَ ning buyruq shakli — خُذْ (ol)."
+    },
+    {
+      "q": "«يَا طُلَّابُ، لَا تَكْتُبُوا الْوَاجِبَ فِي الدَّرْسِ» gapidagi «لَا تَكْتُبُوا» fe'li nimani anglatadi?",
+      "opts": ["Vazifani darsda yozinglar", "Vazifani darsda yozmanglar", "Vazifani uyda yozishdi", "Vazifani darsdan oldin yozinglar"],
+      "correct": 1,
+      "izoh": "لَا تَكْتُبُوا = yozmanglar (ko'plikka taqiq)."
+    },
+    {
+      "q": "«قَالَ» (aytdi) fe'lining buyruq shakli qanday bo'ladi?",
+      "opts": ["قُلْ", "اِقْوَلْ", "قُلْ عَنْ", "لَا تَقُلْ"],
+      "correct": 0,
+      "izoh": "قَالَ ning buyruq shakli — قُلْ (ayt)."
+    },
+    {
+      "q": "Gapni mantiqan va grammatik jihatdan to'g'ri taqiq shakli bilan to'ldiring: «لَا ___ عَنْ هَذِهِ الْحَيَوَانَاتِ» (Bu hayvonlardan uzoqlashmanglar — ko'plik).",
+      "opts": ["تَبْتَعِدْ", "تَبْتَعِدِي", "تَبْتَعِدُوا", "تَبْتَعِدْنَ"],
+      "correct": 2,
+      "izoh": "Erkaklar ko'pligiga taqiq: لَا تَبْتَعِدُوا."
+    },
+    {
+      "q": "«رَجَعْتُ مِنَ الْمَتْجَرِ» (Do'kondan qaytdim) gapini «Do'kondan qaytma!» shaklidagi taqiq gapga aylantiring.",
+      "opts": ["اِرْجِعْ مِنَ الْمَتْجَرِ", "لَا تَرْجِعْ مِنَ الْمَتْجَرِ", "لَا تَرْجِعِي مِنَ الْمَتْجَرِ", "لَا يَرْجِعُ مِنَ الْمَتْجَرِ"],
+      "correct": 1,
+      "izoh": "Taqiq (muzakkar birlik): لَا تَرْجِعْ (qaytma)."
+    }
+  ]
+}

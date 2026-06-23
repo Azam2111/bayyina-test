@@ -1,0 +1,247 @@
+{
+  "title": "Qovaid — A1 11-dars",
+  "otish": 80,
+  "vaqt": 40,
+  "questions": [
+    {
+      "q": "«هُوَ لَاعِبٌ مَشْهُورٌ» (U mashhur o'yinchi) gapidagi olmoshni yaqinni ko'rsatuvchi mos ko'rsatkich olmoshiga o'zgartiring.",
+      "opts": ["ذَلِكَ لَاعِبٌ مَشْهُورٌ", "هَذَا لَاعِبٌ مَشْهُورٌ", "هَذِهِ لَاعِبٌ مَشْهُورٌ", "هَؤُلَاءِ لَاعِبٌ مَشْهُورٌ"],
+      "correct": 1,
+      "izoh": "هُوَ (yaqin, muzakkar birlik) → هَذَا."
+    },
+    {
+      "q": "«هُمَا رَسَّامَانِ مَاهِرَانِ» (Ular ikkita mohir rassom) gapini yaqin ko'rsatkich olmoshi bilan almashtiring.",
+      "opts": ["هَذَانِ رَسَّامَانِ مَاهِرَانِ", "هَاتَانِ رَسَّامَانِ مَاهِرَانِ", "هَذَا رَسَّامَانِ مَاهِرَانِ", "هَؤُلَاءِ رَسَّامَانِ مَاهِرَانِ"],
+      "correct": 0,
+      "izoh": "Muzakkar ikkilik yaqin → هَذَانِ."
+    },
+    {
+      "q": "«هِيَ مُمَثِّلَةٌ فِي الْجَامِعَةِ» (U universitetda aktrisa) gapini uzoqni ko'rsatuvchi olmoshga o'zgartiring.",
+      "opts": ["ذَلِكَ مُمَثِّلَةٌ فِي الْجَامِعَةِ", "تِلْكَ مُمَثِّلَةٌ فِي الْجَامِعَةِ", "أُولَئِكَ مُمَثِّلَةٌ فِي الْجَامِعَةِ", "هَذِهِ مُمَثِّلَةٌ فِي الْجَامِعَةِ"],
+      "correct": 1,
+      "izoh": "هِيَ (muannas birlik) uzoq → تِلْكَ."
+    },
+    {
+      "q": "G'ayrioqil (aqlsiz) ko'plikdagi so'zlar uchun qaysi ko'rsatkich olmoshi ishlatiladi?",
+      "opts": ["Faqat ko'plik shakli (هَؤُلَاءِ / أُولَئِكَ)", "Muannas (ayol) jinsidagi birlik shakli (هَذِهِ / تِلْكَ)", "Muzakkar (erkak) jinsidagi birlik shakli (هَذَا / ذَلِكَ)", "Hech qanday olmosh ishlatilmaydi"],
+      "correct": 1,
+      "izoh": "Aqlsiz narsalar ko'pligi muannas birlik (هَذِهِ / تِلْكَ) bilan keladi."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «___ الْكَرَاسِيُّ مُرِيحَةٌ» (Uzoqdagi stullar qulay).",
+      "opts": ["أُولَئِكَ", "ذَلِكَ", "تِلْكَ", "هَؤُلَاءِ"],
+      "correct": 2,
+      "izoh": "Stullar — aqlsiz ko'plik, uzoq → تِلْكَ."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «___ السَّيَّارَاتُ سَرِيعَةٌ» (Yaqindagi mashinalar tezkor).",
+      "opts": ["هَذِهِ", "هَؤُلَاءِ", "هَذَا", "هَاتَانِ"],
+      "correct": 0,
+      "izoh": "Mashinalar — aqlsiz ko'plik, yaqin → هَذِهِ."
+    },
+    {
+      "q": "Gapni tarjima qiling: «Men suzish sportida mahoratliman».",
+      "opts": ["أَنَا أَنْصَحُ بِالسِّبَاحَةِ.", "بِالنِّسْبَةِ لِي السِّبَاحَةُ مُفِيدَةٌ.", "أَنَا مَاهِرٌ فِي رِيَاضَةِ السِّبَاحَةِ.", "أَنَا أُمَارِسُ السِّبَاحَةَ يَوْمِيًّا."],
+      "correct": 2,
+      "izoh": "مَاهِرٌ فِي = ...da mahoratli; رِيَاضَةِ السِّبَاحَةِ = suzish sporti."
+    },
+    {
+      "q": "Bo'sh joyga mos sifatni tanlang: «الْقَاهِرَةُ مَدِينَةٌ ___».",
+      "opts": ["جَمِيلٌ", "جَمِيلَةٌ", "جَمِيلَاتٌ", "جَمِيلَانِ"],
+      "correct": 1,
+      "izoh": "مَدِينَةٌ — muannas, sifat ham muannas: جَمِيلَةٌ."
+    },
+    {
+      "q": "Bo'sh joyga mos mavsufni (otni) tanlang: «فِي الْبَيْتِ ___ نَائِمُونَ».",
+      "opts": ["طِفْلَةٌ", "أَطْفَالٌ", "الْبِنْتُ", "الْوَلَدُ"],
+      "correct": 1,
+      "izoh": "«نَائِمُونَ» — muzakkar ko'plik, mavsuf ham ko'plik: أَطْفَالٌ."
+    },
+    {
+      "q": "«هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ» gapini uzoqni ko'rsatuvchi shaklga o'giring.",
+      "opts": ["أُولَئِكَ الْهِوَايَاتُ مُفِيدَةٌ", "تِلْكَ الْهِوَايَاتُ مُفِيدَةٌ", "ذَلِكَ الْهِوَايَاتُ مُفِيدَةٌ", "هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ"],
+      "correct": 1,
+      "izoh": "Hobbylar — aqlsiz ko'plik, uzoq → تِلْكَ."
+    },
+    {
+      "q": "«هَذَا الْمَنْظَرُ جَمِيلٌ» gapini uzoqni ko'rsatuvchi shaklga o'giring.",
+      "opts": ["تِلْكَ الْمَنْظَرُ جَمِيلٌ", "ذَلِكَ الْمَنْظَرُ جَمِيلٌ", "أُولَئِكَ الْمَنْظَرُ جَمِيلٌ", "هَذِهِ الْمَنْظَرُ جَمِيلٌ"],
+      "correct": 1,
+      "izoh": "الْمَنْظَرُ — muzakkar birlik, uzoq → ذَلِكَ."
+    },
+    {
+      "q": "«يَنْصَحُ الطَّبِيبُ بِـ ___ الْخَضْرَاوَاتِ الطَّازَجَةِ» gapidagi bo'sh joyga mos shaklni qo'ying.",
+      "opts": ["تَنَاوُلِ", "الْقِرَاءَةِ", "مُمَارَسَةِ", "الْمَشْيِ"],
+      "correct": 0,
+      "izoh": "Shifokor sabzavot yeyishni maslahat beradi: تَنَاوُلِ الْخَضْرَاوَاتِ."
+    },
+    {
+      "q": "«Har kuni / Kundalik» ma'nosini beruvchi arabcha so'zni toping.",
+      "opts": ["أُسْبُوعِيًّا", "شَهْرِيًّا", "يَوْمِيًّا", "سَنَوِيًّا"],
+      "correct": 2,
+      "izoh": "يَوْمِيًّا = har kuni / kundalik."
+    },
+    {
+      "q": "Bo'sh joyga mos ko'rsatkich olmoshini qo'ying: «مِنْ أَيْنَ ___ الرِّجَالُ؟» (Yaqindagi kishilar).",
+      "opts": ["هَذِهِ", "هَؤُلَاءِ", "هَذَا", "هَاتَانِ"],
+      "correct": 1,
+      "izoh": "Erkaklar (aqlli ko'plik), yaqin → هَؤُلَاءِ."
+    },
+    {
+      "q": "Bo'sh joyga mos ko'rsatkich olmoshini qo'ying: «___ الْجِبَالُ عَالِيَةٌ» (Uzoqdagi tog'lar).",
+      "opts": ["أُولَئِكَ", "ذَلِكَ", "تِلْكَ", "هَؤُلَاءِ"],
+      "correct": 2,
+      "izoh": "Tog'lar — aqlsiz ko'plik, uzoq → تِلْكَ."
+    },
+    {
+      "q": "Sifat va mavsuf moslashuviga ko'ra to'g'ri birikmani toping.",
+      "opts": ["الرِّيَاضَةُ الْبَدَنِيَّةُ", "الرِّيَاضَةُ الْبَدَنِيُّ", "الرِّيَاضَةُ بَدَنِيٌّ", "رِيَاضَةٌ الْبَدَنِيَّةُ"],
+      "correct": 0,
+      "izoh": "Mavsuf va sifat jins, son, aniqlikda mos: الرِّيَاضَةُ الْبَدَنِيَّةُ."
+    },
+    {
+      "q": "«النَّوْمُ الْهَادِئُ» birikmasining o'zbekcha tarjimasi nima?",
+      "opts": ["Elektron o'yinlar", "Sokin uyqu", "Go'zal dengiz", "Jismoniy tarbiya"],
+      "correct": 1,
+      "izoh": "النَّوْمُ الْهَادِئُ = sokin uyqu."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «يُحِبُّ صَدِيقِي اللَّوْنَ ___».",
+      "opts": ["الْأَزْرَقَ", "وَاسِعٌ", "مُفِيدَةٌ", "النَّشِيطَةُ"],
+      "correct": 0,
+      "izoh": "اللَّوْنَ (mansub, muzakkar) sifati: الْأَزْرَقَ (ko'k rang)."
+    },
+    {
+      "q": "«Mening fikrimcha / Men uchun eng afzali...» ma'nosidagi iborani toping.",
+      "opts": ["مَاهِرٌ فِي", "بِالنِّسْبَةِ لِي أَفْضَلُ", "يَنْصَحُ بِـ", "يَوْمِيًّا"],
+      "correct": 1,
+      "izoh": "بِالنِّسْبَةِ لِي = men uchun / menimcha; أَفْضَلُ = eng afzal."
+    },
+    {
+      "q": "Bo'sh joyga mos so'zni tanlang: «أَنَا أَرْسُمُ ___ الطَّبِيعِيَّةَ».",
+      "opts": ["الْمَنَاظِرَ", "الْهِوَايَةَ", "الْمَطْبَخَ", "الصُّفُوفَ"],
+      "correct": 0,
+      "izoh": "«tabiiy manzaralar chizaman»: الْمَنَاظِرَ الطَّبِيعِيَّةَ."
+    },
+    {
+      "q": "«أُولَئِكَ لَاعِبُونَ مَاهِرُونَ» gapidagi ko'rsatkich olmoshi nimani anglatadi?",
+      "opts": ["Yaqindagi ko'p sonli erkaklarni", "Uzoqdagi ko'p sonli insonlarni", "Yaqindagi bitta erkakni", "Uzoqdagi aqlsiz ko'plikni"],
+      "correct": 1,
+      "izoh": "أُولَئِكَ = uzoqdagi aqlli ko'plik (bular emas, anavilar)."
+    },
+    {
+      "q": "Bo'sh joyga mos ko'rsatkich olmoshini qo'ying: «___ الصُّفُوفُ فَارِغَةٌ» (Yaqindagi sinflar).",
+      "opts": ["هَذَا", "هَذِهِ", "هَؤُلَاءِ", "ذَلِكَ"],
+      "correct": 1,
+      "izoh": "Sinflar — aqlsiz ko'plik, yaqin → هَذِهِ."
+    },
+    {
+      "q": "«أَصْدِقَائِي: مُصْطَفَى، عَادِل، سَمِير» gapining boshiga qaysi yaqinlik olmoshi mos keladi?",
+      "opts": ["هَذِهِ", "هَؤُلَاءِ", "تِلْكَ", "أُولَئِكَ"],
+      "correct": 1,
+      "izoh": "Do'stlar (aqlli ko'plik), yaqin → هَؤُلَاءِ."
+    },
+    {
+      "q": "«تِلْكَ السَّيَّارَاتُ سَرِيعَةٌ» gapining to'g'ri tarjimasi qaysi?",
+      "opts": ["Bu mashinalar tezkor.", "Anavi mashinalar tezkor.", "Anavi mashina tezkor.", "Bu stullar qulay."],
+      "correct": 1,
+      "izoh": "تِلْكَ = anavi (uzoq, ko'plik): anavi mashinalar tezkor."
+    },
+    {
+      "q": "Sifat va mavsuf moslashuvida qaysi omillar mos kelishi shart?",
+      "opts": ["Jins, son, aniqlik va kelishikda", "Faqat jins va kelishikda", "Faqat sonda", "Hech qaysi jihatdan mos kelishi shart emas"],
+      "correct": 0,
+      "izoh": "Sifat mavsufga jins, son, aniqlik va kelishikda mos keladi."
+    },
+    {
+      "q": "«فِي الْمَلْعَبِ لَاعِبُونَ ___» gapidagi bo'sh joyga to'g'ri sifatni qo'ying.",
+      "opts": ["مَاهِرٌ", "مَاهِرُونَ", "مَاهِرَةٌ", "مَاهِرَاتٌ"],
+      "correct": 1,
+      "izoh": "لَاعِبُونَ — muzakkar ko'plik, sifat ham: مَاهِرُونَ."
+    },
+    {
+      "q": "«أُحِبُّ اللَّوْنَ الْأَخْضَرَ» gapining tarjimasi nima?",
+      "opts": ["Moviy rangni yaxshi ko'raman.", "Yashil rangni yaxshi ko'raman.", "Tinch uxlashni yaxshi ko'raman.", "Kitob o'qishni maslahat beraman."],
+      "correct": 1,
+      "izoh": "الْأَخْضَرَ = yashil rang."
+    },
+    {
+      "q": "«Mening onam taom pishirishda mohirdir» gapining arabcha tarjimasini toping.",
+      "opts": ["أُمِّي مَاهِرَةٌ فِي طَبْخِ الطَّعَامِ.", "أَنَا مَاهِرٌ فِي رِيَاضَةِ السِّبَاحَةِ.", "يَنْصَحُ الطَّبِيبُ بِتَنَاوُلِ الْخَضْرَاوَاتِ.", "بِالنِّسْبَةِ لِي أَفْضَلُ فَصْلِ الصَّيْفِ."],
+      "correct": 0,
+      "izoh": "أُمِّي مَاهِرَةٌ فِي طَبْخِ الطَّعَامِ = onam taom pishirishda mohir."
+    },
+    {
+      "q": "«تِلْكَ» ko'rsatkich olmoshi qaysi holatda ishlatiladi?",
+      "opts": ["Uzoqdagi muzakkar (erkak) birlik uchun", "Uzoqdagi muannas (ayol) birlik va g'ayrioqil ko'plik uchun", "Yaqindagi muannas birlik uchun", "Uzoqdagi aqlli ko'plik uchun"],
+      "correct": 1,
+      "izoh": "تِلْكَ — uzoqdagi muannas birlik va aqlsiz ko'plik uchun."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «شَاهَدْتُ سَيَّارَةً ___».",
+      "opts": ["كَبِيرَةً", "كَبِيرٌ", "كَبِيرَةٌ", "كِبَارٌ"],
+      "correct": 0,
+      "izoh": "سَيَّارَةً — muannas va mansub (maf'ul), sifat ham: كَبِيرَةً."
+    },
+    {
+      "q": "«Aka-ukam kitob yig'ishni yaxshi ko'radi» gapidagi «kitob yig'ish» qanday aytiladi?",
+      "opts": ["جَمْعُ الْكُتُبِ", "مُمَارَسَةُ الرِّيَاضَةِ", "مُشَاهَدَةُ الْبَحْرِ", "الْأَلْعَابُ الْإِلِكْتْرُونِيَّةُ"],
+      "correct": 0,
+      "izoh": "جَمْعُ الْكُتُبِ = kitoblar to'plash."
+    },
+    {
+      "q": "«شَاهَدْتُ مَشْهَدَ الْبَحْرِ الْجَمِيلِ» gapidagi sifat qaysi so'z?",
+      "opts": ["شَاهَدْتُ", "مَشْهَدَ", "الْبَحْرِ", "الْجَمِيلِ"],
+      "correct": 3,
+      "izoh": "الْجَمِيلِ (go'zal) — sifat; الْبَحْرِ — mavsuf."
+    },
+    {
+      "q": "«Haftalik / Har hafta» ma'nosini anglatuvchi so'zni toping.",
+      "opts": ["أُسْبُوعِيًّا", "يَوْمِيًّا", "شَهْرِيًّا", "سَنَوِيًّا"],
+      "correct": 0,
+      "izoh": "أُسْبُوعِيًّا = haftalik / har hafta."
+    },
+    {
+      "q": "«Shifokor ko'p kitob o'qishni maslahat beradi» gapidagi «maslahat beradi» fe'li qaysi?",
+      "opts": ["يُمَارِسُ", "يَنْصَحُ", "يُفَضِّلُ", "يُحِبُّ"],
+      "correct": 1,
+      "izoh": "يَنْصَحُ = maslahat beradi."
+    },
+    {
+      "q": "Bo'sh joyni to'ldiring: «وَضَعْتُ الْكُتُبَ فِي ___ الْجَدِيدَةِ».",
+      "opts": ["الْحَقِيبَةِ", "الْبَيْتِ", "الْمَلْعَبِ", "الْعَمَلِ"],
+      "correct": 0,
+      "izoh": "«الْجَدِيدَةِ» — muannas, mos so'z الْحَقِيبَةِ (yangi sumka)."
+    },
+    {
+      "q": "«هَؤُلَاءِ الرِّجَالُ يُمَارِسُونَ الرِّيَاضَةَ» gapidagi «هَؤُلَاءِ» olmoshini uzoqlik shakliga o'zgartiring.",
+      "opts": ["تِلْكَ", "ذَلِكَ", "أُولَئِكَ", "هَذِهِ"],
+      "correct": 2,
+      "izoh": "هَؤُلَاءِ (yaqin, aqlli ko'plik) → أُولَئِكَ (uzoq)."
+    },
+    {
+      "q": "«Yaqindagi ikkita qiz bola» uchun qaysi ko'rsatkich olmoshi ishlatiladi?",
+      "opts": ["هَذَانِ", "هَاتَانِ", "هَؤُلَاءِ", "هَذِهِ"],
+      "correct": 1,
+      "izoh": "Muannas ikkilik yaqin → هَاتَانِ."
+    },
+    {
+      "q": "«الْهِوَايَاتُ الْمَنْزِلِيَّةُ» birikmasining ma'nosi nima?",
+      "opts": ["Foydali sevimli mashg'ulotlar", "Uy sharoitidagi (ichkaridagi) sevimli mashg'ulotlar", "Sport mashg'ulotlari", "Kundalik vazifalar"],
+      "correct": 1,
+      "izoh": "الْمَنْزِلِيَّةُ = uy sharoitidagi; uy sevimli mashg'ulotlari."
+    },
+    {
+      "q": "Bo'sh joyga mos sifatni tanlang: «يَسْكُنُ فِي بَيْتٍ ___».",
+      "opts": ["وَاسِعٍ", "وَاسِعَةٌ", "وَاسِعٌ", "وَاسِعًا"],
+      "correct": 0,
+      "izoh": "بَيْتٍ — majrur (harfi jardan keyin), sifat ham majrur: وَاسِعٍ."
+    },
+    {
+      "q": "To'g'ri sifat-mavsuf birikmasini aniqlang.",
+      "opts": ["الْأَلْعَابِ الْإِلِكْتْرُونِيَّةِ", "الْأَلْعَابِ الْإِلِكْتْرُونِيُّ", "أَلْعَابٌ الْإِلِكْتْرُونِيَّةِ", "الْأَلْعَابِ إِلِكْتْرُونِيَّةٌ"],
+      "correct": 0,
+      "izoh": "Mavsuf va sifat aniqlik va kelishikda mos: الْأَلْعَابِ الْإِلِكْتْرُونِيَّةِ."
+    }
+  ]
+}

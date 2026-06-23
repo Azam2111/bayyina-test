@@ -1,0 +1,157 @@
+{
+  "title": "Qovaid — A1 1-dars",
+  "otish": 80,
+  "vaqt": 25,
+  "questions": [
+    {
+      "q": "«هَذَا ___ كِتَابٌ» — bo'sh joyga mos ko'rsatish olmoshini qo'ying. (Bu kitob)",
+      "opts": ["هَذِهِ", "هَذَا", "هُوَ", "أَنَا"],
+      "correct": 1,
+      "izoh": "«كِتَابٌ» — muzakkar (erkak) ism, shuning uchun «هَذَا» ishlatiladi."
+    },
+    {
+      "q": "«___ حَقِيبَةٌ» — bo'sh joyga mos ko'rsatish olmoshini qo'ying. (Bu sumka)",
+      "opts": ["هَذَا", "مَنْ", "هَذِهِ", "هِيَ"],
+      "correct": 2,
+      "izoh": "«حَقِيبَةٌ» — muannas (ayol) ism (ة bilan), shuning uchun «هَذِهِ»."
+    },
+    {
+      "q": "«مَدْرَسَةٌ» so'zining tarjimasi nima?",
+      "opts": ["Maktab", "Shifokor", "Bayroq", "Qalam"],
+      "correct": 0,
+      "izoh": "مَدْرَسَةٌ = Maktab."
+    },
+    {
+      "q": "«Bu — o'qituvchi (erkak)» jumlasining to'g'ri arabcha tarjimasini toping.",
+      "opts": ["هَذِهِ مُعَلِّمَةٌ", "هَذَا مُعَلِّمٌ", "هُوَ طَالِبٌ", "هَذَا طَالِبٌ"],
+      "correct": 1,
+      "izoh": "Erkak o'qituvchi uchun «هَذَا مُعَلِّمٌ»."
+    },
+    {
+      "q": "«___ عَلَمٌ» — bo'sh joyga mos ko'rsatish olmoshini qo'ying. (Bu bayroq)",
+      "opts": ["هَذِهِ", "مَا", "هَذَا", "أَنْتَ"],
+      "correct": 2,
+      "izoh": "«عَلَمٌ» — muzakkar ism, shuning uchun «هَذَا»."
+    },
+    {
+      "q": "Suratda doska tasvirlangan bo'lsa, uni ko'rsatish uchun qaysi jumla ishlatiladi?",
+      "opts": ["هَذَا قَلَمٌ", "هَذِهِ سَبُّورَةٌ", "هَذَا كِتَابٌ", "هَذِهِ حَقِيبَةٌ"],
+      "correct": 1,
+      "izoh": "Doska = سَبُّورَةٌ (muannas), to'g'ri jumla «هَذِهِ سَبُّورَةٌ»."
+    },
+    {
+      "q": "«___ طَبِيبَةٌ مُجْتَهِدَةٌ» — mos kishilik olmoshini qo'ying. (U tirishqoq shifokor ayol)",
+      "opts": ["هُوَ", "أَنْتَ", "هِيَ", "أَنَا"],
+      "correct": 2,
+      "izoh": "Ayol kishi (طَبِيبَةٌ) uchun «هِيَ» = u (ayol)."
+    },
+    {
+      "q": "«___ رَجُلٌ قَوِيٌّ» — mos kishilik olmoshini qo'ying. (U baquvvat erkak)",
+      "opts": ["هِيَ", "هُوَ", "أَنْتِ", "أَنَا"],
+      "correct": 1,
+      "izoh": "Erkak kishi (رَجُلٌ) uchun «هُوَ» = u (erkak)."
+    },
+    {
+      "q": "«أَنْتِ طَالِبَةٌ» jumlasining tarjimasi nima?",
+      "opts": ["Sen talabasan (erkakka)", "U talaba (ayolga)", "Men talabaman", "Sen talabasan (ayolga)"],
+      "correct": 3,
+      "izoh": "«أَنْتِ» = sen (ayolga), «طَالِبَةٌ» = talaba qiz."
+    },
+    {
+      "q": "«___ مُهَنْدِسَةٌ نَشِيطَةٌ» — mos olmoshni qo'ying. (Sen chaqqon muhandis ayolsan)",
+      "opts": ["أَنْتَ", "هُوَ", "أَنْتِ", "هِيَ"],
+      "correct": 2,
+      "izoh": "Ayolga murojaat (مُهَنْدِسَةٌ) uchun «أَنْتِ» = sen (ayolga)."
+    },
+    {
+      "q": "O'zini «Men mahoratli oshpazman» deb tanishtirgan erkak kishi qaysi olmoshni ishlatadi?",
+      "opts": ["هُوَ طَبَّاخٌ مَاهِرٌ", "أَنَا طَبَّاخٌ مَاهِرٌ", "أَنْتَ طَبَّاخٌ مَاهِرٌ", "هِيَ طَبَّاخَةٌ مَاهِرَةٌ"],
+      "correct": 1,
+      "izoh": "«Men...» — birinchi shaxs, «أَنَا» = men."
+    },
+    {
+      "q": "«___ مُدِيرَةٌ» — mos olmoshni qo'ying. (U mudira / direktor ayol)",
+      "opts": ["هُوَ", "أَنْتَ", "هِيَ", "أَنَا"],
+      "correct": 2,
+      "izoh": "Ayol kishi (مُدِيرَةٌ) uchun «هِيَ»."
+    },
+    {
+      "q": "«___ هَذَا؟ ← هَذَا قَلَمٌ» — bo'sh joyga mos so'roq olmoshini qo'ying. (Bu nima? ← Bu qalam)",
+      "opts": ["مَنْ", "كَيْفَ", "أَيْنَ", "مَا"],
+      "correct": 3,
+      "izoh": "Jonsiz narsa uchun «مَا» (nima)."
+    },
+    {
+      "q": "«___ هَذَا؟ ← هَذَا صَدِيقِي يَاسِر» — mos so'roq olmoshini qo'ying. (Bu kim? ← Bu do'stim Yosir)",
+      "opts": ["مَا", "مَنْ", "مَاذَا", "أَيْنَ"],
+      "correct": 1,
+      "izoh": "Jonli shaxs uchun «مَنْ» (kim)."
+    },
+    {
+      "q": "«___ حَالُكَ؟ ← بِخَيْرٍ وَالْحَمْدُ لِله» — mos so'roq olmoshini qo'ying. (Ahvoling qanday?)",
+      "opts": ["مَنْ", "أَيْنَ", "كَيْفَ", "مَاذَا"],
+      "correct": 2,
+      "izoh": "«كَيْفَ حَالُكَ؟» = Ahvoling qanday? (holatni so'rash)."
+    },
+    {
+      "q": "«___ أَنْتَ؟ ← أَنَا مِنَ السُّودَانِ» — mos so'roq birikmasini qo'ying. (Sen qayerdansan?)",
+      "opts": ["مِنْ أَيْنَ", "مَاذَا", "كَيْفَ", "مَنْ"],
+      "correct": 0,
+      "izoh": "«مِنْ أَيْنَ أَنْتَ؟» = Sen qayerdansan? (kelib chiqishni so'rash)."
+    },
+    {
+      "q": "«___ تَعْمَلُ؟ ← أَعْمَلُ فِي الْجَامِعَةِ» — mos so'roq olmoshini qo'ying. (Qayerda ishlaysan?)",
+      "opts": ["مَاذَا", "أَيْنَ", "مَنْ", "كَيْفَ"],
+      "correct": 1,
+      "izoh": "Joyni so'rash uchun «أَيْنَ» (qayerda)."
+    },
+    {
+      "q": "«___ تَعْمَلُ؟ ← أَعْمَلُ مُعَلِّمًا» — mos so'roq olmoshini qo'ying. (Nima bo'lib ishlaysan?)",
+      "opts": ["مَنْ", "أَيْنَ", "مَاذَا", "كَيْفَ"],
+      "correct": 2,
+      "izoh": "Kasb/ishni so'rash uchun «مَاذَا تَعْمَلُ؟»."
+    },
+    {
+      "q": "«___ اِسْمُكَ؟ ← اِسْمِي مَحْمُودٌ» — mos so'roq olmoshini qo'ying. (Isming nima?)",
+      "opts": ["مَا", "مَنْ", "أَيْنَ", "كَيْفَ"],
+      "correct": 0,
+      "izoh": "«مَا اسْمُكَ؟» = Isming nima? (ism narsa sifatida «مَا» bilan so'raladi)."
+    },
+    {
+      "q": "«___ الطُّلَّابُ؟ ← الطُّلَّابُ فِي الصَّفِّ» — mos so'roq olmoshini qo'ying. (Talabalar qayerda?)",
+      "opts": ["مَنْ", "أَيْنَ", "مَاذَا", "مَا"],
+      "correct": 1,
+      "izoh": "Joyni so'rash uchun «أَيْنَ» (qayerda)."
+    },
+    {
+      "q": "«صَبَاحُ الْخَيْرِ» (Xayrli tong) iborasiga qanday javob qaytariladi?",
+      "opts": ["مَسَاءُ النُّورِ", "أَهْلًا وَسَهْلًا", "صَبَاحُ النُّورِ", "مَعَ السَّلَامَةِ"],
+      "correct": 2,
+      "izoh": "«صَبَاحُ الْخَيْرِ» ga an'anaviy javob «صَبَاحُ النُّورِ»."
+    },
+    {
+      "q": "«مَعَ السَّلَامَةِ» (Salomat bo'ling) deb xayrlashilganda, sherigi nima deb javob beradi?",
+      "opts": ["مَرْحَبًا", "إِلَى اللِّقَاءِ (yoki فِي أَمَانِ الله)", "الْحَمْدُ لِله", "مَسَاءُ الْخَيْرِ"],
+      "correct": 1,
+      "izoh": "Xayrlashuvga javob: «إِلَى اللِّقَاءِ» yoki «فِي أَمَانِ الله»."
+    },
+    {
+      "q": "«أَهْلًا وَسَهْلًا» iborasining ma'nosi nima?",
+      "opts": ["Xayrli kech", "Xush kelibsiz", "Ko'rishguncha", "Salomat bo'ling"],
+      "correct": 1,
+      "izoh": "أَهْلًا وَسَهْلًا = Xush kelibsiz."
+    },
+    {
+      "q": "«مَسَاءُ الْخَيْرِ» (Xayrli kech) iborasiga to'g'ri javobni toping.",
+      "opts": ["صَبَاحُ النُّورِ", "مَرْحَبًا بِكَ", "مَعَ السَّلَامَةِ", "مَسَاءُ النُّورِ"],
+      "correct": 3,
+      "izoh": "«مَسَاءُ الْخَيْرِ» ga javob «مَسَاءُ النُّورِ»."
+    },
+    {
+      "q": "Kimdir sizga «مَرْحَبًا» (Salom) desa, unga javoban nima deysiz?",
+      "opts": ["أَهْلًا وَسَهْلًا بِكَ", "فِي أَمَانِ الله", "إِلَى اللِّقَاءِ", "بِخَيْرٍ"],
+      "correct": 0,
+      "izoh": "«مَرْحَبًا» ga javob «أَهْلًا وَسَهْلًا بِكَ»."
+    }
+  ]
+}
