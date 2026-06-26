@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bayyina — Qovaid · A1 12-dars</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+  --gold:#cda35b;
+  --cream:#f6f1e8; --cream-dim:#e8ddca;
+  --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+  --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+  --ink:#2c2014;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.ar{font-family:'Amiri','Scheherazade New',serif}
+
+.geo{position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+
+/* ===== MATERIAL SCREEN ===== */
+#matScreen{position:relative;min-height:100vh;background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 55%,var(--brown-deep) 100%);padding-bottom:110px;overflow:hidden}
+.mat-hdr{position:relative;z-index:1;padding:28px 20px 16px;text-align:center;color:#fff}
+.mat-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px}
+.mat-logo{width:44px;height:44px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.mat-brand-name{font-size:18px;font-weight:800;color:var(--cream);letter-spacing:1.5px;text-transform:uppercase}
+.mat-badge{display:inline-block;background:var(--cream);color:var(--brown-deep);font-weight:800;font-size:11px;padding:5px 14px;border-radius:20px;letter-spacing:1.2px;text-transform:uppercase}
+.mat-title-ar{font-family:'Amiri',serif;direction:rtl;font-size:clamp(30px,8vw,48px);margin:14px 0 4px;color:var(--cream);line-height:1.6;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.mat-title-uz{font-size:14px;color:var(--tan);font-weight:600}
+.mat-desc{max-width:600px;margin:16px auto 0;padding:0 20px;font-size:13.5px;color:#e8dac8;line-height:1.7;text-align:center}
+.mat-desc b{color:var(--gold)}
+
+.info-row{position:relative;z-index:1;display:flex;gap:10px;max-width:480px;margin:18px auto 0;padding:0 16px}
+.info-card{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 10px;text-align:center}
+.info-card .num{font-size:22px;font-weight:800;color:var(--cream)}
+.info-card .lbl{font-size:11px;color:var(--tan);margin-top:2px;font-weight:600}
+
+.mat-tip{position:relative;z-index:1;max-width:540px;margin:16px auto 0;padding:0 16px;font-size:12.5px;color:#e8dac8;line-height:1.7;text-align:center}
+
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(58,39,22,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);z-index:50}
+.btn-primary{display:block;width:100%;max-width:580px;margin:0 auto;padding:16px;border:none;border-radius:14px;background:var(--cream);color:var(--brown-deep);font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25);font-family:inherit;letter-spacing:.3px}
+.btn-primary:active{transform:scale(.98)}
+
+/* ===== TEST SCREEN ===== */
+#testScreen{min-height:100vh;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E");display:none}
+.t-hdr{position:sticky;top:0;z-index:20;background:var(--brown-deep);color:#fff;padding:11px 16px;display:flex;align-items:center;justify-content:space-between}
+.t-hdr-title{display:flex;align-items:center;font-size:12.5px;font-weight:700;color:var(--tan)}
+.t-hdr-icon{height:22px;width:22px;border-radius:6px;margin-right:8px}
+.t-hdr-title b{color:var(--cream)}
+.timer-badge{font-variant-numeric:tabular-nums;font-weight:800;font-size:15px;padding:6px 14px;border-radius:20px;background:var(--brown);color:#fff;min-width:60px;text-align:center}
+.timer-badge.warn{background:var(--gold);color:var(--brown-deep)}
+.timer-badge.danger{background:var(--red2);color:#fff;animation:tpulse 1s infinite}
+@keyframes tpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+.gbar-wrap{padding:8px 16px 0;background:var(--brown-deep)}
+.gbar{height:5px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden}
+.gbar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--cream));transition:width .35s ease}
+.q-counter{text-align:center;font-size:11.5px;color:var(--tan);padding:8px 0;background:var(--brown-deep);font-weight:600;letter-spacing:.5px}
+
+.q-wrap{max-width:660px;margin:0 auto;padding:20px 14px 48px}
+.q-card{background:#fff;border-radius:18px;padding:22px 18px;box-shadow:0 4px 24px rgba(60,40,20,.08);animation:fadeUp .35s ease;border:1px solid var(--cream-dim)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+.q-num{display:inline-block;font-size:10.5px;color:var(--brown-deep);background:var(--cream-dim);font-weight:800;padding:4px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
+.q-text{font-size:clamp(17px,4.8vw,23px);text-align:center;line-height:1.65;color:var(--ink);font-weight:700;padding:2px}
+.q-text .ar{font-family:'Amiri',serif;font-size:1.25em;direction:rtl;unicode-bidi:isolate}
+
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.opts.locked .opt{pointer-events:none}
+.opt{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid var(--cream-dim);border-radius:13px;cursor:pointer;transition:all .15s ease;background:#fff}
+.opt:active{transform:scale(.98)}
+.opt .opt-text{font-size:clamp(15px,4vw,19px);font-weight:600;color:#333;line-height:1.45;flex:1}
+.opt.opt-ar .opt-text{font-family:'Amiri',serif;direction:rtl;font-size:clamp(22px,6vw,30px);font-weight:700;text-align:right;line-height:1.75}
+.opt.ok{background:var(--green-bg);border-color:var(--green)}
+.opt.ok .opt-text{color:var(--green-text)}
+.opt.no{background:var(--red-bg);border-color:var(--red)}
+.opt.no .opt-text{color:var(--red-text)}
+.ltr{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--brown-mid)}
+.opt.ok .ltr{background:var(--green);color:#fff}
+.opt.no .ltr{background:var(--red);color:#fff}
+
+.fb-box{margin-top:16px;padding:13px 15px;border:1.5px solid var(--gold);background:#fbf3e6;border-radius:12px;font-size:13.5px;color:#5a4326;line-height:1.65;animation:fadeUp .3s ease}
+.fb-box .ar{font-family:'Amiri',serif;font-size:1.1em;font-weight:700}
+
+/* ===== RESULT SCREEN ===== */
+#resScreen{position:relative;min-height:100vh;display:none;background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 50%,var(--brown-deep) 100%);align-items:center;justify-content:center;padding:36px 20px;flex-direction:column;text-align:center;color:#fff;overflow:hidden}
+.res-logo{position:relative;z-index:1;width:48px;height:48px;border-radius:11px;margin-bottom:10px;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.res-brand{position:relative;z-index:1;font-size:12px;font-weight:800;letter-spacing:5px;color:var(--tan);margin-bottom:14px;text-transform:uppercase}
+.res-icon{position:relative;z-index:1;font-size:50px;margin-bottom:4px}
+.res-circle{position:relative;z-index:1;width:136px;height:136px;border-radius:50%;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:14px auto;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.res-circle .pct{font-size:36px;font-weight:800;color:var(--brown-deep);line-height:1}
+.res-circle .lbl{font-size:10px;color:var(--brown-mid);font-weight:700;margin-top:3px}
+.res-title{position:relative;z-index:1;font-size:19px;font-weight:800;margin:14px 0 8px}
+.res-msg{position:relative;z-index:1;padding:12px 16px;border-radius:12px;font-size:13.5px;font-weight:600;max-width:380px;margin-bottom:22px;line-height:1.65}
+.res-msg.pass{background:rgba(39,174,96,.16);border:1.5px solid var(--green);color:#a8f0c6}
+.res-msg.fail{background:rgba(231,76,60,.16);border:1.5px solid var(--red);color:#ffb3a8}
+.res-btns{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px}
+.btn-sec{padding:14px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);background:transparent;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-sec:active{background:rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+
+<!-- ===== MATERIAL SCREEN ===== -->
+<div id="matScreen">
+  <div class="geo"></div>
+  <div class="mat-hdr">
+    <div class="mat-brand">
+      <img class="mat-logo" src="logo_icon_cream.png" alt="Bayyina">
+      <span class="mat-brand-name">Bayyina</span>
+    </div>
+    <span class="mat-badge">Qovaid · A1 · 12-dars</span>
+    <div class="mat-title-ar">اِسْمُ التَّفْضِيلِ · الْأَمْرُ وَالنَّهْيُ</div>
+    <div class="mat-title-uz">Qiyosiy daraja · Buyruq · Taqiq</div>
+    <div class="mat-desc">
+      <b>12 ta savol</b> — grammatik qoidalar va ularning qo'llanishi.
+      Har bir javobdan keyin <b>qisqa izoh</b> chiqadi. O'tish chegarasi — <b>80%</b>, vaqt — <b>15 daqiqa</b>.
+    </div>
+  </div>
+  <div class="info-row">
+    <div class="info-card"><div class="num">12</div><div class="lbl">Savol</div></div>
+    <div class="info-card"><div class="num">80%</div><div class="lbl">O'tish</div></div>
+    <div class="info-card"><div class="num">15'</div><div class="lbl">Vaqt</div></div>
+  </div>
+  <div class="mat-tip">💡 Arabcha shakllarni harakatlari bilan diqqat bilan o'qing.</div>
+  <div class="sticky-bar">
+    <button class="btn-primary" onclick="startTest()">🚀 Testni boshlash</button>
+  </div>
+</div>
+
+<!-- ===== TEST SCREEN ===== -->
+<div id="testScreen">
+  <div class="t-hdr">
+    <div class="t-hdr-title">
+      <img class="t-hdr-icon" src="logo_icon_cream.png" alt="">
+      <span style="color:var(--cream);font-weight:800;letter-spacing:1px;margin-right:5px">Bayyina</span> · <b style="margin-left:5px">Qovaid 12-dars</b>
+    </div>
+    <div class="timer-badge" id="timerBadge">15:00</div>
+  </div>
+  <div class="gbar-wrap"><div class="gbar"><div class="gbar-fill" id="gbarFill"></div></div></div>
+  <div class="q-counter" id="qCounter">Savol 1 / 12</div>
+  <div class="q-wrap">
+    <div class="q-card" id="qCard">
+      <div class="q-num" id="qNum"></div>
+      <div class="q-text" id="qText"></div>
+      <div class="opts" id="optsDiv"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== RESULT SCREEN ===== -->
+<div id="resScreen">
+  <div class="geo"></div>
+  <img class="res-logo" src="logo_icon_cream.png" alt="Bayyina">
+  <div class="res-brand">BAYYINA</div>
+  <div class="res-icon" id="resIcon">🎉</div>
+  <div class="res-circle">
+    <div class="pct" id="resPct">0%</div>
+    <div class="lbl" id="resFrac">0/12</div>
+  </div>
+  <div class="res-title" id="resTitle">Natija tayyor!</div>
+  <div class="res-msg" id="resMsg"></div>
+  <div class="res-btns" id="resBtns"></div>
+</div>
+
+<script>
+const QUESTIONS = [
+  {q:"«أَسْرَعُ مِنْ» birikmasining o'zbek tilidagi to'g'ri tarjimasini toping.", opts:["...dan sekinroq", "...dan tezroq", "...ga yaqinroq", "...dan kattaroq"], c:1, f:"أَسْرَعُ مِنْ = ...dan tezroq (qiyosiy daraja)."},
+  {q:"Sifatlardan «اسم التفضيل» (orttirma daraja) hosil qilish qolipini ko'rsating.", opts:["مَفْعُول", "أَفْعَل", "فَاعِل", "فَعِيل"], c:1, f:"Ismut-tafzil qolipi — أَفْعَل (masalan: أَكْبَر, أَسْرَع)."},
+  {q:"Gapni to'g'ri to'ldiring: «الطَّائِرَةُ ___ مِنَ الْحَافِلَةِ» (Samolyot avtobusdan tezroq).", opts:["أَبْطَأُ", "أَصْغَرُ", "أَسْرَعُ", "أَكْبَرُ"], c:2, f:"«tezroq» — أَسْرَعُ."},
+  {q:"«كَبِير» (katta) sifatining ismut-tafzil shaklini toping.", opts:["أَكْبَر", "كُبْرَى", "كَبِيرُونَ", "مَكْبُور"], c:0, f:"كَبِير → أَكْبَر (kattaroq / eng katta)."},
+  {q:"Gapni to'g'ri to'ldiring: «الْفِيلُ أَكْبَرُ ___ الْبَقَرَةِ».", opts:["فِي", "إِلَى", "عَنْ", "مِنْ"], c:3, f:"Qiyosiy darajadan keyin «مِنْ» keladi: أَكْبَرُ مِنْ."},
+  {q:"«السُّلَحْفَاةُ أَبْطَأُ مِنَ الْبَطَّةِ» gapining tarjimasi qaysi javobda to'g'ri berilgan?", opts:["Toshbaqa o'rdakdan tezroq.", "Toshbaqa o'rdakdan sekinroq.", "O'rdak toshbaqadan kichikroq.", "Toshbaqa va o'rdak sekindir."], c:1, f:"أَبْطَأُ مِنْ = ...dan sekinroq."},
+  {q:"«قَصِير» (kalta/past bo'yli) sifatining qiyosiy darajasi qanday bo'ladi?", opts:["أَقْصَر", "قَصِيرُونَ", "تَقْصِير", "مَقْصُور"], c:0, f:"قَصِير → أَقْصَر (kalta­roq)."},
+  {q:"«الذَّهَبُ أَغْلَى مِنَ الْفِضَّةِ» gapidagi «أَغْلَى» so'zining ma'nosi nima?", opts:["Arzonroq", "Chiroyliroq", "Qimmatroq", "Og'irroq"], c:2, f:"أَغْلَى = qimmatroq."},
+  {q:"«غُرْفَتِي أَوْسَعُ مِنْ غُرْفَةِ أَخِي» gapining to'g'ri tarjimasini aniqlang.", opts:["Mening xonam akamning xonasidan torroq.", "Mening xonam akamning xonasi kabi keng.", "Mening xonam akamning xonasidan kengroq.", "Akamning xonasi mening xonamdan kattaroq."], c:2, f:"أَوْسَعُ مِنْ = ...dan kengroq."},
+  {q:"Berilgan so'zlardan to'g'ri qiyosiy gap tuzing: (اللُّغَةُ الْعَرَبِيَّةُ / سَهْل / الرِّيَاضِيَّات).", opts:["اللُّغَةُ الْعَرَبِيَّةُ أَسْهَلُ مِنَ الرِّيَاضِيَّاتِ", "الرِّيَاضِيَّاتُ أَسْهَلُ مِنَ اللُّغَةِ الْعَرَبِيَّةِ", "اللُّغَةُ الْعَرَبِيَّةُ سَهْلٌ مِنَ الرِّيَاضِيَّاتِ", "الرِّيَاضِيَّاتُ سَهْلَةٌ مِنَ اللُّغَةِ الْعَرَبِيَّةِ"], c:0, f:"Qiyosiy gap: أَسْهَلُ مِنْ (ismut-tafzil + مِنْ)."},
+  {q:"«وَبَعْدَ ذَلِكَ» iborasining ma'nosi nima?", opts:["Undan oldin", "Shuning uchun", "Va undan keyin / so'ng", "Ammo u"], c:2, f:"وَبَعْدَ ذَلِكَ = va undan keyin / so'ng."},
+  {q:"Gapni mantiqan to'ldiring: «تَنَاوَلْتُ طَعَامَ الْفُطُورِ ___ شَرِبْتُ الشَّايَ».", opts:["قَبْلَ أَنْ", "وَبَعْدَ ذَلِكَ", "أَمَّا", "يَنْتَهِي"], c:1, f:"Ketma-ketlik bog'lovchisi: وَبَعْدَ ذَلِكَ (nonushta qildim, so'ng choy ichdim)."}
+];
+const TIMER_SEC = 900;
+const PASS_PCT  = 80;
+
+let qi=0, score=0, timeLeft=TIMER_SEC, timerInv=null, answered=false;
+
+try{if(window.Telegram&&window.Telegram.WebApp){Telegram.WebApp.ready();Telegram.WebApp.expand();}}catch(e){}
+
+function shuffle(arr){
+  const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+function startTest(){
+  document.getElementById('matScreen').style.display='none';
+  document.getElementById('resScreen').style.display='none';
+  document.getElementById('testScreen').style.display='block';
+  qi=0;score=0;timeLeft=TIMER_SEC;answered=false;
+  startTimer();renderQ();
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+function startTimer(){
+  updateTimer();
+  if(timerInv)clearInterval(timerInv);
+  timerInv=setInterval(()=>{timeLeft--;updateTimer();if(timeLeft<=0){clearInterval(timerInv);finish();}},1000);
+}
+
+function updateTimer(){
+  const m=Math.floor(Math.max(timeLeft,0)/60),s=Math.max(timeLeft,0)%60;
+  const el=document.getElementById('timerBadge');
+  el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  el.classList.remove('warn','danger');
+  if(timeLeft<=60)el.classList.add('danger');
+  else if(timeLeft<=120)el.classList.add('warn');
+}
+
+function renderQ(){
+  if(qi>=QUESTIONS.length){finish();return;}
+  answered=false;
+  const q=QUESTIONS[qi];
+  document.getElementById('qCounter').textContent=`Savol ${qi+1} / ${QUESTIONS.length}`;
+  document.getElementById('gbarFill').style.width=(qi/QUESTIONS.length*100)+'%';
+  document.getElementById('qNum').textContent=`${qi+1}-savol`;
+  document.getElementById('qText').innerHTML=q.q;
+
+  const tagged=q.opts.map((t,i)=>{return{text:t,correct:i===q.c}});
+  const sh=shuffle(tagged);
+
+  const div=document.getElementById('optsDiv');
+  div.innerHTML='';div.classList.remove('locked');
+
+  // arabcha aniqlash
+  const isAr=sh.some(o=>{const t=o.text;const ar=/[؀-ۿ]/.test(t);const nonAr=t.replace(/[؀-ۿ\s،؟!٪،.]/g,'');return ar&&nonAr.length<3;});
+
+  ['A','B','C','D'].forEach((ltr,i)=>{
+    const btn=document.createElement('div');
+    btn.className='opt'+(isAr?' opt-ar':'');
+    btn.dataset.correct=sh[i].correct?'true':'false';
+    btn.innerHTML=`<span class="ltr">${ltr}</span><span class="opt-text">${sh[i].text}</span>`;
+    btn.onclick=()=>selectOpt(btn,sh[i].correct,q.f);
+    div.appendChild(btn);
+  });
+
+  const old=document.getElementById('qCard').querySelector('.fb-box');
+  if(old)old.remove();
+  const card=document.getElementById('qCard');
+  card.style.animation='none';void card.offsetHeight;card.style.animation='';
+}
+
+function selectOpt(el,isOk,fb){
+  if(answered)return;
+  answered=true;
+  const div=document.getElementById('optsDiv');
+  div.classList.add('locked');
+  if(isOk){el.classList.add('ok');score++;}
+  else{
+    el.classList.add('no');
+    const cor=div.querySelector('.opt[data-correct="true"]');
+    if(cor)cor.classList.add('ok');
+  }
+  if(fb){
+    const box=document.createElement('div');
+    box.className='fb-box';
+    box.innerHTML='💡 '+fb;
+    document.getElementById('qCard').appendChild(box);
+  }
+  setTimeout(()=>{
+    qi++;
+    if(qi>=QUESTIONS.length){document.getElementById('gbarFill').style.width='100%';setTimeout(finish,400);}
+    else renderQ();
+  },1900);
+}
+
+function finish(){
+  clearInterval(timerInv);
+  document.getElementById('testScreen').style.display='none';
+  const total=QUESTIONS.length;
+  const pct=Math.round(score/total*100);
+  const thr=Math.ceil(total*PASS_PCT/100);
+  const passed=score>=thr;
+
+  document.getElementById('resPct').textContent=pct+'%';
+  document.getElementById('resFrac').textContent=score+'/'+total;
+  document.getElementById('resIcon').textContent=passed?(pct>=90?'🏆':'🎉'):'📚';
+  document.getElementById('resTitle').textContent=passed
+    ?'Barakalloh! Qovaidni egallading!'
+    :'Hali yetarli emas — qayta urinib ko'ring';
+
+  const msg=document.getElementById('resMsg');
+  if(passed){
+    msg.className='res-msg pass';
+    msg.innerHTML=`Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz.`;
+  }else{
+    msg.className='res-msg fail';
+    msg.innerHTML=`Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz. O'tish uchun kamida <b>${PASS_PCT}%</b> (${thr}/${total}) kerak.`;
+  }
+
+  const btns=document.getElementById('resBtns');
+  btns.innerHTML='';
+  const r1=document.createElement('button');
+  r1.className='btn-sec';
+  r1.textContent=passed?'🔁 Testni qayta ishlash':'🔄 Qayta urinish';
+  r1.onclick=startTest;
+  btns.appendChild(r1);
+
+  const r2=document.createElement('button');
+  r2.className='btn-sec';
+  r2.textContent='📖 Boshiga qaytish';
+  r2.onclick=()=>{
+    document.getElementById('resScreen').style.display='none';
+    document.getElementById('matScreen').style.display='block';
+    window.scrollTo({top:0,behavior:'instant'});
+  };
+  btns.appendChild(r2);
+
+  document.getElementById('resScreen').style.display='flex';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+</script>
+</body>
+</html>
