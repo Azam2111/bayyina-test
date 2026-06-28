@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bayyina — A1 Yakuniy Imtihon (150)</title>
+<script src="https://telegram.org/js/telegram-web-app.js" async></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+  --gold:#cda35b;
+  --cream:#f6f1e8; --cream-dim:#e8ddca;
+  --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+  --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+  --ink:#2c2014;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.ar{font-family:'Amiri','Scheherazade New',serif}
+.geo{position:absolute;inset:0;opacity:.07;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23f6f1e8' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E")}
+#matScreen{position:relative;min-height:100vh;background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 55%,var(--brown-deep) 100%);padding-bottom:110px;overflow:hidden}
+.mat-hdr{position:relative;z-index:1;padding:28px 20px 16px;text-align:center;color:#fff}
+.mat-brand{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px}
+.mat-logo{width:44px;height:44px;border-radius:10px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.mat-brand-name{font-size:18px;font-weight:800;color:var(--cream);letter-spacing:1.5px;text-transform:uppercase}
+.mat-badge{display:inline-block;background:var(--cream);color:var(--brown-deep);font-weight:800;font-size:11px;padding:5px 14px;border-radius:20px;letter-spacing:1.2px;text-transform:uppercase}
+.mat-title-ar{font-family:'Amiri',serif;direction:rtl;font-size:clamp(30px,8vw,48px);margin:14px 0 4px;color:var(--cream);line-height:1.6;font-weight:700;text-shadow:0 2px 12px rgba(0,0,0,.25)}
+.mat-title-uz{font-size:14px;color:var(--tan);font-weight:600}
+.mat-desc{max-width:600px;margin:16px auto 0;padding:0 20px;font-size:13.5px;color:#e8dac8;line-height:1.7;text-align:center}
+.mat-desc b{color:var(--gold)}
+.info-row{position:relative;z-index:1;display:flex;gap:10px;max-width:480px;margin:18px auto 0;padding:0 16px}
+.info-card{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 10px;text-align:center}
+.info-card .num{font-size:22px;font-weight:800;color:var(--cream)}
+.info-card .lbl{font-size:11px;color:var(--tan);margin-top:2px;font-weight:600}
+.mat-tip{position:relative;z-index:1;max-width:540px;margin:16px auto 0;padding:0 16px;font-size:12.5px;color:#e8dac8;line-height:1.7;text-align:center}
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(58,39,22,.94);backdrop-filter:blur(10px);border-top:1px solid rgba(255,255,255,.08);z-index:50}
+.btn-primary{display:block;width:100%;max-width:580px;margin:0 auto;padding:16px;border:none;border-radius:14px;background:var(--cream);color:var(--brown-deep);font-size:16px;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.25);font-family:inherit;letter-spacing:.3px}
+.btn-primary:active{transform:scale(.98)}
+#testScreen{min-height:100vh;background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E");display:none}
+.t-hdr{position:sticky;top:0;z-index:20;background:var(--brown-deep);color:#fff;padding:11px 16px;display:flex;align-items:center;justify-content:space-between}
+.t-hdr-title{display:flex;align-items:center;font-size:12.5px;font-weight:700;color:var(--tan)}
+.t-hdr-icon{height:22px;width:22px;border-radius:6px;margin-right:8px}
+.t-hdr-title b{color:var(--cream)}
+.timer-badge{font-variant-numeric:tabular-nums;font-weight:800;font-size:15px;padding:6px 14px;border-radius:20px;background:var(--brown);color:#fff;min-width:60px;text-align:center}
+.timer-badge.warn{background:var(--gold);color:var(--brown-deep)}
+.timer-badge.danger{background:var(--red2);color:#fff;animation:tpulse 1s infinite}
+@keyframes tpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+.gbar-wrap{padding:8px 16px 0;background:var(--brown-deep)}
+.gbar{height:5px;background:rgba(255,255,255,.12);border-radius:4px;overflow:hidden}
+.gbar-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--cream));transition:width .35s ease}
+.q-counter{text-align:center;font-size:11.5px;color:var(--tan);padding:8px 0;background:var(--brown-deep);font-weight:600;letter-spacing:.5px}
+.sect-pill{display:inline-block;margin-left:8px;font-size:10px;font-weight:800;padding:2px 9px;border-radius:10px;background:var(--gold);color:var(--brown-deep);letter-spacing:.5px}
+.q-wrap{max-width:660px;margin:0 auto;padding:20px 14px 48px}
+.q-card{background:#fff;border-radius:18px;padding:22px 18px;box-shadow:0 4px 24px rgba(60,40,20,.08);animation:fadeUp .35s ease;border:1px solid var(--cream-dim)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.q-num{display:inline-block;font-size:10.5px;color:var(--brown-deep);background:var(--cream-dim);font-weight:800;padding:4px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
+.q-text{font-size:clamp(17px,4.8vw,23px);text-align:center;line-height:1.65;color:var(--ink);font-weight:700;padding:2px}
+.q-text .ar{font-family:'Amiri',serif;font-size:1.25em;direction:rtl;unicode-bidi:isolate}
+.opts{display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.opts.locked .opt{pointer-events:none}
+.opt{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid var(--cream-dim);border-radius:13px;cursor:pointer;transition:all .15s ease;background:#fff}
+.opt:active{transform:scale(.98)}
+.opt .opt-text{font-size:clamp(15px,4vw,19px);font-weight:600;color:#333;line-height:1.45;flex:1}
+.opt.opt-ar .opt-text{font-family:'Amiri',serif;direction:rtl;font-size:clamp(22px,6vw,30px);font-weight:700;text-align:right;line-height:1.75}
+.opt.ok{background:var(--green-bg);border-color:var(--green)}
+.opt.ok .opt-text{color:var(--green-text)}
+.opt.no{background:var(--red-bg);border-color:var(--red)}
+.opt.no .opt-text{color:var(--red-text)}
+.ltr{flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;color:var(--brown-mid)}
+.opt.ok .ltr{background:var(--green);color:#fff}
+.opt.no .ltr{background:var(--red);color:#fff}
+.fb-box{margin-top:16px;padding:13px 15px;border:1.5px solid var(--gold);background:#fbf3e6;border-radius:12px;font-size:13.5px;color:#5a4326;line-height:1.65;animation:fadeUp .3s ease}
+.fb-box .ar{font-family:'Amiri',serif;font-size:1.1em;font-weight:700}
+#resScreen{position:relative;min-height:100vh;display:none;background:linear-gradient(160deg,var(--brown-deep) 0%,var(--brown) 50%,var(--brown-deep) 100%);align-items:center;justify-content:center;padding:36px 20px;flex-direction:column;text-align:center;color:#fff;overflow:hidden}
+.res-logo{position:relative;z-index:1;width:48px;height:48px;border-radius:11px;margin-bottom:10px;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.res-brand{position:relative;z-index:1;font-size:12px;font-weight:800;letter-spacing:5px;color:var(--tan);margin-bottom:14px;text-transform:uppercase}
+.res-icon{position:relative;z-index:1;font-size:50px;margin-bottom:4px}
+.res-circle{position:relative;z-index:1;width:136px;height:136px;border-radius:50%;background:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;margin:14px auto;box-shadow:0 8px 28px rgba(0,0,0,.3)}
+.res-circle .pct{font-size:36px;font-weight:800;color:var(--brown-deep);line-height:1}
+.res-circle .lbl{font-size:10px;color:var(--brown-mid);font-weight:700;margin-top:3px}
+.res-title{position:relative;z-index:1;font-size:19px;font-weight:800;margin:14px 0 8px}
+.res-msg{position:relative;z-index:1;padding:12px 16px;border-radius:12px;font-size:13.5px;font-weight:600;max-width:380px;margin-bottom:22px;line-height:1.65}
+.res-msg.pass{background:rgba(39,174,96,.16);border:1.5px solid var(--green);color:#a8f0c6}
+.res-msg.fail{background:rgba(231,76,60,.16);border:1.5px solid var(--red);color:#ffb3a8}
+.res-btns{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px}
+.btn-sec{padding:14px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);background:transparent;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
+.btn-sec:active{background:rgba(255,255,255,.08)}
+</style>
+</head>
+<body>
+
+<div id="matScreen">
+  <div class="geo"></div>
+  <div class="mat-hdr">
+    <div class="mat-brand">
+      <img class="mat-logo" src="logo_icon_cream.png" alt="Bayyina">
+      <span class="mat-brand-name">Bayyina</span>
+    </div>
+    <span class="mat-badge">A1 · Yakuniy Imtihon</span>
+    <div class="mat-title-ar">الاِخْتِبَارُ النِّهَائِيُّ</div>
+    <div class="mat-title-uz">Qovaid va Mufradot · 150 ta savol</div>
+    <div class="mat-desc">
+      <b>150 ta savol</b> — <b>80 ta grammatika</b> (qoidalar va jumla tarjimasi) hamda <b>70 ta lug'at</b>.
+      Variantlar bir-biriga juda yaqin — diqqat bilan tanlang. Har bir javobdan keyin <b>qisqa izoh</b> chiqadi.
+      O'tish chegarasi — <b>80%</b>, vaqt — <b>125 daqiqa</b>.
+    </div>
+  </div>
+  <div class="info-row">
+    <div class="info-card"><div class="num">150</div><div class="lbl">Savol</div></div>
+    <div class="info-card"><div class="num">80%</div><div class="lbl">O'tish</div></div>
+    <div class="info-card"><div class="num">125'</div><div class="lbl">Vaqt</div></div>
+  </div>
+  <div class="mat-tip">💡 Arabcha shakllarni harakatlari (fatha/kasra/domma) bilan diqqat bilan o'qing.</div>
+  <div class="sticky-bar">
+    <button class="btn-primary" onclick="startTest()">🚀 Imtihonni boshlash</button>
+  </div>
+</div>
+
+<div id="testScreen">
+  <div class="t-hdr">
+    <div class="t-hdr-title">
+      <img class="t-hdr-icon" src="logo_icon_cream.png" alt="">
+      <span style="color:var(--cream);font-weight:800;letter-spacing:1px;margin-right:5px">Bayyina</span> · <b style="margin-left:5px">A1 Yakuniy</b>
+    </div>
+    <div class="timer-badge" id="timerBadge">125:00</div>
+  </div>
+  <div class="gbar-wrap"><div class="gbar"><div class="gbar-fill" id="gbarFill"></div></div></div>
+  <div class="q-counter" id="qCounter">Savol 1 / 150</div>
+  <div class="q-wrap">
+    <div class="q-card" id="qCard">
+      <div class="q-num" id="qNum"></div>
+      <div class="q-text" id="qText"></div>
+      <div class="opts" id="optsDiv"></div>
+    </div>
+  </div>
+</div>
+
+<div id="resScreen">
+  <div class="geo"></div>
+  <img class="res-logo" src="logo_icon_cream.png" alt="Bayyina">
+  <div class="res-brand">BAYYINA</div>
+  <div class="res-icon" id="resIcon">🎉</div>
+  <div class="res-circle">
+    <div class="pct" id="resPct">0%</div>
+    <div class="lbl" id="resFrac">0/150</div>
+  </div>
+  <div class="res-title" id="resTitle">Natija tayyor!</div>
+  <div class="res-msg" id="resMsg"></div>
+  <div class="res-btns" id="resBtns"></div>
+</div>
+
+<script>
+const QUESTIONS = [
+  {q:"Aqlsiz (g'ayri oqil) narsalarning ko'pligini uzoqdan ko'rsatish uchun qaysi ismi ishora to'g'ri?", opts:["أُولَئِكَ", "تِلْكَ", "ذَلِكَ", "هَؤُلَاءِ"], c:1, f:"Aqlsiz (g'ayri oqil) ko'plik — muannas birlik kabi ko'rsatiladi → تِلْكَ."},
+  {q:"\"Yaqindagi ikkita mashina (muannas)\" - to'g'ri ko'rsatilgan javobni toping:", opts:["تَانِكَ السَّيَّارَتَانِ", "هَذَانِ السَّيَّارَتَانِ", "هَاتَانِ السَّيَّارَتَانِ", "ذَانِكَ السَّيَّارَتَانِ"], c:2, f:"Yaqin + muannas ikkilik = هَاتَانِ."},
+  {q:"\"Anavi (uzoqdagi) muhandislar (erkaklar)\" tarjimasi qaysi qatorda to'liq va to'g'ri?", opts:["هَؤُلَاءِ المُهَنْدِسُونَ", "أُولَئِكَ المُهَنْدِسُونَ", "أُولَئِكَ المُهَنْدِسِينَ", "تِلْكَ المُهَنْدِسُونَ"], c:1, f:"Uzoq + oqil muzakkar ko'plik (raf') = أُولَئِكَ المُهَنْدِسُونَ."},
+  {q:"\"Bu ikki ayol talabadir\" - jumlasi grammatik jihatdan qaysi birida to'g'ri?", opts:["هَاتَانِ النِّسَاءُ طَالِبَتَانِ", "هَاتَانِ امْرَأَتَانِ طَالِبَتَانِ", "هَذَانِ امْرَأَتَانِ طَالِبَتَانِ", "هَاتَانِ الامْرَأَتَانِ طَالِبَتَانِ"], c:1, f:"Ikki ayol: هَاتَانِ + nakira ikkilik امْرَأَتَانِ + طَالِبَتَانِ."},
+  {q:"Qaysi qatordagi ismi ishoralar faqat muannas (ayol jinsi) va uzoqni ko'rsatish uchun mo'ljallangan?", opts:["تِلْكَ، تَانِكَ، أُولَئِكَ", "هَذِهِ، هَاتَانِ، هَؤُلَاءِ", "ذَلِكَ، ذَانِكَ، أُولَئِكَ", "تِلْكَ، هَاتَانِ، أُولَئِكَ"], c:0, f:"Hammasi uzoqni ko'rsatadi: تِلْكَ، تَانِكَ، أُولَئِكَ."},
+  {q:"\"Uzoqdagi anavi kitoblar (ko'plik) yangi\" gapining to'g'ri tarjimasini toping:", opts:["أُولَئِكَ الكُتُبُ جَدِيدَةٌ", "تِلْكَ الكُتُبُ جَدِيدَةٌ", "تِلْكَ الكُتُبُ جُدُدٌ", "ذَلِكَ الكُتُبُ جَدِيدَاتٌ"], c:1, f:"Kitoblar (aqlsiz ko'plik) → تِلْكَ, sifat muannas birlik جَدِيدَةٌ."},
+  {q:"\"Uning (ayolning) daftari va uning (erkakning) qalami\" - to'g'ri variant qaysi?", opts:["دَفْتَرُهُ وَقَلَمُهَا", "دَفْتَرُهَا وَقَلَمُهُ", "دَفْتَرُكِ وَقَلَمُكَ", "دَفْتَرُهَا وَقَلَمُهَا"], c:1, f:"Ayolniki ـهَا, erkakniki ـهُ: دَفْتَرُهَا وَقَلَمُهُ."},
+  {q:"\"Siz ikkingiz (erkak yoki ayol)\" ma'nosini qaysi munfasil zamir ifodalaydi?", opts:["أَنْتُمَا", "هُمَا", "كُمَا", "أَنْتُنَّ"], c:0, f:"«Siz ikkingiz» munfasil zamir = أَنْتُمَا (كُمَا — muttasil)."},
+  {q:"Muttasil zamir ismga qo'shilganda qanday ma'no ifodalaydi?", opts:["Har doim \"Meni, Seni, Uni\" (Mef'ul ma'nosi)", "Egalik (Mening, Sening, Uning)", "Fe'lning bajaruvchisi ekanligini", "Faqat makonni ko'rsatadi"], c:1, f:"Ismga qo'shilgan muttasil zamir egalikni bildiradi (mening, sening...)."},
+  {q:"\"Mening uyim maktabning orqasida\" - \"Men\" zamirining qo'shilishi to'g'ri bo'lgan variant:", opts:["بَيْتِي خَلْفَ المَدْرَسَةِ", "بَيْتُنِي خَلْفَ المَدْرَسَةِ", "أَنَا بَيْتُ خَلْفَ المَدْرَسَةِ", "بَيْتُيْ خَلْفَ المَدْرَسَةِ"], c:0, f:"«Mening» = ـِي: بَيْتِي خَلْفَ المَدْرَسَةِ."},
+  {q:"\"Ularning (ayollarning) xonalari toza\" - to'g'ri arabcha jumlani aniqlang:", opts:["غُرَفُهُمْ نَظِيفَةٌ", "غُرَفُهُنَّ نَظِيفَةٌ", "غُرْفَتُهُنَّ نَظِيفَاتٌ", "غُرَفُهُمْ نَظِيفَاتٌ"], c:1, f:"Ayollar ko'pligi ـهُنَّ; aqlsiz ko'plik sifati muannas birlik: غُرَفُهُنَّ نَظِيفَةٌ."},
+  {q:"Fe'lga qo'shiladigan \"<span class='ar'>ـنِي</span>\" muttasil zamiri qanday tarjima qilinadi? (Masalan: <span class='ar'>فَهِمَنِي</span>)", opts:["Mening", "Men (qildim)", "Menga / Meni", "Bizni"], c:2, f:"Fe'lga qo'shilgan ـنِي = «meni / menga» (maf'ul ma'nosi)."},
+  {q:"Qaysi qatorda faqat 2-shaxs (sen, sizlar) muannas (ayol) zamirlari berilgan?", opts:["أَنْتِ، أَنْتُنَّ، ـكِ، ـكُنَّ", "أَنْتَ، أَنْتُمْ، ـكَ، ـكُمْ", "هِيَ، هُنَّ، ـهَا، ـهُنَّ", "نَحْنُ، هُنَّ، ـنَا، ـكُنَّ"], c:0, f:"2-shaxs muannas: أَنْتِ، أَنْتُنَّ، ـكِ، ـكُنَّ."},
+  {q:"Muzakkar sog'lom ko'plik (Jam' muzakkar salim) raf' (domma o'rnida) holatida oxiriga nima qo'shiladi?", opts:["يْنَ (yo va fathali nun)", "انِ (alif va kasrali nun)", "ونَ (vov va fathali nun)", "اتٌ (alif va dommali to)"], c:2, f:"Jam' muzakkar salim raf' holatida oxiri = ـُونَ."},
+  {q:"\"<span class='ar'>طَالِبَةٌ</span>\" so'zining sog'lom ayollar ko'pligi (Jam' muannas salim) to'g'ri qatorda ko'rsatilgan:", opts:["طَالِبَاتٌ", "طُلَّابٌ", "طَوَالِبُ", "طَالِبُونَ"], c:0, f:"طَالِبَةٌ ning jam' muannas salimi = طَالِبَاتٌ."},
+  {q:"Siniq ko'plik (Jam' mukassar) degani nima?", opts:["Ism oxiriga \"ات\" qo'shish bilan yasaladi", "Ismning o'zagi butunlay o'zgarib (harf tushib yoki qo'shilib) yasaladi", "Ism oxiriga \"ونَ\" qo'shish bilan yasaladi", "Faqat fe'llarga nisbatan ishlatiladi"], c:1, f:"Siniq ko'plik (mukassar) — so'z o'zagi o'zgarib yasaladi."},
+  {q:"\"Ikki qalam\" ma'nosidagi \"<span class='ar'>قَلَمَانِ</span>\" so'zi mansub/majrur (kasra/fatha o'rnida) holatida qanday yoziladi?", opts:["قَلَمُونِ", "قَلَمَيْنِ", "قَلَمِينَ", "قَلَمَاتٍ"], c:1, f:"قَلَمَانِ mansub/majrur holatida = قَلَمَيْنِ."},
+  {q:"\"<span class='ar'>كِتَابٌ</span>\" va \"<span class='ar'>قَلَمٌ</span>\" so'zlarining siniq ko'pligi qaysi qatorda to'g'ri?", opts:["كُتُبٌ / قَلَمَاتٌ", "كِتَابَاتٌ / أَقْلَامٌ", "كُتُبٌ / أَقْلَامٌ", "كِتَابُونَ / قَلَمُونَ"], c:2, f:"كِتَابٌ→كُتُبٌ, قَلَمٌ→أَقْلَامٌ (siniq ko'plik)."},
+  {q:"Ismiy jumlada Mubtado odatda qanday harakatda (e'robda) bo'ladi?", opts:["Kasra (ـِ)", "Domma (ـُ)", "Fatha (ـَ)", "Sukun (ـْ)"], c:1, f:"Mubtado marfu' bo'ladi — domma (ـُ)."},
+  {q:"Xabar (ismiy jumlani tugatuvchi qism) nakira ism bo'lsa, odatda qanday harakat oladi?", opts:["Domma (ـُ)", "Dommali tanvin (ـٌ)", "Fathali tanvin (ـًا)", "Kasrali tanvin (ـٍ)"], c:1, f:"Nakira xabar = dommali tanvin (ـٌ)."},
+  {q:"\"Daraxtlar balanddir\" - g'ayri oqil ko'plik mubtado bo'lsa, xabar qanday keladi?", opts:["الشَّجَرَاتُ عَالِيَاتٌ", "الأَشْجَارُ عَالِيُونَ", "الأَشْجَارُ عَالِيَةٌ", "الشَّجَرَةُ عَالِيَاتٌ"], c:2, f:"Aqlsiz ko'plik mubtado → xabar muannas birlik: الأَشْجَارُ عَالِيَةٌ."},
+  {q:"\"Sifat mavsufga 4 ta narsada moslashadi\". Qaysi biri ularga kirmaydi?", opts:["Jins (Muzakkar/Muannas)", "Harakat (Fatha/Kasra/Domma)", "Zamon (Moziy/Muzoriy)", "Soni (Birlik/Ikkilik/Ko'plik)"], c:2, f:"Sifat 4 narsada moslashadi; ZAMON bunga kirmaydi."},
+  {q:"\"Katta maktabning eshigi\" (Izofa va Sifat birga) to'g'ri jumlani toping:", opts:["بَابُ المَدْرَسَةُ الكَبِيرَةُ", "بَابُ المَدْرَسَةِ الكَبِيرَةِ", "البَابُ المَدْرَسَةِ الكَبِيرَةِ", "بَابٌ المَدْرَسَةِ الكَبِيرَةِ"], c:1, f:"Izofa + sifat: بَابُ المَدْرَسَةِ الكَبِيرَةِ (ikkalasi majrur)."},
+  {q:"\"Men yangi mashinada ketyapman\" gapida sifatning to'g'ri harakatini aniqlang:", opts:["فِي سَيَّارَةٍ جَدِيدَةٌ", "فِي السَّيَّارَةِ جَدِيدَةٍ", "فِي سَيَّارَةٍ جَدِيدَةٍ", "فِي سَيَّارَةٍ الجَدِيدَةِ"], c:2, f:"Nakira majrur ism + sifat: سَيَّارَةٍ جَدِيدَةٍ."},
+  {q:"Mubtado va xabar qaysi qatorda to'g'ri moslashgan?", opts:["الطَّالِبَانِ مُجْتَهِدِينَ", "الطَّالِبَانِ مُجْتَهِدَاتٌ", "الطَّالِبَانِ مُجْتَهِدُونَ", "الطَّالِبَانِ مُجْتَهِدَانِ"], c:3, f:"الطَّالِبَانِ (ikkilik) → xabar ham ikkilik: مُجْتَهِدَانِ."},
+  {q:"Jumla fe'liyyada gap boshida kelgan fe'l, agar foil (bajaruvchi) ko'plikda bo'lsa qanday yoziladi?", opts:["Foilga moslashib ko'plikda yoziladi", "Har doim birlik shaklda qoladi", "Faqat muzakkarda yoziladi", "Fe'l gap oxiriga o'tkaziladi"], c:1, f:"Fe'l foildan oldin kelsa, foil ko'plik bo'lsa ham fe'l birlik qoladi."},
+  {q:"\"Talabalar (o'g'il bolalar) sinfga kirdilar\" - to'g'ri tarjima qaysi?", opts:["دَخَلُوا الطُّلَّابُ إِلَى الفَصْلِ", "دَخَلَتِ الطُّلَّابُ إِلَى الفَصْلِ", "دَخَلَ الطُّلَّابُ إِلَى الفَصْلِ", "يَدْخُلُ الطُّلَّابُ إِلَى الفَصْلِ"], c:2, f:"Fe'l foildan oldin → birlik: دَخَلَ الطُّلَّابُ."},
+  {q:"Jumla fe'liyyada Foilning oxirgi harakati doimo qanday bo'ladi?", opts:["Fatha (ـَ)", "Kasra (ـِ)", "Sukun (ـْ)", "Domma (ـُ)"], c:3, f:"Foil doim marfu' = domma (ـُ)."},
+  {q:"Maf'ul bihi (to'ldiruvchi, ish-harakat tushgan shaxs/narsa) oxirgi harakati doimo qanday bo'ladi?", opts:["Fatha (ـَ / ـً)", "Domma (ـُ / ـٌ)", "Kasra (ـِ / ـٍ)", "Sukun (ـْ)"], c:0, f:"Maf'ulun bih doim mansub = fatha (ـَ / ـً)."},
+  {q:"\"O'qituvchi (ayol) darsni yozdi\" - gapidagi fe'l qanday ko'rinishda bo'lishi kerak?", opts:["كَتَبَ المُعَلِّمَةُ الدَّرْسَ", "كَتَبَتِ المُعَلِّمَةُ الدَّرْسَ", "تَكْتُبُ المُعَلِّمَةُ الدَّرْسَ", "كَتَبْتُ المُعَلِّمَةُ الدَّرْسَ"], c:1, f:"Ayol foil bilan moziy: كَتَبَتِ المُعَلِّمَةُ الدَّرْسَ."},
+  {q:"\"Men o'qidim\" va \"Sen (erkak) o'qiding\" to'g'ri ketma-ketlikda:", opts:["قَرَأْتَ / قَرَأْتِ", "قَرَأْتُ / قَرَأْتَ", "أَقْرَأُ / قَرَأْتَ", "قَرَأَ / قَرَأْتُ"], c:1, f:"قَرَأْتُ — men; قَرَأْتَ — sen (erkak)."},
+  {q:"Muzoriy (hozirgi-kelasi zamon) fe'llari odatda qanday harakat bilan tugaydi?", opts:["Fatha (ـَ)", "Sukun (ـْ)", "Domma (ـُ)", "Kasra (ـِ)"], c:2, f:"Muzoriy (marfu') oxiri = domma (ـُ)."},
+  {q:"Amr fe'li (3 harfli sahih fe'llarda) birlik muzakkarda qanday harakat bilan tugaydi?", opts:["Domma (ـُ)", "Fatha (ـَ)", "Kasra (ـِ)", "Sukun (ـْ)"], c:3, f:"Amr (sahih, 3 harfli) oxiri = sukun (ـْ)."},
+  {q:"Ayol kishiga nisbatan Amr (buyruq) yasalayotganda fe'l oxiriga nima qo'shiladi (Masalan, <span class='ar'>اِجْلِسْ</span> - o'tir)?", opts:["ُوا (Vov va alif)", "ِي (Kasra va yo)", "ْتِ (Sukunli to)", "ْنَ (Fathali nun)"], c:1, f:"Ayolga amr: oxiriga ـِي qo'shiladi (اِجْلِسِي)."},
+  {q:"\"Zaynab xatni o'qidi\" gapida \"o'qidi\" fe'lidagi \"t\" (<span class='ar'>ت</span>) harfining to'g'ri holatini toping:", opts:["قَرَأَتْ زَيْنَبُ (Sukunli T)", "قَرَأْتِ زَيْنَبُ (Kasrali T)", "قَرَأْتَ زَيْنَبُ (Fathali T)", "قَرَأَتُ زَيْنَبُ (Dommali T)"], c:0, f:"زَيْنَبُ bilan: قَرَأَتْ — ta' ta'nis sokin (sukunli T)."},
+  {q:"\"Sizlar (erkaklar) darsni tushundingiz\" (Moziy):", opts:["فَهِمْتُمْ الدَّرْسَ", "يَفْهَمُونَ الدَّرْسَ", "اِفْهَمُوا الدَّرْسَ", "فَهِمْتُنَّ الدَّرْسَ"], c:0, f:"«Siz erkaklar tushundingiz» = فَهِمْتُمْ."},
+  {q:"Muzoriy fe'lining boshi qaysi harflardan biri bilan boshlanishi shart?", opts:["س، ش، ص، ض", "ا، ت، ي، ن", "و، ي، ا", "ب، ت، ث، ج"], c:1, f:"Muzoriy harflari: أ، ت، ي، ن (anaytu)."},
+  {q:"Amr fe'lida o'zaktagi ikkinchi harf fatha yoki kasra bo'lsa (Masalan: <span class='ar'>يَجْلِسُ</span>), boshidagi Hamzatul wasl qanday harakat oladi?", opts:["Kasra (اِ)", "Domma (اُ)", "Fatha (اَ)", "Sukun (اْ)"], c:0, f:"O'zak o'rtasi kasra/fatha → Hamzatul wasl kasra: اِجْلِسْ."},
+  {q:"Amr fe'lida o'zaktagi ikkinchi harf domma bo'lsa (Masalan: <span class='ar'>يَدْخُلُ</span>), Hamzatul wasl qanday harakat oladi?", opts:["Kasra (اِ)", "Fatha (اَ)", "Domma (اُ)", "Farqi yo'q"], c:2, f:"O'zak o'rtasi domma → Hamzatul wasl domma: اُدْخُلْ."},
+  {q:"\"Chiqinglar!\" (Ko'plikdagi erkaklarga):", opts:["اُخْرُجْ", "اُخْرُجُوا", "اُخْرُجِي", "اُخْرُجْنَ"], c:1, f:"«Chiqinglar» (erkaklar ko'pligi) = اُخْرُجُوا. خرج → يَخْرُجُ o'rtasi DOMMA, shuning uchun Hamzatul wasl ham DOMMA (اُ), kasra emas."},
+  {q:"Moziy (o'tgan zamon) fe'lini inkor (yo'q) qilish uchun eng ko'p qaysi yuklama ishlatiladi?", opts:["لَا", "مَا", "لَنْ", "لَمْ"], c:1, f:"Moziyni to'g'ridan-to'g'ri inkor = مَا."},
+  {q:"\"Talaba yozmadi\" - moziyni inkor qilishdagi to'g'ri variant:", opts:["مَا كَتَبَ الطَّالِبُ", "لَا كَتَبَ الطَّالِبُ", "لَنْ يَكْتُبَ الطَّالِبُ", "مَا يَكْتُبُ الطَّالِبُ"], c:0, f:"مَا كَتَبَ الطَّالِبُ (moziy inkori)."},
+  {q:"Hozirgi zamon inkori asosan nima bilan yasaladi?", opts:["مَا (Fe'l oxirini sukun qiladi)", "لَا (Fe'l oxiri dommaligicha qoladi)", "لَنْ (Fe'l oxirini fatha qiladi)", "لَمْ (Fe'l oxirini fatha qiladi)"], c:1, f:"Hozirgi zamon inkori = لَا (fe'l oxiri dommaligicha qoladi)."},
+  {q:"\"Men darsni tushunmayapman\" - to'g'ri inkor:", opts:["مَا فَهِمْتُ الدَّرْسَ", "لَنْ أَفْهَمَ الدَّرْسَ", "لَا أَفْهَمُ الدَّرْسَ", "لَمْ أَفْهَمْ الدَّرْسَ"], c:2, f:"لَا أَفْهَمُ الدَّرْسَ."},
+  {q:"Nahiy (taqiq, buyruqning inkori) qanday yasaladi?", opts:["لَا + Moziy fe'li", "لَا + Muzoriy fe'li (oxiri sukunli majzum holatda)", "مَا + Muzoriy fe'li", "لَمْ + Amr fe'li"], c:1, f:"Nahiy = لَا + muzoriy fe'li (majzum — oxiri sukun)."},
+  {q:"\"Kirma!\" (Birlik erkak kishiga) to'g'ri nahiy qaysi?", opts:["مَا تَدْخُلُ!", "لَا تَدْخُلْ!", "لَا أَدْخُلُ!", "لَنْ تَدْخُلَ!"], c:1, f:"«Kirma!» = لَا تَدْخُلْ."},
+  {q:"\"Tashqariga chiqmanglar!\" (Erkaklar ko'pligi) nahiy:", opts:["لَا تَخْرُجُوا!", "مَا تَخْرُجُونَ!", "لَا يَخْرُجُونَ!", "لَا تَخْرُجُونَ!"], c:0, f:"«Chiqmanglar!» (erkaklar) = لَا تَخْرُجُوا."},
+  {q:"\"Daftarga yozma!\" (Ayol kishiga):", opts:["لَا تَكْتُبِينَ فِي الدَّفْتَرِ!", "مَا كَتَبْتِ فِي الدَّفْتَرِ!", "لَا تَكْتُبِي فِي الدَّفْتَرِ!", "لَنْ تَكْتُبِي فِي الدَّفْتَرِ!"], c:2, f:"«Yozma!» (ayolga) = لَا تَكْتُبِي."},
+  {q:"Nafiy va Nahiy o'rtasidagi asosiy farq nima?", opts:["Nafiy \"qilma\" deb buyuradi, Nahiy \"qilmadi\" deb xabar beradi.", "Nafiy xabar beradi (inkor), Nahiy esa taqiqlaydi (buyruq inkori).", "Ikkalasi ham faqat moziy fe'lida ishlatiladi.", "Ikkalasi bir xil qoidaga ega."], c:1, f:"Nafiy — xabarni inkor qiladi; Nahiy — taqiqlaydi (buyruq inkori)."},
+  {q:"\"<span class='ar'>مَا</span>\" yuklamasi moziy fe'liga qo'shilganda fe'lning oxirgi harakatiga qanday ta'sir qiladi?", opts:["Sukun qilib qo'yadi.", "Hech qanday ta'sir qilmaydi (harakat o'zgarmaydi).", "Fatha qilib qo'yadi.", "Dommaga aylantiradi."], c:1, f:"مَا moziy fe'lining harakatiga ta'sir qilmaydi."},
+  {q:"Muzoriy fe'lini kelasi zamonga (mustaqbal) aylantirish uchun nima ishlatiladi?", opts:["سَـ yoki سَوْفَ", "لَا yoki مَا", "قَدْ", "كَانَ"], c:0, f:"Kelasi zamon = سَـ yoki سَوْفَ."},
+  {q:"\"<span class='ar'>سَـ</span>\" va \"<span class='ar'>سَوْفَ</span>\" qaysi zamon fe'llariga qo'shila oladi?", opts:["Faqat Moziy", "Faqat Amr", "Faqat Muzoriy", "Barcha fe'llarga"], c:2, f:"سَـ va سَوْفَ faqat muzoriy fe'liga qo'shiladi."},
+  {q:"\"Men ertaga darsni tushunaman\" to'g'ri jumlasi:", opts:["سَأَفْهَمُ الدَّرْسَ غَدًا", "سَأَفْهَمَ الدَّرْسَ غَدًا", "سَوْفَ فَهِيمْتُ الدَّرْسَ غَدًا", "أَفْهَمُ الدَّرْسَ أَمْسِ"], c:0, f:"سَأَفْهَمُ الدَّرْسَ غَدًا (muzoriy marfu' qoladi)."},
+  {q:"Kelasi zamonning qat'iy inkori (aslo bunday qilmayman) nima bilan yasaladi?", opts:["لَمْ", "مَا", "لَنْ", "لَا"], c:2, f:"Kelasining qat'iy inkori = لَنْ."},
+  {q:"\"<span class='ar'>لَنْ</span>\" yuklamasidan keyin kelgan muzoriy fe'lining oxirgi harakati odatda nima bo'ladi?", opts:["Domma (ـُ)", "Sukun (ـْ)", "Kasra (ـِ)", "Fatha (ـَ)"], c:3, f:"لَنْ dan keyin muzoriy mansub bo'ladi — fatha (ـَ)."},
+  {q:"\"<span class='ar'>كَمْ</span>\" (Qancha/Nechta) so'rog'idan keyin sanalayotgan narsa qanday ko'rinishda keladi?", opts:["Ko'plik + Majrur (Kasra)", "Birlik + Mansub (Fathali tanvin ـًا)", "Birlik + Marfu' (Dommali tanvin ـٌ)", "Fe'l + Domma"], c:1, f:"كَمْ dan keyin: birlik + mansub (fathali tanvin ـًا)."},
+  {q:"\"Sinfda nechta qalam bor?\"", opts:["كَمْ أَقْلَامًا فِي الفَصْلِ؟", "كَمْ قَلَمٍ فِي الفَصْلِ؟", "كَمْ قَلَمًا فِي الفَصْلِ؟", "كَمْ قَلَمٌ فِي الفَصْلِ؟"], c:2, f:"كَمْ قَلَمًا فِي الفَصْلِ؟"},
+  {q:"\"<span class='ar'>هَلْ</span>\" va \"<span class='ar'>أَ</span>\" o'rtasidagi asosiy umumiylik nima?", opts:["Ikkalasi ham miqdor so'raydi.", "Ikkalasi ham \"Ha yoki Yo'q\" degan javob talab qiluvchi umumiy so'roq yaratadi.", "Faqat fe'llar oldidan keladi.", "Biri shaxsni, ikkinchisi narsani so'raydi."], c:1, f:"هَلْ va أَ — «ha/yo'q» javobini talab qiluvchi umumiy so'roq."},
+  {q:"\"<span class='ar'>لِمَاذَا</span>\" istifhomi nimani so'rash uchun ishlatiladi?", opts:["O'rinni (Qayerda?)", "Sababni (Nima uchun?)", "Vaqtni (Qachon?)", "Holatni (Qanday?)"], c:1, f:"لِمَاذَا — sababni so'raydi (nima uchun?)."},
+  {q:"\"<span class='ar'>أَيْنَ</span>\" va \"<span class='ar'>مِنْ أَيْنَ</span>\" farqi qaysi qatorda to'g'ri?", opts:["Ikkalasi ham bir xil ma'noda.", "أَيْنَ = Qayerga?, مِنْ أَيْنَ = Qayerda?", "أَيْنَ = Qayerda/Qayerga?, مِنْ أَيْنَ = Qayerdan?", "أَيْنَ = Nima?, مِنْ أَيْنَ = Nimadan?"], c:2, f:"أَيْنَ = qayerda?, مِنْ أَيْنَ = qayerdan?"},
+  {q:"O'rin va payt zarflarining (masalan: <span class='ar'>تحت، فوق، قبل</span>) oxirgi harakati odatda nima bo'ladi?", opts:["Fatha (ـَ)", "Domma (ـُ)", "Kasra (ـِ)", "Sukun (ـْ)"], c:0, f:"Zarf (تحت، فوق...) oxiri = fatha (mansub)."},
+  {q:"Zarfdan keyin kelgan ismning oxirgi harakati nima bo'ladi (Izofa qoidasi)?", opts:["Fatha (ـَ)", "Domma (ـُ)", "Kasra (ـِ)", "Sukun (ـْ)"], c:2, f:"Zarfdan keyingi ism (izofa) = kasra (majrur)."},
+  {q:"\"Kutubxona maktabning orqasida\" - to'g'ri jumlani toping:", opts:["المَكْتَبَةُ أَمَامَ المَدْرَسَةِ", "المَكْتَبَةُ خَلْفَ المَدْرَسَةِ", "المَكْتَبَةُ تَحْتَ المَدْرَسَةِ", "المَكْتَبَةُ خَلْفُ المَدْرَسَةِ"], c:1, f:"المَكْتَبَةُ خَلْفَ المَدْرَسَةِ."},
+  {q:"Harfi jarlar o'zidan keyingi ismning oxirgi harakatini qanday o'zgartiradi?", opts:["Dommaga", "Kasraga", "Fathaga", "O'zgartirmaydi"], c:1, f:"Harfi jar o'zidan keyingi ismni majrur qiladi — kasra."},
+  {q:"\"Uydan bozorga chiqdi\" to'g'ri tarjimani belgilang:", opts:["خَرَجَ فِي البَيْتِ مِنَ السُّوقِ", "خَرَجَ عَنِ البَيْتِ عَلَى السُّوقِ", "خَرَجَ مِنَ البَيْتِ إِلَى السُّوقِ", "خَرَجَ بِالبَيْتِ لِلسُّوقِ"], c:2, f:"خَرَجَ مِنَ البَيْتِ إِلَى السُّوقِ."},
+  {q:"\"Qalam bilan yozdim\" gapidagi \"bilan\" qaysi harfi jar orqali beriladi?", opts:["فِي (فِي القَلَمِ)", "لِـ (لِلْقَلَمِ)", "كَـ (كَالقَلَمِ)", "بِـ (بِالقَلَمِ)"], c:3, f:"«bilan» = بِـ: بِالقَلَمِ."},
+  {q:"Qaysi so'z harfi jar emas, balki Zarf hisoblanadi?", opts:["مِنْ", "عِنْدَ", "عَلَى", "إِلَى"], c:1, f:"عِنْدَ — zarf (harfi jar emas)."},
+  {q:"Harfi jar qaysi so'z turkumi oldidan kela olmaydi?", opts:["Ismlar (Otlar)", "Fe'llar", "Zamirlar (Olmoshlar)", "Sifatlar"], c:1, f:"Harfi jar fe'l oldidan kelmaydi (faqat ism/zamir)."},
+  {q:"3 dan 10 gacha bo'lgan sanog'larda sanalayotgan narsa (ma'dud) qanday holatda bo'lishi shart?", opts:["Birlik va Mansub (Fatha)", "Birlik va Majrur (Kasra)", "Ko'plik va Majrur (Kasrali tanvin ـٍ)", "Ko'plik va Marfu' (Domma)"], c:2, f:"3–10: ma'dud ko'plik + majrur (kasrali tanvin ـٍ)."},
+  {q:"\"Beshita daftar (daftar muzakkar)\" arabchada qanday to'g'ri yoziladi?", opts:["خَمْسَةُ دَفَاتِرَ", "خَمْسُ دَفَاتِرٍ", "خَمْسَةُ دَفَاتِرٍ", "خَمْسَةُ دَفْتَرًا"], c:0, f:"خَمْسَةُ دَفَاتِرَ — دَفَاتِر «mamnu' min as-sarf», shuning uchun kasra emas, fatha (tanvinsiz)."},
+  {q:"3 dan 10 gacha sonlarda jins moslashuvi qanday bo'ladi?", opts:["Bir xil bo'ladi (muzakkarga muzakkar).", "Teskari bo'ladi (ma'dud muzakkar bo'lsa son muannas bo'ladi va aksincha).", "Faqat muzakkarda ishlatiladi.", "Faqat muannasda ishlatiladi."], c:1, f:"3–10: jins teskari moslashadi (ma'dud muzakkar bo'lsa, son muannas)."},
+  {q:"11 dan 99 gacha bo'lgan sonlarda sanalayotgan narsa (ma'dud) qanday keladi?", opts:["Birlik va Mansub (Fathali tanvin ـًا)", "Ko'plik va Majrur (Kasra)", "Birlik va Majrur (Kasra)", "Ko'plik va Marfu' (Domma)"], c:0, f:"11–99: ma'dud birlik + mansub (fathali tanvin ـًا)."},
+  {q:"\"Yigirmata qiz\" to'g'ri tarjima qilingan javobni toping:", opts:["عِشْرُونَ بَنَاتٍ", "عِشْرِينَ بِنْتٍ", "عِشْرُونَ بِنْتًا", "عِشْرُونَ بِنْتٌ"], c:2, f:"عِشْرُونَ بِنْتًا."},
+  {q:"\"O'n beshta kitob\" arab tilida qanday aytiladi?", opts:["خَمْسَةَ عَشَرَ كُتُبٍ", "خَمْسَةَ عَشَرَ كِتَابًا", "خَمْسَ عَشْرَةَ كِتَابًا", "خَمْسَةُ عَشَرَ كِتَابٌ"], c:1, f:"خَمْسَةَ عَشَرَ كِتَابًا (kitob muzakkar — birliklar qismi muannas shaklda)."},
+  {q:"\"Oltita mashina (siyyorot - muannas)\" arabchada qanday ifodalanadi?", opts:["سِتَّةُ سَيَّارَاتٍ", "سِتُّ سَيَّارَاتٍ", "سِتَّةُ سَيَّارَةٍ", "سِتُّ سَيَّارَةً"], c:1, f:"سِتُّ سَيَّارَاتٍ — sayyora MUANNAS, shuning uchun son ة'siz keladi (سِتّ). Ma'dud ko'plik majrur (سيّاراتٍ)."},
+  {q:"Muzakkar va muannas sanalayotganda 1 va 2 sonlari qanday qoidaga bo'ysunadi?", opts:["Teskari qoidaga (Muzakkarga muannas son)", "Xuddi sifat-mavsuf kabi bir xil jinsda moslashadi", "Ma'duddan oldin keladi", "Ko'plik bilan birga keladi"], c:1, f:"1 va 2 sonlari sifat-mavsuf kabi bir xil jinsda moslashadi."},
+  {q:"Ismi tafdil (orttirma daraja - eng, -roq) qaysi vaznda yasaladi?", opts:["مَفْعُولٌ", "فَاعِلٌ", "أَفْعَلُ", "فَعِيلٌ"], c:2, f:"Ismi tafdil vazni = أَفْعَلُ."},
+  {q:"\"Ahmad Ali(dan) kattaroqdir\" to'g'ri jumlani toping:", opts:["أَحْمَدُ أَكْبَرُ مِنْ عَلِيٍّ", "أَحْمَدُ أَكْبَرٌ مِنْ عَلِيٍّ", "أَحْمَدُ كَبِيرٌ مِنْ عَلِيٍّ", "أَحْمَدُ كَبِيرَةٌ مِنْ عَلِيٍّ"], c:0, f:"أَحْمَدُ أَكْبَرُ مِنْ عَلِيٍّ."},
+  {q:"\"Eng chiroyli qiz\" (Tafdilning izofa bilan kelishi) qaysi qatorda to'g'ri?", opts:["البِنْتُ الأَجْمَلُ", "أَجْمَلُ بِنْتٍ", "البِنْتُ جَمِيلَةٌ", "أَجْمَلَةُ البِنْتِ"], c:1, f:"أَجْمَلُ بِنْتٍ (tafdil + izofa)."},
+  {q:"Quyidagi murakkab gapning to'g'ri tarjimasini toping: \"Men xonaga kirdim va kitobni o'qidim.\"", opts:["يَدْخُلُ الغُرْفَةَ وَيَقْرَأُ الكِتَابَ", "دَخَلْتَ الغُرْفَةَ وَقَرَأْتَ الكِتَابَ", "دَخَلْتُ الغُرْفَةَ وَقَرَأْتُ الكِتَابَ", "دَخَلْتِ إِلَى الغُرْفَةِ وَقَرَأْتِ الكِتَابَ"], c:2, f:"دَخَلْتُ الغُرْفَةَ وَقَرَأْتُ الكِتَابَ (1-shaxs ـتُ)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>نَمُوذَجٌ</span>", opts:["Namuna, andoza", "Nusxa", "Misol", "Shakl, ko'rinish"], c:0, f:"نَمُوذَجٌ — namuna, andoza."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>تَحَدَّثْ</span>", opts:["Tingla", "Gapir, so'zlab ber", "Yozib qo'y", "O'qib ber"], c:1, f:"تَحَدَّثْ — gapir, so'zla (buyruq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>ثَلَّاجَةٌ</span>", opts:["Konditsioner", "Muzlatgich", "Kir yuvish mashinasi", "Pech"], c:1, f:"ثَلَّاجَةٌ — muzlatgich (ثلج — muz)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُتَزَوِّجٌ</span>", opts:["Uylangan, turmush qurgan", "Bo'ydoq", "Beva", "Unashtirilgan"], c:0, f:"مُتَزَوِّجٌ — uylangan."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>غَنِيٌّ</span>", opts:["Kambag'al", "Boy, badavlat", "Ziqna", "Saxiy"], c:1, f:"غَنِيٌّ — boy, badavlat (≠ فَقِيرٌ kambag'al)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مَسَاءُ النُّورِ</span>", opts:["Xayrli tong", "Xayrli kech (javob)", "Xayrli tun", "Salomat bo'ling"], c:1, f:"مساء النور — «مساء الخير» ga javob."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>أَحْدَثُ</span>", opts:["Eng yangi", "Eng eski", "Eng yaxshi", "Eng katta"], c:0, f:"أَحْدَثُ — eng yangi (حديث)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>فَاصُولْيَا</span>", opts:["No'xat", "Loviya", "Yasmiq", "Makkajo'xori"], c:1, f:"فَاصُولْيَا — loviya."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلسَّفَرُ</span>", opts:["Safar, sayohat", "Ko'chish", "Uchrashuv", "Qaytish"], c:0, f:"اَلسَّفَرُ — safar, sayohat."},
+  {q:"«...dan katta» iborasining to'g'ri arabcha shaklini toping:", opts:["أَكْبَرُ مِنْ", "أَصْغَرُ مِنْ", "أَكْثَرُ مِنْ", "أَقَلُّ مِنْ"], c:0, f:"أَكْبَرُ مِنْ — ...dan katta (≠ أَصْغَرُ kichik)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>عَلَى الْأَقَلِّ</span>", opts:["Ko'pi bilan", "Kamida", "Taxminan", "Umuman"], c:1, f:"عَلَى الأَقَلِّ — kamida, hech bo'lmaganda."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>شَرِكَةٌ</span>", opts:["Kompaniya, firma", "Hamkorlik", "Do'kon", "Bozor"], c:0, f:"شَرِكَةٌ — kompaniya, firma."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>رُكْنٌ</span>", opts:["Burchak (xona)", "Asos, ustun", "Tomon", "Bo'lak"], c:1, f:"رُكْنٌ — asos, ustun, rukn."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُنْخَفِضٌ</span>", opts:["Baland", "Past", "Tekis", "Chuqur"], c:1, f:"مُنْخَفِضٌ — past (≠ مُرْتَفِعٌ baland)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>صِفَةٌ</span>", opts:["Sifat", "Holat", "Belgi", "Son"], c:0, f:"صِفَةٌ — sifat."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُشَاهَدَةُ التِّلْفَازِ</span>", opts:["Radio tinglash", "Televizor ko'rish", "Kinoteatrga borish", "Yangilik o'qish"], c:1, f:"مشاهدة التلفاز — televizor ko'rish."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مِصْرُ</span>", opts:["Misr", "Suriya", "Iroq", "Marokash"], c:0, f:"مِصْرُ — Misr (mamlakat)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>عَالَجَ</span>", opts:["Tekshirdi", "Davoladi", "Kasal bo'ldi", "Dori ichdi"], c:1, f:"عَالَجَ — davoladi (علاج — davo)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>صُنْدُوقٌ</span>", opts:["Quti, sandiq", "Sumka", "Hamyon", "Savat"], c:0, f:"صُنْدُوقٌ — quti, sandiq."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>يُمْكِنُ أَنْ</span>", opts:["Kerak", "Mumkin", "Lozim", "Mumkin emas"], c:1, f:"يُمْكِنُ أَنْ — mumkin, imkoni bor."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُوَظَّفٌ</span>", opts:["Xizmatchi, xodim", "Boshliq", "Mijoz", "Mehmon"], c:0, f:"مُوَظَّفٌ — xizmatchi, xodim."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اِتِّجَاهٌ</span>", opts:["Masofa", "Yo'nalish", "Manzil", "Yo'l"], c:1, f:"اِتِّجَاهٌ — yo'nalish, taraf."},
+  {q:"«Arab tili» iborasining to'g'ri arabcha shaklini toping:", opts:["اللُّغَةُ العَرَبِيَّةُ", "اللُّغَةُ التُّرْكِيَّةُ", "اللُّغَةُ الفَارِسِيَّةُ", "اللُّغَةُ الإِنْجِلِيزِيَّةُ"], c:0, f:"اللغة العربية — arab tili."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>التَّحِيَّةُ</span>", opts:["Tabrik", "Salomlashish", "Duo", "Minnatdorchilik"], c:1, f:"التَّحِيَّةُ — salomlashish."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اِحْتَاجَ</span>", opts:["Muhtoj bo'ldi", "Yordam berdi", "So'radi", "Oldi"], c:0, f:"اِحْتَاجَ — muhtoj bo'ldi, ehtiyoj sezdi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>بِجَانِبِ</span>", opts:["Orqasida", "Yonida", "Oldida", "Ostida"], c:1, f:"بِجَانِبِ — yonida, yon tomonida."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>ذَكَرَ</span>", opts:["Esladi, aytdi (zikr qildi)", "Unutdi", "So'radi", "Javob berdi"], c:0, f:"ذَكَرَ — aytdi, zikr qildi, esladi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مَدِينَةٌ</span>", opts:["Qishloq", "Shahar", "Mahalla", "Davlat"], c:1, f:"مَدِينَةٌ — shahar (≠ قَرْيَةٌ qishloq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>طَابَعٌ</span>", opts:["Konvert", "Pochta markasi", "Xat", "Pochta qutisi"], c:1, f:"طَابَعٌ — pochta markasi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>سِتُّونَ</span>", opts:["Oltmish (60)", "Oltita (6)", "Yetmish (70)", "O'n olti (16)"], c:0, f:"سِتُّونَ — oltmish (60) (≠ سِتَّةٌ olti)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>أَحَبَّ</span>", opts:["Yoqtirmadi", "Yaxshi ko'rdi, sevdi", "Hurmat qildi", "Sog'indi"], c:1, f:"أَحَبَّ — sevdi, yaxshi ko'rdi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْحُضُورُ</span>", opts:["Kelish, hozir bo'lish", "Ketish", "Yo'qlik", "Kutish"], c:0, f:"الحضور — kelish, hozir bo'lish (≠ غياب yo'qlik)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مَائِيٌّ</span>", opts:["Olovga oid", "Suvga oid", "Havoga oid", "Tuproqqa oid"], c:1, f:"مَائِيٌّ — suvga oid (ماء — suv)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>دَرَّسَ</span>", opts:["O'qidi", "Dars berdi, o'qitdi", "O'rgandi", "Yozdi"], c:1, f:"دَرَّسَ — dars berdi, o'qitdi (≠ دَرَسَ o'qidi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>ثُنَائِيٌّ</span>", opts:["Yakka, bitta", "Ikki kishilik (juftlik)", "Uch kishilik", "Ko'p kishilik"], c:1, f:"ثُنَائِيٌّ — ikki kishilik, juftlik (اثنان)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>أَرْضٌ</span>", opts:["Osmon", "Yer", "Tog'", "Dengiz"], c:1, f:"أَرْضٌ — yer (≠ سَمَاءٌ osmon)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْحَاسُوبُ</span>", opts:["Kompyuter", "Kalkulyator", "Telefon", "Televizor"], c:0, f:"الحاسوب — kompyuter."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>بِالتَّوْفِيقِ</span>", opts:["Tabriklayman!", "Omad tilayman!", "Rahmat!", "Kechirasiz!"], c:1, f:"بالتوفيق — omad tilayman!"},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>نَحِيفٌ</span>", opts:["Semiz", "Ozg'in", "Baland bo'yli", "Past bo'yli"], c:1, f:"نَحِيفٌ — ozg'in (≠ سَمِينٌ semiz)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>قِطَّةٌ</span>", opts:["Mushuk", "Kuchuk", "Quyon", "Sichqon"], c:0, f:"قِطَّةٌ — mushuk."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>سَيَّارَةٌ</span>", opts:["Avtomobil, mashina", "Velosiped", "Avtobus", "Poyezd"], c:0, f:"سَيَّارَةٌ — avtomobil, mashina."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>كَمْ؟</span>", opts:["Qanday?", "Qancha? / Nechta?", "Qachon?", "Qayerda?"], c:1, f:"كَمْ — qancha?, nechta? (≠ كَيْفَ qanday)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>شَدِيدٌ</span>", opts:["Yengil", "Kuchli, qattiq", "Yumshoq", "Sekin"], c:1, f:"شَدِيدٌ — kuchli, qattiq, shiddatli."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>لَاعِبٌ</span>", opts:["Murabbiy", "O'yinchi", "Hakam", "Muxlis"], c:1, f:"لَاعِبٌ — o'yinchi (لعب — o'ynamoq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلثَّامِنُ</span>", opts:["Yettinchi", "Sakkizinchi", "To'qqizinchi", "Oltinchi"], c:1, f:"الثامن — sakkizinchi (≠ السابع yettinchi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>شَمِلَ</span>", opts:["O'z ichiga oldi", "Chiqarib tashladi", "Bo'lib berdi", "To'pladi"], c:0, f:"شَمِلَ — o'z ichiga oldi, qamrab oldi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>زَادَ</span>", opts:["Kamaytirdi", "Oshirdi, ko'paytirdi", "Saqladi", "Yo'qotdi"], c:1, f:"زَادَ — oshirdi, ko'paytirdi (≠ نقص kamaytirdi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>عَرَفَ</span>", opts:["Bildi, tanidi", "Unutdi", "O'rgandi", "So'radi"], c:0, f:"عَرَفَ — bildi, tanidi (≠ تعلّم o'rgandi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اِخْتَرْ</span>", opts:["Yoz", "Tanla", "O'qi", "Ayt"], c:1, f:"اِخْتَرْ — tanla (buyruq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>سَالِمًا</span>", opts:["Tez", "Eson-omon, sog'-salomat", "Sekin", "Birdan"], c:1, f:"سَالِمًا — eson-omon, sog'-salomat."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>هَذَانِ</span>", opts:["Bu ikkisi (muzakkar)", "Bu ikkisi (muannas)", "Bular (ko'plik)", "Anavi ikkisi"], c:0, f:"هَذَانِ — bu ikkisi, muzakkar (≠ هَاتَانِ muannas)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْأَبَوَانِ</span>", opts:["Aka-uka", "Ota-ona", "Ota-bobolar", "Qarindoshlar"], c:1, f:"الأبوان — ota-ona (ikkalasi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>تَأَمَّلْ</span>", opts:["Takrorla", "Diqqat bilan qara, mushohada qil", "Eshit", "Yoz"], c:1, f:"تَأَمَّلْ — diqqat bilan qara, mushohada qil."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْيَوْمُ الْآخِرُ</span>", opts:["Bayram kuni", "Oxirat kuni", "Dam olish kuni", "Oyning oxirgi kuni"], c:1, f:"اليوم الآخر — oxirat (qiyomat) kuni."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>عَاشَ</span>", opts:["Yashadi", "Vafot etdi", "Tug'ildi", "Kasal bo'ldi"], c:0, f:"عَاشَ — yashadi (≠ مات vafot etdi)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>ظَرْفُ الزَّمَانِ وَالْمَكَانِ</span>", opts:["Payt va o'rin ravishi", "Sifat va mavsuf", "Ega va kesim", "Son va sanalmish"], c:0, f:"ظرف الزمان والمكان — payt va o'rin ravishi."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>صَالُونُ حِلَاقَةٍ</span>", opts:["Go'zallik saloni", "Sartaroshxona", "Hammom", "Kiyim do'koni"], c:1, f:"صالون حلاقة — sartaroshxona."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْقَاهِرَةُ</span>", opts:["Qohira", "Iskandariya", "Damashq", "Bag'dod"], c:0, f:"القاهرة — Qohira (Misr poytaxti)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْمَشْيُ</span>", opts:["Yugurish", "Piyoda yurish", "Sayohat", "Sakrash"], c:1, f:"المشي — piyoda yurish (≠ الجري yugurish)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>سُؤَالٌ</span>", opts:["Javob", "Savol", "Muammo", "Iltimos"], c:1, f:"سُؤَالٌ — savol (≠ جَوَابٌ javob)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>سِعْرٌ</span>", opts:["Narx", "Pul", "Chegirma", "Hisob"], c:0, f:"سِعْرٌ — narx, baho."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>عَضَلَةٌ</span>", opts:["Suyak", "Mushak", "Tomir", "Bo'g'im"], c:1, f:"عَضَلَةٌ — mushak."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مَطَارٌ</span>", opts:["Avtobekat", "Aeroport", "Port", "Temir yo'l vokzali"], c:1, f:"مَطَارٌ — aeroport (طار — uchmoq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلصَّيْفُ</span>", opts:["Qish", "Yoz", "Bahor", "Kuz"], c:1, f:"الصيف — yoz (≠ الشتاء qish)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُلَوَّثٌ</span>", opts:["Toza", "Ifloslangan", "Yangi", "Eski"], c:1, f:"مُلَوَّثٌ — ifloslangan (≠ نظيف toza)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مَسْجِدٌ</span>", opts:["Masjid", "Cherkov", "Maktab", "Madrasa"], c:0, f:"مَسْجِدٌ — masjid."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>مُشْرِقٌ</span>", opts:["Xira", "Charaqlagan, porloq", "Bulutli", "Qorong'i"], c:1, f:"مُشْرِقٌ — charaqlagan, porloq (شرق — chiqmoq)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>شَيْءٌ</span>", opts:["Narsa", "Ish", "Joy", "Odam"], c:0, f:"شَيْءٌ — narsa."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>اَلْمَطْلُوبُ</span>", opts:["Taqiqlangan ish", "Talab qilingan (ish)", "Ruxsat etilgan", "Bajarilgan ish"], c:1, f:"المطلوب — talab qilingan ish (≠ ممنوع taqiqlangan)."},
+  {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>دَاخِلَ</span>", opts:["Tashqarisida", "Ichida, ichkarisida", "Yonida", "Ostida"], c:1, f:"دَاخِلَ — ichida (≠ خَارِجَ tashqarisida)."}
+];
+const TIMER_SEC = 7500;
+const PASS_PCT  = 80;
+const GRAMMAR_COUNT = 80;
+
+let qi=0, score=0, timeLeft=TIMER_SEC, timerInv=null, answered=false;
+
+try{if(window.Telegram&&window.Telegram.WebApp){Telegram.WebApp.ready();Telegram.WebApp.expand();}}catch(e){}
+
+function shuffle(arr){
+  const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
+  return a;
+}
+
+function startTest(){
+  document.getElementById('matScreen').style.display='none';
+  document.getElementById('resScreen').style.display='none';
+  document.getElementById('testScreen').style.display='block';
+  qi=0;score=0;timeLeft=TIMER_SEC;answered=false;
+  startTimer();renderQ();
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+function startTimer(){
+  updateTimer();
+  if(timerInv)clearInterval(timerInv);
+  timerInv=setInterval(()=>{timeLeft--;updateTimer();if(timeLeft<=0){clearInterval(timerInv);finish();}},1000);
+}
+
+function updateTimer(){
+  const m=Math.floor(Math.max(timeLeft,0)/60),s=Math.max(timeLeft,0)%60;
+  const el=document.getElementById('timerBadge');
+  el.textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  el.classList.remove('warn','danger');
+  if(timeLeft<=60)el.classList.add('danger');
+  else if(timeLeft<=180)el.classList.add('warn');
+}
+
+function renderQ(){
+  if(qi>=QUESTIONS.length){finish();return;}
+  answered=false;
+  const q=QUESTIONS[qi];
+  const sect = qi<GRAMMAR_COUNT ? "QOVAID" : "MUFRADOT";
+  document.getElementById('qCounter').innerHTML=`Savol ${qi+1} / ${QUESTIONS.length} <span class="sect-pill">${sect}</span>`;
+  document.getElementById('gbarFill').style.width=(qi/QUESTIONS.length*100)+'%';
+  document.getElementById('qNum').textContent=`${qi+1}-savol`;
+  document.getElementById('qText').innerHTML=q.q;
+
+  const tagged=q.opts.map((t,i)=>{return{text:t,correct:i===q.c}});
+  const sh=shuffle(tagged);
+
+  const div=document.getElementById('optsDiv');
+  div.innerHTML='';div.classList.remove('locked');
+
+  const isAr=sh.some(o=>{const t=o.text;const ar=/[؀-ۿ]/.test(t);const nonAr=t.replace(/[؀-ۿ\s،؟!٪.]/g,'');return ar&&nonAr.length<3;});
+
+  ['A','B','C','D'].forEach((ltr,i)=>{
+    const btn=document.createElement('div');
+    btn.className='opt'+(isAr?' opt-ar':'');
+    btn.dataset.correct=sh[i].correct?'true':'false';
+    btn.innerHTML=`<span class="ltr">${ltr}</span><span class="opt-text">${sh[i].text}</span>`;
+    btn.onclick=()=>selectOpt(btn,sh[i].correct,q.f);
+    div.appendChild(btn);
+  });
+
+  const old=document.getElementById('qCard').querySelector('.fb-box');
+  if(old)old.remove();
+  const card=document.getElementById('qCard');
+  card.style.animation='none';void card.offsetHeight;card.style.animation='';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+
+function selectOpt(el,isOk,fb){
+  if(answered)return;
+  answered=true;
+  const div=document.getElementById('optsDiv');
+  div.classList.add('locked');
+  if(isOk){el.classList.add('ok');score++;}
+  else{
+    el.classList.add('no');
+    const cor=div.querySelector('.opt[data-correct="true"]');
+    if(cor)cor.classList.add('ok');
+  }
+  if(fb){
+    const box=document.createElement('div');
+    box.className='fb-box';
+    box.innerHTML='💡 '+fb;
+    document.getElementById('qCard').appendChild(box);
+  }
+  setTimeout(()=>{
+    qi++;
+    if(qi>=QUESTIONS.length){document.getElementById('gbarFill').style.width='100%';setTimeout(finish,400);}
+    else renderQ();
+  },1900);
+}
+
+function finish(){
+  clearInterval(timerInv);
+  document.getElementById('testScreen').style.display='none';
+  const total=QUESTIONS.length;
+  const pct=Math.round(score/total*100);
+  const thr=Math.ceil(total*PASS_PCT/100);
+  const passed=score>=thr;
+
+  document.getElementById('resPct').textContent=pct+'%';
+  document.getElementById('resFrac').textContent=score+'/'+total;
+  document.getElementById('resIcon').textContent=passed?(pct>=90?'🏆':'🎉'):'📚';
+  document.getElementById('resTitle').textContent=passed
+    ?'Barakalloh! A1 darajani egallading!'
+    :"Hali yetarli emas — qayta urinib ko'ring";
+
+  const msg=document.getElementById('resMsg');
+  if(passed){
+    msg.className='res-msg pass';
+    msg.innerHTML=`Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz.`;
+  }else{
+    msg.className='res-msg fail';
+    msg.innerHTML=`Siz <b>${score}/${total}</b> (${pct}%) to'g'ri javob berdingiz. O'tish uchun kamida <b>${PASS_PCT}%</b> (${thr}/${total}) kerak.`;
+  }
+
+  const btns=document.getElementById('resBtns');
+  btns.innerHTML='';
+  const r1=document.createElement('button');
+  r1.className='btn-sec';
+  r1.textContent=passed?'🔁 Testni qayta ishlash':'🔄 Qayta urinish';
+  r1.onclick=startTest;
+  btns.appendChild(r1);
+
+  const r2=document.createElement('button');
+  r2.className='btn-sec';
+  r2.textContent='📖 Boshiga qaytish';
+  r2.onclick=()=>{
+    document.getElementById('resScreen').style.display='none';
+    document.getElementById('matScreen').style.display='block';
+    window.scrollTo({top:0,behavior:'instant'});
+  };
+  btns.appendChild(r2);
+
+  document.getElementById('resScreen').style.display='flex';
+  window.scrollTo({top:0,behavior:'instant'});
+}
+</script>
+</body>
+</html>
