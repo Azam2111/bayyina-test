@@ -80,14 +80,14 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 @keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
 
 .q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:16px; text-transform:uppercase; letter-spacing:1px}
-.q-uztext{font-size:clamp(17px,4.6vw,22px); text-align:center; line-height:1.55; color:var(--ink); font-weight:700; padding:4px 4px}
+.q-uztext{font-size:clamp(16px,4.4vw,21px); text-align:center; line-height:1.55; color:var(--ink); font-weight:700; padding:4px 4px}
 .q-ar{font-family:'Amiri',serif; direction:rtl; font-size:clamp(28px,7.5vw,44px); text-align:center; line-height:1.95; color:var(--ink); font-weight:700; padding:12px 6px 4px; word-break:break-word}
 
 .opts{display:flex; flex-direction:column; gap:13px; margin-top:24px}
 .opts.locked .opt{pointer-events:none}
 .opt{display:flex; align-items:center; gap:14px; padding:16px 16px; border:2px solid var(--cream-dim); border-radius:14px; cursor:pointer; transition:all .15s ease; background:#fff}
 .opt:active{transform:scale(.98)}
-.opt .opt-text{font-size:clamp(16px,4.4vw,20px); font-weight:600; color:#333; line-height:1.45; flex:1}
+.opt .opt-text{font-size:clamp(16px,4.4vw,21px); font-weight:600; color:#333; line-height:1.45; flex:1}
 .opt.opt-ar .opt-text{font-family:'Amiri',serif; direction:rtl; font-size:clamp(23px,6.4vw,31px); font-weight:700; text-align:right; line-height:1.8}
 .opt.ok{background:var(--green-bg); border-color:var(--green)}
 .opt.ok .opt-text{color:var(--green-text)}
@@ -124,6 +124,19 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 </style>
 </head>
 <body>
+<!-- ROZILIK-EKRANI (AI/kitob ishlatmaslik) -->
+<div id="agreeOverlay" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(40,28,16,0.78);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);">
+  <div style="max-width:440px;width:100%;background:#f6f1e8;border:1px solid #cda35b;border-radius:22px;padding:32px 26px;text-align:center;box-shadow:0 26px 64px rgba(0,0,0,.4);font-family:system-ui,-apple-system,'Inter','Tajawal',sans-serif;">
+    <div style="font-size:48px;margin-bottom:10px;">📝</div>
+    <div style="font-size:21px;font-weight:800;color:#3a2716;margin-bottom:14px;">Imtihon halolligi</div>
+    <div style="font-size:16px;line-height:1.75;color:#5a4326;font-weight:600;margin-bottom:26px;">
+      Bu imtihon <b>oʻz bilimingizni</b> sinash uchun. Imtihondan oʻtish uchun qoʻshimcha <b>sunʼiy intellekt (AI)</b> yoki <b>kitob/lugʻat</b>dan foydalanmaslikni soʻraymiz.<br><br>Rozimisiz?
+    </div>
+    <button type="button" onclick="document.getElementById('agreeOverlay').style.display='none';" style="width:100%;padding:16px;border:none;border-radius:14px;background:#805a36;color:#f6f1e8;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:.3px;">✅ Roziman, boshlayman</button>
+  </div>
+</div>
+<!-- /ROZILIK-EKRANI -->
+
 
 <!-- ============ MATERIAL SCREEN ============ -->
 <div id="materialScreen">
@@ -138,7 +151,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     <div class="mat-title-uz">Bayyina darsligi asosida — 60 ta murakkab test</div>
     <div class="mat-desc">
       Bu yakuniy imtihon <b>A0 darajaning barcha mavzularini</b> qamrab oladi: lug'at, grammatika, gap tuzish, tarjima va xatoni to'g'rilash. Jami <b>60 ta savol</b>, har biri 4 variantli.
-      Tayyor bo'lgach, pastdagi tugmani bosing — imtihon <b>30 daqiqa</b> bilan cheklangan, o'tish chegarasi <b>70%</b>.
+      Tayyor bo'lgach, pastdagi tugmani bosing — imtihon <b>30 daqiqa</b> bilan cheklangan, o'tish chegarasi <b>90%</b>.
     </div>
   </div>
 
@@ -288,7 +301,7 @@ const QUESTIONS = [
 ];
 
 const TIMER_SECONDS = 1800; // 30 daqiqa
-const PASS_PCT = 70;        // o'tish chegarasi (%)
+const PASS_PCT = 90;        // o'tish chegarasi (%)
 const SHUFFLE_OPTIONS = true; // variantlar tartibini aralashtirish
 
 let ACTIVE = [];
@@ -341,10 +354,11 @@ function startTest(){
 }
 
 function startTimer(){
+  window.__qzDeadline = Date.now() + Math.max(timeLeft,0)*1000;
   updateTimerDisplay();
   if(timerInterval) clearInterval(timerInterval);
   timerInterval = setInterval(()=>{
-    timeLeft--;
+    timeLeft = Math.round((window.__qzDeadline - Date.now())/1000);
     updateTimerDisplay();
     if(timeLeft <= 0){
       clearInterval(timerInterval);

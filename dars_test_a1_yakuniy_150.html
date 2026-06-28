@@ -58,13 +58,13 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoo
 .q-card{background:#fff;border-radius:18px;padding:22px 18px;box-shadow:0 4px 24px rgba(60,40,20,.08);animation:fadeUp .35s ease;border:1px solid var(--cream-dim)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .q-num{display:inline-block;font-size:10.5px;color:var(--brown-deep);background:var(--cream-dim);font-weight:800;padding:4px 10px;border-radius:12px;text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
-.q-text{font-size:clamp(17px,4.8vw,23px);text-align:center;line-height:1.65;color:var(--ink);font-weight:700;padding:2px}
+.q-text{font-size:clamp(16px,4.4vw,21px);text-align:center;line-height:1.65;color:var(--ink);font-weight:700;padding:2px}
 .q-text .ar{font-family:'Amiri',serif;font-size:1.25em;direction:rtl;unicode-bidi:isolate}
 .opts{display:flex;flex-direction:column;gap:10px;margin-top:20px}
 .opts.locked .opt{pointer-events:none}
 .opt{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid var(--cream-dim);border-radius:13px;cursor:pointer;transition:all .15s ease;background:#fff}
 .opt:active{transform:scale(.98)}
-.opt .opt-text{font-size:clamp(15px,4vw,19px);font-weight:600;color:#333;line-height:1.45;flex:1}
+.opt .opt-text{font-size:clamp(16px,4.4vw,21px);font-weight:600;color:#333;line-height:1.45;flex:1}
 .opt.opt-ar .opt-text{font-family:'Amiri',serif;direction:rtl;font-size:clamp(22px,6vw,30px);font-weight:700;text-align:right;line-height:1.75}
 .opt.ok{background:var(--green-bg);border-color:var(--green)}
 .opt.ok .opt-text{color:var(--green-text)}
@@ -92,6 +92,19 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoo
 </style>
 </head>
 <body>
+<!-- ROZILIK-EKRANI (AI/kitob ishlatmaslik) -->
+<div id="agreeOverlay" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(40,28,16,0.78);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);">
+  <div style="max-width:440px;width:100%;background:#f6f1e8;border:1px solid #cda35b;border-radius:22px;padding:32px 26px;text-align:center;box-shadow:0 26px 64px rgba(0,0,0,.4);font-family:system-ui,-apple-system,'Inter','Tajawal',sans-serif;">
+    <div style="font-size:48px;margin-bottom:10px;">📝</div>
+    <div style="font-size:21px;font-weight:800;color:#3a2716;margin-bottom:14px;">Imtihon halolligi</div>
+    <div style="font-size:16px;line-height:1.75;color:#5a4326;font-weight:600;margin-bottom:26px;">
+      Bu imtihon <b>oʻz bilimingizni</b> sinash uchun. Imtihondan oʻtish uchun qoʻshimcha <b>sunʼiy intellekt (AI)</b> yoki <b>kitob/lugʻat</b>dan foydalanmaslikni soʻraymiz.<br><br>Rozimisiz?
+    </div>
+    <button type="button" onclick="document.getElementById('agreeOverlay').style.display='none';" style="width:100%;padding:16px;border:none;border-radius:14px;background:#805a36;color:#f6f1e8;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:.3px;">✅ Roziman, boshlayman</button>
+  </div>
+</div>
+<!-- /ROZILIK-EKRANI -->
+
 
 <div id="matScreen">
   <div class="geo"></div>
@@ -106,12 +119,12 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoo
     <div class="mat-desc">
       <b>150 ta savol</b> — <b>80 ta grammatika</b> (qoidalar va jumla tarjimasi) hamda <b>70 ta lug'at</b>.
       Variantlar bir-biriga juda yaqin — diqqat bilan tanlang. Har bir javobdan keyin <b>qisqa izoh</b> chiqadi.
-      O'tish chegarasi — <b>80%</b>, vaqt — <b>125 daqiqa</b>.
+      O'tish chegarasi — <b>90%</b>, vaqt — <b>125 daqiqa</b>.
     </div>
   </div>
   <div class="info-row">
     <div class="info-card"><div class="num">150</div><div class="lbl">Savol</div></div>
-    <div class="info-card"><div class="num">80%</div><div class="lbl">O'tish</div></div>
+    <div class="info-card"><div class="num">90%</div><div class="lbl">O'tish</div></div>
     <div class="info-card"><div class="num">125'</div><div class="lbl">Vaqt</div></div>
   </div>
   <div class="mat-tip">💡 Arabcha shakllarni harakatlari (fatha/kasra/domma) bilan diqqat bilan o'qing.</div>
@@ -307,7 +320,7 @@ const QUESTIONS = [
   {q:"Quyidagi so'zning to'g'ri tarjimasini toping: <span class='ar'>دَاخِلَ</span>", opts:["Tashqarisida", "Ichida, ichkarisida", "Yonida", "Ostida"], c:1, f:"دَاخِلَ — ichida (≠ خَارِجَ tashqarisida)."}
 ];
 const TIMER_SEC = 7500;
-const PASS_PCT  = 80;
+const PASS_PCT  = 90;
 const GRAMMAR_COUNT = 80;
 
 let qi=0, score=0, timeLeft=TIMER_SEC, timerInv=null, answered=false;
@@ -330,9 +343,10 @@ function startTest(){
 }
 
 function startTimer(){
+  window.__qzDeadline = Date.now() + Math.max(timeLeft,0)*1000;
   updateTimer();
   if(timerInv)clearInterval(timerInv);
-  timerInv=setInterval(()=>{timeLeft--;updateTimer();if(timeLeft<=0){clearInterval(timerInv);finish();}},1000);
+  timerInv=setInterval(()=>{timeLeft = Math.round((window.__qzDeadline - Date.now())/1000);updateTimer();if(timeLeft<=0){clearInterval(timerInv);finish();}},1000);
 }
 
 function updateTimer(){

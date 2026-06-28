@@ -64,7 +64,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .qmatn{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px; color:#5a4326; font-size:15px; line-height:1.7}
 .qmatn.ar{direction:rtl; font-family:'Noto Naskh Arabic',serif; font-size:20px; line-height:2}
 .q-prompt.ar{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
-.q-prompt.uz{font-size:clamp(17px,4.4vw,23px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
+.q-prompt.uz{font-size:clamp(16px,4.4vw,21px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
 .ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.55em; line-height:1.4}
 .lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600}
 .q-prompt.mix{padding:10px 4px}
@@ -72,7 +72,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .pl-ar{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700}
 .pl-lat{font-family:'Inter',system-ui,sans-serif; font-weight:700; color:var(--ink)}
 .q-prompt.mix .pl-ar{font-size:clamp(30px,8.5vw,46px); line-height:1.85}
-.q-prompt.mix .pl-lat{font-size:clamp(16px,4.4vw,22px); line-height:1.55}
+.q-prompt.mix .pl-lat{font-size:clamp(16px,4.4vw,21px); line-height:1.55}
 .qmatn.mix{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px}
 .qmatn.mix .pl-ar{font-size:19px; line-height:1.9; color:#5a4326}
 .qmatn.mix .pl-lat{font-size:14px; line-height:1.6; color:#5a4326}
@@ -88,7 +88,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .opts.locked .opt{pointer-events:none}
 .opt{display:flex; align-items:center; gap:14px; padding:16px 16px; border:2px solid var(--cream-dim); border-radius:14px; cursor:pointer; transition:all .15s ease; background:#fff; text-align:left; width:100%; font-family:inherit}
 .opt:active{transform:scale(.98)}
-.opt .opt-text{font-size:clamp(16px,4.6vw,20px); font-weight:600; color:#333; line-height:1.45; flex:1}
+.opt .opt-text{font-size:clamp(16px,4.4vw,21px); font-weight:600; color:#333; line-height:1.45; flex:1}
 .opt.opt-ar .opt-text{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(24px,7vw,32px); font-weight:700; text-align:right; line-height:1.8}
 .opt.ok{background:var(--green-bg); border-color:var(--green)}
 .opt.ok .opt-text{color:var(--green-text)}
@@ -459,9 +459,10 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   // ====== TAYMER ======
   function startTimer(){
     let left=MINUTES*60;
+    const __deadline=Date.now()+left*1000;
     const t=document.getElementById('timer');
     t.textContent=String(MINUTES).padStart(2,'0')+":00";
-    timerInt=setInterval(function(){ left--;
+    timerInt=setInterval(function(){ left=Math.round((__deadline-Date.now())/1000);
       const m=String(Math.floor(left/60)).padStart(2,'0'), s=String(left%60).padStart(2,'0');
       t.textContent=m+':'+s;
       t.classList.toggle('warn', left<=60 && left>10);

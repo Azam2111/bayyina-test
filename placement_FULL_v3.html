@@ -184,7 +184,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 .q-card{border-radius:40px;padding:48px 36px;margin-bottom:32px;position:relative;overflow:hidden}
 .q-num{font-size:17px;color:#4a2912;font-weight:700;margin-bottom:28px;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid rgba(0,0,0,0.06);padding-bottom:20px}
 .q-ar{font-size:52px;direction:rtl;text-align:center;padding:28px 0;color:#000000;line-height:1.6;font-family:'Noto Naskh Arabic', 'Cairo', serif;}
-.q-text{font-size:30px;color:#000000;line-height:1.6;white-space:pre-line;font-weight:700;margin-bottom:40px;text-align:center;letter-spacing:-0.5px}
+.q-text{font-size:clamp(18px,5vw,24px);color:#000000;line-height:1.6;white-space:pre-line;font-weight:700;margin-bottom:40px;text-align:center;letter-spacing:-0.5px}
 
 .opts{display:flex;flex-direction:column;gap:20px}
 /* Staggered animation for options */
@@ -194,7 +194,7 @@ body{font-family:'Tajawal',system-ui,-apple-system,sans-serif;background-color:#
 .opts .opt:nth-child(4) { animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.7s both; }
 .opts .opt:nth-child(5) { animation: slideUpFade 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both; }
 
-.opt{border-radius:28px;padding:28px 32px;font-size:26px;cursor:pointer;display:flex;align-items:center;gap:28px;text-align:left;width:100%;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);color:#0a0a0a;white-space:pre-line;font-weight:600;line-height:1.5;position:relative;overflow:hidden;
+.opt{border-radius:28px;padding:28px 32px;font-size:clamp(18px,5vw,24px);cursor:pointer;display:flex;align-items:center;gap:28px;text-align:left;width:100%;transition:all .4s cubic-bezier(0.16, 1, 0.3, 1);color:#0a0a0a;white-space:pre-line;font-weight:600;line-height:1.5;position:relative;overflow:hidden;
   /* Extreme option liquid glass styling */
   background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.4) 100%);
   backdrop-filter: blur(30px) saturate(200%);
@@ -548,9 +548,9 @@ body.error-bg::after {
 /* Aralash (arabcha+lotincha) — alohida qatorlar */
 .pl{display:block; text-align:center; word-break:break-word; margin:6px 0}
 .pl-ar{font-family:'Noto Naskh Arabic','Cairo',serif; font-weight:700; font-size:44px; line-height:1.65}
-.pl-lat{font-family:'Tajawal','Inter',sans-serif; font-weight:700; font-size:24px; line-height:1.4; color:#000}
-@media (max-width:900px){ .pl-ar{font-size:38px} .pl-lat{font-size:20px} }
-@media (max-width:480px){ .pl-ar{font-size:32px} .pl-lat{font-size:18px} }
+.pl-lat{font-family:'Tajawal','Inter',sans-serif; font-weight:700; font-size:clamp(18px,5vw,24px); line-height:1.4; color:#000}
+@media (max-width:900px){ .pl-ar{font-size:38px} .pl-lat{font-size:clamp(18px,5vw,24px)} }
+@media (max-width:480px){ .pl-ar{font-size:32px} .pl-lat{font-size:clamp(18px,5vw,24px)} }
 /* Fix .q-text containing Arabic */
 .q-text.ar-text {
   font-size: 38px !important;
@@ -585,6 +585,19 @@ body.error-bg::after {
 
 </head>
 <body class="bg-pattern">
+<!-- ROZILIK-EKRANI (AI/kitob ishlatmaslik) -->
+<div id="agreeOverlay" style="position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;padding:24px;background:rgba(40,28,16,0.78);-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);">
+  <div style="max-width:440px;width:100%;background:#f6f1e8;border:1px solid #cda35b;border-radius:22px;padding:32px 26px;text-align:center;box-shadow:0 26px 64px rgba(0,0,0,.4);font-family:system-ui,-apple-system,'Inter','Tajawal',sans-serif;">
+    <div style="font-size:48px;margin-bottom:10px;">📝</div>
+    <div style="font-size:21px;font-weight:800;color:#3a2716;margin-bottom:14px;">Imtihon halolligi</div>
+    <div style="font-size:16px;line-height:1.75;color:#5a4326;font-weight:600;margin-bottom:26px;">
+      Bu imtihon <b>oʻz bilimingizni</b> sinash uchun. Imtihondan oʻtish uchun qoʻshimcha <b>sunʼiy intellekt (AI)</b> yoki <b>kitob/lugʻat</b>dan foydalanmaslikni soʻraymiz.<br><br>Rozimisiz?
+    </div>
+    <button type="button" onclick="document.getElementById('agreeOverlay').style.display='none';" style="width:100%;padding:16px;border:none;border-radius:14px;background:#805a36;color:#f6f1e8;font-size:17px;font-weight:800;cursor:pointer;font-family:inherit;letter-spacing:.3px;">✅ Roziman, boshlayman</button>
+  </div>
+</div>
+<!-- /ROZILIK-EKRANI -->
+
   <div class="bg-blob-1"></div>
   <div class="bg-blob-2"></div>
 
@@ -798,7 +811,7 @@ A0: {
   ],
   levels:[
     {max:49,lvl:'A0',name:"Boshlang'ich",color:'#27ae60',desc:"Siz arabcha asoslarini endilikda o\'rganayapsiz. A0 darslari siz uchun to\'g\'ri tanlov! Lug\'at va grammatika asoslaridan boshlaymiz.",next:'A0',action:'📚 A0 darslari ochiladi → 1-bolim boshlanadi'},
-    {max:69,lvl:'A0+',name:"Kuchaytirilgan boshlang'ich",color:'#3d6dbf',desc:"Siz A0 darajasining bir qismini bilasiz. Ayrim mavzularni mustahkamlash zarur. A0/A1 oralig\'i siz uchun mos.",next:'A0',action:'📚 A0 darslari ochiladi'},
+    {max:89,lvl:'A0+',name:"Kuchaytirilgan boshlang'ich",color:'#3d6dbf',desc:"Siz A0 darajasining bir qismini bilasiz. Ayrim mavzularni mustahkamlash zarur. A0/A1 oralig\'i siz uchun mos.",next:'A0',action:'📚 A0 darslari ochiladi'},
     {max:100,lvl:'A1',name:'Elementar',color:'#8b4000',desc:"Barakalloh! Siz A0 darajasini muvaffaqiyatli topshirdingiz. A1 darslari siz uchun ochiladi!",next:'A1',action:'✅ A1 darslari ochiladi → 1-dars PDF + Audio yuboriladi'}
   ]
 },
@@ -868,7 +881,7 @@ A1: {
   ],
   levels:[
     {max:44,lvl:'A0+',name:"Mustahkamlash kerak",color:'#27ae60',desc:"A1 uchun ba\'zi mavzular qiyin bo\'ldi. A0 ni mustahkamlab qaytadan urinib ko\'ring.",next:'A0',action:'📚 A0 darslari ochiladi'},
-    {max:69,lvl:'A1',name:'Elementar',color:'#3d8bcd',desc:"A1 darajasiga mos! Arabcha elementar kommunikatsiya qila olasiz. A1 darslari ochiladi.",next:'A1',action:'✅ A1 darslari ochiladi'},
+    {max:89,lvl:'A1',name:'Elementar',color:'#3d8bcd',desc:"A1 darajasiga mos! Arabcha elementar kommunikatsiya qila olasiz. A1 darslari ochiladi.",next:'A1',action:'✅ A1 darslari ochiladi'},
     {max:100,lvl:'A2',name:"Boshlang'ich o'rta",color:'#8b4000',desc:"Barakalloh! A1 ni a\'lo topshirdingiz. A2 darslari siz uchun ochiladi!",next:'A2',action:'✅ A2 darslari ochiladi'}
   ]
 },
@@ -900,7 +913,7 @@ A2: {
     warn:true
   },
   MQ:[
-    {id:"a2m1",ar:"أَقْرَاصٌ مُسَكِّنَةٌ",q:"Bu iboraning ma'nosi?",o:["Og'riq qoldiruvchi (dori) tabletkalar","Vitamin drajelar","Antibiotik ukol","Yo'tal siropi"],c:0,f:"أَقْرَاصٌ مُسَكِّنَةٌ = og'riqni qoldiruvchi tabletkalar (مُسَكِّن — tinchlantiruvchi)."},
+    {id:"a2m1",ar:"أَقْرَاصٌ مُسَكِّنَةٌ",q:"Bu iboraning ma'nosi?",o:["Og'riq qoldiruvchi tabletkalar","Vitamin drajelar","Antibiotik ukol","Yo'tal siropi"],c:0,f:"أَقْرَاصٌ مُسَكِّنَةٌ = og'riqni qoldiruvchi tabletkalar (مُسَكِّن — tinchlantiruvchi)."},
     {id:"a2m2",ar:"مَلِيئَةٌ بِـ",q:"Bu iboraning ma'nosi?",o:["...bilan to'la / to'lib-toshgan","...dan bo'sh / xoli","...ga muhtoj","...dan uzoq"],c:0,f:"مَلِيئَةٌ بِـ = biror narsaga to'la, to'lib-toshgan."},
     {id:"a2m3",ar:"تَشْجِيعٌ",q:"Bu so'zning ma'nosi?",o:["Rag'batlantirish / dalda berish","Tanbeh berish","Ogohlantirish","Reja tuzish"],c:0,f:"تَشْجِيعٌ = rag'batlantirish, dalda berish (شَجَّعَ fe'lidan)."},
     {id:"a2m4",ar:"يَمْضُغُ",q:"Bu fe'lning ma'nosi?",o:["Chaynaydi","Yutadi","Hidlaydi","Tatib ko'radi"],c:0,f:"يَمْضُغُ = chaynaydi (ovqatni)."},
@@ -912,24 +925,24 @@ A2: {
     {id:"a2m10",ar:"تَائِهٌ",q:"Bu sifatning ma'nosi?",o:["Adashgan / yo'lini yo'qotgan","Charchagan","Mashhur","Quvnoq"],c:0,f:"تَائِهٌ = adashgan, yo'lini yo'qotgan."},
     {id:"a2m11",ar:"سَامِحْنِي",q:"Bu iboraning ma'nosi?",o:["Meni kechir","Menga yordam ber","Meni kut","Meni eshit"],c:0,f:"سَامِحْنِي = meni kechir (سَامَحَ — kechirmoq fe'lidan amr)."},
     {id:"a2m12",ar:"بَدَلًا مِنْ",q:"Bu iboraning ma'nosi?",o:["...ning o'rniga","...bilan birga","...dan keyin","...ga qaramay"],c:0,f:"بَدَلًا مِنْ = ...ning o'rniga."},
-    {id:"a2m13",ar:"اِلْتَحَقَ بِـ",q:"Bu fe'lning ma'nosi?",o:["...ga qo'shildi / kirdi (o'qishga/ishga)","...ni tark etdi","...dan chiqib ketdi","...ni rad etdi"],c:0,f:"اِلْتَحَقَ بِـ = (maktab/ishga) qo'shildi, kirdi, a'zo bo'ldi."},
+    {id:"a2m13",ar:"اِلْتَحَقَ بِـ",q:"Bu fe'lning ma'nosi?",o:["...ga qo'shildi / kirdi","...ni tark etdi","...dan chiqib ketdi","...ni rad etdi"],c:0,f:"اِلْتَحَقَ بِـ = (maktab/ishga) qo'shildi, kirdi, a'zo bo'ldi."},
     {id:"a2m14",ar:"حَيَوَانٌ مُفْتَرِسٌ",q:"Bu iboraning ma'nosi?",o:["Yirtqich hayvon","Uy hayvoni","O'txo'r hayvon","Yovvoyi qush"],c:0,f:"حَيَوَانٌ مُفْتَرِسٌ = yirtqich hayvon (افْتَرَسَ — g'ajimoq fe'lidan)."},
     {id:"a2m15",ar:"يَتَغَذَّى عَلَى",q:"Bu iboraning ma'nosi?",o:["...bilan oziqlanadi","...ni yetishtiradi","...dan qochadi","...ni saqlaydi"],c:0,f:"يَتَغَذَّى عَلَى = biror narsa bilan oziqlanadi (غِذَاء — ozuqa so'zidan)."}
   ],
   QQ:[
     {id:"a2q1",q:"الْمَعَارِفُ (ma'rifa bo'luvchi so'zlar) necha turga bo'linadi?",o:["Yetti (7) tur","Besh (5) tur","Olti (6) tur","Sakkiz (8) tur"],c:0,f:"Ma'rifalar 7 ta: الضَّمِير، العَلَم، اسم الإشارة، الاسم الموصول، المعرّف بـ«ال»، المضاف إلى معرفة، المنادى المقصود."},
     {id:"a2q2",q:"Quyidagi gaplardan qaysi birida muta'addiy (o'timli) fe'l qatnashgan?",o:["شَرِبَ الْوَلَدُ الْحَلِيبَ","نَامَ الطِّفْلُ مُبَكِّرًا","ذَهَبَ أَحْمَدُ إِلَى السُّوقِ","جَلَسَ الضَّيْفُ عَلَى الْكُرْسِيِّ"],c:0,f:"شَرِبَ — o'timli (muta'addiy); الْحَلِيبَ maf'ulun bihni to'g'ridan-to'g'ri oladi. Qolganlari (نام، ذهب، جلس) — o'timsiz (lozim)."},
-    {id:"a2q3",q:"«نَكْتُبُ الدَّرْسَ صَبَاحًا» — bu jumladagi foilning turi qanday?",o:["Yashirin (mustatir) zamir, taqdiri «نَحْنُ»","Zohir (ochiq) ism","Ochiq ko'ringan muttasil zamir","Munfasil zamir"],c:0,f:"نَكْتُبُ — foili مستتر وجوبًا, taqdiri «نَحْنُ» (biz). Ochiq foil yo'q."},
-    {id:"a2q4",q:"الْمُضَافُ (muzof) qaysi i'rob holatini qabul qiladi?",o:["Mavqeiga qarab har uchala holatni (rafʿ/nasb/jarr) — lekin tanvin va «ال» tushadi","Doimo jarr (kasra)","Doimo rafʿ (damma)","Doimo nasb (fatha)"],c:0,f:"Muzof o'rniga qarab rafʿ, nasb yoki jarr bo'ladi; faqat tanvin va «ال» undan tushadi. (Muzofun ilayh esa doimo majrur)."},
-    {id:"a2q5",q:"Ismga birikkan (qo'shilgan) zamir grammatik jihatdan nima bo'ladi?",o:["Muttasil zamir — مَحَلِّ جَرٍّ مُضَافٌ إِلَيْهِ","Munfasil zamir","Mustatir zamir","ضَمِيرُ الْفَصْلِ"],c:0,f:"Ismga qo'shilgan zamir (masalan كِتَابُهُ) — muttasil zamir bo'lib, محل جر مضاف إليه vazifasini bajaradi."},
+    {id:"a2q3",q:"«نَكْتُبُ الدَّرْسَ صَبَاحًا» — bu jumladagi foilning turi qanday?",o:["Yashirin (mustatir) zamir","Zohir ism","Ochiq ko'ringan muttasil zamir","Munfasil zamir"],c:0,f:"نَكْتُبُ — foili مستتر وجوبًا, taqdiri «نَحْنُ» (biz). Ochiq foil yo'q."},
+    {id:"a2q4",q:"الْمُضَافُ (muzof) qaysi i'rob holatini qabul qiladi?",o:["Doimo fatha","Doimo kasra","Doimo domma","Hammasini — mavqega qarab oladi"],c:3,f:"Muzof o'rniga qarab rafʿ, nasb yoki jarr bo'ladi; faqat tanvin va «ال» undan tushadi. (Muzofun ilayh esa doimo majrur)."},
+    {id:"a2q5",q:"Ismga birikkan (qo'shilgan) zamir grammatik jihatdan nima bo'ladi?",o:["Muttasil zamir","Munfasil zamir","Mustatir zamir","Fasl zamiri"],c:0,f:"Ismga qo'shilgan zamir (masalan كِتَابُهُ) — muttasil zamir bo'lib, محل جر مضاف إليه vazifasini bajaradi."},
     {id:"a2q6",q:"Quyidagilardan qaysi biri ta'lil (sabab bildirish) uchun keladi?",o:["كَيْ","إِذَا","ثُمَّ","بَلْ"],c:0,f:"كَيْ (va لِـ، حَتَّى، لِأَنَّ) — ta'lil (sabab) uchun. إِذَا = shart, ثُمَّ = atf, بَلْ = idrob."},
-    {id:"a2q7",q:"«الْكِتَابُ عَلَى الطَّاوِلَةِ» — xabarning turi nima?",o:["Xabar shibhu jumla (جَارٌّ وَمَجْرُورٌ)","Xabar mufrad (bir so'z)","Xabar jumla fi'liyya","Xabar jumla ismiyya"],c:0,f:"عَلَى الطَّاوِلَةِ = jor-majrur (shibhu jumla) bo'lib, xabar vazifasida kelgan."},
+    {id:"a2q7",q:"«الْكِتَابُ عَلَى الطَّاوِلَةِ» — xabarning turi nima?",o:["Xabar shibhu jumla","Xabar mufrad","Xabar jumla fi'liyya","Xabar jumla ismiyya"],c:0,f:"عَلَى الطَّاوِلَةِ = jor-majrur (shibhu jumla) bo'lib, xabar vazifasida kelgan."},
     {id:"a2q8",q:"Mubtado va xabar odatda nimada bir-biridan farq qiladi?",o:["Taʿrif/tankirda — mubtado maʿrifa, xabar nakira bo'ladi","I'robda — biri rafʿ, biri nasb","Sonda — biri birlik, biri ko'plik","Jinsda — biri muzakkar, biri muannas"],c:0,f:"Mubtado va xabar i'rob (ikkalasi rafʿ), son va jinsda mos keladi; farqi — mubtado odatda ma'rifa, xabar nakira bo'lishida."},
     {id:"a2q9",q:"Qaysi guruh zarflari jumla ma'nosiga ko'ra ham zarfi zamon, ham zarfi makon bo'la oladi?",o:["عِنْدَ، بَعْدَ، قَبْلَ، بَيْنَ","الْيَوْمَ، غَدًا، أَمْسِ، لَيْلًا","فَوْقَ، تَحْتَ، أَمَامَ، خَلْفَ","صَبَاحًا، مَسَاءً، ظُهْرًا، فَجْرًا"],c:0,f:"عِنْدَ، بَعْدَ، قَبْلَ، بَيْنَ — kontekstga qarab zamon yoki makon zarfi bo'la oladi. 2- va 4-qatorlar faqat zamon, 3-qator faqat makon."},
-    {id:"a2q10",q:"«أَخَذْتُ كِتَابَ اللُّغَةِ الْعَرَبِيَّةِ» — bu jumlada «كِتَاب» nima uchun ma'rifa?",o:["Chunki u ma'rifaga muzof bo'lgan (مُضَافٌ إِلَى مَعْرِفَةٍ)","Chunki «ال» bilan kelgan","Chunki u ism alam (atoqli ism)","Chunki undan oldin fe'l kelgan"],c:0,f:"كِتَاب — «ال» olmagan bo'lsa-da, ma'rifa (اللُّغَة) ga muzof bo'lgani uchun ma'rifaga aylangan."},
-    {id:"a2q11",q:"«نَكِرَة + مَعْرِفَة» birikmasi (masalan: بَابُ الْبَيْتِ) nima deyiladi?",o:["إِضَافَةٌ (izofa)","جُمْلَةٌ اسْمِيَّةٌ (ismiy jumla)","صِفَةٌ وَمَوْصُوفٌ (sifat-mavsuf)","مُبْتَدَأٌ وَخَبَرٌ (mubtado-xabar)"],c:0,f:"Nakira shaklidagi muzof + ma'rifa muzofun ilayh = إِضَافَة (izofa)."},
-    {id:"a2q12",q:"«تُشَاهِدَانِهِمْ فِي الْمَلْعَبِ» — foil va maf'ulni aniqlang.",o:["Foil: «ا» (alif — mushanno zamiri), Maf'ul: «هم»","Foil: «هم», Maf'ul: «ا»","Foil: «ن» (nun), Maf'ul: «هم»","Ikkisi ham «هم» — biri foil, biri ta'kid"],c:0,f:"تُشَاهِدَانِ — alif (mushanno zamiri) = foil; ـهم (muttasil zamir) = maf'ulun bih; «ن» — af'alu xamsaning rafʿ belgisi."},
-    {id:"a2q13",q:"«اُنْصَحُوهُمْ بِالدِّرَاسَةِ» — foil va maf'ulni aniqlang.",o:["Foil: «و» (jamoa vovi), Maf'ul: «هم»","Foil: «هم», Maf'ul: «و»","Foil: «الدراسة», Maf'ul: «هم»","Mustatir foil «أنتم», Maf'ul: «هم»"],c:0,f:"اُنْصَحُوا — و الجماعة (jamoa vovi) = foil; ـهم = maf'ulun bih; بِالدِّرَاسَةِ = jor-majrur."}
+    {id:"a2q10",q:"«أَخَذْتُ كِتَابَ اللُّغَةِ الْعَرَبِيَّةِ» — bu jumlada «كِتَاب» nima uchun ma'rifa?",o:["Chunki u ma'rifaga muzof bo'lgan","Chunki «al» bilan kelgan","Chunki u ism alam","Chunki undan oldin fe'l kelgan"],c:0,f:"كِتَاب — «ال» olmagan bo'lsa-da, ma'rifa (اللُّغَة) ga muzof bo'lgani uchun ma'rifaga aylangan."},
+    {id:"a2q11",q:"«نَكِرَة + مَعْرِفَة» birikmasi nima deyiladi?",o:["إِضَافَةٌ","جُمْلَةٌ اسْمِيَّةٌ","صِفَةٌ وَمَوْصُوفٌ","مُبْتَدَأٌ وَخَبَرٌ"],c:0,f:"Nakira shaklidagi muzof + ma'rifa muzofun ilayh = إِضَافَة (izofa)."},
+    {id:"a2q12",q:"«تُشَاهِدَانِهِمْ فِي الْمَلْعَبِ» — foil va maf'ulni aniqlang.",o:["Foil — «alif», maf'ul — «hum»","Foil — «hum», maf'ul — «alif»","Foil — «nun», maf'ul — «hum»","Ikkisi ham «hum»"],c:0,f:"تُشَاهِدَانِ — alif (mushanno zamiri) = foil; ـهم (muttasil zamir) = maf'ulun bih; «ن» — af'alu xamsaning rafʿ belgisi."},
+    {id:"a2q13",q:"«اُنْصَحُوهُمْ بِالدِّرَاسَةِ» — foil va maf'ulni aniqlang.",o:["Foil — «vov», maf'ul — «hum»","Foil — «hum», maf'ul — «vov»","Foil — «ad-dirosa», maf'ul — «hum»","Mustatir foil — «antum», maf'ul — «hum»"],c:0,f:"اُنْصَحُوا — و الجماعة (jamoa vovi) = foil; ـهم = maf'ulun bih; بِالدِّرَاسَةِ = jor-majrur."}
   ],
   RQ:[
     {id:'a2r1',q:'مَاذَا قَالَتِ الأُمُّ لِلُبْنَى أَوَّلًا؟',o:['«خُذِي الْمِظَلَّةَ»','«اِلْبَسِي مِعْطَفَكِ وَالشَّالَ»','«لَا تَذْهَبِي بِالسَّيَّارَةِ»','«اِسْمَعِي نَشْرَةَ الأَخْبَارِ»'],c:1,f:'Dialog boshi: اِلْبَسِي مِعْطَفَكِ وَالشَّالَ؛ فَالْجَوُّ سَيَكُونُ بَارِدًا — "Palto va sharfingni kiy, havo sovuq bo\'ladi."'},
@@ -944,7 +957,7 @@ A2: {
   ],
   levels:[
     {max:44,lvl:'A1+',name:'Mustahkamlash kerak',color:'#3d8bcd',desc:'A2 mavzulari qiyin bo\'ldi. A1 ni mustahkamlab, A2 ga qaytarib ko\'ring.',next:'A1',action:'📚 A1 darslari ochiladi'},
-    {max:69,lvl:'A2',name:"Boshlang'ich o'rta",color:'#2e8b57',desc:'A2 darajasiga mos! Arabcha asosiy grammatika va kundalik suhbatni bilasiz. A2 darslari ochiladi.',next:'A2',action:'✅ A2 darslari ochiladi'},
+    {max:89,lvl:'A2',name:"Boshlang'ich o'rta",color:'#2e8b57',desc:'A2 darajasiga mos! Arabcha asosiy grammatika va kundalik suhbatni bilasiz. A2 darslari ochiladi.',next:'A2',action:'✅ A2 darslari ochiladi'},
     {max:100,lvl:'B1',name:"O'rta daraja",color:'#8b4000',desc:'Barakalloh! A2 ni a\'lo topshirdingiz. B1 darslari ochiladi!',next:'B1',action:'✅ B1 darslari ochiladi'}
   ]
 },
@@ -978,14 +991,14 @@ B1: {
   MQ:[
     {id:"b1m1",ar:"عَلَى الرَّغْمِ مِنْ",q:"Bu iboraning ma'nosi?",o:["...ga qaramay","...sababli","...natijasida","...o'rniga"],c:0,f:"عَلَى الرَّغْمِ مِنْ = ...ga qaramay (zidlik bildiradi)."},
     {id:"b1m2",ar:"وَثِقَ بِـ",q:"Bu fe'lning ma'nosi?",o:["...ga ishondi","...dan shubhalandi","...ni unutdi","...dan qo'rqdi"],c:0,f:"وَثِقَ بِـ = ishondi, ishonch bildirdi (ثِقَة — ishonch so'zidan)."},
-    {id:"b1m3",ar:"وَيْحَكَ",q:"Bu iboraning ma'nosi?",o:["Voy senga! (achinish/yumshoq tanbeh)","Sog' bo'l!","Xush kelibsan!","Tabriklayman!"],c:0,f:"وَيْحَكَ = «voy senga!» — achinish yoki yumshoq tanbeh ma'nosida."},
+    {id:"b1m3",ar:"وَيْحَكَ",q:"Bu iboraning ma'nosi?",o:["Voy senga!","Sog' bo'l!","Xush kelibsan!","Tabriklayman!"],c:0,f:"وَيْحَكَ = «voy senga!» — achinish yoki yumshoq tanbeh ma'nosida."},
     {id:"b1m4",ar:"التَّشَاؤُمُ",q:"Bu so'zning ma'nosi?",o:["Badbinlik / yomonlikka yo'yish","Xushbinlik","Tinchlik","Mehribonlik"],c:0,f:"التَّشَاؤُمُ = badbinlik, pessimizm (التَّفَاؤُل ning ziddi)."},
     {id:"b1m5",ar:"تَحْقِيقٌ",q:"Bu so'zning ma'nosi?",o:["Amalga oshirish / ro'yobga chiqarish","Bekor qilish","Rejalashtirish","Kechiktirish"],c:0,f:"تَحْقِيقٌ = amalga oshirish, ro'yobga chiqarish; yana «tergov, surishtiruv» ma'nosi ham bor."},
     {id:"b1m6",ar:"تَكَافُلٌ اجْتِمَاعِيٌّ",q:"Bu iboraning ma'nosi?",o:["Ijtimoiy hamjihatlik / o'zaro yordam","Ijtimoiy tarmoq","Ish haqi","Soliq tizimi"],c:0,f:"تَكَافُلٌ اجْتِمَاعِيٌّ = ijtimoiy hamjihatlik, jamiyat a'zolarining o'zaro yordami."},
     {id:"b1m7",ar:"طُمَأْنِينَةٌ",q:"Bu so'zning ma'nosi?",o:["Xotirjamlik / qalb tinchligi","Shoshqaloqlik","Qo'rquv","Hayrat"],c:0,f:"طُمَأْنِينَةٌ = xotirjamlik, ruhiy tinchlik (اِطْمَأَنَّ fe'lidan)."},
     {id:"b1m8",ar:"فِقْدَانٌ",q:"Bu so'zning ma'nosi?",o:["Yo'qotish / ayrilish","Topish","To'plash","Saqlash"],c:0,f:"فِقْدَانٌ = yo'qotish, ayrilish (فَقَدَ fe'lidan masdar)."},
-    {id:"b1m9",ar:"الْمَشْرُوبَاتُ الْمُنَبِّهَةُ",q:"Bu iboraning ma'nosi?",o:["Tetiklashtiruvchi (kofeinli) ichimliklar","Shirin gazli suvlar","Tabiiy sharbatlar","Issiq sho'rvalar"],c:0,f:"الْمَشْرُوبَاتُ الْمُنَبِّهَةُ = uyg'oqlik beruvchi, tetiklashtiruvchi ichimliklar (qahva, choy, energetik)."},
-    {id:"b1m10",ar:"تَلَقَّى",q:"Bu fe'lning ma'nosi?",o:["Qabul qildi / (ta'lim) oldi","Berdi / topshirdi","Rad etdi","So'radi"],c:0,f:"تَلَقَّى = qabul qildi, oldi (تَلَقَّى الْعِلْمَ — ilm oldi)."},
+    {id:"b1m9",ar:"الْمَشْرُوبَاتُ الْمُنَبِّهَةُ",q:"Bu iboraning ma'nosi?",o:["Tetiklashtiruvchi ichimliklar","Shirin gazli suvlar","Tabiiy sharbatlar","Issiq sho'rvalar"],c:0,f:"الْمَشْرُوبَاتُ الْمُنَبِّهَةُ = uyg'oqlik beruvchi, tetiklashtiruvchi ichimliklar (qahva, choy, energetik)."},
+    {id:"b1m10",ar:"تَلَقَّى",q:"Bu fe'lning ma'nosi?",o:["Qabul qildi / oldi","Berdi / topshirdi","Rad etdi","So'radi"],c:0,f:"تَلَقَّى = qabul qildi, oldi (تَلَقَّى الْعِلْمَ — ilm oldi)."},
     {id:"b1m11",ar:"يَلْفِتُ الْأَنْظَارَ",q:"Bu iboraning ma'nosi?",o:["Diqqatni o'ziga tortadi","Ko'zdan yashirinadi","E'tibordan chetda qoladi","Ahamiyatsiz bo'lib qoladi"],c:0,f:"يَلْفِتُ الْأَنْظَارَ = e'tiborni, nazarlarni o'ziga tortadi."},
     {id:"b1m12",ar:"إِدْمَانُ الْهَاتِفِ",q:"Bu iboraning ma'nosi?",o:["Telefonga qaramlik / o'rganib qolish","Telefonni ta'mirlash","Telefon raqami","Telefon qo'ng'irog'i"],c:0,f:"إِدْمَانُ الْهَاتِفِ = telefonga ruhiy qaramlik (أَدْمَنَ — mukkasidan ketmoq)."},
     {id:"b1m13",ar:"يُرَشِّحُ",q:"Bu fe'lning ma'nosi?",o:["Nomzod qilib ko'rsatadi / tavsiya qiladi","Tortib oladi","Yashiradi","Yo'q qiladi"],c:0,f:"يُرَشِّحُ = (saylov/lavozimga) nomzod qilib ko'rsatadi, tavsiya qiladi (يَتَرَشَّحُ — nomzod bo'ladi)."},
@@ -994,20 +1007,20 @@ B1: {
   ],
   QQ:[
     {id:"b1q1",q:"«فِي هَذَا الْيَوْمِ كَثِيرٌ مِنَ النَّاسِ يَذْهَبُ إِلَى الْحَدَائِقِ» — bu jumlada mubtado qaysi?",o:["«كَثِيرٌ»","«النَّاسِ»","«هَذَا الْيَوْمِ»","«يَذْهَبُ»"],c:0,f:"«فِي هَذَا الْيَوْمِ» = shibhu jumla (muqaddam), «كَثِيرٌ» = mubtado (mu'axxar), «يَذْهَبُ...» = xabar (jumla fi'liyya)."},
-    {id:"b1q2",q:"«رَأَيْتُ مَنْ يَعْمَلْنَ فِي الْمَصْنَعِ» — bu jumlada «مَنْ» nima deyiladi?",o:["اِسْمٌ مَوْصُولٌ (nisbiy olmosh)","اِسْمُ اسْتِفْهَامٍ (so'roq olmoshi)","اِسْمُ شَرْطٍ (shart olmoshi)","حَرْفُ جَرٍّ"],c:0,f:"Bu yerda «مَنْ» so'roq emas — «رَأَيْتُ» ning maf'uli; «...ishlaydiganlarni» ma'nosida ism mavsul (nisbiy olmosh)."},
+    {id:"b1q2",q:"«رَأَيْتُ مَنْ يَعْمَلْنَ فِي الْمَصْنَعِ» — bu jumlada «مَنْ» nima deyiladi?",o:["اِسْمٌ مَوْصُولٌ","اِسْمُ اسْتِفْهَامٍ","اِسْمُ شَرْطٍ","حَرْفُ جَرٍّ"],c:0,f:"Bu yerda «مَنْ» so'roq emas — «رَأَيْتُ» ning maf'uli; «...ishlaydiganlarni» ma'nosida ism mavsul (nisbiy olmosh)."},
     {id:"b1q3",q:"«يُكَرِّرُ الْمُعَلِّمُ الدَّرْسَ أَكْثَرَ مِنْ مَرَّةٍ ... نَفْهَمَهُ» — bo'sh o'rinni to'ldiring.",o:["حَتَّى","لَنْ","أَنْ","لَا"],c:0,f:"حَتَّى (ghaaya/ta'lil ma'nosida) muzori'ni nasb qiladi: ... حَتَّى نَفْهَمَهُ = «toki uni tushunaylik»."},
     {id:"b1q4",q:"«سَعَى» fe'lidan ismi foilni hosil qiling.",o:["سَاعٍ (السَّاعِي)","مَسْعِيٌّ","مَسْعًى","سُعَاةٌ"],c:0,f:"سَعَى → ismi foil سَاعٍ. مَسْعِيٌّ = ismi maf'ul, مَسْعًى = ism makan/masdar mimi, سُعَاةٌ = ko'plik."},
     {id:"b1q5",q:"«... أَشْتَرِ هَاتِفًا جَدِيدًا» — to'g'ri to'ldiruvchini tanlang («أَشْتَرِ» majzum).",o:["لَمَّا","لَنْ","أَنْ","سَـ"],c:0,f:"«أَشْتَرِ» majzum (oxirgi «ي» tushgan) → jazm qiluvchi «لَمَّا»: لَمَّا أَشْتَرِ = «hali sotib olganim yo'q». لن/أن nasb qiladi (أَشْتَرِيَ), سـ kelasi zamon."},
     {id:"b1q6",q:"«قَالَ» fe'lidan ismi maf'ulni hosil qiling.",o:["مَقُولٌ","قَائِلٌ","مَقَالٌ","مَقِيلٌ"],c:0,f:"قَالَ (ajwaf) → ismi maf'ul مَقُولٌ. قَائِلٌ = ismi foil, مَقَالٌ = masdar/maqola, مَقِيلٌ = boshqa fe'ldan."},
-    {id:"b1q7",q:"«مَدَّ» fe'lidan amr (buyruq) shaklini hosil qiling.",o:["مُدَّ (yoki اُمْدُدْ)","مَدَّ","اِمْدَدْ","مَدِّ"],c:0,f:"مَدَّ (muzaa'af) → amr «مُدَّ»; ochilgan (fak) shakli «اُمْدُدْ». «اِمْدَدْ» — harakati noto'g'ri."},
+    {id:"b1q7",q:"«مَدَّ» fe'lidan amr (buyruq) shaklini hosil qiling.",o:["مُدَّ","مَدَّ","اِمْدَدْ","مَدِّ"],c:0,f:"مَدَّ (muzaa'af) → amr «مُدَّ»; ochilgan (fak) shakli «اُمْدُدْ». «اِمْدَدْ» — harakati noto'g'ri."},
     {id:"b1q8",q:"«اِشْتَهَرَ» fe'lining jadri (o'zak)i qaysi?",o:["شَهَرَ (ش-ه-ر)","اِشْتَهَرَ","شُهْرَةٌ","شَاهَرَ"],c:0,f:"اِشْتَهَرَ (Bob VIII) ning asl o'zagi ش-ه-ر (شَهَرَ). شُهْرَة = masdar."},
-    {id:"b1q9",q:"«مِنَ الْأُمُورِ الْمُسْتَحَبَّةِ يَوْمَ الْجُمُعَةِ الِاغْتِسَالُ قَبْلَ الذَّهَابِ لِلْمَسْجِدِ» — xabar qaysi?",o:["«مِنَ الْأُمُورِ» (jor-majrur, xabar muqaddam)","«الِاغْتِسَالُ»","«يَوْمَ الْجُمُعَةِ»","«قَبْلَ الذَّهَابِ»"],c:0,f:"«مِنَ الْأُمُورِ الْمُسْتَحَبَّةِ» = shibhu jumla, xabar muqaddam; «الِاغْتِسَالُ» = mubtado mu'axxar."},
-    {id:"b1q10",q:"Xabar mubtadodan oldin kelishi (taqdim) qachon vojib bo'ladi?",o:["Xabar shibhu jumla (zarf/jor-majrur) bo'lib, mubtado nakira bo'lganda","Mubtado va xabar ikkisi ham ma'rifa bo'lganda","Xabar mufrad (bir so'z) bo'lganda","Xabar jumla fi'liyya bo'lganda"],c:0,f:"Mubtado nakira, xabar esa shibhu jumla bo'lsa, xabar muqaddam keladi: «عِنْدِي كِتَابٌ»، «فِي الدَّارِ رَجُلٌ»."},
+    {id:"b1q9",q:"«مِنَ الْأُمُورِ الْمُسْتَحَبَّةِ يَوْمَ الْجُمُعَةِ الِاغْتِسَالُ قَبْلَ الذَّهَابِ لِلْمَسْجِدِ» — xabar qaysi?",o:["«مِنَ الْأُمُورِ»","«الِاغْتِسَالُ»","«يَوْمَ الْجُمُعَةِ»","«قَبْلَ الذَّهَابِ»"],c:0,f:"«مِنَ الْأُمُورِ الْمُسْتَحَبَّةِ» = shibhu jumla, xabar muqaddam; «الِاغْتِسَالُ» = mubtado mu'axxar."},
+    {id:"b1q10",q:"Xabar mubtadodan oldin kelishi (taqdim) qachon vojib bo'ladi?",o:["Xabar shibhu jumla bo'lib, mubtado nakira bo'lganda","Mubtado va xabar ikkisi ham ma'rifa bo'lganda","Xabar mufrad bo'lganda","Xabar jumla fi'liyya bo'lganda"],c:0,f:"Mubtado nakira, xabar esa shibhu jumla bo'lsa, xabar muqaddam keladi: «عِنْدِي كِتَابٌ»، «فِي الدَّارِ رَجُلٌ»."},
     {id:"b1q11",q:"«اِبْتَعَدَ» fe'li qaysi harf (ko'makchi) bilan keladi?",o:["عَنْ","إِلَى","فِي","بِـ"],c:0,f:"اِبْتَعَدَ عَنْ = ...dan uzoqlashdi."},
     {id:"b1q12",q:"«... أَسْمَعْ أَخْبَارَ الْيَوْمِ صَبَاحًا» — bo'sh o'rinni to'ldiring («أَسْمَعْ» majzum).",o:["لَمْ","لَنْ","أَنْ","سَـ"],c:0,f:"«أَسْمَعْ» majzum (sukun) → jazm qiluvchi «لَمْ»: لَمْ أَسْمَعْ = «eshitmadim». لن/أن nasb qiladi, سـ kelasi zamon."},
     {id:"b1q13",q:"«مَنْ يُمَارِسْ الرِّيَاضَةَ يَحْفَظْ جِسْمَهُ مِنَ الْمَرَضِ» — «مَنْ» nima deyiladi?",o:["اِسْمُ شَرْطٍ جَازِمٌ","اِسْمٌ مَوْصُولٌ","اِسْمُ اسْتِفْهَامٍ","حَرْفُ جَرٍّ"],c:0,f:"«مَنْ» — ism shart jaazim; ikki fe'lni (شرط: يُمَارِسْ، جواب: يَحْفَظْ) jazm qiladi."},
     {id:"b1q14",q:"«حَجَّ» fe'lidan «أَنْتُمَا» uchun muzori' shaklini hosil qiling.",o:["تَحُجَّانِ","تَحُجُّونَ","يَحُجَّانِ","تَحُجِّينَ"],c:0,f:"حَجَّ → muzori' يَحُجُّ; «أَنْتُمَا» (ikkovingiz) uchun تَحُجَّانِ. تَحُجُّونَ = أَنْتُمْ, يَحُجَّانِ = هُمَا, تَحُجِّينَ = أَنْتِ."},
-    {id:"b1q15",q:"«لَكِنْ» harfi nima uchun keladi?",o:["لِلِاسْتِدْرَاكِ (istidrok uchun)","لِلتَّمَنِّي (orzu uchun)","لِلتَّوْكِيدِ (ta'kid uchun)","لِلتَّعْلِيلِ (sabab uchun)"],c:0,f:"لَكِنْ/لَكِنَّ = istidrok harfi — oldingi gapdan tug'iladigan tushunchani tuzatish/qarshi qo'yish uchun."}
+    {id:"b1q15",q:"«لَكِنْ» harfi nima uchun keladi?",o:["لِلِاسْتِدْرَاكِ","لِلتَّمَنِّي","لِلتَّوْكِيدِ","لِلتَّعْلِيلِ"],c:0,f:"لَكِنْ/لَكِنَّ = istidrok harfi — oldingi gapdan tug'iladigan tushunchani tuzatish/qarshi qo'yish uchun."}
   ],
   RQ:[
     {id:'b1r1',q:'أَيْنَ وُلِدَ ابْنُ بَطُّوطَة وَمَتَى؟',o:['فِي مِصْرَ، سَنَةَ سَبْعِمِائَةٍ وَثَلَاثٍ لِلْهِجْرَةِ','فِي طَنْجَةَ (الْمَغْرِب)، سَنَةَ سَبْعِمِائَةٍ وَثَلَاثٍ لِلْهِجْرَةِ','فِي دِمَشْقَ، سَنَةَ سَبْعِمِائَةٍ وَخَمْسٍ وَعِشْرِينَ لِلْهِجْرَةِ','فِي مَكَّةَ، سَنَةَ سَبْعِمِائَةٍ وَثَلَاثٍ لِلْهِجْرَةِ'],c:1,f:'Matnda: وُلِدَ فِي طَنْجَةَ سَنَةَ ٧٠٣هـ بِالْمَغْرِبِ.'},
@@ -1022,7 +1035,7 @@ B1: {
   ],
   levels:[
     {max:44,lvl:'A2+',name:'Mustahkamlash kerak',color:'#2e8b57',desc:'B1 mavzulari qiyin bo\'ldi. A2 ni mustahkamlab, B1 ga qaytarib ko\'ring.',next:'A2',action:'📚 A2 darslari ochiladi'},
-    {max:69,lvl:'B1',name:"O'rta daraja",color:'#6a35c4',desc:'B1 darajasiga mos! Arabcha murakkab grammatika va matnlarni o\'qiy olasiz. B1 darslari ochiladi.',next:'B1',action:'✅ B1 darslari ochiladi'},
+    {max:89,lvl:'B1',name:"O'rta daraja",color:'#6a35c4',desc:'B1 darajasiga mos! Arabcha murakkab grammatika va matnlarni o\'qiy olasiz. B1 darslari ochiladi.',next:'B1',action:'✅ B1 darslari ochiladi'},
     {max:100,lvl:'B2',name:"Yuqori o'rta daraja",color:'#c0415a',desc:'Barakalloh! B1 ni a\'lo topshirdingiz. B2 darslari ochiladi!',next:'B2',action:'✅ B2 darslari ochiladi'}
   ]
 },
@@ -1063,12 +1076,12 @@ B2: {
     {id:"b2m7",ar:"عَلَاوَةً عَلَى ذَلِكَ",q:"Bu iboraning ma'nosi?",o:["Bundan tashqari / qo'shimcha ravishda","Shunga qaramay","Buning o'rniga","Shu sababli"],c:0,f:"عَلَاوَةً عَلَى ذَلِكَ = bundan tashqari, qo'shimcha qilib."},
     {id:"b2m8",ar:"تَوْعِيَةٌ",q:"Bu so'zning ma'nosi?",o:["Ong-bilimni oshirish / ogohlantirish","Ogohsizlantirish","Jazolash","Yashirish"],c:0,f:"تَوْعِيَةٌ = ong-bilimni oshirish, ogohlantirish (وَعْي — anglash so'zidan)."},
     {id:"b2m9",ar:"تَفَكُّكٌ",q:"Bu so'zning ma'nosi?",o:["Parchalanish / tarqab ketish","Birlashish","Mustahkamlanish","Tartibga solish"],c:0,f:"تَفَكُّكٌ = parchalanish, bo'linib ketish (تَفَكَّكَ fe'lidan)."},
-    {id:"b2m10",ar:"تَشْغَلُ بَالَ",q:"«تَرْبِيَةُ الْأَوْلَادِ تَشْغَلُ بَالَ الزَّوْجَيْنِ» — bu jumlaning ma'nosi nima?",o:["Bolalar tarbiyasi er-xotinning fikru-yodini band qiladi (tashvishlantiradi)","Bolalar tarbiyasi er-xotinni ajratib yuboradi","Bolalar tarbiyasi er-xotinni boyitadi","Bolalar tarbiyasi er-xotinga osonlik keltiradi"],c:0,f:"شَغَلَ بَالَهُ = fikrini band qildi, tashvishga soldi. Demak: bolalar tarbiyasi er-xotinning butun e'tibor-tashvishini egallaydi."},
+    {id:"b2m10",ar:"تَشْغَلُ بَالَ",q:"«تَرْبِيَةُ الْأَوْلَادِ تَشْغَلُ بَالَ الزَّوْجَيْنِ» — bu jumlaning ma'nosi nima?",o:["Bolalar tarbiyasi er-xotinning fikru-yodini band qiladi","Bolalar tarbiyasi er-xotinni ajratib yuboradi","Bolalar tarbiyasi er-xotinni boyitadi","Bolalar tarbiyasi er-xotinga osonlik keltiradi"],c:0,f:"شَغَلَ بَالَهُ = fikrini band qildi, tashvishga soldi. Demak: bolalar tarbiyasi er-xotinning butun e'tibor-tashvishini egallaydi."},
     {id:"b2m11",ar:"تَزَاحُمٌ",q:"Bu so'zning ma'nosi?",o:["Tirbandlik / bir-birini turtish","Bo'shab qolish","Saralanish","Tarqalish"],c:0,f:"تَزَاحُمٌ = tirbandlik, izdihom, bir-birini siqib turtish (زَحَمَ fe'lidan)."},
     {id:"b2m12",ar:"صِلَةٌ",q:"Bu so'zning ma'nosi?",o:["Aloqa / bog'liqlik","Uzilish","Masofa","Devor"],c:0,f:"صِلَةٌ = aloqa, bog'liqlik (صِلَةُ الرَّحِمِ — qarindoshlik aloqasi)."},
     {id:"b2m13",ar:"سُمُوٌّ",q:"Bu so'zning ma'nosi?",o:["Yuksaklik / oliyjanoblik","Pastlik","Oddiylik","Tezlik"],c:0,f:"سُمُوٌّ = yuksaklik, oliyjanoblik, ulug'lik (سَمَا — yuksaldi fe'lidan)."},
     {id:"b2m14",ar:"مَحْوُ الْأُمِّيَّةِ",q:"Bu iboraning ma'nosi?",o:["Savodsizlikni tugatish","Maktab qurish","Imtihon olish","Diplom berish"],c:0,f:"مَحْوُ الْأُمِّيَّةِ = savodsizlikni yo'qotish, o'qish-yozishni o'rgatish."},
-    {id:"b2m15",ar:"غَرَامَاتٌ",q:"Bu so'zning ma'nosi?",o:["Jarimalar (pul jazosi)","Mukofotlar","Soliqlar","Qarzlar"],c:0,f:"غَرَامَاتٌ = jarimalar (غَرَامَة ning ko'pligi)."}
+    {id:"b2m15",ar:"غَرَامَاتٌ",q:"Bu so'zning ma'nosi?",o:["Jarimalar","Mukofotlar","Soliqlar","Qarzlar"],c:0,f:"غَرَامَاتٌ = jarimalar (غَرَامَة ning ko'pligi)."}
   ],
   QQ:[
     {id:"b2q1",q:"«طَبَعَ» fe'lining masdari qaysi?",o:["طَبْعٌ","تَطْبِيعٌ","مَطْبَعَةٌ","طِبَاعٌ"],c:0,f:"طَبَعَ (sulosiy) → masdar طَبْعٌ (chop etishga nisbatan طِبَاعَة ham keladi). تَطْبِيع = Bob II, مَطْبَعَة = ism makan."},
@@ -1077,15 +1090,15 @@ B2: {
     {id:"b2q4",q:"«Xizmatchilarni ko'rdim» — to'g'ri tarjimani tanlang.",o:["رَأَيْتُ الْمُوَظَّفِينَ","رَأَيْتُ الْمُوَظَّفُونَ","رَأَيْتُ الْمُوَظَّفَيْنِ","رَأَيْتُ الْمُوَظَّفَانِ"],c:0,f:"رَأَيْتُ maf'ulni nasb qiladi; «موظّفين» jamʿ muzakkar solim — nasb belgisi «ي» (yaa): الْمُوَظَّفِينَ. الموظّفون = rafʿ, الموظّفَيْنِ/الموظّفان = mushanno."},
     {id:"b2q5",q:"«اِنْتِقَال» masdaridan fe'lni hosil qiling.",o:["اِنْتَقَلَ","نَقَلَ","نَقَّلَ","تَنَاقَلَ"],c:0,f:"اِنْتِقَال (Bob VIII, اِفْتِعَال) masdari → fe'li اِنْتَقَلَ. نَقَلَ = sulosiy, نَقَّلَ = Bob II."},
     {id:"b2q6",q:"Quyidagi fe'llardan qaysi biri ikki maf'ulni nasb qiladi?",o:["سَأَلَ","حَفِظَ","رَحَلَ","صَبَرَ"],c:0,f:"سَأَلَ ikki maf'ulni oladi: سَأَلْتُ اللَّهَ الْعَفْوَ. حَفِظَ — bitta maf'ul; رَحَلَ، صَبَرَ — o'timsiz (lozim)."},
-    {id:"b2q7",q:"«اِسْتَأْجَرْتُ الشَّقَّةَ. الشَّقَّةُ ...» — bo'shliqni to'ldiring.",o:["مُسْتَأْجَرَةٌ (ismi maf'ul)","مُسْتَأْجِرَةٌ (ismi foil)","اِسْتِئْجَارَةٌ","مُؤَجِّرَةٌ"],c:0,f:"Ijaraga olingan kvartira → ismi maf'ul مُسْتَأْجَرَةٌ (ج fatha bilan). مُسْتَأْجِرَة (kasra) = ijaraga oluvchi; مُؤَجِّرَة = ijaraga beruvchi."},
-    {id:"b2q8",q:"Qaysi fe'l hamzatul qat' bilan boshlanadi?",o:["أَغْلَقَ","اِنْتَظَرَ","اِجْلِسْ","اِسْتَطَاعَ"],c:0,f:"أَغْلَقَ (Bob IV — أَفْعَلَ) boshidagi hamza «hamzatul qat'» (doim yoziladi/o'qiladi: أَ). Qolganlari (اِفْتَعَلَ، أمر sulosiy، اِسْتَفْعَلَ) — hamzatul vasl."},
-    {id:"b2q9",q:"«عَاشَ» fe'li qaysi turga kiradi?",o:["أَجْوَفُ (o'rtasi illatli)","لَفِيفٌ","مَهْمُوزٌ","مِثَالٌ"],c:0,f:"عَاشَ aslida عَيَشَ (ع-ي-ش) — o'rta harfi illat (ي) → أَجْوَف (ichi bo'sh) fe'l."},
+    {id:"b2q7",q:"«اِسْتَأْجَرْتُ الشَّقَّةَ. الشَّقَّةُ ...» — bo'shliqni to'ldiring.",o:["مُسْتَأْجَرَةٌ","مُسْتَأْجِرَةٌ","اِسْتِئْجَارَةٌ","مُؤَجِّرَةٌ"],c:0,f:"Ijaraga olingan kvartira → ismi maf'ul مُسْتَأْجَرَةٌ (ج fatha bilan). مُسْتَأْجِرَة (kasra) = ijaraga oluvchi; مُؤَجِّرَة = ijaraga beruvchi."},
+    {id:"b2q8",q:"Qaysi fe'l hamzatul qat' bilan boshlanadi?",o:["اغْلَقَ","انْتَظَرَ","اجْلِسْ","اسْتَطَاعَ"],c:0,f:"أَغْلَقَ (Bob IV — أَفْعَلَ) boshidagi hamza «hamzatul qat'» (doim yoziladi/o'qiladi: أَ). Qolganlari (اِفْتَعَلَ، أمر sulosiy، اِسْتَفْعَلَ) — hamzatul vasl."},
+    {id:"b2q9",q:"«عَاشَ» fe'li qaysi turga kiradi?",o:["أَجْوَفُ","لَفِيفٌ","مَهْمُوزٌ","مِثَالٌ"],c:0,f:"عَاشَ aslida عَيَشَ (ع-ي-ش) — o'rta harfi illat (ي) → أَجْوَف (ichi bo'sh) fe'l."},
     {id:"b2q10",q:"To'g'ri imloni tanlang («mas'ul»).",o:["مَسْؤُولٌ","مَسْئُولٌ","مَسْأُولٌ","مَسْءُولٌ"],c:0,f:"«مَسْؤُولٌ» — hamza dammali, oldidan sukun (سْ) kelgani uchun «و» kursisi ustiga yoziladi."},
-    {id:"b2q11",q:"«قِفَا» qaysi fe'l?",o:["Fe'l amr (mushanno uchun)","Fe'l moziy","Muzori' majzum","Bunday fe'l yo'q"],c:0,f:"قِفَا = «وَقَفَ» fe'lining mushanno uchun amri (qad. «قِفَا نَبْكِ» misolidagidek): «ikkovingiz to'xtang»."},
+    {id:"b2q11",q:"«قِفَا» qaysi fe'l?",o:["Fe'l amr","Fe'l moziy","Muzori' majzum","Bunday fe'l yo'q"],c:0,f:"قِفَا = «وَقَفَ» fe'lining mushanno uchun amri (qad. «قِفَا نَبْكِ» misolidagidek): «ikkovingiz to'xtang»."},
     {id:"b2q12",q:"To'g'ri imloni tanlang («uning nuri»).",o:["ضَوْءُهُ","ضَوْؤُهُ","ضَوْئُهُ","ضَوْأَهُ"],c:0,f:"«ضَوْء» ga «ه» qo'shilsa, hamza «و» (sukunli vov)dan keyin kelgani uchun satr ustida alohida yoziladi: ضَوْءُهُ."},
-    {id:"b2q13",q:"«قُلْنَ» qaysi fe'l?",o:["Ikkalasi ham to'g'ri (moziy va amr)","Faqat fe'l amr","Faqat fe'l moziy","Muzori'"],c:0,f:"قُلْنَ — «هُنَّ قُلْنَ» (moziy) ham, «أَنْتُنَّ قُلْنَ» (amr) ham bo'la oladi → ikkalasi to'g'ri."},
+    {id:"b2q13",q:"«قُلْنَ» qaysi fe'l?",o:["Ikkalasi ham to'g'ri","Faqat fe'l amr","Faqat fe'l moziy","Muzori'"],c:0,f:"قُلْنَ — «هُنَّ قُلْنَ» (moziy) ham, «أَنْتُنَّ قُلْنَ» (amr) ham bo'la oladi → ikkalasi to'g'ri."},
     {id:"b2q14",q:"Qaysi qatordagi so'zlarning hammasi to'g'ri yozilgan?",o:["دَعَا، قُرَى، كُبْرَى","زَكَرِيَّى، رَمَى، تَوَلَّى","اِشْتَرَى، سَلْمَا، رَوَى","رَعَى، أَذَا، هَدَايَا"],c:0,f:"1-qator to'g'ri: دَعَا (asli «و» → alif tavila), قُرَى، كُبْرَى («ى» bilan). Xatolar: «زَكَرِيَّا»، «سَلْمَى»، «إِذَا» bo'lishi kerak edi."},
-    {id:"b2q15",q:"«الْفَاءُ» harfi atfi nima uchun keladi?",o:["لِلتَّرْتِيبِ وَالتَّعْقِيبِ (ketma-ketlik + darhollik)","لِلتَّرْتِيبِ وَالتَّرَاخِي","لِلتَّرْتِيبِ وَالتَّخْيِيرِ","لِلتَّرْتِيبِ وَالِاسْتِدْرَاكِ"],c:0,f:"«الفاء» tarteeb (ketma-ketlik) va ta'qib (fosilasiz, darhol) uchun. «ثُمَّ» esa tarteeb + taraaxiy (kechikish bilan)."}
+    {id:"b2q15",q:"«الْفَاءُ» harfi atfi nima uchun keladi?",o:["لِلتَّرْتِيبِ وَالتَّعْقِيبِ","لِلتَّرْتِيبِ وَالتَّرَاخِي","لِلتَّرْتِيبِ وَالتَّخْيِيرِ","لِلتَّرْتِيبِ وَالِاسْتِدْرَاكِ"],c:0,f:"«الفاء» tarteeb (ketma-ketlik) va ta'qib (fosilasiz, darhol) uchun. «ثُمَّ» esa tarteeb + taraaxiy (kechikish bilan)."}
   ],
   RQ:[
     {id:'b2r1',q:'مَا أَوَّلُ سَبَبٍ لِلْمُشْكِلَاتِ النَّفْسِيَّةِ حَسَبَ الدُّكْتُورِ مَحْمُودٍ؟',o:['عَدَمُ مُمَارَسَةِ الرِّيَاضَةِ','قِلَّةُ النَّوْمِ','مُقَارَنَةُ النَّفْسِ بِالْآخَرِينَ عَلَى وَسَائِلِ التَّوَاصُلِ','كَثْرَةُ الْعَمَلِ'],c:2,f:'Matnda: تَأَثُّرُ النَّاسِ بِمَا يَرَوْنَهُ عَلَى مَوَاقِعِ التَّوَاصُلِ وَعَمَلُ مُقَارَنَةٍ.'},
@@ -1100,7 +1113,7 @@ B2: {
   ],
   levels:[
     {max:44,lvl:'B1+',name:'Mustahkamlash kerak',color:'#6a35c4',desc:'B2 mavzulari murakkab keldi. B1 ni mustahkamlab, B2 ga qaytarib ko\'ring.',next:'B1',action:'📚 B1 darslari ochiladi'},
-    {max:69,lvl:'B2',name:"Yuqori o'rta daraja",color:'#c0411a',desc:'B2 darajasiga mos! Murakkab lug\'at va nahv qoidalarini bilasiz. B2 darslari ochiladi.',next:'B2',action:'✅ B2 darslari ochiladi'},
+    {max:89,lvl:'B2',name:"Yuqori o'rta daraja",color:'#c0411a',desc:'B2 darajasiga mos! Murakkab lug\'at va nahv qoidalarini bilasiz. B2 darslari ochiladi.',next:'B2',action:'✅ B2 darslari ochiladi'},
     {max:100,lvl:'C1',name:'Rivojlangan daraja',color:'#1a3a6e',desc:'Barakalloh! B2 ni a\'lo topshirdingiz. C1 darslari siz uchun ochiladi!',next:'C1',action:'✅ C1 darslari ochiladi'}
   ]
 },
@@ -1132,38 +1145,38 @@ C1: {
     warn:true
   },
   MQ:[
-    {id:"c1m1",ar:"عَمِيلٌ",q:"Bu so'zning ma'nosi?",o:["Mijoz / xizmatdan foydalanuvchi (yoki agent)","Xizmatchi","Boshliq","Raqib"],c:0,f:"عَمِيلٌ = mijoz, xaridor; yana «agent, josus» ma'nosi ham bor (kontekstga qarab)."},
+    {id:"c1m1",ar:"عَمِيلٌ",q:"Bu so'zning ma'nosi?",o:["Mijoz / xizmatdan foydalanuvchi","Xizmatchi","Boshliq","Raqib"],c:0,f:"عَمِيلٌ = mijoz, xaridor; yana «agent, josus» ma'nosi ham bor (kontekstga qarab)."},
     {id:"c1m2",ar:"نِطَاقٌ أَوْسَعُ",q:"Bu iboraning ma'nosi?",o:["Kengroq doira / ko'lam","Torroq doira","Aniq chegara","Qisqa muddat"],c:0,f:"نِطَاقٌ أَوْسَعُ = kengroq ko'lam, doira (نِطَاق — qamrov)."},
     {id:"c1m3",ar:"رَثَاثَةٌ",q:"Bu so'zning ma'nosi?",o:["Eskirganlik / uvadalik / nochorlik","Yangilik","Tozalik","Hashamat"],c:0,f:"رَثَاثَةٌ = eskirib uvadalanish, nochor ko'rinish (رَثٌّ — eski-tuski)."},
-    {id:"c1m4",ar:"عِتِيًّا",q:"Bu so'zning ma'nosi?",o:["Keksalikning eng so'nggi (og'ir) darajasi","Yoshlik kuchi","O'rta yosh","Bolalik"],c:0,f:"عِتِيًّا = qarilikning so'nggi cho'qqisi (Qur'on: «بَلَغْتُ مِنَ الْكِبَرِ عِتِيًّا»)."},
+    {id:"c1m4",ar:"عِتِيًّا",q:"Bu so'zning ma'nosi?",o:["Keksalikning eng so'nggi darajasi","Yoshlik kuchi","O'rta yosh","Bolalik"],c:0,f:"عِتِيًّا = qarilikning so'nggi cho'qqisi (Qur'on: «بَلَغْتُ مِنَ الْكِبَرِ عِتِيًّا»)."},
     {id:"c1m5",ar:"مُقَوِّمَاتٌ",q:"Bu so'zning ma'nosi?",o:["Asosiy unsurlar / tarkibiy poydevorlar","Qarshiliklar / to'siqlar","Natijalar","Bezaklar"],c:0,f:"مُقَوِّمَاتٌ = (biror narsani tutib turuvchi) asosiy unsurlar, ustunlar (قَوَّمَ — tik tutmoq)."},
     {id:"c1m6",ar:"عَنِيفٌ",q:"Bu sifatning ma'nosi?",o:["Shafqatsiz / qattiq / zo'ravon","Mehribon","Yumshoq","Sokin"],c:0,f:"عَنِيفٌ = qo'pol, qattiq, zo'ravonlik bilan (عُنْف — zo'ravonlik)."},
     {id:"c1m7",ar:"غَرِيبُ الْأَطْوَارِ",q:"Bu iboraning ma'nosi?",o:["G'alati tabiatli / injiq odam","Mehmondo'st odam","Oddiy odam","Bilimdon odam"],c:0,f:"غَرِيبُ الْأَطْوَارِ = xulq-atvori g'alati, injiq (طَوْر — holat, ko'pligi أطوار)."},
     {id:"c1m8",ar:"اِنْبَثَقَ عَنْ",q:"Bu fe'lning ma'nosi?",o:["...dan kelib chiqdi / paydo bo'ldi","...ga kirib ketdi","...ni yopdi","...ga qo'shildi"],c:0,f:"اِنْبَثَقَ عَنْ = ...dan kelib chiqdi, otilib chiqdi, paydo bo'ldi."},
-    {id:"c1m9",ar:"الْأَفْكَارُ الشَّاذَّةُ",q:"Bu iboraning ma'nosi?",o:["G'ayritabiiy / chetga chiqqan (buzuq) fikrlar","To'g'ri fikrlar","Yangi g'oyalar","Mashhur qarashlar"],c:0,f:"الْأَفْكَارُ الشَّاذَّةُ = me'yordan chetga chiqqan, g'ayritabiiy fikrlar (شَذَّ — chetga chiqdi)."},
+    {id:"c1m9",ar:"الْأَفْكَارُ الشَّاذَّةُ",q:"Bu iboraning ma'nosi?",o:["G'ayritabiiy / chetga chiqqan fikrlar","To'g'ri fikrlar","Yangi g'oyalar","Mashhur qarashlar"],c:0,f:"الْأَفْكَارُ الشَّاذَّةُ = me'yordan chetga chiqqan, g'ayritabiiy fikrlar (شَذَّ — chetga chiqdi)."},
     {id:"c1m10",ar:"أَحْدَثَ ضَجَّةً",q:"Bu iboraning ma'nosi?",o:["Shov-shuv ko'tardi / katta gap-so'zga sabab bo'ldi","Sukunat o'rnatdi","Ishni tugatdi","E'tiborsiz qoldi"],c:0,f:"أَحْدَثَ ضَجَّةً = shov-shuv, g'avg'o ko'tardi (ضَجَّة — shovqin)."},
-    {id:"c1m11",ar:"ثَرَوَاتٌ",q:"Bu so'zning ma'nosi?",o:["Boyliklar / sarvatlar","Qarzlar","Xarajatlar","Muammolar"],c:0,f:"ثَرَوَاتٌ = boyliklar, sarvatlar (ثَرْوَة ning ko'pligi)."},
-    {id:"c1m12",ar:"تَحَلَّى بِـ",q:"Bu fe'lning ma'nosi?",o:["(Yaxshi xislatga) ega bo'ldi / bezandi","...dan voz kechdi","...dan ayrildi","...ni yashirdi"],c:0,f:"تَحَلَّى بِـ = (yaxshi sifat bilan) bezandi, shu xislatga ega bo'ldi (حِلْيَة — bezak)."},
+    {id:"c1m11",ar:"ثَرَوَاتٌ",q:"Bu so'zning ma'nosi?",o:["Boyliklar","Qarzlar","Xarajatlar","Muammolar"],c:0,f:"ثَرَوَاتٌ = boyliklar, sarvatlar (ثَرْوَة ning ko'pligi)."},
+    {id:"c1m12",ar:"تَحَلَّى بِـ",q:"Bu fe'lning ma'nosi?",o:["ega bo'ldi / bezandi","...dan voz kechdi","...dan ayrildi","...ni yashirdi"],c:0,f:"تَحَلَّى بِـ = (yaxshi sifat bilan) bezandi, shu xislatga ega bo'ldi (حِلْيَة — bezak)."},
     {id:"c1m13",ar:"خُشُونَةُ الْعَيْشِ",q:"Bu iboraning ma'nosi?",o:["Turmushning qattiqligi / og'irligi","Hayotning farovonligi","Uzoq umr","Tinch hayot"],c:0,f:"خُشُونَةُ الْعَيْشِ = turmushning qattiqligi, mashaqqatli yashash (خَشِن — qo'pol, dag'al)."},
-    {id:"c1m14",ar:"الدُّوَلُ الرَّائِدَةُ",q:"Bu iboraning ma'nosi?",o:["Yetakchi (ilg'or) davlatlar","Qoloq davlatlar","Kichik davlatlar","Qo'shni davlatlar"],c:0,f:"الدُّوَلُ الرَّائِدَةُ = yetakchi, ilg'or davlatlar (رَائِد — peshqadam)."},
-    {id:"c1m15",ar:"فُحُوصَاتٌ دَوْرِيَّةٌ",q:"Bu iboraning ma'nosi?",o:["Davriy (muntazam) tibbiy tekshiruvlar","Bir martalik tekshiruv","Tasodifiy nazorat","Yakuniy imtihon"],c:0,f:"فُحُوصَاتٌ دَوْرِيَّةٌ = vaqti-vaqti bilan o'tkaziladigan, muntazam tekshiruvlar (فَحْص — tekshiruv)."}
+    {id:"c1m14",ar:"الدُّوَلُ الرَّائِدَةُ",q:"Bu iboraning ma'nosi?",o:["Yetakchi davlatlar","Qoloq davlatlar","Kichik davlatlar","Qo'shni davlatlar"],c:0,f:"الدُّوَلُ الرَّائِدَةُ = yetakchi, ilg'or davlatlar (رَائِد — peshqadam)."},
+    {id:"c1m15",ar:"فُحُوصَاتٌ دَوْرِيَّةٌ",q:"Bu iboraning ma'nosi?",o:["Davriy tibbiy tekshiruvlar","Bir martalik tekshiruv","Tasodifiy nazorat","Yakuniy imtihon"],c:0,f:"فُحُوصَاتٌ دَوْرِيَّةٌ = vaqti-vaqti bilan o'tkaziladigan, muntazam tekshiruvlar (فَحْص — tekshiruv)."}
   ],
   QQ:[
-    {id:"c1q1",q:"«إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ» — «إِيَّاكَ» ning i'robi?",o:["Munfasil nasb zamiri — mahalli nasbda maf'ulun bih (muqaddam)","Mubtado","Foil","Maf'ulun bih (mu'axxar)"],c:0,f:"إِيَّاكَ — munfasil nasb zamiri, مَحَلِّ نَصْبٍ مَفْعُولٌ بِهِ مُقَدَّم (fe'ldan oldinga o'tgan to'ldiruvchi)."},
+    {id:"c1q1",q:"«إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ» — «إِيَّاكَ» ning i'robi?",o:["Munfasil nasb zamiri","Mubtado","Foil","Maf'ulun bih"],c:0,f:"إِيَّاكَ — munfasil nasb zamiri, مَحَلِّ نَصْبٍ مَفْعُولٌ بِهِ مُقَدَّم (fe'ldan oldinga o'tgan to'ldiruvchi)."},
     {id:"c1q2",q:"«الْتَقَى» fe'lidan ismi zamon va makonni tanlang.",o:["مُلْتَقًى","مَلْقًى","مِلْقَاةٌ","لِقَاءٌ"],c:0,f:"3 harfdan ortiq fe'lning ismi zamon/makani muzori' shaklidan yasaladi: يَلْتَقِي → مُلْتَقًى. لِقَاء = masdar."},
     {id:"c1q3",q:"«أَعْجَبَنِي الْأَدِيبُ أُسْلُوبُهُ» — «أُسْلُوبُهُ» qaysi badal?",o:["بَدَلُ اشْتِمَالٍ","بَدَلُ بَعْضٍ مِنْ كُلٍّ","بَدَلٌ مُطَابِقٌ","بَدَلُ غَلَطٍ"],c:0,f:"أُسْلُوب — adibning jismoniy qismi emas, balki u qamrab oladigan xususiyat → badal ishtimol."},
-    {id:"c1q4",q:"«كَوَى» fe'lidan yasalgan ismi olaning (مِكْوَاة) vazni qaysi?",o:["مِفْعَلَةٌ","فَعَّالَةٌ","فَاعِلَةٌ","فَاعُولٌ"],c:0,f:"مِكْوَاةٌ (dazmol) = «مِفْعَلَة» vaznida. Ism ola vaznlari: مِفْعَل، مِفْعَلَة، مِفْعَال (va yangi: فَعَّالَة)."},
+    {id:"c1q4",q:"«كَوَى» fe'lidan yasalgan ismi ola (asbob ismi)ning vazni qaysi?",o:["مِفْعَلَةٌ","فَعَّالَةٌ","فَاعِلَةٌ","فَاعُولٌ"],c:0,f:"مِكْوَاةٌ (dazmol) = «مِفْعَلَة» vaznida. Ism ola vaznlari: مِفْعَل، مِفْعَلَة، مِفْعَال (va yangi: فَعَّالَة)."},
     {id:"c1q5",q:"«حَضَرَ الْمَلِكُ نَفْسُهُ» — «نَفْسُهُ» qaysi ta'kid?",o:["تَوْكِيدٌ مَعْنَوِيٌّ","تَوْكِيدٌ لَفْظِيٌّ","بَدَلٌ","عَطْفُ بَيَانٍ"],c:0,f:"«نَفْسُهُ» — taukid ma'naviy (نفس، عين، كل، جميع، كلا، كلتا so'zlari bilan keladi)."},
-    {id:"c1q6",q:"Uzoqdagini chaqirish uchun keladigan nido harfini tanlang.",o:["أَيَا","أَ (hamza)","يَا","وَا"],c:0,f:"«أَيَا» (va «هَيَا») — uzoqdagini chaqirish uchun. «أَ»/«أَيْ» — yaqin uchun; «يَا» — umumiy; «وَا» — nudba (afsus)."},
-    {id:"c1q7",q:"«ضَحِكْتُ كَثِيرًا» — «كَثِيرًا» ning i'robi nima?",o:["نَائِبٌ عَنِ الْمَفْعُولِ الْمُطْلَقِ (mansub)","مَفْعُولٌ بِهِ","حَالٌ","تَمْيِيزٌ"],c:0,f:"«كَثِيرًا» — tushib qolgan masdarning sifati (ضَحِكْتُ ضَحِكًا كَثِيرًا) → maf'ul mutlaq o'rnida (نائب عن المفعول المطلق), mansub."},
+    {id:"c1q6",q:"Uzoqdagini chaqirish uchun keladigan nido harfini tanlang.",o:["أَيَا","أَ","يَا","وَا"],c:0,f:"«أَيَا» (va «هَيَا») — uzoqdagini chaqirish uchun. «أَ»/«أَيْ» — yaqin uchun; «يَا» — umumiy; «وَا» — nudba (afsus)."},
+    {id:"c1q7",q:"«ضَحِكْتُ كَثِيرًا» — «كَثِيرًا» ning i'robi nima?",o:["نَائِبٌ عَنِ الْمَفْعُولِ الْمُطْلَقِ","مَفْعُولٌ بِهِ","حَالٌ","تَمْيِيزٌ"],c:0,f:"«كَثِيرًا» — tushib qolgan masdarning sifati (ضَحِكْتُ ضَحِكًا كَثِيرًا) → maf'ul mutlaq o'rnida (نائب عن المفعول المطلق), mansub."},
     {id:"c1q8",q:"«يَا لَجَمَالِ هَذِهِ الْحَدِيقَةِ!» — qaysi uslub ishlatilgan?",o:["أُسْلُوبُ التَّعَجُّبِ (السَّمَاعِيُّ)","أُسْلُوبُ النِّدَاءِ","أُسْلُوبُ الْمَدْحِ","أُسْلُوبُ الِاسْتِغَاثَةِ"],c:0,f:"«يَا لَجَمَالِ...!» — samoiy ta'ajjub (hayrat) uslubi: «bu bog' naqadar go'zal!»."},
-    {id:"c1q9",q:"«ذَهَبْتُ الْمَسْجِدَ وَأَذَانَ الْفَجْرِ» — «أَذَانَ» ning i'robi va sababi?",o:["مَفْعُولٌ مَعَهُ (mansub) — chunki «و» vovul ma'iyya","مُبْتَدَأٌ مَرْفُوعٌ — «و» hol uchun","مَعْطُوفٌ مَرْفُوعٌ — «و» atf uchun","فَاعِلٌ مَرْفُوعٌ"],c:0,f:"«وَأَذَانَ» — «و» vovul ma'iyya («...bilan birga» ma'nosida); «أَذَانَ» = maf'ul ma'ahu, mansub: «azon (chaqirilayotgan) paytida masjidga bordim»."},
-    {id:"c1q10",q:"«طَفِقَ، أَخَذَ، هَبَّ» — bu fe'llar nima deyiladi?",o:["أَفْعَالُ الشُّرُوعِ (ish boshlash fe'llari)","أَفْعَالُ الْمُقَارَبَةِ","أَفْعَالُ الرَّجَاءِ","الْأَفْعَالُ النَّاقِصَةُ"],c:0,f:"طَفِقَ، أَخَذَ، هَبَّ، جَعَلَ، شَرَعَ، أَنْشَأَ — af'alu sh-shuru' (ish boshlanishini bildiradi). مُقَارَبَة: كاد، أوشك; رَجَاء: عسى، حرى."},
-    {id:"c1q11",q:"«نِعْمَ الْغَنِيُّ الْكَرِيمُ» — «نِعْمَ» nima?",o:["Madh uchun jomid (o'zgarmas) fe'l moziy","Madh harfi","Ism ta'ajjub","Fe'l amr"],c:0,f:"«نِعْمَ» (va «بِئْسَ») — madh/zamm uchun jomid fe'l moziy. «نِعْمَ الْغَنِيُّ الْكَرِيمُ» = «saxiy boy naqadar yaxshi!»."},
+    {id:"c1q9",q:"«ذَهَبْتُ الْمَسْجِدَ وَأَذَانَ الْفَجْرِ» — «أَذَانَ» ning i'robi nima?",o:["مَفْعُولٌ مَعَهُ","مُبْتَدَأٌ مَرْفُوعٌ","مَعْطُوفٌ مَرْفُوعٌ","فَاعِلٌ مَرْفُوعٌ"],c:0,f:"«وَأَذَانَ» — «و» vovul ma'iyya («...bilan birga» ma'nosida); «أَذَانَ» = maf'ul ma'ahu, mansub: «azon (chaqirilayotgan) paytida masjidga bordim»."},
+    {id:"c1q10",q:"«طَفِقَ، أَخَذَ، هَبَّ» — bu fe'llar nima deyiladi?",o:["أَفْعَالُ الشُّرُوعِ","أَفْعَالُ الْمُقَارَبَةِ","أَفْعَالُ الرَّجَاءِ","الْأَفْعَالُ النَّاقِصَةُ"],c:0,f:"طَفِقَ، أَخَذَ، هَبَّ، جَعَلَ، شَرَعَ، أَنْشَأَ — af'alu sh-shuru' (ish boshlanishini bildiradi). مُقَارَبَة: كاد، أوشك; رَجَاء: عسى، حرى."},
+    {id:"c1q11",q:"«نِعْمَ الْغَنِيُّ الْكَرِيمُ» — «نِعْمَ» nima?",o:["Madh uchun jomid fe'l moziy","Madh harfi","Ism ta'ajjub","Fe'l amr"],c:0,f:"«نِعْمَ» (va «بِئْسَ») — madh/zamm uchun jomid fe'l moziy. «نِعْمَ الْغَنِيُّ الْكَرِيمُ» = «saxiy boy naqadar yaxshi!»."},
     {id:"c1q12",q:"«قَرَأْتُ الْكِتَابَ نِصْفَهُ» — «نِصْفَهُ» qaysi badal?",o:["بَدَلُ بَعْضٍ مِنْ كُلٍّ","بَدَلُ اشْتِمَالٍ","بَدَلٌ مُطَابِقٌ","بَدَلُ غَلَطٍ"],c:0,f:"«نِصْفَهُ» — kitobning bir qismi (جزء من الكل) → badal ba'd min kull."},
     {id:"c1q13",q:"«سَمِعَ» fe'lidan ismi olani tanlang.",o:["سَمَّاعَةٌ","سَامِعٌ","مَسْمُوعٌ","مَسْمَعٌ"],c:0,f:"سَمَّاعَةٌ = ismi ola (quloqchin/eshitish asbobi); klassik vazni مِسْمَاعٌ (مِفْعَال) ham. سَامِع = eshituvchi (foil), مَسْمَع = eshitish joyi."},
-    {id:"c1q14",q:"«زُرْتُ جَدِّي مَرَّتَيْنِ» — «مَرَّتَيْنِ» ning i'robi nima?",o:["نَائِبٌ عَنِ الْمَفْعُولِ الْمُطْلَقِ (mushanno, «ي» bilan mansub)","مَفْعُولٌ بِهِ","ظَرْفُ زَمَانٍ","حَالٌ"],c:0,f:"«مَرَّتَيْنِ» — masdar (مَرَّة) ning sonini bildiradi → نائب عن المفعول المطلق; mushanno bo'lgani uchun «ي» bilan mansub."},
-    {id:"c1q15",q:"«أَتَعَلَّمُ اللُّغَةَ الْعَرَبِيَّةَ حُبًّا فِيهَا» — «حُبًّا» ning i'robi nima?",o:["مَفْعُولٌ لِأَجْلِهِ (mansub)","مَفْعُولٌ مُطْلَقٌ","حَالٌ","تَمْيِيزٌ"],c:0,f:"«حُبًّا» — o'rganishning sababini bildiradi (nega? — sevgani uchun) → maf'ulun li-ajlihi, mansub."}
+    {id:"c1q14",q:"«زُرْتُ جَدِّي مَرَّتَيْنِ» — «مَرَّتَيْنِ» ning i'robi nima?",o:["نَائِبٌ عَنِ الْمَفْعُولِ الْمُطْلَقِ","مَفْعُولٌ بِهِ","ظَرْفُ زَمَانٍ","حَالٌ"],c:0,f:"«مَرَّتَيْنِ» — masdar (مَرَّة) ning sonini bildiradi → نائب عن المفعول المطلق; mushanno bo'lgani uchun «ي» bilan mansub."},
+    {id:"c1q15",q:"«أَتَعَلَّمُ اللُّغَةَ الْعَرَبِيَّةَ حُبًّا فِيهَا» — «حُبًّا» ning i'robi nima?",o:["مَفْعُولٌ لِأَجْلِهِ","مَفْعُولٌ مُطْلَقٌ","حَالٌ","تَمْيِيزٌ"],c:0,f:"«حُبًّا» — o'rganishning sababini bildiradi (nega? — sevgani uchun) → maf'ulun li-ajlihi, mansub."}
   ],
   RQ:[
     {id:'c1r1',q:'مَا التَّنَاقُضُ الْعَجِيبُ الَّذِي تَعِيشُهُ جُمْهُورِيَّةُ إِفْرِيقِيَا الْوُسْطَى حَسَبَ النَّصِّ؟',o:['غَنِيَّةٌ بِالسُّكَّانِ وَفَقِيرَةٌ بِالْمَوَارِدِ','تَمْتَلِكُ ثَرَوَاتٍ هَائِلَةً وَلَكِنَّهَا تُعَدُّ مِنْ أَفْقَرِ الدُّوَلِ','دَوْلَةٌ صِنَاعِيَّةٌ كُبْرَى وَلَكِنَّهَا تَسْتَوْرِدُ الْغِذَاءَ','تَعِيشُ فِي سَلَامٍ وَلَكِنَّهَا تَعَانِي مِنَ الْمَجَاعَةِ'],c:1,f:'Matnda: أَغْنَى دُوَلِ الْعَالَمِ فِي الثَّرَوَاتِ ... إِلَّا أَنَّهَا مَا تَزَالُ وَاحِدَةً مِنْ أَفْقَرِ دُوَلِ الْعَالَمِ.'},
@@ -1178,7 +1191,7 @@ C1: {
   ],
   levels:[
     {max:44,lvl:'B2+',name:'Mustahkamlash kerak',color:'#c0411a',desc:'C1 mavzulari murakkab keldi. B2 ni mustahkamlab, C1 ga qaytarib ko\'ring.',next:'B2',action:'📚 B2 darslari ochiladi'},
-    {max:69,lvl:'C1',name:'Rivojlangan daraja',color:'#3535a0',desc:'C1 darajasiga mos! Arabchani rivojlangan darajada bilasiz. C1 kurslari ochiladi.',next:'C1',action:'✅ C1 darslari ochiladi'},
+    {max:89,lvl:'C1',name:'Rivojlangan daraja',color:'#3535a0',desc:'C1 darajasiga mos! Arabchani rivojlangan darajada bilasiz. C1 kurslari ochiladi.',next:'C1',action:'✅ C1 darslari ochiladi'},
     {max:100,lvl:'C1+',name:'Ilg\'or C1 daraja',color:'#1a1a4e',desc:'Barakalloh! C1 ni a\'lo topshirdingiz. Siz arabcha ilg\'or darajada biluvchisiz!',next:'C1',action:'✅ Barcha daraja testlari tugallandi!'}
   ]
 }
@@ -1493,8 +1506,9 @@ function showFinalResult(outcome, pct, tot, maxQs) {
 }
 
 function startTimer() {
+  window.__qzDeadline = Date.now() + Math.max(timeLeft,0)*1000;
   timerInt = setInterval(() => {
-    timeLeft--;
+    timeLeft = Math.round((window.__qzDeadline - Date.now())/1000);
     if(timeLeft <= 0) {
       clearInterval(timerInt);
       timedOut = true;
@@ -1602,3 +1616,4 @@ function sendToWebhook(lvl, pct, tot, max) {
 </body>
 </html>
 
+                                                                                                                                                                                                                                                                                                                                            
