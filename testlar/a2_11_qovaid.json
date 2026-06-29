@@ -1,0 +1,293 @@
+{
+  "title": "Qovaid — A2 11-dars",
+  "otish": 80,
+  "vaqt": 30,
+  "questions": [
+    {
+      "q": "Toʻgʻri tuzilgan istisno (الاستثناء — «إِلَّا») gapini tanlang:\nQuyidagilardan qaysi biri toʻgʻri tuzilgan \"تام مثبت\" (tasdiq va toʻliq) istisno gapi?",
+      "opts": [
+        "حَضَرَ الطُّلَّابُ إِلَّا طَالِبٌ",
+        "حَضَرَ طَالِبٌ إِلَّا الطُّلَّابَ",
+        "حَضَرَ الطُّلَّابُ إِلَّا طَالِبٍ",
+        "حَضَرَ الطُّلَّابُ إِلَّا طَالِبًا"
+      ],
+      "correct": 3,
+      "izoh": "Tam-mujab istisno → mustasno mansub: «إِلَّا طَالِبًا»."
+    },
+    {
+      "q": "Toʻgʻri tuzilgan istisno (الاستثناء — «إِلَّا») gapini tanlang:\nQuyidagi inkor gaplar ichidan toʻgʻri istisno birikmasini toping:",
+      "opts": [
+        "مَا خَرَجَ الأَصْدِقَاءُ إِلَّا زَيْدًا",
+        "الأَصْدِقَاءُ خَرَجَ إِلَّا زَيْدٍ",
+        "خَرَجَ إِلَّا زَيْدًا",
+        "مَا خَرَجَ إِلَّا زَيْدًا"
+      ],
+      "correct": 0,
+      "izoh": "Manfiy tam istisno: «مَا خَرَجَ الأَصْدِقَاءُ إِلَّا زَيْدًا»."
+    },
+    {
+      "q": "Toʻgʻri tuzilgan istisno (الاستثناء — «إِلَّا») gapini tanlang:\n\"لَمْ ... إِلَّا\" konstruksiyasiga mos keluvchi toʻgʻri gapni aniqlang:",
+      "opts": [
+        "لَمْ يَنْجَحُونَ إِلَّا المُجْتَهِدُ",
+        "لَمْ يَنْجَحْ إِلَّا المُجْتَهِدَ",
+        "لَمْ يَنْجَحْ إِلَّا المُجْتَهِدُ",
+        "لَمْ يَنْجَحْ إِلَّا المُجْتَهِدِ"
+      ],
+      "correct": 2,
+      "izoh": "«لَمْ...إِلَّا»: faoil marfu — «إِلَّا المُجْتَهِدُ»."
+    },
+    {
+      "q": "Toʻgʻri tuzilgan istisno (الاستثناء — «إِلَّا») gapini tanlang:\n\"لَا ... إِلَّا\" konstruksiyasiga mos keluvchi grammatik toʻgʻri gapni aniqlang:",
+      "opts": [
+        "لَا يَقُولُ المُؤْمِنُ إِلَّا الصِّدْقَ",
+        "لَا يَقُولُ المُؤْمِنُ إِلَّا الصِّدْقُ",
+        "لَا يَقُولُ المُؤْمِنُ إِلَّا الصِّدْقِ",
+        "لَا يَقُولُونَ المُؤْمِنُ إِلَّا الصِّدْقَ"
+      ],
+      "correct": 0,
+      "izoh": "«لَا...إِلَّا»: maf'ul mansub — «إِلَّا الصِّدْقَ»."
+    },
+    {
+      "q": "Toʻgʻri tuzilgan istisno (الاستثناء — «إِلَّا») gapini tanlang:\n\"لَنْ ... إِلَّا\" tuzilishidagi toʻgʻri gapni belgilang:",
+      "opts": [
+        "لَنْ نَقْبَلَ إِلَّا الحَقَّ",
+        "لَنْ نَقْبَلُ إِلَّا الحَقَّ",
+        "لَنْ نَقْبَلَ إِلَّا الحَقُّ",
+        "لَنْ نَقْبَلَ إِلَّا الحَقِّ"
+      ],
+      "correct": 0,
+      "izoh": "«لَنْ...إِلَّا»: maf'ul mansub — «إِلَّا الحَقَّ»."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"يَعْمَلُ المُدِيرُ سَاعَاتٍ طَوِيلَةً\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "سَاعَاتٍ طَوِيلَةً يَعْمَلُ المُدِيرُ",
+        "المُدِيرُ يَعْمَلُونَ سَاعَاتٍ طَوِيلَةً",
+        "المُدِيرَ يَعْمَلُ سَاعَاتٍ طَوِيلَةً",
+        "المُدِيرُ يَعْمَلُ سَاعَاتٍ طَوِيلَةً"
+      ],
+      "correct": 3,
+      "izoh": "Ismiy gap: ega oldin, fe'l mos — «المُدِيرُ يَعْمَلُ...»."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"رَجَعَ المُسَافِرُونَ إِلَى بُلْدَانِهِمْ\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "المُسَافِرُونَ رَجَعُوا إِلَى بُلْدَانِهِمْ",
+        "المُسَافِرِينَ رَجَعُوا إِلَى بُلْدَانِهِمْ",
+        "المُسَافِرُونَ رَجَعَ إِلَى بُلْدَانِهِمْ",
+        "رَجَعُوا المُسَافِرُونَ إِلَى بُلْدَانِهِمْ"
+      ],
+      "correct": 0,
+      "izoh": "«المُسَافِرُونَ رَجَعُوا...» — vav-jamoa."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"رَكِبَتِ المُضِيفَاتُ الطَّائِرَةَ قَبْلَ الجَمِيعِ\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "المُضِيفَاتُ رَكِبْنَ الطَّائِرَةَ قَبْلَ الجَمِيعِ",
+        "المُضِيفَاتُ رَكِبُوا الطَّائِرَةَ قَبْلَ الجَمِيعِ",
+        "المُضِيفَاتِ رَكِبْنَ الطَّائِرَةَ قَبْلَ الجَمِيعِ",
+        "المُضِيفَاتُ رَكِبَتِ الطَّائِرَةَ قَبْلَ الجَمِيعِ"
+      ],
+      "correct": 0,
+      "izoh": "«المُضِيفَاتُ رَكِبْنَ...» — nun-niswa."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"نَسِيَ الرَّجُلُ بِطَاقَةَ الحَافِلَةِ\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "الرَّجُلُ نَسِيَ بِطَاقَةَ الحَافِلَةِ",
+        "الرَّجُلُ نَسُوا بِطَاقَةَ الحَافِلَةِ",
+        "نَسِيَ الرَّجُلُ البِطَاقَةَ",
+        "الرَّجُلَ نَسِيَ بِطَاقَةَ الحَافِلَةِ"
+      ],
+      "correct": 0,
+      "izoh": "«الرَّجُلُ نَسِيَ...» — mubtado marfu."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"يَنْتَظِرُ أَحْمَدُ صَدِيقَهُ مُنْذُ نِصْفِ سَاعَةٍ\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "أَحْمَدُ يَنْتَظِرُونَ صَدِيقَهُ مُنْذُ نِصْفِ سَاعَةٍ",
+        "أَحْمَدَ يَنْتَظِرُ صَدِيقَهُ مُنْذُ نِصْفِ سَاعَةٍ",
+        "أَحْمَدُ يَنْتَظِرُ صَدِيقَهُ مُنْذُ نِصْفِ سَاعَةٍ",
+        "يَنْتَظِرُونَ أَحْمَدُ صَدِيقَهُ مُنْذُ نِصْفِ سَاعَةٍ"
+      ],
+      "correct": 2,
+      "izoh": "«أَحْمَدُ يَنْتَظِرُ...» — mubtado marfu."
+    },
+    {
+      "q": "Berilgan fe'liy gapning toʻgʻri ismiy gap shaklini tanlang:\n\"أَجَابَتِ الطَّالِبَةُ عَلَى كُلِّ الأَسْئِلَةِ\" gapining toʻgʻri ismiy gap shaklini toping:",
+      "opts": [
+        "الطَّالِبَةُ أَجَابُوا عَلَى كُلِّ الأَسْئِلَةِ",
+        "الطَّالِبَةَ أَجَابَتْ عَلَى كُلِّ الأَسْئِلَةِ",
+        "الطَّالِبَةُ أَجَابَتْ عَلَى كُلِّ الأَسْئِلَةِ",
+        "أَجَابَتْ الطَّالِبَةُ عَلَى كُلِّ الأَسْئِلَةِ"
+      ],
+      "correct": 2,
+      "izoh": "«الطَّالِبَةُ أَجَابَتْ...» — mubtado marfu."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"أَنَا أَعِيشُ فِي شَقَّةٍ صَغِيرَةٍ\" gapida xabar turi (نوع الخبر) nima?",
+      "opts": [
+        "مُفْرَدٌ",
+        "شِبْهُ جُمْلَةٍ",
+        "جُمْلَةٌ فِعْلِيَّةٌ",
+        "جُمْلَةٌ اِسْمِيَّةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Xabar — jumla fi'liyya: «أَعِيشُ...»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الثَّلَّاجَةُ فِي المَطْبَخِ\" gapida xabar (الخبر) qaysi soʻz yoki birikma?",
+      "opts": [
+        "الثَّلَّاجَةُ فِي",
+        "الثَّلَّاجَةُ",
+        "فِي المَطْبَخِ",
+        "المَطْبَخِ"
+      ],
+      "correct": 2,
+      "izoh": "Xabar — shibhu jumla (jar+majrur): «فِي المَطْبَخِ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الطَّبِيبُ عَمَلُهُ صَعْبٌ\" gapida xabar turi (نوع الخبر) qaysi javobda toʻgʻri koʻrsatilgan?",
+      "opts": [
+        "جُمْلَةٌ فِعْلِيَّةٌ",
+        "مُفْرَدٌ",
+        "شِبْهُ جُمْلَةٍ",
+        "جُمْلَةٌ اِسْمِيَّةٌ"
+      ],
+      "correct": 3,
+      "izoh": "Xabar — jumla ismiyya: «عَمَلُهُ صَعْبٌ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"مَدْرَسَةُ أَخِي بَعِيدَةٌ\" gapida mubtada (المبتدأ) qaysi soʻz?",
+      "opts": [
+        "مَدْرَسَةُ",
+        "مَدْرَسَةُ أَخِي",
+        "أَخِي",
+        "بَعِيدَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "Mubtado: «مَدْرَسَةُ» (muzof)."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الشَّمْسُ تُشْرِقُ السَّاعَةَ السَّادِسَةَ\" gapida xabar turi (نوع الخبر) nima?",
+      "opts": [
+        "جُمْلَةٌ اِسْمِيَّةٌ",
+        "جُمْلَةٌ فِعْلِيَّةٌ",
+        "مُفْرَدٌ",
+        "شِبْهُ جُمْلَةٍ"
+      ],
+      "correct": 1,
+      "izoh": "Xabar — jumla fi'liyya: «تُشْرِقُ...»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"بَيْتُنَا فَوْقَ مَرْكَزِ التَّسَوُّقِ\" gapida xabar turi (نوع الخبر) nima?",
+      "opts": [
+        "جُمْلَةٌ فِعْلِيَّةٌ",
+        "شِبْهُ جُمْلَةٍ",
+        "مُفْرَدٌ",
+        "جُمْلَةٌ اِسْمِيَّةٌ"
+      ],
+      "correct": 1,
+      "izoh": "Xabar — shibhu jumla: «فَوْقَ مَرْكَزِ التَّسَوُّقِ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"مُسْتَشْفَى الأَطْفَالِ كَبِيرٌ\" gapida xabar (الخبر) qaysi?",
+      "opts": [
+        "مُسْتَشْفَى",
+        "كَبِيرٌ",
+        "الأَطْفَالِ",
+        "مُسْتَشْفَى الأَطْفَالِ"
+      ],
+      "correct": 1,
+      "izoh": "Xabar — mufrad: «كَبِيرٌ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"السَّيَّارَةُ لَوْنُهَا أَحْمَرُ\" gapining tahlilini toping:",
+      "opts": [
+        "المُبْتَدَأ: السَّيَّارَةُ / الخَبَر: لَوْنُهَا",
+        "المُبْتَدَأ: السَّيَّارَةُ / الخَبَر: لَوْنُهَا أَحْمَرُ",
+        "المُبْتَدَأ: السَّيَّارَةُ / الخَبَر: أَحْمَرُ",
+        "المُبْتَدَأ: لَوْنُهَا / الخَبَر: أَحْمَرُ"
+      ],
+      "correct": 1,
+      "izoh": "Mubtado «السَّيَّارَةُ», xabar jumla ismiyya «لَوْنُهَا أَحْمَرُ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"السُّوق\" soʻzi bilan tuzilgan qaysi gapda xabar \"شِبْهُ جُمْلَةٍ\" boʻlib kelgan?",
+      "opts": [
+        "السُّوقُ كَبِيرٌ",
+        "السُّوقُ أَبْوَابُهُ مَفْتُوحَةٌ",
+        "السُّوقُ يَفْتَحُ صَبَاحًا",
+        "السُّوقُ أَمَامَ المَسْجِدِ"
+      ],
+      "correct": 3,
+      "izoh": "Shibhu jumla xabar: «أَمَامَ المَسْجِدِ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الشِّتَاء\" soʻzi bilan tuzilgan qaysi gapda xabar \"مُفْرَدٌ\" boʻlib kelgan?",
+      "opts": [
+        "الشِّتَاءُ يَأْتِي بَعْدَ الخَرِيفِ",
+        "الشِّتَاءُ فِي جُمْلَةِ الفُصُولِ",
+        "الشِّتَاءُ جَوُّهُ بَارِدٌ",
+        "الشِّتَاءُ بَارِدٌ"
+      ],
+      "correct": 3,
+      "izoh": "Mufrad xabar: «بَارِدٌ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"أَنَا\" olmoshi ishtirok etgan qaysi gapda xabar \"جُمْلَةٌ فِعْلِيَّةٌ\" shaklida?",
+      "opts": [
+        "أَنَا أَخْلَاقِي حَسَنَةٌ",
+        "أَنَا أَدْرُسُ العَرَبِيَّةَ",
+        "أَنَا فِي الصَّفِّ",
+        "أَنَا طَالِبٌ جَدِيدٌ"
+      ],
+      "correct": 1,
+      "izoh": "Jumla fi'liyya xabar: «أَدْرُسُ...»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الطَّالِب\" soʻzi ishtirok etgan qaysi gapda xabar \"جُمْلَةٌ اِسْمِيَّةٌ\" boʻlib kelgan?",
+      "opts": [
+        "الطَّالِبُ يَكْتُبُ الدَّرْسَ",
+        "الطَّالِبُ خَطُّهُ جَمِيلٌ",
+        "الطَّالِبُ فِي المَكْتَبَةِ",
+        "الطَّالِبُ ذَكِيٌّ"
+      ],
+      "correct": 1,
+      "izoh": "Jumla ismiyya xabar: «خَطُّهُ جَمِيلٌ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الطَّعَام\" soʻzi bilan tuzilgan gapda xabar turi \"شِبْهُ جُمْلَةٍ\" boʻlgan variantni toping:",
+      "opts": [
+        "الطَّعَامُ يُغَذِّي الجِسْمَ",
+        "الطَّعَامُ عَلَى المَائِدَةِ",
+        "الطَّعَامُ لَذِيذٌ",
+        "الطَّعَامُ طَعْمُهُ طَيِّبٌ"
+      ],
+      "correct": 1,
+      "izoh": "Shibhu jumla xabar: «عَلَى المَائِدَةِ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"الهَاتِف\" soʻzi bilan tuzilgan qaysi gapda xabar \"مُفْرَدٌ\" boʻlib kelgan?",
+      "opts": [
+        "الهَاتِفُ فِي الحَقِيبَةِ",
+        "الهَاتِفُ شَاشَتُهُ مَكْسُورَةٌ",
+        "الهَاتِفُ رَنَّ قَبْلَ قَلِيلٍ",
+        "الهَاتِفُ جَدِيدٌ"
+      ],
+      "correct": 3,
+      "izoh": "Mufrad xabar: «جَدِيدٌ»."
+    },
+    {
+      "q": "Mubtado/xabar bilan bogʻliq savolga toʻgʻri javobni tanlang:\n\"النُّقُود\" soʻzi bilan tuzilgan qaysi gapda xabar \"شِبْهُ جُمْلَةٍ\" boʻlib kelgan?",
+      "opts": [
+        "النُّقُودُ فِي المَحْفَظَةِ",
+        "النُّقُودُ تُفِيدُ النَّاسَ",
+        "النُّقُودُ أَهَمِّيَّتُهَا كَبِيرَةٌ",
+        "النُّقُودُ كَثِيرَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "Shibhu jumla xabar: «فِي المَحْفَظَةِ»."
+    }
+  ]
+}
