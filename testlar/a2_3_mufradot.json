@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 3-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 21,
   "questions": [
     {
@@ -37,17 +37,6 @@
       "izoh": "Kel! (buyruq) = تَعَالَ"
     },
     {
-      "q": "«Raf' holatidagi (zammali)» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "اَلْفَتْحَةُ",
-        "اَلضَّمَّةُ",
-        "فِعْلٌ لَازِمٌ",
-        "مَرْفُوعٌ"
-      ],
-      "correct": 3,
-      "izoh": "Raf' holatidagi (zammali) = مَرْفُوعٌ"
-    },
-    {
       "q": "«Ko'chmas mulk» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "عَقَارَاتٌ",
@@ -59,15 +48,15 @@
       "izoh": "Ko'chmas mulk = عَقَارَاتٌ"
     },
     {
-      "q": "«عَالِمٌ» — to'g'ri tarjimasi?",
+      "q": "«بِاسْتِمْرَارٍ» so'zining ma'nosi?",
       "opts": [
-        "Zavod",
-        "Olim",
-        "Gul",
-        "Fikr, qarash"
+        "Doimiy ravishda, uzluksiz",
+        "Radio (qabul qilgich)",
+        "Maqsad; buyum",
+        "Ko'plik, mo'llik"
       ],
-      "correct": 1,
-      "izoh": "Olim = عَالِمٌ"
+      "correct": 0,
+      "izoh": "بِاسْتِمْرَارٍ = Doimiy ravishda, uzluksiz"
     },
     {
       "q": "«Xizmatkor» — to'g'ri arabcha tarjimasi?",
@@ -147,26 +136,15 @@
       "izoh": "Alloh zikri bilan obod uy (duo) = مَنْزِلٌ عَامِرٌ بِذِكْرِ اللَّهِ"
     },
     {
-      "q": "«اَلْفَتْحَةُ» — to'g'ri tarjimasi?",
+      "q": "«اِشْتَاقَ» so'zining ma'nosi?",
       "opts": [
-        "O'timli fe'l",
-        "O'timsiz fe'l",
-        "Alloh zikri bilan obod uy (duo)",
-        "Fatha (harakat)"
+        "Sog'inmoq",
+        "Do'stlik",
+        "Yoqtirish; layk",
+        "Qoziq tish, so'yloq"
       ],
-      "correct": 3,
-      "izoh": "Fatha (harakat) = اَلْفَتْحَةُ"
-    },
-    {
-      "q": "«فِعْلٌ مُتَعَدٍّ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Fatha (harakat)",
-        "O'timli fe'l",
-        "Xususiyatlar, talablar",
-        "O'timsiz fe'l"
-      ],
-      "correct": 1,
-      "izoh": "O'timli fe'l = فِعْلٌ مُتَعَدٍّ"
+      "correct": 0,
+      "izoh": "اِشْتَاقَ = Sog'inmoq"
     },
     {
       "q": "«Tog'» — to'g'ri arabcha tarjimasi?",
@@ -345,15 +323,15 @@
       "izoh": "Imkon qadar tez = فِي أَسْرَعِ وَقْتٍ"
     },
     {
-      "q": "«Masala» — to'g'ri arabcha tarjimasi?",
+      "q": "«Zal» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَصْنَعٌ",
-        "مَسْأَلَةٌ",
-        "خَادِمٌ",
-        "زَهْرَةٌ"
+        "قَاعَةٌ",
+        "صَعِدَ",
+        "خَشَبٌ",
+        "تَحَسَّنَ"
       ],
-      "correct": 1,
-      "izoh": "Masala = مَسْأَلَةٌ"
+      "correct": 0,
+      "izoh": "Zal = قَاعَةٌ"
     },
     {
       "q": "«أَزْعَجَ» — to'g'ri tarjimasi?",
@@ -477,15 +455,15 @@
       "izoh": "Ega; hamroh = صَاحِبٌ"
     },
     {
-      "q": "«Baraka» — to'g'ri arabcha tarjimasi?",
+      "q": "«Spektakl, sahna asari» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "بَرَكَةٌ",
-        "رَأْيٌ",
-        "فِكْرَةٌ",
-        "زَهْرَةٌ"
+        "مَسْرَحِيَّةٌ",
+        "أُذُنٌ",
+        "بَدْلَةٌ",
+        "كَرَّرَ"
       ],
       "correct": 0,
-      "izoh": "Baraka = بَرَكَةٌ"
+      "izoh": "Spektakl, sahna asari = مَسْرَحِيَّةٌ"
     },
     {
       "q": "«Sotish» — to'g'ri arabcha tarjimasi?",
