@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 9-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 45,
   "questions": [
     {
@@ -37,15 +37,15 @@
       "izoh": "Kabachok, qovoqcha = كُوسَا"
     },
     {
-      "q": "«Xulq, axloq» — to'g'ri arabcha tarjimasi?",
+      "q": "«Urg'ochi; ayol jinsi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تِمْثَالٌ",
-        "خُلُقٌ",
-        "فَقِيهٌ",
-        "حَجَرٌ"
+        "أُنْثَى",
+        "اَلْكَرَمُ",
+        "قَفَزَ",
+        "نَشَاطٌ"
       ],
-      "correct": 1,
-      "izoh": "Xulq, axloq = خُلُقٌ"
+      "correct": 0,
+      "izoh": "Urg'ochi; ayol jinsi = أُنْثَى"
     },
     {
       "q": "«...ishi uchun, toki» — to'g'ri arabcha tarjimasi?",
@@ -81,37 +81,26 @@
       "izoh": "Saxiylik, mehmondo'stlik = اَلْكَرَمُ"
     },
     {
-      "q": "«Tanvin» — to'g'ri arabcha tarjimasi?",
+      "q": "«تَقَدَّمَ» so'zining ma'nosi?",
       "opts": [
-        "اَلتَّنْوِينُ",
-        "اَلنَّكِرَةُ",
-        "اَلْمَعْرِفَةُ",
-        "أَدَوَاتُ التَّعْلِيلِ"
+        "Oldinga o'tmoq, ilgarilamoq",
+        "O'zgartirmoq",
+        "Uylanish, nikoh",
+        "Kabachok, qovoqcha"
       ],
       "correct": 0,
-      "izoh": "Tanvin = اَلتَّنْوِينُ"
+      "izoh": "تَقَدَّمَ = Oldinga o'tmoq, ilgarilamoq"
     },
     {
-      "q": "«صَحْرَاءُ» — to'g'ri tarjimasi?",
+      "q": "«O'zi; jon, nafs» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "Tosh",
-        "Sahro, cho'l",
-        "Nil daryosi",
-        "Aniqrog'i, xususan"
+        "نَفْسٌ",
+        "شَوْكَةٌ",
+        "مَنْزِلِيٌّ",
+        "حَالَةٌ"
       ],
-      "correct": 1,
-      "izoh": "Sahro, cho'l = صَحْرَاءُ"
-    },
-    {
-      "q": "«Shakl, ko'rinish» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "هَرَمٌ",
-        "حَوَالَيْ",
-        "أَثَرٌ",
-        "شَكْلٌ"
-      ],
-      "correct": 3,
-      "izoh": "Shakl, ko'rinish = شَكْلٌ"
+      "correct": 0,
+      "izoh": "O'zi; jon, nafs = نَفْسٌ"
     },
     {
       "q": "«Ko'ngilochar» — to'g'ri arabcha tarjimasi?",
@@ -147,26 +136,26 @@
       "izoh": "Sabab bildiruvchi vositalar = أَدَوَاتُ التَّعْلِيلِ"
     },
     {
-      "q": "«قَلْعَةٌ» — to'g'ri tarjimasi?",
+      "q": "«اَلْمِلْحُ» so'zining ma'nosi?",
       "opts": [
-        "Qal'a",
-        "Saroy, qasr",
-        "Ulug', buyuk",
-        "Qo'rg'on devori"
+        "Tuz",
+        "Chaynamoq",
+        "Yetmoq, urmoq (kasallik)",
+        "Urush"
       ],
       "correct": 0,
-      "izoh": "Qal'a = قَلْعَةٌ"
+      "izoh": "اَلْمِلْحُ = Tuz"
     },
     {
-      "q": "«Mansaf (guruchli go'shtli taom)» — to'g'ri arabcha tarjimasi?",
+      "q": "«Filial, bo'lim» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "صِنَاعَةٌ",
-        "اَلْمَنْسَفُ",
-        "نِسَاءٌ",
-        "اَلْكُبَّةُ"
+        "فَرْعٌ",
+        "بِيئَةٌ",
+        "اَلْمَفْرُوشَاتُ",
+        "اَلتَّعْلِيقُ"
       ],
-      "correct": 1,
-      "izoh": "Mansaf (guruchli go'shtli taom) = اَلْمَنْسَفُ"
+      "correct": 0,
+      "izoh": "Filial, bo'lim = فَرْعٌ"
     },
     {
       "q": "«Ayollar (ko'plik)» — to'g'ri arabcha tarjimasi?",
@@ -213,15 +202,15 @@
       "izoh": "Yetmoq, (miqdorga) bormoq = بَلَغَ"
     },
     {
-      "q": "«Islomiy» — to'g'ri arabcha tarjimasi?",
+      "q": "«Uyg'unlashtirmoq; muvaffaq qilmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "قُبَّةٌ",
-        "كُوسَا",
-        "إِسْلَامِيٌّ",
-        "حَيْثُ"
+        "وَفَّقَ",
+        "دُهْنٌ",
+        "اَلتِّكْنُولُوجْيَا",
+        "سَلَّمَ"
       ],
-      "correct": 2,
-      "izoh": "Islomiy = إِسْلَامِيٌّ"
+      "correct": 0,
+      "izoh": "Uyg'unlashtirmoq; muvaffaq qilmoq = وَفَّقَ"
     },
     {
       "q": "«Kubba (sharq taomi)» — to'g'ri arabcha tarjimasi?",
@@ -389,15 +378,15 @@
       "izoh": "Qorli = مُثْلِجٌ"
     },
     {
-      "q": "«Aql» — to'g'ri arabcha tarjimasi?",
+      "q": "«Qo'lga o'rgangan, uy (hayvoni)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَلِكٌ",
-        "تَحْدِيدًا",
-        "حَجَرٌ",
-        "اَلْعَقْلُ"
+        "أَلِيفٌ",
+        "تَصَرُّفَاتٌ",
+        "اَلْحِكْمَةُ",
+        "خَلَّاطٌ"
       ],
-      "correct": 3,
-      "izoh": "Aql = اَلْعَقْلُ"
+      "correct": 0,
+      "izoh": "Qo'lga o'rgangan, uy (hayvoni) = أَلِيفٌ"
     },
     {
       "q": "«...ga qaramay» — to'g'ri arabcha tarjimasi?",
@@ -433,26 +422,26 @@
       "izoh": "Atirlangan, xushbo'y = مُعَطَّرٌ"
     },
     {
-      "q": "«فِلَسْطِينُ» — to'g'ri tarjimasi?",
+      "q": "«مِسَاحَةٌ» so'zining ma'nosi?",
       "opts": [
-        "O'rta yer dengizi",
-        "Falastin",
-        "Pokiston",
-        "Qog'ozdan bo'lgan, bosma"
+        "Maydon, yuza",
+        "Tana, jasad",
+        "Mashaqqat, qiyinchilik",
+        "To'shama-jihozlar"
       ],
-      "correct": 1,
-      "izoh": "Falastin = فِلَسْطِينُ"
+      "correct": 0,
+      "izoh": "مِسَاحَةٌ = Maydon, yuza"
     },
     {
-      "q": "«إِنْسَانٌ» — to'g'ri tarjimasi?",
+      "q": "«حَالِيًّا» so'zining ma'nosi?",
       "opts": [
-        "Hikmat, donolik",
-        "Yodgorlik, obida; iz",
-        "Ulkan, bahaybat",
-        "Inson, odam"
+        "Hozirda, ayni paytda",
+        "Yovvoyi",
+        "Yomon",
+        "Muddat, davr"
       ],
-      "correct": 3,
-      "izoh": "Inson, odam = إِنْسَانٌ"
+      "correct": 0,
+      "izoh": "حَالِيًّا = Hozirda, ayni paytda"
     },
     {
       "q": "«Yuza, sath; tom» — to'g'ri arabcha tarjimasi?",
@@ -488,15 +477,15 @@
       "izoh": "Aniq ot (ma'rifa) = اَلْمَعْرِفَةُ"
     },
     {
-      "q": "«Vatan» — to'g'ri arabcha tarjimasi?",
+      "q": "«Lozim bo'lmoq, kerak bo'lmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سِبَاقٌ",
-        "اَلْكَعْبَةُ",
-        "بِنَايَةٌ",
-        "اَلْوَطَنُ"
+        "لَزِمَ",
+        "خَالَفَ",
+        "سَمَّى",
+        "مِنْطَقَةٌ"
       ],
-      "correct": 3,
-      "izoh": "Vatan = اَلْوَطَنُ"
+      "correct": 0,
+      "izoh": "Lozim bo'lmoq, kerak bo'lmoq = لَزِمَ"
     },
     {
       "q": "«Tozalik» — to'g'ri arabcha tarjimasi?",
@@ -510,15 +499,15 @@
       "izoh": "Tozalik = اَلنَّظَافَةُ"
     },
     {
-      "q": "«أَسَاسٌ» — to'g'ri tarjimasi?",
+      "q": "«مُعَاكِسٌ» so'zining ma'nosi?",
       "opts": [
-        "Asos, poydevor",
-        "Spektakl, sahna asari",
-        "Ilmiy",
-        "Muqobil; qarshisidagi"
+        "Teskari, qarama-qarshi",
+        "Tugash, yakun",
+        "Yaxshi, sifatli",
+        "Har xil, boshqacha"
       ],
       "correct": 0,
-      "izoh": "Asos, poydevor = أَسَاسٌ"
+      "izoh": "مُعَاكِسٌ = Teskari, qarama-qarshi"
     },
     {
       "q": "«نَاجِحٌ» — to'g'ri tarjimasi?",
@@ -675,26 +664,26 @@
       "izoh": "Uchburchak = مُثَلَّثٌ"
     },
     {
-      "q": "«بَرَكَةٌ» — to'g'ri tarjimasi?",
+      "q": "«اَلتَّعَامُلُ» so'zining ma'nosi?",
       "opts": [
-        "Baraka",
-        "Xizmatkor",
-        "Zavod",
-        "Tog'"
+        "Muomala, munosabat",
+        "Foydalanmoq, foyda olmoq",
+        "Ichki",
+        "(Surat) olmoq; termoq"
       ],
       "correct": 0,
-      "izoh": "Baraka = بَرَكَةٌ"
+      "izoh": "اَلتَّعَامُلُ = Muomala, munosabat"
     },
     {
-      "q": "«فَقِيهٌ» — to'g'ri tarjimasi?",
+      "q": "«مُرْهَقٌ» so'zining ma'nosi?",
       "opts": [
-        "Yetishmaydigan, kam",
-        "Muqobil; qarshisidagi",
-        "Faqih (fiqh olimi)",
-        "Qiz, yosh juvon"
+        "Holdan toygan, charchagan",
+        "Jome masjid",
+        "Suhbat, gap; hadis",
+        "Ega bo'lmoq"
       ],
-      "correct": 2,
-      "izoh": "Faqih (fiqh olimi) = فَقِيهٌ"
+      "correct": 0,
+      "izoh": "مُرْهَقٌ = Holdan toygan, charchagan"
     },
     {
       "q": "«أَبُو الْهَوْلِ» — to'g'ri tarjimasi?",
@@ -763,15 +752,15 @@
       "izoh": "Birozdan so'ng = بَعْدَ قَلِيلٍ"
     },
     {
-      "q": "«Muqobil; qarshisidagi» — to'g'ri arabcha tarjimasi?",
+      "q": "«Yog' (hayvon yog'i)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "فَتَاةٌ",
-        "بْرُوتِينٌ",
-        "أَسَاسٌ",
-        "مُقَابِلٌ"
+        "دُهْنٌ",
+        "مِذْيَاعٌ",
+        "عَرَضَ",
+        "أَدَاءٌ"
       ],
-      "correct": 3,
-      "izoh": "Muqobil; qarshisidagi = مُقَابِلٌ"
+      "correct": 0,
+      "izoh": "Yog' (hayvon yog'i) = دُهْنٌ"
     },
     {
       "q": "«نَاقِصٌ» — to'g'ri tarjimasi?",
@@ -785,15 +774,15 @@
       "izoh": "Yetishmaydigan, kam = نَاقِصٌ"
     },
     {
-      "q": "«اِجْتِمَاعِيٌّ» — to'g'ri tarjimasi?",
+      "q": "«اَلْخِيَانَةُ» so'zining ma'nosi?",
       "opts": [
-        "Bolalik",
-        "Ijtimoiy",
-        "Ulashish; ishtirok",
-        "Izoh, komment"
+        "Xiyonat",
+        "Ulkan, bahaybat",
+        "Qorli",
+        "O'zgaruvchan, beqaror"
       ],
-      "correct": 1,
-      "izoh": "Ijtimoiy = اِجْتِمَاعِيٌّ"
+      "correct": 0,
+      "izoh": "اَلْخِيَانَةُ = Xiyonat"
     },
     {
       "q": "«مَلِكٌ» — to'g'ri tarjimasi?",
@@ -917,15 +906,15 @@
       "izoh": "O'qishni bitirmoq = تَخَرَّجَ"
     },
     {
-      "q": "«جِدًّا» — to'g'ri tarjimasi?",
+      "q": "«سَبَقَ» so'zining ma'nosi?",
       "opts": [
-        "Guruh, to'plam",
-        "Xat, yozuv; chiziq",
-        "Juda",
-        "Peshtoq, vitrina"
+        "Oldin kelmoq, o'zib ketmoq",
+        "Kelishmoq",
+        "E'lon qilmoq, nashr etmoq",
+        "Musobaqa o'yini (match)"
       ],
-      "correct": 2,
-      "izoh": "Juda = جِدًّا"
+      "correct": 0,
+      "izoh": "سَبَقَ = Oldin kelmoq, o'zib ketmoq"
     },
     {
       "q": "«Hikmat, donolik» — to'g'ri arabcha tarjimasi?",
@@ -1104,15 +1093,15 @@
       "izoh": "Buyurmoq = أَمَرَ"
     },
     {
-      "q": "«Ehrom, piramida» — to'g'ri arabcha tarjimasi?",
+      "q": "«Topishmoq, jumboq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَطْحٌ",
-        "اَلْمِيلَادُ",
-        "هَرَمٌ",
-        "إِنْسَانٌ"
+        "لُغْزٌ",
+        "مُجَاوِرٌ",
+        "بَلَغَ",
+        "مَزَحَ"
       ],
-      "correct": 2,
-      "izoh": "Ehrom, piramida = هَرَمٌ"
+      "correct": 0,
+      "izoh": "Topishmoq, jumboq = لُغْزٌ"
     },
     {
       "q": "«مُدَّةٌ» — to'g'ri tarjimasi?",
@@ -1302,15 +1291,15 @@
       "izoh": "Uyga oid, uy-ro'zg'or = مَنْزِلِيٌّ"
     },
     {
-      "q": "«عِلْمِيٌّ» — to'g'ri tarjimasi?",
+      "q": "«مُسْتَدِيرٌ» so'zining ma'nosi?",
       "opts": [
-        "Ilmiy",
-        "Spektakl, sahna asari",
-        "Yetishmaydigan, kam",
-        "Qiz, yosh juvon"
+        "Dumaloq, aylana",
+        "Nazarda tutmoq, ko'zlamoq",
+        "Savdo, tijorat",
+        "Ko'zgu"
       ],
       "correct": 0,
-      "izoh": "Ilmiy = عِلْمِيٌّ"
+      "izoh": "مُسْتَدِيرٌ = Dumaloq, aylana"
     },
     {
       "q": "«Saroy, qasr» — to'g'ri arabcha tarjimasi?",
