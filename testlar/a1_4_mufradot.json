@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A1 4-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 35,
   "questions": [
     {
@@ -147,15 +147,15 @@
       "izoh": "عَلَى الْأَقَلِّ = Kamida"
     },
     {
-      "q": "«Juma» — to'g'ri arabcha tarjimasi?",
+      "q": "«Qo'y, joylashtir» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْأَحَدُ",
-        "اَلسَّعَادَةُ",
-        "اَلسَّبْتُ",
-        "اَلْجُمُعَةُ"
+        "ضَعْ",
+        "سَلَكَ",
+        "مُنَاسِبٌ",
+        "شَاهَدَ"
       ],
-      "correct": 3,
-      "izoh": "Juma = اَلْجُمُعَةُ"
+      "correct": 0,
+      "izoh": "Qo'y, joylashtir = ضَعْ"
     },
     {
       "q": "«Bemor, kasal odam» — to'g'ri arabcha tarjimasi?",
@@ -169,15 +169,15 @@
       "izoh": "Bemor, kasal odam = مَرِيضٌ"
     },
     {
-      "q": "«Tarixiy» — to'g'ri arabcha tarjimasi?",
+      "q": "«Birikmalar, tuzilmalar» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَاهِرٌ",
-        "كَثِيرٌ",
-        "مُمْتَازٌ",
-        "تَارِيخِيٌّ"
+        "تَرَاكِيبُ",
+        "سَكَنَ",
+        "مُرْتَفِعٌ",
+        "قَارِنْ"
       ],
-      "correct": 3,
-      "izoh": "Tarixiy = تَارِيخِيٌّ"
+      "correct": 0,
+      "izoh": "Birikmalar, tuzilmalar = تَرَاكِيبُ"
     },
     {
       "q": "«Magazin, savdo shoxobchasi» — to'g'ri arabcha tarjimasi?",
@@ -202,15 +202,15 @@
       "izoh": "طَبَّاخَةٌ = Ayol oshpaz"
     },
     {
-      "q": "«Mohir, usta» — to'g'ri arabcha tarjimasi?",
+      "q": "«Mashina haydash» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "شَهْرِيٌّ",
-        "مُمْتَازٌ",
-        "مَاهِرٌ",
-        "كَرِيمٌ"
+        "اَلْقِيَادَةُ",
+        "عَضَلَةٌ",
+        "اَلْمَشْيُ",
+        "سِتُّونَ"
       ],
-      "correct": 2,
-      "izoh": "Mohir, usta = مَاهِرٌ"
+      "correct": 0,
+      "izoh": "Mashina haydash = اَلْقِيَادَةُ"
     },
     {
       "q": "«طَيَّارٌ» so'zining ma'nosi?",
@@ -259,7 +259,7 @@
     {
       "q": "«Alloh senga oson qilsin» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "يَسَّرَ اللهُ لَكَ",
+        "كُلَّ يَوْم",
         "سَعِيدٌ بِلِقَائِكَ",
         "أَعَانَكَ اللهُ",
         "سَهَّلَ اللهُ لَكَ"
@@ -422,17 +422,6 @@
       "izoh": "لَيْسَ = Emas (inkor)"
     },
     {
-      "q": "«مُفْرَدٌ» so'zining ma'nosi?",
-      "opts": [
-        "Aqlli (inson uchun)",
-        "Bu ikkisi (muannas)",
-        "Birlik (son)",
-        "Ikkilik (son)"
-      ],
-      "correct": 2,
-      "izoh": "مُفْرَدٌ = Birlik (son)"
-    },
-    {
       "q": "«كَرِيمٌ» so'zining ma'nosi?",
       "opts": [
         "Saxiy, olijanob",
@@ -521,15 +510,15 @@
       "izoh": "اَلشَّرِيعَةُ = Shariat (ilmi)"
     },
     {
-      "q": "«شَخْصٌ» so'zining ma'nosi?",
+      "q": "«وَرَقَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Bemor, kasal odam",
-        "Yashash, turmush",
-        "Ayol oshpaz",
-        "Shaxs, kishi"
+        "Barg; varaq",
+        "Uchuvchi",
+        "Yuz (100)",
+        "To'rtinchi"
       ],
-      "correct": 3,
-      "izoh": "شَخْصٌ = Shaxs, kishi"
+      "correct": 0,
+      "izoh": "وَرَقَةٌ = Barg; varaq"
     },
     {
       "q": "«مَعِيشَةٌ» so'zining ma'nosi?",
@@ -554,15 +543,15 @@
       "izoh": "Ekmoq = زَرَعَ"
     },
     {
-      "q": "«إِعْلَانٌ» so'zining ma'nosi?",
+      "q": "«شَطِيرَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Maosh, oylik",
-        "Taomlar, yeguliklar",
-        "Do'kon (kichik)",
-        "E'lon, reklama"
+        "Buterbrod, sendvich",
+        "Albatta, tabiiyki",
+        "Zehnli, aqlli",
+        "Kechasi"
       ],
-      "correct": 3,
-      "izoh": "إِعْلَانٌ = E'lon, reklama"
+      "correct": 0,
+      "izoh": "شَطِيرَةٌ = Buterbrod, sendvich"
     },
     {
       "q": "«عُنْوَانٌ» so'zining ma'nosi?",
@@ -587,15 +576,15 @@
       "izoh": "سَعِيدٌ بِلِقَائِكَ = Tanishganimdan xursandman"
     },
     {
-      "q": "«Faqat» — to'g'ri arabcha tarjimasi?",
+      "q": "«Xotin, rafiqa» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَتَّى",
-        "لَيْسَ",
-        "فَقَطْ",
-        "مِثْلَ"
+        "زَوْجَةٌ",
+        "نَبَاتِيٌّ",
+        "أَعِدْ",
+        "اَلْجَرْيُ"
       ],
-      "correct": 2,
-      "izoh": "Faqat = فَقَطْ"
+      "correct": 0,
+      "izoh": "Xotin, rafiqa = زَوْجَةٌ"
     },
     {
       "q": "«Necha soat ishlaysan?» — to'g'ri arabcha tarjimasi?",
@@ -653,15 +642,15 @@
       "izoh": "شَرِكَةُ طَيَرَانٍ = Aviakompaniya"
     },
     {
-      "q": "«دُكَّانٌ» so'zining ma'nosi?",
+      "q": "«صِيغَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Aviakompaniya",
-        "Do'kon (kichik)",
-        "Xizmatchi, xodim",
-        "E'lon, reklama"
+        "Shakl (so'z shakli)",
+        "Tarozi",
+        "Qatnashmoq",
+        "Gap, jumla"
       ],
-      "correct": 1,
-      "izoh": "دُكَّانٌ = Do'kon (kichik)"
+      "correct": 0,
+      "izoh": "صِيغَةٌ = Shakl (so'z shakli)"
     },
     {
       "q": "«Qo'y, qo'chqor» — to'g'ri arabcha tarjimasi?",
@@ -776,7 +765,7 @@
     {
       "q": "«Alloh ishingni oson qilsin» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَهَّلَ اللهُ لَكَ",
+        "كَمِ الثَّمَنُ؟",
         "غُرُوبُ الشَّمْسِ",
         "يَسَّرَ اللهُ لَكَ",
         "كَمْ سَاعَةً تَعْمَلُ؟"
@@ -873,15 +862,15 @@
       "izoh": "اِسْتَيْقَظَ = Uyg'onmoq"
     },
     {
-      "q": "«غَرْبِيٌّ» so'zining ma'nosi?",
+      "q": "«كَسْلَانُ» so'zining ma'nosi?",
       "opts": [
-        "Tarixiy",
-        "Oz, kam",
-        "Davlatga qarashli",
-        "G'arbiy"
+        "Dangasa",
+        "BAA",
+        "Yo'l yurmoq, yo'l tutmoq",
+        "Safarga chiqmoq"
       ],
-      "correct": 3,
-      "izoh": "غَرْبِيٌّ = G'arbiy"
+      "correct": 0,
+      "izoh": "كَسْلَانُ = Dangasa"
     },
     {
       "q": "«قَرْيَةٌ» so'zining ma'nosi?",
@@ -1038,15 +1027,15 @@
       "izoh": "أَرْضٌ = Yer"
     },
     {
-      "q": "«شَرْطٌ» so'zining ma'nosi?",
+      "q": "«تَجَوَّلَ» so'zining ma'nosi?",
       "opts": [
-        "Shart",
-        "Bozor",
-        "Sartaroshxona",
-        "Tajriba"
+        "Aylanmoq, sayr qilmoq",
+        "Parij",
+        "Kompaniya, firma",
+        "To'ldir, yakunla"
       ],
       "correct": 0,
-      "izoh": "شَرْطٌ = Shart"
+      "izoh": "تَجَوَّلَ = Aylanmoq, sayr qilmoq"
     }
   ]
 }
