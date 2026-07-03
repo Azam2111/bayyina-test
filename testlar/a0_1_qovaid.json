@@ -1,6 +1,6 @@
 {
   "title": "Qovaid — 1-dars: At-Taoruf (Tanishuv)",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 15,
   "questions": [
     {
@@ -46,15 +46,10 @@
       "izoh": "هُوَ = u (erkak). هِيَ = u (ayol), أَنْتَ = sen, أَنَا = men."
     },
     {
-      "q": "Qaysi qatorda ishora ismi to'g'ri qo'yilgan? («مُعَلِّمٌ» — erkak, «صُورَةٌ» — ayol)",
-      "opts": [
-        "هَذَا مُعَلِّمٌ — هَذِهِ صُورَةٌ",
-        "هَذِهِ مُعَلِّمٌ — هَذَا صُورَةٌ",
-        "هَذَا مُعَلِّمٌ — هَذَا صُورَةٌ",
-        "هَذِهِ مُعَلِّمٌ — هَذِهِ صُورَةٌ"
-      ],
-      "correct": 0,
-      "izoh": "Muzakkar (erkak) — هَذَا, muannas (ayol) — هَذِهِ: هَذَا مُعَلِّمٌ، هَذِهِ صُورَةٌ."
+      "q": "«مُعَلِّمٌ» (o'qituvchi — erkak) va «صُورَةٌ» (rasm — ayol jinsi) so'zlari oldidan mos ravishda qaysi ko'rsatish olmoshlari qo'yiladi?",
+      "opts": ["هَذِهِ / هَذَا", "هَذَا / هَذِهِ", "هَذَا / هَذَا", "هَذِهِ / هَذِهِ"],
+      "correct": 1,
+      "izoh": "Muzakkar uchun هَذَا, muannas uchun هَذِهِ: هَذَا مُعَلِّمٌ، هَذِهِ صُورَةٌ."
     },
     {
       "q": "Arab tilida so'roq olmoshlari gapning qayerida keladi va «كَيْفَ حَالُكَ؟» qanday tarjima qilinadi?",
