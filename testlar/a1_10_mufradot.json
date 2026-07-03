@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A1 10-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 33,
   "questions": [
     {
@@ -26,17 +26,6 @@
       "izoh": "Tez yordam mashinasi = سَيَّارَةُ الْإِسْعَافِ"
     },
     {
-      "q": "«Fransiya» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "رِسَالَةٌ",
-        "فَرَنْسَا",
-        "فِلَسْطِينِيٌّ",
-        "فُرْشَاةٌ"
-      ],
-      "correct": 1,
-      "izoh": "Fransiya = فَرَنْسَا"
-    },
-    {
       "q": "«Cho'tka» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "تَسَوُّسُ الْأَسْنَانِ",
@@ -59,26 +48,26 @@
       "izoh": "رِسَالَةٌ = Xat, maktub"
     },
     {
-      "q": "«اِحْتِمَالٌ» so'zining ma'nosi?",
+      "q": "«اَلْمُحَادَثَةُ» so'zining ma'nosi?",
       "opts": [
-        "Charaqlagan, porloq",
-        "Bulutli",
-        "Shamol",
-        "Ehtimol"
+        "Suhbat",
+        "(Sport) klub",
+        "Belgilab ko'rsat",
+        "Suratga olish"
       ],
-      "correct": 3,
-      "izoh": "اِحْتِمَالٌ = Ehtimol"
+      "correct": 0,
+      "izoh": "اَلْمُحَادَثَةُ = Suhbat"
     },
     {
-      "q": "«Kasra (harakat)» — to'g'ri arabcha tarjimasi?",
+      "q": "«Tana» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْمَفْعُولُ بِهِ",
-        "اَلْفَاعِلُ",
-        "اَلْكَسْرَةُ",
-        "أُسْلُوبٌ"
+        "اَلْجِسْمُ",
+        "اَلْأَبَوَانِ",
+        "شَرِكَةٌ",
+        "تَبَادَلْ"
       ],
-      "correct": 2,
-      "izoh": "Kasra (harakat) = اَلْكَسْرَةُ"
+      "correct": 0,
+      "izoh": "Tana = اَلْجِسْمُ"
     },
     {
       "q": "«Yuz foiz (100%)» — to'g'ri arabcha tarjimasi?",
@@ -213,15 +202,15 @@
       "izoh": "Kuzat, e'tibor ber = لَاحِظْ"
     },
     {
-      "q": "«Masjid» — to'g'ri arabcha tarjimasi?",
+      "q": "«Son, miqdor» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "كَلَامٌ",
-        "مَسْجِدٌ",
-        "اَلْجَرْيُ",
-        "رِسَالَةٌ"
+        "عَدَدٌ",
+        "بَيْت",
+        "سِتُّونَ",
+        "مِيزَانٌ"
       ],
-      "correct": 1,
-      "izoh": "Masjid = مَسْجِدٌ"
+      "correct": 0,
+      "izoh": "Son, miqdor = عَدَدٌ"
     },
     {
       "q": "«مَقَاسٌ» so'zining ma'nosi?",
@@ -389,15 +378,15 @@
       "izoh": "حَافَظَ = Saqlamoq, muhofaza qilmoq"
     },
     {
-      "q": "«Foil (ish bajaruvchi, ega)» — to'g'ri arabcha tarjimasi?",
+      "q": "«...kabi, ...singari» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أُسْلُوبُ النَّفْيِ",
-        "اَلْكَسْرَةُ",
-        "اَلْفَاعِلُ",
-        "اَلْمَفْعُولُ بِهِ"
+        "مِثْلَ",
+        "اَلْمَشْيُ",
+        "مَطْبَخٌ",
+        "فَرْدِيٌّ"
       ],
-      "correct": 2,
-      "izoh": "Foil (ish bajaruvchi, ega) = اَلْفَاعِلُ"
+      "correct": 0,
+      "izoh": "...kabi, ...singari = مِثْلَ"
     },
     {
       "q": "«Og'riq» — to'g'ri arabcha tarjimasi?",
@@ -466,15 +455,15 @@
       "izoh": "لَمْ = Inkor yuklamalari"
     },
     {
-      "q": "«Riyol (pul birligi)» — to'g'ri arabcha tarjimasi?",
+      "q": "«Bo'sh» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عَاجِلٌ",
-        "اَلرَّاحَةُ",
-        "أَلَمٌ",
-        "رِيَالٌ"
+        "فَارِغٌ",
+        "اِجْتَهَدَ",
+        "ضَابِطٌ",
+        "تَوَاصُلٌ"
       ],
-      "correct": 3,
-      "izoh": "Riyol (pul birligi) = رِيَالٌ"
+      "correct": 0,
+      "izoh": "Bo'sh = فَارِغٌ"
     },
     {
       "q": "«اَلْعَاشِرُ» so'zining ma'nosi?",
@@ -508,17 +497,6 @@
       ],
       "correct": 1,
       "izoh": "بَطْنٌ = Qorin"
-    },
-    {
-      "q": "«مَجْرُورٌ» so'zining ma'nosi?",
-      "opts": [
-        "Foil (ish bajaruvchi, ega)",
-        "Maf'ul (to'ldiruvchi)",
-        "Jar holatidagi (kasrali)",
-        "Kasra (harakat)"
-      ],
-      "correct": 2,
-      "izoh": "مَجْرُورٌ = Jar holatidagi (kasrali)"
     },
     {
       "q": "«طَابِقٌ» so'zining ma'nosi?",
@@ -618,17 +596,6 @@
       ],
       "correct": 3,
       "izoh": "Umid qilmoq, iltimos qilmoq = رَجَا"
-    },
-    {
-      "q": "«اَلْمَفْعُولُ بِهِ» so'zining ma'nosi?",
-      "opts": [
-        "Foil (ish bajaruvchi, ega)",
-        "Maf'ul (to'ldiruvchi)",
-        "Jar holatidagi (kasrali)",
-        "Inkor yuklamalari"
-      ],
-      "correct": 1,
-      "izoh": "اَلْمَفْعُولُ بِهِ = Maf'ul (to'ldiruvchi)"
     },
     {
       "q": "«عَصِيرٌ» so'zining ma'nosi?",
@@ -873,15 +840,15 @@
       "izoh": "اَلْحُضُورُ = Kelish, hozir bo'lish"
     },
     {
-      "q": "«Qohira» — to'g'ri arabcha tarjimasi?",
+      "q": "«Yer» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "العِرَاق",
-        "الإِمَارَات",
-        "الأُرْدُن",
-        "القَاهِرَة"
+        "أَرْضٌ",
+        "شَطِيرَةٌ",
+        "اَلْأَبَوَانِ",
+        "قَرْيَةٌ"
       ],
-      "correct": 3,
-      "izoh": "Qohira = القَاهِرَة"
+      "correct": 0,
+      "izoh": "Yer = أَرْضٌ"
     },
     {
       "q": "«اَلْجَرْيُ» so'zining ma'nosi?",
@@ -895,15 +862,15 @@
       "izoh": "اَلْجَرْيُ = Yugurish"
     },
     {
-      "q": "«أُسْلُوبٌ» so'zining ma'nosi?",
+      "q": "«حَافِزٌ» so'zining ma'nosi?",
       "opts": [
-        "Uslub",
-        "Inkor yuklamalari",
-        "Inkor uslubi",
-        "Maf'ul (to'ldiruvchi)"
+        "Rag'bat puli, bonus",
+        "Band",
+        "Lavozim, ish o'rni",
+        "Ikkilik (son)"
       ],
       "correct": 0,
-      "izoh": "أُسْلُوبٌ = Uslub"
+      "izoh": "حَافِزٌ = Rag'bat puli, bonus"
     },
     {
       "q": "«Hisobni to'lash» — to'g'ri arabcha tarjimasi?",
