@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A1 1-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 20,
   "questions": [
     {
@@ -125,15 +125,15 @@
       "izoh": "O'ttiz (30) = ثَلَاثُون"
     },
     {
-      "q": "«دِمَشْق» so'zining ma'nosi?",
+      "q": "«اَلْجِسْمُ» so'zining ma'nosi?",
       "opts": [
-        "Quddus",
-        "Amman",
-        "Damashq",
-        "Iordaniya"
+        "Tana",
+        "Aylantir, o'zgartir",
+        "Yaqinlashmoq",
+        "Ovqat (nonushta, tushlik kabi)"
       ],
-      "correct": 2,
-      "izoh": "دِمَشْق = Damashq"
+      "correct": 0,
+      "izoh": "اَلْجِسْمُ = Tana"
     },
     {
       "q": "«حَقِيبَة» so'zining ma'nosi?",
@@ -191,15 +191,15 @@
       "izoh": "تَذْهَبُ = U boradi (ayol)"
     },
     {
-      "q": "«Muhandisa (ayol muhandis)» — to'g'ri arabcha tarjimasi?",
+      "q": "«Fuqarolik, millat» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَعْهَد",
-        "مُهَنْدِسَة",
-        "مَدْرَسَةٌ",
-        "مَدِينَةٌ"
+        "جِنْسِيَّةٌ",
+        "أَنْحَاءُ",
+        "اَلْجِسْمُ",
+        "مُذِيعٌ"
       ],
-      "correct": 1,
-      "izoh": "Muhandisa (ayol muhandis) = مُهَنْدِسَة"
+      "correct": 0,
+      "izoh": "Fuqarolik, millat = جِنْسِيَّةٌ"
     },
     {
       "q": "«Alloh panohida» — to'g'ri arabcha tarjimasi?",
@@ -224,15 +224,15 @@
       "izoh": "الإِمَارَات = BAA"
     },
     {
-      "q": "«Saudiya Arabistoni» — to'g'ri arabcha tarjimasi?",
+      "q": "«Muhtoj bo'lmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "الأُرْدُن",
-        "القُدْس",
-        "الكُوَيْت",
-        "السَّعُودِيَّة"
+        "اِحْتَاجَ",
+        "اَلْفَرَحُ",
+        "رَائِعٌ",
+        "سَمَكٌ"
       ],
-      "correct": 3,
-      "izoh": "Saudiya Arabistoni = السَّعُودِيَّة"
+      "correct": 0,
+      "izoh": "Muhtoj bo'lmoq = اِحْتَاجَ"
     },
     {
       "q": "«Har kuni» — to'g'ri arabcha tarjimasi?",
@@ -279,15 +279,15 @@
       "izoh": "Hamshira = مُمَرِّضَة"
     },
     {
-      "q": "«Misr» — to'g'ri arabcha tarjimasi?",
+      "q": "«Ziyorat qilmoq; tashrif» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عَمَّان",
-        "دِمَشْق",
-        "الإِمَارَات",
-        "مِصْر"
+        "زَارَ",
+        "حَسَبَ",
+        "ظُهْرًا",
+        "قَارِنْ"
       ],
-      "correct": 3,
-      "izoh": "Misr = مِصْر"
+      "correct": 0,
+      "izoh": "Ziyorat qilmoq; tashrif = زَارَ"
     },
     {
       "q": "«رَجُل» so'zining ma'nosi?",
@@ -433,26 +433,26 @@
       "izoh": "Uy = بَيْت"
     },
     {
-      "q": "«Amman» — to'g'ri arabcha tarjimasi?",
+      "q": "«Cho'tka» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "الأُرْدُن",
-        "العِرَاق",
-        "عَمَّان",
-        "دِمَشْق"
+        "فُرْشَاةٌ",
+        "فَتَحَ",
+        "شَبْعَانُ",
+        "مُذِيعٌ"
       ],
-      "correct": 2,
-      "izoh": "Amman = عَمَّان"
+      "correct": 0,
+      "izoh": "Cho'tka = فُرْشَاةٌ"
     },
     {
-      "q": "«الأُرْدُن» so'zining ma'nosi?",
+      "q": "«آخَرُ» so'zining ma'nosi?",
       "opts": [
-        "Dubay",
-        "Damashq",
-        "Iordaniya",
-        "Suriya"
+        "Boshqa",
+        "Joylashmoq; tushmoq",
+        "Uch (3)",
+        "Bo'ron"
       ],
-      "correct": 2,
-      "izoh": "الأُرْدُن = Iordaniya"
+      "correct": 0,
+      "izoh": "آخَرُ = Boshqa"
     },
     {
       "q": "«مَدِينَةٌ» so'zining ma'nosi?",
@@ -488,26 +488,26 @@
       "izoh": "Doska = سَبُّورَة"
     },
     {
-      "q": "«Quvayt» — to'g'ri arabcha tarjimasi?",
+      "q": "«Balki, ehtimol» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "الإِمَارَات",
-        "السَّعُودِيَّة",
-        "العِرَاق",
-        "الكُوَيْت"
+        "رُبَّمَا",
+        "دُولَارٌ",
+        "بَاعَ",
+        "مُفْرَدٌ"
       ],
-      "correct": 3,
-      "izoh": "Quvayt = الكُوَيْت"
+      "correct": 0,
+      "izoh": "Balki, ehtimol = رُبَّمَا"
     },
     {
-      "q": "«سُورِيَا» so'zining ma'nosi?",
+      "q": "«مَشْغُولٌ» so'zining ma'nosi?",
       "opts": [
-        "Quvayt",
-        "Misr",
-        "Iordaniya",
-        "Suriya"
+        "Band",
+        "Ozgina, biroz",
+        "Umid qilmoq, iltimos qilmoq",
+        "Taqiq uslubi (qilma!)"
       ],
-      "correct": 3,
-      "izoh": "سُورِيَا = Suriya"
+      "correct": 0,
+      "izoh": "مَشْغُولٌ = Band"
     },
     {
       "q": "«Mamlakat» — to'g'ri arabcha tarjimasi?",
@@ -543,15 +543,15 @@
       "izoh": "فُنْدُق = Mehmonxona"
     },
     {
-      "q": "«العِرَاق» so'zining ma'nosi?",
+      "q": "«طِبِّيٌّ» so'zining ma'nosi?",
       "opts": [
-        "Iordaniya",
-        "Iroq",
-        "Misr",
-        "Quddus"
+        "Tibbiy",
+        "Mamlakat",
+        "Qassob",
+        "Tog'a"
       ],
-      "correct": 1,
-      "izoh": "العِرَاق = Iroq"
+      "correct": 0,
+      "izoh": "طِبِّيٌّ = Tibbiy"
     },
     {
       "q": "«المُسْتَشْفَى» so'zining ma'nosi?",
@@ -587,15 +587,15 @@
       "izoh": "ثَلَاثَةٌ = Uch (3)"
     },
     {
-      "q": "«Dubay» — to'g'ri arabcha tarjimasi?",
+      "q": "«Inkor yuklamalari» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مِصْر",
-        "دِمَشْق",
-        "سُورِيَا",
-        "دُبَيّ"
+        "لَمْ",
+        "مُتَنَزَّهٌ",
+        "اَلرِّيَاضَةُ",
+        "قَلِيلًا"
       ],
-      "correct": 3,
-      "izoh": "Dubay = دُبَيّ"
+      "correct": 0,
+      "izoh": "Inkor yuklamalari = لَمْ"
     },
     {
       "q": "«بِنْت» so'zining ma'nosi?",
