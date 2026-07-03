@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 6-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 27,
   "questions": [
     {
@@ -213,17 +213,6 @@
       "izoh": "Issiq, qaynoq = سَاخِنٌ"
     },
     {
-      "q": "«ضَمِيرٌ مُسْتَتِرٌ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Ochiq (ko'rinib turgan) ism",
-        "Yashirin olmosh",
-        "Qo'shilgan olmosh",
-        "Izofa (qaratqich birikmasi)"
-      ],
-      "correct": 1,
-      "izoh": "Yashirin olmosh = ضَمِيرٌ مُسْتَتِرٌ"
-    },
-    {
       "q": "«Sarflamoq (kuch, harakat)» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "اِحْتَوَى",
@@ -299,17 +288,6 @@
       ],
       "correct": 3,
       "izoh": "Konservalangan sharbatlar = عَصَائِرُ مُعَلَّبَةٌ"
-    },
-    {
-      "q": "«Izofa (qaratqich birikmasi)» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "مَقَالٌ",
-        "اَلْمُضَافُ وَالْمُضَافُ إِلَيْهِ",
-        "صُعُوبَةٌ",
-        "قُوَّةٌ"
-      ],
-      "correct": 1,
-      "izoh": "Izofa (qaratqich birikmasi) = اَلْمُضَافُ وَالْمُضَافُ إِلَيْهِ"
     },
     {
       "q": "«صَيْدَلِيَّةٌ» — to'g'ri tarjimasi?",
@@ -422,17 +400,6 @@
       "izoh": "Ko'tarmoq = رَفَعَ"
     },
     {
-      "q": "«Raf' holatidagi (zammali)» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "اَلضَّمَّةُ",
-        "اَلطُّفُولَةُ",
-        "اَلْمُضَافُ وَالْمُضَافُ إِلَيْهِ",
-        "مَرْفُوعٌ"
-      ],
-      "correct": 3,
-      "izoh": "Raf' holatidagi (zammali) = مَرْفُوعٌ"
-    },
-    {
       "q": "«اِحْتَوَى» — to'g'ri tarjimasi?",
       "opts": [
         "O'ylamoq, gumon qilmoq",
@@ -477,15 +444,15 @@
       "izoh": "Bilmayman = لَا أَدْرِي"
     },
     {
-      "q": "«تَعْلِيمِيٌّ» — to'g'ri tarjimasi?",
+      "q": "«اَلتَّسَلُّقُ» so'zining ma'nosi?",
       "opts": [
-        "Ta'limiy",
-        "Muvaffaqiyatli, omadli",
-        "Rozi",
-        "Qishki"
+        "Tirmashib chiqish",
+        "Qabul qilmoq",
+        "Respublika",
+        "Salom bermoq, salomlashmoq"
       ],
       "correct": 0,
-      "izoh": "Ta'limiy = تَعْلِيمِيٌّ"
+      "izoh": "اَلتَّسَلُّقُ = Tirmashib chiqish"
     },
     {
       "q": "«Velosiped» — to'g'ri arabcha tarjimasi?",
@@ -708,26 +675,15 @@
       "izoh": "G'olib bo'lmoq, yutmoq = فَازَ"
     },
     {
-      "q": "«اَلضَّمَّةُ» — to'g'ri tarjimasi?",
+      "q": "«Harakat (belgisi)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "Zamma (harakat)",
-        "Izofa (qaratqich birikmasi)",
-        "Iltimos, o'tinaman",
-        "Raf' holatidagi (zammali)"
+        "حَرَكَةٌ",
+        "جُودَةٌ",
+        "حَدَّثَ",
+        "مِسَاحَةٌ"
       ],
       "correct": 0,
-      "izoh": "Zamma (harakat) = اَلضَّمَّةُ"
-    },
-    {
-      "q": "«Vatan» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "بِنَايَةٌ",
-        "اَلْوَطَنُ",
-        "اَلْمَالُ",
-        "ضَرْبَةٌ"
-      ],
-      "correct": 1,
-      "izoh": "Vatan = اَلْوَطَنُ"
+      "izoh": "Harakat (belgisi) = حَرَكَةٌ"
     },
     {
       "q": "«حَالَةٌ» — to'g'ri tarjimasi?",
@@ -752,15 +708,15 @@
       "izoh": "Yetarli bo'lmoq = كَفَى"
     },
     {
-      "q": "«Zehn, miya» — to'g'ri arabcha tarjimasi?",
+      "q": "«Mol, tovar» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلذِّهْنُ",
-        "مَقَالٌ",
-        "رَأْسٌ",
-        "صُعُوبَةٌ"
+        "بِضَاعَةٌ",
+        "أَخْضَرُ",
+        "تَقَابَلَ",
+        "عِيدٌ"
       ],
       "correct": 0,
-      "izoh": "Zehn, miya = اَلذِّهْنُ"
+      "izoh": "Mol, tovar = بِضَاعَةٌ"
     },
     {
       "q": "«Uy, turar joy» — to'g'ri arabcha tarjimasi?",
