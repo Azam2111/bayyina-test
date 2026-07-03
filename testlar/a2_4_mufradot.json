@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 4-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 20,
   "questions": [
     {
@@ -180,15 +180,15 @@
       "izoh": "Bo'yin = عُنُقٌ"
     },
     {
-      "q": "«اِقْتِصَادِيٌّ» — to'g'ri tarjimasi?",
+      "q": "«اَلْبَرِيدُ» so'zining ma'nosi?",
       "opts": [
-        "E'tibor, g'amxo'rlik",
-        "Iqtisodiy",
-        "Eng yaxshi, afzal",
-        "Har holda, nima bo'lganda ham"
+        "Pochta",
+        "Tirmashib chiqish",
+        "Holdan toygan, charchagan",
+        "Ey... (murojaat)"
       ],
-      "correct": 1,
-      "izoh": "Iqtisodiy = اِقْتِصَادِيٌّ"
+      "correct": 0,
+      "izoh": "اَلْبَرِيدُ = Pochta"
     },
     {
       "q": "«اِسْمٌ ظَاهِرٌ» — to'g'ri tarjimasi?",
@@ -455,15 +455,15 @@
       "izoh": "Yomg'ir shiddati, jala = زَخَّاتُ الْمَطَرِ"
     },
     {
-      "q": "«بَرَكَةٌ» — to'g'ri tarjimasi?",
+      "q": "«تَزَوَّجَ» so'zining ma'nosi?",
       "opts": [
-        "Fikr, qarash",
-        "Masala",
-        "Xizmatkor",
-        "Baraka"
+        "Uylanmoq, turmush qurmoq",
+        "Og'riq qoldiruvchi dorilar",
+        "Minora",
+        "Urush"
       ],
-      "correct": 3,
-      "izoh": "Baraka = بَرَكَةٌ"
+      "correct": 0,
+      "izoh": "تَزَوَّجَ = Uylanmoq, turmush qurmoq"
     },
     {
       "q": "«Mos kelmoq» — to'g'ri arabcha tarjimasi?",
@@ -499,15 +499,15 @@
       "izoh": "Soyabon = مِظَلَّةٌ"
     },
     {
-      "q": "«Fatha (harakat)» — to'g'ri arabcha tarjimasi?",
+      "q": "«Hisoblagich (schyotchik)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "فِعْلٌ لَازِمٌ",
-        "اَلْفَتْحَةُ",
-        "عَلَى بَرَكَةِ اللَّهِ",
-        "فِعْلٌ مُتَعَدٍّ"
+        "عَدَّادٌ",
+        "اَلتِّكْنُولُوجْيَا",
+        "نَمِرٌ",
+        "دَوْرٌ"
       ],
-      "correct": 1,
-      "izoh": "Fatha (harakat) = اَلْفَتْحَةُ"
+      "correct": 0,
+      "izoh": "Hisoblagich (schyotchik) = عَدَّادٌ"
     },
     {
       "q": "«Xursand bo'lmoq» — to'g'ri arabcha tarjimasi?",
