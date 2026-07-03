@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — B1 3-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 10,
   "questions": [
     {
@@ -37,15 +37,15 @@
       "izoh": "Bog'liq/taalluqli bo'lmoq = تَعَلَّقَ"
     },
     {
-      "q": "«Lahja, sheva» — to'g'ri arabcha tarjimasi?",
+      "q": "«Jazolamoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "يَظُنُّونَ أَنَّ ... وَهَذَا غَيْرُ صَحِيحٍ",
-        "أَنْتَجَ",
-        "اَللَّهْجَةُ",
-        "تَعْتَمِدُ عَلَى"
+        "عَاقَبَ",
+        "صَحِيفَةٌ",
+        "بِلُطْفٍ",
+        "أَثْبَتَ"
       ],
-      "correct": 2,
-      "izoh": "Lahja, sheva = اَللَّهْجَةُ"
+      "correct": 0,
+      "izoh": "Jazolamoq = عَاقَبَ"
     },
     {
       "q": "«طُمَأْنِينَةٌ» — to'g'ri tarjimasi?",
@@ -59,15 +59,15 @@
       "izoh": "Xotirjamlik, ko'ngil tinchligi = طُمَأْنِينَةٌ"
     },
     {
-      "q": "«Neft» — to'g'ri arabcha tarjimasi?",
+      "q": "«O'rinbosar, deputat» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تَعْتَمِدُ عَلَى",
-        "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ",
-        "هُنَاكَ إِقْبَالٌ كَبِيرٌ عَلَى",
-        "اَلنَّفْطُ"
+        "نَائِبٌ",
+        "اَلرِّيفُ",
+        "تَكَلَّفَ",
+        "مَسْؤُولِيَّةٌ"
       ],
-      "correct": 3,
-      "izoh": "Neft = اَلنَّفْطُ"
+      "correct": 0,
+      "izoh": "O'rinbosar, deputat = نَائِبٌ"
     },
     {
       "q": "«مُنْتِجَةٌ» — to'g'ri tarjimasi?",
@@ -125,15 +125,15 @@
       "izoh": "Abo (uzun ustki kiyim) = عَبَاءَةٌ"
     },
     {
-      "q": "«Jalabiya (uzun ko'ylak)» — to'g'ri arabcha tarjimasi?",
+      "q": "«O'ziga xos, ajralib turuvchi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "جَلَّابِيَّةٌ",
-        "اَللَّهْجَةُ",
-        "تَعْتَمِدُ عَلَى",
-        "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ"
+        "مُمَيَّزٌ",
+        "ثَرْوَةٌ",
+        "حِكْمَةٌ",
+        "صَدَاقَةٌ"
       ],
       "correct": 0,
-      "izoh": "Jalabiya (uzun ko'ylak) = جَلَّابِيَّةٌ"
+      "izoh": "O'ziga xos, ajralib turuvchi = مُمَيَّزٌ"
     },
     {
       "q": "«ثَرْوَةٌ» — to'g'ri tarjimasi?",
