@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 5-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 17,
   "questions": [
     {
@@ -15,15 +15,15 @@
       "izoh": "Tog' = جَبَلٌ"
     },
     {
-      "q": "«Bino» — to'g'ri arabcha tarjimasi?",
+      "q": "«Tarqalish, yoyilish» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سِبَاقٌ",
-        "اَلْكَعْبَةُ",
-        "بِنَايَةٌ",
-        "اَلْوَطَنُ"
+        "اِنْتِشَارٌ",
+        "جَيِّدٌ",
+        "فِكْرَةٌ",
+        "كَرِهَ"
       ],
-      "correct": 2,
-      "izoh": "Bino = بِنَايَةٌ"
+      "correct": 0,
+      "izoh": "Tarqalish, yoyilish = اِنْتِشَارٌ"
     },
     {
       "q": "«أَحْمَرُ» — to'g'ri tarjimasi?",
@@ -70,15 +70,15 @@
       "izoh": "Odatdan tashqari = عَلَى غَيْرِ الْعَادَةِ"
     },
     {
-      "q": "«اَلْوَطَنُ» — to'g'ri tarjimasi?",
+      "q": "«نَفَقٌ» so'zining ma'nosi?",
       "opts": [
-        "Likop, tarelka",
-        "Ka'ba",
-        "Bino",
-        "Vatan"
+        "Tunel",
+        "Vilka, sanchqi",
+        "Sifat (mahsulot sifati)",
+        "Pul, mol-mulk"
       ],
-      "correct": 3,
-      "izoh": "Vatan = اَلْوَطَنُ"
+      "correct": 0,
+      "izoh": "نَفَقٌ = Tunel"
     },
     {
       "q": "«فَسَدَ» — to'g'ri tarjimasi?",
@@ -246,17 +246,6 @@
       "izoh": "Hali ham (davom etmoqda) = مَا زَالَ"
     },
     {
-      "q": "«Nisbiy olmosh (bog'lovchi ism)» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "اَلْكَعْبَةُ",
-        "بِنَايَةٌ",
-        "اَلَّذِينَ",
-        "اَلِاسْمُ الْمَوْصُولُ"
-      ],
-      "correct": 3,
-      "izoh": "Nisbiy olmosh (bog'lovchi ism) = اَلِاسْمُ الْمَوْصُولُ"
-    },
-    {
       "q": "«Qavat; navbat» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "مِنْطَقَةٌ",
@@ -312,15 +301,15 @@
       "izoh": "O'qishni bitirmoq = تَخَرَّجَ"
     },
     {
-      "q": "«Haqiqiy» — to'g'ri arabcha tarjimasi?",
+      "q": "«Shunday, shu tarzda» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَقِيقِيٌّ",
-        "أَحْمَرُ",
-        "بِنَايَةٌ",
-        "جَيِّدٌ"
+        "هَكَذَا",
+        "مِحْفَظَةٌ",
+        "نِظَامٌ",
+        "قُوَّةٌ"
       ],
       "correct": 0,
-      "izoh": "Haqiqiy = حَقِيقِيٌّ"
+      "izoh": "Shunday, shu tarzda = هَكَذَا"
     },
     {
       "q": "«قَاسَ» — to'g'ri tarjimasi?",
@@ -389,15 +378,15 @@
       "izoh": "G'oya, fikr = فِكْرَةٌ"
     },
     {
-      "q": "«قَفَصٌ» — to'g'ri tarjimasi?",
+      "q": "«اَلْإِصْلَاحُ» so'zining ma'nosi?",
       "opts": [
-        "Bino",
-        "Poyga, musobaqa",
-        "Shayton",
-        "Qafas"
+        "Ta'mirlash; tuzatish",
+        "G'amxo'rlik qilmoq, parvarishlamoq",
+        "Kiyimlar, liboslar",
+        "Tezda, tezlik bilan"
       ],
-      "correct": 3,
-      "izoh": "Qafas = قَفَصٌ"
+      "correct": 0,
+      "izoh": "اَلْإِصْلَاحُ = Ta'mirlash; tuzatish"
     },
     {
       "q": "«جَمَعَ» — to'g'ri tarjimasi?",
@@ -477,15 +466,15 @@
       "izoh": "Suhbat, gap; hadis = حَدِيثٌ"
     },
     {
-      "q": "«اَلْعَسَلُ» — to'g'ri tarjimasi?",
+      "q": "«حِصَانٌ» so'zining ma'nosi?",
       "opts": [
-        "Asal",
-        "To'y (nikoh bazmi)",
-        "Bazm, marosim",
-        "Bezak"
+        "Ot (hayvon)",
+        "Dum",
+        "Takrorlamoq",
+        "Muddat, davr"
       ],
       "correct": 0,
-      "izoh": "Asal = اَلْعَسَلُ"
+      "izoh": "حِصَانٌ = Ot (hayvon)"
     },
     {
       "q": "«سَبَقَ» — to'g'ri tarjimasi?",
