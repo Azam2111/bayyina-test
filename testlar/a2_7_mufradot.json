@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 7-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 31,
   "questions": [
     {
@@ -59,37 +59,26 @@
       "izoh": "Muzlatilgan go'sht = اَللُّحُومُ الْمُثَلَّجَةُ"
     },
     {
-      "q": "«بَاكِسْتَانُ» — to'g'ri tarjimasi?",
+      "q": "«صَيْدَلِيَّةٌ» so'zining ma'nosi?",
       "opts": [
-        "Pokiston",
-        "O'rta yer dengizi",
-        "Mavzu",
-        "Falastin"
+        "Dorixona",
+        "Eslatmoq",
+        "Ulkan, bahaybat",
+        "Amalga oshmoq, bajarilmoq"
       ],
       "correct": 0,
-      "izoh": "Pokiston = بَاكِسْتَانُ"
+      "izoh": "صَيْدَلِيَّةٌ = Dorixona"
     },
     {
-      "q": "«Bino, imorat» — to'g'ri arabcha tarjimasi?",
+      "q": "«Ega bo'lmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "بِنَاءٌ",
-        "قَانُونٌ",
-        "حَاضِرٌ",
-        "حَوْلَ"
+        "اِمْتَلَكَ",
+        "صَحْنٌ",
+        "تَكَلَّمَ",
+        "اَلْحَرْثُ"
       ],
       "correct": 0,
-      "izoh": "Bino, imorat = بِنَاءٌ"
-    },
-    {
-      "q": "«اَلْمَاضِي» — to'g'ri tarjimasi?",
-      "opts": [
-        "Ishga yollash, ishga joylash",
-        "Qog'ozdan bo'lgan, bosma",
-        "Sahifa",
-        "O'tmish; o'tgan zamon"
-      ],
-      "correct": 3,
-      "izoh": "O'tmish; o'tgan zamon = اَلْمَاضِي"
+      "izoh": "Ega bo'lmoq = اِمْتَلَكَ"
     },
     {
       "q": "«اِنْطَلَقَ» — to'g'ri tarjimasi?",
@@ -103,15 +92,15 @@
       "izoh": "Yo'lga chiqmoq, jo'nab ketmoq = اِنْطَلَقَ"
     },
     {
-      "q": "«Falastin» — to'g'ri arabcha tarjimasi?",
+      "q": "«Maqsad; buyum» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْبَحْرُ الْمُتَوَسِّطُ",
-        "فِلَسْطِينُ",
-        "بَاكِسْتَانُ",
-        "حَاجٌّ"
+        "غَرَضٌ",
+        "اَلتِّكْنُولُوجْيَا",
+        "اِنْتَفَعَ",
+        "فَاسِدٌ"
       ],
-      "correct": 1,
-      "izoh": "Falastin = فِلَسْطِينُ"
+      "correct": 0,
+      "izoh": "Maqsad; buyum = غَرَضٌ"
     },
     {
       "q": "«Qog'ozdan bo'lgan, bosma» — to'g'ri arabcha tarjimasi?",
@@ -719,17 +708,6 @@
       "izoh": "O'zgarmoq = تَغَيَّرَ"
     },
     {
-      "q": "«حَرْفُ الْجَرِّ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Harakat (belgisi)",
-        "Nima haqida?",
-        "Nimadan?",
-        "Jar harfi (predlog)"
-      ],
-      "correct": 3,
-      "izoh": "Jar harfi (predlog) = حَرْفُ الْجَرِّ"
-    },
-    {
       "q": "«Ishga yollash, ishga joylash» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "اَلْمَاضِي",
@@ -785,26 +763,26 @@
       "izoh": "Atrofida = حَوْلَ"
     },
     {
-      "q": "«Hoji» — to'g'ri arabcha tarjimasi?",
+      "q": "«Uylanish, nikoh» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مِلْعَقَةٌ",
-        "حَاجٌّ",
-        "مَوْضُوعٌ",
-        "بِنَاءٌ"
+        "اَلزَّوَاجُ",
+        "سَارَ",
+        "كَيْ",
+        "خَشَبٌ"
       ],
-      "correct": 1,
-      "izoh": "Hoji = حَاجٌّ"
+      "correct": 0,
+      "izoh": "Uylanish, nikoh = اَلزَّوَاجُ"
     },
     {
-      "q": "«Masofa» — to'g'ri arabcha tarjimasi?",
+      "q": "«Aniqrog'i, xususan» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَاضِرٌ",
-        "مَسَافَةٌ",
-        "اَلتِّكْنُولُوجْيَا",
-        "أَخْضَرُ"
+        "تَحْدِيدًا",
+        "عَقَارَاتٌ",
+        "فَرْعٌ",
+        "شَتْوِيٌّ"
       ],
-      "correct": 1,
-      "izoh": "Masofa = مَسَافَةٌ"
+      "correct": 0,
+      "izoh": "Aniqrog'i, xususan = تَحْدِيدًا"
     },
     {
       "q": "«Mavzu» — to'g'ri arabcha tarjimasi?",
@@ -818,15 +796,15 @@
       "izoh": "Mavzu = مَوْضُوعٌ"
     },
     {
-      "q": "«مُمْكِنٌ» — to'g'ri tarjimasi?",
+      "q": "«مَنْزِلٌ» so'zining ma'nosi?",
       "opts": [
-        "Uyga oid, uy-ro'zg'or",
-        "Ko'ngilochar",
-        "Ta'limiy",
-        "Mumkin"
+        "Uy, turar joy",
+        "Qiz (farzand)",
+        "Maqsad; buyum",
+        "Nima haqida?"
       ],
-      "correct": 3,
-      "izoh": "Mumkin = مُمْكِنٌ"
+      "correct": 0,
+      "izoh": "مَنْزِلٌ = Uy, turar joy"
     },
     {
       "q": "«بِاسْتِمْرَارٍ» — to'g'ri tarjimasi?",
@@ -862,15 +840,15 @@
       "izoh": "Xaridor = اَلْمُشْتَرِي"
     },
     {
-      "q": "«مَقَالٌ» — to'g'ri tarjimasi?",
+      "q": "«تَحَسَّنَ» so'zining ma'nosi?",
       "opts": [
-        "Tinchlik, sokinlik",
-        "O'rmon",
-        "Uzum",
-        "Maqola"
+        "Yaxshilanmoq",
+        "Do'st tutinmoq",
+        "Spektakl, sahna asari",
+        "Yodgorlik, obida; iz"
       ],
-      "correct": 3,
-      "izoh": "Maqola = مَقَالٌ"
+      "correct": 0,
+      "izoh": "تَحَسَّنَ = Yaxshilanmoq"
     },
     {
       "q": "«Aylanmoq; tavof qilmoq» — to'g'ri arabcha tarjimasi?",
