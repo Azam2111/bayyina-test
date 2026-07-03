@@ -1,18 +1,18 @@
 {
   "title": "Mufradot — A2 8-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 23,
   "questions": [
     {
-      "q": "«Bino» — to'g'ri arabcha tarjimasi?",
+      "q": "«Do'kon, rasta» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "صَحْنٌ",
-        "اَلْكَعْبَةُ",
-        "بِنَايَةٌ",
-        "اَلْوَطَنُ"
+        "مَحَلٌّ",
+        "طَلَبَ",
+        "خَسِرَ",
+        "عِيدٌ"
       ],
-      "correct": 2,
-      "izoh": "Bino = بِنَايَةٌ"
+      "correct": 0,
+      "izoh": "Do'kon, rasta = مَحَلٌّ"
     },
     {
       "q": "«هَنْدَسِيٌّ» — to'g'ri tarjimasi?",
@@ -125,15 +125,15 @@
       "izoh": "Kelgusi, kelayotgan = مُقْبِلٌ"
     },
     {
-      "q": "«اَلْمَصْدَرُ» — to'g'ri tarjimasi?",
+      "q": "«تَمَّ» so'zining ma'nosi?",
       "opts": [
-        "Juda",
-        "Masdar (ish-harakat nomi)",
-        "O'pich, bo'sa",
-        "Topishmoq, jumboq"
+        "Amalga oshmoq, bajarilmoq",
+        "Podshoh, shoh",
+        "Yasamoq, ishlab chiqarmoq",
+        "O'yma naqsh"
       ],
-      "correct": 1,
-      "izoh": "Masdar (ish-harakat nomi) = اَلْمَصْدَرُ"
+      "correct": 0,
+      "izoh": "تَمَّ = Amalga oshmoq, bajarilmoq"
     },
     {
       "q": "«Tayyorlamoq» — to'g'ri arabcha tarjimasi?",
@@ -191,37 +191,37 @@
       "izoh": "O'pich, bo'sa = قُبْلَةٌ"
     },
     {
-      "q": "«حَقِيقِيٌّ» — to'g'ri tarjimasi?",
+      "q": "«كَبُرَ» so'zining ma'nosi?",
       "opts": [
-        "Haqiqiy",
-        "Yaxshi, sifatli",
+        "Ulg'aymoq, katta bo'lmoq",
         "Qizil",
-        "Qaytarilmas imkoniyat"
+        "Bog'lamoq",
+        "...gan kishilar (muzakkar ko'plik)"
       ],
       "correct": 0,
-      "izoh": "Haqiqiy = حَقِيقِيٌّ"
+      "izoh": "كَبُرَ = Ulg'aymoq, katta bo'lmoq"
     },
     {
-      "q": "«اَلْوَطَنُ» — to'g'ri tarjimasi?",
+      "q": "«قَبِلَ» so'zining ma'nosi?",
       "opts": [
-        "Poyga, musobaqa",
-        "Bino",
-        "Vatan",
-        "Ka'ba"
+        "Qabul qilmoq",
+        "Tonna",
+        "Portfel, sumka; hamyon",
+        "Qora"
       ],
-      "correct": 2,
-      "izoh": "Vatan = اَلْوَطَنُ"
+      "correct": 0,
+      "izoh": "قَبِلَ = Qabul qilmoq"
     },
     {
-      "q": "«Juda» — to'g'ri arabcha tarjimasi?",
+      "q": "«Yo'lga chiqmoq, jo'nab ketmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَجْمُوعَةٌ",
-        "قُبْلَةٌ",
-        "مُكَوِّنٌ",
-        "جِدًّا"
+        "اِنْطَلَقَ",
+        "سَامَحَ",
+        "نِظَامٌ",
+        "وَحْدَهُ"
       ],
-      "correct": 3,
-      "izoh": "Juda = جِدًّا"
+      "correct": 0,
+      "izoh": "Yo'lga chiqmoq, jo'nab ketmoq = اِنْطَلَقَ"
     },
     {
       "q": "«سِمْسَارٌ» — to'g'ri tarjimasi?",
@@ -246,15 +246,15 @@
       "izoh": "Ishqiboz bo'lmoq, juda sevmoq = عَشِقَ"
     },
     {
-      "q": "«خَطٌّ» — to'g'ri tarjimasi?",
+      "q": "«رَدَّ» so'zining ma'nosi?",
       "opts": [
-        "Juda",
-        "Xat, yozuv; chiziq",
-        "Peshtoq, vitrina",
-        "Muddat, davr"
+        "Javob qaytarmoq",
+        "Doimiy ravishda, uzluksiz",
+        "Uy, turar joy",
+        "Xatti-harakatlar"
       ],
-      "correct": 1,
-      "izoh": "Xat, yozuv; chiziq = خَطٌّ"
+      "correct": 0,
+      "izoh": "رَدَّ = Javob qaytarmoq"
     },
     {
       "q": "«مَنْزِلٌ عَامِرٌ بِذِكْرِ اللَّهِ» — to'g'ri tarjimasi?",
@@ -378,15 +378,15 @@
       "izoh": "Ochiq (ko'rinib turgan) ism = اِسْمٌ ظَاهِرٌ"
     },
     {
-      "q": "«Bino, imorat» — to'g'ri arabcha tarjimasi?",
+      "q": "«Qudrat, qobiliyat» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "قُدْرَةٌ",
+        "اِبْتَكَرَ",
         "زَرَافَةٌ",
-        "مِحْفَظَةٌ",
-        "حَاجٌّ",
-        "بِنَاءٌ"
+        "اِعْتَقَدَ"
       ],
-      "correct": 3,
-      "izoh": "Bino, imorat = بِنَاءٌ"
+      "correct": 0,
+      "izoh": "Qudrat, qobiliyat = قُدْرَةٌ"
     },
     {
       "q": "«Pitsa» — to'g'ri arabcha tarjimasi?",
@@ -532,15 +532,15 @@
       "izoh": "Hazillashmoq = مَزَحَ"
     },
     {
-      "q": "«مَسَافَةٌ» — to'g'ri tarjimasi?",
+      "q": "«اِمْتَلَكَ» so'zining ma'nosi?",
       "opts": [
-        "Portfel, sumka; hamyon",
-        "Namozxon, namoz o'quvchi",
-        "Ovoz, tovush",
-        "Masofa"
+        "Ega bo'lmoq",
+        "Qora",
+        "Dum",
+        "Gul"
       ],
-      "correct": 3,
-      "izoh": "Masofa = مَسَافَةٌ"
+      "correct": 0,
+      "izoh": "اِمْتَلَكَ = Ega bo'lmoq"
     },
     {
       "q": "«اِشْتَاقَ» — to'g'ri tarjimasi?",
@@ -662,17 +662,6 @@
       ],
       "correct": 3,
       "izoh": "Bog'lovchi (so'z) = أَدَاةُ الرَّبْطِ"
-    },
-    {
-      "q": "«اَلِاسْمُ الْمَوْصُولُ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Nisbiy olmosh (bog'lovchi ism)",
-        "To'la, ...ga to'lgan",
-        "Filial, bo'lim",
-        "...gan kishilar (muzakkar ko'plik)"
-      ],
-      "correct": 0,
-      "izoh": "Nisbiy olmosh (bog'lovchi ism) = اَلِاسْمُ الْمَوْصُولُ"
     },
     {
       "q": "«كَرِهَ» — to'g'ri tarjimasi?",
