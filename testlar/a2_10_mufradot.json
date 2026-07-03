@@ -1,6 +1,6 @@
 {
   "title": "Mufradot — A2 10-dars",
-  "otish": 70,
+  "otish": 80,
   "vaqt": 30,
   "questions": [
     {
@@ -81,15 +81,15 @@
       "izoh": "Hisoblagich (schyotchik) = عَدَّادٌ"
     },
     {
-      "q": "«بِنَايَةٌ» — to'g'ri tarjimasi?",
+      "q": "«نَاقَشَ» so'zining ma'nosi?",
       "opts": [
-        "Ka'ba",
-        "Poyga, musobaqa",
-        "Bino",
-        "Vatan"
+        "Muhokama qilmoq",
+        "Yondosh, tutash (qo'shni)",
+        "Oziqaviy, oziq-ovqatga oid",
+        "Mashaqqat, qiyinchilik"
       ],
-      "correct": 2,
-      "izoh": "Bino = بِنَايَةٌ"
+      "correct": 0,
+      "izoh": "نَاقَشَ = Muhokama qilmoq"
     },
     {
       "q": "«صَعِدَ» — to'g'ri tarjimasi?",
@@ -224,26 +224,15 @@
       "izoh": "Tunel = نَفَقٌ"
     },
     {
-      "q": "«Muzakkar-muannaslik» — to'g'ri arabcha tarjimasi?",
+      "q": "«دُونَ» so'zining ma'nosi?",
       "opts": [
-        "اَلتَّذْكِيرُ وَالتَّأْنِيثُ",
-        "اَلْمُطَابَقَةُ",
-        "قَاعِدَةٌ",
-        "أُجْرَةٌ"
+        "...siz, ...dan tashqari",
+        "Filial, bo'lim",
+        "Qism, bo'lak",
+        "Urg'ochi; ayol jinsi"
       ],
       "correct": 0,
-      "izoh": "Muzakkar-muannaslik = اَلتَّذْكِيرُ وَالتَّأْنِيثُ"
-    },
-    {
-      "q": "«خَطَأٌ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Maqsad; buyum",
-        "Karta, kartochka",
-        "Yurish-turish, odob",
-        "Xato"
-      ],
-      "correct": 3,
-      "izoh": "Xato = خَطَأٌ"
+      "izoh": "دُونَ = ...siz, ...dan tashqari"
     },
     {
       "q": "«خَالَفَ» — to'g'ri tarjimasi?",
@@ -255,17 +244,6 @@
       ],
       "correct": 0,
       "izoh": "Zid bo'lmoq, farqlanmoq = خَالَفَ"
-    },
-    {
-      "q": "«O'timsiz fe'l» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "اَلْفَتْحَةُ",
-        "خَلَّاطٌ",
-        "فِعْلٌ مُتَعَدٍّ",
-        "فِعْلٌ لَازِمٌ"
-      ],
-      "correct": 3,
-      "izoh": "O'timsiz fe'l = فِعْلٌ لَازِمٌ"
     },
     {
       "q": "«مَلِيءٌ بِـ» — to'g'ri tarjimasi?",
@@ -301,26 +279,26 @@
       "izoh": "Transport kartasi = بِطَاقَةُ الْمُوَاصَلَاتِ"
     },
     {
-      "q": "«اَلْوَطَنُ» — to'g'ri tarjimasi?",
+      "q": "«اَلْمُتْحَفُ» so'zining ma'nosi?",
       "opts": [
-        "Bino",
-        "Poyga, musobaqa",
-        "Ka'ba",
-        "Vatan"
-      ],
-      "correct": 3,
-      "izoh": "Vatan = اَلْوَطَنُ"
-    },
-    {
-      "q": "«Zaytun» — to'g'ri arabcha tarjimasi?",
-      "opts": [
-        "زَيْتُونٌ",
-        "بِطَاقَةٌ",
-        "اَلتَّحْدِيثُ",
-        "عَدَّادٌ"
+        "Muzey",
+        "Mashaqqat, qiyinchilik",
+        "Qism, bo'lak",
+        "Tunel"
       ],
       "correct": 0,
-      "izoh": "Zaytun = زَيْتُونٌ"
+      "izoh": "اَلْمُتْحَفُ = Muzey"
+    },
+    {
+      "q": "«O'zgartirmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "غَيَّرَ",
+        "دِرَاسِيٌّ",
+        "بَذَلَ",
+        "اَلْكَرَمُ"
+      ],
+      "correct": 0,
+      "izoh": "O'zgartirmoq = غَيَّرَ"
     },
     {
       "q": "«Maqsad; buyum» — to'g'ri arabcha tarjimasi?",
@@ -389,15 +367,15 @@
       "izoh": "Obod, to'lib turgan = عَامِرٌ"
     },
     {
-      "q": "«Olim» — to'g'ri arabcha tarjimasi?",
+      "q": "«Ishontirmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "فِكْرَةٌ",
-        "رَأْيٌ",
-        "جَبَلٌ",
-        "عَالِمٌ"
+        "أَقْنَعَ",
+        "مُكَوِّنٌ",
+        "مَسْرَحِيَّةٌ",
+        "اَلنَّارُ"
       ],
-      "correct": 3,
-      "izoh": "Olim = عَالِمٌ"
+      "correct": 0,
+      "izoh": "Ishontirmoq = أَقْنَعَ"
     },
     {
       "q": "«اِسْتَعَدَّ» — to'g'ri tarjimasi?",
@@ -510,15 +488,15 @@
       "izoh": "Adashgan, yo'lini yo'qotgan = تَائِهٌ"
     },
     {
-      "q": "«Muborak» — to'g'ri arabcha tarjimasi?",
+      "q": "«Muhandislikka oid» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُبَارَكٌ",
-        "مُتَأَكِّدٌ",
-        "عَزِيزٌ",
-        "حَبِيبٌ"
+        "هَنْدَسِيٌّ",
+        "اَلتَّشْجِيعُ",
+        "لِحَافٌ",
+        "اَلْوَفَاةُ"
       ],
       "correct": 0,
-      "izoh": "Muborak = مُبَارَكٌ"
+      "izoh": "Muhandislikka oid = هَنْدَسِيٌّ"
     },
     {
       "q": "«سُلُوكٌ» — to'g'ri tarjimasi?",
@@ -554,15 +532,15 @@
       "izoh": "Do'stlik = اَلصَّدَاقَةُ"
     },
     {
-      "q": "«قَاعِدَةٌ» — to'g'ri tarjimasi?",
+      "q": "«تَصَرُّفَاتٌ» so'zining ma'nosi?",
       "opts": [
-        "Hisoblagich (schyotchik)",
-        "Qoida",
-        "Muzakkar-muannaslik",
-        "Moslashuv, muvofiqlik"
+        "Xatti-harakatlar",
+        "Ojiz bo'lmoq, uddalay olmaslik",
+        "Respublika",
+        "Qudrat, qobiliyat"
       ],
-      "correct": 1,
-      "izoh": "Qoida = قَاعِدَةٌ"
+      "correct": 0,
+      "izoh": "تَصَرُّفَاتٌ = Xatti-harakatlar"
     },
     {
       "q": "«Qo'rg'on devori» — to'g'ri arabcha tarjimasi?",
@@ -620,17 +598,6 @@
       "izoh": "Semizlik = اَلسِّمْنَةُ"
     },
     {
-      "q": "«خَرِيطَةٌ» — to'g'ri tarjimasi?",
-      "opts": [
-        "Xato",
-        "Xarita",
-        "Diplomatik; diplomat",
-        "Hisoblagich (schyotchik)"
-      ],
-      "correct": 1,
-      "izoh": "Xarita = خَرِيطَةٌ"
-    },
-    {
       "q": "«Likop, tarelka» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "اَلْكَعْبَةُ",
@@ -653,15 +620,15 @@
       "izoh": "Ta'mirlash; tuzatish = اَلْإِصْلَاحُ"
     },
     {
-      "q": "«مُودِيلْ» — to'g'ri tarjimasi?",
+      "q": "«تُوُفِّيَ» so'zining ma'nosi?",
       "opts": [
-        "Zaytun",
-        "Model, rusum",
-        "Zal",
-        "Xarita"
+        "Vafot etdi",
+        "O'zi; jon, nafs",
+        "Ishqiboz bo'lmoq, juda sevmoq",
+        "O'g'irlamoq"
       ],
-      "correct": 1,
-      "izoh": "Model, rusum = مُودِيلْ"
+      "correct": 0,
+      "izoh": "تُوُفِّيَ = Vafot etdi"
     },
     {
       "q": "«Uchratmoq, yuzma-yuz uchrashmoq» — to'g'ri arabcha tarjimasi?",
