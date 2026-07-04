@@ -1584,6 +1584,7 @@ function sendToWebhook(lvl, pct, tot, max) {
   }
   // Bot kutayotgan format: telegram_id, full_name, recommended_level, total_score_pct
   let payload = {
+    type: 'placement',
     telegram_id: tgId,
     full_name: name,
     username: un,
@@ -1596,6 +1597,12 @@ function sendToWebhook(lvl, pct, tot, max) {
     qir: levelScore.R,
     ist: levelScore.I
   };
+  // 1) ISHONCHLI YO'L: Telegram sendData (reply-tugmadan ochilganda ishlaydi).
+  //    Botga to'g'ridan-to'g'ri yuboradi va webapp'ni yopadi — Make.com kerak emas.
+  if(tg && typeof tg.sendData === 'function') {
+    try { tg.sendData(JSON.stringify(payload)); return; } catch(e) {}
+  }
+  // 2) ZAXIRA: Make.com webhook (inline-tugmadan ochilgan eski holat uchun)
   let whs = document.getElementById('whStatus');
   if(!whs) return;
   whs.style.display = 'block';
