@@ -1,38 +1,87 @@
 {
-  "title": "Istima — B1 1-dars: Sog'lom turmush",
-  "audio": "b1_istima.mp3",
+  "title": "Istima — B1 1-dars: يوم الجمعة (Juma kuni)",
+  "audio": "b1_1_istima.mp3",
   "otish": 80,
   "vaqt": 10,
+  "tinglash": 2,
   "questions": [
     {
-      "q": "Somiy kim?",
-      "opts": ["Universitet talabasi", "Muallim", "Shifokor", "Sportchi"],
-      "correct": 0,
-      "izoh": "«أَنَا سَامِي، طَالِبٌ فِي الْجَامِعَةِ» — universitet talabasi."
+      "q": "يَوْمُ الْجُمُعَةِ عُطْلَةٌ رَسْمِيَّةٌ فِي جَمِيعِ الدُّوَلِ الْعَرَبِيَّةِ.",
+      "opts": [
+        "صحيح",
+        "خطأ"
+      ],
+      "correct": 1,
+      "izoh": "Juma barcha arab davlatlarida rasmiy dam olish kuni emas — javob: خطأ."
     },
     {
-      "q": "Somiy o'tmishda qanday odat egasi edi?",
-      "opts": ["Juda dangasa edi", "Juda tirishqoq edi", "Sportchi edi", "Erta uxlardi"],
+      "q": "يَعْتَبِرُ بَعْضُ النَّاسِ يَوْمَ الْجُمُعَةِ عِيدًا ثَالِثًا.",
+      "opts": [
+        "صحيح",
+        "خطأ"
+      ],
       "correct": 0,
-      "izoh": "«كُنْتُ كَسُولاً جِدًّا» — juda dangasa edi, soatlab ekran oldida o'tirardi."
+      "izoh": "Ba'zilar jumani uchinchi hayit deb hisoblaydi — javob: صحيح."
     },
     {
-      "q": "Dangasalik sababli Somiy nimani his qilardi?",
-      "opts": ["Doimiy bosh og'rig'i va charchoq", "Quvonch", "Ko'p energiya", "Kuchli diqqat"],
-      "correct": 0,
-      "izoh": "«أَشْعُرُ بِصُدَاعٍ دَائِمٍ ... مُرْهَقًا» — doimiy bosh og'rig'i va charchoq."
+      "q": "وَقْتُ الْخُطْبَةِ عَادَةً لَا يَزِيدُ عَنْ نِصْفِ سَاعَةٍ.",
+      "opts": [
+        "صحيح",
+        "خطأ"
+      ],
+      "correct": 1,
+      "izoh": "Matnga ko'ra bu xato — javob: خطأ."
     },
     {
-      "q": "Somiy hayotini o'zgartirish uchun nima qildi?",
-      "opts": ["Sport bilan shug'ullandi va erta uxlay boshladi", "Ko'proq ekran ko'rdi", "Kechroq uxladi", "Hech narsa qilmadi"],
+      "q": "يَذْهَبُ بَعْضُ النَّاسِ إِلَى الْحَدَائِقِ فِي هَذَا الْيَوْمِ.",
+      "opts": [
+        "صحيح",
+        "خطأ"
+      ],
       "correct": 0,
-      "izoh": "«بَدَأْتُ أُمَارِسُ الرِّيَاضَةَ ... أَنَامُ ... مُبَكِّرٍ» — sport + erta uxlash."
+      "izoh": "Ba'zilar bu kuni bog'larga boradi — javob: صحيح."
     },
     {
-      "q": "Hozir Somiyning ahvoli qanday?",
-      "opts": ["Energiyasi qaytdi, diqqatliroq", "Hali ham charchagan", "O'qishni tashladi", "Yomonlashdi"],
+      "q": "هُنَاكَ أَسْوَاقٌ خَاصَّةٌ بِيَوْمِ الْجُمُعَةِ.",
+      "opts": [
+        "صحيح",
+        "خطأ"
+      ],
       "correct": 0,
-      "izoh": "«طَاقَتِي عَادَتْ ... أَكْثَرَ تَرْكِيزًا» — energiyasi qaytdi, diqqatliroq bo'ldi."
+      "izoh": "Jumaga xos maxsus bozorlar bor — javob: صحيح."
+    },
+    {
+      "q": "مَا الْأَشْيَاءُ الثَّلَاثَةُ الَّتِي ذَكَرَهَا الْإِمَامُ فِي الْخُطْبَةِ؟",
+      "opts": [
+        "مَحَاسِنُ الْأَخْلَاقِ، وَصِلَةُ الرَّحِمِ، وَالتَّعَاوُنُ",
+        "الصَّلَاةُ، وَالزَّكَاةُ، وَالصَّوْمُ",
+        "الصَّدَقَةُ، وَالْحَجُّ، وَالْعُمْرَةُ",
+        "بِرُّ الْوَالِدَيْنِ، وَالصِّدْقُ، وَالْأَمَانَةُ"
+      ],
+      "correct": 0,
+      "izoh": "Imom xutbada: yaxshi axloq, qarindoshlik aloqasi va hamkorlikni zikr qildi."
+    },
+    {
+      "q": "مَا الْأُمُورُ الْمُسْتَحَبَّةُ قَبْلَ الذَّهَابِ إِلَى صَلَاةِ الْجُمُعَةِ؟",
+      "opts": [
+        "الِاغْتِسَالُ، وَلُبْسُ الْمَلَابِسِ الْبَيْضَاءِ، وَوَضْعُ الْعِطْرِ",
+        "النَّوْمُ مُبَكِّرًا وَتَنَاوُلُ طَعَامٍ كَثِيرٍ",
+        "قِرَاءَةُ الْجَرِيدَةِ وَشُرْبُ الْقَهْوَةِ",
+        "مُشَاهَدَةُ التِّلْفَازِ وَالِاتِّصَالُ بِالْأَصْدِقَاءِ"
+      ],
+      "correct": 0,
+      "izoh": "G'usl qilish, oq kiyim kiyish va atir sepish mustahab."
+    },
+    {
+      "q": "مَاذَا يَفْعَلُ الْمُسْلِمُونَ بَعْدَ صَلَاةِ الْجُمُعَةِ؟",
+      "opts": [
+        "يُخْرِجُونَ الصَّدَقَاتِ لِلْفُقَرَاءِ، وَيُسَلِّمُ بَعْضُهُمْ عَلَى بَعْضٍ، وَيَزُورُونَ الْمَرْضَى",
+        "يَذْهَبُونَ إِلَى الْعَمَلِ مُبَاشَرَةً",
+        "يُسَافِرُونَ إِلَى مَدِينَةٍ أُخْرَى",
+        "يَنَامُونَ بَقِيَّةَ الْيَوْمِ"
+      ],
+      "correct": 0,
+      "izoh": "Sadaqa berish, ko'rishish va bemorlarni ziyorat qilish."
     }
   ]
 }
