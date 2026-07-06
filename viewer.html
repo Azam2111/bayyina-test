@@ -308,8 +308,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   // Izoh-matn (qmatn) uchun ham bir xil aralash-ishlov
   function renderMatn(t){
     if(isAr(t)&&hasLatin(t)) return '<div class="qmatn mix">'+splitPrompt(t)+'</div>';
-    if(isAr(t)) return '<div class="qmatn ar">'+t+'</div>';
-    return '<div class="qmatn">'+t+'</div>';
+    if(isAr(t)) return '<div class="qmatn ar">'+t.replace(/\n/g,"<br>")+'</div>';
+    return '<div class="qmatn">'+t.replace(/\n/g,"<br>")+'</div>';
   }
 
   // ====== AUDIO (istima) ======
@@ -351,7 +351,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
-    const matnHtml = (item.matn && !IS_QIROAT) ? renderMatn(item.matn) : '';
+    const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
     const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
@@ -408,7 +408,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     let html='';
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
-      const matnHtml = (item.matn && !IS_QIROAT) ? renderMatn(item.matn) : '';
+      const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
       const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
