@@ -61,8 +61,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 @keyframes fadeIn{from{opacity:0; transform:translateY(10px)} to{opacity:1; transform:translateY(0)}}
 .q-label{font-size:13px; color:var(--brown-mid); font-weight:800; text-align:center; margin-bottom:14px; text-transform:uppercase; letter-spacing:1px}
 .bet-hint{font-size:12.5px; color:var(--brown-mid); text-align:center; margin-bottom:12px; font-weight:600}
-.qmatn{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px; color:#5a4326; font-size:15px; line-height:1.7}
-.qmatn.ar{direction:rtl; font-family:'Noto Naskh Arabic',serif; font-size:20px; line-height:2}
+.qmatn{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px; color:#5a4326; font-size:calc(15px*var(--mscale,1)); line-height:1.7}
+.qmatn.ar{direction:rtl; font-family:'Noto Naskh Arabic',serif; font-size:calc(20px*var(--mscale,1)); line-height:2}
+.fscale{position:fixed; left:12px; bottom:16px; z-index:60; display:flex; gap:8px}
+.fscale button{width:44px; height:44px; border-radius:50%; border:none; background:var(--brown); color:var(--cream); font-weight:800; font-size:19px; box-shadow:0 3px 12px rgba(0,0,0,.28); cursor:pointer; font-family:inherit}
+.fscale button:active{transform:scale(.94)}
 .q-prompt.ar{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
 .q-prompt.uz{font-size:clamp(16px,4.4vw,21px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
 .ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.55em; line-height:1.4}
@@ -74,8 +77,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .q-prompt.mix .pl-ar{font-size:clamp(30px,8.5vw,46px); line-height:1.85}
 .q-prompt.mix .pl-lat{font-size:clamp(16px,4.4vw,21px); line-height:1.55}
 .qmatn.mix{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px}
-.qmatn.mix .pl-ar{font-size:19px; line-height:1.9; color:#5a4326}
-.qmatn.mix .pl-lat{font-size:14px; line-height:1.6; color:#5a4326}
+.qmatn.mix .pl-ar{font-size:calc(19px*var(--mscale,1)); line-height:1.9; color:#5a4326}
+.qmatn.mix .pl-lat{font-size:calc(14px*var(--mscale,1)); line-height:1.6; color:#5a4326}
 .opt .pl{margin:2px 0; text-align:inherit}
 .opt .pl-ar{font-size:1.4em; line-height:1.5}
 .opt .pl-lat{font-size:1em}
@@ -242,6 +245,10 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let cur = 0, correctCount = 0, answeredCount = 0, finished = false, timerInt = null;
 
   // ====== JSON YUKLASH ======
+  let MSCALE=1;
+  try{ MSCALE=parseFloat(localStorage.getItem('bayyina_mscale'))||1; }catch(e){}
+  document.documentElement.style.setProperty('--mscale',MSCALE);
+  function adjScale(d){ MSCALE=Math.max(0.7,Math.min(2.4,Math.round((MSCALE+d)*100)/100)); document.documentElement.style.setProperty('--mscale',MSCALE); try{localStorage.setItem('bayyina_mscale',MSCALE);}catch(e){} }
   async function loadConfig(){
     if(darsId){
       try{
@@ -260,6 +267,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       }catch(e){ /* SAMPLE bilan davom etadi */ }
     }
     if(hasBook) document.getElementById('bookBtn').style.display='flex';
+    if(QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
     for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
@@ -607,5 +615,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
   (async function(){ await loadConfig(); startTimer(); })();
 </script>
+<div class="fscale" id="fscale" style="display:none">
+  <button onclick="adjScale(-0.12)" aria-label="Kichraytirish" title="Kichraytirish">A−</button>
+  <button onclick="adjScale(0.12)" aria-label="Kattalashtirish" title="Kattalashtirish">A+</button>
+</div>
 </body>
 </html>
