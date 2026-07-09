@@ -1,38 +1,139 @@
 {
-  "title": "Istima — B2 1-dars: Kasbiy tanlov",
-  "audio": "b2_istima.mp3",
+  "title": "Istima — B2 1-dars: تجربتي في تعلم اللغة العربية (Arab tilini o'rganish tajribam)",
+  "audio": "b2_1_istima.mp3",
   "otish": 80,
-  "vaqt": 10,
+  "vaqt": 12,
+  "tinglash": 2,
   "questions": [
     {
-      "q": "Kamol katta kompaniyada necha yil ishladi?",
-      "opts": ["10 yil", "5 yil", "3 yil", "15 yil"],
+      "q": "لِمَاذَا اخْتَارَ الْكَاتِبُ تَعَلُّمَ اللُّغَةِ الْعَرَبِيَّةِ فِي الْجَامِعَةِ؟",
+      "opts": [
+        "لِأَنَّهَا لُغَةٌ مُهِمَّةٌ فِي الْعَمَلِ فِي هَذَا الْعَصْرِ",
+        "لِأَنَّهَا لُغَةُ وَالِدَيْهِ الْأَصْلِيَّةُ",
+        "لِأَنَّهَا أَسْهَلُ مِنَ اللُّغَةِ الْإِنْجِلِيزِيَّةِ",
+        "لِأَنَّ أَصْدِقَاءَهُ نَصَحُوهُ بِذَلِكَ"
+      ],
       "correct": 0,
-      "izoh": "«مُدَّةَ عَشْرِ سَنَوَاتٍ» — o'n yil."
+      "izoh": "Matnda: «lug'a muhimma fil-amal fi hazal-asr» — bu davrda ishda muhim til bo'lgani uchun tanlagan."
     },
     {
-      "q": "Kompaniyada Kamolni nima bezovta qildi?",
-      "opts": ["Shubhali reklama usullari", "Kam maosh", "Uzoq masofa", "Ko'p ish"],
+      "q": "بَيْنَ أَيِّ لُغَتَيْنِ خُيِّرَ الْكَاتِبُ عِنْدَ دُخُولِهِ الْجَامِعَةَ؟",
+      "opts": [
+        "الْإِنْجِلِيزِيَّةِ وَالْعَرَبِيَّةِ",
+        "الْفَرَنْسِيَّةِ وَالْعَرَبِيَّةِ",
+        "الْإِنْجِلِيزِيَّةِ وَالْفَرَنْسِيَّةِ",
+        "الْعَرَبِيَّةِ وَالْإِسْبَانِيَّةِ"
+      ],
       "correct": 0,
-      "izoh": "«أَسَالِيبَ دِعَايَةٍ مَشْبُوهَةً» — shubhali reklama usullari."
+      "izoh": "«amma injliziyya aw arabiyya» — ingliz yoki arab tili orasida tanlagan."
     },
     {
-      "q": "Kamol qanday qaror qabul qildi?",
-      "opts": ["Iste'foga chiqishga", "Qolishga", "Maosh oshirishni so'rashga", "Boshqa shaharga ko'chishga"],
-      "correct": 0,
-      "izoh": "«قَرَّرْتُ أَنْ أَسْتَقِيلَ» — iste'foga chiqishga qaror qildi."
+      "q": "كَانَ الْكَاتِبُ يُخَطِّطُ لِتَعَلُّمِ اللُّغَةِ الْعَرَبِيَّةِ مُنْذُ صِغَرِهِ.",
+      "opts": ["صَحِيح", "خَطَأ", "لَمْ يُذْكَرْ"],
+      "correct": 1,
+      "izoh": "Xato. «lam akun azunn... li'anni lam ufakkir fi hazal-amr min qabl» — avval bunday o'ylamagan ham."
     },
     {
-      "q": "Iste'fodan keyin Kamol nima qildi?",
-      "opts": ["O'z loyihasini ochdi", "Boshqa kompaniyaga kirdi", "Dam oldi", "O'qishga kirdi"],
+      "q": "مِنْ أَيِّ بَلَدٍ كَانَ مُعَلِّمُ الْكَاتِبِ؟",
+      "opts": ["الْأُرْدُنِّ", "مِصْرَ", "سُورِيَا", "السُّعُودِيَّةِ"],
       "correct": 0,
-      "izoh": "«أَسَّسْتُ مَشْرُوعِي الْخَاصَّ» — o'z loyihasini (biznesini) ochdi."
+      "izoh": "«wa huwa arabiyyun minal-Urdunn» — o'qituvchi Iordaniyalik arab."
     },
     {
-      "q": "Hozir Kamolning holati qanday?",
-      "opts": ["Xotirjamroq va kelajagiga ishonchli", "Afsuslanmoqda", "Charchagan", "Qiyinchilikda"],
+      "q": "كَيْفَ وَصَفَ الْكَاتِبُ مُعَلِّمَهُ؟",
+      "opts": [
+        "بَشُوشًا هَادِئًا وَلَدَيْهِ أَسَالِيبُ مُمْتِعَةٌ وَجَذَّابَةٌ",
+        "صَارِمًا قَاسِيًا قَلِيلَ الصَّبْرِ",
+        "كَثِيرَ الْغِيَابِ لَا يَهْتَمُّ بِالطُّلَّابِ",
+        "سَرِيعَ الْغَضَبِ يَتَحَدَّثُ بِصُعُوبَةٍ"
+      ],
       "correct": 0,
-      "izoh": "«أَكْثَرَ رَاحَةً وَأَكْثَرَ ثِقَةً» — xotirjamroq va ishonchliroq."
+      "izoh": "«kana bashushan hadi'an wa ladayhi asalibu mumti'a wa jazzaba» — quvnoq, sokin, qiziqarli usullarga ega."
+    },
+    {
+      "q": "ذَكَرَ الْكَاتِبُ اسْمَ مُعَلِّمِهِ صَرَاحَةً فِي حَدِيثِهِ.",
+      "opts": ["صَحِيح", "خَطَأ", "لَمْ يُذْكَرْ"],
+      "correct": 2,
+      "izoh": "Matnda o'qituvchining ismi aytilmagan — «لم يُذكر»."
+    },
+    {
+      "q": "مَاذَا تَعَلَّمَ الْكَاتِبُ فِي الشَّهْرِ الْأَوَّلِ؟",
+      "opts": [
+        "الْحُرُوفَ وَكَيْفِيَّةَ الْقِرَاءَةِ",
+        "قَوَاعِدَ النَّحْوِ الْمُتَقَدِّمَةَ",
+        "كِتَابَةَ الْمَقَالَاتِ الطَّوِيلَةِ",
+        "الْخَطَابَةَ وَالْمُنَاظَرَةَ"
+      ],
+      "correct": 0,
+      "izoh": "«ta'allamtu fish-shahril-awwal al-huruf wa kayfiyyatal-qira'a» — harflar va o'qishni."
+    },
+    {
+      "q": "أَيُّ الطُّرُقِ التَّالِيَةِ طَبَّقَهَا الْكَاتِبُ فِي تَعَلُّمِهِ؟",
+      "opts": [
+        "كِتَابَةُ مُلَخَّصِ كُلِّ دَرْسٍ وَتَسْجِيلُ فِيدِيُو شَخْصِيٍّ",
+        "الِاشْتِرَاكُ فِي مُسَابَقَاتٍ دَوْلِيَّةٍ",
+        "السَّفَرُ إِلَى بَلَدٍ عَرَبِيٍّ لِلدِّرَاسَةِ",
+        "أَخْذُ دُرُوسٍ خُصُوصِيَّةٍ يَوْمِيَّةٍ"
+      ],
+      "correct": 0,
+      "izoh": "Har darsning xulosasini yozib, o'ziga shaxsiy video yozib olardi."
+    },
+    {
+      "q": "صَنَعَ الْكَاتِبُ مُعْجَمًا خَاصًّا بِهِ يَحْمِلُهُ مَعَهُ إِلَى أَيِّ مَكَانٍ.",
+      "opts": ["صَحِيح", "خَطَأ", "لَمْ يُذْكَرْ"],
+      "correct": 0,
+      "izoh": "To'g'ri. «li-asna'a mu'jaman khassan bi wa ahmiluhu ma'i ila ayyi makan»."
+    },
+    {
+      "q": "كَمْ كَانَ يَسْتَغْرِقُ طَرِيقُ الذَّهَابِ وَالْإِيَابِ إِلَى الدَّرْسِ؟",
+      "opts": ["سَاعَتَيْنِ", "سَاعَةً وَاحِدَةً", "ثَلَاثَ سَاعَاتٍ", "نِصْفَ سَاعَةٍ"],
+      "correct": 0,
+      "izoh": "«yastaghriqu tariq sa'atayn zahaban wa iyaban» — borib-kelish ikki soat."
+    },
+    {
+      "q": "كَيْفَ اسْتَفَادَ الْكَاتِبُ مِنْ وَقْتِ الطَّرِيقِ الطَّوِيلِ؟",
+      "opts": [
+        "بِحِفْظِ الْكَلِمَاتِ وَقِرَاءَةِ الْقِصَصِ وَالِاسْتِمَاعِ فِي يُوتِيُوب",
+        "بِالنَّوْمِ لِلرَّاحَةِ مِنَ التَّعَبِ",
+        "بِمُشَاهَدَةِ الْأَفْلَامِ الْأَجْنَبِيَّةِ",
+        "بِكِتَابَةِ الْوَاجِبَاتِ الْمَدْرَسِيَّةِ"
+      ],
+      "correct": 0,
+      "izoh": "Yo'lda so'zlarni yodlar, arabcha qissalar o'qir yoki YouTube'da tinglardi."
+    },
+    {
+      "q": "أَيُّ عَامِلٍ ذَكَرَهُ الْكَاتِبُ أَوَّلًا مِنَ الْعَوَامِلِ الَّتِي سَاعَدَتْهُ؟",
+      "opts": [
+        "الْمُعَلِّمُ",
+        "الْكُتُبُ الْمَدْرَسِيَّةُ",
+        "زُمَلَاؤُهُ فِي الصَّفِّ",
+        "الْبَرَامِجُ الْحَاسُوبِيَّةُ"
+      ],
+      "correct": 0,
+      "izoh": "«sa'adani ala ta'allumiha al-amrul-awwal: al-mu'allim» — birinchi omil o'qituvchi."
+    },
+    {
+      "q": "كَانَ الْكَاتِبُ يَجْمَعُ أَهَمَّ الْكَلِمَاتِ فِي الدَّرْسِ وَيُرَتِّبُهَا.",
+      "opts": ["صَحِيح", "خَطَأ", "لَمْ يُذْكَرْ"],
+      "correct": 0,
+      "izoh": "To'g'ri. «kuntu ajma'u ahammal-kalimat fid-dars wa urattibuha»."
+    },
+    {
+      "q": "حَصَلَ الْكَاتِبُ عَلَى مِنْحَةٍ دِرَاسِيَّةٍ لِتَعَلُّمِ الْعَرَبِيَّةِ.",
+      "opts": ["صَحِيح", "خَطَأ", "لَمْ يُذْكَرْ"],
+      "correct": 2,
+      "izoh": "Matnda stipendiya (minha) haqida hech narsa aytilmagan — «لم يُذكر»."
+    },
+    {
+      "q": "مَا الْفِكْرَةُ الرَّئِيسَةُ لِهَذَا الْحَدِيثِ؟",
+      "opts": [
+        "تَجْرِبَةُ الْكَاتِبِ الشَّخْصِيَّةُ فِي تَعَلُّمِ الْعَرَبِيَّةِ وَالْعَوَامِلُ الَّتِي سَاعَدَتْهُ",
+        "تَارِيخُ نَشْأَةِ اللُّغَةِ الْعَرَبِيَّةِ وَتَطَوُّرِهَا",
+        "الْمُقَارَنَةُ بَيْنَ اللُّغَةِ الْعَرَبِيَّةِ وَالْإِنْجِلِيزِيَّةِ",
+        "مَنَاهِجُ تَدْرِيسِ اللُّغَاتِ فِي الْجَامِعَاتِ"
+      ],
+      "correct": 0,
+      "izoh": "Asosiy g'oya — muallifning arabchani o'rganishdagi shaxsiy tajribasi va unga yordam bergan omillar."
     }
   ]
 }
