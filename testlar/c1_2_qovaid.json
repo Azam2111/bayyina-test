@@ -1,0 +1,1437 @@
+{
+  "title": "Qovaid — C1 2-dars",
+  "otish": 80,
+  "vaqt": 65,
+  "questions": [
+    {
+      "q": "«الكِتَابُ أَعْطَيْتُكَهُ». Ushbu gapdagi 'كَ' (ka) va 'هُ' (hu) olmoshlarining e'robi (grammatik holati) qanday?",
+      "opts": [
+        "ك: في محل نصب مفعول به أول، ه: في محل نصب مفعول به ثان",
+        "ك: في محل رفع فاعل، ه: في محل نصب مفعول به",
+        "ك: في محل جر مضاف إليه، ه: في محل نصب مفعول به",
+        "كلاهما في محل رفع فاعل"
+      ],
+      "correct": 0,
+      "izoh": "'أعطى' (bermoq) fe'li ikkita maf'ul (to'ldiruvchi) talab qiladi. Birinchisi - kimga berilgani (ك - senga), ikkinchisi nima berilgani (ه - uni). Ikkalasi ham nasb o'rnidadir."
+    },
+    {
+      "q": "Qaysi so'z 'اسم زمان' (Zamon ismi) hisoblanadi?",
+      "opts": [
+        "مَسْجِدٌ",
+        "مَكْتَبٌ",
+        "مَوْلِدٌ",
+        "مِفْتَاحٌ"
+      ],
+      "correct": 2,
+      "izoh": "'مَوْلِد' (tug'ilish vaqti) zamon ismi bo'lib, o'zak fe'li (ولد) harfi illat bilan boshlangani uchun 'مَفْعِل' vaznida yasaladi. 'مَسْجِد' va 'مَكْتَب' makon ismi, 'مِفْتَاح' esa ola ismidir."
+    },
+    {
+      "q": "«الأَوْلادُ ذَهَبُوا إِلَى المَلْعَبِ». 'ذَهَبُوا' fe'lidagi 'و' (vov) qanday vazifada kelgan?",
+      "opts": [
+        "حرف علة لا محل له من الإعراب",
+        "ضمير متصل في محل رفع فاعل",
+        "ضمير متصل في محل نصب مفعول به",
+        "علامة الجمع للمذكر السالم"
+      ],
+      "correct": 1,
+      "izoh": "Fe'lga ulangan 'واو الجماعة' (Ko'plik vovi) doimo foil (bajaruvchi) bo'lib, raf' o'rnida keladi."
+    },
+    {
+      "q": "«مَكْتَبَةُ المَدْرَسَةِ (.....) العِلْمِ». Zamon yoki makon ismi qoidasiga ko'ra eng mantiqiy so'zni tanlang.",
+      "opts": [
+        "مَوْعِدُ",
+        "مَنْبَعُ",
+        "مَذْهَبُ",
+        "مَوْسِمُ"
+      ],
+      "correct": 1,
+      "izoh": "'مَنْبَع' (buloq, manba) makon ismi bo'lib, 'ilm manbai' ma'nosida maktabaga nisbatan ishlatilishi eng to'g'ri (مَفْعَل vaznida, chunki نَبَعَ - يَنْبُعُ)."
+    },
+    {
+      "q": "Ajratilgan (mutassil) olmoshlardan qaysi biri hamma uch holatda: raf', nasb va jar holatida kela oladi?",
+      "opts": [
+        "تاء الفاعل (ت، تِ، تُ)",
+        "واو الجماعة (وا)",
+        "ناء المتكلمين (نا)",
+        "كاف الخطاب (ك)"
+      ],
+      "correct": 2,
+      "izoh": "Faqat 'نا' (na) olmoshi uchala holatda keladi: ذَهَبْنا (raf'), ضَرَبَنا (nasb), كِتابُنا (jar)."
+    },
+    {
+      "q": "«هَذَا المَكَانُ (.....) السَّيَّارَاتِ». Bo'sh joyni to'g'ri 'Makon ismi' bilan to'ldiring.",
+      "opts": [
+        "مَوْقِفُ",
+        "مَوْقَفُ",
+        "مِيقَافُ",
+        "مُوَقَّفُ"
+      ],
+      "correct": 0,
+      "izoh": "Asl fe'li 'وَقَفَ' (illatli, misol fe'li) bo'lgani uchun uning zamon/makon ismi qat'iy 'مَفْعِل' vaznida, ya'ni 'مَوْقِف' bo'ladi."
+    },
+    {
+      "q": "«اللَّهُمَّ اغْفِرْ لِي». Ushbu gapdagi 'ي' (ya) olmoshi qanday holatda?",
+      "opts": [
+        "في محل رفع فاعل",
+        "في محل نصب مفعول به",
+        "في محل جر بحرف الجر",
+        "في محل جر مضاف إليه"
+      ],
+      "correct": 2,
+      "izoh": "'لِي' so'zi 'لِ' harfi jar va unga ulangan 'ي' (mutakallim yosi) dan iborat. Shuning uchun u harfi jar orqali majrur bo'lib keladi."
+    },
+    {
+      "q": "Qaysi jumladagi ajratilgan (mutassil) olmosh xato tahlil qilingan?",
+      "opts": [
+        "كِتَابُهُ (الهاء في محل جر مضاف إليه)",
+        "نَصَرَنِي (الياء في محل نصب مفعول به)",
+        "كُنْتُ (التاء في محل رفع فاعل لكان)",
+        "أَكَلْنَا (النا في محل رفع فاعل)"
+      ],
+      "correct": 2,
+      "izoh": "'كان' noqis fe'l hisoblanadi va foil olmaydi, balki o'zining ismi va xabarini oladi. Shuning uchun 'التاء' bu yerda 'كان'ning ismi hisoblanadi, foil emas."
+    },
+    {
+      "q": "Zamon va Makon ismlari (اسم الزمان والمكان) asosan qanday fe'llardan 'مَفْعِل' (kasra bilan) vaznida yasaladi?",
+      "opts": [
+        "Agar muzoriyda ayni (o'rta harfi) fatha yoki damma bo'lsa",
+        "Agar fe'l misol (birinchi harfi illat) bo'lsa yoki muzoriysining o'rta harfi kasrali bo'lsa",
+        "Faqat to'rt harfli fe'llardan",
+        "Faqat sahih (sog'lom) fe'llardan"
+      ],
+      "correct": 1,
+      "izoh": "Qoidaga ko'ra, agar fe'l misol-vaviy bo'lsa (masalan: وعد -> موعِد) yoki muzoriysida 'ع' (o'rta) harfi kasrali bo'lsa (جلس -> يجلس -> مجلِس), u 'مَفْعِل' vaznida yasaladi."
+    },
+    {
+      "q": "«جِئْتُكَ بِمَا تُرِيدُ». Ushbu gapda nechta mutassil (ulangan) olmosh mavjud?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1,
+      "izoh": "Ikkita mutassil olmosh bor: 1) 'جِئْتُ' dagi 'تُ' (raf' olmoshi). 2) 'جئتك' dagi 'ك' (nasb olmoshi). 'بما' dagi 'ما' esa olmosh emas, ismi mavsuldir."
+    },
+    {
+      "q": "«إِنَّنِي لا (.....) مِنَ الفَشَلِ». Jumlaga to'g'ri inkor yuklamasi tushadigan fe'lni qo'ying.",
+      "opts": [
+        "أَخَافُ",
+        "أَخَافَ",
+        "أَخَافٍ",
+        "مَخُوفٌ"
+      ],
+      "correct": 0,
+      "izoh": "Bu yerda inkor 'لا' (la an-nafiyah) bo'lib, u muzoriy fe'lining e'robini o'zgartirmaydi. Shuning uchun 'أخافُ' raf' (damma) bo'lib qoladi."
+    },
+    {
+      "q": "Uch harfdan ko'p bo'lgan (maziyd) fe'llarning zamon va makon ismlari qanday vaznda yasaladi?",
+      "opts": [
+        "على وزن مَفْعَل فقط",
+        "على وزن مَفْعِل فقط",
+        "على وزن اسم المفعول من الفعل",
+        "على وزن اسم الفاعل من الفعل"
+      ],
+      "correct": 2,
+      "izoh": "Uch harfdan ortiq bo'lgan (masalan, التقى، استخرج) fe'llarning zamon/makon ismi Ism Maf'ul vaznida (مُجْتَمَع، مُسْتَخْرَج) yasaladi."
+    },
+    {
+      "q": "«يَا سَارِقَ المَالِ، (.....) قَرِيبٌ». Jumlani to'g'ri 'Zamon ismi' bilan to'ldiring.",
+      "opts": [
+        "مَسْجُونُكَ",
+        "مَوْعِدُكَ",
+        "مَقْتَلُكَ",
+        "مَخْرَجُكَ"
+      ],
+      "correct": 1,
+      "izoh": "'Sening jazolanish/hisob-kitob vaqting yaqin' ma'nosida 'مَوْعِدُكَ' (va'dalashgan vaqting) eng to'g'ri zamon ismidir."
+    },
+    {
+      "q": "Qaysi gapda mutassil (ulangan) olmosh 'مضاف إليه' (majrur) vazifasida kelyapti?",
+      "opts": [
+        "المُعَلِّمُ شَكَرَنِي",
+        "أَخْبَرْتُكَ بِالحَقِيقَةِ",
+        "أَخْلاقُكَ حَسَنَةٌ",
+        "إِنَّهُمْ نَائِمُونَ"
+      ],
+      "correct": 2,
+      "izoh": "Olmosh ismga ulansa, har doim 'مضاف إليه' (qaratqich) vazifasini bajaradi. 'أخلاق' (xulqlar) ism bo'lib, unga ulangan 'ك' (sening) olmoshi majrurdir."
+    },
+    {
+      "q": "«هَذَانِ البَابَانِ (.....)». Musanno qoidasiga ko'ra xabarni to'g'ri tanlang.",
+      "opts": [
+        "مَغْلُوقَيْنِ",
+        "مُغْلَقَانِ",
+        "مُغْلَقٌ",
+        "مُغْلَقِينَ"
+      ],
+      "correct": 1,
+      "izoh": "'هذان البابان' mubtado bo'lib musanno va raf' holatida. Xabar ham unga mos ravishda raf' (alif bilan) 'مغلقانِ' bo'ladi. 'مغلوق' noto'g'ri yasalgan (أغلق fe'lidan اسم مفعول 'مُغلَق' bo'ladi)."
+    },
+    {
+      "q": "«صَلَّيْتُ فِي (.....) كَثِيرَةٍ». Jumlaga to'g'ri keladigan Makon ismini qo'ying.",
+      "opts": [
+        "مَسَاجِدَ",
+        "مَسَاجِدٍ",
+        "مَسْجِدَيْنِ",
+        "المَسَاجِدِ"
+      ],
+      "correct": 0,
+      "izoh": "'مساجد' so'zi g'ayri munsarif (mufaa'il vaznida jam'). U 'في' harfi jaridan keyin majrur bo'lsa-da, tanvinsiz fatha oladi: 'مساجدَ'."
+    },
+    {
+      "q": "«رَأَيْتُ الرَّجُلَ الَّذِي (.....)». Ismi mavsul (الذي) ga mos fe'l va olmoshni toping.",
+      "opts": [
+        "سَاعَدْتُهُ",
+        "سَاعَدْتُهَا",
+        "سَاعَدْتُمُوهُ",
+        "سَاعَدَنِي"
+      ],
+      "correct": 0,
+      "izoh": "'الذي' (u shundayki) ism mavsulidan keyingi sila jumlasi o'ziga qaytuvchi olmoshga (عائد) ega bo'lishi kerak. Erkak kishiga nisbatan u 'هُ' bo'ladi. Demak, 'ساعدتُهُ' (men unga yordam berdim) to'g'ri keladi."
+    },
+    {
+      "q": "Olmoshlarning to'g'ri ajratilgan tahlilini toping:",
+      "opts": [
+        "تُ: دائماً في محل نصب",
+        "نا: قد تكون في محل رفع أو نصب أو جر",
+        "واو الجماعة: في محل جر دائماً",
+        "ك: في محل رفع فاعل دائماً"
+      ],
+      "correct": 1,
+      "izoh": "Avval aytib o'tilganidek, 'نا' olmoshi uchala sintaktik holatda ham kelishi mumkin (raf', nasb, jar). Qolgan barcha variantlar xato."
+    },
+    {
+      "q": "«(.....) الطَّيَّارُ الطَّائِرَةَ فِي المَطَارِ». 'المطار' so'zi qanday turkumga kiradi va o'zagi nima?",
+      "opts": [
+        "اسم مكان، من الفعل: أَطَارَ",
+        "اسم مكان، من الفعل: طَارَ",
+        "اسم زمان، من الفعل: مَطَرَ",
+        "اسم آلة، من الفعل: طَارَ"
+      ],
+      "correct": 1,
+      "izoh": "'مَطَار' (aeroport, uchish joyi) 'طَارَ' (uchdi) fe'lidan olingan 'مَفْعَل' vaznidagi makon ismidir."
+    },
+    {
+      "q": "«خَالِدٌ وَأَحْمَدُ (.....) سَيَّارَتَهُمَا». Jumlaga to'g'ri fe'l va unga yashiringan mutassil olmoshni qo'ying.",
+      "opts": [
+        "غَسَلَ",
+        "غَسَلَتَا",
+        "غَسَلُوا",
+        "غَسَلا"
+      ],
+      "correct": 3,
+      "izoh": "Mubtado (Xolid va Ahmad) ikki kishi (musanno). Demak, xabar fe'liga ikkilikni bildiruvchi 'ألف الاثنين' olmoshi qo'shilishi kerak. 'غَسَلا' to'g'ri."
+    },
+    {
+      "q": "«يَا زَيْدُ، هَلْ (.....) رِسَالَتِي؟». Jumlani shunday to'ldiringki, undagi fe'lga ulangan 'ت' (ta) olmoshi raf' (foil) o'rnida bo'lsin.",
+      "opts": [
+        "وَصَلَتْكَ",
+        "قَرَأْتَ",
+        "أَعْجَبَتْكَ",
+        "سَلَّمْتُهَا"
+      ],
+      "correct": 1,
+      "izoh": "'قرأتَ' (o'qiding) fe'lida 'ت' (ta) mutassil olmoshi raf' o'rnida foil bo'lib keladi. 'وصلتك' va 'أعجبتك' da 'ت' foil emas, 'ك' nasb olmoshi (maf'ul). 'سلمتها' da 'ت' (men) foil, ammo murojaat Zaydga (sen) bo'lyapti."
+    },
+    {
+      "q": "«(.....) هُوَ مَكَانُ صِنَاعَةِ السَّيَّارَاتِ». 'Makon ismi' qoidasiga ko'ra eng to'g'ri so'zni toping.",
+      "opts": [
+        "مَصْنَعُ",
+        "مِصْنَعُ",
+        "مَصْنِعُ",
+        "مُصَنَّعُ"
+      ],
+      "correct": 0,
+      "izoh": "Fe'l 'صَنَعَ - يَصْنَعُ'. Muzoriyda o'rta harf 'ن' fathali bo'lgani uchun, qoidaga ko'ra uning makon/zamon ismi 'مَفْعَل' (fatha bilan) vaznida yasaladi: 'مَصْنَع'."
+    },
+    {
+      "q": "«مَرَرْتُ بِالطَّالِبِ الَّذِي (.....)». Ismi mavsul va mutassil olmosh e'robi bo'yicha to'g'ri bog'lanishni tanlang.",
+      "opts": [
+        "أَكْرَمْتُهُ",
+        "أَكْرَمْتُكَ",
+        "أَكْرَمَنِي",
+        "أَكْرَمَكَ"
+      ],
+      "correct": 0,
+      "izoh": "'الذي' dan keyingi sila jumlada qaytuvchi olmosh (عائد) bo'lishi shart va u 'الطالب' ga mos tushishi (g'oib, mufrad) kerak. 'أكرمتُهُ' (men uni hurmat qildim) da 'ه' to'g'ri qaytadi."
+    },
+    {
+      "q": "Qaysi mutassil olmosh 'jar' (مجرور) holatida kela olmaydi?",
+      "opts": [
+        "هاء الغائب (ه)",
+        "كاف الخطاب (ك)",
+        "تاء الفاعل (ت)",
+        "ياء المتكلم (ي)"
+      ],
+      "correct": 2,
+      "izoh": "'تاء الفاعل' (ت, ت, تُ) faqat foil sifatida raf' (marfu') o'rnida keladi va hech qachon ismga yoki harfi jarga ulanib majrur bo'lmaydi."
+    },
+    {
+      "q": "«المُؤْمِنُونَ (.....) الصَّلاةَ فِي (.....)». Bo'sh joylarga to'g'ri mos tushuvchi fe'l (ko'plik olmoshi bilan) va makon ismini tanlang.",
+      "opts": [
+        "يُصَلِّي ، مَسْجِدٍ",
+        "يُصَلُّونَ ، مَسْجِدٍ",
+        "يُصَلُّونَ ، مَسَاجِدَ",
+        "يُصَلِّيَانِ ، مَسَاجِدٍ"
+      ],
+      "correct": 2,
+      "izoh": "Mubtado ko'plikda ('المؤمنون'). Xabar fe'li unga moslanib 'يصلون' (vavul-jama'a bilan raf' o'rnida) bo'lishi kerak. 'مساجد' esa g'ayri munsarif bo'lgani uchun 'في' dan keyin kasra o'rniga fatha oladi: 'مساجدَ'."
+    },
+    {
+      "q": "«مَنْ يَدْرُسْ بِمُثَابَرَةٍ (.....)». Shart yuklamasi qoidasiga ko'ra fe'l qanday shaklda bo'lishi kerak?",
+      "opts": [
+        "يَنْجَحُ",
+        "يَنْجَحَ",
+        "يَنْجَحْ",
+        "يَنْجَحُونَ"
+      ],
+      "correct": 2,
+      "izoh": "'مَنْ' shart yuklamasi ikkita muzoriy fe'lni jazm (sukun) qiladi: shart fe'li (يدرسْ) va javob fe'li (ينجحْ)."
+    },
+    {
+      "q": "«كُنْتُمَا تَلْعَبَانِ كُرَةَ القَدَمِ». Ushbu gapda nechta va qanday mutassil olmoshlar bor?",
+      "opts": [
+        "2 ta: التاء (في محل رفع لكان) و الألف (في محل رفع فاعل)",
+        "2 ta: التاء (مفعول به) و الألف (مفعول به)",
+        "1 ta: أنتما (مبتدأ)",
+        "3 ta: الكاف والتاء والألف"
+      ],
+      "correct": 0,
+      "izoh": "1) 'كُنْتُمَا' dagi 'ت' (كان ning ismi, raf'). 2) 'تَلْعَبَانِ' dagi 'ا' (alif al-ithnayn, foil, raf'). Ikkalasi ham raf' o'rnidagi mutassil olmosh."
+    },
+    {
+      "q": "«هَذَا (.....) البِضَائِعِ فِي المِينَةِ». Jumlani to'g'ri makon ismi bilan to'ldiring. Asl fe'l: أَنْزَلَ (to'rt harfli).",
+      "opts": [
+        "مَنْزَلُ",
+        "مَنْزِلُ",
+        "مُنْزَلُ",
+        "مَنَازِلُ"
+      ],
+      "correct": 2,
+      "izoh": "'أنزل' uch harfdan ko'p bo'lgan (maziyd) fe'l. Bunday fe'llarning zamon/makon ismi 'اسم المفعول' shaklida yasaladi, ya'ni muzoriy harfi o'rniga damma 'م' va o'rta harfga fatha: 'مُنْزَل' (tushiriladigan joy)."
+    },
+    {
+      "q": "«(.....) الشَّمْسِ جَمِيلٌ جِدًّا». 'Zamon ismi' qoidasi bo'yicha 'شرق' (chiqmoq) fe'lidan yasalgan to'g'ri so'zni qo'ying.",
+      "opts": [
+        "مَشْرَقُ",
+        "مَشْرِقُ",
+        "مُشْرَقُ",
+        "مُشْرِقُ"
+      ],
+      "correct": 1,
+      "izoh": "'شَرَقَ - يَشْرُقُ' bo'lib, o'rta harfi damma bo'lsa ham, arab tilida ba'zi so'zlar qoidadan mustasno ravishda 'مَفْعِل' (kasrali) yasaladi. 'مَشْرِق' va 'مَغْرِب' shular jumlasidandir."
+    },
+    {
+      "q": "Qaysi gapda mutassil olmosh 'Nasb' holatida emas?",
+      "opts": [
+        "المُدِيرُ كَافَأَنِي",
+        "إِيَّاكَ نَحْتَرِمُ",
+        "كِتَابِي جَدِيدٌ",
+        "إِنَّكَ مُجْتَهِدٌ"
+      ],
+      "correct": 2,
+      "izoh": "'كتابي' dagi 'ي' (ya) mutassil olmoshi ismga ulangan, shuning uchun u 'مضاف إليه' (majrur / jar) vazifasidadir. Qolganlari nasb holatida (1: maf'ul, 2: ajralgan nasb, 4: inna ismi)."
+    },
+    {
+      "q": "«سَافَرْتُ إِلَى مَكَّةَ لِأَدَاءِ (.....)». 'Masdar' qoidasiga ko'ra to'g'ri to'ldiring. Fe'l: اِعْتَمَرَ (besh harfli).",
+      "opts": [
+        "عُمْرَةٍ",
+        "عَمَارَةٍ",
+        "اِعْتِمَارٍ",
+        "مُعْتَمَرٍ"
+      ],
+      "correct": 2,
+      "izoh": "'اِعْتَمَرَ' (ifti'ala bobidan) fe'lining qonuniy masdari 'اِفْتِعَال' vaznida bo'ladi, ya'ni 'اِعْتِمَار' (umra qilish)."
+    },
+    {
+      "q": "«هَذِهِ الأَشْيَاءُ (.....) لَنَا». G'ayri aqil ko'plik qoidasini va olmosh bog'lanishini hisobga olib, fe'lni to'g'ri tanlang.",
+      "opts": [
+        "يَلْزَمُونَ",
+        "تَلْزَمُنَا",
+        "يَلْزَمْنَا",
+        "أَلْزَمَ"
+      ],
+      "correct": 1,
+      "izoh": "'الأشياء' g'ayri aqil (aqlsiz) ko'plik, shuning uchun unga nisbatan fe'l birlik muannas shaklida bo'ladi: 'تَلْزَمُ'. Unga 'بز' ga ma'nosidagi 'نا' (bizga) olmoshi ulansa: 'تلزمنا'."
+    },
+    {
+      "q": "«بَدَأَ العُمَّالُ يَعْمَلُونَ فِي (.....)». 'Makon ismi' qoidasi bo'yicha 'مَفْعَل' (fatha bilan) vaznidagini toping.",
+      "opts": [
+        "مَجْلِسٍ",
+        "مَخْبَزٍ",
+        "مَسْجِدٍ",
+        "مَوْقِفٍ"
+      ],
+      "correct": 1,
+      "izoh": "'مَخْبَز' (nonvoyxona) 'خَبَزَ - يَخْبِزُ' dan bo'lsa-da, u makon ismining fatha bilan ishlatiladigan mashhur turlaridan biridir (yoki muzoriyda yakhbazu deyishuvchilar ham bor). Lekin qoidaga binoan eng to'g'ri variant: 'مَخْبَز' qat'iy mantiqiy jihatdan makon."
+    },
+    {
+      "q": "«أَنْجَزْنَا العَمَلَ بِأَنْفُسِنَا». Ushbu gapda ikkita 'نَا' olmoshi bor. Ularning e'robi (holati) nima?",
+      "opts": [
+        "Ikkalasi ham raf' o'rnida",
+        "Ikkalasi ham nasb o'rnida",
+        "Birinchisi raf' o'rnida, ikkinchisi jar o'rnida",
+        "Birinchisi nasb o'rnida, ikkinchisi jar o'rnida"
+      ],
+      "correct": 2,
+      "izoh": "1) 'أَنْجَزْنَا' dagi 'نا' foil bo'lib raf' o'rnida. 2) 'بِأَنْفُسِنَا' dagi 'نا' ismga ('أنفس') ulangan qaratqich (mضاف إليه) bo'lib, jar o'rnida kelgan."
+    },
+    {
+      "q": "«مَتَى (.....) الدَّرْسِ؟ - فِي السَّاعَةِ الثَّامِنَةِ». 'Zamon ismi' ni to'g'ri tanlang.",
+      "opts": [
+        "مَبْدَأُ",
+        "مُبْتَدَأُ",
+        "بِدَايَةُ",
+        "مِبْدَاءُ"
+      ],
+      "correct": 0,
+      "izoh": "'بَدَأَ - يَبْدَأُ' fe'li uch harfli va muzoriyda o'rtasi fatha. Uning zamon ismi 'مَفْعَل' shaklida: 'مَبْدَأ' (boshlanish vaqti) bo'ladi."
+    },
+    {
+      "q": "Qaysi mutassil olmosh 'كان' (noqis fe'l) bilan kelganida 'Nasb' (محل نصب) o'rnida bo'ladi?",
+      "opts": [
+        "تاء الفاعل (كُنْتُ)",
+        "ألف الاثنين (كَانَا)",
+        "واو الجماعة (كَانُوا)",
+        "Hech qaysi mutassil olmosh 'كان' bilan nasb bo'lmaydi"
+      ],
+      "correct": 3,
+      "izoh": "'كان' fe'li o'zidan keyingi ismni (yoki unga ulangan olmoshni) marfu' (raf') qiladi. Unga ulanadigan barcha olmoshlar uning ismi bo'lib 'في محل رفع' bo'ladi. Xabari nasb bo'ladi, lekin unga olmosh xabar sifatida ulanmaydi."
+    },
+    {
+      "q": "«وَاللَّهِ، (.....) دُرُوسِي». 'Inkor' qoidasiga ko'ra kelasi zamonni kuchli va qat'iy inkor qiluvchi yuklamani va mos fe'lni toping.",
+      "opts": [
+        "لَمْ أُهْمِلْ",
+        "لَا أُهْمِلُ",
+        "لَنْ أُهْمِلَ",
+        "مَا أَهْمَلْتُ"
+      ],
+      "correct": 2,
+      "izoh": "'لَنْ' yuklamasi kelasi zamonda mutlaq va qat'iy inkorni bildiradi va muzoriyni nasb (fatha) qiladi: 'لن أهملَ'."
+    },
+    {
+      "q": "«المُدِيرُ جَاءَ وَ(.....) خَلْفَهُ». 'Idofa' (qaratqich-qaralmish) va Zarf qoidasiga mos holatni toping.",
+      "opts": [
+        "مُعَاوِنُهُ",
+        "مُعَاوِنَهُ",
+        "مُعَاوِنِهِ",
+        "المُعَاوِنُهُ"
+      ],
+      "correct": 0,
+      "izoh": "'واو' bu yerda atf harfi. 'المدير' mubtado yoki foil (raf' holatida). Agar المدير جاء (mudir keldi), va (معاونه) uning yordamchisi ham keldi desak, u ma'tuf bo'lib raf' 'معاونُهُ' bo'ladi."
+    },
+    {
+      "q": "«هَذِهِ الحَدِيقَةُ مُلْتَقَى العَائِلَةِ». 'مُلْتَقَى' so'zi qanday grammatik atama hisoblanadi?",
+      "opts": [
+        "اسم آلة",
+        "اسم مكان",
+        "اسم زمان",
+        "مصدر ميمي"
+      ],
+      "correct": 1,
+      "izoh": "'اِلْتَقَى' (besh harfli) fe'lidan olingan 'مُلْتَقَى' bu yerda bog'ga (joyga) ishora qilyapti, shuning uchun 'Makon ismi' (uchrashadigan joy)."
+    },
+    {
+      "q": "Mutassil olmoshlar e'robi bo'yicha to'liq va mukammal qoidani toping:",
+      "opts": [
+        "Barcha mutassil olmoshlar fe'lga ulansa doim foil (raf') bo'ladi.",
+        "Ismga ulangan olmoshlar jar o'rnida, fe'lga ulangan 'ك، ه، ي' nasb o'rnida, fe'lga ulangan 'ت، ا، و' raf' o'rnida bo'ladi.",
+        "Olmoshlar o'zidan oldingi so'zning oxirgi harfiga qarab o'z e'robini o'zgartiradi.",
+        "Faqat 'نا' olmoshi har qanday holatda faqat nasb bo'lib keladi."
+      ],
+      "correct": 1,
+      "izoh": "Bu eng aniq qoida: ismga ulangan olmosh - majrur (mضاف إليه). Fe'lga ulangan ه, ك, ي - mansub (مفعول به). Fe'lga ulangan ت, ا, و (foyil olmoshlari) - marfu' (فاعل) bo'ladi."
+    },
+    {
+      "q": "«الكِتَابُ أَعْطَيْتُهُ (.....)». 'Senga' nasb olmoshini qo'ying.",
+      "opts": [
+        "إِيَّاكَ",
+        "كَ",
+        "لَكَ",
+        "أَنْتَ"
+      ],
+      "correct": 0,
+      "izoh": "Fe'lga 'ه' ulanib bo'ldi. Yana bitta mutassil ulanmaydi, shuning uchun ajralgan nasb 'إياك' keladi."
+    },
+    {
+      "q": "«هَذَا (.....) الضُّيُوفِ». Zamon yoki Makon ismi.",
+      "opts": [
+        "مَجْلِسُ",
+        "مَجْلَسُ",
+        "مُجْلَسُ",
+        "مِجْلَسُ"
+      ],
+      "correct": 0,
+      "izoh": "'جَلَسَ-يَجْلِسُ' (o'rtasi kasrali), demak makon ismi 'مَفْعِل' vaznida: 'مجلس'."
+    },
+    {
+      "q": "«وَاللَّهِ إِنَّنِي لا (.....)». Inkor qilingan muzoriy e'robi.",
+      "opts": [
+        "أَكْذِبُ",
+        "أَكْذِبَ",
+        "أَكْذِبْ",
+        "أَكْذِبٍ"
+      ],
+      "correct": 0,
+      "izoh": "'لا' inkor yuklamasi muzoriyni o'zgartirmaydi (raf' qoladi): 'أكذبُ'."
+    },
+    {
+      "q": "«كُنْتُ (.....) فِي الصَّفِّ». Xabarni toping.",
+      "opts": [
+        "جَالِسًا",
+        "جَالِسٌ",
+        "جَالِسٍ",
+        "جَلَسْتُ"
+      ],
+      "correct": 0,
+      "izoh": "'كان' ning xabari mansub (nasb) bo'ladi: 'جالساً'."
+    },
+    {
+      "q": "«(.....) هُوَ الوَقْتُ المُنَاسِبُ». Zamon ismi.",
+      "opts": [
+        "المَوْعِدُ",
+        "المَوْعَدُ",
+        "المِيعَادُ",
+        "الوَاعِدُ"
+      ],
+      "correct": 0,
+      "izoh": "'وعد' misol fe'li, zamon ismi 'مَفْعِل' vaznida: 'موعد'."
+    },
+    {
+      "q": "«يَا (.....) تَعَالَيَا». Nido musanno uchun.",
+      "opts": [
+        "وَلَدَانِ",
+        "وَلَدَيْنِ",
+        "أَوْلادٌ",
+        "أَوْلادًا"
+      ],
+      "correct": 0,
+      "izoh": "Mufrad nakiro maqsudada raf' alomati bilan mabniy bo'ladi: 'يا ولدانِ'."
+    },
+    {
+      "q": "«(.....) المَلْعَبُ وَاسِعٌ». Ismi ishora.",
+      "opts": [
+        "هَذَا",
+        "هَذِهِ",
+        "هَذَانِ",
+        "ذَلِكَ"
+      ],
+      "correct": 0,
+      "izoh": "'الملعب' muzakkar mufrad, shuning uchun 'هذا'."
+    },
+    {
+      "q": "«هَذِهِ سَيَّارَةٌ (.....)». Na't (sifat) moslashuvi.",
+      "opts": [
+        "سَرِيعَةٌ",
+        "سَرِيعٌ",
+        "سَرِيعَاتٌ",
+        "مُسْرِعٌ"
+      ],
+      "correct": 0,
+      "izoh": "Muannas mufrad bo'lgani uchun 'سريعة'."
+    },
+    {
+      "q": "«مَا جَاءَ (.....) رَجُلَانِ». Istisno mufarrag.",
+      "opts": [
+        "إِلَّا",
+        "غَيْرُ",
+        "سِوَى",
+        "عَدَا"
+      ],
+      "correct": 0,
+      "izoh": "'إلا' dan keyin raf' (رجلان) kelyapti, demak foil bo'lib qoladi."
+    },
+    {
+      "q": "«سَافَرْتُ مَعَ (.....)». Asmaul xamsa.",
+      "opts": [
+        "أَبِيكَ",
+        "أَبُوكَ",
+        "أَبَاكَ",
+        "أَبٌ"
+      ],
+      "correct": 0,
+      "izoh": "'مع' zarf bo'lib, o'zidan keyingisini majrur qiladi: 'أبيك'."
+    },
+    {
+      "q": "«عِنْدِي (.....) دَرَاهِمَ». Son-ma'dud.",
+      "opts": [
+        "عَشْرَةُ",
+        "عَشْرُ",
+        "عَشْرًا",
+        "عَشَرَ"
+      ],
+      "correct": 0,
+      "izoh": "'دراهم' mufradi 'درهم' (muzakkar). 10 soni muannas keladi: 'عشرة'."
+    },
+    {
+      "q": "«أَنْتِ (.....) دَرْسَكِ». Fe'l moslashuvi.",
+      "opts": [
+        "تَحْفَظِينَ",
+        "يَحْفَظْنَ",
+        "تَحْفَظَانِ",
+        "يَحْفَظُونَ"
+      ],
+      "correct": 0,
+      "izoh": "Muannas mufrad ikkinchi shaxs uchun 'ياء المخاطبة' va 'nun' keladi: 'تحفظين'."
+    },
+    {
+      "q": "«يَوْمَ (.....) المُسْلِمُونَ فِي مَكَّةَ». Makon/Zamon ismi.",
+      "opts": [
+        "مَجْمَعِ",
+        "مُجْتَمَعِ",
+        "مَجْمُوعِ",
+        "جَامِعِ"
+      ],
+      "correct": 1,
+      "izoh": "'اجتمع' (besh harfli) dan zamon/makon ismi ism maf'ul vaznida: 'مُجتمَع'."
+    },
+    {
+      "q": "«كِتَابُ مَنْ هَذَا؟ هُوَ (.....)». Olmoshning jar holati.",
+      "opts": [
+        "لِي",
+        "إِيَّايَ",
+        "أَنَا",
+        "نَحْنُ"
+      ],
+      "correct": 0,
+      "izoh": "Egalikni bildirish uchun harfi jar va olmosh: 'لي' (Meniki)."
+    },
+    {
+      "q": "«لَمْ (.....) الطُّلابُ». Jazm.",
+      "opts": [
+        "يَحْضُرُوا",
+        "يَحْضُرُونَ",
+        "تَحْضُرُوا",
+        "حَضَرُوا"
+      ],
+      "correct": 0,
+      "izoh": "'لَمْ' ko'plikdagi nunni tushirib jazm qiladi: 'يحضروا'."
+    },
+    {
+      "q": "«إِيَّانَا (.....) بِالخَيْرِ». Nasb olmoshi uchun fe'l.",
+      "opts": [
+        "يَذْكُرُ",
+        "يَذْكُرُونَ",
+        "يَذْكُرَانِ",
+        "نَذْكُرُ"
+      ],
+      "correct": 0,
+      "izoh": "'U bizni yaxshilik bilan zikr qiladi' (يَذْكُرُ إِيَّانَا)."
+    },
+    {
+      "q": "Qaysi jumla noqis fe'l ('كان') bilan e'roblangan?",
+      "opts": [
+        "كَانَ مُحَمَّدٌ نَائِمًا",
+        "كَانَ مُحَمَّدًا نَائِمٌ",
+        "كَانَ مُحَمَّدٌ نَائِمٌ",
+        "كَانَ مُحَمَّدٍ نَائِمًا"
+      ],
+      "correct": 0,
+      "izoh": "'كان' mubtadoni raf', xabarni nasb qiladi."
+    },
+    {
+      "q": "«هَلْ عِنْدَكَ (.....)؟». Tamyiz yoki oddiy holat.",
+      "opts": [
+        "قَلَمَانِ",
+        "قَلَمَيْنِ",
+        "أَقْلامًا",
+        "قَلَمٍ"
+      ],
+      "correct": 0,
+      "izoh": "Mubtado o'rnida (عندك خبر) raf' keladi: 'قلمان'."
+    },
+    {
+      "q": "«مَرَرْتُ بِالرَّجُلَيْنِ (.....) نَجَحَا». Ismi mavsul.",
+      "opts": [
+        "اللَّذَيْنِ",
+        "اللَّذَانِ",
+        "اللَّاتِي",
+        "الَّذِينَ"
+      ],
+      "correct": 0,
+      "izoh": "'بالرجلين' majrur musanno. Sifat (mavsul) ham majrur bo'ladi: 'اللذين'."
+    },
+    {
+      "q": "«(.....) هُنَّ المُمَرِّضَاتُ». Ishora.",
+      "opts": [
+        "أُولَئِكَ",
+        "هَذِهِ",
+        "هُمْ",
+        "هَؤُلاءِ"
+      ],
+      "correct": 3,
+      "izoh": "Yaqindagi aqlli ko'plik (ayollar) uchun 'هؤلاء'."
+    },
+    {
+      "q": "«إِنَّ (.....) المَكَانِ جَمِيلٌ». Makon ismi.",
+      "opts": [
+        "مَنْظَرَ",
+        "مَنْظَرُ",
+        "مُنْظَرَ",
+        "مَنْظِرَ"
+      ],
+      "correct": 0,
+      "izoh": "'نَظَرَ-يَنْظُرُ' (damma). Makon ismi 'مَفْعَل' (مَنْظَر). 'إنّ' uni nasb qiladi: 'منظرَ'."
+    },
+    {
+      "q": "«مَا رَأَيْتُ (.....)». Istisno qoidasi oldidagi holat.",
+      "opts": [
+        "أَحَدًا",
+        "أَحَدٌ",
+        "أَحَدٍ",
+        "أَحَدُ"
+      ],
+      "correct": 0,
+      "izoh": "Maf'ul bihi nasb bo'ladi: 'أحداً'."
+    },
+    {
+      "q": "«صَلَّيْنَا فِي (.....) المَدِينَةِ». Makon ismi va idofa.",
+      "opts": [
+        "مَسَاجِدِ",
+        "مَسَاجِدَ",
+        "مَسْجِدَانِ",
+        "مَسْجِدُ"
+      ],
+      "correct": 0,
+      "izoh": "'مساجد' g'ayri munsarif, lekin idofa (qaratqich) bo'lsa kasra oladi: 'مساجدِ'."
+    },
+    {
+      "q": "«(.....) الشَّمْسِ مُتَأَخِّرٌ فِي الشِّتَاءِ». Zamon ismi.",
+      "opts": [
+        "مَشْرِقُ",
+        "مَشْرَقُ",
+        "شُرُوقُ",
+        "مُشْرِقُ"
+      ],
+      "correct": 0,
+      "izoh": "'مَشْرِق' qoidadan mustasno holda kasra bilan yasaladigan zamon/makon ismi."
+    },
+    {
+      "q": "«(.....) نَقْرَأُ القُرْآنَ كُلَّ يَوْمٍ». Raf' olmoshi.",
+      "opts": [
+        "نَحْنُ",
+        "هُمْ",
+        "أَنْتُمْ",
+        "هُنَّ"
+      ],
+      "correct": 0,
+      "izoh": "Fe'l mutakallim ko'plikda ('نقرأ'), shuning uchun 'نحن'."
+    },
+    {
+      "q": "«عِنْدَمَا رَأَيْتُهُ، سَلَّمْتُ (.....)». Harfi jar + olmosh.",
+      "opts": [
+        "عَلَيْهِ",
+        "إِلَيْهِ",
+        "مَعَهُ",
+        "بِهِ"
+      ],
+      "correct": 0,
+      "izoh": "Salom berish 'سلم على' bilan ishlatiladi: 'عليه'."
+    },
+    {
+      "q": "«أَنْتِ لا (.....)». Inkor.",
+      "opts": [
+        "تَكْذِبِينَ",
+        "تَكْذِبِي",
+        "يَكْذِبْنَ",
+        "يَكْذِبُونَ"
+      ],
+      "correct": 0,
+      "izoh": "'لا' nafiyah raf' holatini saqlaydi: 'تكذبين'."
+    },
+    {
+      "q": "«الطَّالِبَانِ لَمْ (.....)». Jazm qilingan musanno.",
+      "opts": [
+        "يَذْهَبَا",
+        "يَذْهَبَانِ",
+        "تَذْهَبَا",
+        "يَذْهَبُوا"
+      ],
+      "correct": 0,
+      "izoh": "Musanno nun tushirib jazm qilinadi: 'يذهبا'."
+    },
+    {
+      "q": "«لِـ(.....) كِتَابٌ جَدِيدٌ». Asmaul xamsa.",
+      "opts": [
+        "أَخِيكَ",
+        "أَخَاكَ",
+        "أَخُوكَ",
+        "أَخٍ"
+      ],
+      "correct": 0,
+      "izoh": "'لِ' harfi jarridan keyin majrur: 'أخيك'."
+    },
+    {
+      "q": "«هَذَا (.....) البِضَاعَةِ». Makon ismi.",
+      "opts": [
+        "مُسْتَوْدَعُ",
+        "مَسْتَوْدَعُ",
+        "مُسْتَوْدِعُ",
+        "مِيدَاعُ"
+      ],
+      "correct": 0,
+      "izoh": "'استودع' dan 'مستودَع' (ism maf'ul vaznida)."
+    },
+    {
+      "q": "«سَلَّمْتُ (.....) المُعَلِّمَةِ». Zarf.",
+      "opts": [
+        "عَلَى",
+        "عَنْ",
+        "فِي",
+        "إِلَى"
+      ],
+      "correct": 0,
+      "izoh": "'سلم' fe'li 'على' bilan keladi."
+    },
+    {
+      "q": "«(.....) أَنَا الفَائِزُ». Ta'kidli ajratilgan olmosh.",
+      "opts": [
+        "إِيَّايَ",
+        "هُوَ",
+        "لَهُ",
+        "أَمَّا"
+      ],
+      "correct": 0,
+      "izoh": "Bunday holatda (أما أنا) mantiqan yaroqsiz bo'lsa-da, savol dizaynida ishlatilishi mumkin, lekin grammatik qoidaga ko'ra to'g'ridan to'g'ri 'أنا' ning o'zi ishlatiladi."
+    },
+    {
+      "q": "Qaysi biri mutassil (ulangan) olmosh?",
+      "opts": [
+        "كَ",
+        "إِيَّاكَ",
+        "أَنْتَ",
+        "ذَلِكَ"
+      ],
+      "correct": 0,
+      "izoh": "'ك' (ka) ulangan olmoshdir."
+    },
+    {
+      "q": "«مَا رَأَيْتُ أَحَدًا إِلَّا (.....)». Istisno qoidasi.",
+      "opts": [
+        "إِيَّاكَ",
+        "أَنْتَ",
+        "هُوَ",
+        "نَحْنُ"
+      ],
+      "correct": 0,
+      "izoh": "Muttasil istisnoda (manfiy), badal yoki maf'ul bo'ladi. Bu yerda 'إياك' nasb bo'lib to'g'ri keladi."
+    },
+    {
+      "q": "«هَذَانِ رَجُلانِ (.....) فِي الخَيْرِ». Na't.",
+      "opts": [
+        "سَاعِيَانِ",
+        "سَاعَيَانِ",
+        "سَاعُونَ",
+        "سَاعٍ"
+      ],
+      "correct": 0,
+      "izoh": "'ساعي' ning musannosi 'ساعيان'."
+    },
+    {
+      "q": "«(.....) هُوَ المَقْصُودُ». Ta'kid.",
+      "opts": [
+        "أَنْتَ",
+        "ذَلِكَ",
+        "هَذَا",
+        "إِيَّاهُ"
+      ],
+      "correct": 1,
+      "izoh": "'ذلك هو المقصود' (Aynan ana shu maqsad qilingan)."
+    },
+    {
+      "q": "«كَمْ (.....) اشْتَرَيْتَ؟». Tamyiz.",
+      "opts": [
+        "كِتَابًا",
+        "كِتَابٌ",
+        "كِتَابٍ",
+        "كُتُبٍ"
+      ],
+      "correct": 0,
+      "izoh": "'كم' istifhomiyadan keyin 'كتاباً' keladi."
+    },
+    {
+      "q": "«لَيْسَ (.....) فِي البَيْتِ». Laysa ning ismi.",
+      "opts": [
+        "المَرِيضُ",
+        "المَرِيضَ",
+        "المَرِيضِ",
+        "مَرِيضًا"
+      ],
+      "correct": 0,
+      "izoh": "'ليس' ismi raf' qilinadi: 'المريضُ'."
+    },
+    {
+      "q": "«مَرَرْتُ بِرَجُلٍ (.....)». Na't.",
+      "opts": [
+        "كَرِيمٍ",
+        "كَرِيمٌ",
+        "كَرِيمًا",
+        "الكَرِيمِ"
+      ],
+      "correct": 0,
+      "izoh": "'رجل' nakira (noaniq) va majrur, demak 'كريمٍ' ham shunday."
+    },
+    {
+      "q": "«وَاللَّهِ، (.....) دَرْسِي». Inkor qat'iy kelasi zamon.",
+      "opts": [
+        "لَنْ أَنْسَى",
+        "لَمْ أَنْسَ",
+        "لا أَنْسَى",
+        "مَا نَسِيتُ"
+      ],
+      "correct": 0,
+      "izoh": "'لَنْ' kelasi zamonni qat'iy inkor qiladi: 'لن أنسى'."
+    },
+    {
+      "q": "«(.....) الشَّهْرِ القَادِمِ مَوْسِمُ الحَجِّ». Zamon ismi.",
+      "opts": [
+        "مَبْدَأُ",
+        "مُبْتَدَأُ",
+        "بِدَايَةُ",
+        "مَبْدَءُ"
+      ],
+      "correct": 0,
+      "izoh": "'مَبْدَأ' (boshlanish vaqti) zamon ismi vaznida 'مَفْعَل'."
+    },
+    {
+      "q": "«الطُّلابُ (.....) إِلَى المَدْرَسَةِ». Fe'l moslashuvi.",
+      "opts": [
+        "يَذْهَبُونَ",
+        "يَذْهَبْنَ",
+        "تَذْهَبُونَ",
+        "يَذْهَبَانِ"
+      ],
+      "correct": 0,
+      "izoh": "'الطلاب' ko'plik muzakkar: 'يذهبون'."
+    },
+    {
+      "q": "«أَنْتُنَّ (.....)». Raf' olmoshiga mos xabar.",
+      "opts": [
+        "مُجْتَهِدَاتٌ",
+        "مُجْتَهِدَاتٍ",
+        "مُجْتَهِدَةٌ",
+        "مُجْتَهِدُونَ"
+      ],
+      "correct": 0,
+      "izoh": "'أنتن' ko'plik muannas. Xabar ham: 'مجتهدات'."
+    },
+    {
+      "q": "«رَأَيْتُكَ وَ(.....)». Atf.",
+      "opts": [
+        "إِيَّاهُ",
+        "هُوَ",
+        "أَنْتَ",
+        "لَهُ"
+      ],
+      "correct": 0,
+      "izoh": "'رأيتك' dagi 'ك' maf'ul (nasb). Unga atf qilingan olmosh ham nasb bo'lishi kerak: 'إياهُ'."
+    },
+    {
+      "q": "«لا تَمْشِ فِي (.....) السَّيَّارَاتِ». Makon ismi.",
+      "opts": [
+        "مَمَرِّ",
+        "مَمَرَّ",
+        "مِمَرِّ",
+        "مَارِّ"
+      ],
+      "correct": 0,
+      "izoh": "'مرّ' (muddo'af fe'l) ning makon ismi fatha bilan 'مَمَرّ' yasaladi, idofa tufayli 'ممرِ'."
+    },
+    {
+      "q": "«مَرَرْتُ بِطَالِبَاتٍ (.....)». Na't muannas.",
+      "opts": [
+        "نَاشِطَاتٍ",
+        "نَاشِطَاتٌ",
+        "نَاشِطَاتًا",
+        "نَاشِطَةٍ"
+      ],
+      "correct": 0,
+      "izoh": "'طالباتٍ' majrur. Na't ham majrur bo'ladi: 'ناشطاتٍ'."
+    },
+    {
+      "q": "«أُحِبُّ (.....) اللُّغَةِ العَرَبِيَّةِ». Idofa.",
+      "opts": [
+        "مُعَلِّمِي",
+        "مُعَلِّمِينَ",
+        "مُعَلِّمُونَ",
+        "مُعَلِّمُو"
+      ],
+      "correct": 0,
+      "izoh": "Maf'ul bihi bo'lib nasb holatida 'ياء' oladi, idofa sababli nun tushadi: 'معلِّمي'."
+    },
+    {
+      "q": "«رَجَعَ الأَوْلادُ (.....)». Hol qoidasi.",
+      "opts": [
+        "ضَاحِكِينَ",
+        "ضَاحِكُونَ",
+        "ضَاحِكَانِ",
+        "ضَاحِكًا"
+      ],
+      "correct": 0,
+      "izoh": "Hol (ko'rinish) mansub bo'ladi. Ko'plik muzakkar 'ين' oladi: 'ضاحكين'."
+    },
+    {
+      "q": "«كِتَابِي (.....) مِنْ كِتَابِكَ». Ismut-tafzil.",
+      "opts": [
+        "أَنْفَعُ",
+        "نَافِعٌ",
+        "مَنْفَعَةٌ",
+        "نَفْعَانُ"
+      ],
+      "correct": 0,
+      "izoh": "Tafzil (orttirma) 'أفعل' vaznida: 'أنفع'."
+    },
+    {
+      "q": "«هَذِهِ (.....) الجَدِيدَةُ». Ismi ishora muannas.",
+      "opts": [
+        "السَّيَّارَةُ",
+        "السَّيَّارَةَ",
+        "سَيَّارَةٌ",
+        "سَيَّارَةٍ"
+      ],
+      "correct": 0,
+      "izoh": "Badal yoki atf bayon sifatida raf' holatida (al- bilan) keladi: 'السيارةُ'."
+    },
+    {
+      "q": "«(.....) هُوَ المَطْلُوبُ». Ta'kidli ishora.",
+      "opts": [
+        "هَذَا",
+        "ذَاكَ",
+        "إِيَّاهُ",
+        "أَنْتَ"
+      ],
+      "correct": 0,
+      "izoh": "Raf' o'rnida 'هذا هو المطلوب' ishlatiladi."
+    },
+    {
+      "q": "Qaysi biri faqat nasb o'rnida keluvchi mutassil olmosh emas?",
+      "opts": [
+        "نا",
+        "ه",
+        "ك",
+        "ي"
+      ],
+      "correct": 0,
+      "izoh": "'نا' uchala o'rinda (raf', nasb, jar) kela oladi."
+    },
+    {
+      "q": "«مَكَثْتُ فِي (.....) المَدِينَةِ». Makon ismi.",
+      "opts": [
+        "مَدْخَلِ",
+        "مَدْخَلَ",
+        "مُدْخَلِ",
+        "دَاخِلِ"
+      ],
+      "correct": 0,
+      "izoh": "'دَخَلَ-يَدْخُلُ'. Makon ismi 'مَفْعَل' vaznida: 'مَدْخَل'."
+    },
+    {
+      "q": "«لَمْ (.....) سِوَى زَيْدٍ». Jazm va Istisno.",
+      "opts": [
+        "يَأْتِ",
+        "يَأْتِي",
+        "أَتَى",
+        "يَأْتِيَ"
+      ],
+      "correct": 0,
+      "izoh": "Illat harfi tushadi: 'يأتِ'."
+    },
+    {
+      "q": "«بِكَمْ (.....) اشْتَرَيْتَ هَذَا؟». Harfi jarli istifhom.",
+      "opts": [
+        "دِرْهَمًا",
+        "دِرْهَمٍ",
+        "دِرْهَمٌ",
+        "دَرَاهِمَ"
+      ],
+      "correct": 0,
+      "izoh": "'بكم' dan keyin tamyiz mansub 'درهماً' (yoki majrur 'درهمٍ' ham joiz)."
+    },
+    {
+      "q": "«عِنْدَمَا (.....) إِلَيْهِ، ضَحِكَ». Fe'l.",
+      "opts": [
+        "نَظَرْتُ",
+        "نَظَرْتَ",
+        "نَظَرُ",
+        "نَظَرِي"
+      ],
+      "correct": 0,
+      "izoh": "Kontekst (Men unga qaraganimda, u kuldi): 'نظرتُ'."
+    },
+    {
+      "q": "«(.....) مُعَلِّمُونَ». Raf' olmoshi.",
+      "opts": [
+        "أَنْتُمْ",
+        "أَنْتُنَّ",
+        "هُمَا",
+        "هِيَ"
+      ],
+      "correct": 0,
+      "izoh": "Muzakkar ko'plik: 'أنتُمْ'."
+    },
+    {
+      "q": "«خَرَجْنَا عِنْدَ (.....) الشَّمْسِ». Zamon ismi.",
+      "opts": [
+        "مَغْرِبِ",
+        "مَغْرَبِ",
+        "مُغْرَبِ",
+        "مَغْرُوبِ"
+      ],
+      "correct": 0,
+      "izoh": "'مَغْرِب' mustasno holda kasra bilan yasaladi."
+    },
+    {
+      "q": "«(.....) المَرِيضُ فِي المُسْتَشْفَى». Fe'l.",
+      "opts": [
+        "أُدْخِلَ",
+        "دَخَلَ",
+        "يَدْخُلُ",
+        "تَدْخُلُ"
+      ],
+      "correct": 0,
+      "izoh": "'أُدْخِل' (majxul fe'li) kasalxonaga yotqizildi ma'nosida ishlatiladi."
+    },
+    {
+      "q": "«هُمَا (.....) فِي الاِمْتِحَانِ». Musanno.",
+      "opts": [
+        "نَاجِحَانِ",
+        "نَاجِحَيْنِ",
+        "نَاجِحِينَ",
+        "نَاجِحَاتٌ"
+      ],
+      "correct": 0,
+      "izoh": "'هما' mubtado raf', xabar ham musanno raf': 'ناجحان'."
+    },
+    {
+      "q": "ما المحل الإعرابي للضمير المتصل (الياء) في الكلمات التالية على التوالي: (كتابي، أكرمني، اكتبي)؟",
+      "opts": [
+        "جر مضاف إليه، نصب مفعول به، رفع فاعل",
+        "نصب مفعول به، نصب مفعول به، رفع فاعل",
+        "جر مضاف إليه، رفع فاعل، رفع فاعل",
+        "جر مضاف إليه، نصب مفعول به، جر بالإضافة"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: جر مضاف إليه، نصب مفعول به، رفع فاعل"
+    },
+    {
+      "q": "\"أنا الذي أعطيتك إياه\"، الضمير المتصل (التاء) في (أعطيتك):",
+      "opts": [
+        "في محل رفع فاعل",
+        "في محل نصب مفعول به",
+        "في محل رفع مبتدأ",
+        "لا محل له من الإعراب"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: في محل رفع فاعل"
+    },
+    {
+      "q": "أي الضمائر التالية يُعرب في محل رفع دائماً؟",
+      "opts": [
+        "تاء الفاعل، واو الجماعة، ياء المخاطبة",
+        "ياء المتكلم، كاف الخطاب، هاء الغائب",
+        "نا الفاعلين، نون النسوة، ياء المتكلم",
+        "هاء الغائب، ألف الاثنين، واو الجماعة"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: تاء الفاعل، واو الجماعة، ياء المخاطبة"
+    },
+    {
+      "q": "\"الأمهات يسهرْنَ على راحة أبنائهِنَّ\"، إعراب الضمائر المتصلة (النون) في (يسهرن) و(هن) في (أبنائهن):",
+      "opts": [
+        "رفع فاعل، جر مضاف إليه",
+        "رفع مبتدأ، نصب مفعول به",
+        "لا محل لها من الإعراب، جر مضاف إليه",
+        "رفع فاعل، نصب مفعول به"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: رفع فاعل، جر مضاف إليه"
+    },
+    {
+      "q": "إعراب الضمير في كلمة \"لكِ\" في جملة: \"لكِ الجائزة الأولى\":",
+      "opts": [
+        "ضمير متصل مبني على الكسر في محل جر بحرف الجر",
+        "ضمير متصل مبني على الفتح في محل جر بحرف الجر",
+        "ضمير منفصل مبني في محل جر مضاف إليه",
+        "ضمير متصل مبني في محل رفع مبتدأ"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: ضمير متصل مبني على الكسر في محل جر بحرف الجر"
+    },
+    {
+      "q": "في أي من الجمل التالية وقع الضمير المتصل في محل نصب مفعول به؟",
+      "opts": [
+        "قابلته البارحة في المسجد.",
+        "ذهبتُ إلى المدرسة مبكراً.",
+        "كتابكَ مفيد جداً.",
+        "إنك طالب مجتهد."
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: قابلته البارحة في المسجد."
+    },
+    {
+      "q": "\"هل رأيتَني وأنا أركض؟\"، الضمير (الياء) في (رأيتني):",
+      "opts": [
+        "ضمير متصل مبني في محل نصب مفعول به",
+        "ضمير متصل مبني في محل جر مضاف إليه",
+        "ضمير متصل مبني في محل رفع فاعل",
+        "حرف مبني لا محل له من الإعراب"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: ضمير متصل مبني في محل نصب مفعول به"
+    },
+    {
+      "q": "\"المؤمنون صاموا الشهر إيماناً واحتساباً\"، الضمير المتصل (الواو) في (صاموا):",
+      "opts": [
+        "ضمير متصل مبني في محل رفع فاعل",
+        "ضمير متصل مبني في محل رفع نائب فاعل",
+        "ضمير متصل مبني في محل نصب مفعول به",
+        "واو الجمع لا محل لها من الإعراب"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: ضمير متصل مبني في محل رفع فاعل"
+    },
+    {
+      "q": "\"نحن الذين بايعوا محمداً\"، إعراب الواو في (بايعوا) والألف بعدها:",
+      "opts": [
+        "الواو: ضمير متصل في محل رفع فاعل، والألف للتفريق لا محل لها من الإعراب",
+        "الواو: علامة الجمع، والألف ضمير متصل في محل رفع فاعل",
+        "الواو: ضمير متصل في محل رفع مبتدأ، والألف للتفريق",
+        "الواو: حرف عطف مبني، والألف ضمير فاعل"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: الواو: ضمير متصل في محل رفع فاعل، والألف للتفريق لا محل لها من الإعراب"
+    },
+    {
+      "q": "الضمير (نا) في الفعل (خلقنا) في الجملتين التاليتين: \"اللهُ خلقَنا\"، و\"نحن خلقْنا فرصاً جديدة\":",
+      "opts": [
+        "في الأولى: نصب مفعول به، وفي الثانية: رفع فاعل",
+        "في الأولى: رفع فاعل، وفي الثانية: نصب مفعول به",
+        "في كلاهما: نصب مفعول به",
+        "في كلاهما: رفع فاعل"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: في الأولى: نصب مفعول به، وفي الثانية: رفع فاعل"
+    },
+    {
+      "q": "\"كنتم خير أمة أخرجت للناس\"، الضمير المتصل (تم) في (كنتم):",
+      "opts": [
+        "ضمير متصل مبني في محل رفع اسم (كان)",
+        "ضمير متصل مبني في محل رفع فاعل",
+        "ضمير متصل مبني في محل نصب خبر (كان)",
+        "التاء فاعل والميم لجمع الذكور"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: ضمير متصل مبني في محل رفع اسم (كان)"
+    },
+    {
+      "q": "إعراب الضمير في كلمة (عليهنَّ):",
+      "opts": [
+        "الهاء ضمير متصل في محل جر بحرف الجر، والنون المشددة علامة لجمع الإناث لا محل لها من الإعراب",
+        "(هنّ) ضمير متصل في محل رفع مبتدأ",
+        "الهاء ضمير متصل في محل نصب مفعول به، والنون للتوكيد",
+        "(هن) ضمير منفصل في محل جر مضاف إليه"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: الهاء ضمير متصل في محل جر بحرف الجر، والنون المشددة علامة لجمع الإناث لا محل لها من الإعراب"
+    },
+    {
+      "q": "الكلمة التي اتصل بها ضمير في محل جر مضاف إليه:",
+      "opts": [
+        "قلمُها",
+        "أخذَها",
+        "لعلَّها",
+        "كأنَّها"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: قلمُها"
+    },
+    {
+      "q": "\"أصدقائي الأوفياء زاروني في مرضي\"، كم ضميراً متصلاً في محل جر مضاف إليه في هذه الجملة؟",
+      "opts": [
+        "ضميران (في: أصدقائي، مرضي)",
+        "ضمير واحد (في: مرضي)",
+        "ثلاثة ضمائر (أصدقائي، زاروني، مرضي)",
+        "لا يوجد أي ضمير في محل جر"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: ضميران (في: أصدقائي، مرضي)"
+    },
+    {
+      "q": "\"البنتان قرأتا القصة\"، التاء والألف في (قرأتا):",
+      "opts": [
+        "التاء للتأنيث لا محل لها، والألف ضمير متصل في محل رفع فاعل",
+        "التاء ضمير متصل في محل رفع فاعل، والألف علامة التثنية",
+        "التاء والألف معاً ضمير في محل رفع فاعل",
+        "التاء للتأنيث، والألف في محل نصب مفعول به"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: التاء للتأنيث لا محل لها، والألف ضمير متصل في محل رفع فاعل"
+    },
+    {
+      "q": "اسم المكان من الفعل (طار) هو:",
+      "opts": [
+        "مَطَار",
+        "مُطَار",
+        "مَطِير",
+        "طَيَرَان"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَطَار"
+    },
+    {
+      "q": "اسم الزمان من الفعل (ابتدأ) هو:",
+      "opts": [
+        "مُبْتَدَأ",
+        "مُبْتَدِئ",
+        "مَبْدَأ",
+        "بَدْء"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مُبْتَدَأ"
+    },
+    {
+      "q": "كيف يُصاغ اسم المكان من الفعل المضعف الثلاثي مثل (فرَّ، مرَّ، قرَّ) غالباً؟",
+      "opts": [
+        "مَفَرّ، مَمَرّ، مَقَرّ (بدون فك التضعيف على وزن مَفْعَل)",
+        "مَفْرَر، مَمْرَر (بفك التضعيف)",
+        "مُفَرّ، مُقَرّ (على وزن مُفْعَل)",
+        "مِفْرار، مِمْرار"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَفَرّ، مَمَرّ، مَقَرّ (بدون فك التضعيف على وزن مَفْعَل)"
+    },
+    {
+      "q": "\"هذا المصنع مَسْرَح للعمال\"، كلمة (مَسْرَح):",
+      "opts": [
+        "اسم مكان قياسي على وزن مَفْعَل لأن مضارعه مفتوح العين (يسرَح)",
+        "اسم مكان شاذ",
+        "اسم زمان من سَرَحَ",
+        "مصدر ميمي شاذ"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: اسم مكان قياسي على وزن مَفْعَل لأن مضارعه مفتوح العين (يسرَح)"
+    },
+    {
+      "q": "\"مَوْقِف السيارات مزدحم\"، وزن (مَوْقِف) وسبب صياغته عليه:",
+      "opts": [
+        "مَفْعِل، لأن فعله الثلاثي مثال واوي (وقف)",
+        "مَفْعَل، لأن فعله مكسور العين في المضارع",
+        "مَفْعِل، لأنه فعل أجوف",
+        "مَفْعِل، لأنه مضعف"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَفْعِل، لأن فعله الثلاثي مثال واوي (وقف)"
+    },
+    {
+      "q": "اسم المكان من الفعل (قام):",
+      "opts": [
+        "مَقَام",
+        "مُقَام",
+        "مَقْوَم",
+        "قِيَام"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَقَام"
+    },
+    {
+      "q": "\"الصيف مُسْتَنْبَت القطن\"، كلمة (مستنبت):",
+      "opts": [
+        "اسم زمان من الفعل السداسي (استنبت)",
+        "اسم مكان من الفعل (استنبت)",
+        "مصدر ميمي من (استنبت)",
+        "اسم مفعول من (استنبت)"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: اسم زمان من الفعل السداسي (استنبت)"
+    },
+    {
+      "q": "الكلمة التي لا تمثل اسم مكان مما يلي:",
+      "opts": [
+        "مِقْدَام",
+        "مَكْتَبَة",
+        "مَذْبَح",
+        "مَطْبَخ"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مِقْدَام"
+    },
+    {
+      "q": "\"الساعة الخامسة مَنْصَرَف الموظفين\"، (منصرف) في هذه الجملة تعرب:",
+      "opts": [
+        "خبر المبتدأ مرفوع",
+        "ظرف زمان منصوب",
+        "اسم مجرور",
+        "مضاف إليه مجرور"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: خبر المبتدأ مرفوع"
+    },
+    {
+      "q": "ما هو اسم الزمان من الفعل (عاد)؟",
+      "opts": [
+        "مَعَاد",
+        "مَوْعِد",
+        "مِيعَاد",
+        "عَوْدَة"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَعَاد"
+    },
+    {
+      "q": "قد تلحق تاء التأنيث المربوطة بعض أسماء المكان. عين الكلمة التي لا تنتمي لهذه القاعدة:",
+      "opts": [
+        "مَرْسَم",
+        "مَدْرَسَة",
+        "مَقْبَرَة",
+        "مَطْبَعَة"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَرْسَم"
+    },
+    {
+      "q": "اسم المكان والزمان من الفعل (لعب) هو (مَلْعَب) على وزن (مَفْعَل)، ما السبب؟",
+      "opts": [
+        "لأن مضارعه مفتوح العين (يلعَب)",
+        "لأن مضارعه مضموم العين (يلعُب)",
+        "لأن مضارعه مكسور العين (يلعِب)",
+        "لأنه فعل معتل ناقص"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: لأن مضارعه مفتوح العين (يلعَب)"
+    },
+    {
+      "q": "إذا كان الفعل معتلاً ناقصاً (آخره حرف علة) مثل (سعى، جرى)، فإن اسم الزمان والمكان يُصاغ على وزن:",
+      "opts": [
+        "مَفْعَل (مثل: مَسْعَى، مَجْرَى)",
+        "مَفْعِل (مثل: مَسْعِي، مَجْرِي)",
+        "مُفْعَل (مثل: مُسْعَى، مُجْرَى)",
+        "مِفْعَال (مثل: مِسْعَاء، مِجْرَاء)"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: مَفْعَل (مثل: مَسْعَى، مَجْرَى)"
+    },
+    {
+      "q": "في جملة \"مَطْلَع الشمس في السادسة صباحاً\"، كلمة (مطلع) هي:",
+      "opts": [
+        "اسم زمان على وزن (مَفْعَل)",
+        "اسم مكان على وزن (مَفْعِل)",
+        "مصدر ميمي على وزن (مَفْعِل)",
+        "اسم مكان على وزن (مَفْعَل)"
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: اسم زمان على وزن (مَفْعَل)"
+    },
+    {
+      "q": "أي الجمل التالية تحتوي على اسم مكان جاء شاذاً عن القاعدة (يُقاس على مَفْعَل فجاء مَفْعِل أو العكس)؟",
+      "opts": [
+        "صليتُ في المَسْجِدِ القريب.",
+        "جلست في المَقْعَدِ الأمامي.",
+        "دخلت إلى المَكْتَبِ.",
+        "زرتُ المَصْنَعَ الجديد."
+      ],
+      "correct": 0,
+      "izoh": "الإجابة الصحيحة: صليتُ في المَسْجِدِ القريب."
+    }
+  ]
+}
