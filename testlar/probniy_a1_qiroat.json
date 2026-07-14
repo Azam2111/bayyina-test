@@ -1,0 +1,42 @@
+{
+  "title": "A1 · Qiroat namoyish",
+  "otish": 80,
+  "vaqt": 3,
+  "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ.",
+  "matn_uz": "Mening oilam katta. Otam, onam va akam uyda. Oilamiz baxtli.",
+  "questions": [
+    {
+      "q": "Jumla nima haqida?",
+      "opts": [
+        "Maktab",
+        "Oila",
+        "Bozor",
+        "Safar"
+      ],
+      "correct": 1,
+      "izoh": "أُسْرَة = Oila"
+    },
+    {
+      "q": "Kimlar uyda?",
+      "opts": [
+        "Ota, ona va aka",
+        "Do'stlar",
+        "O'qituvchilar",
+        "Qo'shnilar"
+      ],
+      "correct": 0,
+      "izoh": "أَبِي وَأُمِّي وَأَخِي = Otam, onam va akam"
+    },
+    {
+      "q": "«بَيْت» so'zining ma'nosi?",
+      "opts": [
+        "Bog'",
+        "Uy",
+        "Maktab",
+        "Do'kon"
+      ],
+      "correct": 1,
+      "izoh": "بَيْت = Uy"
+    }
+  ]
+}
