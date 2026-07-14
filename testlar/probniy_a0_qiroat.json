@@ -1,0 +1,42 @@
+{
+  "title": "A0 · Qiroat namoyish",
+  "otish": 80,
+  "vaqt": 3,
+  "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!",
+  "matn_uz": "Assalomu alaykum! Ahvolingiz qanday? — Yaxshi, Allohga shukr! Xush kelibsiz!",
+  "questions": [
+    {
+      "q": "«كَيْفَ حَالُكَ؟» iborasi nimani anglatadi?",
+      "opts": [
+        "Ismingiz nima?",
+        "Ahvolingiz qanday?",
+        "Qayerdansiz?",
+        "Xayr"
+      ],
+      "correct": 1,
+      "izoh": "كَيْفَ حَالُكَ؟ = Ahvolingiz qanday?"
+    },
+    {
+      "q": "Ahvol so'ralganda qanday javob berilgan?",
+      "opts": [
+        "أَهْلًا وَسَهْلًا",
+        "مَا اسْمُكَ",
+        "بِخَيْرٍ وَالْحَمْدُ لِلَّهِ",
+        "مِنْ أَيْنَ أَنْتَ"
+      ],
+      "correct": 2,
+      "izoh": "بِخَيْرٍ وَالْحَمْدُ لِلَّهِ = Yaxshi, Allohga shukr"
+    },
+    {
+      "q": "«أَهْلًا وَسَهْلًا» nima ma'noda?",
+      "opts": [
+        "Xush kelibsiz!",
+        "Xayrli tun",
+        "Rahmat",
+        "Kechirasiz"
+      ],
+      "correct": 0,
+      "izoh": "أَهْلًا وَسَهْلًا = Xush kelibsiz"
+    }
+  ]
+}
