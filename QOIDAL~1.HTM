@@ -175,13 +175,13 @@
   <div class="brand">Bayyina · Arab tili akademiyasi</div>
   <div class="ar-title">اِمْتِحَانُ القَواعِدِ</div>
   <h1>Qoidalar imtihoni — avtomatik tekshiruvchi test</h1>
-  <div class="subtitle">Ism belgilari · ishora va zamirlar · istifhom · adad-ma'dud · jumla turlari · fe'l tuslash · nafiy · sifat-mavsuf · amr va nahiy</div>
+  <div class="subtitle">12 dars bo'yicha eng murakkab 150 savol · ishora va zamirlar · istifhom · adad-ma'dud · jumla turlari · fe'l tuslash · nafiy · sifat-mavsuf · amr va nahiy</div>
 </header>
 
 <div class="stickybar" id="stickyBar">
   <div class="stickybar-inner">
     <div class="timerwrap" id="timerWrap"><span class="ticon">⏱</span><span id="timerDisplay">90:00</span></div>
-    <div class="progressmini" id="progressMini">0 / 141</div>
+    <div class="progressmini" id="progressMini">0 / 150</div>
   </div>
   <div class="overtime-banner" id="overtimeBanner">⏰ Ajratilgan 90 daqiqa tugadi — ishni imkon qadar tezroq yakunlang!</div>
 </div>
@@ -196,21 +196,27 @@
 
   <div class="instructions">
     <b>Ko'rsatma</b>
-    Imtihon 6 bo'limdan iborat, jami 141 savol. Barcha arabcha matnlar harakatli. Har bir savolda faqat bitta to'g'ri javob bor — javobingizni belgilang yoki bo'sh joyga arabcha yozing. Vaqt <b>90 daqiqa</b> — sahifa tepasidagi taymer avtomatik ishlaydi va sahifani yangilasangiz ham to'xtamaydi. Testni <b>bir o'tirishda</b>, boshidan oxirigacha yeching — u faqat bir marta topshiriladi, natija qayta yozilmaydi. Oxirida "Natijani hisoblash" tugmasini bosing — ball avtomatik chiqadi va har bir savol bo'yicha to'g'ri javob ko'rsatiladi. Chalg'ituvchi variantlarga e'tiborli bo'ling.
+    Imtihon 12 dars asosida tuzilgan, har bir darsdan eng murakkab savollar tanlab olingan — jami 150 ta yopiq test savoli. Barcha arabcha matnlar harakatli. Har bir savolda faqat bitta to'g'ri javob bor — mos variantni (A–D) belgilang. Vaqt <b>90 daqiqa</b> — sahifa tepasidagi taymer avtomatik ishlaydi va sahifani yangilasangiz ham to'xtamaydi. Testni <b>bir o'tirishda</b>, boshidan oxirigacha yeching — u faqat bir marta topshiriladi, natija qayta yozilmaydi. Oxirida "Natijani hisoblash" tugmasini bosing — ball avtomatik chiqadi va har bir savol bo'yicha to'g'ri javob ko'rsatiladi. Chalg'ituvchi variantlarga e'tiborli bo'ling.
   </div>
 
   <form id="examForm">
-    <div id="sectionA"></div>
-    <div id="sectionB"></div>
-    <div id="sectionC"></div>
-    <div id="sectionD"></div>
-    <div id="sectionE"></div>
-    <div id="sectionF"></div>
+    <div id="sectionS1"></div>
+    <div id="sectionS2"></div>
+    <div id="sectionS3"></div>
+    <div id="sectionS4"></div>
+    <div id="sectionS5"></div>
+    <div id="sectionS6"></div>
+    <div id="sectionS7"></div>
+    <div id="sectionS8"></div>
+    <div id="sectionS9"></div>
+    <div id="sectionS10"></div>
+    <div id="sectionS11"></div>
+    <div id="sectionS12"></div>
   </form>
 
   <div class="submitbar">
     <button id="submitBtn" type="button">Natijani hisoblash</button>
-    <div class="progress" id="progressText">0 / 141 savolga javob berilgan</div>
+    <div class="progress" id="progressText">0 / 150 savolga javob berilgan</div>
   </div>
 
   <div id="resultArea"></div>
@@ -227,297 +233,179 @@ function match(id, sec, html, left, right, map){ return {id,sec,type:'match',htm
 
 var AR = function(s){ return '<span class="ar">'+s+'</span>'; };
 
-/* ============ SECTION A — 66 MCQ ============ */
-var QA = [
-q(1,'A','Quyidagilardan qaysi biri ismning belgisi EMAS?',
- [['A',AR('التَّنْوِينُ')],['B',AR('حَرْفُ الجَرِّ')],['C',AR('التَّاءُ المَرْبُوطَةُ السَّاكِنَةُ')],['D',AR('الأَلِفُ وَاللَّامُ')]], 'B'),
-q(2,'A', AR('هَذَانِ')+' so\'zi qanday ishora?',
- [['A','Uzoq, muannas, musanna'],['B','Yaqin, muzakkar, musanna'],['C','Yaqin, muzakkar, jam'],['D','Uzoq, muzakkar, birlik']], 'B'),
-q(3,'A', AR('أُولَٰئِكَ')+' ishorasi nimaga dalolat qiladi?',
- [['A','Yaqin, jam'],['B','Uzoq, birlik muannas'],['C','Uzoq, jam (aql egalari)'],['D','Yaqin, musanna']], 'C'),
-q(4,'A', '«'+AR('تِلْكَ الكُتُبُ قَدِيمَةٌ')+'» — '+AR('كُتُبٌ')+' jonsiz narsalar jami bo\'lgani uchun, bu yerda '+AR('تِلْكَ')+' nega ishlatildi?',
- [['A','Ma\'dud muzakkar bo\'lgani uchun'],['B','Uzoq + g\'ayri aqil (jonsiz) jam — muannas mufrad kabi mu\'omala qilinadi'],['C','Yaqin + birlik'],['D','Zamir muttasil bo\'lgani uchun']], 'B'),
-q(5,'A','Quyidagilardan qaysi biri munfasil (ajralgan) zamir?',
- [['A',AR('ـهُ')],['B',AR('كَ')],['C',AR('نَحْنُ')],['D',AR('نَا')]], 'C'),
-q(6,'A','«'+AR('كِتَابُهُنَّ')+'» dagi '+AR('هُنَّ')+' zamiri nimani bildiradi?',
- [['A','Muzakkar jam'],['B','Muannas jam'],['C','Muannas musanna'],['D','Muzakkar birlik']], 'B'),
-q(7,'A', AR('أَنْتُمَا')+' zamiri qaysi shaxs va songa mos keladi?',
- [['A','Muxotab (2-shaxs) musanna'],['B','G\'oyib jam'],['C','Mutakallim jam'],['D','Muxotab birlik']], 'A'),
-q(8,'A','«'+AR('... ذَهَبَ الطُّلَّابُ؟')+'» Bo\'sh joyga «nega» ma\'nosi uchun qaysi so\'roq keladi?',
- [['A',AR('أَيْنَ')],['B',AR('مَتَى')],['C',AR('لِمَاذَا')],['D',AR('كَيْفَ')]], 'C'),
-q(9,'A','Quyidagi so\'roq harflaridan qaysi biri faqat «ha/yo\'q» javob talab qiladi?',
- [['A',AR('مَا')],['B',AR('هَلْ')],['C',AR('كَمْ')],['D',AR('أَيّ')]], 'B'),
-q(10,'A','«'+AR('كَمْ طَالِبًا فِي الصَّفِّ؟')+'» — '+AR('طَالِبًا')+' nega mansub (tanvin fatha)?',
- [['A','Maf\'ul bo\'lgani uchun'],['B',AR('كَمْ')+' ning tamyizi bo\'lgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Munodo bo\'lgani uchun']], 'B'),
-q(11,'A', AR('مُسْلِمُونَ')+' so\'zi qaysi jam turiga kiradi?',
- [['A','Jam\' muannas solim'],['B','Jam\' muzakkar solim'],['C','Jam\' taksir'],['D','Musanna']], 'B'),
-q(12,'A','«'+AR('كُتُبٌ، رِجَالٌ، مَدَارِسُ')+'» — bular qaysi jam turi?',
- [['A','Jam\' taksir'],['B','Jam\' muzakkar solim'],['C','Jam\' muannas solim'],['D','Musanna']], 'A'),
-q(13,'A', AR('طَالِبَتَانِ')+' so\'zining i\'robi qaysi?',
- [['A','Musanna, raf, muannas'],['B','Jam, nasb, muzakkar'],['C','Mufrad, jar'],['D','Musanna, nasb']], 'A'),
-q(14,'A','Jam\' muannas solimning nasb holatidagi belgisi nima?',
- [['A',AR('ونَ')],['B',AR('ينَ')],['C','Kasra ('+AR('اتٍ')+')'],['D','Fatha ('+AR('اتٌ')+')']], 'C'),
-q(15,'A', AR('المُهَنْدِسِينَ')+' dagi '+AR('ينَ')+' nimani ko\'rsatadi?',
- [['A','Jam\' muzakkar solim, raf'],['B','Jam\' muzakkar solim, nasb yoki jar'],['C','Musanna, raf'],['D','Jam\' taksir']], 'B'),
-q(16,'A', AR('الوَلَدُ تَنَظَّفَ')+' jumlasi qanday jumla?',
- [['A','Feliy jumla'],['B','Ismiy jumla'],['C','Zarfiy jumla'],['D','Shartli jumla']], 'B'),
-q(17,'A','Ismiy jumlada mubtado va xabarning i\'robi qanday bo\'ladi?',
- [['A','Ikkalasi mansub'],['B','Ikkalasi majrur'],['C','Ikkalasi marfu\''],['D','Mubtado marfu\', xabar mansub']], 'C'),
-q(18,'A','«'+AR('كَتَبَ التِّلْمِيذُ الدَّرْسَ')+'» — '+AR('التِّلْمِيذُ')+' jumlada nima?',
- [['A','Maf\'ul bihi'],['B','Foil'],['C','Mubtado'],['D','Xabar']], 'B'),
-q(19,'A','Feliy jumlaning to\'g\'ri tuzilish tartibi qaysi?',
- [['A','Foil + fe\'l + maf\'ul'],['B','Fe\'l + foil + maf\'ul'],['C','Mubtado + xabar'],['D','Maf\'ul + fe\'l + foil']], 'B'),
-q(20,'A', AR('جَلَسَ')+' fe\'lining hum (ular, muzakkar) uchun moziy shakli qaysi?',
- [['A',AR('جَلَسُوا')],['B',AR('جَلَسْنَ')],['C',AR('جَلَسَا')],['D',AR('جَلَسْتُمْ')]], 'A'),
-q(21,'A', AR('يَكْتُبُ')+' fe\'lining antunna (sizlar, muannas) shakli qaysi?',
- [['A',AR('تَكْتُبُونَ')],['B',AR('يَكْتُبْنَ')],['C',AR('تَكْتُبْنَ')],['D',AR('تَكْتُبَانِ')]], 'C'),
-q(22,'A', AR('نَصَرَ')+' fe\'lini '+AR('أَنَا')+' (men) uchun tusla:',
- [['A',AR('نَصَرْتُ')],['B',AR('نَصَرْنَا')],['C',AR('نَصَرْتَ')],['D',AR('نَصَرَ')]], 'A'),
-q(23,'A', AR('هُمَا')+' (ular ikkovi, muannas) uchun '+AR('يَذْهَبُ')+' ning to\'g\'ri shakli?',
- [['A',AR('يَذْهَبَانِ')],['B',AR('تَذْهَبَانِ')],['C',AR('يَذْهَبْنَ')],['D',AR('تَذْهَبِينَ')]], 'B'),
-q(24,'A','Quyidagi moziy shakllardan qaysi biri xato tuslangan?',
- [['A',AR('نَصَرْتُمْ')],['B',AR('جَلَسَا')],['C',AR('كَتَبُونَ')],['D',AR('سَمِعْنَ')]], 'C'),
-q(25,'A','Quyidagilardan qaysi biri zarfi makon (o\'rin ravishi)?',
- [['A',AR('صَبَاحًا')],['B',AR('أَمَامَ')],['C',AR('غَدًا')],['D',AR('لَيْلًا')]], 'B'),
-q(26,'A','«'+AR('جَلَسَ الطَّالِبُ تَحْتَ الشَّجَرَةِ')+'» — '+AR('تَحْتَ')+' so\'zi ...',
- [['A','Marfu\', foil'],['B','Mansub, zarfi makon'],['C','Majrur, harfi jar bilan'],['D','Mubtado']], 'B'),
-q(27,'A','Zarf so\'zining i\'robi odatda qanday bo\'ladi?',
- [['A','Marfu\''],['B','Mansub'],['C','Majrur'],['D','Majzum']], 'B'),
-q(28,'A','«'+AR('ذَهَبْتُ إِلَى المَسْجِدِ')+'» — '+AR('المَسْجِدِ')+' nega majrur (kasra)?',
- [['A','Maf\'ul bo\'lgani uchun'],['B',AR('إِلَى')+' harfi jaridan keyin kelgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Foil bo\'lgani uchun']], 'B'),
-q(29,'A','Quyidagilardan qaysi biri harfi jar EMAS?',
- [['A',AR('عَنْ')],['B',AR('فِي')],['C',AR('ثُمَّ')],['D',AR('عَلَى')]], 'C'),
-q(30,'A','Harfi jardan keyin kelgan ism qanday ataladi?',
- [['A','Maf\'ul bihi'],['B','Ismi majrur'],['C','Foil'],['D','Tamyiz']], 'B'),
-q(31,'A','«uch kitob» iborasi to\'g\'ri qaysi?',
- [['A',AR('ثَلَاثُ كُتُبٍ')],['B',AR('ثَلَاثَةُ كُتُبٍ')],['C',AR('ثَلَاثُ كُتُبٌ')],['D',AR('ثَلَاثِ كُتُبٍ')]], 'B'),
-q(32,'A','3–10 orasidagi adadlarda ma\'dud qanday keladi?',
- [['A','Mufrad marfu\''],['B','Jam\' majrur'],['C','Musanna mansub'],['D','Mufrad mansub']], 'B'),
-q(33,'A','«'+AR('سَبْعُ طَالِبَاتٍ')+'» — bu yerda adad nega '+AR('ة')+' siz kelgan?',
- [['A','Adad doim shunday keladi'],['B','Ma\'dud muannas — jins teskariligi'],['C','Xato yozilgan shakl'],['D','Ma\'dud majrur bo\'lgani uchun']], 'B'),
-q(34,'A','«U albatta yozadi (uzoq kelasi zamon)» ma\'nosini beruvchi shakl qaysi?',
- [['A',AR('سَيَكْتُبُ')],['B',AR('سَوْفَ يَكْتُبُ')],['C',AR('كَتَبَ')],['D',AR('لَنْ يَكْتُبَ')]], 'B'),
-q(35,'A','Mustaqbal (kelasi zamon) yasash uchun qaysi qo\'shiladi?',
- [['A','Moziyga '+AR('سَـ')],['B','Muzoriga '+AR('سَوْفَ / سَـ')],['C','Amrga '+AR('لَنْ')],['D','Muzoriga '+AR('لَمْ')]], 'B'),
-q(36,'A','«'+AR('لَنْ يَنْجَحَ الكَسْلَانُ')+'» — '+AR('لَنْ')+' qaysi zamonni inkor qiladi?',
- [['A','O\'tgan zamon'],['B','Hozirgi zamon'],['C','Kelasi zamon'],['D','Buyruq']], 'C'),
-q(37,'A','O\'tgan zamonni inkor qilish uchun to\'g\'ri usul qaysi?',
- [['A',AR('لَا يَذْهَبُ')],['B',AR('لَنْ يَذْهَبَ')],['C',AR('لَمْ يَذْهَبْ')],['D',AR('لَا تَذْهَبْ')]], 'C'),
-q(38,'A','«'+AR('لَيْسَ الجَوُّ بَارِدًا')+'» — bu qaysi jumla turining inkori?',
- [['A','Feliy jumla'],['B','Ismiy jumla'],['C','Amr'],['D','Mustaqbal']], 'B'),
-q(39,'A', AR('لَمْ')+' dan keyin kelgan muzori fe\'lning holati qanday?',
- [['A','Marfu\''],['B','Mansub'],['C','Majzum'],['D','Mabniy']], 'C'),
-q(40,'A','«'+AR('جَاءَ طَالِبٌ مُجْتَهِدٌ')+'» — '+AR('مُجْتَهِدٌ')+' nega marfu\' va nakira?',
- [['A','Foil bo\'lgani uchun'],['B','Mavsufga ergashgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Maf\'ul bo\'lgani uchun']], 'B'),
-q(41,'A','Sifat (na\'t) mavsufga necha narsada mos keladi?',
- [['A','Ikki'],['B','Uch'],['C','To\'rt'],['D','Besh']], 'C'),
-q(42,'A', AR('الطَّالِبُ')+' ... — to\'g\'ri sifatni tanlang (mavsuf ma\'rifa — sifat ham ma\'rifa bo\'lishi kerak):',
- [['A',AR('الْمُجْتَهِدُ')],['B',AR('مُجْتَهِدٌ')],['C',AR('الْمُجْتَهِدُونَ')],['D',AR('الْمُجْتَهِدَةُ')]], 'A'),
-q(43,'A', AR('كَتَبَ')+' fe\'lidan buyruq (amr) shakli qaysi?',
- [['A',AR('اُكْتُبْ')],['B',AR('يَكْتُبْ')],['C',AR('كَتَبْتَ')],['D',AR('لَا تَكْتُبْ')]], 'A'),
-q(44,'A', AR('جَلَسَ')+' dan buyruq yasalganda hamzaning harakati qanday bo\'ladi?',
- [['A','Damma ('+AR('اُ')+')'],['B','Kasra ('+AR('اِ')+')'],['C','Fatha ('+AR('اَ')+')'],['D','Hamza tushadi']], 'B'),
-q(45,'A','Nahiy (qaytariq) fe\'li qanday yasaladi?',
- [['A',AR('لَنْ')+' + muzori'],['B',AR('لَا')+' (nahiy) + muzori majzum'],['C',AR('لَمْ')+' + moziy'],['D',AR('سَـ')+' + muzori']], 'B'),
-q(46,'A','«'+AR('لَا تَجْلِسْ')+'» iborasidagi fe\'lning oxiri nega sokin?',
- [['A','Amr bo\'lgani uchun'],['B','Nahiy '+AR('لَا')+' jazm qilgani uchun'],['C','Muzori marfu\''],['D','Moziy bo\'lgani uchun']], 'B'),
-q(47,'A', AR('عَلَيْهِمْ')+' so\'zi nechta bo\'lakdan tashkil topgan?',
- [['A','Bitta ism'],['B','Harfi jar + muttasil zamir'],['C','Fe\'l + foil'],['D','Zarf + ism']], 'B'),
-q(48,'A','«'+AR('هُنَّ مُعَلِّمَاتٌ')+'» jumlasida '+AR('هُنَّ')+' nima vazifada?',
- [['A','Xabar'],['B','Mubtado (munfasil zamir)'],['C','Foil'],['D','Maf\'ul']], 'B'),
-q(49,'A','Quyidagi so\'zlardan qaysi biri ham zamon, ham makon zarfi bo\'la oladigan turdan EMAS, ya\'ni sof zamon zarfi?',
- [['A',AR('عِنْدَ')],['B',AR('خَلْفَ')],['C',AR('حِينَ')],['D',AR('فَوْقَ')]], 'C'),
-q(50,'A','«'+AR('مَا نَجَحَ الرَّسُولُ')+'» dagi '+AR('مَا')+' ...',
- [['A','So\'roq (nima)'],['B','Moziyni inkor qiluvchi nafiy '+AR('مَا')],['C','Mavsul (...gan narsa)'],['D','Shart '+AR('مَا')+' si']], 'B'),
-q(51,'A', AR('طَالِبَانِ مُجْتَهِدَانِ')+' — sifat mavsufga qaysi jihatdan mos kelgan?',
- [['A','Faqat jinsda'],['B','Faqat i\'robda'],['C','Musanna, muzakkar, marfu\', nakira — hammasida'],['D','Faqat ta\'rifda']], 'C'),
-q(52,'A','«'+AR('كَمْ كِتَابًا قَرَأْتَ؟')+'» — bu qaysi turdagi jumla?',
- [['A','Ismiy jumla'],['B','So\'roq (istifhom) aralashgan feliy jumla'],['C','Sof amr'],['D','Nafiy ismiy jumla']], 'B'),
-q(53,'A','«'+AR('سَوْفَ لَنْ أَنْسَى')+'» iborasi nega xato?',
- [['A',AR('لَنْ')+' va '+AR('سَوْفَ')+' birga kelmaydi'],['B',AR('أَنْسَى')+' xato yozilgan'],['C',AR('سَوْفَ')+' moziyga qo\'shiladi'],['D','Hech xato yo\'q']], 'A'),
-q(54,'A', AR('اِجْلِسُوا')+' buyrug\'i kimga qaratilgan?',
- [['A','Bir kishiga (muzakkar)'],['B','Ikki kishiga'],['C','Ko\'p kishiga (muzakkar jam)'],['D','Bir ayolga']], 'C'),
-q(55,'A','«'+AR('البَنَاتُ يَلْعَبْنَ')+'» — '+AR('يَلْعَبْنَ')+' qaysi shaxs/son?',
- [['A','G\'oyib muzakkar jam'],['B','G\'oyib muannas jam'],['C','Muxotab muannas jam'],['D','Mutakallim jam']], 'B'),
-q(56,'A','«'+AR('فِي البَيْتِ رَجُلٌ')+'» jumlasida xabar qaysi?',
- [['A',AR('رَجُلٌ')],['B',AR('فِي البَيْتِ')],['C',AR('البَيْتِ')],['D','Xabar yo\'q']], 'B'),
-q(57,'A','«ikki qalam» iborasining to\'g\'ri shakli qaysi?',
- [['A',AR('قَلَمَانِ اثْنَانِ')],['B',AR('قَلَمَيْنِ اثْنَانِ')],['C',AR('قَلَمَانِ اثْنَتَانِ')],['D',AR('قَلَمٌ اثْنَانِ')]], 'A'),
-q(58,'A','«'+AR('ذَهَبَ عَلِيٌّ وَعَمْرٌو')+'» — foil ...',
- [['A','Faqat '+AR('عَلِيٌّ')],['B','Ikkalasi (atf orqali)'],['C','Faqat '+AR('عَمْرٌو')],['D','Foil yo\'q']], 'B'),
-q(59,'A','Quyidagi qaysi juftlik mufrad → musanna → jam to\'g\'ri ketma-ketligini beradi?',
- [['A',AR('مُسْلِمُونَ – مُسْلِمَانِ – مُسْلِمٌ')],['B',AR('مُسْلِمٌ – مُسْلِمَانِ – مُسْلِمُونَ')],['C',AR('مُسْلِمَانِ – مُسْلِمُونَ – مُسْلِمٌ')],['D',AR('مُسْلِمٌ – مُسْلِمُونَ – مُسْلِمَانِ')]], 'B'),
-q(60,'A','«'+AR('هَذِهِ السَّاعَةُ جَمِيلَةٌ')+'» — '+AR('هَذِهِ')+' bilan '+AR('السَّاعَةُ')+' orasidagi munosabat?',
- [['A','Sifat – mavsuf'],['B','Ishora ismi – mushorun ilayh (badal)'],['C','Fe\'l – foil'],['D','Mubtado – xabar']], 'B'),
-q(61,'A','«'+AR('نَحْنُ نَدْرُسُ العَرَبِيَّةَ')+'» jumlasining turi?',
- [['A','Sof ismiy jumla'],['B','Boshi ismiy, xabari feliy jumla'],['C','Amr jumlasi'],['D','Nafiy jumla']], 'B'),
-q(62,'A','«'+AR('لَمْ يَكْتُبُوا')+'» — nima uchun '+AR('نُون')+' tushib qolgan ('+AR('يَكْتُبُوا')+')?',
- [['A','Xato yozilgan'],['B',AR('لَمْ')+' jazm qilgani uchun (nun tushishi — jazm belgisi)'],['C','Moziy bo\'lgani uchun'],['D','Nasb belgisi']], 'B'),
-q(63,'A', AR('اُنْصُرْ')+' buyrug\'i qaysi fe\'ldan olingan?',
- [['A',AR('نَصَرَ – يَنْصُرُ')],['B',AR('نَظَرَ – يَنْظُرُ')],['C',AR('نَزَلَ – يَنْزِلُ')],['D',AR('اِنْتَصَرَ – يَنْتَصِرُ')]], 'A'),
-q(64,'A','Quyidagilardan qaysi biri to\'liq marfu\' belgilariga ega jam\' muzakkar solim?',
- [['A',AR('المُؤْمِنِينَ')],['B',AR('المُؤْمِنُونَ')],['C',AR('المُؤْمِنَاتُ')],['D',AR('مُؤْمِنَيْنِ')]], 'B'),
-q(65,'A','«'+AR('يَا طَالِبُ')+'» dagi '+AR('يَا')+' qanday harf?',
- [['A','Jar harfi'],['B','Nido (chaqiriq) harfi'],['C','So\'roq harfi'],['D','Atf harfi']], 'B'),
-q(66,'A','«'+AR('عِنْدَمَا حَضَرَ المُعَلِّمُ سَكَتَ الطُّلَّابُ')+'» — '+AR('سَكَتَ')+' fe\'lining foili?',
- [['A',AR('المُعَلِّمُ')],['B',AR('الطُّلَّابُ')],['C',AR('عِنْدَمَا')],['D','Foil yashirin']], 'B')
+/* ============ 150 SAVOL — 12 DARSDAN TANLANGAN ============ */
+var QALL = [
+q(1,"S1","«___ <span class=\"ar\">مُهَنْدِسَةٌ نَشِيطَةٌ</span>» — mos olmoshni qo'ying. (Sen chaqqon muhandis ayolsan)",[["A","<span class=\"ar\">أَنْتَ</span>"],["B","<span class=\"ar\">هُوَ</span>"],["C","<span class=\"ar\">أَنْتِ</span>"],["D","<span class=\"ar\">هِيَ</span>"]],"C"),
+q(2,"S1","O'zini «Men mahoratli oshpazman» deb tanishtirgan erkak kishi qaysi olmoshni ishlatadi?",[["A","<span class=\"ar\">هُوَ طَبَّاخٌ مَاهِرٌ</span>"],["B","<span class=\"ar\">أَنَا طَبَّاخٌ مَاهِرٌ</span>"],["C","<span class=\"ar\">أَنْتَ طَبَّاخٌ مَاهِرٌ</span>"],["D","<span class=\"ar\">هِيَ طَبَّاخَةٌ مَاهِرَةٌ</span>"]],"B"),
+q(3,"S1","«___ <span class=\"ar\">هَذَا؟</span> ← <span class=\"ar\">هَذَا قَلَمٌ</span>» — bo'sh joyga mos so'roq olmoshini qo'ying. (Bu nima? ← Bu qalam)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">كَيْفَ</span>"],["C","<span class=\"ar\">أَيْنَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"D"),
+q(4,"S1","«___ <span class=\"ar\">هَذَا؟</span> ← <span class=\"ar\">هَذَا صَدِيقِي يَاسِر</span>» — mos so'roq olmoshini qo'ying. (Bu kim? ← Bu do'stim Yosir)",[["A","<span class=\"ar\">مَا</span>"],["B","<span class=\"ar\">مَنْ</span>"],["C","<span class=\"ar\">مَاذَا</span>"],["D","<span class=\"ar\">أَيْنَ</span>"]],"B"),
+q(5,"S1","«___ <span class=\"ar\">حَالُكَ؟</span> ← <span class=\"ar\">بِخَيْرٍ وَالْحَمْدُ لِله</span>» — mos so'roq olmoshini qo'ying. (Ahvoling qanday?)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">أَيْنَ</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">مَاذَا</span>"]],"C"),
+q(6,"S1","«___ <span class=\"ar\">أَنْتَ؟</span> ← <span class=\"ar\">أَنَا مِنَ السُّودَانِ</span>» — mos so'roq birikmasini qo'ying. (Sen qayerdansan?)",[["A","<span class=\"ar\">مِنْ أَيْنَ</span>"],["B","<span class=\"ar\">مَاذَا</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">مَنْ</span>"]],"A"),
+q(7,"S1","«___ <span class=\"ar\">تَعْمَلُ؟</span> ← <span class=\"ar\">أَعْمَلُ فِي الْجَامِعَةِ</span>» — mos so'roq olmoshini qo'ying. (Qayerda ishlaysan?)",[["A","<span class=\"ar\">مَاذَا</span>"],["B","<span class=\"ar\">أَيْنَ</span>"],["C","<span class=\"ar\">مَنْ</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"B"),
+q(8,"S1","«___ <span class=\"ar\">تَعْمَلُ؟</span> ← <span class=\"ar\">أَعْمَلُ مُعَلِّمًا</span>» — mos so'roq olmoshini qo'ying. (Nima bo'lib ishlaysan?)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">أَيْنَ</span>"],["C","<span class=\"ar\">مَاذَا</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"C"),
+q(9,"S1","«___ <span class=\"ar\">اِسْمُكَ؟</span> ← <span class=\"ar\">اِسْمِي مَحْمُودٌ</span>» — mos so'roq olmoshini qo'ying. (Isming nima?)",[["A","<span class=\"ar\">مَا</span>"],["B","<span class=\"ar\">مَنْ</span>"],["C","<span class=\"ar\">أَيْنَ</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"A"),
+q(10,"S1","«___ <span class=\"ar\">الطُّلَّابُ؟</span> ← <span class=\"ar\">الطُّلَّابُ فِي الصَّفِّ</span>» — mos so'roq olmoshini qo'ying. (Talabalar qayerda?)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">أَيْنَ</span>"],["C","<span class=\"ar\">مَاذَا</span>"],["D","<span class=\"ar\">مَا</span>"]],"B"),
+q(11,"S2","Quyidagi so'zlardan qaysi biri «Musanno» (ikkilik) shaklida EMAS?",[["A","<span class=\"ar\">مُعَلِّمَانِ</span>"],["B","<span class=\"ar\">طَبِيبَتَانِ</span>"],["C","<span class=\"ar\">هُنَا</span>"],["D","<span class=\"ar\">وَلَدَانِ</span>"]],"C"),
+q(12,"S2","Muzakkar (erkak) jinsidagi ikki shaxsga nisbatan «Ular ikkisi kim?» deb qanday so'raladi?",[["A","<span class=\"ar\">مَنْ هَاتَانِ؟</span>"],["B","<span class=\"ar\">مَنْ هَذَانِ؟</span>"],["C","<span class=\"ar\">مَا هَذَانِ؟</span>"],["D","<span class=\"ar\">مَنْ هُوَ؟</span>"]],"B"),
+q(13,"S2","«<span class=\"ar\">مَا هَاتَانِ؟</span>» (Bular nima? — muannas) savoliga to'g'ri javobni toping.",[["A","<span class=\"ar\">هَذَانِ قَلَمَانِ</span>"],["B","<span class=\"ar\">هَاتَانِ سَيَّارَتَانِ</span>"],["C","<span class=\"ar\">هُوَ كِتَابٌ</span>"],["D","<span class=\"ar\">هَاتَانِ طَالِبَتَانِ</span>"]],"B"),
+q(14,"S2","«<span class=\"ar\">مَدِينَةٌ</span>» (Shahar) so'zining to'g'ri ikkilik shaklini ko'rsating.",[["A","<span class=\"ar\">مَدِينُونَ</span>"],["B","<span class=\"ar\">مَدِينَانِ</span>"],["C","<span class=\"ar\">مَدِينَتَانِ</span>"],["D","<span class=\"ar\">مُدُنٌ</span>"]],"C"),
+q(15,"S2","«Biz ikkimiz muallimmiz» gapining arabcha to'g'ri ifodasini toping.",[["A","<span class=\"ar\">أَنَا مُعَلِّمٌ</span>"],["B","<span class=\"ar\">نَحْنُ مُعَلِّمَانِ</span>"],["C","<span class=\"ar\">هُمَا مُعَلِّمَانِ</span>"],["D","<span class=\"ar\">أَنْتُمَا مُعَلِّمَانِ</span>"]],"B"),
+q(16,"S2","«<span class=\"ar\">أَنْتُمَا طَالِبَانِ</span>» gapining tarjimasi qaysi javobda to'g'ri ko'rsatilgan?",[["A","Ular ikkisi talabadirlar."],["B","Biz talabalarmiz."],["C","Siz ikkingiz talabasiz."],["D","Sen talabasan."]],"C"),
+q(17,"S2","Quyidagi birikmalardan qaysi biri grammatik jihatdan XATO?",[["A","<span class=\"ar\">هُمَا صَدِيقَانِ</span>"],["B","<span class=\"ar\">أَنْتُمَا خَوْلَةُ وَخَدِيجَةُ</span>"],["C","<span class=\"ar\">هُوَ أَحْمَدُ وَخَالِدُ</span>"],["D","<span class=\"ar\">نَحْنُ طَالِبَاتٌ</span>"]],"C"),
+q(18,"S2","«Ular ikkisi (muannas jinsida) yangi o'qituvchilar» gapini arab tiliga tarjima qiling.",[["A","<span class=\"ar\">هُمَا مُعَلِّمَتَانِ جَدِيدَتَانِ</span>"],["B","<span class=\"ar\">هَذَانِ مُعَلِّمَانِ جَدِيدَانِ</span>"],["C","<span class=\"ar\">هُمَا مُعَلِّمَانِ جَدِيدَانِ</span>"],["D","<span class=\"ar\">أَنْتُمَا مُعَلِّمَتَانِ</span>"]],"A"),
+q(19,"S2","O'g'il bola va qiz bola birgalikda «Biz ikkimiz...» deb gapirsa, qaysi olmoshni ishlatadi?",[["A","<span class=\"ar\">أَنَا</span>"],["B","<span class=\"ar\">أَنْتُمَا</span>"],["C","<span class=\"ar\">هُمَا</span>"],["D","<span class=\"ar\">نَحْنُ</span>"]],"D"),
+q(20,"S2","Qaysi qatorda ko'rsatish olmoshlari orasiga shaxs olmoshi aralashib qolgan (boshqalariga guruhdosh emas)?",[["A","<span class=\"ar\">هَذَا ، هَذِهِ ، هَذَانِ ، هَاتَانِ</span>"],["B","<span class=\"ar\">هُوَ ، هِيَ ، هُمَا ، أَنْتَ</span>"],["C","<span class=\"ar\">هُنَا ، هَذَا ، هُوَ ، هَذِهِ</span>"],["D","<span class=\"ar\">نَحْنُ ، أَنْتُمَا ، أَنْتُمْ ، هُمَا</span>"]],"C"),
+q(21,"S2","Arab tilida «Ikki sherik / Ikki do'st» ma'nosini anglatuvchi to'g'ri variantni tanlang.",[["A","<span class=\"ar\">زَمِيلٌ</span>"],["B","<span class=\"ar\">زَمِيلَتَانِ</span>"],["C","<span class=\"ar\">زَمِيلَانِ</span>"],["D","<span class=\"ar\">زُمَلَاءُ</span>"]],"C"),
+q(22,"S3","«<span class=\"ar\">طَبِيبٌ</span>» (Shifokor) so'zining ko'plik (jam' taksir) shaklini toping.",[["A","<span class=\"ar\">طَبِيبُونَ</span>"],["B","<span class=\"ar\">طَبِيبَاتٌ</span>"],["C","<span class=\"ar\">أَطِبَّاءُ</span>"],["D","<span class=\"ar\">أَطْبَابٌ</span>"]],"C"),
+q(23,"S3","«<span class=\"ar\">قَلَمٌ</span>» (Qalam) so'zining ko'plik shakli to'g'ri berilgan qatorni ko'rsating.",[["A","<span class=\"ar\">قَلَمُونَ</span>"],["B","<span class=\"ar\">أَقْلَامٌ</span>"],["C","<span class=\"ar\">قَلَمَاتٌ</span>"],["D","<span class=\"ar\">أَقَالِمُ</span>"]],"B"),
+q(24,"S3","«<span class=\"ar\">رَجُلٌ</span>» (Erkak) so'zining siniq ko'plik shakli qaysi?",[["A","<span class=\"ar\">رَجُلُونَ</span>"],["B","<span class=\"ar\">رِجَالٌ</span>"],["C","<span class=\"ar\">رِجَالَاتٌ</span>"],["D","<span class=\"ar\">أَرْجُلٌ</span>"]],"B"),
+q(25,"S3","«<span class=\"ar\">بَيْتٌ</span>» (Uy) so'zining ko'plik shaklini aniqlang.",[["A","<span class=\"ar\">بَيْتُونَ</span>"],["B","<span class=\"ar\">بَيْتَاتٌ</span>"],["C","<span class=\"ar\">بُيُوتٌ</span>"],["D","<span class=\"ar\">أَبْيَاتٌ</span>"]],"C"),
+q(26,"S3","«<span class=\"ar\">حَقِيبَةٌ</span>» (Sumka) so'zining ko'plik shakli qanday bo'ladi?",[["A","<span class=\"ar\">حَقِيبَاتٌ</span>"],["B","<span class=\"ar\">حَقَائِبُ</span>"],["C","<span class=\"ar\">حَقِيبُونَ</span>"],["D","<span class=\"ar\">أَحْقَابٌ</span>"]],"B"),
+q(27,"S3","Bo'sh joyga mos ko'rsatish olmoshini qo'ying: «___ <span class=\"ar\">أَوْلَادٌ صِغَارٌ</span>» (Bular kichkina bolalar).",[["A","<span class=\"ar\">هَذَا</span>"],["B","<span class=\"ar\">هَذِهِ</span>"],["C","<span class=\"ar\">هَؤُلَاءِ</span>"],["D","<span class=\"ar\">هَاتَانِ</span>"]],"C"),
+q(28,"S3","«___ <span class=\"ar\">كُتُبٌ جَدِيدَةٌ</span>» (Bular yangi kitoblar) gapida bo'sh joyga qaysi ko'rsatish olmoshi darslik qoidasiga ko'ra to'g'ri?",[["A","<span class=\"ar\">هَؤُلَاءِ</span>"],["B","<span class=\"ar\">هَذِهِ</span>"],["C","<span class=\"ar\">هَذَا</span>"],["D","<span class=\"ar\">هَذَانِ</span>"]],"B"),
+q(29,"S3","Quyidagi gaplarning qaysi biri grammatik jihatdan MUTLAQO XATO?",[["A","<span class=\"ar\">هَذِهِ سَيَّارَاتٌ</span>"],["B","<span class=\"ar\">هَؤُلَاءِ أَطِبَّاءُ</span>"],["C","<span class=\"ar\">هَؤُلَاءِ كُتُبٌ</span>"],["D","<span class=\"ar\">هَذِهِ بُيُوتٌ</span>"]],"C"),
+q(30,"S3","Bo'sh joyga mos olmoshni qo'ying: «___ <span class=\"ar\">سَيَّارَاتٌ سَرِيعَةٌ</span>» (Bular tezkor mashinalar).",[["A","<span class=\"ar\">هَؤُلَاءِ</span>"],["B","<span class=\"ar\">هَذَا</span>"],["C","<span class=\"ar\">هَذِهِ</span>"],["D","<span class=\"ar\">هُنَّ</span>"]],"C"),
+q(31,"S3","«<span class=\"ar\">هُمْ لَاعِبَانِ مَاهِرَانِ</span>» gapidagi xatoni tuzatib, to'g'ri variantni ko'rsating.",[["A","<span class=\"ar\">هَذَا لَاعِبَانِ مَاهِرَانِ</span>"],["B","<span class=\"ar\">هُمَا لَاعِبَانِ مَاهِرَانِ</span>"],["C","<span class=\"ar\">هُنَّ لَاعِبَانِ مَاهِرَانِ</span>"],["D","<span class=\"ar\">أَنْتُمْ لَاعِبَانِ مَاهِرَانِ</span>"]],"B"),
+q(32,"S3","«<span class=\"ar\">مُحَمَّدٌ وَأَحْمَدُ طَالِبَانِ نَشِيطٌ</span>» gapidagi belgilangan so'zning to'g'ri shakli qanday bo'ladi?",[["A","<span class=\"ar\">نَشِيطُونَ</span>"],["B","<span class=\"ar\">نَشِيطَاتٌ</span>"],["C","<span class=\"ar\">نَشِيطَانِ</span>"],["D","<span class=\"ar\">نَشِيطَةٌ</span>"]],"C"),
+q(33,"S3","«<span class=\"ar\">أَنْتِ جَدَّاتٌ طَيِّبَاتٌ</span>» gapidagi xato olmoshni to'g'rilang.",[["A","<span class=\"ar\">أَنْتُمْ</span>"],["B","<span class=\"ar\">أَنْتُنَّ</span>"],["C","<span class=\"ar\">هُوَ</span>"],["D","<span class=\"ar\">أَنْتُمَا</span>"]],"B"),
+q(34,"S3","«<span class=\"ar\">هُوَ اِسْمِي خَدِيجَةُ</span>» gapidagi xatoni tuzating.",[["A","<span class=\"ar\">أَنَا اِسْمِي خَدِيجَةُ</span>"],["B","<span class=\"ar\">هِيَ اِسْمِي خَدِيجَةُ</span>"],["C","<span class=\"ar\">أَنْتِ اِسْمِي خَدِيجَةُ</span>"],["D","<span class=\"ar\">نَحْنُ اِسْمِي خَدِيجَةُ</span>"]],"A"),
+q(35,"S3","«<span class=\"ar\">أَنْتُمْ طُلَّابٌ نَشِيطُونَ</span>» gapida qanday xato bor?",[["A","«<span class=\"ar\">طُلَّابٌ</span>» o'rniga «<span class=\"ar\">طَالِبٌ</span>» bo'lishi kerak."],["B","Gap to'g'ri, unda xato yo'q."],["C","«<span class=\"ar\">أَنْتُمْ</span>» o'rniga «<span class=\"ar\">أَنْتِ</span>» bo'lishi kerak."],["D","«<span class=\"ar\">نَشِيطُونَ</span>» o'rniga «<span class=\"ar\">نَشِيطَاتٌ</span>» bo'lishi kerak."]],"B"),
+q(36,"S4","«<span class=\"ar\">كِتَابُ</span> + <span class=\"ar\">نَحْنُ</span>» birikmasi qanday shaklda yoziladi?",[["A","<span class=\"ar\">كِتَابِي</span>"],["B","<span class=\"ar\">كِتَابُكَ</span>"],["C","<span class=\"ar\">كِتَابُنَا</span>"],["D","<span class=\"ar\">كِتَابُهُمْ</span>"]],"C"),
+q(37,"S4","«Sening (erkak kishiga) kasbing nima?» gapining arabcha shakli:",[["A","<span class=\"ar\">مَا مِهْنَتُكِ؟</span>"],["B","<span class=\"ar\">مَا مِهْنَتُهُ؟</span>"],["C","<span class=\"ar\">مَا مِهْنَتُكَ؟</span>"],["D","<span class=\"ar\">مَا مِهْنَتُنَا؟</span>"]],"C"),
+q(38,"S4","«<span class=\"ar\">عَمُّكُمْ طَوِيلٌ</span>» gapidagi «<span class=\"ar\">ـكُمْ</span>» olmoshi kimga ishora qiladi?",[["A","Sizlarga (ko'plik, muzakkar)"],["B","Ularga (ko'plik)"],["C","Bizga"],["D","Senga (muannas)"]],"A"),
+q(39,"S4","«<span class=\"ar\">الْمُعَلِّمُ يُحِبُّ عَمَلَهُ</span>» gapidagi «<span class=\"ar\">ـهُ</span>» nimani anglatadi?",[["A","Mening ishimni"],["B","Sening ishingni"],["C","Uning (erkak) o'z ishini"],["D","Ularning ishini"]],"C"),
+q(40,"S4","«<span class=\"ar\">كِتَابُكُنَّ</span>» so'zidagi «<span class=\"ar\">ـكُنَّ</span>» qaysi kishilik olmoshiga mos keladi?",[["A","<span class=\"ar\">أَنْتُمْ</span>"],["B","<span class=\"ar\">أَنْتُنَّ</span>"],["C","<span class=\"ar\">هُنَّ</span>"],["D","<span class=\"ar\">أَنْتُمَا</span>"]],"B"),
+q(41,"S4","«Alloh uni oson qilsin» iborasi qaysi javobda to'g'ri ko'rsatilgan?",[["A","<span class=\"ar\">سَهَّلَ اللهُ لَكَ</span>"],["B","<span class=\"ar\">سَهَّلَ اللهُ لَهُ</span>"],["C","<span class=\"ar\">سَهَّلَ اللهُ لَكِ</span>"],["D","<span class=\"ar\">سَهَّلَ اللهُ لَنَا</span>"]],"B"),
+q(42,"S4","«<span class=\"ar\">الْكِتَابُ لِي</span>» (Kitob meniki) gapini bog'langan olmosh yordamida qanday qisqartirish mumkin?",[["A","<span class=\"ar\">كِتَابُكَ</span>"],["B","<span class=\"ar\">كِتَابِي</span>"],["C","<span class=\"ar\">كِتَابُهُ</span>"],["D","<span class=\"ar\">كِتَابُنَا</span>"]],"B"),
+q(43,"S4","«<span class=\"ar\">الْقَلَمُ لَكَ</span>» (Qalam seniki) iborasi qaysi so'zga teng?",[["A","<span class=\"ar\">قَلَمِي</span>"],["B","<span class=\"ar\">قَلَمُكَ</span>"],["C","<span class=\"ar\">قَلَمُهُ</span>"],["D","<span class=\"ar\">قَلَمُهَا</span>"]],"B"),
+q(44,"S4","«<span class=\"ar\">عَمَلُنَا صَعْبٌ</span>» gapida kishilik olmoshi (<span class=\"ar\">نَحْنُ</span>) qanday o'zgarish hosil qilgan?",[["A","<span class=\"ar\">عَمِلْتُ</span> bo'lgan"],["B","<span class=\"ar\">عَمَلُنَا</span> bo'lib, egalik shakliga o'tgan"],["C","Hech qanday o'zgarish yo'q"],["D","Bog'lanmagan shaklda qolgan"]],"B"),
+q(45,"S4","«<span class=\"ar\">أَنَا سَعِيدٌ بِـ</span> ___ <span class=\"ar\">يَا أَصْدِقَائِي</span>» (Ey do'stlarim, men sizlardan xursandman). Bo'sh joyga mos olmoshni qo'ying.",[["A","<span class=\"ar\">بِهِ</span>"],["B","<span class=\"ar\">بِكَ</span>"],["C","<span class=\"ar\">بِكُمْ</span>"],["D","<span class=\"ar\">بِهِمَا</span>"]],"C"),
+q(46,"S4","«<span class=\"ar\">أَبِي وَأُمِّي فِي الْقَرْيَةِ، وَأَذْهَبُ</span> ___» (Ota-onam qishloqda, men ularning oldiga boraman). Bo'sh joyga mos predlog va olmosh birikmasini toping.",[["A","<span class=\"ar\">إِلَيْهِ</span>"],["B","<span class=\"ar\">إِلَيْهِمَا</span>"],["C","<span class=\"ar\">إِلَيْهَا</span>"],["D","<span class=\"ar\">إِلَيْكَ</span>"]],"B"),
+q(47,"S4","«<span class=\"ar\">يَجِبُ أَنْ نَدْرُسَ كَثِيرًا، لِأَنَّ</span> ___ <span class=\"ar\">مُهِمٌّ جِدًّا</span>» (Ko'p o'qishimiz kerak, chunki imtihonimiz juda muhim).",[["A","<span class=\"ar\">اِمْتِحَانِي</span>"],["B","<span class=\"ar\">اِمْتِحَانَكُنَّ</span>"],["C","<span class=\"ar\">اِمْتِحَانَنَا</span>"],["D","<span class=\"ar\">اِمْتِحَانَهُ</span>"]],"C"),
+q(48,"S4","Qaysi javobda «Kishilik olmoshi → Bog'langan olmosh» juftligi XATO berilgan?",[["A","<span class=\"ar\">هُوَ</span> → <span class=\"ar\">ـهُ</span>"],["B","<span class=\"ar\">هِيَ</span> → <span class=\"ar\">ـهَا</span>"],["C","<span class=\"ar\">أَنْتِ</span> → <span class=\"ar\">ـكَ</span>"],["D","<span class=\"ar\">أَنْتُمْ</span> → <span class=\"ar\">ـكُمْ</span>"]],"C"),
+q(49,"S5","Bo'shliqni to'g'ri to'ldiring: «<span class=\"ar\">لِمَاذَا</span> ___ <span class=\"ar\">مُبَكِّرًا مِنَ الْعَمَلِ يَا سَلْمَى؟</span>» (Ey Salmo, nega ishdan vaqtli qaytding?)",[["A","<span class=\"ar\">رَجَعْتَ</span>"],["B","<span class=\"ar\">رَجَعْتِ</span>"],["C","<span class=\"ar\">رَجَعْتُ</span>"],["D","<span class=\"ar\">رَجَعَتْ</span>"]],"B"),
+q(50,"S5","«<span class=\"ar\">الْمُعَلِّمَةُ</span> ___ <span class=\"ar\">إِلَى مِصْرَ</span>» (O'qituvchi ayol Misrga safar qildi). Bo'shliqqa mos fe'lni toping.",[["A","<span class=\"ar\">سَافَرْتُ</span>"],["B","<span class=\"ar\">سَافَرَ</span>"],["C","<span class=\"ar\">سَافَرَتْ</span>"],["D","<span class=\"ar\">سَافَرْتَ</span>"]],"C"),
+q(51,"S5","Qoidaga ko'ra, fe'liy gap (<span class=\"ar\">الجملة الفعلية</span>) nima bilan boshlanadi?",[["A","Ism (<span class=\"ar\">اِسْم</span>) bilan"],["B","Fe'l (<span class=\"ar\">فِعْل</span>) bilan"],["C","Harf (<span class=\"ar\">حَرْف</span>) bilan"],["D","Olmosh (<span class=\"ar\">ضَمِير</span>) bilan"]],"B"),
+q(52,"S5","Quyidagi gaplardan qaysi biri FE'LIY GAP hisoblanadi?",[["A","<span class=\"ar\">غُرْفَةُ الْجُلُوسِ مُرِيحَةٌ</span>."],["B","<span class=\"ar\">شَرِبْتُ الْقَهْوَةَ عِنْدَ صَدِيقِي</span>."],["C","<span class=\"ar\">صَالَةُ الْبَيْتِ وَاسِعَةٌ</span>."],["D","<span class=\"ar\">الشَّقَّةُ تَتَكَوَّنُ مِنْ غُرْفَتَيْنِ</span>."]],"B"),
+q(53,"S5","«<span class=\"ar\">حَمْزَةُ يَسْكُنُ فِي حَيِّ الزُّهُورِ</span>» (ismiy gap). Uni FE'LIY GAPGA aylantirilgan to'g'ri shaklini toping.",[["A","<span class=\"ar\">فِي حَيِّ الزُّهُورِ يَسْكُنُ حَمْزَةُ</span>."],["B","<span class=\"ar\">يَسْكُنُ حَمْزَةُ فِي حَيِّ الزُّهُورِ</span>."],["C","<span class=\"ar\">حَمْزَةُ فِي حَيِّ الزُّهُورِ يَسْكُنُ</span>."],["D","<span class=\"ar\">يَسْكُنُ فِي الزُّهُورِ حَمْزَةُ</span>."]],"B"),
+q(54,"S5","«<span class=\"ar\">أَعِيشُ مَعَ أُسْرَتِي</span>» gapining tarkibi haqida qaysi hukm to'g'ri?",[["A","Bu ismiy gap, chunki «<span class=\"ar\">أَنَا</span>» yashiringan."],["B","Bu fe'liy gap, chunki «<span class=\"ar\">أَعِيشُ</span>» fe'li bilan boshlangan."],["C","Bu gap emas, shunchaki ibora."],["D","Bu harfiy gap."]],"B"),
+q(55,"S5","Qaysi qatorda faqat o'tgan zamon fe'llari (<span class=\"ar\">الفعل الماضي</span>) berilgan?",[["A","<span class=\"ar\">يَسْكُنُ</span> - <span class=\"ar\">ذَهَبَ</span> - <span class=\"ar\">قَرَأَ</span>"],["B","<span class=\"ar\">جَلَسْتُ</span> - <span class=\"ar\">سَأَلْتَ</span> - <span class=\"ar\">سَافَرَتْ</span>"],["C","<span class=\"ar\">أَعِيشُ</span> - <span class=\"ar\">أُحِبُّ</span> - <span class=\"ar\">أَذْهَبُ</span>"],["D","<span class=\"ar\">اِشْمَلْ</span> - <span class=\"ar\">اِجْلِسْ</span> - <span class=\"ar\">اِقْرَأْ</span>"]],"B"),
+q(56,"S5","«<span class=\"ar\">تُطِلُّ الشَّقَّةُ عَلَى النَّهْرِ</span>» gapining ismiy gap shakli qaysi javobda to'g'ri ko'rsatilgan?",[["A","<span class=\"ar\">عَلَى النَّهْرِ تُطِلُّ الشَّقَّةُ</span>."],["B","<span class=\"ar\">الشَّقَّةُ تُطِلُّ عَلَى النَّهْرِ</span>."],["C","<span class=\"ar\">تُطِلُّ عَلَى النَّهْرِ الشَّقَّةُ</span>."],["D","<span class=\"ar\">الشَّقَّةُ عَلَى النَّهْرِ</span>."]],"B"),
+q(57,"S5","«<span class=\"ar\">أَبِي أَخَذَ الطَّعَامَ مِنَ الثَّلَّاجَةِ</span>» gapini fe'liy gapga aylantiring.",[["A","<span class=\"ar\">مِنَ الثَّلَّاجَةِ أَبِي أَخَذَ الطَّعَامَ</span>."],["B","<span class=\"ar\">أَخَذَ أَبِي الطَّعَامَ مِنَ الثَّلَّاجَةِ</span>."],["C","<span class=\"ar\">الطَّعَامَ أَخَذَ أَبِي مِنَ الثَّلَّاجَةِ</span>."],["D","<span class=\"ar\">أَبِي مِنَ الثَّلَّاجَةِ أَخَذَ الطَّعَامَ</span>."]],"B"),
+q(58,"S6","«<span class=\"ar\">سَاعَدَتِ الْبِنْتُ أُمَّهَا فِي الْمَطْبَخِ</span>» gapidagi fe'lni hozirgi zamonga o'tkazing.",[["A","<span class=\"ar\">يُسَاعِدُ</span>"],["B","<span class=\"ar\">تُسَاعِدُ</span>"],["C","<span class=\"ar\">أُسَاعِدُ</span>"],["D","<span class=\"ar\">تُسَاعِدِينَ</span>"]],"B"),
+q(59,"S6","«<span class=\"ar\">اِسْتَأْجَرَ أَخِي شَقَّةً صَغِيرَةً</span>» gapidagi fe'l hozirgi zamonda qanday bo'ladi?",[["A","<span class=\"ar\">يَسْتَأْجِرُ</span>"],["B","<span class=\"ar\">تَسْتَأْجِرُ</span>"],["C","<span class=\"ar\">أَسْتَأْجِرُ</span>"],["D","<span class=\"ar\">نَسْتَأْجِرُ</span>"]],"A"),
+q(60,"S6","«<span class=\"ar\">شَرِبْتُ الْحَلِيبَ فِي الصَّبَاحِ</span>» gapidagi «<span class=\"ar\">شَرِبْتُ</span>» fe'lining hozirgi zamon shakli qaysi?",[["A","<span class=\"ar\">يَشْرَبُ</span>"],["B","<span class=\"ar\">تَشْرَبُ</span>"],["C","<span class=\"ar\">أَشْرَبُ</span>"],["D","<span class=\"ar\">تَشْرَبِينَ</span>"]],"C"),
+q(61,"S6","«<span class=\"ar\">هَلْ فَهِمْتَ وَاجِبَكَ يَا صَالِحُ؟</span>» gapidagi «<span class=\"ar\">فَهِمْتَ</span>» fe'lining hozirgi zamon shakli nima?",[["A","<span class=\"ar\">تَفْهَمُ</span>"],["B","<span class=\"ar\">تَفْهَمِينَ</span>"],["C","<span class=\"ar\">يَفْهَمُ</span>"],["D","<span class=\"ar\">أَفْهَمُ</span>"]],"A"),
+q(62,"S6","Qaysi so'z vaqt ravishi (<span class=\"ar\">ظرف زمان</span>) hisoblanadi?",[["A","<span class=\"ar\">أَمَامَ</span>"],["B","<span class=\"ar\">خَلْفَ</span>"],["C","<span class=\"ar\">صَبَاحًا</span>"],["D","<span class=\"ar\">يَمِينَ</span>"]],"C"),
+q(63,"S6","«<span class=\"ar\">أَرْجِعُ إِلَى الْبَيْتِ لَيْلًا</span>» gapidagi vaqt ravishini aniqlang.",[["A","<span class=\"ar\">أَرْجِعُ</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">الْبَيْتِ</span>"],["D","<span class=\"ar\">لَيْلًا</span>"]],"D"),
+q(64,"S6","«<span class=\"ar\">ثُمَّ عَرِّجْ</span> ___ <span class=\"ar\">الْيَمِينِ</span>» (So'ngra o'ngga buriling). Bo'sh joyga mos harfni toping.",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">عَلَى</span>"],["C","<span class=\"ar\">إِلَى</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"C"),
+q(65,"S6","Matndan kelib chiqib bo'shliqni to'ldiring: «<span class=\"ar\">أَنَا مَحْمُودٌ، دَرَسْتُ فِي كُلِّيَّةِ الطِّبِّ، وَنَجَحْتُ</span>. <span class=\"ar\">أَعْمَلُ الآنَ</span> ___ <span class=\"ar\">فِي الْمُسْتَشْفَى</span>».",[["A","<span class=\"ar\">مُهَنْدِسًا</span>"],["B","<span class=\"ar\">طَبِيبًا</span>"],["C","<span class=\"ar\">فَلَّاحًا</span>"],["D","<span class=\"ar\">مُعَلِّمًا</span>"]],"B"),
+q(66,"S6","«<span class=\"ar\">أَنْتَ تَذْهَبُ إِلَى عَمَلِكَ مُبَكِّرًا</span>» gapining inkor shaklini hosil qilish uchun fe'ldan oldin nima qo'yiladi?",[["A","<span class=\"ar\">لَا</span>"],["B","<span class=\"ar\">لَمْ</span>"],["C","<span class=\"ar\">مَا</span>"],["D","<span class=\"ar\">لَنْ</span>"]],"A"),
+q(67,"S7","Arab tilida predloglardan (<span class=\"ar\">حرف الجر</span>) keyin kelgan ism qaysi kelishikda (harakatda) bo'ladi?",[["A","Damma (<span class=\"ar\">ُ</span>)"],["B","Fatha (<span class=\"ar\">َ</span>)"],["C","Kasra (<span class=\"ar\">ِ</span>)"],["D","Sukun (<span class=\"ar\">ْ</span>)"]],"C"),
+q(68,"S7","Gapni to'ldiring: «<span class=\"ar\">سَافَرْتُ</span> ___ <span class=\"ar\">الْقَاهِرَةِ إِلَى الرِّيَاضِ</span>».",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">مِنْ</span>"],["C","<span class=\"ar\">عَنْ</span>"],["D","<span class=\"ar\">عَلَى</span>"]],"B"),
+q(69,"S7","«Mening otam Rossiyaga safar qildi» gapidagi bo'sh joyga mos predlogni qo'ying: «<span class=\"ar\">سَافَرَ أَبِي</span> ___ <span class=\"ar\">رُوسْيَا</span>».",[["A","<span class=\"ar\">إِلَى</span>"],["B","<span class=\"ar\">فِي</span>"],["C","<span class=\"ar\">بِـ</span>"],["D","<span class=\"ar\">كَـ</span>"]],"A"),
+q(70,"S7","«Ushbu chipta yo'lovchi uchun» gapining arabcha tarjimasini to'g'ri to'ldiring: «<span class=\"ar\">هَذِهِ التَّذْكِرَةُ</span> ___».",[["A","<span class=\"ar\">لِلْمُسَافِرِ</span>"],["B","<span class=\"ar\">كَالْمُسَافِرِ</span>"],["C","<span class=\"ar\">فِي الْمُسَافِرِ</span>"],["D","<span class=\"ar\">عَنِ الْمُسَافِرِ</span>"]],"A"),
+q(71,"S7","Fe'l va predlog mosligini toping: «<span class=\"ar\">بَحَثَ</span>» fe'li odatda qaysi predlog bilan keladi?",[["A","<span class=\"ar\">إِلَى</span>"],["B","<span class=\"ar\">عَنْ</span>"],["C","<span class=\"ar\">فِي</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"B"),
+q(72,"S7","Gapni to'ldiring: «<span class=\"ar\">تَحَدَّثَ الطَّبِيبُ</span> ___ <span class=\"ar\">الصِّحَّةِ</span>».",[["A","<span class=\"ar\">عَنْ</span>"],["B","<span class=\"ar\">كَـ</span>"],["C","<span class=\"ar\">إِلَى</span>"],["D","<span class=\"ar\">لِـ</span>"]],"A"),
+q(73,"S7","«Men ruchka bilan yozdim» gapi arab tilida qanday ifodalanadi?",[["A","<span class=\"ar\">كَتَبْتُ كَالْقَلَمِ</span>."],["B","<span class=\"ar\">كَتَبْتُ بِالْقَلَمِ</span>."],["C","<span class=\"ar\">كَتَبْتُ لِلْقَلَمِ</span>."],["D","<span class=\"ar\">كَتَبْتُ فِي الْقَلَمِ</span>."]],"B"),
+q(74,"S7","«<span class=\"ar\">الـ</span>» aniqlik artikli bilan boshlangan ismga «<span class=\"ar\">لِـ</span>» (uchun) predlogi qo'shilganda qanday o'zgarish bo'ladi?",[["A","Alif tushib qoladi (<span class=\"ar\">لِلْ</span>...)"],["B","Hech narsa o'zgarmaydi"],["C","Faqat lom harfi qo'shiladi"],["D","Tanvin paydo bo'ladi"]],"A"),
+q(75,"S7","«<span class=\"ar\">الرَّجُلُ كَالأَسَدِ</span>» gapining tarjimasi nima?",[["A","Erkak kishi arslon bilan birga."],["B","Erkak kishi arslondir."],["C","Erkak kishi arslondek (shijoatli)."],["D","Erkak kishi arslon uchun."]],"C"),
+q(76,"S7","Gapni to'ldiring: «<span class=\"ar\">وَصَلَ الْمُسَافِرُ</span> ___ <span class=\"ar\">بَلَدِهِ</span>».",[["A","<span class=\"ar\">عَنْ</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">كَـ</span>"],["D","<span class=\"ar\">فِي</span>"]],"B"),
+q(77,"S7","Qaysi gap grammatik jihatdan noto'g'ri tuzilgan?",[["A","<span class=\"ar\">أَنَا فِي الْغُرْفَةِ</span>."],["B","<span class=\"ar\">أَنَا عَلَى الْغُرْفَةِ</span>."],["C","<span class=\"ar\">الْكِتَابُ عَلَى الْمَكْتَبِ</span>."],["D","<span class=\"ar\">سَافَرْتُ إِلَى الْمَدِينَةِ</span>."]],"B"),
+q(78,"S7","Berilgan gapni to'ldiring: «<span class=\"ar\">الرَّاكِبُ سَرِيعٌ</span> ___ <span class=\"ar\">الْغَزَالِ</span>» (Yo'lovchi ohudek tezkor).",[["A","<span class=\"ar\">لِـ</span>"],["B","<span class=\"ar\">فِي</span>"],["C","<span class=\"ar\">كَـ</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"C"),
+q(79,"S7","Gapdagi bo'sh joyga mos predlogni tanlang: «<span class=\"ar\">اِسْتَمْتَعْتُ</span> ___ <span class=\"ar\">رِحْلَتِي</span>».",[["A","<span class=\"ar\">بِـ</span>"],["B","<span class=\"ar\">عَنْ</span>"],["C","<span class=\"ar\">كَـ</span>"],["D","<span class=\"ar\">إِلَى</span>"]],"A"),
+q(80,"S7","«Ushbu mashina Ahmadniki» gapi arab tilida qanday yoziladi?",[["A","<span class=\"ar\">هَذِهِ السَّيَّارَةُ كَأَحْمَدَ</span>."],["B","<span class=\"ar\">هَذِهِ السَّيَّارَةُ لِأَحْمَدَ</span>."],["C","<span class=\"ar\">هَذِهِ السَّيَّارَةُ فِي أَحْمَدَ</span>."],["D","<span class=\"ar\">هَذِهِ السَّيَّارَةُ مِنْ أَحْمَدَ</span>."]],"B"),
+q(81,"S7","Quyidagi mosliklardan qaysi biri xato berilgan?",[["A","<span class=\"ar\">مَتَى</span> — Zamon (<span class=\"ar\">الزَّمَان</span>) uchun"],["B","<span class=\"ar\">أَيْنَ</span> — Makon (<span class=\"ar\">الْمَكَان</span>) uchun"],["C","<span class=\"ar\">كَيْفَ</span> — Holat (<span class=\"ar\">الْحَال</span>) uchun"],["D","<span class=\"ar\">مَنْ</span> — Sabab (<span class=\"ar\">السَّبَب</span>) uchun"]],"D"),
+q(82,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">هُمَا</span> (<span class=\"ar\">مُؤَنَّث</span>) ___ <span class=\"ar\">الطَّعَامَ</span>».",[["A","<span class=\"ar\">تَنَاوَلَا</span>"],["B","<span class=\"ar\">تَنَاوَلَتَا</span>"],["C","<span class=\"ar\">تَنَاوَلُوا</span>"],["D","<span class=\"ar\">تَنَاوَلْنَ</span>"]],"B"),
+q(83,"S8","«<span class=\"ar\">أَنْتَ سَمِعْتَ الصَّوْتَ</span>» gapining ikkilik (musanno) shakli qaysi?",[["A","<span class=\"ar\">أَنْتُمَا سَمِعْتُمَا الصَّوْتَ</span>"],["B","<span class=\"ar\">أَنْتُمْ سَمِعْتُمُ الصَّوْتَ</span>"],["C","<span class=\"ar\">هُمَا سَمِعَا الصَّوْتَ</span>"],["D","<span class=\"ar\">نَحْنُ سَمِعْنَا الصَّوْتَ</span>"]],"A"),
+q(84,"S8","«<span class=\"ar\">هِيَ جَلَسَتْ فِي الْغُرْفَةِ</span>» gapining ayollar ko'pligi (jam' muannas) shakli qaysi?",[["A","<span class=\"ar\">هُمَا جَلَسَتَا فِي الْغُرْفَةِ</span>"],["B","<span class=\"ar\">هُنَّ جَلَسْنَ فِي الْغُرْفَةِ</span>"],["C","<span class=\"ar\">أَنْتُنَّ جَلَسْتُنَّ فِي الْغُرْفَةِ</span>"],["D","<span class=\"ar\">هُمْ جَلَسُوا فِي الْغُرْفَةِ</span>"]],"B"),
+q(85,"S8","«<span class=\"ar\">اشْتَرَيْتُ ثَلَاثَةَ</span> ___» — 3 sonidan keyin sanaladigan narsa qanday keladi?",[["A","<span class=\"ar\">قَلَمًا</span>"],["B","<span class=\"ar\">أَقْلَامٍ</span>"],["C","<span class=\"ar\">قَلَمٍ</span>"],["D","<span class=\"ar\">أَقْلَامًا</span>"]],"B"),
+q(86,"S8","«<span class=\"ar\">فِي الْمَكْتَبَةِ خَمْسُونَ</span> ___» — 50 sonidan keyin sanaladigan narsa qanday keladi?",[["A","<span class=\"ar\">كِتَابٍ</span>"],["B","<span class=\"ar\">كُتُبٍ</span>"],["C","<span class=\"ar\">كِتَابًا</span>"],["D","<span class=\"ar\">كُتُبًا</span>"]],"C"),
+q(87,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">أَكَلَ ثَلَاثَ</span> ___ <span class=\"ar\">فِي الْيَوْمِ</span>».",[["A","<span class=\"ar\">وَجَبَاتٍ</span>"],["B","<span class=\"ar\">وَجْبَةً</span>"],["C","<span class=\"ar\">وَجَبَاتًا</span>"],["D","<span class=\"ar\">وَجْبَةٍ</span>"]],"A"),
+q(88,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">سَكَنْتُ فِي الْقَاهِرَةِ سَبْعَةَ</span> ___».",[["A","<span class=\"ar\">أَيَّامٍ</span>"],["B","<span class=\"ar\">يَوْمًا</span>"],["C","<span class=\"ar\">أَيَّامًا</span>"],["D","<span class=\"ar\">يَوْمٍ</span>"]],"A"),
+q(89,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">اشْتَرَيْتُ سِتَّةَ</span> ___ <span class=\"ar\">لِأَطْفَالِي</span>».",[["A","<span class=\"ar\">كِتَابًا</span>"],["B","<span class=\"ar\">كُتُبٍ</span>"],["C","<span class=\"ar\">كِتَابٍ</span>"],["D","<span class=\"ar\">كُتُبًا</span>"]],"B"),
+q(90,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">سِعْرُ الْمَوْزِ سَبْعُ</span> ___».",[["A","<span class=\"ar\">لِيرَاتٍ</span>"],["B","<span class=\"ar\">لِيرَةً</span>"],["C","<span class=\"ar\">لِيرَاتًا</span>"],["D","<span class=\"ar\">لِيرَةٍ</span>"]],"A"),
+q(91,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">جَاءَ</span> ___ <span class=\"ar\">طَالِبًا إِلَى الصَّفِّ الْيَوْمَ</span>».",[["A","<span class=\"ar\">سَبْعَةَ</span>"],["B","<span class=\"ar\">سَبْعَةَ عَشَرَ</span>"],["C","<span class=\"ar\">ثَلَاثُ</span>"],["D","<span class=\"ar\">ثَمَانِي</span>"]],"B"),
+q(92,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">فِي بَيْتِنَا</span> ___ <span class=\"ar\">غُرَفٍ</span>».",[["A","<span class=\"ar\">خَمْسُونَ</span>"],["B","<span class=\"ar\">أَرْبَعَةَ عَشَرَ</span>"],["C","<span class=\"ar\">ثَلَاثُ</span>"],["D","<span class=\"ar\">اثْنَا عَشَرَ</span>"]],"C"),
+q(93,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">كَتَبْتُ فِي الدَّفْتَرِ</span> ___ <span class=\"ar\">كَلِمَةً</span>».",[["A","<span class=\"ar\">ثَلَاثُ</span>"],["B","<span class=\"ar\">خَمْسِينَ</span>"],["C","<span class=\"ar\">سَبْعَةَ</span>"],["D","<span class=\"ar\">ثَمَانِي</span>"]],"B"),
+q(94,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">أَعْمَلُ</span> ___ <span class=\"ar\">سَاعَاتٍ فِي الْيَوْمِ</span>».",[["A","<span class=\"ar\">ثَمَانِيَ</span>"],["B","<span class=\"ar\">اثْنَا عَشَرَ</span>"],["C","<span class=\"ar\">ثَلَاثَةَ عَشَرَ</span>"],["D","<span class=\"ar\">أَرْبَعَةَ عَشَرَ</span>"]],"A"),
+q(95,"S8","«Ikki qiz (talaba) taomni tanovul qilishdi» gapining to'g'ri arabcha tarjimasini aniqlang.",[["A","<span class=\"ar\">الطَّالِبَانِ تَنَاوَلَا الطَّعَامَ</span>"],["B","<span class=\"ar\">الطَّالِبَاتُ تَنَاوَلْنَ الطَّعَامَ</span>"],["C","<span class=\"ar\">الطَّالِبَتَانِ تَنَاوَلَتَا الطَّعَامَ</span>"],["D","<span class=\"ar\">الطُّلَّابُ تَنَاوَلُوا الطَّعَامَ</span>"]],"C"),
+q(96,"S8","Arab tilida 3 dan 10 gacha bo'lgan sonlarning qoidasi qanday?",[["A","Son jinsda moslashadi, sanaladigan narsa birlik va mansub bo'ladi."],["B","Son jinsda teskari bo'ladi, sanaladigan narsa ko'plik va majrur (zerli) bo'ladi."],["C","Sanaladigan narsa har doim birlik va majrur bo'ladi."],["D","Son va sanaladigan narsa har doim mansub (fathali) bo'ladi."]],"B"),
+q(97,"S8","Arab tilida 11 dan 99 gacha bo'lgan sonlardan keyin keladigan ot (sanaladigan narsa) qanday holatda bo'ladi?",[["A","Ko'plik va majrur (<span class=\"ar\">جمع مجرور</span>)"],["B","Birlik va mansub (<span class=\"ar\">مفرد منصوب</span>)"],["C","Birlik va majrur (<span class=\"ar\">مفرد مجرور</span>)"],["D","Ko'plik va mansub (<span class=\"ar\">جمع منصوب</span>)"]],"B"),
+q(98,"S8","«<span class=\"ar\">قَرَأْتُ عِشْرِينَ رِوَايَةً</span>» gapidagi grammatik qoida qaysi javobda to'g'ri izohlangan?",[["A","20 sonidan keyin sanaladigan narsa ko'plik va majrur kelgan."],["B","20 sonidan keyin sanaladigan narsa birlik va mansub kelgan."],["C","3–10 qoidasiga binoan majrur bo'lgan."],["D","Bu yerda fe'l va foil moslashmagan."]],"B"),
+q(99,"S9","«<span class=\"ar\">سَأَكْتُبُ</span>» (Men yozaman) fe'lidagi «<span class=\"ar\">سَـ</span>» qo'shimchasi qanday muddatdagi kelasi zamonni anglatadi?",[["A","Yaqin kelasi zamon"],["B","Uzoq kelasi zamon"],["C","O'tgan zamon"],["D","Buyruq mayli"]],"A"),
+q(100,"S9","«Uzoq kelasi zamon»ni ifodalash uchun qaysi yuklama ishlatiladi?",[["A","<span class=\"ar\">سَـ</span>"],["B","<span class=\"ar\">سَوْفَ</span>"],["C","<span class=\"ar\">لَنْ</span>"],["D","<span class=\"ar\">لَا</span>"]],"B"),
+q(101,"S9","«<span class=\"ar\">أُمِّي تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ</span>» (Ona bozordan sabzavot sotib olyapti) gapini kelasi zamonga o'giring.",[["A","<span class=\"ar\">أُمِّي اشْتَرَتِ الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"],["B","<span class=\"ar\">أُمِّي سَوْفَ تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"],["C","<span class=\"ar\">أُمِّي لَمْ تَشْتَرِ الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"],["D","<span class=\"ar\">أُمِّي تَشْتَرِي الْخُضْرَةَ</span>"]],"B"),
+q(102,"S9","«<span class=\"ar\">هُمْ يَدْرُسُونَ</span>» (Ular o'qiyapti) fe'lini kelasi zamon shakliga to'g'ri o'tkazilgan variantni toping.",[["A","<span class=\"ar\">هُمْ دَرَسُوا</span>"],["B","<span class=\"ar\">هُمْ يَدْرُسُونَ</span>"],["C","<span class=\"ar\">هُمْ سَيَدْرُسُونَ</span>"],["D","<span class=\"ar\">هُمْ سَوْفَ دَرَسُوا</span>"]],"C"),
+q(103,"S9","Berilgan gaplardan qaysi biri grammatik jihatdan TO'G'RI?",[["A","<span class=\"ar\">سَوْفَ تَكْتُبِينَ الْوَاجِبَ</span>."],["B","<span class=\"ar\">سَوْفَ شَاهَدْتُ التِّلْفَازَ</span>."],["C","<span class=\"ar\">أُرِيدُ أَنْ سَأَخْرُجَ قَلِيلًا</span>."],["D","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟</span>"]],"A"),
+q(104,"S9","Qaysi gap grammatik jihatdan XATO tuzilgan?",[["A","<span class=\"ar\">أُرِيدُ أَنْ أَخْرُجَ قَلِيلًا</span>."],["B","<span class=\"ar\">أُحِبُّ أَنْ أَعِيشَ فِي الْقَرْيَةِ</span>."],["C","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ غَدًا؟</span>"],["D","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟</span>"]],"D"),
+q(105,"S9","Bo'shliqqa mos fe'lni qo'ying: «<span class=\"ar\">الْمَدْرَسَةُ</span> ___ <span class=\"ar\">بَعْدَ أُسْبُوعٍ</span>» (Maktab bir haftadan keyin boshlanadi).",[["A","<span class=\"ar\">بَدَأَتْ</span>"],["B","<span class=\"ar\">تَبْدَأُ</span>"],["C","<span class=\"ar\">سَتَبْدَأُ</span>"],["D","<span class=\"ar\">بَدَؤُوا</span>"]],"C"),
+q(106,"S9","«<span class=\"ar\">أَنْتُمَا</span>» (Siz ikkingiz) olmoshiga hozirgi zamonda qaysi shakl to'g'ri keladi?",[["A","<span class=\"ar\">تَسْأَلَانِ</span>"],["B","<span class=\"ar\">يَسْأَلَانِ</span>"],["C","<span class=\"ar\">نَسْأَلُ</span>"],["D","<span class=\"ar\">تَسْأَلُونَ</span>"]],"A"),
+q(107,"S9","«<span class=\"ar\">هُمَا</span>» (Ular ikkitasi — muzakkar) uchun qaysi fe'l shakli mos keladi?",[["A","<span class=\"ar\">تَسْأَلَانِ</span>"],["B","<span class=\"ar\">يَسْأَلَانِ</span>"],["C","<span class=\"ar\">يَسْأَلُونَ</span>"],["D","<span class=\"ar\">تَسْأَلُونَ</span>"]],"B"),
+q(108,"S9","«<span class=\"ar\">هُمَا</span>» (Ular ikkitasi — muannas) uchun to'g'ri fe'l shaklini toping.",[["A","<span class=\"ar\">يَسْأَلَانِ</span>"],["B","<span class=\"ar\">تَسْأَلَانِ</span>"],["C","<span class=\"ar\">تَسْأَلُونَ</span>"],["D","<span class=\"ar\">يَسْأَلُونَ</span>"]],"B"),
+q(109,"S9","«<span class=\"ar\">أَنْتُمْ</span>» (Sizlar — ko'plik, muzakkar) uchun to'g'ri fe'l shakli qaysi?",[["A","<span class=\"ar\">تَسْأَلَانِ</span>"],["B","<span class=\"ar\">تَسْأَلُونَ</span>"],["C","<span class=\"ar\">يَسْأَلُونَ</span>"],["D","<span class=\"ar\">تَسْأَلْنَ</span>"]],"B"),
+q(110,"S9","Bo'sh joyni to'ldiring: «<span class=\"ar\">الطَّالِبَتَانِ</span> ___ <span class=\"ar\">إِلَى الْمَعْهَدِ</span>» (Ikki talaba qiz institutga bormoqda).",[["A","<span class=\"ar\">ذَهَبَتْ</span>"],["B","<span class=\"ar\">تَذْهَبَانِ</span>"],["C","<span class=\"ar\">يَذْهَبَانِ</span>"],["D","<span class=\"ar\">تَذْهَبُونَ</span>"]],"B"),
+q(111,"S10","«<span class=\"ar\">الْمَفْعُولُ بِهِ</span>» (vositasiz to'ldiruvchi) doimo qanday holatda (e'robda) bo'ladi?",[["A","Mansub (fatha yoki uning o'rniga keluvchi belgi bilan)"],["B","Marfu' (damma bilan)"],["C","Majrur (kasra bilan)"],["D","Sokin (sukun bilan)"]],"A"),
+q(112,"S10","Ismiy gapni (<span class=\"ar\">الجملة الاسمية</span>) inkor qilish uchun qaysi yuklama ishlatiladi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">لَيْسَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"C"),
+q(113,"S10","Fe'liy gaplarni inkor qilishda quyidagi yuklamalardan qaysi biri ishlatilmaydi?",[["A","<span class=\"ar\">مَا</span> / <span class=\"ar\">لَا</span>"],["B","<span class=\"ar\">لَمْ</span> / <span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">لَيْسَ</span>"],["D","Hech biri, barchasi fe'liy gapga keladi"]],"C"),
+q(114,"S10","Kelasi zamon fe'lini inkor qilib, ma'noni «hech qachon bajarilmaydi» shakliga o'zgartiradigan yuklama qaysi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">مَا</span>"],["D","<span class=\"ar\">لَا</span>"]],"B"),
+q(115,"S10","Hozirgi-kelasi zamon (<span class=\"ar\">مُضَارِع</span>) fe'lini inkor qilib, uning oxirini sokin (jazm) qiladigan va ma'noni o'tgan zamonga buradigan yuklama qaysi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">لَا</span>"],["D","<span class=\"ar\">لَيْسَ</span>"]],"A"),
+q(116,"S10","«<span class=\"ar\">أَخَذَ الرَّجُلُ الدَّوَاءَ</span>» (Kishi dorini oldi) o'tgan zamon gapining to'g'ri inkor shaklini toping.",[["A","<span class=\"ar\">لَا يَأْخُذُ الرَّجُلُ الدَّوَاءَ</span>"],["B","<span class=\"ar\">لَنْ يَأْخُذَ الرَّجُلُ الدَّوَاءَ</span>"],["C","<span class=\"ar\">مَا أَخَذَ الرَّجُلُ الدَّوَاءَ</span>"],["D","<span class=\"ar\">لَيْسَ الرَّجُلُ الدَّوَاءَ</span>"]],"C"),
+q(117,"S10","«<span class=\"ar\">الطَّبِيبُ مَشْغُولٌ</span>» (Shifokor band) ismiy gapining inkor shakli qaysi javobda to'g'ri berilgan?",[["A","<span class=\"ar\">مَا مَشْغُولٌ الطَّبِيبُ</span>"],["B","<span class=\"ar\">لَمْ يَشْغَلِ الطَّبِيبُ</span>"],["C","<span class=\"ar\">لَيْسَ الطَّبِيبُ مَشْغُولًا</span>"],["D","<span class=\"ar\">لَنِ الطَّبِيبُ مَشْغُولٌ</span>"]],"C"),
+q(118,"S10","«<span class=\"ar\">أَذْهَبُ إِلَى عَمَلِي غَدًا</span>» gapini «ertaga borolmayman» ma'nosida inkor qilish uchun qaysi yuklama qo'yiladi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">لَيْسَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"B"),
+q(119,"S10","«<span class=\"ar\">أَنَا بِخَيْرٍ الآنَ وَ</span>___ <span class=\"ar\">أَشْعُرُ بِأَلَمٍ</span>» gapiga mos inkor yuklamasini tanlang.",[["A","<span class=\"ar\">لَنْ</span>"],["B","<span class=\"ar\">لَمْ</span>"],["C","<span class=\"ar\">لَا</span>"],["D","<span class=\"ar\">لَيْسَ</span>"]],"C"),
+q(120,"S10","«___ <span class=\"ar\">عِنْدِي تَسَوُّسٌ فِي أَسْنَانِي</span>» (Tishimda karies yo'q) gapida qaysi yuklama to'g'ri?",[["A","<span class=\"ar\">لَنْ</span>"],["B","<span class=\"ar\">لَمْ</span>"],["C","<span class=\"ar\">لَيْسَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"C"),
+q(121,"S11","G'ayrioqil (aqlsiz) ko'plikdagi so'zlar uchun qaysi ko'rsatkich olmoshi ishlatiladi?",[["A","Faqat ko'plik shakli (<span class=\"ar\">هَؤُلَاءِ</span> / <span class=\"ar\">أُولَئِكَ</span>)"],["B","Muannas (ayol) jinsidagi birlik shakli (<span class=\"ar\">هَذِهِ</span> / <span class=\"ar\">تِلْكَ</span>)"],["C","Muzakkar (erkak) jinsidagi birlik shakli (<span class=\"ar\">هَذَا</span> / <span class=\"ar\">ذَلِكَ</span>)"],["D","Hech qanday olmosh ishlatilmaydi"]],"B"),
+q(122,"S11","Bo'sh joyni to'ldiring: «___ <span class=\"ar\">الْكَرَاسِيُّ مُرِيحَةٌ</span>» (Uzoqdagi stullar qulay).",[["A","<span class=\"ar\">أُولَئِكَ</span>"],["B","<span class=\"ar\">ذَلِكَ</span>"],["C","<span class=\"ar\">تِلْكَ</span>"],["D","<span class=\"ar\">هَؤُلَاءِ</span>"]],"C"),
+q(123,"S11","Bo'sh joyga mos mavsufni (otni) tanlang: «<span class=\"ar\">فِي الْبَيْتِ</span> ___ <span class=\"ar\">نَائِمُونَ</span>».",[["A","<span class=\"ar\">طِفْلَةٌ</span>"],["B","<span class=\"ar\">أَطْفَالٌ</span>"],["C","<span class=\"ar\">الْبِنْتُ</span>"],["D","<span class=\"ar\">الْوَلَدُ</span>"]],"B"),
+q(124,"S11","«<span class=\"ar\">هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ</span>» gapini uzoqni ko'rsatuvchi shaklga o'giring.",[["A","<span class=\"ar\">أُولَئِكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["B","<span class=\"ar\">تِلْكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["C","<span class=\"ar\">ذَلِكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["D","<span class=\"ar\">هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ</span>"]],"B"),
+q(125,"S11","«<span class=\"ar\">هَذَا الْمَنْظَرُ جَمِيلٌ</span>» gapini uzoqni ko'rsatuvchi shaklga o'giring.",[["A","<span class=\"ar\">تِلْكَ الْمَنْظَرُ جَمِيلٌ</span>"],["B","<span class=\"ar\">ذَلِكَ الْمَنْظَرُ جَمِيلٌ</span>"],["C","<span class=\"ar\">أُولَئِكَ الْمَنْظَرُ جَمِيلٌ</span>"],["D","<span class=\"ar\">هَذِهِ الْمَنْظَرُ جَمِيلٌ</span>"]],"B"),
+q(126,"S11","«<span class=\"ar\">يَنْصَحُ الطَّبِيبُ بِـ</span> ___ <span class=\"ar\">الْخَضْرَاوَاتِ الطَّازَجَةِ</span>» gapidagi bo'sh joyga mos shaklni qo'ying.",[["A","<span class=\"ar\">تَنَاوُلِ</span>"],["B","<span class=\"ar\">الْقِرَاءَةِ</span>"],["C","<span class=\"ar\">مُمَارَسَةِ</span>"],["D","<span class=\"ar\">الْمَشْيِ</span>"]],"A"),
+q(127,"S11","Bo'sh joyga mos ko'rsatkich olmoshini qo'ying: «___ <span class=\"ar\">الْجِبَالُ عَالِيَةٌ</span>» (Uzoqdagi tog'lar).",[["A","<span class=\"ar\">أُولَئِكَ</span>"],["B","<span class=\"ar\">ذَلِكَ</span>"],["C","<span class=\"ar\">تِلْكَ</span>"],["D","<span class=\"ar\">هَؤُلَاءِ</span>"]],"C"),
+q(128,"S11","Sifat va mavsuf moslashuviga ko'ra to'g'ri birikmani toping.",[["A","<span class=\"ar\">الرِّيَاضَةُ الْبَدَنِيَّةُ</span>"],["B","<span class=\"ar\">الرِّيَاضَةُ الْبَدَنِيُّ</span>"],["C","<span class=\"ar\">الرِّيَاضَةُ بَدَنِيٌّ</span>"],["D","<span class=\"ar\">رِيَاضَةٌ الْبَدَنِيَّةُ</span>"]],"A"),
+q(129,"S11","«<span class=\"ar\">أُولَئِكَ لَاعِبُونَ مَاهِرُونَ</span>» gapidagi ko'rsatkich olmoshi nimani anglatadi?",[["A","Yaqindagi ko'p sonli erkaklarni"],["B","Uzoqdagi ko'p sonli insonlarni"],["C","Yaqindagi bitta erkakni"],["D","Uzoqdagi aqlsiz ko'plikni"]],"B"),
+q(130,"S11","Sifat va mavsuf moslashuvida qaysi omillar mos kelishi shart?",[["A","Jins, son, aniqlik va kelishikda"],["B","Faqat jins va kelishikda"],["C","Faqat sonda"],["D","Hech qaysi jihatdan mos kelishi shart emas"]],"A"),
+q(131,"S11","«<span class=\"ar\">فِي الْمَلْعَبِ لَاعِبُونَ</span> ___» gapidagi bo'sh joyga to'g'ri sifatni qo'ying.",[["A","<span class=\"ar\">مَاهِرٌ</span>"],["B","<span class=\"ar\">مَاهِرُونَ</span>"],["C","<span class=\"ar\">مَاهِرَةٌ</span>"],["D","<span class=\"ar\">مَاهِرَاتٌ</span>"]],"B"),
+q(132,"S11","«<span class=\"ar\">تِلْكَ</span>» ko'rsatkich olmoshi qaysi holatda ishlatiladi?",[["A","Uzoqdagi muzakkar (erkak) birlik uchun"],["B","Uzoqdagi muannas (ayol) birlik va g'ayrioqil ko'plik uchun"],["C","Yaqindagi muannas birlik uchun"],["D","Uzoqdagi aqlli ko'plik uchun"]],"B"),
+q(133,"S11","Bo'sh joyni to'ldiring: «<span class=\"ar\">شَاهَدْتُ سَيَّارَةً</span> ___».",[["A","<span class=\"ar\">كَبِيرَةً</span>"],["B","<span class=\"ar\">كَبِيرٌ</span>"],["C","<span class=\"ar\">كَبِيرَةٌ</span>"],["D","<span class=\"ar\">كِبَارٌ</span>"]],"A"),
+q(134,"S11","«<span class=\"ar\">هَؤُلَاءِ الرِّجَالُ يُمَارِسُونَ الرِّيَاضَةَ</span>» gapidagi «<span class=\"ar\">هَؤُلَاءِ</span>» olmoshini uzoqlik shakliga o'zgartiring.",[["A","<span class=\"ar\">تِلْكَ</span>"],["B","<span class=\"ar\">ذَلِكَ</span>"],["C","<span class=\"ar\">أُولَئِكَ</span>"],["D","<span class=\"ar\">هَذِهِ</span>"]],"C"),
+q(135,"S11","Bo'sh joyga mos sifatni tanlang: «<span class=\"ar\">يَسْكُنُ فِي بَيْتٍ</span> ___».",[["A","<span class=\"ar\">وَاسِعٍ</span>"],["B","<span class=\"ar\">وَاسِعَةٌ</span>"],["C","<span class=\"ar\">وَاسِعٌ</span>"],["D","<span class=\"ar\">وَاسِعًا</span>"]],"A"),
+q(136,"S11","To'g'ri sifat-mavsuf birikmasini aniqlang.",[["A","<span class=\"ar\">الْأَلْعَابِ الْإِلِكْتْرُونِيَّةِ</span>"],["B","<span class=\"ar\">الْأَلْعَابِ الْإِلِكْتْرُونِيُّ</span>"],["C","<span class=\"ar\">أَلْعَابٌ الْإِلِكْتْرُونِيَّةِ</span>"],["D","<span class=\"ar\">الْأَلْعَابِ إِلِكْتْرُونِيَّةٌ</span>"]],"A"),
+q(137,"S12","Sifatlardan «<span class=\"ar\">اسم التفضيل</span>» (orttirma daraja) hosil qilish qolipini ko'rsating.",[["A","<span class=\"ar\">مَفْعُول</span>"],["B","<span class=\"ar\">أَفْعَل</span>"],["C","<span class=\"ar\">فَاعِل</span>"],["D","<span class=\"ar\">فَعِيل</span>"]],"B"),
+q(138,"S12","Gapni to'g'ri to'ldiring: «<span class=\"ar\">الْفِيلُ أَكْبَرُ</span> ___ <span class=\"ar\">الْبَقَرَةِ</span>».",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">عَنْ</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"D"),
+q(139,"S12","Berilgan so'zlardan to'g'ri qiyosiy gap tuzing: (<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ</span> / <span class=\"ar\">سَهْل</span> / <span class=\"ar\">الرِّيَاضِيَّات</span>).",[["A","<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ أَسْهَلُ مِنَ الرِّيَاضِيَّاتِ</span>"],["B","<span class=\"ar\">الرِّيَاضِيَّاتُ أَسْهَلُ مِنَ اللُّغَةِ الْعَرَبِيَّةِ</span>"],["C","<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ سَهْلٌ مِنَ الرِّيَاضِيَّاتِ</span>"],["D","<span class=\"ar\">الرِّيَاضِيَّاتُ سَهْلَةٌ مِنَ اللُّغَةِ الْعَرَبِيَّةِ</span>"]],"A"),
+q(140,"S12","«<span class=\"ar\">أَمَّا</span> ___ <span class=\"ar\">فَـ</span>» konstruksiyasi o'zbek tiliga qanday tarjima qilinadi?",[["A","...ga kelsak, ...esa"],["B","...dan keyin, chunki"],["C","go'yoki ...dek"],["D","birinchidan ... ikkinchidan"]],"A"),
+q(141,"S12","Gapni to'g'ri to'ldiring: «<span class=\"ar\">أَبِي عُمْرُهُ خَمْسُونَ عَامًا،</span> ___ <span class=\"ar\">أُمِّي فَعُمْرُهَا أَرْبَعُونَ</span>».",[["A","<span class=\"ar\">قَبْلَ</span>"],["B","<span class=\"ar\">يَبْدَأُ</span>"],["C","<span class=\"ar\">بَعْدَ</span>"],["D","<span class=\"ar\">أَمَّا</span>"]],"D"),
+q(142,"S12","«<span class=\"ar\">قَبْلَ أَنْ</span>» birikmasidan keyin fe'lning qaysi shakli keladi?",[["A","O'tgan zamon fe'li (<span class=\"ar\">الماضي</span>)"],["B","Muzoriy fe'li (<span class=\"ar\">المضارع</span>)"],["C","Buyruq fe'li (<span class=\"ar\">الأمر</span>)"],["D","Taqiq fe'li (<span class=\"ar\">النهي</span>)"]],"B"),
+q(143,"S12","Gapni grammatik jihatdan to'g'ri to'ldiring: «<span class=\"ar\">أُمَارِسُ الرِّيَاضَةَ قَبْلَ أَنْ</span> ___ <span class=\"ar\">الْفُطُورَ</span>».",[["A","<span class=\"ar\">أَتَنَاوَلَ</span>"],["B","<span class=\"ar\">تَنَاوَلْتُ</span>"],["C","<span class=\"ar\">تَنَاوُلٌ</span>"],["D","<span class=\"ar\">تَنَاوَلْ</span>"]],"A"),
+q(144,"S12","«<span class=\"ar\">اِجْلِسْ</span>» fe'lining turi va ma'nosi nima?",[["A","Taqiq fe'li — o'tirma"],["B","Buyruq fe'li — o'tir (muannas)"],["C","Buyruq fe'li — o'tir (muzakkar, birlik)"],["D","O'tgan zamon — o'tirdi"]],"C"),
+q(145,"S12","«<span class=\"ar\">اِذْهَبْ</span>» (Bor!) buyruq fe'lining ko'plik (muzakkar) shaklini ko'rsating.",[["A","<span class=\"ar\">اِذْهَبِي</span>"],["B","<span class=\"ar\">اِذْهَبَا</span>"],["C","<span class=\"ar\">اِذْهَبْنَ</span>"],["D","<span class=\"ar\">اِذْهَبُوا</span>"]],"D"),
+q(146,"S12","Qiz bolaga (<span class=\"ar\">أَنْتِ</span>) qarata «Yozma!» demoqchi bo'lsak, qaysi shakldan foydalanamiz?",[["A","<span class=\"ar\">لَا تَكْتُبْ</span>"],["B","<span class=\"ar\">لَا تَكْتُبِي</span>"],["C","<span class=\"ar\">لَا تَكْتُبُوا</span>"],["D","<span class=\"ar\">لَا تَكْتُبْنَ</span>"]],"B"),
+q(147,"S12","«<span class=\"ar\">اِشْرَبْنَ</span>» fe'li kimga nisbatan aytilgan?",[["A","Ko'plikdagi ayollarga (<span class=\"ar\">أَنْتُنَّ</span>)"],["B","Ikki kishiga (<span class=\"ar\">أَنْتُمَا</span>)"],["C","Ko'plikdagi erkaklarga (<span class=\"ar\">أَنْتُمْ</span>)"],["D","Bir ayolga (<span class=\"ar\">أَنْتِ</span>)"]],"A"),
+q(148,"S12","«<span class=\"ar\">يَا طُلَّابُ، لَا تَكْتُبُوا الْوَاجِبَ فِي الدَّرْسِ</span>» gapidagi «<span class=\"ar\">لَا تَكْتُبُوا</span>» fe'li nimani anglatadi?",[["A","Vazifani darsda yozinglar"],["B","Vazifani darsda yozmanglar"],["C","Vazifani uyda yozishdi"],["D","Vazifani darsdan oldin yozinglar"]],"B"),
+q(149,"S12","Gapni mantiqan va grammatik jihatdan to'g'ri taqiq shakli bilan to'ldiring: «<span class=\"ar\">لَا</span> ___ <span class=\"ar\">عَنْ هَذِهِ الْحَيَوَانَاتِ</span>» (Bu hayvonlardan uzoqlashmanglar — ko'plik).",[["A","<span class=\"ar\">تَبْتَعِدْ</span>"],["B","<span class=\"ar\">تَبْتَعِدِي</span>"],["C","<span class=\"ar\">تَبْتَعِدُوا</span>"],["D","<span class=\"ar\">تَبْتَعِدْنَ</span>"]],"C"),
+q(150,"S12","«<span class=\"ar\">رَجَعْتُ مِنَ الْمَتْجَرِ</span>» (Do'kondan qaytdim) gapini «Do'kondan qaytma!» shaklidagi taqiq gapga aylantiring.",[["A","<span class=\"ar\">اِرْجِعْ مِنَ الْمَتْجَرِ</span>"],["B","<span class=\"ar\">لَا تَرْجِعْ مِنَ الْمَتْجَرِ</span>"],["C","<span class=\"ar\">لَا تَرْجِعِي مِنَ الْمَتْجَرِ</span>"],["D","<span class=\"ar\">لَا يَرْجِعُ مِنَ الْمَتْجَرِ</span>"]],"B")
 ];
 
-/* ============ SECTION B — 25 TRUE/FALSE ============ */
-var QB = [
-tf(67,'B', AR('التَّنْوِينُ')+' (tanvin) — ismning belgisi, u fe\'lga kirmaydi.', true),
-tf(68,'B', AR('هَٰؤُلَاءِ')+' — uzoqdagi jamga ishora qiladi.', false),
-tf(69,'B', 'Muttasil zamir mustaqil (yolg\'iz) kela oladi.', false),
-tf(70,'B', AR('كَيْفَ')+' — holatni so\'rovchi istifhom ismi.', true),
-tf(71,'B', 'Jam\' muannas solim nasb holatida fatha oladi.', false),
-tf(72,'B', 'Ismiy jumla ism yoki zamir bilan boshlanadi.', true),
-tf(73,'B', 'Feliy jumlada foil doim mansub bo\'ladi.', false),
-tf(74,'B', AR('سَـ')+' va '+AR('سَوْفَ')+' moziy fe\'lga qo\'shilib kelasi zamon yasaydi.', false),
-tf(75,'B', AR('لَمْ')+' muzorini majzum qiladi va ma\'noni o\'tgan zamonga o\'tkazadi.', true),
-tf(76,'B', '3–10 adadlarida adad va ma\'dud jinsda bir xil (mos) bo\'ladi.', false),
-tf(77,'B', 'Zarf (zamon/makon) odatda mansub keladi.', true),
-tf(78,'B', AR('لَيْسَ')+' feliy jumlani inkor qilish uchun ishlatiladi.', false),
-tf(79,'B', 'Sifat mavsufga i\'rob, son, jins va ta\'rifda mos keladi.', true),
-tf(80,'B', 'Amr fe\'lining oxiri odatda majzum (sokin) bo\'ladi.', true),
-tf(81,'B', AR('لَنْ يَذْهَبُ')+' — to\'g\'ri yozilgan ibora.', false),
-tf(82,'B', 'Harfi jardan keyingi ism majrur (kasrali) bo\'ladi.', true),
-tf(83,'B', AR('أَنْتُنَّ')+' — muxotab muannas jam zamiri.', true),
-tf(84,'B', AR('نَصَرْنَا')+' moziy fe\'li «men yordam berdim» ma\'nosini bildiradi.', false),
-tf(85,'B', 'Musanna raf holatida '+AR('انِ')+', nasb/jar holatida '+AR('يْنِ')+' oladi.', true),
-tf(86,'B', 'Nahiy fe\'li '+AR('لَنْ')+' orqali yasaladi.', false),
-tf(87,'B', AR('مَاذَا')+' — narsa haqidagi savol so\'zi.', true),
-tf(88,'B', 'Jam\' taksirda so\'zning asosiy tuzilishi (vazni) o\'zgaradi.', true),
-tf(89,'B', AR('عَلَيْهِ')+' — harfi jar bilan muttasil zamirning birikmasi.', true),
-tf(90,'B', 'Muzori fe\'l hech qachon o\'zgarmaydi (mabniy) — i\'rob qabul qilmaydi.', false),
-tf(91,'B', AR('هَذَا كِتَابٌ')+' — to\'liq ismiy jumla (mubtado + xabar).', true)
-];
-
-/* ============ SECTION C — 4 MATCHING BLOCKS (92-95) ============ */
-var QC = [
-match(92,'C','So\'roq (istifhom) so\'zlarini ma\'nosi bilan ulang:',
-  [[1,AR('مَنْ')],[2,AR('أَيْنَ')],[3,AR('مَتَى')],[4,AR('كَيْفَ')],[5,AR('كَمْ')],[6,AR('لِمَاذَا')]],
-  [['a','nechta'],['b','qachon'],['c','kim'],['d','nega'],['e','qanday'],['f','qayerda']],
-  {1:'c',2:'f',3:'b',4:'e',5:'a',6:'d'}),
-match(93,'C','Zamirlarni to\'g\'ri tavsifi bilan ulang:',
-  [[1,AR('أَنَا')],[2,AR('نَحْنُ')],[3,AR('أَنْتَ')],[4,AR('هِيَ')],[5,AR('هُمْ')],[6,AR('أَنْتُمَا')]],
-  [['a','muxotab musanna'],['b','g\'oyib muannas birlik'],['c','mutakallim birlik'],['d','g\'oyib muzakkar jam'],['e','muxotab muzakkar birlik'],['f','mutakallim jam']],
-  {1:'c',2:'f',3:'e',4:'b',5:'d',6:'a'}),
-match(94,'C','Nafiy usulini u inkor qiladigan holatga ulang:',
-  [[1,AR('لَمْ')],[2,AR('لَنْ')],[3,AR('لَا')],[4,AR('لَيْسَ')],[5,AR('مَا')],[6,AR('لَا النَّاهِيَةُ')]],
-  [['a','buyruqni qaytarish'],['b','o\'tgan zamon (moziy)'],['c','o\'tgan zamon (muzori majzum)'],['d','hozirgi zamon (muzori marfu\')'],['e','ismiy jumla'],['f','kelasi zamon (muzori mansub)']],
-  {1:'c',2:'f',3:'d',4:'e',5:'b',6:'a'}),
-match(95,'C','Fe\'lni to\'g\'ri buyruq (amr) shakli bilan ulang:',
-  [[1,AR('كَتَبَ')],[2,AR('جَلَسَ')],[3,AR('نَصَرَ')],[4,AR('فَتَحَ')],[5,AR('شَرِبَ')],[6,AR('سَمِعَ')]],
-  [['a',AR('اُنْصُرْ')],['b',AR('اِسْمَعْ')],['c',AR('اِجْلِسْ')],['d',AR('اِشْرَبْ')],['e',AR('اُكْتُبْ')],['f',AR('اِفْتَحْ')]],
-  {1:'e',2:'c',3:'a',4:'f',5:'d',6:'b'})
-];
-
-/* ============ SECTION D — 20 FILL IN THE BLANK (96-115) ============ */
-function nAr(s){
-  return s.normalize('NFC')
-    .replace(/[ً-ْٰـ]/g,'')
-    .replace(/[إأآٱ]/g,'ا')
-    .replace(/ى/g,'ي')
-    .replace(/ة/g,'ه')
-    .replace(/\s+/g,'')
-    .trim();
-}
-var QD = [
-fill(96,'D','«'+AR('ذَهَبَ الوَلَدُ ____ البَيْتِ')+'» — «uydan» ma\'nosi uchun mos harfi jarni qo\'ying.', ['من','مِنَ']),
-fill(97,'D','«'+AR('هَذَا ____')+'» — yaqindagi bitta muzakkar narsani ta\'riflab, xabar qo\'ying (masalan «kitob»).', ['كتاب','كتابٌ','قلم','قلمٌ','بيت','بيتٌ'], 'Har qanday mufrad, muzakkar, nakira ism (masalan: كِتَابٌ) qabul qilinadi.'),
-fill(98,'D','«'+AR('الطَّالِبَاتُ الدَّرْسَ ____')+'» — «yozdilar (ayollar)» fe\'lini qo\'ying.', ['كتبن','كَتَبْنَ']),
-fill(99,'D','«'+AR('سَـ ____ غَدًا')+'» — «boraman» (mutakallim) shaklini qo\'ying.', ['اذهب','أَذْهَبُ']),
-fill(100,'D','«'+AR('لَنْ ____')+'» — «u yozmaydi (kelasi)» — mansub muzorini qo\'ying.', ['يكتب','يَكْتُبَ']),
-fill(101,'D','«'+AR('خَمْسَةُ ____')+'» — «beshta erkak» (ma\'dudni to\'g\'ri shaklda qo\'ying).', ['رجال','رِجَالٍ']),
-fill(102,'D','«'+AR('جَلَسَ القِطُّ ____ الكُرْسِيِّ')+'» — «stul tagida» — zarfi makon qo\'ying.', ['تحت','تَحْتَ']),
-fill(103,'D','«'+AR('____ تُهْمِلْ دَرْسَكَ')+'» — «darsingni tashlab qo\'yma» — nahiy harfini qo\'ying.', ['لا','لَا']),
-fill(104,'D','«'+AR('المُعَلِّمُ ____')+'» — «tajribali» sifatini to\'g\'ri qo\'ying (mavsufdan keyin, ma\'rifa, muzakkar, marfu\').', ['الخبير','الخبيرُ','الماهر','الماهرُ','المجرب','المجربُ'], 'Sifat mavsufdan keyin keladi. Ma\'no jihatdan mos, ma\'rifa+muzakkar+marfu\' bo\'lgan har qanday sifat (masalan: الْخَبِيرُ) qabul qilinadi.'),
-fill(105,'D','«'+AR('أَيْنَ ____؟')+'» — «borgan (sen)» — moziyni muxotab uchun qo\'ying.', ['ذهبت','ذَهَبْتَ']),
-fill(106,'D','«'+AR('البِنْتَانِ ____')+'» — «ikkovi mehnatkash» sifatini qo\'ying (mavsuf ma\'rifa — sifat ham ma\'rifa bo\'lsin).', ['المجتهدتان','الْمُجْتَهِدَتَانِ']),
-fill(107,'D','«'+AR('يَنْجَحُ الكَسْلَانُ ____')+'» — «hech qachon (kelasi) yutmaydi» — inkor harfini qo\'ying (fe\'l shaklini ham to\'g\'irlang: '+AR('لَنْ يَنْجَحَ')+').', ['لن','لَنْ']),
-fill(108,'D','«'+AR('عَلَى ____')+'» — «ular (erkaklar) ustiga» — jarga muttasil zamir ulang.', ['هم','هِمْ']),
-fill(109,'D','«'+AR('المُسْلِمُونَ فِي المَسْجِدِ ____')+'» — «yig\'ildi» moziy fe\'lini qo\'ying.', ['اجتمعوا','اِجْتَمَعُوا']),
-fill(110,'D','«'+AR('كَمْ ____ عِنْدَكَ؟')+'» — «kitob» so\'zini '+AR('كَمْ')+' tamyizi shaklida qo\'ying.', ['كتابا','كِتَابًا']),
-fill(111,'D','«'+AR('الوَلَدُ ____ صَادِقًا')+'» — inkor uchun mos fe\'lni ('+AR('لَيْسَ')+') qo\'ying.', ['ليس','لَيْسَ']),
-fill(112,'D','«'+AR('طَالِبٌ ____')+'» — «bir mehnatkash talaba» — nakira sifat qo\'ying.', ['مجتهد','مُجْتَهِدٌ']),
-fill(113,'D','«'+AR('____ هَٰؤُلَاءِ؟')+'» — «?bular kim» — so\'roq ismini qo\'ying.', ['من','مَنْ']),
-fill(114,'D','«'+AR('نَحْنُ ____ الوَاجِبَ')+'» — «bajaramiz» muzorini mutakallim jam uchun qo\'ying.', ['نفعل','نَفْعَلُ','نعمل','نَعْمَلُ','نؤدي','نُؤَدِّي']),
-fill(115,'D','«'+AR('ذَهَبْتُ ____ المَدْرَسَةِ')+'» — «maktabga» — yo\'nalish harfini qo\'ying.', ['الى','إِلَى'])
-];
-
-/* ============ SECTION E — 14 (converted to MCQ) ============ */
-var QE = [
-q(116,'E','Ismning asosiy belgilari qaysi qatorda to\'g\'ri ko\'rsatilgan?',
- [['A','Tanvin, '+AR('اَل')+' (artikl), harfi jar qabul qilish'],['B','Jazm, nasb, raf\''],['C',AR('سَـ')+', '+AR('سَوْفَ')+', '+AR('لَنْ')],['D',AR('لَا')+', '+AR('لَنْ')+', '+AR('لَمْ')]], 'A'),
-q(117,'E','Ismiy jumla bilan feliy jumlaning asosiy farqi nimada?',
- [['A','Ismiy jumla ism/zamir bilan, feliy jumla fe\'l bilan boshlanadi'],['B','Ismiy jumlada fe\'l umuman bo\'lmaydi'],['C','Feliy jumlada mubtado bo\'ladi'],['D','Ikkalasi ham fe\'l bilan boshlanadi']], 'A'),
-q(118,'E','Jamning uch turi qaysi qatorda to\'g\'ri ko\'rsatilgan?',
- [['A','Jam\' muzakkar solim, jam\' muannas solim, jam\' taksir'],['B','Mufrad, musanna, jam\''],['C','Marfu\', mansub, majrur'],['D','Muzakkar, muannas, musanna']], 'A'),
-q(119,'E','Musanna va jam\' muzakkar solimning i\'rob belgilari qaysi qatorda to\'g\'ri?',
- [['A','Musanna: raf='+AR('انِ')+', nasb/jar='+AR('يْنِ')+'; Jam\' muzakkar solim: raf='+AR('ونَ')+', nasb/jar='+AR('ينَ')],['B','Musanna: raf='+AR('ونَ')+'; Jam\' muzakkar solim: raf='+AR('انِ')],['C','Ikkalasida ham '+AR('اتٍ')],['D','Ikkalasi i\'rob olmaydi']], 'A'),
-q(120,'E','Zamonlarni inkor qilish vositalari qaysi qatorda to\'g\'ri berilgan?',
- [['A','Moziy — '+AR('مَا/لَمْ')+', hozirgi — '+AR('لَا')+', kelasi — '+AR('لَنْ')+', ismiy jumla — '+AR('لَيْسَ')],['B','Moziy — '+AR('لَنْ')+', hozirgi — '+AR('لَمْ')+', kelasi — '+AR('لَا')],['C','Barchasi faqat '+AR('لَا')+' bilan'],['D','Moziy — '+AR('لَيْسَ')+', kelasi — '+AR('مَا')]], 'A'),
-q(121,'E','Sifat (na\'t) mavsufga qaysi to\'rt jihatdan mos keladi?',
- [['A','I\'rob, son, jins, ta\'rif (ma\'rifa/nakira)'],['B','Vazn, harakat, uzunlik, o\'rin'],['C','Faqat i\'rob va jins'],['D','Zamon, makon, shaxs, son']], 'A'),
-q(122,'E', AR('فَتَحَ')+' fe\'lidan amr (buyruq) shakli qanday yasaladi?',
- [['A','Muzoridan jazm harakatini olib, hamzai vasl qo\'shib: '+AR('اِفْتَحْ')],['B','Fe\'lga faqat '+AR('تَ')+' qo\'shiladi'],['C','Fe\'lning boshiga '+AR('سَـ')+' qo\'shiladi'],['D','Fe\'l o\'zgarmaydi']], 'A'),
-q(123,'E','Nahiy (qaytariq) fe\'li amr fe\'lidan nimasi bilan farq qiladi?',
- [['A','Amr — ijobiy buyruq ('+AR('اُكْتُبْ')+'), nahiy — '+AR('لَا')+' + muzori majzum bilan man qilish ('+AR('لَا تَكْتُبْ')+')'],['B','Amr va nahiy bir xil'],['C','Nahiy faqat o\'tgan zamonda bo\'ladi'],['D','Amr '+AR('لَا')+' bilan yasaladi']], 'A'),
-q(124,'E','Zarfi zamon va zarfi makonning odatdagi i\'robi qanday?',
- [['A','Ikkalasi ham odatda mansub bo\'ladi (masalan '+AR('صَبَاحًا')+', '+AR('أَمَامَ')+')'],['B','Zarfi zamon marfu\', zarfi makon majrur'],['C','Ikkalasi ham majzum'],['D','Zarflar i\'rob olmaydi']], 'A'),
-q(125,'E','3–10 orasidagi adadlarda «jins teskariligi» qoidasi nimani anglatadi?',
- [['A','Adad ma\'dudning jinsiga qarama-qarshi jinsda qo\'yiladi'],['B','Adad va ma\'dud doim bir xil jinsda bo\'ladi'],['C','Adad har doim muzakkar bo\'ladi'],['D','Ma\'dud doim mufrad bo\'ladi']], 'A'),
-q(126,'E','Yaqin va uzoq ishora ismlari (birlik, muzakkar) qaysi qatorda to\'g\'ri?',
- [['A','Yaqin — '+AR('هَذَا')+', uzoq — '+AR('ذَٰلِكَ')],['B','Yaqin — '+AR('ذَٰلِكَ')+', uzoq — '+AR('هَذَا')],['C','Yaqin — '+AR('هَؤُلَاءِ')+', uzoq — '+AR('هَذِهِ')],['D','Ikkalasi ham '+AR('أُولَٰئِكَ')]], 'A'),
-q(127,'E','Muttasil zamir ismga, fe\'lga va harfi jarga ulanganda mos ravishda qanday vazifa bajaradi?',
- [['A','Ismga — egalik (mudaf ilayh), fe\'lga — maf\'ul/foil, harfi jarga — ismi majrur o\'rnida'],['B','Har doim faqat mubtado'],['C','Har doim faqat foil'],['D','Vazifasi hech qachon o\'zgarmaydi']], 'A'),
-q(128,'E','Kelasi zamonning ikki shakli (yaqin/uzoq) va ularning inkori qaysi qatorda to\'g\'ri?',
- [['A','Yaqin — '+AR('سَـ')+', uzoq — '+AR('سَوْفَ')+'; inkori — '+AR('لَنْ')],['B','Yaqin — '+AR('سَوْفَ')+', uzoq — '+AR('سَـ')+'; inkori — '+AR('لَمْ')],['C','Ikkalasi ham '+AR('لَا')+' bilan, inkori — '+AR('لَمْ')],['D','Kelasi zamonning faqat bitta shakli bor']], 'A'),
-q(129,'E','Af\'olul xamsa (besh fe\'l)ning raf\' va nasb/jazm holatidagi belgisi nima?',
- [['A','Raf\'da '+AR('نُون')+' bor, nasb/jazmda '+AR('نُون')+' tushadi (masalan: '+AR('تَكْتُبَانِ')+' → '+AR('لَمْ تَكْتُبَا')+')'],['B','Raf\'da damma, nasbda fatha, jazmda sukun (oddiy fe\'l kabi)'],['C','Af\'olul xamsa i\'rob olmaydi'],['D','Nun faqat jazmda qo\'shiladi']], 'A')
-];
-
-/* ============ SECTION F — 12 (converted to MCQ) ============ */
-var QF = [
-q(130,'F','«'+AR('كَتَبَ الطَّالِبُ الدَّرْسَ')+'» jumlasining to\'g\'ri i\'robi qaysi qatorda?',
- [['A',AR('كَتَبَ')+' — fe\'l, '+AR('الطَّالِبُ')+' — foil (marfu\'), '+AR('الدَّرْسَ')+' — maf\'ul bihi (mansub)'],['B',AR('كَتَبَ')+' — foil, '+AR('الطَّالِبُ')+' — fe\'l'],['C',AR('الطَّالِبُ')+' — maf\'ul, '+AR('الدَّرْسَ')+' — foil'],['D','Barcha so\'zlar mubtado']], 'A'),
-q(131,'F','«'+AR('الجَوُّ بَارِدٌ')+'» jumlasining to\'g\'ri i\'robi qaysi qatorda?',
- [['A',AR('الجَوُّ')+' — mubtado (marfu\'), '+AR('بَارِدٌ')+' — xabar (marfu\')'],['B',AR('الجَوُّ')+' — foil, '+AR('بَارِدٌ')+' — maf\'ul'],['C',AR('الجَوُّ')+' — xabar, '+AR('بَارِدٌ')+' — mubtado'],['D','Ikkalasi ham mansub']], 'A'),
-q(132,'F','«'+AR('لَنْ يَذْهَبُ الوَلَدُ')+'» jumlasidagi xato nimada?',
- [['A',AR('لَنْ')+' dan keyin fe\'l mansub bo\'lishi kerak — to\'g\'risi: '+AR('لَنْ يَذْهَبَ الوَلَدُ')],['B','Xato yo\'q'],['C',AR('الوَلَدُ')+' so\'zi noto\'g\'ri'],['D',AR('لَنْ')+' o\'rniga '+AR('لَمْ')+' bo\'lishi kerak']], 'A'),
-q(133,'F','«'+AR('ثَلَاثُ أَوْلَادٍ')+'» (uch o\'g\'il bola) iborasidagi xato nimada?',
- [['A',AR('أَوْلَاد')+' muzakkar bo\'lgani uchun adad '+AR('ة')+' bilan bo\'lishi kerak — to\'g\'risi: '+AR('ثَلَاثَةُ أَوْلَادٍ')],['B','Xato yo\'q'],['C',AR('أَوْلَاد')+' marfu\' bo\'lishi kerak'],['D',AR('ثَلَاثُ')+' o\'rniga '+AR('ثَلَاثَانِ')+' bo\'lishi kerak']], 'A'),
-q(134,'F','«'+AR('هَذَا الطَّالِبَاتُ مُجْتَهِدَاتٌ')+'» jumlasidagi xato nimada?',
- [['A',AR('هَذَا')+' (muzakkar, birlik) '+AR('الطَّالِبَاتُ')+' (muannas jam) bilan mos kelmaydi — to\'g\'risi: '+AR('هَٰؤُلَاءِ الطَّالِبَاتُ مُجْتَهِدَاتٌ')],['B','Xato yo\'q'],['C',AR('مُجْتَهِدَاتٌ')+' noto\'g\'ri, '+AR('مُجْتَهِدُونَ')+' bo\'lishi kerak'],['D',AR('الطَّالِبَاتُ')+' ortiqcha']], 'A'),
-q(135,'F','«'+AR('لَا تَكْتُبْ عَلَى الجِدَارِ')+'» jumlasi «devorga yozma» maqsadida to\'g\'rimi?',
- [['A','Ha, to\'g\'ri: '+AR('لَا')+' (nahiy) + muzori majzum ('+AR('تَكْتُبْ')+') to\'g\'ri qo\'llangan'],['B','Yo\'q, '+AR('لَا')+' o\'rniga '+AR('لَمْ')+' bo\'lishi kerak'],['C','Yo\'q, '+AR('تَكْتُبْ')+' o\'rniga '+AR('تَكْتُبُ')+' bo\'lishi kerak'],['D','Yo\'q, '+AR('عَلَى')+' o\'rniga '+AR('فِي')+' bo\'lishi kerak']], 'A'),
-q(136,'F','«'+AR('يَجْلِسُونَ')+'» fe\'lini '+AR('لَمْ')+' bilan inkor qilinganda to\'g\'ri natija qaysi?',
- [['A',AR('لَمْ يَجْلِسُوا')+' ('+AR('نون')+' tushadi, jazm belgisi)'],['B',AR('لَمْ يَجْلِسُونَ')+' (o\'zgarishsiz)'],['C',AR('لَمْ يَجْلِسْ')],['D',AR('لَنْ يَجْلِسُوا')]], 'A'),
-q(137,'F', AR('نَصَرَ')+' fe\'lining moziy sig\'asida G\'OYIB (3-shaxs: u-m, ular ikkovi-m, ular-m, u-f, ular ikkovi-f, ular-f) qatori qaysi?',
- [['A',AR('نَصَرَ، نَصَرَا، نَصَرُوا، نَصَرَتْ، نَصَرَتَا، نَصَرْنَ')],['B',AR('نَصَرْتُ، نَصَرْنَا، نَصَرُوا، نَصَرْتِ، نَصَرْتُمَا، نَصَرْتُنَّ')],['C',AR('يَنْصُرُ، يَنْصُرَانِ، يَنْصُرُونَ، تَنْصُرُ، تَنْصُرَانِ، يَنْصُرْنَ')],['D',AR('اُنْصُرْ، اُنْصُرَا، اُنْصُرُوا، اُنْصُرِي، اُنْصُرَا، اُنْصُرْنَ')]], 'A'),
-q(138,'F','«'+AR('البَيْتُ')+'» so\'zining mufrad → musanna → jam (taksir) ketma-ketligi qaysi qatorda to\'g\'ri?',
- [['A',AR('البَيْتُ – البَيْتَانِ – البُيُوتُ')],['B',AR('البَيْتُ – البُيُوتُ – البَيْتَانِ')],['C',AR('البَيْتَانِ – البَيْتُ – البُيُوتُ')],['D',AR('البَيْتُ – البَيْتُونَ – البَيْتَاتُ')]], 'A'),
-q(139,'F','«'+AR('أَطْفَالٌ فِي الحَدِيقَةِ')+'» jumlasida mubtado va xabar qaysi?',
- [['A',AR('أَطْفَالٌ')+' — mubtado, '+AR('فِي الحَدِيقَةِ')+' — xabar'],['B',AR('أَطْفَالٌ')+' — xabar, '+AR('فِي الحَدِيقَةِ')+' — mubtado'],['C','Ikkalasi ham mubtado'],['D','Bu jumlada mubtado yo\'q']], 'A'),
-q(140,'F','«ular ikkovi (ayollar) darsni o\'qidilar» jumlasining to\'g\'ri arabcha tarjimasi qaysi?',
- [['A',AR('قَرَأَتَا الدَّرْسَ')],['B',AR('قَرَأُوا الدَّرْسَ')],['C',AR('قَرَأَتْ الدَّرْسَ')],['D',AR('قَرَأْتُمَا الدَّرْسَ')]], 'A'),
-q(141,'F','«'+AR('كَتَبَ')+'» fe\'lidan yaqin kelasi zamon, uning inkori va buyruq shakli (u-muzakkar birlik uchun) qaysi qatorda to\'g\'ri?',
- [['A','Yaqin kelasi: '+AR('سَيَكْتُبُ')+'; inkor: '+AR('لَنْ يَكْتُبَ')+'; buyruq: '+AR('اُكْتُبْ')],['B','Yaqin kelasi: '+AR('كَتَبَ')+'; inkor: '+AR('لَمْ يَكْتُبْ')+'; buyruq: '+AR('يَكْتُبُ')],['C','Yaqin kelasi: '+AR('سَوْفَ كَتَبَ')+'; inkor: '+AR('لَا كَتَبَ')],['D','Yaqin kelasi: '+AR('يَكْتُبُ')+'; inkor: '+AR('مَا يَكْتُبُ')]], 'A')
-];
-
-var ALLQ = [].concat(QA,QB,QC,QD,QE,QF);
-var SEC_POINTS = {A:66,B:25,C:4,D:20,E:14,F:12};
+var ALLQ = QALL;
+var SEC_POINTS = {S1:10,S2:11,S3:14,S4:13,S5:9,S6:9,S7:15,S8:17,S9:12,S10:10,S11:16,S12:14};
 var SEC_TITLES = {
-  A:{label:'A', title:'Yopiq testlar', sub:'To\'g\'ri javobni tanlang (A–D) · 66 × 1 ball'},
-  B:{label:'B', title:'To\'g\'ri / Noto\'g\'ri', sub:'Har bir hukmni baholang · 25 × 1 ball'},
-  C:{label:'C', title:'Moslashtirish', sub:'Chap ustunni o\'ng ustunga ulang · 4 blok × 1 ball'},
-  D:{label:'D', title:'Bo\'sh joyni to\'ldirish', sub:'Mos so\'z / harf / shaklni yozing · 20 savol'},
-  E:{label:'E', title:'Nazariy savollar (test shaklida)', sub:'Qoidani aniqlovchi savollar, chalg\'ituvchi variantlar bilan · 14 savol'},
-  F:{label:'F', title:'Tahlil va xato topish (test shaklida)', sub:'I\'rob / xatoni aniqlash, chalg\'ituvchi variantlar bilan · 12 savol'}
+  S1:{label:"1-dars", title:"Ishora va kishilik olmoshi, so'roq olmoshlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 10 savol"},
+  S2:{label:"2-dars", title:"Ikkilik (musanno) otlar va olmoshlar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 11 savol"},
+  S3:{label:"3-dars", title:"Ko'plik (jam') otlar va olmoshlar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 14 savol"},
+  S4:{label:"4-dars", title:"Ismiy jumla: mubtado-xabar, egalik olmoshlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 13 savol"},
+  S5:{label:"5-dars", title:"Fe'l o'tgan zamon (moziy) va jumla turlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 9 savol"},
+  S6:{label:"6-dars", title:"Fe'l hozirgi-kelasi zamon (muzori') va zarflar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 9 savol"},
+  S7:{label:"7-dars", title:"So'roq olmoshlari va harfi jar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 15 savol"},
+  S8:{label:"8-dars", title:"Fe'l to'liq tuslanishi va 3–10 / 11–99 son qoidasi", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 17 savol"},
+  S9:{label:"9-dars", title:"Muzori' to'liq tuslanish va kelasi zamon (سـ/سوف)", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 12 savol"},
+  S10:{label:"10-dars", title:"Fe'liy gap tuzilishi va nafiy (inkor) turlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 10 savol"},
+  S11:{label:"11-dars", title:"Ishora olmoshi (aqlli/aqlsiz) va sifat-mavsuf moslashuvi", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 16 savol"},
+  S12:{label:"12-dars", title:"Ism tafdil (qiyosiy daraja) va amr/nahiy fe'li", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 14 savol"}
 };
 
 /* ============ EXAM TIMER / SINGLE-ATTEMPT LOCK ============ */
-var EXAM_ID = 'bayyina_qoidalar_a1_v1';
+var EXAM_ID = 'bayyina_qoidalar_a1_150_v1';
 var DURATION_SEC = 90*60;
 var LS_START = EXAM_ID+'_start';
 var LS_DONE  = EXAM_ID+'_done';
@@ -622,8 +510,8 @@ function updateProgress(){
   var answered = ALLQ.filter(isAnswered).length;
   var t1 = document.getElementById('progressText');
   var t2 = document.getElementById('progressMini');
-  if(t1) t1.textContent = answered + ' / 141 savolga javob berilgan';
-  if(t2) t2.textContent = answered + ' / 141';
+  if(t1) t1.textContent = answered + ' / 150 savolga javob berilgan';
+  if(t2) t2.textContent = answered + ' / 150';
 }
 
 /* ============ GRADING ============ */
@@ -749,14 +637,14 @@ function handleSubmit(){
     }
   });
 
-  var pct = Math.round((totalScore/141)*1000)/10;
+  var pct = Math.round((totalScore/150)*1000)/10;
   var grade = pct>=90?'A\'lo':pct>=75?'Yaxshi':pct>=60?'Qoniqarli':'Qayta tayyorlanish kerak';
   var elapsedSec = getElapsedSec();
   var overtimeSec = elapsedSec>DURATION_SEC ? elapsedSec-DURATION_SEC : 0;
   var nameEl = document.getElementById('stuName');
 
   var resultData = {
-    score: totalScore, total: 141, pct: pct, grade: grade, bySec: bySec,
+    score: totalScore, total: 150, pct: pct, grade: grade, bySec: bySec,
     elapsedSec: elapsedSec, overtimeSec: overtimeSec, ts: Date.now(),
     name: nameEl ? nameEl.value : ''
   };
@@ -772,12 +660,9 @@ function handleSubmit(){
 
 /* ============ BOOT ============ */
 function renderExam(){
-  renderSection('A', QA);
-  renderSection('B', QB);
-  renderSection('C', QC);
-  renderSection('D', QD);
-  renderSection('E', QE);
-  renderSection('F', QF);
+  Object.keys(SEC_TITLES).forEach(function(sk){
+    renderSection(sk, ALLQ.filter(function(qq){ return qq.sec===sk; }));
+  });
 
   document.getElementById('examForm').addEventListener('change', function(e){
     if(e.target.type==='radio'){
