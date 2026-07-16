@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Qoidalar imtihoni — Avtomatik test (Bayyina)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+    --gold:#cda35b; --cream:#f6f1e8; --cream-dim:#e8ddca;
+    --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+    --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+    --ink:#2c2014;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .ar{
+    font-family:'Noto Naskh Arabic','Amiri','Scheherazade New','Traditional Arabic',serif;
+    direction:rtl; unicode-bidi:isolate; font-weight:700;
+    font-size:clamp(21px,5.6vw,30px); line-height:1.9;
+  }
+  header.top{
+    background:linear-gradient(135deg,var(--brown),var(--brown-deep));
+    color:#f4efe4; padding:30px 18px 24px; text-align:center;
+  }
+  header.top .brand{font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:700;}
+  header.top h1{margin:8px 0 4px; font-size:clamp(20px,5vw,28px); font-weight:800;}
+  header.top .ar-title{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(26px,7vw,36px); margin:8px 0 12px; color:#f4efe4; font-weight:700;}
+  header.top .subtitle{color:#e6ddc9; font-size:clamp(12px,3.2vw,14px); max-width:700px; margin:0 auto;}
+
+  .stickybar{position:sticky; top:0; z-index:80; background:var(--brown-deep); box-shadow:0 3px 12px rgba(0,0,0,.25);}
+  .stickybar-inner{max-width:880px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 14px;}
+  .timerwrap{
+    display:flex; align-items:center; gap:6px; background:rgba(255,255,255,.14); color:#fff;
+    padding:7px 14px; border-radius:999px; font-weight:800; font-variant-numeric:tabular-nums;
+    font-size:clamp(14px,3.8vw,17px); transition:background .3s, color .3s;
+  }
+  .timerwrap .ticon{font-size:1em;}
+  .timerwrap.warn{background:var(--gold); color:var(--brown-deep);}
+  .timerwrap.danger{background:var(--red2); color:#fff; animation:pulse 1s infinite;}
+  @keyframes pulse{0%,100%{opacity:1} 50%{opacity:.5}}
+  .progressmini{color:#e6ddc9; font-weight:700; font-size:clamp(12px,3.4vw,15px); white-space:nowrap;}
+  .overtime-banner{
+    display:none; background:var(--red2); color:#fff; text-align:center;
+    font-size:clamp(12px,3.4vw,14px); font-weight:700; padding:7px 10px; line-height:1.4;
+  }
+  .overtime-banner.show{display:block;}
+
+  .wrap{max-width:880px; margin:0 auto; padding:0 14px 90px;}
+  .studentbar{
+    background:#fff; border:1px solid var(--cream-dim); border-radius:12px;
+    margin-top:-16px; padding:16px 18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:14px; box-shadow:0 4px 16px rgba(58,39,22,.08);
+  }
+  .studentbar label{font-size:11.5px; color:var(--brown-mid); display:block; margin-bottom:4px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;}
+  .studentbar input{width:100%; border:none; border-bottom:2px solid var(--cream-dim); padding:5px 2px; font-size:15px; background:transparent; font-family:inherit;}
+  .studentbar input:focus{outline:none; border-bottom-color:var(--gold);}
+  .instructions{
+    background:var(--cream-dim); border-left:5px solid var(--gold); border-radius:10px;
+    padding:16px 18px; margin:20px 0; font-size:13.5px; color:var(--brown-deep); line-height:1.6;
+  }
+  .instructions b{display:block; margin-bottom:6px; color:var(--brown-deep); font-size:14.5px;}
+  .section-head{display:flex; align-items:center; gap:12px; margin:34px 0 6px;}
+  .badge{
+    width:36px; height:36px; border-radius:10px; background:var(--brown);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:800; flex-shrink:0; font-size:15px;
+  }
+  .section-head h2{margin:0; font-size:clamp(18px,4.6vw,22px); font-weight:800; color:var(--brown-deep);}
+  .section-sub{font-size:12.5px; color:var(--brown-mid); margin:0 0 16px 48px;}
+  .qcard{
+    background:#fff; border:2px solid var(--cream-dim); border-radius:14px;
+    padding:16px 16px; margin-bottom:14px;
+  }
+  .qnum{font-weight:800; color:var(--brown-deep); margin-right:4px;}
+  .qtext{margin:0 0 13px; font-size:clamp(15px,4vw,17px); line-height:1.65;}
+  .opts{display:flex; flex-direction:column; gap:9px;}
+  .opts.tf{flex-direction:row; flex-wrap:wrap;}
+  .opts.tf .opt{flex:1; min-width:130px; justify-content:center; text-align:center; font-weight:700;}
+  .opt{
+    display:flex; align-items:flex-start; gap:10px; padding:13px 15px;
+    border:2px solid var(--cream-dim); border-radius:12px; cursor:pointer; font-size:clamp(14.5px,3.9vw,16.5px);
+    transition:border-color .15s, background .15s; background:#fffdfa;
+  }
+  .opt:hover{border-color:var(--gold); background:#fbf5e9;}
+  .opt:active{transform:scale(.99);}
+  .opt input{accent-color:var(--brown); flex-shrink:0; width:19px; height:19px; margin-top:2px;}
+  .opt.picked{border-color:var(--brown); background:var(--cream-dim);}
+  .opt .ar{font-size:clamp(22px,6.4vw,32px); display:inline-block;}
+  .fillrow{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .fillrow input[type=text]{
+    flex:1; min-width:200px; border:2px solid var(--cream-dim); border-radius:12px;
+    padding:12px 14px; font-size:clamp(19px,5.6vw,25px); font-weight:700;
+    font-family:'Noto Naskh Arabic','Amiri',serif;
+    direction:rtl; text-align:right; background:#fffdfa;
+  }
+  .fillrow input[type=text]:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(205,163,91,.25);}
+  .matchgrid{display:flex; flex-direction:column; gap:10px;}
+  .matchitem{display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:#fffdfa; border:1px solid var(--cream-dim); border-radius:10px; padding:8px 10px;}
+  .matchitem .lbl{min-width:130px; font-size:clamp(15px,4vw,17px); display:flex; align-items:center; gap:6px;}
+  .matchitem .lbl .ar{font-size:clamp(24px,6.8vw,32px);}
+  .matchitem select{
+    flex:1; min-width:170px; border:2px solid var(--cream-dim); border-radius:10px;
+    padding:9px 10px; font-size:clamp(13.5px,3.6vw,15px); background:#fff; font-family:inherit;
+  }
+  .hint{font-size:12px; color:var(--brown-mid); margin:2px 0 0; flex-basis:100%;}
+  .submitbar{
+    position:sticky; bottom:0; background:linear-gradient(0deg,var(--cream) 55%,transparent);
+    padding:18px 0 8px; text-align:center;
+  }
+  #submitBtn{
+    background:var(--brown); color:#fff; border:none; padding:15px 36px;
+    font-size:16px; font-weight:700; border-radius:999px; cursor:pointer;
+    box-shadow:0 6px 18px rgba(58,39,22,.3);
+  }
+  #submitBtn:hover{background:var(--brown-deep);}
+  #submitBtn:disabled{opacity:.55; cursor:not-allowed;}
+  .progress{font-size:12px; color:var(--brown-mid); margin-top:8px; font-weight:600;}
+  .resultbox{
+    background:#fff; border:2px solid var(--brown); border-radius:16px;
+    padding:26px 20px; margin:22px 0; text-align:center;
+  }
+  .resultbox .score{font-size:clamp(38px,10vw,48px); font-weight:800; color:var(--brown-deep);}
+  .resultbox .pct{font-size:15px; color:var(--brown-mid); margin-top:2px; font-weight:600;}
+  .overtime-flag{
+    margin-top:14px; background:var(--red-bg); color:var(--red-text); border:1px solid var(--red2);
+    border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:700;
+  }
+  .ontime-flag{
+    margin-top:14px; background:var(--green-bg); color:var(--green-text); border:1px solid var(--green);
+    border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:700;
+  }
+  .breakdown{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:18px; text-align:left;}
+  .breakdown div{background:var(--cream-dim); border-radius:10px; padding:10px 12px; font-size:12.5px; color:var(--brown-deep);}
+  .breakdown b{display:block; font-size:18px; color:var(--brown-deep);}
+  .qcard.correct{border-color:var(--green); background:var(--green-bg);}
+  .qcard.wrong{border-color:var(--red2); background:var(--red-bg);}
+  .marktag{float:right; font-size:11.5px; font-weight:800; padding:3px 9px; border-radius:7px;}
+  .marktag.ok{background:var(--green); color:#fff;}
+  .marktag.bad{background:var(--red2); color:#fff;}
+  .correctanswer{font-size:13px; margin-top:9px; color:var(--brown-deep); background:#fff; border:1px dashed var(--gold); padding:7px 11px; border-radius:8px;}
+  .toolbar{display:flex; gap:10px; justify-content:center; margin-top:16px; flex-wrap:wrap;}
+  .toolbar button{
+    border:2px solid var(--brown); background:#fff; color:var(--brown-deep); font-weight:700;
+    padding:10px 18px; border-radius:999px; cursor:pointer; font-size:13.5px;
+  }
+  .toolbar button:hover{background:var(--brown); color:#fff;}
+  footer{text-align:center; font-size:12px; color:var(--brown-mid); padding:30px 0 10px;}
+
+  .lockedwrap{padding-top:30px; text-align:center;}
+  .lockicon{font-size:44px;}
+  .lockedTitle{color:var(--brown-deep); font-size:clamp(19px,5vw,24px); margin:8px 0 6px;}
+  .lockedSub{color:var(--brown-mid); font-size:13.5px; line-height:1.6; margin-bottom:8px;}
+  .lockNote{font-size:12.5px; color:var(--brown-mid); max-width:480px; margin:16px auto 0; line-height:1.6;}
+
+  @media print{
+    .stickybar,.submitbar,.toolbar{display:none !important;}
+  }
+  @media (max-width:480px){
+    .opts.tf{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">Bayyina · Arab tili akademiyasi</div>
+  <div class="ar-title">اِمْتِحَانُ القَواعِدِ</div>
+  <h1>Qoidalar imtihoni — avtomatik tekshiruvchi test</h1>
+  <div class="subtitle">Ism belgilari · ishora va zamirlar · istifhom · adad-ma'dud · jumla turlari · fe'l tuslash · nafiy · sifat-mavsuf · amr va nahiy</div>
+</header>
+
+<div class="stickybar" id="stickyBar">
+  <div class="stickybar-inner">
+    <div class="timerwrap" id="timerWrap"><span class="ticon">⏱</span><span id="timerDisplay">90:00</span></div>
+    <div class="progressmini" id="progressMini">0 / 141</div>
+  </div>
+  <div class="overtime-banner" id="overtimeBanner">⏰ Ajratilgan 90 daqiqa tugadi — ishni imkon qadar tezroq yakunlang!</div>
+</div>
+
+<div class="wrap" id="mainWrap">
+
+  <div class="studentbar">
+    <div><label>O'quvchi</label><input id="stuName" type="text"></div>
+    <div><label>Guruh / Daraja</label><input id="stuGroup" type="text"></div>
+    <div><label>Sana</label><input id="stuDate" type="text"></div>
+  </div>
+
+  <div class="instructions">
+    <b>Ko'rsatma</b>
+    Imtihon 6 bo'limdan iborat, jami 141 savol. Barcha arabcha matnlar harakatli. Har bir savolda faqat bitta to'g'ri javob bor — javobingizni belgilang yoki bo'sh joyga arabcha yozing. Vaqt <b>90 daqiqa</b> — sahifa tepasidagi taymer avtomatik ishlaydi va sahifani yangilasangiz ham to'xtamaydi. Testni <b>bir o'tirishda</b>, boshidan oxirigacha yeching — u faqat bir marta topshiriladi, natija qayta yozilmaydi. Oxirida "Natijani hisoblash" tugmasini bosing — ball avtomatik chiqadi va har bir savol bo'yicha to'g'ri javob ko'rsatiladi. Chalg'ituvchi variantlarga e'tiborli bo'ling.
+  </div>
+
+  <form id="examForm">
+    <div id="sectionA"></div>
+    <div id="sectionB"></div>
+    <div id="sectionC"></div>
+    <div id="sectionD"></div>
+    <div id="sectionE"></div>
+    <div id="sectionF"></div>
+  </form>
+
+  <div class="submitbar">
+    <button id="submitBtn" type="button">Natijani hisoblash</button>
+    <div class="progress" id="progressText">0 / 141 savolga javob berilgan</div>
+  </div>
+
+  <div id="resultArea"></div>
+
+  <footer>Bayyina — Qoidalar imtihoni · Avtomatik HTML test</footer>
+</div>
+
+<script>
+/* ============ HELPERS TO BUILD QUESTIONS ============ */
+function q(id, sec, html, opts, correct){ return {id,sec,type:'mcq',html,opts,correct}; }
+function tf(id, sec, html, correct){ return {id,sec,type:'tf',html,correct}; }
+function fill(id, sec, html, answers, note){ return {id,sec,type:'fill',html,answers,note}; }
+function match(id, sec, html, left, right, map){ return {id,sec,type:'match',html,left,right,map}; }
+
+var AR = function(s){ return '<span class="ar">'+s+'</span>'; };
+
+/* ============ SECTION A — 66 MCQ ============ */
+var QA = [
+q(1,'A','Quyidagilardan qaysi biri ismning belgisi EMAS?',
+ [['A',AR('التَّنْوِينُ')],['B',AR('حَرْفُ الجَرِّ')],['C',AR('التَّاءُ المَرْبُوطَةُ السَّاكِنَةُ')],['D',AR('الأَلِفُ وَاللَّامُ')]], 'B'),
+q(2,'A', AR('هَذَانِ')+' so\'zi qanday ishora?',
+ [['A','Uzoq, muannas, musanna'],['B','Yaqin, muzakkar, musanna'],['C','Yaqin, muzakkar, jam'],['D','Uzoq, muzakkar, birlik']], 'B'),
+q(3,'A', AR('أُولَٰئِكَ')+' ishorasi nimaga dalolat qiladi?',
+ [['A','Yaqin, jam'],['B','Uzoq, birlik muannas'],['C','Uzoq, jam (aql egalari)'],['D','Yaqin, musanna']], 'C'),
+q(4,'A', '«'+AR('تِلْكَ الطَّالِبَاتُ مُجْتَهِدَاتٌ')+'» — bu yerda '+AR('تِلْكَ')+' nega ishlatildi?',
+ [['A','Ma\'dud muzakkar bo\'lgani uchun'],['B','Uzoq + muannas jamga ishora'],['C','Yaqin + birlik'],['D','Zamir muttasil bo\'lgani uchun']], 'B'),
+q(5,'A','Quyidagilardan qaysi biri munfasil (ajralgan) zamir?',
+ [['A',AR('هُمْ')],['B',AR('كَ')],['C',AR('نَحْنُ')],['D',AR('نَا')]], ['A','C']),
+q(6,'A','«'+AR('كِتَابُهُنَّ')+'» dagi '+AR('هُنَّ')+' zamiri nimani bildiradi?',
+ [['A','Muzakkar jam'],['B','Muannas jam'],['C','Muannas musanna'],['D','Muzakkar birlik']], 'B'),
+q(7,'A', AR('أَنْتُمَا')+' zamiri qaysi shaxs va songa mos keladi?',
+ [['A','Muxotab (2-shaxs) musanna'],['B','G\'oyib jam'],['C','Mutakallim jam'],['D','Muxotab birlik']], 'A'),
+q(8,'A','«'+AR('... ذَهَبَ الطُّلَّابُ؟')+'» Bo\'sh joyga «nega» ma\'nosi uchun qaysi so\'roq keladi?',
+ [['A',AR('أَيْنَ')],['B',AR('مَتَى')],['C',AR('لِمَاذَا')],['D',AR('كَيْفَ')]], 'C'),
+q(9,'A','Quyidagi so\'roq harflaridan qaysi biri faqat «ha/yo\'q» javob talab qiladi?',
+ [['A',AR('مَا')],['B',AR('هَلْ')],['C',AR('كَمْ')],['D',AR('أَيّ')]], 'B'),
+q(10,'A','«'+AR('كَمْ طَالِبًا فِي الصَّفِّ؟')+'» — '+AR('طَالِبًا')+' nega mansub (tanvin fatha)?',
+ [['A','Maf\'ul bo\'lgani uchun'],['B',AR('كَمْ')+' ning tamyizi bo\'lgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Munodo bo\'lgani uchun']], 'B'),
+q(11,'A', AR('مُسْلِمُونَ')+' so\'zi qaysi jam turiga kiradi?',
+ [['A','Jam\' muannas solim'],['B','Jam\' muzakkar solim'],['C','Jam\' taksir'],['D','Musanna']], 'B'),
+q(12,'A','«'+AR('كُتُبٌ، رِجَالٌ، مَدَارِسُ')+'» — bular qaysi jam turi?',
+ [['A','Jam\' taksir'],['B','Jam\' muzakkar solim'],['C','Jam\' muannas solim'],['D','Musanna']], 'A'),
+q(13,'A', AR('طَالِبَتَانِ')+' so\'zining i\'robi qaysi?',
+ [['A','Musanna, raf, muannas'],['B','Jam, nasb, muzakkar'],['C','Mufrad, jar'],['D','Musanna, nasb']], 'A'),
+q(14,'A','Jam\' muannas solimning nasb holatidagi belgisi nima?',
+ [['A',AR('ونَ')],['B',AR('ينَ')],['C','Kasra ('+AR('اتٍ')+')'],['D','Fatha ('+AR('اتٌ')+')']], 'C'),
+q(15,'A', AR('المُهَنْدِسِينَ')+' dagi '+AR('ينَ')+' nimani ko\'rsatadi?',
+ [['A','Jam\' muzakkar solim, raf'],['B','Jam\' muzakkar solim, nasb yoki jar'],['C','Musanna, raf'],['D','Jam\' taksir']], 'B'),
+q(16,'A', AR('الوَلَدُ تَنَظَّفَ')+' jumlasi qanday jumla?',
+ [['A','Feliy jumla'],['B','Ismiy jumla'],['C','Zarfiy jumla'],['D','Shartli jumla']], 'B'),
+q(17,'A','Ismiy jumlada mubtado va xabarning i\'robi qanday bo\'ladi?',
+ [['A','Ikkalasi mansub'],['B','Ikkalasi majrur'],['C','Ikkalasi marfu\''],['D','Mubtado marfu\', xabar mansub']], 'C'),
+q(18,'A','«'+AR('كَتَبَ التِّلْمِيذُ الدَّرْسَ')+'» — '+AR('التِّلْمِيذُ')+' jumlada nima?',
+ [['A','Maf\'ul bihi'],['B','Foil'],['C','Mubtado'],['D','Xabar']], 'B'),
+q(19,'A','Feliy jumlaning to\'g\'ri tuzilish tartibi qaysi?',
+ [['A','Foil + fe\'l + maf\'ul'],['B','Fe\'l + foil + maf\'ul'],['C','Mubtado + xabar'],['D','Maf\'ul + fe\'l + foil']], 'B'),
+q(20,'A', AR('جَلَسَ')+' fe\'lining hum (ular, muzakkar) uchun moziy shakli qaysi?',
+ [['A',AR('جَلَسُوا')],['B',AR('جَلَسْنَ')],['C',AR('جَلَسَا')],['D',AR('جَلَسْتُمْ')]], 'A'),
+q(21,'A', AR('يَكْتُبُ')+' fe\'lining antunna (sizlar, muannas) shakli qaysi?',
+ [['A',AR('تَكْتُبُونَ')],['B',AR('يَكْتُبْنَ')],['C',AR('تَكْتُبْنَ')],['D',AR('تَكْتُبَانِ')]], 'C'),
+q(22,'A', AR('نَصَرَ')+' fe\'lini '+AR('أَنَا')+' (men) uchun tusla:',
+ [['A',AR('نَصَرْتُ')],['B',AR('نَصَرْنَا')],['C',AR('نَصَرْتَ')],['D',AR('نَصَرَ')]], 'A'),
+q(23,'A', AR('هُمَا')+' (ular ikkovi, muannas) uchun '+AR('يَذْهَبُ')+' ning to\'g\'ri shakli?',
+ [['A',AR('يَذْهَبَانِ')],['B',AR('تَذْهَبَانِ')],['C',AR('يَذْهَبْنَ')],['D',AR('تَذْهَبِينَ')]], 'B'),
+q(24,'A','Quyidagi moziy shakllardan qaysi biri xato tuslangan?',
+ [['A',AR('نَصَرْتُمْ')],['B',AR('جَلَسَا')],['C',AR('كَتَبُونَ')],['D',AR('سَمِعْنَ')]], 'C'),
+q(25,'A','Quyidagilardan qaysi biri zarfi makon (o\'rin ravishi)?',
+ [['A',AR('صَبَاحًا')],['B',AR('أَمَامَ')],['C',AR('غَدًا')],['D',AR('لَيْلًا')]], 'B'),
+q(26,'A','«'+AR('جَلَسَ الطَّالِبُ تَحْتَ الشَّجَرَةِ')+'» — '+AR('تَحْتَ')+' so\'zi ...',
+ [['A','Marfu\', foil'],['B','Mansub, zarfi makon'],['C','Majrur, harfi jar bilan'],['D','Mubtado']], 'B'),
+q(27,'A','Zarf so\'zining i\'robi odatda qanday bo\'ladi?',
+ [['A','Marfu\''],['B','Mansub'],['C','Majrur'],['D','Majzum']], 'B'),
+q(28,'A','«'+AR('ذَهَبْتُ إِلَى المَسْجِدِ')+'» — '+AR('المَسْجِدِ')+' nega majrur (kasra)?',
+ [['A','Maf\'ul bo\'lgani uchun'],['B',AR('إِلَى')+' harfi jaridan keyin kelgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Foil bo\'lgani uchun']], 'B'),
+q(29,'A','Quyidagilardan qaysi biri harfi jar EMAS?',
+ [['A',AR('عَنْ')],['B',AR('فِي')],['C',AR('ثُمَّ')],['D',AR('عَلَى')]], 'C'),
+q(30,'A','Harfi jardan keyin kelgan ism qanday ataladi?',
+ [['A','Maf\'ul bihi'],['B','Ismi majrur'],['C','Foil'],['D','Tamyiz']], 'B'),
+q(31,'A','«uch kitob» iborasi to\'g\'ri qaysi?',
+ [['A',AR('ثَلَاثُ كُتُبٍ')],['B',AR('ثَلَاثَةُ كُتُبٍ')],['C',AR('ثَلَاثُ كُتُبٌ')],['D',AR('ثَلَاثِ كُتُبٍ')]], 'B'),
+q(32,'A','3–10 orasidagi adadlarda ma\'dud qanday keladi?',
+ [['A','Mufrad marfu\''],['B','Jam\' majrur'],['C','Musanna mansub'],['D','Mufrad mansub']], 'B'),
+q(33,'A','«'+AR('سَبْعُ طَالِبَاتٍ')+'» — bu yerda adad nega '+AR('ة')+' siz kelgan?',
+ [['A','Adad doim shunday keladi'],['B','Ma\'dud muannas — jins xilofi'],['C','Xato yozilgan shakl'],['D','Ma\'dud majrur bo\'lgani uchun']], 'B'),
+q(34,'A','«U albatta yozadi (uzoq kelasi zamon)» ma\'nosini beruvchi shakl qaysi?',
+ [['A',AR('سَيَكْتُبُ')],['B',AR('سَوْفَ يَكْتُبُ')],['C',AR('كَتَبَ')],['D',AR('لَنْ يَكْتُبَ')]], 'B'),
+q(35,'A','Mustaqbal (kelasi zamon) yasash uchun qaysi qo\'shiladi?',
+ [['A','Moziyga '+AR('سَـ')],['B','Muzoriga '+AR('سَوْفَ / سَـ')],['C','Amrga '+AR('لَنْ')],['D','Muzoriga '+AR('لَمْ')]], 'B'),
+q(36,'A','«'+AR('لَنْ يَنْجَحَ الكَسْلَانُ')+'» — '+AR('لَنْ')+' qaysi zamonni inkor qiladi?',
+ [['A','O\'tgan zamon'],['B','Hozirgi zamon'],['C','Kelasi zamon'],['D','Buyruq']], 'C'),
+q(37,'A','O\'tgan zamonni inkor qilish uchun to\'g\'ri usul qaysi?',
+ [['A',AR('لَا يَذْهَبُ')],['B',AR('لَنْ يَذْهَبَ')],['C',AR('لَمْ يَذْهَبْ')],['D',AR('لَا تَذْهَبْ')]], 'C'),
+q(38,'A','«'+AR('لَيْسَ الجَوُّ بَارِدًا')+'» — bu qaysi jumla turining inkori?',
+ [['A','Feliy jumla'],['B','Ismiy jumla'],['C','Amr'],['D','Mustaqbal']], 'B'),
+q(39,'A', AR('لَمْ')+' dan keyin kelgan muzori fe\'lning holati qanday?',
+ [['A','Marfu\''],['B','Mansub'],['C','Majzum'],['D','Mabniy']], 'C'),
+q(40,'A','«'+AR('جَاءَ طَالِبٌ مُجْتَهِدٌ')+'» — '+AR('مُجْتَهِدٌ')+' nega marfu\' va nakira?',
+ [['A','Foil bo\'lgani uchun'],['B','Mavsufga ergashgani uchun'],['C','Zarf bo\'lgani uchun'],['D','Maf\'ul bo\'lgani uchun']], 'B'),
+q(41,'A','Sifat (na\'t) mavsufga necha narsada mos keladi?',
+ [['A','Ikki'],['B','Uch'],['C','To\'rt'],['D','Besh']], 'C'),
+q(42,'A', AR('الطَّالِبُ')+' ... — to\'g\'ri sifatni tanlang:',
+ [['A',AR('مُجْتَهِدٌ')],['B',AR('المُجْتَهِدُونَ')],['C',AR('مُجْتَهِدَةٌ')],['D',AR('مُجْتَهِدَيْنِ')]], 'A'),
+q(43,'A', AR('كَتَبَ')+' fe\'lidan buyruq (amr) shakli qaysi?',
+ [['A',AR('اُكْتُبْ')],['B',AR('يَكْتُبْ')],['C',AR('كَتَبْتَ')],['D',AR('لَا تَكْتُبْ')]], 'A'),
+q(44,'A', AR('جَلَسَ')+' dan buyruq yasalganda hamzaning harakati qanday bo\'ladi?',
+ [['A','Damma ('+AR('اُ')+')'],['B','Kasra ('+AR('اِ')+')'],['C','Fatha ('+AR('اَ')+')'],['D','Hamza tushadi']], 'B'),
+q(45,'A','Nahiy (qaytariq) fe\'li qanday yasaladi?',
+ [['A',AR('لَنْ')+' + muzori'],['B',AR('لَا')+' (nahiy) + muzori majzum'],['C',AR('لَمْ')+' + moziy'],['D',AR('سَـ')+' + muzori']], 'B'),
+q(46,'A','«'+AR('لَا تَجْلِسْ')+'» iborasidagi fe\'lning oxiri nega sokin?',
+ [['A','Amr bo\'lgani uchun'],['B','Nahiy '+AR('لَا')+' jazm qilgani uchun'],['C','Muzori marfu\''],['D','Moziy bo\'lgani uchun']], 'B'),
+q(47,'A', AR('عَلَيْهِمْ')+' so\'zi nechta bo\'lakdan tashkil topgan?',
+ [['A','Bitta ism'],['B','Harfi jar + muttasil zamir'],['C','Fe\'l + foil'],['D','Zarf + ism']], 'B'),
+q(48,'A','«'+AR('هُنَّ مُعَلِّمَاتٌ')+'» jumlasida '+AR('هُنَّ')+' nima vazifada?',
+ [['A','Xabar'],['B','Mubtado (munfasil zamir)'],['C','Foil'],['D','Maf\'ul']], 'B'),
+q(49,'A','Quyidagi so\'zlardan qaysi biri ham zamon, ham makon zarfi bo\'la oladigan turdan EMAS, ya\'ni sof zamon zarfi?',
+ [['A',AR('عِنْدَ')],['B',AR('خَلْفَ')],['C',AR('حِينَ')],['D',AR('فَوْقَ')]], 'C'),
+q(50,'A','«'+AR('مَا نَجَحَ الرَّسُولُ')+'» dagi '+AR('مَا')+' ...',
+ [['A','So\'roq (nima)'],['B','Moziyni inkor qiluvchi nafiy '+AR('مَا')],['C','Mavsul (...gan narsa)'],['D','Shart '+AR('مَا')+' si']], 'B'),
+q(51,'A', AR('طَالِبَانِ مُجْتَهِدَانِ')+' — sifat mavsufga qaysi jihatdan mos kelgan?',
+ [['A','Faqat jinsda'],['B','Faqat i\'robda'],['C','Musanna, muzakkar, marfu\', nakira — hammasida'],['D','Faqat ta\'rifda']], 'C'),
+q(52,'A','«'+AR('كَمْ كِتَابًا قَرَأْتَ؟')+'» — bu qaysi turdagi jumla?',
+ [['A','Ismiy jumla'],['B','So\'roq (istifhom) aralashgan feliy jumla'],['C','Sof amr'],['D','Nafiy ismiy jumla']], 'B'),
+q(53,'A','«'+AR('سَوْفَ لَنْ أَنْسَى')+'» iborasi nega xato?',
+ [['A',AR('لَنْ')+' va '+AR('سَوْفَ')+' birga kelmaydi'],['B',AR('أَنْسَى')+' xato yozilgan'],['C',AR('سَوْفَ')+' moziyga qo\'shiladi'],['D','Hech xato yo\'q']], 'A'),
+q(54,'A', AR('اِجْلِسُوا')+' buyrug\'i kimga qaratilgan?',
+ [['A','Bir kishiga (muzakkar)'],['B','Ikki kishiga'],['C','Ko\'p kishiga (muzakkar jam)'],['D','Bir ayolga']], 'C'),
+q(55,'A','«'+AR('البَنَاتُ يَلْعَبْنَ')+'» — '+AR('يَلْعَبْنَ')+' qaysi shaxs/son?',
+ [['A','G\'oyib muzakkar jam'],['B','G\'oyib muannas jam'],['C','Muxotab muannas jam'],['D','Mutakallim jam']], 'B'),
+q(56,'A','«'+AR('فِي البَيْتِ رَجُلٌ')+'» jumlasida xabar qaysi?',
+ [['A',AR('رَجُلٌ')],['B',AR('فِي البَيْتِ')+' (muqaddam xabar)'],['C',AR('البَيْتِ')],['D','Xabar yo\'q']], 'B'),
+q(57,'A','«ikki qalam» iborasining to\'g\'ri shakli qaysi?',
+ [['A',AR('قَلَمَانِ اثْنَانِ')],['B',AR('قَلَمَيْنِ اثْنَانِ')],['C',AR('قَلَمَانِ اثْنَتَانِ')],['D',AR('قَلَمٌ اثْنَانِ')]], 'A'),
+q(58,'A','«'+AR('ذَهَبَ عَلِيٌّ وَعَمْرٌو')+'» — foil ...',
+ [['A','Faqat '+AR('عَلِيٌّ')],['B','Ikkalasi (atf orqali)'],['C','Faqat '+AR('عَمْرٌو')],['D','Foil yo\'q']], 'B'),
+q(59,'A','Quyidagi qaysi juftlik mufrad → musanna → jam to\'g\'ri ketma-ketligini beradi?',
+ [['A',AR('مُسْلِمُونَ – مُسْلِمَانِ – مُسْلِمٌ')],['B',AR('مُسْلِمٌ – مُسْلِمَانِ – مُسْلِمُونَ')],['C',AR('مُسْلِمَانِ – مُسْلِمُونَ – مُسْلِمٌ')],['D',AR('مُسْلِمٌ – مُسْلِمُونَ – مُسْلِمَانِ')]], 'B'),
+q(60,'A','«'+AR('هَذِهِ السَّاعَةُ جَمِيلَةٌ')+'» — '+AR('هَذِهِ')+' bilan '+AR('السَّاعَةُ')+' orasidagi munosabat?',
+ [['A','Sifat – mavsuf'],['B','Ishora ismi – mushorun ilayh (badal)'],['C','Fe\'l – foil'],['D','Mubtado – xabar']], 'B'),
+q(61,'A','«'+AR('نَحْنُ نَدْرُسُ العَرَبِيَّةَ')+'» jumlasining turi?',
+ [['A','Sof ismiy jumla'],['B','Boshi ismiy, xabari feliy jumla'],['C','Amr jumlasi'],['D','Nafiy jumla']], 'B'),
+q(62,'A','«'+AR('لَمْ يَكْتُبُوا')+'» — nima uchun '+AR('نُون')+' tushib qolgan ('+AR('يَكْتُبُوا')+')?',
+ [['A','Xato yozilgan'],['B',AR('لَمْ')+' jazm qilgani uchun (nun tushishi — jazm belgisi)'],['C','Moziy bo\'lgani uchun'],['D','Nasb belgisi']], 'B'),
+q(63,'A', AR('اُنْصُرْ')+' buyrug\'i qaysi fe\'ldan olingan?',
+ [['A',AR('نَصَرَ – يَنْصُرُ')],['B',AR('نَظَرَ – يَنْظُرُ')],['C',AR('نَزَلَ – يَنْزِلُ')],['D',AR('نَسِيَ – يَنسَى')]], 'A'),
+q(64,'A','Quyidagilardan qaysi biri to\'liq marfu\' belgilariga ega jam\' muzakkar solim?',
+ [['A',AR('المُؤْمِنِينَ')],['B',AR('المُؤْمِنُونَ')],['C',AR('المُؤْمِنَاتُ')],['D',AR('مُؤْمِنَيْنِ')]], 'B'),
+q(65,'A','«'+AR('يَا طَالِبُ')+'» dagi '+AR('يَا')+' qanday harf?',
+ [['A','Jar harfi'],['B','Nido (chaqiriq) harfi'],['C','So\'roq harfi'],['D','Atf harfi']], 'B'),
+q(66,'A','«'+AR('عِنْدَمَا حَضَرَ المُعَلِّمُ سَكَتَ الطُّلَّابُ')+'» — '+AR('سَكَتَ')+' fe\'lining foili?',
+ [['A',AR('المُعَلِّمُ')],['B',AR('الطُّلَّابُ')],['C',AR('عِنْدَمَا')],['D','Foil yashirin']], 'B')
+];
+
+/* ============ SECTION B — 25 TRUE/FALSE ============ */
+var QB = [
+tf(67,'B', AR('التَّنْوِينُ')+' (tanvin) — ismning belgisi, u fe\'lga kirmaydi.', true),
+tf(68,'B', AR('هَٰؤُلَاءِ')+' — uzoqdagi jamga ishora qiladi.', false),
+tf(69,'B', 'Muttasil zamir mustaqil (yolg\'iz) kela oladi.', false),
+tf(70,'B', AR('كَيْفَ')+' — holatni so\'rovchi istifhom ismi.', true),
+tf(71,'B', 'Jam\' muannas solim nasb holatida fatha oladi.', false),
+tf(72,'B', 'Ismiy jumla ism yoki zamir bilan boshlanadi.', true),
+tf(73,'B', 'Feliy jumlada foil doim mansub bo\'ladi.', false),
+tf(74,'B', AR('سَـ')+' va '+AR('سَوْفَ')+' moziy fe\'lga qo\'shilib kelasi zamon yasaydi.', false),
+tf(75,'B', AR('لَمْ')+' muzorini majzum qiladi va ma\'noni o\'tgan zamonga o\'tkazadi.', true),
+tf(76,'B', '3–10 adadlarida adad va ma\'dud jinsda bir xil (mos) bo\'ladi.', false),
+tf(77,'B', 'Zarf (zamon/makon) odatda mansub keladi.', true),
+tf(78,'B', AR('لَيْسَ')+' feliy jumlani inkor qilish uchun ishlatiladi.', false),
+tf(79,'B', 'Sifat mavsufga i\'rob, son, jins va ta\'rifda mos keladi.', true),
+tf(80,'B', 'Amr fe\'lining oxiri odatda majzum (sokin) bo\'ladi.', true),
+tf(81,'B', AR('لَنْ يَذْهَبُ')+' — to\'g\'ri yozilgan ibora.', false),
+tf(82,'B', 'Harfi jardan keyingi ism majrur (kasrali) bo\'ladi.', true),
+tf(83,'B', AR('أَنْتُنَّ')+' — muxotab muannas jam zamiri.', true),
+tf(84,'B', AR('نَصَرْنَا')+' moziy fe\'li «men yordam berdim» ma\'nosini bildiradi.', false),
+tf(85,'B', 'Musanna raf holatida '+AR('انِ')+', nasb/jar holatida '+AR('يْنِ')+' oladi.', true),
+tf(86,'B', 'Nahiy fe\'li '+AR('لَنْ')+' orqali yasaladi.', false),
+tf(87,'B', AR('مَاذَا')+' — narsa haqidagi savol so\'zi.', true),
+tf(88,'B', 'Jam\' taksirda so\'zning asosiy tuzilishi (vazni) o\'zgaradi.', true),
+tf(89,'B', AR('عَلَيْهِ')+' — harfi jar bilan muttasil zamirning birikmasi.', true),
+tf(90,'B', 'Muzori fe\'l hech qachon o\'zgarmaydi (mabniy) — i\'rob qabul qilmaydi.', false),
+tf(91,'B', AR('هَذَا كِتَابٌ')+' — to\'liq ismiy jumla (mubtado + xabar).', true)
+];
+
+/* ============ SECTION C — 4 MATCHING BLOCKS (92-95) ============ */
+var QC = [
+match(92,'C','So\'roq (istifhom) so\'zlarini ma\'nosi bilan ulang:',
+  [[1,AR('مَنْ')],[2,AR('أَيْنَ')],[3,AR('مَتَى')],[4,AR('كَيْفَ')],[5,AR('كَمْ')],[6,AR('لِمَاذَا')]],
+  [['a','qayerda'],['b','kim'],['c','qanday'],['d','qachon'],['e','nechta'],['f','nega']],
+  {1:'b',2:'a',3:'d',4:'c',5:'e',6:'f'}),
+match(93,'C','Zamirlarni to\'g\'ri tavsifi bilan ulang:',
+  [[1,AR('أَنَا')],[2,AR('نَحْنُ')],[3,AR('أَنْتَ')],[4,AR('هِيَ')],[5,AR('هُمْ')],[6,AR('أَنْتُمَا')]],
+  [['a','mutakallim birlik'],['b','mutakallim jam'],['c','muxotab muzakkar birlik'],['d','g\'oyib muannas birlik'],['e','g\'oyib muzakkar jam'],['f','muxotab musanna']],
+  {1:'a',2:'b',3:'c',4:'d',5:'e',6:'f'}),
+match(94,'C','Nafiy usulini u inkor qiladigan holatga ulang:',
+  [[1,AR('لَمْ')],[2,AR('لَنْ')],[3,AR('لَا')],[4,AR('لَيْسَ')],[5,AR('مَا')],[6,AR('لَا النَّاهِيَةُ')]],
+  [['a','buyruqni qaytarish'],['b','o\'tgan zamon (moziy)'],['c','o\'tgan zamon (muzori majzum)'],['d','hozirgi zamon (muzori marfu\')'],['e','ismiy jumla'],['f','kelasi zamon (muzori mansub)']],
+  {1:'c',2:'f',3:'d',4:'e',5:'b',6:'a'}),
+match(95,'C','Fe\'lni to\'g\'ri buyruq (amr) shakli bilan ulang:',
+  [[1,AR('كَتَبَ')],[2,AR('جَلَسَ')],[3,AR('نَصَرَ')],[4,AR('فَتَحَ')],[5,AR('شَرِبَ')],[6,AR('سَمِعَ')]],
+  [['a',AR('اُنْصُرْ')],['b',AR('اِسْمَعْ')],['c',AR('اِجْلِسْ')],['d',AR('اِشْرَبْ')],['e',AR('اُكْتُبْ')],['f',AR('اِفْتَحْ')]],
+  {1:'e',2:'c',3:'a',4:'f',5:'d',6:'b'})
+];
+
+/* ============ SECTION D — 20 FILL IN THE BLANK (96-115) ============ */
+function nAr(s){
+  return s.normalize('NFC')
+    .replace(/[ً-ْٰـ]/g,'')
+    .replace(/[إأآٱ]/g,'ا')
+    .replace(/ى/g,'ي')
+    .replace(/ة/g,'ه')
+    .replace(/\s+/g,'')
+    .trim();
+}
+var QD = [
+fill(96,'D','«'+AR('ذَهَبَ الوَلَدُ ____ البَيْتِ')+'» — «uydan» ma\'nosi uchun mos harfi jarni qo\'ying.', ['من','مِنَ']),
+fill(97,'D','«'+AR('هَذَا ____')+'» — yaqindagi bitta muzakkar narsani ta\'riflab, xabar qo\'ying (masalan «kitob»).', ['كتاب','كتابٌ','قلم','قلمٌ','بيت','بيتٌ'], 'Har qanday mufrad, muzakkar, nakira ism (masalan: كِتَابٌ) qabul qilinadi.'),
+fill(98,'D','«'+AR('الطَّالِبَاتُ الدَّرْسَ ____')+'» — «yozdilar (ayollar)» fe\'lini qo\'ying.', ['كتبن','كَتَبْنَ']),
+fill(99,'D','«'+AR('سَـ ____ غَدًا')+'» — «boraman» (mutakallim) shaklini qo\'ying.', ['اذهب','أَذْهَبُ']),
+fill(100,'D','«'+AR('لَنْ ____')+'» — «u yozmaydi (kelasi)» — mansub muzorini qo\'ying.', ['يكتب','يَكْتُبَ']),
+fill(101,'D','«'+AR('خَمْسَةُ ____')+'» — «beshta erkak» (ma\'dudni to\'g\'ri shaklda qo\'ying).', ['رجال','رِجَالٍ']),
+fill(102,'D','«'+AR('جَلَسَ القِطُّ ____ الكُرْسِيِّ')+'» — «stul tagida» — zarfi makon qo\'ying.', ['تحت','تَحْتَ']),
+fill(103,'D','«'+AR('____ تُهْمِلْ دَرْسَكَ')+'» — «darsingni tashlab qo\'yma» — nahiy harfini qo\'ying.', ['لا','لَا']),
+fill(104,'D','«'+AR('____ المُعَلِّمُ')+'» — «tajribali» sifatini to\'g\'ri qo\'ying (ma\'rifa, muzakkar, marfu\').', ['الخبير','الخبيرُ','الماهر','الماهرُ','المجرب','المجربُ'], 'Ma\'no jihatdan mos, ma\'rifa+muzakkar+marfu\' bo\'lgan har qanday sifat (masalan: الْخَبِيرُ) qabul qilinadi.'),
+fill(105,'D','«'+AR('أَيْنَ ____؟')+'» — «borgan (sen)» — moziyni muxotab uchun qo\'ying.', ['ذهبت','ذَهَبْتَ']),
+fill(106,'D','«'+AR('____ البِنْتَانِ')+'» — «ikkovi mehnatkash» sifatini qo\'ying.', ['مجتهدتان','مُجْتَهِدَتَانِ']),
+fill(107,'D','«'+AR('يَنْجَحُ الكَسْلَانُ ____')+'» — «hech qachon (kelasi) yutmaydi» — inkor harfini qo\'ying (fe\'l shaklini ham to\'g\'irlang: '+AR('لَنْ يَنْجَحَ')+').', ['لن','لَنْ']),
+fill(108,'D','«'+AR('عَلَى ____')+'» — «ular (erkaklar) ustiga» — jarga muttasil zamir ulang.', ['هم','هِمْ']),
+fill(109,'D','«'+AR('المُسْلِمُونَ فِي المَسْجِدِ ____')+'» — «yig\'ildi» moziy fe\'lini qo\'ying.', ['اجتمعوا','اِجْتَمَعُوا']),
+fill(110,'D','«'+AR('كَمْ ____ عِنْدَكَ؟')+'» — «kitob» so\'zini '+AR('كَمْ')+' tamyizi shaklida qo\'ying.', ['كتابا','كِتَابًا']),
+fill(111,'D','«'+AR('____ هُوَ صَادِقًا')+'» — inkor uchun '+AR('لَيْسَ')+' ni to\'g\'ri o\'ringa qo\'ying.', ['ليس','لَيْسَ']),
+fill(112,'D','«'+AR('طَالِبٌ ____')+'» — «bir mehnatkash talaba» — nakira sifat qo\'ying.', ['مجتهد','مُجْتَهِدٌ']),
+fill(113,'D','«'+AR('____ هَٰؤُلَاءِ؟')+'» — «?bular kim» — so\'roq ismini qo\'ying.', ['من','مَنْ']),
+fill(114,'D','«'+AR('نَحْنُ ____ الوَاجِبَ')+'» — «bajaramiz» muzorini mutakallim jam uchun qo\'ying.', ['نفعل','نَفْعَلُ','نعمل','نَعْمَلُ','نؤدي','نُؤَدِّي']),
+fill(115,'D','«'+AR('ذَهَبْتُ ____ المَدْرَسَةِ')+'» — «maktabga» — yo\'nalish harfini qo\'ying.', ['الى','إِلَى'])
+];
+
+/* ============ SECTION E — 14 (converted to MCQ) ============ */
+var QE = [
+q(116,'E','Ismning asosiy belgilari qaysi qatorda to\'g\'ri ko\'rsatilgan?',
+ [['A','Tanvin, '+AR('اَل')+' (artikl), harfi jar qabul qilish'],['B','Jazm, nasb, raf\''],['C',AR('سَـ')+', '+AR('سَوْفَ')+', '+AR('لَنْ')],['D',AR('لَا')+', '+AR('لَنْ')+', '+AR('لَمْ')]], 'A'),
+q(117,'E','Ismiy jumla bilan feliy jumlaning asosiy farqi nimada?',
+ [['A','Ismiy jumla ism/zamir bilan, feliy jumla fe\'l bilan boshlanadi'],['B','Ismiy jumlada fe\'l umuman bo\'lmaydi'],['C','Feliy jumlada mubtado bo\'ladi'],['D','Ikkalasi ham fe\'l bilan boshlanadi']], 'A'),
+q(118,'E','Jamning uch turi qaysi qatorda to\'g\'ri ko\'rsatilgan?',
+ [['A','Jam\' muzakkar solim, jam\' muannas solim, jam\' taksir'],['B','Mufrad, musanna, jam\''],['C','Marfu\', mansub, majrur'],['D','Muzakkar, muannas, musanna']], 'A'),
+q(119,'E','Musanna va jam\' muzakkar solimning i\'rob belgilari qaysi qatorda to\'g\'ri?',
+ [['A','Musanna: raf='+AR('انِ')+', nasb/jar='+AR('يْنِ')+'; Jam\' muzakkar solim: raf='+AR('ونَ')+', nasb/jar='+AR('ينَ')],['B','Musanna: raf='+AR('ونَ')+'; Jam\' muzakkar solim: raf='+AR('انِ')],['C','Ikkalasida ham '+AR('اتٍ')],['D','Ikkalasi i\'rob olmaydi']], 'A'),
+q(120,'E','Zamonlarni inkor qilish vositalari qaysi qatorda to\'g\'ri berilgan?',
+ [['A','Moziy — '+AR('مَا/لَمْ')+', hozirgi — '+AR('لَا')+', kelasi — '+AR('لَنْ')+', ismiy jumla — '+AR('لَيْسَ')],['B','Moziy — '+AR('لَنْ')+', hozirgi — '+AR('لَمْ')+', kelasi — '+AR('لَا')],['C','Barchasi faqat '+AR('لَا')+' bilan'],['D','Moziy — '+AR('لَيْسَ')+', kelasi — '+AR('مَا')]], 'A'),
+q(121,'E','Sifat (na\'t) mavsufga qaysi to\'rt jihatdan mos keladi?',
+ [['A','I\'rob, son, jins, ta\'rif (ma\'rifa/nakira)'],['B','Vazn, harakat, uzunlik, o\'rin'],['C','Faqat i\'rob va jins'],['D','Zamon, makon, shaxs, son']], 'A'),
+q(122,'E', AR('فَتَحَ')+' fe\'lidan amr (buyruq) shakli qanday yasaladi?',
+ [['A','Muzoridan jazm harakatini olib, hamzai vasl qo\'shib: '+AR('اِفْتَحْ')],['B','Fe\'lga faqat '+AR('تَ')+' qo\'shiladi'],['C','Fe\'lning boshiga '+AR('سَـ')+' qo\'shiladi'],['D','Fe\'l o\'zgarmaydi']], 'A'),
+q(123,'E','Nahiy (qaytariq) fe\'li amr fe\'lidan nimasi bilan farq qiladi?',
+ [['A','Amr — ijobiy buyruq ('+AR('اُكْتُبْ')+'), nahiy — '+AR('لَا')+' + muzori majzum bilan man qilish ('+AR('لَا تَكْتُبْ')+')'],['B','Amr va nahiy bir xil'],['C','Nahiy faqat o\'tgan zamonda bo\'ladi'],['D','Amr '+AR('لَا')+' bilan yasaladi']], 'A'),
+q(124,'E','Zarfi zamon va zarfi makonning odatdagi i\'robi qanday?',
+ [['A','Ikkalasi ham odatda mansub bo\'ladi (masalan '+AR('صَبَاحًا')+', '+AR('أَمَامَ')+')'],['B','Zarfi zamon marfu\', zarfi makon majrur'],['C','Ikkalasi ham majzum'],['D','Zarflar i\'rob olmaydi']], 'A'),
+q(125,'E','3–10 orasidagi adadlarda «jins xilofi» qoidasi nimani anglatadi?',
+ [['A','Adad ma\'dudning jinsiga qarama-qarshi jinsda qo\'yiladi'],['B','Adad va ma\'dud doim bir xil jinsda bo\'ladi'],['C','Adad har doim muzakkar bo\'ladi'],['D','Ma\'dud doim mufrad bo\'ladi']], 'A'),
+q(126,'E','Yaqin va uzoq ishora ismlari (birlik, muzakkar) qaysi qatorda to\'g\'ri?',
+ [['A','Yaqin — '+AR('هَذَا')+', uzoq — '+AR('ذَٰلِكَ')],['B','Yaqin — '+AR('ذَٰلِكَ')+', uzoq — '+AR('هَذَا')],['C','Yaqin — '+AR('هَؤُلَاءِ')+', uzoq — '+AR('هَذِهِ')],['D','Ikkalasi ham '+AR('أُولَٰئِكَ')]], 'A'),
+q(127,'E','Muttasil zamir ismga, fe\'lga va harfi jarga ulanganda mos ravishda qanday vazifa bajaradi?',
+ [['A','Ismga — egalik (mudaf ilayh), fe\'lga — maf\'ul/foil, harfi jarga — ismi majrur o\'rnida'],['B','Har doim faqat mubtado'],['C','Har doim faqat foil'],['D','Vazifasi hech qachon o\'zgarmaydi']], 'A'),
+q(128,'E','Kelasi zamonning ikki shakli (yaqin/uzoq) va ularning inkori qaysi qatorda to\'g\'ri?',
+ [['A','Yaqin — '+AR('سَـ')+', uzoq — '+AR('سَوْفَ')+'; inkori — '+AR('لَنْ')],['B','Yaqin — '+AR('سَوْفَ')+', uzoq — '+AR('سَـ')+'; inkori — '+AR('لَمْ')],['C','Ikkalasi ham '+AR('لَا')+' bilan, inkori — '+AR('لَمْ')],['D','Kelasi zamonning faqat bitta shakli bor']], 'A'),
+q(129,'E','Af\'olul xamsa (besh fe\'l)ning raf\' va nasb/jazm holatidagi belgisi nima?',
+ [['A','Raf\'da '+AR('نُون')+' bor, nasb/jazmda '+AR('نُون')+' tushadi (masalan: '+AR('تَكْتُبَانِ')+' → '+AR('لَمْ تَكْتُبَا')+')'],['B','Raf\'da damma, nasbda fatha, jazmda sukun (oddiy fe\'l kabi)'],['C','Af\'olul xamsa i\'rob olmaydi'],['D','Nun faqat jazmda qo\'shiladi']], 'A')
+];
+
+/* ============ SECTION F — 12 (converted to MCQ) ============ */
+var QF = [
+q(130,'F','«'+AR('كَتَبَ الطَّالِبُ الدَّرْسَ')+'» jumlasining to\'g\'ri i\'robi qaysi qatorda?',
+ [['A',AR('كَتَبَ')+' — fe\'l, '+AR('الطَّالِبُ')+' — foil (marfu\'), '+AR('الدَّرْسَ')+' — maf\'ul bihi (mansub)'],['B',AR('كَتَبَ')+' — foil, '+AR('الطَّالِبُ')+' — fe\'l'],['C',AR('الطَّالِبُ')+' — maf\'ul, '+AR('الدَّرْسَ')+' — foil'],['D','Barcha so\'zlar mubtado']], 'A'),
+q(131,'F','«'+AR('الجَوُّ بَارِدٌ')+'» jumlasining to\'g\'ri i\'robi qaysi qatorda?',
+ [['A',AR('الجَوُّ')+' — mubtado (marfu\'), '+AR('بَارِدٌ')+' — xabar (marfu\')'],['B',AR('الجَوُّ')+' — foil, '+AR('بَارِدٌ')+' — maf\'ul'],['C',AR('الجَوُّ')+' — xabar, '+AR('بَارِدٌ')+' — mubtado'],['D','Ikkalasi ham mansub']], 'A'),
+q(132,'F','«'+AR('لَنْ يَذْهَبُ الوَلَدُ')+'» jumlasidagi xato nimada?',
+ [['A',AR('لَنْ')+' dan keyin fe\'l mansub bo\'lishi kerak — to\'g\'risi: '+AR('لَنْ يَذْهَبَ الوَلَدُ')],['B','Xato yo\'q'],['C',AR('الوَلَدُ')+' so\'zi noto\'g\'ri'],['D',AR('لَنْ')+' o\'rniga '+AR('لَمْ')+' bo\'lishi kerak']], 'A'),
+q(133,'F','«'+AR('ثَلَاثُ أَوْلَادٍ')+'» (uch o\'g\'il bola) iborasidagi xato nimada?',
+ [['A',AR('أَوْلَاد')+' muzakkar bo\'lgani uchun adad '+AR('ة')+' bilan bo\'lishi kerak — to\'g\'risi: '+AR('ثَلَاثَةُ أَوْلَادٍ')],['B','Xato yo\'q'],['C',AR('أَوْلَاد')+' marfu\' bo\'lishi kerak'],['D',AR('ثَلَاثُ')+' o\'rniga '+AR('ثَلَاثَانِ')+' bo\'lishi kerak']], 'A'),
+q(134,'F','«'+AR('هَذَا الطَّالِبَاتُ مُجْتَهِدَاتٌ')+'» jumlasidagi xato nimada?',
+ [['A',AR('هَذَا')+' (muzakkar, birlik) '+AR('الطَّالِبَاتُ')+' (muannas jam) bilan mos kelmaydi — to\'g\'risi: '+AR('هَٰؤُلَاءِ الطَّالِبَاتُ مُجْتَهِدَاتٌ')],['B','Xato yo\'q'],['C',AR('مُجْتَهِدَاتٌ')+' noto\'g\'ri, '+AR('مُجْتَهِدُونَ')+' bo\'lishi kerak'],['D',AR('الطَّالِبَاتُ')+' ortiqcha']], 'A'),
+q(135,'F','«'+AR('لَا تَكْتُبْ عَلَى الجِدَارِ')+'» jumlasi «devorga yozma» maqsadida to\'g\'rimi?',
+ [['A','Ha, to\'g\'ri: '+AR('لَا')+' (nahiy) + muzori majzum ('+AR('تَكْتُبْ')+') to\'g\'ri qo\'llangan'],['B','Yo\'q, '+AR('لَا')+' o\'rniga '+AR('لَمْ')+' bo\'lishi kerak'],['C','Yo\'q, '+AR('تَكْتُبْ')+' o\'rniga '+AR('تَكْتُبُ')+' bo\'lishi kerak'],['D','Yo\'q, '+AR('عَلَى')+' o\'rniga '+AR('فِي')+' bo\'lishi kerak']], 'A'),
+q(136,'F','«'+AR('يَجْلِسُونَ')+'» fe\'lini '+AR('لَمْ')+' bilan inkor qilinganda to\'g\'ri natija qaysi?',
+ [['A',AR('لَمْ يَجْلِسُوا')+' ('+AR('نون')+' tushadi, jazm belgisi)'],['B',AR('لَمْ يَجْلِسُونَ')+' (o\'zgarishsiz)'],['C',AR('لَمْ يَجْلِسْ')],['D',AR('لَنْ يَجْلِسُوا')]], 'A'),
+q(137,'F', AR('نَصَرَ')+' fe\'lining moziy sig\'asida G\'OYIB (3-shaxs: u-m, ular ikkovi-m, ular-m, u-f, ular ikkovi-f, ular-f) qatori qaysi?',
+ [['A',AR('نَصَرَ، نَصَرَا، نَصَرُوا، نَصَرَتْ، نَصَرَتَا، نَصَرْنَ')],['B',AR('نَصَرْتُ، نَصَرْنَا، نَصَرُوا، نَصَرْتِ، نَصَرْتُمَا، نَصَرْتُنَّ')],['C',AR('يَنْصُرُ، يَنْصُرَانِ، يَنْصُرُونَ، تَنْصُرُ، تَنْصُرَانِ، يَنْصُرْنَ')],['D',AR('اُنْصُرْ، اُنْصُرَا، اُنْصُرُوا، اُنْصُرِي، اُنْصُرَا، اُنْصُرْنَ')]], 'A'),
+q(138,'F','«'+AR('البَيْتُ')+'» so\'zining mufrad → musanna → jam (taksir) ketma-ketligi qaysi qatorda to\'g\'ri?',
+ [['A',AR('البَيْتُ – البَيْتَانِ – البُيُوتُ')],['B',AR('البَيْتُ – البُيُوتُ – البَيْتَانِ')],['C',AR('البَيْتَانِ – البَيْتُ – البُيُوتُ')],['D',AR('البَيْتُ – البَيْتُونَ – البَيْتَاتُ')]], 'A'),
+q(139,'F','«'+AR('أَطْفَالٌ فِي الحَدِيقَةِ')+'» jumlasida mubtado va xabar qaysi?',
+ [['A',AR('أَطْفَالٌ')+' — mubtado, '+AR('فِي الحَدِيقَةِ')+' — xabar'],['B',AR('أَطْفَالٌ')+' — xabar, '+AR('فِي الحَدِيقَةِ')+' — mubtado'],['C','Ikkalasi ham mubtado'],['D','Bu jumlada mubtado yo\'q']], 'A'),
+q(140,'F','«ular ikkovi (ayollar) darsni o\'qidilar» jumlasining to\'g\'ri arabcha tarjimasi qaysi?',
+ [['A',AR('قَرَأَتَا الدَّرْسَ')],['B',AR('قَرَأُوا الدَّرْسَ')],['C',AR('قَرَأَتْ الدَّرْسَ')],['D',AR('قَرَأْتُمَا الدَّرْسَ')]], 'A'),
+q(141,'F','«'+AR('كَتَبَ')+'» fe\'lidan yaqin kelasi zamon, uning inkori va buyruq shakli (u-muzakkar birlik uchun) qaysi qatorda to\'g\'ri?',
+ [['A','Yaqin kelasi: '+AR('سَيَكْتُبُ')+'; inkor: '+AR('لَنْ يَكْتُبَ')+'; buyruq: '+AR('اُكْتُبْ')],['B','Yaqin kelasi: '+AR('كَتَبَ')+'; inkor: '+AR('لَمْ يَكْتُبْ')+'; buyruq: '+AR('يَكْتُبُ')],['C','Yaqin kelasi: '+AR('سَوْفَ كَتَبَ')+'; inkor: '+AR('لَا كَتَبَ')],['D','Yaqin kelasi: '+AR('يَكْتُبُ')+'; inkor: '+AR('مَا يَكْتُبُ')]], 'A')
+];
+
+var ALLQ = [].concat(QA,QB,QC,QD,QE,QF);
+var SEC_POINTS = {A:66,B:25,C:4,D:20,E:14,F:12};
+var SEC_TITLES = {
+  A:{label:'A', title:'Yopiq testlar', sub:'To\'g\'ri javobni tanlang (A–D) · 66 × 1 ball'},
+  B:{label:'B', title:'To\'g\'ri / Noto\'g\'ri', sub:'Har bir hukmni baholang · 25 × 1 ball'},
+  C:{label:'C', title:'Moslashtirish', sub:'Chap ustunni o\'ng ustunga ulang · 4 blok × 1 ball'},
+  D:{label:'D', title:'Bo\'sh joyni to\'ldirish', sub:'Mos so\'z / harf / shaklni yozing · 20 savol'},
+  E:{label:'E', title:'Nazariy savollar (test shaklida)', sub:'Qoidani aniqlovchi savollar, chalg\'ituvchi variantlar bilan · 14 savol'},
+  F:{label:'F', title:'Tahlil va xato topish (test shaklida)', sub:'I\'rob / xatoni aniqlash, chalg\'ituvchi variantlar bilan · 12 savol'}
+};
+
+/* ============ EXAM TIMER / SINGLE-ATTEMPT LOCK ============ */
+var EXAM_ID = 'bayyina_qoidalar_a1_v1';
+var DURATION_SEC = 90*60;
+var LS_START = EXAM_ID+'_start';
+var LS_DONE  = EXAM_ID+'_done';
+var timerInterval = null;
+
+function fmtTime(sec){
+  var neg = sec<0; sec = Math.abs(Math.round(sec));
+  var m = Math.floor(sec/60), s = sec%60;
+  return (neg?'+':'') + String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+}
+function escapeHtml(s){
+  return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+}
+
+function startTimer(){
+  var startTs = parseInt(localStorage.getItem(LS_START),10);
+  if(!startTs){ startTs = Date.now(); localStorage.setItem(LS_START, String(startTs)); }
+  function tick(){
+    var elapsed = Math.floor((Date.now()-startTs)/1000);
+    var remaining = DURATION_SEC - elapsed;
+    var disp = document.getElementById('timerDisplay');
+    var wrap = document.getElementById('timerWrap');
+    var banner = document.getElementById('overtimeBanner');
+    if(!disp || !wrap) return;
+    disp.textContent = fmtTime(remaining);
+    if(remaining >= 0){
+      wrap.classList.toggle('warn', remaining<=5*60);
+      wrap.classList.remove('danger');
+      if(banner) banner.classList.remove('show');
+    } else {
+      wrap.classList.remove('warn');
+      wrap.classList.add('danger');
+      if(banner) banner.classList.add('show');
+    }
+  }
+  tick();
+  timerInterval = setInterval(tick, 1000);
+}
+
+function getElapsedSec(){
+  var startTs = parseInt(localStorage.getItem(LS_START),10) || Date.now();
+  return Math.floor((Date.now()-startTs)/1000);
+}
+
+/* ============ RENDER ============ */
+function renderSection(secKey, questions){
+  var meta = SEC_TITLES[secKey];
+  var html = '<div class="section-head"><div class="badge">'+meta.label+'</div><h2>'+meta.title+'</h2></div>';
+  html += '<div class="section-sub">'+meta.sub+'</div>';
+  questions.forEach(function(qu){
+    html += renderQuestion(qu);
+  });
+  document.getElementById('section'+secKey).innerHTML = html;
+}
+
+function renderQuestion(qu){
+  var out = '<div class="qcard" id="qcard'+qu.id+'"><p class="qtext"><span class="qnum">'+qu.id+'.</span> '+qu.html+'</p>';
+  if(qu.type==='mcq'){
+    out += '<div class="opts">';
+    qu.opts.forEach(function(o){
+      out += '<label class="opt" data-qid="'+qu.id+'" data-val="'+o[0]+'"><input type="radio" name="q'+qu.id+'" value="'+o[0]+'"><span><b>'+o[0]+')</b> '+o[1]+'</span></label>';
+    });
+    out += '</div>';
+  } else if(qu.type==='tf'){
+    out += '<div class="opts tf">'+
+      '<label class="opt" data-qid="'+qu.id+'" data-val="true"><input type="radio" name="q'+qu.id+'" value="true"> To\'g\'ri</label>'+
+      '<label class="opt" data-qid="'+qu.id+'" data-val="false"><input type="radio" name="q'+qu.id+'" value="false"> Noto\'g\'ri</label>'+
+      '</div>';
+  } else if(qu.type==='fill'){
+    out += '<div class="fillrow"><input type="text" id="q'+qu.id+'" placeholder="arabcha javobingizni yozing...">'
+      + (qu.note ? '<span class="hint">'+qu.note+'</span>' : '') + '</div>';
+  } else if(qu.type==='match'){
+    out += '<div class="matchgrid">';
+    qu.left.forEach(function(item){
+      var num = item[0], text = item[1];
+      out += '<div class="matchitem"><span class="lbl">'+num+'. '+text+'</span><select id="q'+qu.id+'_'+num+'"><option value="">— tanlang —</option>';
+      qu.right.forEach(function(r){ out += '<option value="'+r[0]+'">'+r[0]+') '+r[1]+'</option>'; });
+      out += '</select></div>';
+    });
+    out += '</div>';
+  }
+  out += '</div>';
+  return out;
+}
+
+function isAnswered(qu){
+  if(qu.type==='mcq' || qu.type==='tf'){
+    return !!document.querySelector('input[name="q'+qu.id+'"]:checked');
+  } else if(qu.type==='fill'){
+    var el = document.getElementById('q'+qu.id);
+    return el && el.value.trim().length>0;
+  } else if(qu.type==='match'){
+    return qu.left.every(function(item){
+      var sel = document.getElementById('q'+qu.id+'_'+item[0]);
+      return sel && sel.value !== '';
+    });
+  }
+  return false;
+}
+
+function updateProgress(){
+  var answered = ALLQ.filter(isAnswered).length;
+  var t1 = document.getElementById('progressText');
+  var t2 = document.getElementById('progressMini');
+  if(t1) t1.textContent = answered + ' / 141 savolga javob berilgan';
+  if(t2) t2.textContent = answered + ' / 141';
+}
+
+/* ============ GRADING ============ */
+function gradeQuestion(qu){
+  if(qu.type==='mcq'){
+    var picked = document.querySelector('input[name="q'+qu.id+'"]:checked');
+    var val = picked ? picked.value : null;
+    var accepted = Array.isArray(qu.correct) ? qu.correct : [qu.correct];
+    return {ok: val!==null && accepted.indexOf(val)>-1, given: val, correctText: accepted.join(' yoki ')};
+  }
+  if(qu.type==='tf'){
+    var picked = document.querySelector('input[name="q'+qu.id+'"]:checked');
+    var val = picked ? picked.value : null;
+    var ok = val!==null && (val==='true')===qu.correct;
+    return {ok: ok, given: val, correctText: qu.correct ? 'To\'g\'ri' : 'Noto\'g\'ri'};
+  }
+  if(qu.type==='fill'){
+    var el = document.getElementById('q'+qu.id);
+    var val = el ? el.value.trim() : '';
+    var norm = nAr(val);
+    var ok = qu.answers.some(function(a){ return nAr(a)===norm; }) && val.length>0;
+    return {ok: ok, given: val, correctText: qu.answers[qu.answers.length-1]};
+  }
+  if(qu.type==='match'){
+    var allOk = true, given=[];
+    qu.left.forEach(function(item){
+      var sel = document.getElementById('q'+qu.id+'_'+item[0]);
+      var v = sel ? sel.value : '';
+      given.push(item[0]+'-'+(v||'?'));
+      if(v !== qu.map[item[0]]) allOk = false;
+    });
+    var correctPairs = qu.left.map(function(item){ return item[0]+'→'+qu.map[item[0]]; }).join(', ');
+    return {ok: allOk, given: given.join(', '), correctText: correctPairs};
+  }
+}
+
+function buildResultHtml(data){
+  var overtimeHtml = data.overtimeSec>0
+    ? '<div class="overtime-flag">⚠️ Belgilangan 90 daqiqadan <b>'+fmtTime(data.overtimeSec).replace('+','')+'</b> ko\'p vaqt sarflandi (jami sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+')</div>'
+    : '<div class="ontime-flag">✅ Belgilangan 90 daqiqa ichida yakunlandi (sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+')</div>';
+  var breakdown = Object.keys(SEC_TITLES).map(function(s){
+    return '<div><b>'+data.bySec[s].ok+' / '+data.bySec[s].total+'</b>'+SEC_TITLES[s].label+') '+SEC_TITLES[s].title+'</div>';
+  }).join('');
+  return '<div class="resultbox">'+
+    '<div class="score">'+data.score+' / '+data.total+'</div>'+
+    '<div class="pct">'+data.pct+'% — '+data.grade+'</div>'+
+    overtimeHtml+
+    '<div class="breakdown">'+breakdown+'</div>'+
+    '<div class="toolbar">'+
+      '<button type="button" onclick="window.scrollTo({top:0,behavior:\'smooth\'})">Yuqoriga qaytish</button>'+
+      '<button type="button" onclick="window.print()">Chop etish / PDF saqlash</button>'+
+      '<button type="button" id="copyResultBtn">Natijani nusxalash</button>'+
+    '</div>'+
+    '</div>';
+}
+
+function attachCopyHandler(data){
+  var btn = document.getElementById('copyResultBtn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var lines = [];
+    if(data.name) lines.push('O\'quvchi: '+data.name);
+    lines.push('Natija: '+data.score+' / '+data.total+' ('+data.pct+'%)');
+    lines.push('Sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+(data.overtimeSec>0?(' (belgilangan 90 daqiqadan '+fmtTime(data.overtimeSec).replace('+','')+' ortiq)'):' (vaqt ichida)'));
+    lines.push(Object.keys(SEC_TITLES).map(function(s){return SEC_TITLES[s].label+':'+data.bySec[s].ok+'/'+data.bySec[s].total;}).join('  '));
+    var txt = lines.join('\n');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).catch(function(){});
+    }
+    btn.textContent = 'Nusxalandi ✓';
+    setTimeout(function(){ btn.textContent = 'Natijani nusxalash'; }, 1600);
+  });
+}
+
+function renderLockedScreen(data){
+  var wrap = document.getElementById('mainWrap');
+  var sb = document.getElementById('stickyBar');
+  if(sb) sb.style.display = 'none';
+  wrap.innerHTML =
+    '<div class="lockedwrap">' +
+      '<div class="lockicon">🔒</div>' +
+      '<h2 class="lockedTitle">Bu imtihon allaqachon topshirilgan</h2>' +
+      '<p class="lockedSub">' + (data.name?('O\'quvchi: <b>'+escapeHtml(data.name)+'</b><br>'):'') + 'Topshirilgan vaqt: ' + new Date(data.ts).toLocaleString('uz-UZ') + '</p>' +
+      buildResultHtml(data) +
+      '<p class="lockNote">Ushbu test faqat bir marta yechiladi va natija qayta yozilmaydi (bu — javoblarni bilib olib qayta urinishning oldini olish uchun). Agar bu xato deb hisoblasangiz, o\'qituvchingizga murojaat qiling.</p>' +
+    '</div>';
+  attachCopyHandler(data);
+}
+
+function lockFormAfterSubmit(){
+  document.querySelectorAll('#examForm input, #examForm select').forEach(function(el){ el.disabled = true; });
+  var sbtn = document.getElementById('submitBtn');
+  if(sbtn){ sbtn.disabled = true; sbtn.textContent = 'Natija saqlandi ✓'; }
+  if(timerInterval){ clearInterval(timerInterval); timerInterval = null; }
+}
+
+function handleSubmit(){
+  var results = ALLQ.map(function(qu){
+    var r = gradeQuestion(qu);
+    r.qu = qu;
+    return r;
+  });
+  var totalScore = results.filter(function(r){return r.ok;}).length;
+  var bySec = {};
+  Object.keys(SEC_POINTS).forEach(function(s){ bySec[s] = {ok:0, total:SEC_POINTS[s]}; });
+  results.forEach(function(r){ if(r.ok) bySec[r.qu.sec].ok++; });
+
+  results.forEach(function(r){
+    var card = document.getElementById('qcard'+r.qu.id);
+    card.classList.remove('correct','wrong');
+    card.classList.add(r.ok ? 'correct' : 'wrong');
+    var oldTag = card.querySelector('.marktag'); if(oldTag) oldTag.remove();
+    var oldCA = card.querySelector('.correctanswer'); if(oldCA) oldCA.remove();
+    var tag = document.createElement('span');
+    tag.className = 'marktag ' + (r.ok?'ok':'bad');
+    tag.textContent = r.ok ? '✓ To\'g\'ri' : '✗ Xato';
+    card.querySelector('.qtext').prepend(tag);
+    if(!r.ok){
+      var ca = document.createElement('div');
+      ca.className = 'correctanswer';
+      ca.textContent = 'To\'g\'ri javob: ' + r.correctText;
+      card.appendChild(ca);
+    }
+  });
+
+  var pct = Math.round((totalScore/141)*1000)/10;
+  var grade = pct>=90?'A\'lo':pct>=75?'Yaxshi':pct>=60?'Qoniqarli':'Qayta tayyorlanish kerak';
+  var elapsedSec = getElapsedSec();
+  var overtimeSec = elapsedSec>DURATION_SEC ? elapsedSec-DURATION_SEC : 0;
+  var nameEl = document.getElementById('stuName');
+
+  var resultData = {
+    score: totalScore, total: 141, pct: pct, grade: grade, bySec: bySec,
+    elapsedSec: elapsedSec, overtimeSec: overtimeSec, ts: Date.now(),
+    name: nameEl ? nameEl.value : ''
+  };
+  localStorage.setItem(LS_DONE, JSON.stringify(resultData));
+
+  var html = buildResultHtml(resultData);
+  document.getElementById('resultArea').innerHTML = html;
+  attachCopyHandler(resultData);
+  document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+
+  lockFormAfterSubmit();
+}
+
+/* ============ BOOT ============ */
+function renderExam(){
+  renderSection('A', QA);
+  renderSection('B', QB);
+  renderSection('C', QC);
+  renderSection('D', QD);
+  renderSection('E', QE);
+  renderSection('F', QF);
+
+  document.getElementById('examForm').addEventListener('change', function(e){
+    if(e.target.type==='radio'){
+      var name = e.target.name;
+      document.querySelectorAll('label[data-qid="'+name.replace('q','')+'"]').forEach(function(l){ l.classList.remove('picked'); });
+      e.target.closest('label').classList.add('picked');
+    }
+    updateProgress();
+  });
+  document.getElementById('examForm').addEventListener('input', updateProgress);
+  updateProgress();
+
+  document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+
+  startTimer();
+}
+
+function boot(){
+  var params = new URLSearchParams(location.search);
+  if(params.get('ustoz_reset')==='1'){
+    localStorage.removeItem(LS_START);
+    localStorage.removeItem(LS_DONE);
+  }
+  var doneRaw = localStorage.getItem(LS_DONE);
+  if(doneRaw){
+    try{
+      var data = JSON.parse(doneRaw);
+      renderLockedScreen(data);
+      return;
+    }catch(e){ /* corrupt data, fall through to fresh exam */ }
+  }
+  renderExam();
+}
+
+window.boot = boot;
+boot();
+</script>
+</body>
+</html>
