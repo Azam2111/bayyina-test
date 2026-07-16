@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Qoidalar imtihoni — Avtomatik test (Bayyina)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --brown-deep:#3a2716; --brown:#805a36; --brown-mid:#a9805a; --tan:#d9c3a3;
+    --gold:#cda35b; --cream:#f6f1e8; --cream-dim:#e8ddca;
+    --green:#27ae60; --green-bg:#e8f9ee; --green-text:#1a6b3a;
+    --red:#e74c3c; --red2:#c0415a; --red-bg:#fce8e8; --red-text:#8b1a1a;
+    --ink:#2c2014;
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Inter',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+    line-height:1.55;
+  }
+  .ar{
+    font-family:'Noto Naskh Arabic','Amiri','Scheherazade New','Traditional Arabic',serif;
+    direction:rtl; unicode-bidi:isolate; font-weight:700;
+    font-size:clamp(21px,5.6vw,30px); line-height:1.9;
+  }
+  header.top{
+    background:linear-gradient(135deg,var(--brown),var(--brown-deep));
+    color:#f4efe4; padding:30px 18px 24px; text-align:center;
+  }
+  header.top .brand{font-size:12px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; font-weight:700;}
+  header.top h1{margin:8px 0 4px; font-size:clamp(20px,5vw,28px); font-weight:800;}
+  header.top .ar-title{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(26px,7vw,36px); margin:8px 0 12px; color:#f4efe4; font-weight:700;}
+  header.top .subtitle{color:#e6ddc9; font-size:clamp(12px,3.2vw,14px); max-width:700px; margin:0 auto;}
+
+  .stickybar{position:sticky; top:0; z-index:80; background:var(--brown-deep); box-shadow:0 3px 12px rgba(0,0,0,.25);}
+  .stickybar-inner{max-width:880px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:10px; padding:9px 14px;}
+  .timerwrap{
+    display:flex; align-items:center; gap:6px; background:rgba(255,255,255,.14); color:#fff;
+    padding:7px 14px; border-radius:999px; font-weight:800; font-variant-numeric:tabular-nums;
+    font-size:clamp(14px,3.8vw,17px); transition:background .3s, color .3s;
+  }
+  .timerwrap .ticon{font-size:1em;}
+  .timerwrap.warn{background:var(--gold); color:var(--brown-deep);}
+  .timerwrap.danger{background:var(--red2); color:#fff; animation:pulse 1s infinite;}
+  @keyframes pulse{0%,100%{opacity:1} 50%{opacity:.5}}
+  .progressmini{color:#e6ddc9; font-weight:700; font-size:clamp(12px,3.4vw,15px); white-space:nowrap;}
+  .overtime-banner{
+    display:none; background:var(--red2); color:#fff; text-align:center;
+    font-size:clamp(12px,3.4vw,14px); font-weight:700; padding:7px 10px; line-height:1.4;
+  }
+  .overtime-banner.show{display:block;}
+
+  .wrap{max-width:880px; margin:0 auto; padding:0 14px 90px;}
+  .studentbar{
+    background:#fff; border:1px solid var(--cream-dim); border-radius:12px;
+    margin-top:-16px; padding:16px 18px; display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:14px; box-shadow:0 4px 16px rgba(58,39,22,.08);
+  }
+  .studentbar label{font-size:11.5px; color:var(--brown-mid); display:block; margin-bottom:4px; font-weight:700; text-transform:uppercase; letter-spacing:.4px;}
+  .studentbar input{width:100%; border:none; border-bottom:2px solid var(--cream-dim); padding:5px 2px; font-size:15px; background:transparent; font-family:inherit;}
+  .studentbar input:focus{outline:none; border-bottom-color:var(--gold);}
+  .instructions{
+    background:var(--cream-dim); border-left:5px solid var(--gold); border-radius:10px;
+    padding:16px 18px; margin:20px 0; font-size:13.5px; color:var(--brown-deep); line-height:1.6;
+  }
+  .instructions b{display:block; margin-bottom:6px; color:var(--brown-deep); font-size:14.5px;}
+  .section-head{display:flex; align-items:center; gap:12px; margin:34px 0 6px;}
+  .badge{
+    width:36px; height:36px; border-radius:10px; background:var(--brown);
+    color:#fff; display:flex; align-items:center; justify-content:center;
+    font-weight:800; flex-shrink:0; font-size:15px;
+  }
+  .section-head h2{margin:0; font-size:clamp(18px,4.6vw,22px); font-weight:800; color:var(--brown-deep);}
+  .section-sub{font-size:12.5px; color:var(--brown-mid); margin:0 0 16px 48px;}
+  .qcard{
+    background:#fff; border:2px solid var(--cream-dim); border-radius:14px;
+    padding:16px 16px; margin-bottom:14px;
+  }
+  .qnum{font-weight:800; color:var(--brown-deep); margin-right:4px;}
+  .qtext{margin:0 0 13px; font-size:clamp(15px,4vw,17px); line-height:1.65;}
+  .opts{display:flex; flex-direction:column; gap:9px;}
+  .opts.tf{flex-direction:row; flex-wrap:wrap;}
+  .opts.tf .opt{flex:1; min-width:130px; justify-content:center; text-align:center; font-weight:700;}
+  .opt{
+    display:flex; align-items:flex-start; gap:10px; padding:13px 15px;
+    border:2px solid var(--cream-dim); border-radius:12px; cursor:pointer; font-size:clamp(14.5px,3.9vw,16.5px);
+    transition:border-color .15s, background .15s; background:#fffdfa;
+  }
+  .opt:hover{border-color:var(--gold); background:#fbf5e9;}
+  .opt:active{transform:scale(.99);}
+  .opt input{accent-color:var(--brown); flex-shrink:0; width:19px; height:19px; margin-top:2px;}
+  .opt.picked{border-color:var(--brown); background:var(--cream-dim);}
+  .opt .ar{font-size:clamp(22px,6.4vw,32px); display:inline-block;}
+  .fillrow{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .fillrow input[type=text]{
+    flex:1; min-width:200px; border:2px solid var(--cream-dim); border-radius:12px;
+    padding:12px 14px; font-size:clamp(19px,5.6vw,25px); font-weight:700;
+    font-family:'Noto Naskh Arabic','Amiri',serif;
+    direction:rtl; text-align:right; background:#fffdfa;
+  }
+  .fillrow input[type=text]:focus{outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(205,163,91,.25);}
+  .matchgrid{display:flex; flex-direction:column; gap:10px;}
+  .matchitem{display:flex; align-items:center; gap:10px; flex-wrap:wrap; background:#fffdfa; border:1px solid var(--cream-dim); border-radius:10px; padding:8px 10px;}
+  .matchitem .lbl{min-width:130px; font-size:clamp(15px,4vw,17px); display:flex; align-items:center; gap:6px;}
+  .matchitem .lbl .ar{font-size:clamp(24px,6.8vw,32px);}
+  .matchitem select{
+    flex:1; min-width:170px; border:2px solid var(--cream-dim); border-radius:10px;
+    padding:9px 10px; font-size:clamp(13.5px,3.6vw,15px); background:#fff; font-family:inherit;
+  }
+  .hint{font-size:12px; color:var(--brown-mid); margin:2px 0 0; flex-basis:100%;}
+  .submitbar{
+    position:sticky; bottom:0; background:linear-gradient(0deg,var(--cream) 55%,transparent);
+    padding:18px 0 8px; text-align:center;
+  }
+  #submitBtn{
+    background:var(--brown); color:#fff; border:none; padding:15px 36px;
+    font-size:16px; font-weight:700; border-radius:999px; cursor:pointer;
+    box-shadow:0 6px 18px rgba(58,39,22,.3);
+  }
+  #submitBtn:hover{background:var(--brown-deep);}
+  #submitBtn:disabled{opacity:.55; cursor:not-allowed;}
+  .progress{font-size:12px; color:var(--brown-mid); margin-top:8px; font-weight:600;}
+  .resultbox{
+    background:#fff; border:2px solid var(--brown); border-radius:16px;
+    padding:26px 20px; margin:22px 0; text-align:center;
+  }
+  .resultbox .score{font-size:clamp(38px,10vw,48px); font-weight:800; color:var(--brown-deep);}
+  .resultbox .pct{font-size:15px; color:var(--brown-mid); margin-top:2px; font-weight:600;}
+  .overtime-flag{
+    margin-top:14px; background:var(--red-bg); color:var(--red-text); border:1px solid var(--red2);
+    border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:700;
+  }
+  .ontime-flag{
+    margin-top:14px; background:var(--green-bg); color:var(--green-text); border:1px solid var(--green);
+    border-radius:10px; padding:10px 14px; font-size:13.5px; font-weight:700;
+  }
+  .breakdown{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:18px; text-align:left;}
+  .breakdown div{background:var(--cream-dim); border-radius:10px; padding:10px 12px; font-size:12.5px; color:var(--brown-deep);}
+  .breakdown b{display:block; font-size:18px; color:var(--brown-deep);}
+  .qcard.correct{border-color:var(--green); background:var(--green-bg);}
+  .qcard.wrong{border-color:var(--red2); background:var(--red-bg);}
+  .marktag{float:right; font-size:11.5px; font-weight:800; padding:3px 9px; border-radius:7px;}
+  .marktag.ok{background:var(--green); color:#fff;}
+  .marktag.bad{background:var(--red2); color:#fff;}
+  .correctanswer{font-size:13px; margin-top:9px; color:var(--brown-deep); background:#fff; border:1px dashed var(--gold); padding:7px 11px; border-radius:8px;}
+  .toolbar{display:flex; gap:10px; justify-content:center; margin-top:16px; flex-wrap:wrap;}
+  .toolbar button{
+    border:2px solid var(--brown); background:#fff; color:var(--brown-deep); font-weight:700;
+    padding:10px 18px; border-radius:999px; cursor:pointer; font-size:13.5px;
+  }
+  .toolbar button:hover{background:var(--brown); color:#fff;}
+  footer{text-align:center; font-size:12px; color:var(--brown-mid); padding:30px 0 10px;}
+
+  .lockedwrap{padding-top:30px; text-align:center;}
+  .lockicon{font-size:44px;}
+  .lockedTitle{color:var(--brown-deep); font-size:clamp(19px,5vw,24px); margin:8px 0 6px;}
+  .lockedSub{color:var(--brown-mid); font-size:13.5px; line-height:1.6; margin-bottom:8px;}
+  .lockNote{font-size:12.5px; color:var(--brown-mid); max-width:480px; margin:16px auto 0; line-height:1.6;}
+
+  @media print{
+    .stickybar,.submitbar,.toolbar{display:none !important;}
+  }
+  @media (max-width:480px){
+    .opts.tf{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand">Bayyina · Arab tili akademiyasi</div>
+  <div class="ar-title">اِمْتِحَانُ القَواعِدِ</div>
+  <h1>Qoidalar imtihoni — avtomatik tekshiruvchi test</h1>
+  <div class="subtitle">12 dars bo'yicha eng murakkab 150 savol · ishora va zamirlar · istifhom · adad-ma'dud · jumla turlari · fe'l tuslash · nafiy · sifat-mavsuf · amr va nahiy</div>
+</header>
+
+<div class="stickybar" id="stickyBar">
+  <div class="stickybar-inner">
+    <div class="timerwrap" id="timerWrap"><span class="ticon">⏱</span><span id="timerDisplay">90:00</span></div>
+    <div class="progressmini" id="progressMini">0 / 150</div>
+  </div>
+  <div class="overtime-banner" id="overtimeBanner">⏰ Ajratilgan 90 daqiqa tugadi — ishni imkon qadar tezroq yakunlang!</div>
+</div>
+
+<div class="wrap" id="mainWrap">
+
+  <div class="studentbar">
+    <div><label>O'quvchi</label><input id="stuName" type="text"></div>
+    <div><label>Guruh / Daraja</label><input id="stuGroup" type="text"></div>
+    <div><label>Sana</label><input id="stuDate" type="text"></div>
+  </div>
+
+  <div class="instructions">
+    <b>Ko'rsatma</b>
+    Imtihon 12 dars asosida tuzilgan, har bir darsdan eng murakkab savollar tanlab olingan — jami 150 ta yopiq test savoli. Barcha arabcha matnlar harakatli. Har bir savolda faqat bitta to'g'ri javob bor — mos variantni (A–D) belgilang. Vaqt <b>90 daqiqa</b> — sahifa tepasidagi taymer avtomatik ishlaydi va sahifani yangilasangiz ham to'xtamaydi. Testni <b>bir o'tirishda</b>, boshidan oxirigacha yeching — u faqat bir marta topshiriladi, natija qayta yozilmaydi. Oxirida "Natijani hisoblash" tugmasini bosing — ball avtomatik chiqadi va har bir savol bo'yicha to'g'ri javob ko'rsatiladi. Chalg'ituvchi variantlarga e'tiborli bo'ling.
+  </div>
+
+  <form id="examForm">
+    <div id="sectionS1"></div>
+    <div id="sectionS2"></div>
+    <div id="sectionS3"></div>
+    <div id="sectionS4"></div>
+    <div id="sectionS5"></div>
+    <div id="sectionS6"></div>
+    <div id="sectionS7"></div>
+    <div id="sectionS8"></div>
+    <div id="sectionS9"></div>
+    <div id="sectionS10"></div>
+    <div id="sectionS11"></div>
+    <div id="sectionS12"></div>
+  </form>
+
+  <div class="submitbar">
+    <button id="submitBtn" type="button">Natijani hisoblash</button>
+    <div class="progress" id="progressText">0 / 150 savolga javob berilgan</div>
+  </div>
+
+  <div id="resultArea"></div>
+
+  <footer>Bayyina — Qoidalar imtihoni · Avtomatik HTML test</footer>
+</div>
+
+<script>
+/* ============ HELPERS TO BUILD QUESTIONS ============ */
+function q(id, sec, html, opts, correct){ return {id,sec,type:'mcq',html,opts,correct}; }
+function tf(id, sec, html, correct){ return {id,sec,type:'tf',html,correct}; }
+function fill(id, sec, html, answers, note){ return {id,sec,type:'fill',html,answers,note}; }
+function match(id, sec, html, left, right, map){ return {id,sec,type:'match',html,left,right,map}; }
+
+var AR = function(s){ return '<span class="ar">'+s+'</span>'; };
+
+/* ============ 150 SAVOL — 12 DARSDAN TANLANGAN ============ */
+var QALL = [
+q(1,"S1","«<span class=\"ar\">_____ مُهَنْدِسَةٌ نَشِيطَةٌ</span>» — mos olmoshni qo'ying. (Sen chaqqon muhandis ayolsan)",[["A","<span class=\"ar\">أَنْتَ</span>"],["B","<span class=\"ar\">أَنْتِ</span>"],["C","<span class=\"ar\">هِيَ</span>"],["D","<span class=\"ar\">أَنَا</span>"]],"B"),
+q(2,"S1","O'zini «Men mahoratli oshpazman» deb tanishtirgan erkak kishi qaysi gapni ishlatadi?",[["A","<span class=\"ar\">هُوَ طَبَّاخٌ مَاهِرٌ</span>"],["B","<span class=\"ar\">أَنْتَ طَبَّاخٌ مَاهِرٌ</span>"],["C","<span class=\"ar\">أَنَا طَبَّاخٌ مَاهِرٌ</span>"],["D","<span class=\"ar\">أَنَا طَبَّاخَةٌ مَاهِرَةٌ</span>"]],"C"),
+q(3,"S1","«<span class=\"ar\">_____ هَذَا؟ ← هَذَا قَلَمٌ</span>» — bo'sh joyga mos so'roq olmoshini qo'ying. (Bu nima? ← Bu qalam)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">مَاذَا</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"D"),
+q(4,"S1","«<span class=\"ar\">_____ هَذَا؟ ← هَذَا صَدِيقِي يَاسِرٌ</span>» — mos so'roq olmoshini qo'ying. (Bu kim? ← Bu do'stim Yosir)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">مَا</span>"],["C","<span class=\"ar\">مَاذَا</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"A"),
+q(5,"S1","«<span class=\"ar\">_____ حَالُكَ؟ ← بِخَيْرٍ وَالْحَمْدُ لِلهِ</span>» — mos so'roq olmoshini qo'ying. (Ahvoling qanday?)",[["A","<span class=\"ar\">مَا</span>"],["B","<span class=\"ar\">هَلْ</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">أَيْنَ</span>"]],"C"),
+q(6,"S1","«<span class=\"ar\">_____ أَنْتَ؟ ← أَنَا مِنَ السُّودَانِ</span>» — mos so'roq birikmasini qo'ying. (Sen qayerdansan?)",[["A","<span class=\"ar\">أَيْنَ</span>"],["B","<span class=\"ar\">مِنْ أَيْنَ</span>"],["C","<span class=\"ar\">إِلَى أَيْنَ</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"B"),
+q(7,"S1","«<span class=\"ar\">_____ تَعْمَلُ؟ ← أَعْمَلُ فِي الْجَامِعَةِ</span>» — mos so'roq olmoshini qo'ying. (Qayerda ishlaysan?)",[["A","<span class=\"ar\">مَاذَا</span>"],["B","<span class=\"ar\">مَتَى</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">أَيْنَ</span>"]],"D"),
+q(8,"S1","«<span class=\"ar\">_____ تَعْمَلُ؟ ← أَعْمَلُ مُعَلِّمًا</span>» — mos so'roq olmoshini qo'ying. (Nima bo'lib ishlaysan?)",[["A","<span class=\"ar\">مَاذَا</span>"],["B","<span class=\"ar\">أَيْنَ</span>"],["C","<span class=\"ar\">كَيْفَ</span>"],["D","<span class=\"ar\">مَا</span>"]],"A"),
+q(9,"S1","«<span class=\"ar\">_____ اسْمُكَ؟ ← اسْمِي مَحْمُودٌ</span>» — mos so'roq olmoshini qo'ying. (Isming nima?)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">مَا</span>"],["C","<span class=\"ar\">مَاذَا</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"B"),
+q(10,"S1","«<span class=\"ar\">_____ الطُّلَّابُ؟ ← الطُّلَّابُ فِي الصَّفِّ</span>» — mos so'roq olmoshini qo'ying. (Talabalar qayerda?)",[["A","<span class=\"ar\">مَنْ</span>"],["B","<span class=\"ar\">مَتَى</span>"],["C","<span class=\"ar\">أَيْنَ</span>"],["D","<span class=\"ar\">كَيْفَ</span>"]],"C"),
+q(11,"S2","Quyidagi so'zlardan qaysi biri «Musanno» (ikkilik) shaklida EMAS?",[["A","<span class=\"ar\">مُعَلِّمَانِ</span>"],["B","<span class=\"ar\">وَلَدَانِ</span>"],["C","<span class=\"ar\">طَبِيبَتَانِ</span>"],["D","<span class=\"ar\">كَسْلَانُ</span>"]],"D"),
+q(12,"S2","Muzakkar (erkak) jinsidagi ikki shaxsga nisbatan «Ular ikkisi kim?» deb qanday so'raladi?",[["A","<span class=\"ar\">مَنْ هَذَانِ؟</span>"],["B","<span class=\"ar\">مَنْ هَاتَانِ؟</span>"],["C","<span class=\"ar\">مَا هَذَانِ؟</span>"],["D","<span class=\"ar\">مَنْ هُمَا؟</span>"]],"A"),
+q(13,"S2","«<span class=\"ar\">مَا هَاتَانِ؟</span>» (Bular nima? — muannas) savoliga to'g'ri javobni toping.",[["A","<span class=\"ar\">هَذَانِ قَلَمَانِ</span>"],["B","<span class=\"ar\">هَاتَانِ طَالِبَتَانِ</span>"],["C","<span class=\"ar\">هَاتَانِ سَيَّارَتَانِ</span>"],["D","<span class=\"ar\">هُمَا كِتَابَانِ</span>"]],"C"),
+q(14,"S2","«<span class=\"ar\">مَدِينَةٌ</span>» (Shahar) so'zining to'g'ri ikkilik shaklini ko'rsating.",[["A","<span class=\"ar\">مَدِينَتَانِ</span>"],["B","<span class=\"ar\">مَدِينَانِ</span>"],["C","<span class=\"ar\">مُدُنٌ</span>"],["D","<span class=\"ar\">مَدِينَاتٌ</span>"]],"A"),
+q(15,"S2","«Biz ikkimiz muallimmiz» gapining arabcha to'g'ri ifodasini toping.",[["A","<span class=\"ar\">أَنَا مُعَلِّمٌ</span>"],["B","<span class=\"ar\">هُمَا مُعَلِّمَانِ</span>"],["C","<span class=\"ar\">أَنْتُمَا مُعَلِّمَانِ</span>"],["D","<span class=\"ar\">نَحْنُ مُعَلِّمَانِ</span>"]],"D"),
+q(16,"S2","«<span class=\"ar\">أَنْتُمَا طَالِبَانِ</span>» gapining tarjimasi qaysi javobda to'g'ri ko'rsatilgan?",[["A","Ular ikkisi talabadirlar."],["B","Siz ikkingiz talabasiz."],["C","Biz ikkalamiz talabamiz."],["D","Sen talabasan."]],"B"),
+q(17,"S2","Quyidagi birikmalardan qaysi biri grammatik jihatdan XATO?",[["A","<span class=\"ar\">هُمَا صَدِيقَانِ</span>"],["B","<span class=\"ar\">أَنْتُمَا خَوْلَةُ وَخَدِيجَةُ</span>"],["C","<span class=\"ar\">هُوَ أَحْمَدُ وَخَالِدٌ</span>"],["D","<span class=\"ar\">نَحْنُ طَالِبَاتٌ</span>"]],"C"),
+q(18,"S2","«Ular ikkisi (muannas jinsida) yangi o'qituvchilar» gapini arab tiliga tarjima qiling.",[["A","<span class=\"ar\">هَذَانِ مُعَلِّمَتَانِ جَدِيدَتَانِ</span>"],["B","<span class=\"ar\">هُمَا مُعَلِّمَتَانِ جَدِيدَتَانِ</span>"],["C","<span class=\"ar\">هُمَا مُعَلِّمَانِ جَدِيدَانِ</span>"],["D","<span class=\"ar\">أَنْتُمَا مُعَلِّمَتَانِ جَدِيدَتَانِ</span>"]],"B"),
+q(19,"S2","O'g'il bola va qiz bola birgalikda «Biz ikkimiz...» deb gapirsa, qaysi olmoshni ishlatadi?",[["A","<span class=\"ar\">نَحْنُ</span>"],["B","<span class=\"ar\">أَنْتُمَا</span>"],["C","<span class=\"ar\">هُمَا</span>"],["D","<span class=\"ar\">أَنَا</span>"]],"A"),
+q(20,"S2","Qaysi qatorda ko'rsatish olmoshlari orasiga shaxs (kishilik) olmoshi aralashib qolgan?",[["A","<span class=\"ar\">هَذَا ، هَذِهِ ، هَذَانِ ، هَؤُلَاءِ</span>"],["B","<span class=\"ar\">هَذَا ، هَذِهِ ، هُوَ ، هَؤُلَاءِ</span>"],["C","<span class=\"ar\">ذَلِكَ ، تِلْكَ ، أُولَئِكَ ، هَذِهِ</span>"],["D","<span class=\"ar\">هَذَانِ ، هَاتَانِ ، هَؤُلَاءِ ، أُولَئِكَ</span>"]],"B"),
+q(21,"S2","Arab tilida «Ikki sherik / Ikki do'st» ma'nosini anglatuvchi to'g'ri variantni tanlang.",[["A","<span class=\"ar\">زَمِيلٌ</span>"],["B","<span class=\"ar\">زَمِيلَتَانِ</span>"],["C","<span class=\"ar\">زُمَلَاءُ</span>"],["D","<span class=\"ar\">زَمِيلَانِ</span>"]],"D"),
+q(22,"S3","«<span class=\"ar\">طَبِيبٌ</span>» (Shifokor) so'zining ko'plik (jam' taksir) shaklini toping.",[["A","<span class=\"ar\">طَبِيبُونَ</span>"],["B","<span class=\"ar\">أَطِبَّاءُ</span>"],["C","<span class=\"ar\">طَبَائِبُ</span>"],["D","<span class=\"ar\">أَطِبَّةٌ</span>"]],"B"),
+q(23,"S3","«<span class=\"ar\">قَلَمٌ</span>» (Qalam) so'zining ko'plik shakli to'g'ri berilgan qatorni ko'rsating.",[["A","<span class=\"ar\">قَلَمَاتٌ</span>"],["B","<span class=\"ar\">أَقَالِيمُ</span>"],["C","<span class=\"ar\">أَقْلَامٌ</span>"],["D","<span class=\"ar\">قُلُومٌ</span>"]],"C"),
+q(24,"S3","«<span class=\"ar\">رَجُلٌ</span>» (Erkak) so'zining siniq ko'plik shakli qaysi?",[["A","<span class=\"ar\">رَجُلُونَ</span>"],["B","<span class=\"ar\">رِجَالَاتٌ</span>"],["C","<span class=\"ar\">أَرْجُلٌ</span>"],["D","<span class=\"ar\">رِجَالٌ</span>"]],"D"),
+q(25,"S3","«<span class=\"ar\">بَيْتٌ</span>» (Uy) so'zining ko'plik shaklini aniqlang.",[["A","<span class=\"ar\">بُيُوتٌ</span>"],["B","<span class=\"ar\">أَبْيَاتٌ</span>"],["C","<span class=\"ar\">بَيْتَاتٌ</span>"],["D","<span class=\"ar\">بِيتَانٌ</span>"]],"A"),
+q(26,"S3","«<span class=\"ar\">حَقِيبَةٌ</span>» (Sumka) so'zining ko'plik shakli qanday bo'ladi?",[["A","<span class=\"ar\">حَقِيبَاتٌ</span>"],["B","<span class=\"ar\">أَحْقَابٌ</span>"],["C","<span class=\"ar\">حَقَائِبُ</span>"],["D","<span class=\"ar\">حُقُوبٌ</span>"]],"C"),
+q(27,"S3","Bo'sh joyga mos ko'rsatish olmoshini qo'ying: «<span class=\"ar\">_____ أَوْلَادٌ صِغَارٌ</span>» (Bular kichkina bolalar).",[["A","<span class=\"ar\">هَذَا</span>"],["B","<span class=\"ar\">هَؤُلَاءِ</span>"],["C","<span class=\"ar\">هَذِهِ</span>"],["D","<span class=\"ar\">هَاتَانِ</span>"]],"B"),
+q(28,"S3","«<span class=\"ar\">_____ كُتُبٌ جَدِيدَةٌ</span>» (Bular yangi kitoblar) gapida bo'sh joyga qaysi ko'rsatish olmoshi darslik qoidasiga ko'ra to'g'ri?",[["A","<span class=\"ar\">هَؤُلَاءِ</span>"],["B","<span class=\"ar\">هَذَا</span>"],["C","<span class=\"ar\">هَذَانِ</span>"],["D","<span class=\"ar\">هَذِهِ</span>"]],"D"),
+q(29,"S3","Quyidagi gaplarning qaysi biri grammatik jihatdan MUTLAQO XATO?",[["A","<span class=\"ar\">هَؤُلَاءِ كُتُبٌ</span>"],["B","<span class=\"ar\">هَذِهِ سَيَّارَاتٌ</span>"],["C","<span class=\"ar\">هَؤُلَاءِ أَطِبَّاءُ</span>"],["D","<span class=\"ar\">هَذِهِ بُيُوتٌ</span>"]],"A"),
+q(30,"S3","Bo'sh joyga mos olmoshni qo'ying: «<span class=\"ar\">_____ سَيَّارَاتٌ سَرِيعَةٌ</span>» (Bular tezkor mashinalar).",[["A","<span class=\"ar\">هَؤُلَاءِ</span>"],["B","<span class=\"ar\">هَذِهِ</span>"],["C","<span class=\"ar\">هَذَا</span>"],["D","<span class=\"ar\">هُنَّ</span>"]],"B"),
+q(31,"S3","«<span class=\"ar\">هُمْ لَاعِبَانِ مَاهِرَانِ</span>» gapidagi xatoni tuzatib, to'g'ri variantni ko'rsating.",[["A","<span class=\"ar\">هَذَا لَاعِبَانِ مَاهِرَانِ</span>"],["B","<span class=\"ar\">أَنْتُمْ لَاعِبَانِ مَاهِرَانِ</span>"],["C","<span class=\"ar\">هُمَا لَاعِبَانِ مَاهِرَانِ</span>"],["D","<span class=\"ar\">هُنَّ لَاعِبَانِ مَاهِرَانِ</span>"]],"C"),
+q(32,"S3","«<span class=\"ar\">مُحَمَّدٌ وَأَحْمَدُ طَالِبَانِ نَشِيطٌ</span>» gapidagi belgilangan so'zning to'g'ri shakli qanday bo'ladi?",[["A","<span class=\"ar\">نَشِيطُونَ</span>"],["B","<span class=\"ar\">نَشِيطَةٌ</span>"],["C","<span class=\"ar\">نَشِيطِينَ</span>"],["D","<span class=\"ar\">نَشِيطَانِ</span>"]],"D"),
+q(33,"S3","«<span class=\"ar\">أَنْتِ جَدَّاتٌ طَيِّبَاتٌ</span>» gapidagi xato olmoshni to'g'rilang.",[["A","<span class=\"ar\">أَنْتُنَّ</span>"],["B","<span class=\"ar\">أَنْتُمْ</span>"],["C","<span class=\"ar\">هُنَّ</span>"],["D","<span class=\"ar\">أَنْتُمَا</span>"]],"A"),
+q(34,"S3","«<span class=\"ar\">هُوَ اسْمِي خَدِيجَةُ</span>» gapidagi xatoni tuzating.",[["A","<span class=\"ar\">هِيَ اسْمِي خَدِيجَةُ</span>"],["B","<span class=\"ar\">أَنْتِ اسْمِي خَدِيجَةُ</span>"],["C","<span class=\"ar\">أَنَا اسْمِي خَدِيجَةُ</span>"],["D","<span class=\"ar\">نَحْنُ اسْمِي خَدِيجَةُ</span>"]],"C"),
+q(35,"S3","«<span class=\"ar\">أَنْتُمْ طُلَّابٌ نَشِيطُونَ</span>» gapida qanday xato bor?",[["A","«<span class=\"ar\">طُلَّابٌ</span>» o'rniga «<span class=\"ar\">طَالِبٌ</span>» bo'lishi kerak."],["B","«<span class=\"ar\">أَنْتُمْ</span>» o'rniga «<span class=\"ar\">أَنْتِ</span>» bo'lishi kerak."],["C","«<span class=\"ar\">نَشِيطُونَ</span>» o'rniga «<span class=\"ar\">نَشِيطَاتٌ</span>» bo'lishi kerak."],["D","Gap to'liq to'g'ri, unda xato yo'q."]],"D"),
+q(36,"S4","«<span class=\"ar\">كِتَابُ</span> + <span class=\"ar\">نَحْنُ</span>» birikmasi qanday shaklda yoziladi?",[["A","<span class=\"ar\">كِتَابُنَا</span>"],["B","<span class=\"ar\">كِتَابِي</span>"],["C","<span class=\"ar\">كِتَابُكُمْ</span>"],["D","<span class=\"ar\">كِتَابُهُمْ</span>"]],"A"),
+q(37,"S4","«Sening (erkak kishiga) kasbing nima?» gapining arabcha shakli:",[["A","<span class=\"ar\">مَا مِهْنَتُكِ؟</span>"],["B","<span class=\"ar\">مَا مِهْنَتُكَ؟</span>"],["C","<span class=\"ar\">مَا مِهْنَتُهُ؟</span>"],["D","<span class=\"ar\">مَا مِهْنَتُهُمْ؟</span>"]],"B"),
+q(38,"S4","«<span class=\"ar\">عَمُّكُمْ طَوِيلٌ</span>» gapidagi «<span class=\"ar\">ـكُمْ</span>» olmoshi kimga ishora qiladi?",[["A","Ularga (ko'plik)"],["B","Senga (muannas)"],["C","Sizlarga (ko'plik, muzakkar)"],["D","Bizga"]],"C"),
+q(39,"S4","«<span class=\"ar\">الْمُعَلِّمُ يُحِبُّ عَمَلَهُ</span>» gapidagi «<span class=\"ar\">ـهُ</span>» nimani anglatadi?",[["A","Uning (erkak) o'z ishini"],["B","Mening ishimni"],["C","Sening ishingni"],["D","Ularning ishini"]],"A"),
+q(40,"S4","«<span class=\"ar\">كِتَابُكُنَّ</span>» so'zidagi «<span class=\"ar\">ـكُنَّ</span>» qaysi kishilik olmoshiga mos keladi?",[["A","<span class=\"ar\">أَنْتُمْ</span>"],["B","<span class=\"ar\">هُنَّ</span>"],["C","<span class=\"ar\">أَنْتُمَا</span>"],["D","<span class=\"ar\">أَنْتُنَّ</span>"]],"D"),
+q(41,"S4","«Alloh uni (erkakni) oson qilsin» iborasi qaysi javobda to'g'ri ko'rsatilgan?",[["A","<span class=\"ar\">سَهَّلَ اللهُ لَكَ</span>"],["B","<span class=\"ar\">سَهَّلَ اللهُ لَكِ</span>"],["C","<span class=\"ar\">سَهَّلَ اللهُ لَهُ</span>"],["D","<span class=\"ar\">سَهَّلَ اللهُ لَهُمْ</span>"]],"C"),
+q(42,"S4","«<span class=\"ar\">الْكِتَابُ لِي</span>» (Kitob meniki) gapini bog'langan olmosh yordamida qanday qisqartirish mumkin?",[["A","<span class=\"ar\">كِتَابِي</span>"],["B","<span class=\"ar\">كِتَابُكَ</span>"],["C","<span class=\"ar\">كِتَابُهُ</span>"],["D","<span class=\"ar\">كِتَابُنَا</span>"]],"A"),
+q(43,"S4","«<span class=\"ar\">الْقَلَمُ لَكَ</span>» (Qalam seniki) iborasi qaysi so'zga teng?",[["A","<span class=\"ar\">قَلَمِي</span>"],["B","<span class=\"ar\">قَلَمُهُ</span>"],["C","<span class=\"ar\">قَلَمُهَا</span>"],["D","<span class=\"ar\">قَلَمُكَ</span>"]],"D"),
+q(44,"S4","«<span class=\"ar\">عَمَلُنَا صَعْبٌ</span>» gapida kishilik olmoshi (<span class=\"ar\">نَحْنُ</span>) qanday o'zgarish hosil qilgan?",[["A","Hech qanday o'zgarish bo'lmagan, «<span class=\"ar\">نَحْنُ</span>» o'z holicha turibdi."],["B","«<span class=\"ar\">نَحْنُ</span>» olmoshi «<span class=\"ar\">ـنَا</span>» bog'langan olmoshiga aylanib, egalik («<span class=\"ar\">عَمَلُنَا</span>») hosil qilgan."],["C","«<span class=\"ar\">ـنَا</span>» o'tgan zamon fe'l qo'shimchasi bo'lib kelgan."],["D","«<span class=\"ar\">نَحْنُ</span>» kelishik qo'shimchasini olgan."]],"B"),
+q(45,"S4","«<span class=\"ar\">أَنَا سَعِيدٌ _____ يَا أَصْدِقَائِي</span>» (Ey do'stlarim, men sizlardan xursandman). Bo'sh joyga mos predlog-olmosh birikmasini qo'ying.",[["A","<span class=\"ar\">بِكُمْ</span>"],["B","<span class=\"ar\">بِكَ</span>"],["C","<span class=\"ar\">بِهِ</span>"],["D","<span class=\"ar\">بِهِمْ</span>"]],"A"),
+q(46,"S4","«<span class=\"ar\">أَبِي وَأُمِّي فِي الْقَرْيَةِ، وَأَذْهَبُ _____</span>» (Ota-onam qishloqda, men ularning oldiga boraman). Bo'sh joyga mos predlog-olmosh birikmasini toping.",[["A","<span class=\"ar\">إِلَيْهِ</span>"],["B","<span class=\"ar\">إِلَيْهَا</span>"],["C","<span class=\"ar\">إِلَيْهِمَا</span>"],["D","<span class=\"ar\">إِلَيْهِمْ</span>"]],"C"),
+q(47,"S4","«<span class=\"ar\">يَجِبُ أَنْ نَدْرُسَ كَثِيرًا، لِأَنَّ _____ مُهِمٌّ جِدًّا</span>» (Ko'p o'qishimiz kerak, chunki imtihonimiz juda muhim).",[["A","<span class=\"ar\">امْتِحَانِي</span>"],["B","<span class=\"ar\">امْتِحَانَنَا</span>"],["C","<span class=\"ar\">امْتِحَانُنَا</span>"],["D","<span class=\"ar\">امْتِحَانَهُ</span>"]],"B"),
+q(48,"S4","Qaysi javobda «Kishilik olmoshi → Bog'langan olmosh» juftligi XATO berilgan?",[["A","<span class=\"ar\">هُوَ</span> → <span class=\"ar\">ـهُ</span>"],["B","<span class=\"ar\">هِيَ</span> → <span class=\"ar\">ـهَا</span>"],["C","<span class=\"ar\">أَنْتُمْ</span> → <span class=\"ar\">ـكُمْ</span>"],["D","<span class=\"ar\">أَنْتِ</span> → <span class=\"ar\">ـكَ</span>"]],"D"),
+q(49,"S5","Bo'shliqni to'g'ri to'ldiring: «<span class=\"ar\">لِمَاذَا _____ مُبَكِّرًا مِنَ الْعَمَلِ يَا سَلْمَى؟</span>» (Ey Salmo, nega ishdan vaqtli qaytding?)",[["A","<span class=\"ar\">رَجَعْتَ</span>"],["B","<span class=\"ar\">رَجَعْتُ</span>"],["C","<span class=\"ar\">رَجَعْتِ</span>"],["D","<span class=\"ar\">رَجَعَتْ</span>"]],"C"),
+q(50,"S5","«<span class=\"ar\">الْمُعَلِّمَةُ _____ إِلَى مِصْرَ</span>» (O'qituvchi ayol Misrga safar qildi). Bo'shliqqa mos fe'lni toping.",[["A","<span class=\"ar\">سَافَرَتْ</span>"],["B","<span class=\"ar\">سَافَرَ</span>"],["C","<span class=\"ar\">سَافَرْتَ</span>"],["D","<span class=\"ar\">سَافَرْتُ</span>"]],"A"),
+q(51,"S5","Qoidaga ko'ra, fe'liy gap (<span class=\"ar\">الجملة الفعلية</span>) nima bilan boshlanadi?",[["A","Ism (<span class=\"ar\">اسْم</span>) bilan"],["B","Harf (<span class=\"ar\">حَرْف</span>) bilan"],["C","Olmosh (<span class=\"ar\">ضَمِير</span>) bilan"],["D","Fe'l (<span class=\"ar\">فِعْل</span>) bilan"]],"D"),
+q(52,"S5","Quyidagi gaplardan qaysi biri FE'LIY GAP hisoblanadi?",[["A","<span class=\"ar\">غُرْفَةُ الْجُلُوسِ مُرِيحَةٌ</span>."],["B","<span class=\"ar\">الشَّقَّةُ تَتَكَوَّنُ مِنْ غُرْفَتَيْنِ</span>."],["C","<span class=\"ar\">شَرِبْتُ الْقَهْوَةَ عِنْدَ صَدِيقِي</span>."],["D","<span class=\"ar\">صَالَةُ الْبَيْتِ وَاسِعَةٌ</span>."]],"C"),
+q(53,"S5","«<span class=\"ar\">حَمْزَةُ يَسْكُنُ فِي حَيِّ الزُّهُورِ</span>» (ismiy gap). Uni FE'LIY GAPGA aylantirilgan to'g'ri shaklini toping.",[["A","<span class=\"ar\">يَسْكُنُ حَمْزَةُ فِي حَيِّ الزُّهُورِ</span>."],["B","<span class=\"ar\">فِي حَيِّ الزُّهُورِ يَسْكُنُ حَمْزَةُ</span>."],["C","<span class=\"ar\">حَمْزَةُ فِي حَيِّ الزُّهُورِ يَسْكُنُ</span>."],["D","<span class=\"ar\">يَسْكُنُ فِي الزُّهُورِ حَمْزَةُ</span>."]],"A"),
+q(54,"S5","«<span class=\"ar\">أَعِيشُ مَعَ أُسْرَتِي</span>» gapining tarkibi haqida qaysi hukm to'g'ri?",[["A","Bu ismiy gap, chunki «<span class=\"ar\">أَنَا</span>» yashiringan."],["B","Bu gap emas, shunchaki ibora."],["C","Bu harfiy gap."],["D","Bu fe'liy gap, chunki «<span class=\"ar\">أَعِيشُ</span>» fe'li bilan boshlangan."]],"D"),
+q(55,"S5","Qaysi qatorda faqat o'tgan zamon fe'llari (<span class=\"ar\">الفعل الماضي</span>) berilgan?",[["A","<span class=\"ar\">يَسْكُنُ - ذَهَبَ - قَرَأَ</span>"],["B","<span class=\"ar\">أَعِيشُ - أُحِبُّ - أَذْهَبُ</span>"],["C","<span class=\"ar\">جَلَسْتُ - سَأَلْتَ - سَافَرَتْ</span>"],["D","<span class=\"ar\">اشْمَلْ - اجْلِسْ - اقْرَأْ</span>"]],"C"),
+q(56,"S5","«<span class=\"ar\">تُطِلُّ الشَّقَّةُ عَلَى النَّهْرِ</span>» gapining ismiy gap shakli qaysi javobda to'g'ri ko'rsatilgan?",[["A","<span class=\"ar\">الشَّقَّةُ تُطِلُّ عَلَى النَّهْرِ</span>."],["B","<span class=\"ar\">عَلَى النَّهْرِ تُطِلُّ الشَّقَّةُ</span>."],["C","<span class=\"ar\">تُطِلُّ عَلَى النَّهْرِ الشَّقَّةُ</span>."],["D","<span class=\"ar\">الشَّقَّةُ عَلَى النَّهْرِ</span>."]],"A"),
+q(57,"S5","«<span class=\"ar\">أَبِي أَخَذَ الطَّعَامَ مِنَ الثَّلَّاجَةِ</span>» gapini fe'liy gapga aylantiring.",[["A","<span class=\"ar\">مِنَ الثَّلَّاجَةِ أَبِي أَخَذَ الطَّعَامَ</span>."],["B","<span class=\"ar\">الطَّعَامَ أَخَذَ أَبِي مِنَ الثَّلَّاجَةِ</span>."],["C","<span class=\"ar\">أَبِي مِنَ الثَّلَّاجَةِ أَخَذَ الطَّعَامَ</span>."],["D","<span class=\"ar\">أَخَذَ أَبِي الطَّعَامَ مِنَ الثَّلَّاجَةِ</span>."]],"D"),
+q(58,"S6","«<span class=\"ar\">سَاعَدَتِ الْبِنْتُ أُمَّهَا فِي الْمَطْبَخِ</span>» gapidagi fe'lni hozirgi zamonga o'tkazing.",[["A","<span class=\"ar\">تُسَاعِدُ</span>"],["B","<span class=\"ar\">يُسَاعِدُ</span>"],["C","<span class=\"ar\">أُسَاعِدُ</span>"],["D","<span class=\"ar\">تُسَاعِدِينَ</span>"]],"A"),
+q(59,"S6","«<span class=\"ar\">اسْتَأْجَرَ أَخِي شَقَّةً صَغِيرَةً</span>» gapidagi fe'l hozirgi zamonda qanday bo'ladi?",[["A","<span class=\"ar\">تَسْتَأْجِرُ</span>"],["B","<span class=\"ar\">يَسْتَأْجِرُ</span>"],["C","<span class=\"ar\">أَسْتَأْجِرُ</span>"],["D","<span class=\"ar\">نَسْتَأْجِرُ</span>"]],"B"),
+q(60,"S6","«<span class=\"ar\">شَرِبْتُ الْحَلِيبَ فِي الصَّبَاحِ</span>» gapidagi «<span class=\"ar\">شَرِبْتُ</span>» fe'lining hozirgi zamon shakli qaysi?",[["A","<span class=\"ar\">يَشْرَبُ</span>"],["B","<span class=\"ar\">تَشْرَبُ</span>"],["C","<span class=\"ar\">تَشْرَبِينَ</span>"],["D","<span class=\"ar\">أَشْرَبُ</span>"]],"D"),
+q(61,"S6","«<span class=\"ar\">هَلْ فَهِمْتَ وَاجِبَكَ يَا صَالِحُ؟</span>» gapidagi «<span class=\"ar\">فَهِمْتَ</span>» fe'lining hozirgi zamon shakli nima?",[["A","<span class=\"ar\">يَفْهَمُ</span>"],["B","<span class=\"ar\">تَفْهَمِينَ</span>"],["C","<span class=\"ar\">تَفْهَمُ</span>"],["D","<span class=\"ar\">أَفْهَمُ</span>"]],"C"),
+q(62,"S6","Qaysi so'z vaqt ravishi (<span class=\"ar\">ظرف زمان</span>) hisoblanadi?",[["A","<span class=\"ar\">أَمَامَ</span>"],["B","<span class=\"ar\">صَبَاحًا</span>"],["C","<span class=\"ar\">خَلْفَ</span>"],["D","<span class=\"ar\">يَمِينَ</span>"]],"B"),
+q(63,"S6","«<span class=\"ar\">أَرْجِعُ إِلَى الْبَيْتِ لَيْلًا</span>» gapidagi vaqt ravishini aniqlang.",[["A","<span class=\"ar\">لَيْلًا</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">الْبَيْتِ</span>"],["D","<span class=\"ar\">أَرْجِعُ</span>"]],"A"),
+q(64,"S6","«<span class=\"ar\">ثُمَّ عَرِّجْ _____ الْيَمِينِ</span>» (So'ngra o'ngga buriling). Bo'sh joyga mos harfni toping.",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">عَلَى</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"B"),
+q(65,"S6","Matndan kelib chiqib bo'shliqni to'ldiring: «<span class=\"ar\">أَنَا مَحْمُودٌ، دَرَسْتُ فِي كُلِّيَّةِ الطِّبِّ، وَنَجَحْتُ. أَعْمَلُ الْآنَ _____ فِي الْمُسْتَشْفَى</span>».",[["A","<span class=\"ar\">مُهَنْدِسًا</span>"],["B","<span class=\"ar\">فَلَّاحًا</span>"],["C","<span class=\"ar\">طَبِيبًا</span>"],["D","<span class=\"ar\">مُعَلِّمًا</span>"]],"C"),
+q(66,"S6","«<span class=\"ar\">أَنْتَ تَذْهَبُ إِلَى عَمَلِكَ مُبَكِّرًا</span>» gapining inkor shaklini hosil qilish uchun fe'ldan oldin nima qo'yiladi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">مَا</span>"],["C","<span class=\"ar\">لَنْ</span>"],["D","<span class=\"ar\">لَا</span>"]],"D"),
+q(67,"S7","Arab tilida predloglardan (<span class=\"ar\">حرف الجر</span>) keyin kelgan ism qaysi kelishikda (harakatda) bo'ladi?",[["A","Kasra (<span class=\"ar\">ِ</span>) — majrur"],["B","Damma (<span class=\"ar\">ُ</span>) — marfu'"],["C","Fatha (<span class=\"ar\">َ</span>) — mansub"],["D","Sukun (<span class=\"ar\">ْ</span>)"]],"A"),
+q(68,"S7","Gapni to'ldiring: «<span class=\"ar\">سَافَرْتُ _____ الْقَاهِرَةِ إِلَى الرِّيَاضِ</span>».",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">عَنْ</span>"],["C","<span class=\"ar\">مِنْ</span>"],["D","<span class=\"ar\">عَلَى</span>"]],"C"),
+q(69,"S7","«Mening otam Rossiyaga safar qildi» gapidagi bo'sh joyga mos predlogni qo'ying: «<span class=\"ar\">سَافَرَ أَبِي _____ رُوسْيَا</span>».",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">بِـ</span>"],["D","<span class=\"ar\">كَـ</span>"]],"B"),
+q(70,"S7","«Ushbu chipta yo'lovchi uchun» gapining arabcha tarjimasini to'g'ri to'ldiring: «<span class=\"ar\">هَذِهِ التَّذْكِرَةُ _____</span>».",[["A","<span class=\"ar\">كَالْمُسَافِرِ</span>"],["B","<span class=\"ar\">فِي الْمُسَافِرِ</span>"],["C","<span class=\"ar\">عَنِ الْمُسَافِرِ</span>"],["D","<span class=\"ar\">لِلْمُسَافِرِ</span>"]],"D"),
+q(71,"S7","Fe'l va predlog mosligini toping: «<span class=\"ar\">بَحَثَ</span>» fe'li odatda qaysi predlog bilan keladi?",[["A","<span class=\"ar\">عَنْ</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">فِي</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"A"),
+q(72,"S7","Gapni to'ldiring: «<span class=\"ar\">تَحَدَّثَ الطَّبِيبُ _____ الصِّحَّةِ</span>».",[["A","<span class=\"ar\">كَـ</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">عَنْ</span>"],["D","<span class=\"ar\">لِـ</span>"]],"C"),
+q(73,"S7","«Men ruchka bilan yozdim» gapi arab tilida qanday ifodalanadi?",[["A","<span class=\"ar\">كَتَبْتُ كَالْقَلَمِ</span>."],["B","<span class=\"ar\">كَتَبْتُ لِلْقَلَمِ</span>."],["C","<span class=\"ar\">كَتَبْتُ فِي الْقَلَمِ</span>."],["D","<span class=\"ar\">كَتَبْتُ بِالْقَلَمِ</span>."]],"D"),
+q(74,"S7","«<span class=\"ar\">الـ</span>» aniqlik artikli bilan boshlangan ismga «<span class=\"ar\">لِـ</span>» (uchun) predlogi qo'shilganda qanday o'zgarish bo'ladi?",[["A","Hech narsa o'zgarmaydi"],["B","Artikldagi alif tushib qoladi (<span class=\"ar\">لِلْ</span>...)"],["C","Tanvin paydo bo'ladi"],["D","So'z oxiriga «<span class=\"ar\">لـ</span>» qo'shiladi"]],"B"),
+q(75,"S7","«<span class=\"ar\">الرَّجُلُ كَالْأَسَدِ</span>» gapining tarjimasi nima?",[["A","Erkak kishi arslondek (shijoatli)."],["B","Erkak kishi arslondir."],["C","Erkak kishi arslon bilan birga."],["D","Erkak kishi arslon uchun."]],"A"),
+q(76,"S7","Gapni to'ldiring: «<span class=\"ar\">وَصَلَ الْمُسَافِرُ _____ بَلَدِهِ</span>».",[["A","<span class=\"ar\">عَنْ</span>"],["B","<span class=\"ar\">كَـ</span>"],["C","<span class=\"ar\">فِي</span>"],["D","<span class=\"ar\">إِلَى</span>"]],"D"),
+q(77,"S7","Qaysi gap grammatik jihatdan noto'g'ri tuzilgan?",[["A","<span class=\"ar\">أَنَا فِي الْغُرْفَةِ</span>."],["B","<span class=\"ar\">الْكِتَابُ عَلَى الْمَكْتَبِ</span>."],["C","<span class=\"ar\">أَنَا عَلَى الْغُرْفَةِ</span>."],["D","<span class=\"ar\">سَافَرْتُ إِلَى الْمَدِينَةِ</span>."]],"C"),
+q(78,"S7","Berilgan gapni to'ldiring: «<span class=\"ar\">الرَّاكِبُ سَرِيعٌ _____ الْغَزَالِ</span>» (Yo'lovchi ohudek tezkor).",[["A","<span class=\"ar\">لِـ</span>"],["B","<span class=\"ar\">كَـ</span>"],["C","<span class=\"ar\">فِي</span>"],["D","<span class=\"ar\">مِنْ</span>"]],"B"),
+q(79,"S7","Gapdagi bo'sh joyga mos predlogni tanlang: «<span class=\"ar\">اسْتَمْتَعْتُ _____ رِحْلَتِي</span>».",[["A","<span class=\"ar\">عَنْ</span>"],["B","<span class=\"ar\">كَـ</span>"],["C","<span class=\"ar\">إِلَى</span>"],["D","<span class=\"ar\">بِـ</span>"]],"D"),
+q(80,"S7","«Ushbu mashina Ahmadniki» gapi arab tilida qanday yoziladi?",[["A","<span class=\"ar\">هَذِهِ السَّيَّارَةُ لِأَحْمَدَ</span>."],["B","<span class=\"ar\">هَذِهِ السَّيَّارَةُ كَأَحْمَدَ</span>."],["C","<span class=\"ar\">هَذِهِ السَّيَّارَةُ فِي أَحْمَدَ</span>."],["D","<span class=\"ar\">هَذِهِ السَّيَّارَةُ مِنْ أَحْمَدَ</span>."]],"A"),
+q(81,"S7","Quyidagi mosliklardan qaysi biri xato berilgan?",[["A","<span class=\"ar\">مَتَى</span> — Zamon (<span class=\"ar\">الزَّمَان</span>) uchun"],["B","<span class=\"ar\">أَيْنَ</span> — Makon (<span class=\"ar\">الْمَكَان</span>) uchun"],["C","<span class=\"ar\">مَنْ</span> — Sabab (<span class=\"ar\">السَّبَب</span>) uchun"],["D","<span class=\"ar\">كَيْفَ</span> — Holat (<span class=\"ar\">الْحَال</span>) uchun"]],"C"),
+q(82,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">هُمَا (مُؤَنَّث) _____ الطَّعَامَ</span>».",[["A","<span class=\"ar\">تَنَاوَلَا</span>"],["B","<span class=\"ar\">تَنَاوَلُوا</span>"],["C","<span class=\"ar\">تَنَاوَلَتَا</span>"],["D","<span class=\"ar\">تَنَاوَلْنَ</span>"]],"C"),
+q(83,"S8","«<span class=\"ar\">أَنْتَ سَمِعْتَ الصَّوْتَ</span>» gapining ikkilik (musanno) shakli qaysi?",[["A","<span class=\"ar\">أَنْتُمْ سَمِعْتُمُ الصَّوْتَ</span>"],["B","<span class=\"ar\">هُمَا سَمِعَا الصَّوْتَ</span>"],["C","<span class=\"ar\">نَحْنُ سَمِعْنَا الصَّوْتَ</span>"],["D","<span class=\"ar\">أَنْتُمَا سَمِعْتُمَا الصَّوْتَ</span>"]],"D"),
+q(84,"S8","«<span class=\"ar\">هِيَ جَلَسَتْ فِي الْغُرْفَةِ</span>» gapining ayollar ko'pligi (jam' muannas) shakli qaysi?",[["A","<span class=\"ar\">هُنَّ جَلَسْنَ فِي الْغُرْفَةِ</span>"],["B","<span class=\"ar\">هُمَا جَلَسَتَا فِي الْغُرْفَةِ</span>"],["C","<span class=\"ar\">أَنْتُنَّ جَلَسْتُنَّ فِي الْغُرْفَةِ</span>"],["D","<span class=\"ar\">هُمْ جَلَسُوا فِي الْغُرْفَةِ</span>"]],"A"),
+q(85,"S8","«<span class=\"ar\">اشْتَرَيْتُ ثَلَاثَةَ _____</span>» — 3 sonidan keyin sanaladigan narsa qanday keladi?",[["A","<span class=\"ar\">قَلَمًا</span>"],["B","<span class=\"ar\">أَقْلَامًا</span>"],["C","<span class=\"ar\">أَقْلَامٍ</span>"],["D","<span class=\"ar\">قَلَمٍ</span>"]],"C"),
+q(86,"S8","«<span class=\"ar\">فِي الْمَكْتَبَةِ خَمْسُونَ _____</span>» — 50 sonidan keyin sanaladigan narsa qanday keladi?",[["A","<span class=\"ar\">كِتَابًا</span>"],["B","<span class=\"ar\">كِتَابٍ</span>"],["C","<span class=\"ar\">كُتُبٍ</span>"],["D","<span class=\"ar\">كُتُبًا</span>"]],"A"),
+q(87,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">أَكَلَ ثَلَاثَ _____ فِي الْيَوْمِ</span>».",[["A","<span class=\"ar\">وَجْبَةً</span>"],["B","<span class=\"ar\">وَجْبَةٍ</span>"],["C","<span class=\"ar\">وَجَبَاتًا</span>"],["D","<span class=\"ar\">وَجَبَاتٍ</span>"]],"D"),
+q(88,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">سَكَنْتُ فِي الْقَاهِرَةِ سَبْعَةَ _____</span>».",[["A","<span class=\"ar\">يَوْمًا</span>"],["B","<span class=\"ar\">أَيَّامٍ</span>"],["C","<span class=\"ar\">أَيَّامًا</span>"],["D","<span class=\"ar\">يَوْمٍ</span>"]],"B"),
+q(89,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">اشْتَرَيْتُ سِتَّةَ _____ لِأَطْفَالِي</span>».",[["A","<span class=\"ar\">كِتَابًا</span>"],["B","<span class=\"ar\">كِتَابٍ</span>"],["C","<span class=\"ar\">كُتُبٍ</span>"],["D","<span class=\"ar\">كُتُبًا</span>"]],"C"),
+q(90,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">سِعْرُ الْمَوْزِ سَبْعُ _____</span>».",[["A","<span class=\"ar\">لِيرَةً</span>"],["B","<span class=\"ar\">لِيرَةٍ</span>"],["C","<span class=\"ar\">لِيرَاتًا</span>"],["D","<span class=\"ar\">لِيرَاتٍ</span>"]],"D"),
+q(91,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">جَاءَ _____ طَالِبًا إِلَى الصَّفِّ الْيَوْمَ</span>».",[["A","<span class=\"ar\">سَبْعَةَ عَشَرَ</span>"],["B","<span class=\"ar\">سَبْعَةُ</span>"],["C","<span class=\"ar\">ثَلَاثُ</span>"],["D","<span class=\"ar\">ثَمَانِي</span>"]],"A"),
+q(92,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">فِي بَيْتِنَا _____ غُرَفٍ</span>».",[["A","<span class=\"ar\">خَمْسُونَ</span>"],["B","<span class=\"ar\">أَرْبَعَةَ عَشَرَ</span>"],["C","<span class=\"ar\">اثْنَا عَشَرَ</span>"],["D","<span class=\"ar\">ثَلَاثُ</span>"]],"D"),
+q(93,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">كَتَبْتُ فِي الدَّفْتَرِ _____ كَلِمَةً</span>».",[["A","<span class=\"ar\">خَمْسِينَ</span>"],["B","<span class=\"ar\">ثَلَاثُ</span>"],["C","<span class=\"ar\">سَبْعُ</span>"],["D","<span class=\"ar\">ثَمَانِي</span>"]],"A"),
+q(94,"S8","Bo'shliqni to'ldiring: «<span class=\"ar\">أَعْمَلُ _____ سَاعَاتٍ فِي الْيَوْمِ</span>».",[["A","<span class=\"ar\">اثْنَتَا عَشْرَةَ</span>"],["B","<span class=\"ar\">ثَمَانِيَ</span>"],["C","<span class=\"ar\">ثَلَاثَ عَشْرَةَ</span>"],["D","<span class=\"ar\">أَرْبَعَ عَشْرَةَ</span>"]],"B"),
+q(95,"S8","«Ikki qiz (talaba) taomni tanovul qilishdi» gapining to'g'ri arabcha tarjimasini aniqlang.",[["A","<span class=\"ar\">الطَّالِبَتَانِ تَنَاوَلَتَا الطَّعَامَ</span>"],["B","<span class=\"ar\">الطَّالِبَانِ تَنَاوَلَا الطَّعَامَ</span>"],["C","<span class=\"ar\">الطَّالِبَاتُ تَنَاوَلْنَ الطَّعَامَ</span>"],["D","<span class=\"ar\">الطُّلَّابُ تَنَاوَلُوا الطَّعَامَ</span>"]],"A"),
+q(96,"S8","Arab tilida 3 dan 10 gacha bo'lgan sonlarning qoidasi qanday?",[["A","Son jinsda moslashadi, sanaladigan narsa birlik va majrur bo'ladi."],["B","Son va sanaladigan narsa har doim mansub (fathali) bo'ladi."],["C","Sanaladigan narsa har doim birlik va marfu' bo'ladi."],["D","Son jinsda teskari bo'ladi, sanaladigan narsa ko'plik va majrur (zerli) bo'ladi."]],"D"),
+q(97,"S8","Arab tilida 11 dan 99 gacha bo'lgan sonlardan keyin keladigan ot (sanaladigan narsa) qanday holatda bo'ladi?",[["A","Birlik va mansub (<span class=\"ar\">مفرد منصوب</span>)"],["B","Ko'plik va majrur (<span class=\"ar\">جمع مجرور</span>)"],["C","Birlik va majrur (<span class=\"ar\">مفرد مجرور</span>)"],["D","Ko'plik va mansub (<span class=\"ar\">جمع منصوب</span>)"]],"A"),
+q(98,"S8","«<span class=\"ar\">قَرَأْتُ عِشْرِينَ رِوَايَةً</span>» gapidagi grammatik qoida qaysi javobda to'g'ri izohlangan?",[["A","20 sonidan keyin sanaladigan narsa ko'plik va majrur kelgan."],["B","Bu yerda fe'l va foil moslashmagan."],["C","20 sonidan keyin sanaladigan narsa birlik va mansub kelgan."],["D","3–10 qoidasiga binoan majrur bo'lgan."]],"C"),
+q(99,"S9","«<span class=\"ar\">سَأَكْتُبُ</span>» (Men yozaman) fe'lidagi «<span class=\"ar\">سَـ</span>» qo'shimchasi qanday muddatdagi kelasi zamonni anglatadi?",[["A","O'tgan zamon"],["B","Buyruq mayli"],["C","Yaqin kelasi zamon"],["D","Uzoq kelasi zamon"]],"C"),
+q(100,"S9","«Uzoq kelasi zamon»ni ifodalash uchun qaysi yuklama ishlatiladi?",[["A","<span class=\"ar\">سَوْفَ</span>"],["B","<span class=\"ar\">سَـ</span>"],["C","<span class=\"ar\">لَنْ</span>"],["D","<span class=\"ar\">لَا</span>"]],"A"),
+q(101,"S9","«<span class=\"ar\">أُمِّي تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ</span>» (Ona bozordan sabzavot sotib olyapti) gapini kelasi zamonga o'giring.",[["A","<span class=\"ar\">أُمِّي اشْتَرَتِ الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"],["B","<span class=\"ar\">أُمِّي لَمْ تَشْتَرِ الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"],["C","<span class=\"ar\">أُمِّي تَشْتَرِي الْخُضْرَةَ</span>"],["D","<span class=\"ar\">أُمِّي سَوْفَ تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ</span>"]],"D"),
+q(102,"S9","«<span class=\"ar\">هُمْ يَدْرُسُونَ</span>» (Ular o'qiyapti) fe'lini kelasi zamon shakliga to'g'ri o'tkazilgan variantni toping.",[["A","<span class=\"ar\">هُمْ سَيَدْرُسُونَ</span>"],["B","<span class=\"ar\">هُمْ دَرَسُوا</span>"],["C","<span class=\"ar\">هُمْ يَدْرُسُونَ</span>"],["D","<span class=\"ar\">هُمْ سَوْفَ دَرَسُوا</span>"]],"A"),
+q(103,"S9","Berilgan gaplardan qaysi biri grammatik jihatdan TO'G'RI?",[["A","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟</span>"],["B","<span class=\"ar\">سَوْفَ تَكْتُبِينَ الْوَاجِبَ</span>."],["C","<span class=\"ar\">سَوْفَ شَاهَدْتُ التِّلْفَازَ</span>."],["D","<span class=\"ar\">أُرِيدُ أَنْ سَأَخْرُجَ قَلِيلًا</span>."]],"B"),
+q(104,"S9","Qaysi gap grammatik jihatdan XATO tuzilgan?",[["A","<span class=\"ar\">أُرِيدُ أَنْ أَخْرُجَ قَلِيلًا</span>."],["B","<span class=\"ar\">أُحِبُّ أَنْ أَعِيشَ فِي الْقَرْيَةِ</span>."],["C","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟</span>"],["D","<span class=\"ar\">هَلْ سَتَكْتُبُ الْوَاجِبَ غَدًا؟</span>"]],"C"),
+q(105,"S9","Bo'shliqqa mos fe'lni qo'ying: «<span class=\"ar\">الْمَدْرَسَةُ _____ بَعْدَ أُسْبُوعٍ</span>» (Maktab bir haftadan keyin boshlanadi).",[["A","<span class=\"ar\">بَدَأَتْ</span>"],["B","<span class=\"ar\">سَتَبْدَأُ</span>"],["C","<span class=\"ar\">تَبْدَأُ</span>"],["D","<span class=\"ar\">بَدَؤُوا</span>"]],"B"),
+q(106,"S9","«<span class=\"ar\">أَنْتُمَا</span>» (Siz ikkingiz) olmoshiga hozirgi zamonda qaysi shakl to'g'ri keladi?",[["A","<span class=\"ar\">يَسْأَلَانِ</span>"],["B","<span class=\"ar\">نَسْأَلُ</span>"],["C","<span class=\"ar\">تَسْأَلُونَ</span>"],["D","<span class=\"ar\">تَسْأَلَانِ</span>"]],"D"),
+q(107,"S9","«<span class=\"ar\">هُمَا</span>» (Ular ikkitasi — muzakkar) uchun qaysi fe'l shakli mos keladi?",[["A","<span class=\"ar\">يَسْأَلَانِ</span>"],["B","<span class=\"ar\">تَسْأَلَانِ</span>"],["C","<span class=\"ar\">يَسْأَلُونَ</span>"],["D","<span class=\"ar\">تَسْأَلُونَ</span>"]],"A"),
+q(108,"S9","«<span class=\"ar\">هُمَا</span>» (Ular ikkitasi — muannas) uchun to'g'ri fe'l shaklini toping.",[["A","<span class=\"ar\">يَسْأَلَانِ</span>"],["B","<span class=\"ar\">يَسْأَلُونَ</span>"],["C","<span class=\"ar\">تَسْأَلَانِ</span>"],["D","<span class=\"ar\">تَسْأَلُونَ</span>"]],"C"),
+q(109,"S9","«<span class=\"ar\">أَنْتُمْ</span>» (Sizlar — ko'plik, muzakkar) uchun to'g'ri fe'l shakli qaysi?",[["A","<span class=\"ar\">تَسْأَلَانِ</span>"],["B","<span class=\"ar\">يَسْأَلُونَ</span>"],["C","<span class=\"ar\">تَسْأَلْنَ</span>"],["D","<span class=\"ar\">تَسْأَلُونَ</span>"]],"D"),
+q(110,"S9","Bo'sh joyni to'ldiring: «<span class=\"ar\">الطَّالِبَتَانِ _____ إِلَى الْمَعْهَدِ</span>» (Ikki talaba qiz institutga bormoqda).",[["A","<span class=\"ar\">تَذْهَبَانِ</span>"],["B","<span class=\"ar\">ذَهَبَتْ</span>"],["C","<span class=\"ar\">يَذْهَبَانِ</span>"],["D","<span class=\"ar\">تَذْهَبُونَ</span>"]],"A"),
+q(111,"S10","«<span class=\"ar\">الْمَفْعُولُ بِهِ</span>» (vositasiz to'ldiruvchi) doimo qanday holatda (e'robda) bo'ladi?",[["A","Marfu' (damma bilan)"],["B","Majrur (kasra bilan)"],["C","Mansub (fatha yoki uning o'rnini bosuvchi belgi bilan)"],["D","Sokin (sukun bilan)"]],"C"),
+q(112,"S10","Ismiy gapni (<span class=\"ar\">الجملة الاسمية</span>) inkor qilish uchun qaysi yuklama ishlatiladi?",[["A","<span class=\"ar\">لَيْسَ</span>"],["B","<span class=\"ar\">لَمْ</span>"],["C","<span class=\"ar\">لَنْ</span>"],["D","<span class=\"ar\">مَا</span>"]],"A"),
+q(113,"S10","Fe'liy gaplarni inkor qilishda quyidagi yuklamalardan qaysi biri ishlatilmaydi?",[["A","<span class=\"ar\">مَا</span> / <span class=\"ar\">لَا</span>"],["B","<span class=\"ar\">لَمْ</span> / <span class=\"ar\">لَنْ</span>"],["C","Hech biri — barchasi fe'liy gapga keladi"],["D","<span class=\"ar\">لَيْسَ</span>"]],"D"),
+q(114,"S10","Kelasi zamon fe'lini inkor qilib, ma'noni «hech qachon bajarilmaydi» shakliga o'zgartiradigan yuklama qaysi?",[["A","<span class=\"ar\">لَنْ</span>"],["B","<span class=\"ar\">لَمْ</span>"],["C","<span class=\"ar\">مَا</span>"],["D","<span class=\"ar\">لَا</span>"]],"A"),
+q(115,"S10","Hozirgi-kelasi zamon (<span class=\"ar\">مُضَارِع</span>) fe'lini inkor qilib, uning oxirini sokin (jazm) qiladigan va ma'noni o'tgan zamonga buradigan yuklama qaysi?",[["A","<span class=\"ar\">لَنْ</span>"],["B","<span class=\"ar\">لَا</span>"],["C","<span class=\"ar\">لَمْ</span>"],["D","<span class=\"ar\">لَيْسَ</span>"]],"C"),
+q(116,"S10","«<span class=\"ar\">أَخَذَ الرَّجُلُ الدَّوَاءَ</span>» (Kishi dorini oldi) o'tgan zamon gapining to'g'ri inkor shaklini toping.",[["A","<span class=\"ar\">مَا أَخَذَ الرَّجُلُ الدَّوَاءَ</span>"],["B","<span class=\"ar\">لَنْ يَأْخُذَ الرَّجُلُ الدَّوَاءَ</span>"],["C","<span class=\"ar\">لَا يَأْخُذُ الرَّجُلُ الدَّوَاءَ</span>"],["D","<span class=\"ar\">لَيْسَ الرَّجُلُ الدَّوَاءَ</span>"]],"A"),
+q(117,"S10","«<span class=\"ar\">الطَّبِيبُ مَشْغُولٌ</span>» (Shifokor band) ismiy gapining inkor shakli qaysi javobda to'g'ri berilgan?",[["A","<span class=\"ar\">لَيْسَ الطَّبِيبُ مَشْغُولًا</span>"],["B","<span class=\"ar\">مَا مَشْغُولٌ الطَّبِيبُ</span>"],["C","<span class=\"ar\">لَمْ يَشْغَلِ الطَّبِيبُ</span>"],["D","<span class=\"ar\">لَنِ الطَّبِيبُ مَشْغُولٌ</span>"]],"A"),
+q(118,"S10","«<span class=\"ar\">أَذْهَبُ إِلَى عَمَلِي غَدًا</span>» gapini «ertaga bormayman» ma'nosida inkor qilish uchun qaysi yuklama qo'yiladi?",[["A","<span class=\"ar\">لَمْ</span>"],["B","<span class=\"ar\">مَا</span>"],["C","<span class=\"ar\">لَيْسَ</span>"],["D","<span class=\"ar\">لَنْ</span>"]],"D"),
+q(119,"S10","«<span class=\"ar\">أَنَا بِخَيْرٍ الْآنَ وَ_____ أَشْعُرُ بِأَلَمٍ</span>» gapiga mos inkor yuklamasini tanlang.",[["A","<span class=\"ar\">لَنْ</span>"],["B","<span class=\"ar\">لَا</span>"],["C","<span class=\"ar\">لَمْ</span>"],["D","<span class=\"ar\">لَيْسَ</span>"]],"B"),
+q(120,"S10","«<span class=\"ar\">_____ عِنْدِي تَسَوُّسٌ فِي أَسْنَانِي</span>» (Tishimda karies yo'q) gapida qaysi yuklama to'g'ri?",[["A","<span class=\"ar\">لَيْسَ</span>"],["B","<span class=\"ar\">لَنْ</span>"],["C","<span class=\"ar\">لَمْ</span>"],["D","<span class=\"ar\">مَا</span>"]],"A"),
+q(121,"S11","G'ayrioqil (aqlsiz) ko'plikdagi so'zlar uchun qaysi ko'rsatkich olmoshi ishlatiladi?",[["A","Faqat ko'plik shakli (<span class=\"ar\">هَؤُلَاءِ</span> / <span class=\"ar\">أُولَئِكَ</span>)"],["B","Muzakkar (erkak) jinsidagi birlik shakli (<span class=\"ar\">هَذَا</span> / <span class=\"ar\">ذَلِكَ</span>)"],["C","Hech qanday olmosh ishlatilmaydi"],["D","Muannas (ayol) jinsidagi birlik shakli (<span class=\"ar\">هَذِهِ</span> / <span class=\"ar\">تِلْكَ</span>)"]],"D"),
+q(122,"S11","Bo'sh joyni to'ldiring: «<span class=\"ar\">_____ الْكَرَاسِيُّ مُرِيحَةٌ</span>» (Uzoqdagi stullar qulay).",[["A","<span class=\"ar\">تِلْكَ</span>"],["B","<span class=\"ar\">ذَلِكَ</span>"],["C","<span class=\"ar\">أُولَئِكَ</span>"],["D","<span class=\"ar\">هَؤُلَاءِ</span>"]],"A"),
+q(123,"S11","Bo'sh joyga mos mavsufni (otni) tanlang: «<span class=\"ar\">فِي الْبَيْتِ _____ نَائِمُونَ</span>».",[["A","<span class=\"ar\">طِفْلَةٌ</span>"],["B","<span class=\"ar\">الْبِنْتُ</span>"],["C","<span class=\"ar\">الْوَلَدُ</span>"],["D","<span class=\"ar\">أَطْفَالٌ</span>"]],"D"),
+q(124,"S11","«<span class=\"ar\">هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ</span>» gapini uzoqni ko'rsatuvchi shaklga o'giring.",[["A","<span class=\"ar\">أُولَئِكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["B","<span class=\"ar\">ذَلِكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["C","<span class=\"ar\">تِلْكَ الْهِوَايَاتُ مُفِيدَةٌ</span>"],["D","<span class=\"ar\">هَذِهِ الْهِوَايَاتُ مُفِيدَةٌ</span>"]],"C"),
+q(125,"S11","«<span class=\"ar\">هَذَا الْمَنْظَرُ جَمِيلٌ</span>» gapini uzoqni ko'rsatuvchi shaklga o'giring.",[["A","<span class=\"ar\">ذَلِكَ الْمَنْظَرُ جَمِيلٌ</span>"],["B","<span class=\"ar\">تِلْكَ الْمَنْظَرُ جَمِيلٌ</span>"],["C","<span class=\"ar\">أُولَئِكَ الْمَنْظَرُ جَمِيلٌ</span>"],["D","<span class=\"ar\">هَذِهِ الْمَنْظَرُ جَمِيلٌ</span>"]],"A"),
+q(126,"S11","«<span class=\"ar\">يَنْصَحُ الطَّبِيبُ بِـ_____ الْخَضْرَاوَاتِ الطَّازَجَةِ</span>» gapidagi bo'sh joyga mos shaklni qo'ying.",[["A","<span class=\"ar\">الْقِرَاءَةِ</span>"],["B","<span class=\"ar\">مُمَارَسَةِ</span>"],["C","<span class=\"ar\">الْمَشْيِ</span>"],["D","<span class=\"ar\">تَنَاوُلِ</span>"]],"D"),
+q(127,"S11","Bo'sh joyga mos ko'rsatkich olmoshini qo'ying: «<span class=\"ar\">_____ الْجِبَالُ عَالِيَةٌ</span>» (Uzoqdagi tog'lar).",[["A","<span class=\"ar\">أُولَئِكَ</span>"],["B","<span class=\"ar\">تِلْكَ</span>"],["C","<span class=\"ar\">ذَلِكَ</span>"],["D","<span class=\"ar\">هَؤُلَاءِ</span>"]],"B"),
+q(128,"S11","Sifat va mavsuf moslashuviga ko'ra to'g'ri birikmani toping.",[["A","<span class=\"ar\">الرِّيَاضَةُ الْبَدَنِيُّ</span>"],["B","<span class=\"ar\">الرِّيَاضَةُ بَدَنِيٌّ</span>"],["C","<span class=\"ar\">الرِّيَاضَةُ الْبَدَنِيَّةُ</span>"],["D","<span class=\"ar\">رِيَاضَةٌ الْبَدَنِيَّةُ</span>"]],"C"),
+q(129,"S11","«<span class=\"ar\">أُولَئِكَ لَاعِبُونَ مَاهِرُونَ</span>» gapidagi ko'rsatkich olmoshi nimani anglatadi?",[["A","Yaqindagi ko'p sonli erkaklarni"],["B","Yaqindagi bitta erkakni"],["C","Uzoqdagi aqlsiz ko'plikni"],["D","Uzoqdagi ko'p sonli insonlarni"]],"D"),
+q(130,"S11","Sifat va mavsuf moslashuvida qaysi omillar mos kelishi shart?",[["A","Faqat jins va kelishikda"],["B","Jins, son, aniqlik va kelishikda"],["C","Faqat sonda"],["D","Hech qaysi jihatdan mos kelishi shart emas"]],"B"),
+q(131,"S11","«<span class=\"ar\">فِي الْمَلْعَبِ لَاعِبُونَ _____</span>» gapidagi bo'sh joyga to'g'ri sifatni qo'ying.",[["A","<span class=\"ar\">مَاهِرٌ</span>"],["B","<span class=\"ar\">مَاهِرَةٌ</span>"],["C","<span class=\"ar\">مَاهِرَاتٌ</span>"],["D","<span class=\"ar\">مَاهِرُونَ</span>"]],"D"),
+q(132,"S11","«<span class=\"ar\">تِلْكَ</span>» ko'rsatkich olmoshi qaysi holatda ishlatiladi?",[["A","Uzoqdagi muannas (ayol) birlik va g'ayrioqil ko'plik uchun"],["B","Uzoqdagi muzakkar (erkak) birlik uchun"],["C","Yaqindagi muannas birlik uchun"],["D","Uzoqdagi aqlli ko'plik uchun"]],"A"),
+q(133,"S11","Bo'sh joyni to'ldiring: «<span class=\"ar\">شَاهَدْتُ سَيَّارَةً _____</span>».",[["A","<span class=\"ar\">كَبِيرٌ</span>"],["B","<span class=\"ar\">كَبِيرَةٌ</span>"],["C","<span class=\"ar\">كَبِيرَةً</span>"],["D","<span class=\"ar\">كِبَارٌ</span>"]],"C"),
+q(134,"S11","«<span class=\"ar\">هَؤُلَاءِ الرِّجَالُ يُمَارِسُونَ الرِّيَاضَةَ</span>» gapidagi «<span class=\"ar\">هَؤُلَاءِ</span>» olmoshini uzoqlik shakliga o'zgartiring.",[["A","<span class=\"ar\">أُولَئِكَ</span>"],["B","<span class=\"ar\">تِلْكَ</span>"],["C","<span class=\"ar\">ذَلِكَ</span>"],["D","<span class=\"ar\">هَذِهِ</span>"]],"A"),
+q(135,"S11","Bo'sh joyga mos sifatni tanlang: «<span class=\"ar\">يَسْكُنُ فِي بَيْتٍ _____</span>».",[["A","<span class=\"ar\">وَاسِعَةٌ</span>"],["B","<span class=\"ar\">وَاسِعٌ</span>"],["C","<span class=\"ar\">وَاسِعًا</span>"],["D","<span class=\"ar\">وَاسِعٍ</span>"]],"D"),
+q(136,"S11","To'g'ri sifat-mavsuf birikmasini aniqlang.",[["A","<span class=\"ar\">الْأَلْعَابِ الْإِلِكْتْرُونِيُّ</span>"],["B","<span class=\"ar\">الْأَلْعَابِ الْإِلِكْتْرُونِيَّةِ</span>"],["C","<span class=\"ar\">أَلْعَابٌ الْإِلِكْتْرُونِيَّةِ</span>"],["D","<span class=\"ar\">الْأَلْعَابِ إِلِكْتْرُونِيَّةٌ</span>"]],"B"),
+q(137,"S12","Sifatlardan «<span class=\"ar\">اسم التفضيل</span>» (orttirma daraja) hosil qilish qolipini ko'rsating.",[["A","<span class=\"ar\">أَفْعَل</span>"],["B","<span class=\"ar\">مَفْعُول</span>"],["C","<span class=\"ar\">فَاعِل</span>"],["D","<span class=\"ar\">فَعِيل</span>"]],"A"),
+q(138,"S12","Gapni to'g'ri to'ldiring: «<span class=\"ar\">الْفِيلُ أَكْبَرُ _____ الْبَقَرَةِ</span>».",[["A","<span class=\"ar\">فِي</span>"],["B","<span class=\"ar\">إِلَى</span>"],["C","<span class=\"ar\">مِنْ</span>"],["D","<span class=\"ar\">عَنْ</span>"]],"C"),
+q(139,"S12","Berilgan so'zlardan to'g'ri qiyosiy gap tuzing: (<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ</span> / <span class=\"ar\">سَهْل</span> / <span class=\"ar\">الرِّيَاضِيَّات</span>).",[["A","<span class=\"ar\">الرِّيَاضِيَّاتُ أَسْهَلُ مِنَ اللُّغَةِ الْعَرَبِيَّةِ</span>"],["B","<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ أَسْهَلُ مِنَ الرِّيَاضِيَّاتِ</span>"],["C","<span class=\"ar\">اللُّغَةُ الْعَرَبِيَّةُ سَهْلٌ مِنَ الرِّيَاضِيَّاتِ</span>"],["D","<span class=\"ar\">الرِّيَاضِيَّاتُ سَهْلَةٌ مِنَ اللُّغَةِ الْعَرَبِيَّةِ</span>"]],"B"),
+q(140,"S12","«<span class=\"ar\">أَمَّا ... فَـ</span>» konstruksiyasi o'zbek tiliga qanday tarjima qilinadi?",[["A","...dan keyin, chunki"],["B","go'yoki ...dek"],["C","...ga kelsak, ...esa"],["D","birinchidan ... ikkinchidan"]],"C"),
+q(141,"S12","Gapni to'g'ri to'ldiring: «<span class=\"ar\">أَبِي عُمْرُهُ خَمْسُونَ عَامًا، _____ أُمِّي فَعُمْرُهَا أَرْبَعُونَ</span>».",[["A","<span class=\"ar\">قَبْلَ</span>"],["B","<span class=\"ar\">أَمَّا</span>"],["C","<span class=\"ar\">بَعْدَ</span>"],["D","<span class=\"ar\">يَبْدَأُ</span>"]],"B"),
+q(142,"S12","«<span class=\"ar\">قَبْلَ أَنْ</span>» birikmasidan keyin fe'lning qaysi shakli keladi?",[["A","Muzoriy fe'li (<span class=\"ar\">المضارع</span>)"],["B","O'tgan zamon fe'li (<span class=\"ar\">الماضي</span>)"],["C","Buyruq fe'li (<span class=\"ar\">الأمر</span>)"],["D","Taqiq fe'li (<span class=\"ar\">النهي</span>)"]],"A"),
+q(143,"S12","Gapni grammatik jihatdan to'g'ri to'ldiring: «<span class=\"ar\">أُمَارِسُ الرِّيَاضَةَ قَبْلَ أَنْ _____ الْفُطُورَ</span>».",[["A","<span class=\"ar\">تَنَاوَلْتُ</span>"],["B","<span class=\"ar\">تَنَاوُلٌ</span>"],["C","<span class=\"ar\">أَتَنَاوَلَ</span>"],["D","<span class=\"ar\">تَنَاوَلْ</span>"]],"C"),
+q(144,"S12","«<span class=\"ar\">اجْلِسْ</span>» fe'lining turi va ma'nosi nima?",[["A","Buyruq fe'li — o'tir (muzakkar, birlik)"],["B","Buyruq fe'li — o'tir (muannas)"],["C","Taqiq fe'li — o'tirma"],["D","O'tgan zamon — o'tirdi"]],"A"),
+q(145,"S12","«<span class=\"ar\">اذْهَبْ</span>» (Bor!) buyruq fe'lining ko'plik (muzakkar) shaklini ko'rsating.",[["A","<span class=\"ar\">اذْهَبِي</span>"],["B","<span class=\"ar\">اذْهَبُوا</span>"],["C","<span class=\"ar\">اذْهَبَا</span>"],["D","<span class=\"ar\">اذْهَبْنَ</span>"]],"B"),
+q(146,"S12","Qiz bolaga (<span class=\"ar\">أَنْتِ</span>) qarata «Yozma!» demoqchi bo'lsak, qaysi shakldan foydalanamiz?",[["A","<span class=\"ar\">لَا تَكْتُبْ</span>"],["B","<span class=\"ar\">لَا تَكْتُبُوا</span>"],["C","<span class=\"ar\">لَا تَكْتُبْنَ</span>"],["D","<span class=\"ar\">لَا تَكْتُبِي</span>"]],"D"),
+q(147,"S12","«<span class=\"ar\">اشْرَبْنَ</span>» fe'li kimga nisbatan aytilgan?",[["A","Ikki kishiga (<span class=\"ar\">أَنْتُمَا</span>)"],["B","Ko'plikdagi erkaklarga (<span class=\"ar\">أَنْتُمْ</span>)"],["C","Ko'plikdagi ayollarga (<span class=\"ar\">أَنْتُنَّ</span>)"],["D","Bir ayolga (<span class=\"ar\">أَنْتِ</span>)"]],"C"),
+q(148,"S12","«<span class=\"ar\">يَا طُلَّابُ، لَا تَكْتُبُوا الْوَاجِبَ فِي الدَّرْسِ</span>» gapidagi «<span class=\"ar\">لَا تَكْتُبُوا</span>» fe'li nimani anglatadi?",[["A","Vazifani darsda yozmanglar"],["B","Vazifani darsda yozinglar"],["C","Vazifani uyda yozishdi"],["D","Vazifani darsdan oldin yozinglar"]],"A"),
+q(149,"S12","Gapni mantiqan va grammatik jihatdan to'g'ri taqiq shakli bilan to'ldiring: «<span class=\"ar\">لَا _____ عَنْ هَذِهِ الْحَيَوَانَاتِ</span>» (Bu hayvonlardan uzoqlashmanglar — ko'plik).",[["A","<span class=\"ar\">تَبْتَعِدْ</span>"],["B","<span class=\"ar\">تَبْتَعِدُوا</span>"],["C","<span class=\"ar\">تَبْتَعِدِي</span>"],["D","<span class=\"ar\">تَبْتَعِدْنَ</span>"]],"B"),
+q(150,"S12","«<span class=\"ar\">رَجَعْتُ مِنَ الْمَتْجَرِ</span>» (Do'kondan qaytdim) gapini «Do'kondan qaytma!» (muzakkar) shaklidagi taqiq gapga aylantiring.",[["A","<span class=\"ar\">ارْجِعْ مِنَ الْمَتْجَرِ</span>"],["B","<span class=\"ar\">لَا تَرْجِعِي مِنَ الْمَتْجَرِ</span>"],["C","<span class=\"ar\">لَا يَرْجِعُ مِنَ الْمَتْجَرِ</span>"],["D","<span class=\"ar\">لَا تَرْجِعْ مِنَ الْمَتْجَرِ</span>"]],"D")
+];
+
+var ALLQ = QALL;
+var SEC_POINTS = {S1:10,S2:11,S3:14,S4:13,S5:9,S6:9,S7:15,S8:17,S9:12,S10:10,S11:16,S12:14};
+var SEC_TITLES = {
+  S1:{label:"1-dars", title:"Ishora va kishilik olmoshi, so'roq olmoshlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 10 savol"},
+  S2:{label:"2-dars", title:"Ikkilik (musanno) otlar va olmoshlar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 11 savol"},
+  S3:{label:"3-dars", title:"Ko'plik (jam') otlar va olmoshlar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 14 savol"},
+  S4:{label:"4-dars", title:"Ismiy jumla: mubtado-xabar, egalik olmoshlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 13 savol"},
+  S5:{label:"5-dars", title:"Fe'l o'tgan zamon (moziy) va jumla turlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 9 savol"},
+  S6:{label:"6-dars", title:"Fe'l hozirgi-kelasi zamon (muzori') va zarflar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 9 savol"},
+  S7:{label:"7-dars", title:"So'roq olmoshlari va harfi jar", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 15 savol"},
+  S8:{label:"8-dars", title:"Fe'l to'liq tuslanishi va 3–10 / 11–99 son qoidasi", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 17 savol"},
+  S9:{label:"9-dars", title:"Muzori' to'liq tuslanish va kelasi zamon (سـ/سوف)", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 12 savol"},
+  S10:{label:"10-dars", title:"Fe'liy gap tuzilishi va nafiy (inkor) turlari", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 10 savol"},
+  S11:{label:"11-dars", title:"Ishora olmoshi (aqlli/aqlsiz) va sifat-mavsuf moslashuvi", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 16 savol"},
+  S12:{label:"12-dars", title:"Ism tafdil (qiyosiy daraja) va amr/nahiy fe'li", sub:"Qoidaviy savollar (chalg'ituvchi variantlar bilan) · 14 savol"}
+};
+
+/* ============ EXAM TIMER / SINGLE-ATTEMPT LOCK ============ */
+var EXAM_ID = 'bayyina_qoidalar_a1_150_v1';
+var DURATION_SEC = 90*60;
+var LS_START = EXAM_ID+'_start';
+var LS_DONE  = EXAM_ID+'_done';
+var timerInterval = null;
+
+function fmtTime(sec){
+  var neg = sec<0; sec = Math.abs(Math.round(sec));
+  var m = Math.floor(sec/60), s = sec%60;
+  return (neg?'+':'') + String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+}
+function escapeHtml(s){
+  return String(s==null?'':s).replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; });
+}
+
+function startTimer(){
+  var startTs = parseInt(localStorage.getItem(LS_START),10);
+  if(!startTs){ startTs = Date.now(); localStorage.setItem(LS_START, String(startTs)); }
+  function tick(){
+    var elapsed = Math.floor((Date.now()-startTs)/1000);
+    var remaining = DURATION_SEC - elapsed;
+    var disp = document.getElementById('timerDisplay');
+    var wrap = document.getElementById('timerWrap');
+    var banner = document.getElementById('overtimeBanner');
+    if(!disp || !wrap) return;
+    disp.textContent = fmtTime(remaining);
+    if(remaining >= 0){
+      wrap.classList.toggle('warn', remaining<=5*60);
+      wrap.classList.remove('danger');
+      if(banner) banner.classList.remove('show');
+    } else {
+      wrap.classList.remove('warn');
+      wrap.classList.add('danger');
+      if(banner) banner.classList.add('show');
+    }
+  }
+  tick();
+  timerInterval = setInterval(tick, 1000);
+}
+
+function getElapsedSec(){
+  var startTs = parseInt(localStorage.getItem(LS_START),10) || Date.now();
+  return Math.floor((Date.now()-startTs)/1000);
+}
+
+/* ============ RENDER ============ */
+function renderSection(secKey, questions){
+  var meta = SEC_TITLES[secKey];
+  var html = '<div class="section-head"><div class="badge">'+meta.label+'</div><h2>'+meta.title+'</h2></div>';
+  html += '<div class="section-sub">'+meta.sub+'</div>';
+  questions.forEach(function(qu){
+    html += renderQuestion(qu);
+  });
+  document.getElementById('section'+secKey).innerHTML = html;
+}
+
+function renderQuestion(qu){
+  var out = '<div class="qcard" id="qcard'+qu.id+'"><p class="qtext"><span class="qnum">'+qu.id+'.</span> '+qu.html+'</p>';
+  if(qu.type==='mcq'){
+    out += '<div class="opts">';
+    qu.opts.forEach(function(o){
+      out += '<label class="opt" data-qid="'+qu.id+'" data-val="'+o[0]+'"><input type="radio" name="q'+qu.id+'" value="'+o[0]+'"><span><b>'+o[0]+')</b> '+o[1]+'</span></label>';
+    });
+    out += '</div>';
+  } else if(qu.type==='tf'){
+    out += '<div class="opts tf">'+
+      '<label class="opt" data-qid="'+qu.id+'" data-val="true"><input type="radio" name="q'+qu.id+'" value="true"> To\'g\'ri</label>'+
+      '<label class="opt" data-qid="'+qu.id+'" data-val="false"><input type="radio" name="q'+qu.id+'" value="false"> Noto\'g\'ri</label>'+
+      '</div>';
+  } else if(qu.type==='fill'){
+    out += '<div class="fillrow"><input type="text" id="q'+qu.id+'" placeholder="arabcha javobingizni yozing...">'
+      + (qu.note ? '<span class="hint">'+qu.note+'</span>' : '') + '</div>';
+  } else if(qu.type==='match'){
+    out += '<div class="matchgrid">';
+    qu.left.forEach(function(item){
+      var num = item[0], text = item[1];
+      out += '<div class="matchitem"><span class="lbl">'+num+'. '+text+'</span><select id="q'+qu.id+'_'+num+'"><option value="">— tanlang —</option>';
+      qu.right.forEach(function(r){ out += '<option value="'+r[0]+'">'+r[0]+') '+r[1]+'</option>'; });
+      out += '</select></div>';
+    });
+    out += '</div>';
+  }
+  out += '</div>';
+  return out;
+}
+
+function isAnswered(qu){
+  if(qu.type==='mcq' || qu.type==='tf'){
+    return !!document.querySelector('input[name="q'+qu.id+'"]:checked');
+  } else if(qu.type==='fill'){
+    var el = document.getElementById('q'+qu.id);
+    return el && el.value.trim().length>0;
+  } else if(qu.type==='match'){
+    return qu.left.every(function(item){
+      var sel = document.getElementById('q'+qu.id+'_'+item[0]);
+      return sel && sel.value !== '';
+    });
+  }
+  return false;
+}
+
+function updateProgress(){
+  var answered = ALLQ.filter(isAnswered).length;
+  var t1 = document.getElementById('progressText');
+  var t2 = document.getElementById('progressMini');
+  if(t1) t1.textContent = answered + ' / 150 savolga javob berilgan';
+  if(t2) t2.textContent = answered + ' / 150';
+}
+
+/* ============ GRADING ============ */
+function gradeQuestion(qu){
+  if(qu.type==='mcq'){
+    var picked = document.querySelector('input[name="q'+qu.id+'"]:checked');
+    var val = picked ? picked.value : null;
+    var accepted = Array.isArray(qu.correct) ? qu.correct : [qu.correct];
+    return {ok: val!==null && accepted.indexOf(val)>-1, given: val, correctText: accepted.join(' yoki ')};
+  }
+  if(qu.type==='tf'){
+    var picked = document.querySelector('input[name="q'+qu.id+'"]:checked');
+    var val = picked ? picked.value : null;
+    var ok = val!==null && (val==='true')===qu.correct;
+    return {ok: ok, given: val, correctText: qu.correct ? 'To\'g\'ri' : 'Noto\'g\'ri'};
+  }
+  if(qu.type==='fill'){
+    var el = document.getElementById('q'+qu.id);
+    var val = el ? el.value.trim() : '';
+    var norm = nAr(val);
+    var ok = qu.answers.some(function(a){ return nAr(a)===norm; }) && val.length>0;
+    return {ok: ok, given: val, correctText: qu.answers[qu.answers.length-1]};
+  }
+  if(qu.type==='match'){
+    var allOk = true, given=[];
+    qu.left.forEach(function(item){
+      var sel = document.getElementById('q'+qu.id+'_'+item[0]);
+      var v = sel ? sel.value : '';
+      given.push(item[0]+'-'+(v||'?'));
+      if(v !== qu.map[item[0]]) allOk = false;
+    });
+    var correctPairs = qu.left.map(function(item){ return item[0]+'→'+qu.map[item[0]]; }).join(', ');
+    return {ok: allOk, given: given.join(', '), correctText: correctPairs};
+  }
+}
+
+function buildResultHtml(data){
+  var overtimeHtml = data.overtimeSec>0
+    ? '<div class="overtime-flag">⚠️ Belgilangan 90 daqiqadan <b>'+fmtTime(data.overtimeSec).replace('+','')+'</b> ko\'p vaqt sarflandi (jami sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+')</div>'
+    : '<div class="ontime-flag">✅ Belgilangan 90 daqiqa ichida yakunlandi (sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+')</div>';
+  var breakdown = Object.keys(SEC_TITLES).map(function(s){
+    return '<div><b>'+data.bySec[s].ok+' / '+data.bySec[s].total+'</b>'+SEC_TITLES[s].label+') '+SEC_TITLES[s].title+'</div>';
+  }).join('');
+  return '<div class="resultbox">'+
+    '<div class="score">'+data.score+' / '+data.total+'</div>'+
+    '<div class="pct">'+data.pct+'% — '+data.grade+'</div>'+
+    overtimeHtml+
+    '<div class="breakdown">'+breakdown+'</div>'+
+    '<div class="toolbar">'+
+      '<button type="button" onclick="window.scrollTo({top:0,behavior:\'smooth\'})">Yuqoriga qaytish</button>'+
+      '<button type="button" onclick="window.print()">Chop etish / PDF saqlash</button>'+
+      '<button type="button" id="copyResultBtn">Natijani nusxalash</button>'+
+    '</div>'+
+    '</div>';
+}
+
+function attachCopyHandler(data){
+  var btn = document.getElementById('copyResultBtn');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    var lines = [];
+    if(data.name) lines.push('O\'quvchi: '+data.name);
+    lines.push('Natija: '+data.score+' / '+data.total+' ('+data.pct+'%)');
+    lines.push('Sarflangan vaqt: '+fmtTime(data.elapsedSec).replace('+','')+(data.overtimeSec>0?(' (belgilangan 90 daqiqadan '+fmtTime(data.overtimeSec).replace('+','')+' ortiq)'):' (vaqt ichida)'));
+    lines.push(Object.keys(SEC_TITLES).map(function(s){return SEC_TITLES[s].label+':'+data.bySec[s].ok+'/'+data.bySec[s].total;}).join('  '));
+    var txt = lines.join('\n');
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).catch(function(){});
+    }
+    btn.textContent = 'Nusxalandi ✓';
+    setTimeout(function(){ btn.textContent = 'Natijani nusxalash'; }, 1600);
+  });
+}
+
+function renderLockedScreen(data){
+  var wrap = document.getElementById('mainWrap');
+  var sb = document.getElementById('stickyBar');
+  if(sb) sb.style.display = 'none';
+  wrap.innerHTML =
+    '<div class="lockedwrap">' +
+      '<div class="lockicon">🔒</div>' +
+      '<h2 class="lockedTitle">Bu imtihon allaqachon topshirilgan</h2>' +
+      '<p class="lockedSub">' + (data.name?('O\'quvchi: <b>'+escapeHtml(data.name)+'</b><br>'):'') + 'Topshirilgan vaqt: ' + new Date(data.ts).toLocaleString('uz-UZ') + '</p>' +
+      buildResultHtml(data) +
+      '<p class="lockNote">Ushbu test faqat bir marta yechiladi va natija qayta yozilmaydi (bu — javoblarni bilib olib qayta urinishning oldini olish uchun). Agar bu xato deb hisoblasangiz, o\'qituvchingizga murojaat qiling.</p>' +
+    '</div>';
+  attachCopyHandler(data);
+}
+
+function lockFormAfterSubmit(){
+  document.querySelectorAll('#examForm input, #examForm select').forEach(function(el){ el.disabled = true; });
+  var sbtn = document.getElementById('submitBtn');
+  if(sbtn){ sbtn.disabled = true; sbtn.textContent = 'Natija saqlandi ✓'; }
+  if(timerInterval){ clearInterval(timerInterval); timerInterval = null; }
+}
+
+function handleSubmit(){
+  var results = ALLQ.map(function(qu){
+    var r = gradeQuestion(qu);
+    r.qu = qu;
+    return r;
+  });
+  var totalScore = results.filter(function(r){return r.ok;}).length;
+  var bySec = {};
+  Object.keys(SEC_POINTS).forEach(function(s){ bySec[s] = {ok:0, total:SEC_POINTS[s]}; });
+  results.forEach(function(r){ if(r.ok) bySec[r.qu.sec].ok++; });
+
+  results.forEach(function(r){
+    var card = document.getElementById('qcard'+r.qu.id);
+    card.classList.remove('correct','wrong');
+    card.classList.add(r.ok ? 'correct' : 'wrong');
+    var oldTag = card.querySelector('.marktag'); if(oldTag) oldTag.remove();
+    var oldCA = card.querySelector('.correctanswer'); if(oldCA) oldCA.remove();
+    var tag = document.createElement('span');
+    tag.className = 'marktag ' + (r.ok?'ok':'bad');
+    tag.textContent = r.ok ? '✓ To\'g\'ri' : '✗ Xato';
+    card.querySelector('.qtext').prepend(tag);
+    if(!r.ok){
+      var ca = document.createElement('div');
+      ca.className = 'correctanswer';
+      ca.textContent = 'To\'g\'ri javob: ' + r.correctText;
+      card.appendChild(ca);
+    }
+  });
+
+  var pct = Math.round((totalScore/150)*1000)/10;
+  var grade = pct>=90?'A\'lo':pct>=75?'Yaxshi':pct>=60?'Qoniqarli':'Qayta tayyorlanish kerak';
+  var elapsedSec = getElapsedSec();
+  var overtimeSec = elapsedSec>DURATION_SEC ? elapsedSec-DURATION_SEC : 0;
+  var nameEl = document.getElementById('stuName');
+
+  var resultData = {
+    score: totalScore, total: 150, pct: pct, grade: grade, bySec: bySec,
+    elapsedSec: elapsedSec, overtimeSec: overtimeSec, ts: Date.now(),
+    name: nameEl ? nameEl.value : ''
+  };
+  localStorage.setItem(LS_DONE, JSON.stringify(resultData));
+
+  var html = buildResultHtml(resultData);
+  document.getElementById('resultArea').innerHTML = html;
+  attachCopyHandler(resultData);
+  document.getElementById('resultArea').scrollIntoView({behavior:'smooth'});
+
+  lockFormAfterSubmit();
+}
+
+/* ============ BOOT ============ */
+function renderExam(){
+  Object.keys(SEC_TITLES).forEach(function(sk){
+    renderSection(sk, ALLQ.filter(function(qq){ return qq.sec===sk; }));
+  });
+
+  document.getElementById('examForm').addEventListener('change', function(e){
+    if(e.target.type==='radio'){
+      var name = e.target.name;
+      document.querySelectorAll('label[data-qid="'+name.replace('q','')+'"]').forEach(function(l){ l.classList.remove('picked'); });
+      e.target.closest('label').classList.add('picked');
+    }
+    updateProgress();
+  });
+  document.getElementById('examForm').addEventListener('input', updateProgress);
+  updateProgress();
+
+  document.getElementById('submitBtn').addEventListener('click', handleSubmit);
+
+  startTimer();
+}
+
+function boot(){
+  var params = new URLSearchParams(location.search);
+  if(params.get('ustoz_reset')==='1'){
+    localStorage.removeItem(LS_START);
+    localStorage.removeItem(LS_DONE);
+  }
+  var doneRaw = localStorage.getItem(LS_DONE);
+  if(doneRaw){
+    try{
+      var data = JSON.parse(doneRaw);
+      renderLockedScreen(data);
+      return;
+    }catch(e){ /* corrupt data, fall through to fresh exam */ }
+  }
+  renderExam();
+}
+
+window.boot = boot;
+boot();
+</script>
+</body>
+</html>
