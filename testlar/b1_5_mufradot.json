@@ -1,7 +1,7 @@
 {
   "title": "Mufradot — B1 5-dars",
   "otish": 80,
-  "vaqt": 10,
+  "vaqt": 40,
   "questions": [
     {
       "q": "«تَلَقَّى» — to'g'ri tarjimasi?",
@@ -277,6 +277,831 @@
       ],
       "correct": 1,
       "izoh": "...gacha qoldi = بَقِيَ فِي ... حَتَّى"
+    },
+    {
+      "q": "«Qochmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عَلَاقَاتٌ شَخْصِيَّةٌ",
+        "نَاضِجٌ",
+        "هَرَبَ",
+        "يَظُنُّونَ أَنَّ ... وَهَذَا غَيْرُ صَحِيحٍ"
+      ],
+      "correct": 2,
+      "izoh": "Qochmoq = هَرَبَ"
+    },
+    {
+      "q": "«اِسْتَشَارَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Maslahatlashmoq",
+        "... bilan mashhur bo'ldi",
+        "Buning evaziga",
+        "Chetlanmoq, saqlanmoq"
+      ],
+      "correct": 0,
+      "izoh": "Maslahatlashmoq = اِسْتَشَارَ"
+    },
+    {
+      "q": "«Chetlanmoq, saqlanmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَعْلَنَ",
+        "لَنَا أَنْ نَتَسَاءَلَ!",
+        "تَجَنَّبَ",
+        "تَسَامَرَ"
+      ],
+      "correct": 2,
+      "izoh": "Chetlanmoq, saqlanmoq = تَجَنَّبَ"
+    },
+    {
+      "q": "«اَلطَّاقَةُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Jazolamoq",
+        "G'am, qayg'u",
+        "Chekuvchi",
+        "Quvvat, energiya"
+      ],
+      "correct": 3,
+      "izoh": "Quvvat, energiya = اَلطَّاقَةُ"
+    },
+    {
+      "q": "«Yoritish, yorug'lik» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلْإِضَاءَةُ",
+        "حَالَةٌ نَفْسِيَّةٌ",
+        "اَلطَّاقَةُ",
+        "حَجَّ"
+      ],
+      "correct": 0,
+      "izoh": "Yoritish, yorug'lik = اَلْإِضَاءَةُ"
+    },
+    {
+      "q": "«اَلْكَسَلُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Dangasalik, hurunlik",
+        "Hikoya qilmoq, naql qilmoq",
+        "Quvvatlantiruvchi ichimliklar (choy, qahva)",
+        "...deb o'ylashadi, bu esa noto'g'ri"
+      ],
+      "correct": 0,
+      "izoh": "Dangasalik, hurunlik = اَلْكَسَلُ"
+    },
+    {
+      "q": "«O'rtacha ko'rsatkich, me'yor» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَعَلَّقَ",
+        "مَقُولَةٌ",
+        "اَلْمُعَدَّلُ",
+        "مُمَيَّزٌ"
+      ],
+      "correct": 2,
+      "izoh": "O'rtacha ko'rsatkich, me'yor = اَلْمُعَدَّلُ"
+    },
+    {
+      "q": "«اَلتَّدْخِينُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Chekish",
+        "Sayr, sayil",
+        "Qochmoq",
+        "Kechqurun suhbatlashmoq"
+      ],
+      "correct": 0,
+      "izoh": "Chekish = اَلتَّدْخِينُ"
+    },
+    {
+      "q": "«Chekuvchi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "Tanlov, ixtiyor",
+        "بَلَغَ مُرَادَهُ",
+        "اَلرِّيفُ",
+        "مُدَخِّنٌ"
+      ],
+      "correct": 3,
+      "izoh": "Chekuvchi = مُدَخِّنٌ"
+    },
+    {
+      "q": "«سِيجَارَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Sigaret",
+        "Xalq",
+        "Yoritish, yorug'lik",
+        "Masalan"
+      ],
+      "correct": 0,
+      "izoh": "Sigaret = سِيجَارَةٌ"
+    },
+    {
+      "q": "«O'lim, vafot» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَفَاةٌ",
+        "هَرَبَ",
+        "أَقَامَ",
+        "بَعْدَ أَنْ أَمْضَى"
+      ],
+      "correct": 0,
+      "izoh": "O'lim, vafot = وَفَاةٌ"
+    },
+    {
+      "q": "«عِلْكَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'lim, vafot",
+        "O'rtacha ko'rsatkich, me'yor",
+        "Saqich",
+        "Masalan"
+      ],
+      "correct": 2,
+      "izoh": "Saqich = عِلْكَةٌ"
+    },
+    {
+      "q": "«Yalpiz» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عَبَاءَةٌ",
+        "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ",
+        "تَكَلَّفَ",
+        "نَعْنَاعٌ"
+      ],
+      "correct": 3,
+      "izoh": "Yalpiz = نَعْنَاعٌ"
+    },
+    {
+      "q": "«تَعَلَّقَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Bog'liq/taalluqli bo'lmoq",
+        "Yalpiz",
+        "Quvvat, energiya",
+        "Ehtimol, shoyad"
+      ],
+      "correct": 0,
+      "izoh": "Bog'liq/taalluqli bo'lmoq = تَعَلَّقَ"
+    },
+    {
+      "q": "«Kerakdan ortiq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَقَامَ",
+        "تَلَقَّى",
+        "أَكْثَرُ مِنَ اللَّازِمِ",
+        "رَحَلَ"
+      ],
+      "correct": 2,
+      "izoh": "Kerakdan ortiq = أَكْثَرُ مِنَ اللَّازِمِ"
+    },
+    {
+      "q": "«حَالَةٌ نَفْسِيَّةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Madaniyat",
+        "Pishgan, yetuk",
+        "Ruhiy holat",
+        "Do'stlik"
+      ],
+      "correct": 2,
+      "izoh": "Ruhiy holat = حَالَةٌ نَفْسِيَّةٌ"
+    },
+    {
+      "q": "«Quvvatlantiruvchi ichimliklar (choy, qahva)» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "حُزْنٌ",
+        "اَلْمَشْرُوبَاتُ الْمُنَبِّهَةُ",
+        "لَيْتَ",
+        "اِحْتِرَامٌ"
+      ],
+      "correct": 1,
+      "izoh": "Quvvatlantiruvchi ichimliklar (choy, qahva) = اَلْمَشْرُوبَاتُ الْمُنَبِّهَةُ"
+    },
+    {
+      "q": "«اَلْمُعَدَّلُ الطَّبِيعِيُّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "...ga tayanadi, bog'liq bo'ladi",
+        "Quvvat, energiya",
+        "Qishloq joy, qishloq hududi",
+        "Tabiiy me'yor"
+      ],
+      "correct": 3,
+      "izoh": "Tabiiy me'yor = اَلْمُعَدَّلُ الطَّبِيعِيُّ"
+    },
+    {
+      "q": "«Bizga ... zarur emas» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلثَّرْوَةُ السَّمَكِيَّةُ",
+        "لَسْنَا بِحَاجَةٍ ضَرُورِيَّةٍ لِـ",
+        "اَلْإِضَاءَةُ",
+        "مُدَخِّنٌ"
+      ],
+      "correct": 1,
+      "izoh": "Bizga ... zarur emas = لَسْنَا بِحَاجَةٍ ضَرُورِيَّةٍ لِـ"
+    },
+    {
+      "q": "«يُؤَدِّي إِلَى» — to'g'ri tarjimasi?",
+      "opts": [
+        "G'am, qayg'u",
+        "...ga qodir emas edi",
+        "O'lim, vafot",
+        "...ga olib keladi"
+      ],
+      "correct": 3,
+      "izoh": "...ga olib keladi = يُؤَدِّي إِلَى"
+    },
+    {
+      "q": "«...ga qaramay» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عَلَى الرَّغْمِ مِنْ",
+        "تَكَالِيفُ",
+        "اَلرَّفَاهِيَةُ",
+        "اَلرَّحَّالَةُ"
+      ],
+      "correct": 0,
+      "izoh": "...ga qaramay = عَلَى الرَّغْمِ مِنْ"
+    },
+    {
+      "q": "«لَيْسَ أَمْرًا صَعْبًا» — to'g'ri tarjimasi?",
+      "opts": [
+        "Adabiy (fasih) arab tili",
+        "Qiyin ish emas",
+        "Maslahatlashmoq",
+        "Chetlanmoq, saqlanmoq"
+      ],
+      "correct": 1,
+      "izoh": "Qiyin ish emas = لَيْسَ أَمْرًا صَعْبًا"
+    },
+    {
+      "q": "«O'zimizga savol beraylik!» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَنَا أَنْ نَتَسَاءَلَ!",
+        "يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ",
+        "اَلْكَسَلُ",
+        "مَشَاعِرُ"
+      ],
+      "correct": 0,
+      "izoh": "O'zimizga savol beraylik! = لَنَا أَنْ نَتَسَاءَلَ!"
+    },
+    {
+      "q": "«يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Yalpiz",
+        "...dan oshmasligi/kam bo'lmasligi kerak",
+        "Sayr, sayil",
+        "عِلْكَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "...dan oshmasligi/kam bo'lmasligi kerak = يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ"
+    },
+    {
+      "q": "«Ehtimol, shoyad» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عَلَى سَبِيلِ الْمِثَالِ",
+        "لَيْتَ",
+        "اَلرِّيفُ",
+        "لَعَلَّ"
+      ],
+      "correct": 3,
+      "izoh": "Ehtimol, shoyad = لَعَلَّ"
+    },
+    {
+      "q": "«لَيْتَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Qabul qilmoq, ta'lim olmoq",
+        "عِلْكَةٌ",
+        "Shaxsiy munosabatlar",
+        "Koshki edi"
+      ],
+      "correct": 3,
+      "izoh": "Koshki edi = لَيْتَ"
+    },
+    {
+      "q": "«Ishlab chiqarmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَنْتَجَ",
+        "اَلْفَحْمُ",
+        "Saqich",
+        "تَكَالِيفُ"
+      ],
+      "correct": 0,
+      "izoh": "Ishlab chiqarmoq = أَنْتَجَ"
+    },
+    {
+      "q": "«حَجَّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Haj qilmoq",
+        "G'am, qayg'u",
+        "Farovonlik, qulaylik",
+        "Oddiy, sodda"
+      ],
+      "correct": 0,
+      "izoh": "Haj qilmoq = حَجَّ"
+    },
+    {
+      "q": "«Jazolamoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَكَالِيفُ",
+        "Tanlov, ixtiyor",
+        "صَدَاقَةٌ",
+        "عَاقَبَ"
+      ],
+      "correct": 3,
+      "izoh": "Jazolamoq = عَاقَبَ"
+    },
+    {
+      "q": "«طُمَأْنِينَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Chekuvchi",
+        "Umuman",
+        "Muhayyo bo'lmoq, mavjud bo'lmoq",
+        "Xotirjamlik, ko'ngil tinchligi"
+      ],
+      "correct": 3,
+      "izoh": "Xotirjamlik, ko'ngil tinchligi = طُمَأْنِينَةٌ"
+    },
+    {
+      "q": "«O'rinbosar, deputat» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "نَائِبٌ",
+        "عُمُومًا",
+        "تَكَلَّفَ",
+        "مَشَاعِرُ"
+      ],
+      "correct": 0,
+      "izoh": "O'rinbosar, deputat = نَائِبٌ"
+    },
+    {
+      "q": "«مُنْتِجَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Xalq",
+        "... mamlakatdan mamlakatga farq qiladi",
+        "O'ziga xos, ajralib turuvchi",
+        "Ishlab chiqaruvchi"
+      ],
+      "correct": 3,
+      "izoh": "Ishlab chiqaruvchi = مُنْتِجَةٌ"
+    },
+    {
+      "q": "«Adabiy (fasih) arab tili» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ",
+        "أَكْثَرُ انْتِشَارًا",
+        "اَلْفُصْحَى",
+        "اِتَّجَهَ إِلَى"
+      ],
+      "correct": 2,
+      "izoh": "Adabiy (fasih) arab tili = اَلْفُصْحَى"
+    },
+    {
+      "q": "«ثَقَافَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Farovonlik, qulaylik",
+        "Yo'l ko'rsatmoq, hidoyat qilmoq",
+        "To'y, nikoh to'yi",
+        "Madaniyat"
+      ],
+      "correct": 3,
+      "izoh": "Madaniyat = ثَقَافَةٌ"
+    },
+    {
+      "q": "«Hazil, askiya» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مَشَاعِرُ",
+        "اَلرَّفَاهِيَةُ",
+        "اَلْفُكَاهَةُ",
+        "هُنَاكَ إِقْبَالٌ كَبِيرٌ عَلَى"
+      ],
+      "correct": 2,
+      "izoh": "Hazil, askiya = اَلْفُكَاهَةُ"
+    },
+    {
+      "q": "«عَبَاءَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Kerakdan ortiq",
+        "Tabiiy me'yor",
+        "... bilan mashhur bo'ldi",
+        "Abo (uzun ustki kiyim)"
+      ],
+      "correct": 3,
+      "izoh": "Abo (uzun ustki kiyim) = عَبَاءَةٌ"
+    },
+    {
+      "q": "«Boylik, sarvat» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "ثَرْوَةٌ",
+        "اَلرَّحَّالَةُ",
+        "عَلَى الرَّغْمِ مِنْ",
+        "لُقِّبَ بِـ"
+      ],
+      "correct": 0,
+      "izoh": "Boylik, sarvat = ثَرْوَةٌ"
+    },
+    {
+      "q": "«بِتْرُولٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Dangasalik, hurunlik",
+        "Neft (petrol)",
+        "Sayr, sayil",
+        "Abo (uzun ustki kiyim)"
+      ],
+      "correct": 1,
+      "izoh": "Neft (petrol) = بِتْرُولٌ"
+    },
+    {
+      "q": "«Do'stlik» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلتَّعَرُّفُ عَلَى",
+        "صَدَاقَةٌ",
+        "حَالَةٌ نَفْسِيَّةٌ",
+        "أَرْشَدَ"
+      ],
+      "correct": 1,
+      "izoh": "Do'stlik = صَدَاقَةٌ"
+    },
+    {
+      "q": "«اَلثَّرْوَةُ السَّمَكِيَّةُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'ziga xos, ajralib turuvchi",
+        "Baliq boyligi",
+        "G'am, qayg'u",
+        "Qiyin ish emas"
+      ],
+      "correct": 1,
+      "izoh": "Baliq boyligi = اَلثَّرْوَةُ السَّمَكِيَّةُ"
+    },
+    {
+      "q": "«Eng keng tarqalgan» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بِتْرُولٌ",
+        "حُزْنٌ",
+        "أَكْثَرُ انْتِشَارًا",
+        "تَقْلِيدٌ"
+      ],
+      "correct": 2,
+      "izoh": "Eng keng tarqalgan = أَكْثَرُ انْتِشَارًا"
+    },
+    {
+      "q": "«عَلَاقَاتٌ شَخْصِيَّةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Shaxsiy munosabatlar",
+        "Saqich",
+        "Yoritish, yorug'lik",
+        "...gacha qoldi"
+      ],
+      "correct": 0,
+      "izoh": "Shaxsiy munosabatlar = عَلَاقَاتٌ شَخْصِيَّةٌ"
+    },
+    {
+      "q": "«Umuman» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عُمُومًا",
+        "عَلَاقَاتٌ شَخْصِيَّةٌ",
+        "تَعَلَّقَ",
+        "اَلرَّحَّالَةُ"
+      ],
+      "correct": 0,
+      "izoh": "Umuman = عُمُومًا"
+    },
+    {
+      "q": "«تَعْتَمِدُ عَلَى» — to'g'ri tarjimasi?",
+      "opts": [
+        "Hazil, askiya",
+        "...ga tayanadi, bog'liq bo'ladi",
+        "...ga qodir emas edi",
+        "Quvvat, energiya"
+      ],
+      "correct": 1,
+      "izoh": "...ga tayanadi, bog'liq bo'ladi = تَعْتَمِدُ عَلَى"
+    },
+    {
+      "q": "«... bilan tanishish» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تُعَدُّ ... ذَاتَ أَهَمِّيَّةٍ",
+        "اِسْتَشَارَ",
+        "اِخْتَلَفَ",
+        "اَلتَّعَرُّفُ عَلَى"
+      ],
+      "correct": 3,
+      "izoh": "... bilan tanishish = اَلتَّعَرُّفُ عَلَى"
+    },
+    {
+      "q": "«لَا يَسْتَطِيعُ أَحَدٌ أَنْ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Baliq boyligi",
+        "Yoritish, yorug'lik",
+        "Bizga ... zarur emas",
+        "Hech kim ...ololmaydi"
+      ],
+      "correct": 3,
+      "izoh": "Hech kim ...ololmaydi = لَا يَسْتَطِيعُ أَحَدٌ أَنْ"
+    },
+    {
+      "q": "«... mamlakatdan mamlakatga farq qiladi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "طُمَأْنِينَةٌ",
+        "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ",
+        "بَقِيَ فِي ... حَتَّى",
+        "حُزْنٌ"
+      ],
+      "correct": 1,
+      "izoh": "... mamlakatdan mamlakatga farq qiladi = تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ"
+    },
+    {
+      "q": "«تُعَدُّ ... ذَاتَ أَهَمِّيَّةٍ» — to'g'ri tarjimasi?",
+      "opts": [
+        "... muhim hisoblanadi",
+        "...ga olib keladi",
+        "Boylik, sarvat",
+        "Maslahatlashmoq"
+      ],
+      "correct": 0,
+      "izoh": "... muhim hisoblanadi = تُعَدُّ ... ذَاتَ أَهَمِّيَّةٍ"
+    },
+    {
+      "q": "«...ga katta qiziqish bor» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "غَزَارَةُ الْعِلْمِ",
+        "هُنَاكَ إِقْبَالٌ كَبِيرٌ عَلَى",
+        "تَلَقَّى",
+        "طُمَأْنِينَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "...ga katta qiziqish bor = هُنَاكَ إِقْبَالٌ كَبِيرٌ عَلَى"
+    },
+    {
+      "q": "«عَلَى سَبِيلِ الْمِثَالِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Madaniyat",
+        "O'lim, vafot",
+        "Masalan",
+        "اَلْمُعَدَّلُ"
+      ],
+      "correct": 2,
+      "izoh": "Masalan = عَلَى سَبِيلِ الْمِثَالِ"
+    },
+    {
+      "q": "«Balki, ehtimol» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مَشَاعِرُ",
+        "بِتْرُولٌ",
+        "رُبَّمَا",
+        "نَاضِجٌ"
+      ],
+      "correct": 2,
+      "izoh": "Balki, ehtimol = رُبَّمَا"
+    },
+    {
+      "q": "«يَظُنُّونَ أَنَّ ... وَهَذَا غَيْرُ صَحِيحٍ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'rtacha ko'rsatkich, me'yor",
+        "...deb o'ylashadi, bu esa noto'g'ri",
+        "...o'tkazgandan keyin",
+        "Ehtimol, shoyad"
+      ],
+      "correct": 1,
+      "izoh": "...deb o'ylashadi, bu esa noto'g'ri = يَظُنُّونَ أَنَّ ... وَهَذَا غَيْرُ صَحِيحٍ"
+    },
+    {
+      "q": "«Yashamoq, istiqomat qilmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بَلَغَ مُرَادَهُ",
+        "أَكْثَرُ انْتِشَارًا",
+        "أَقَامَ",
+        "عِلْكَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Yashamoq, istiqomat qilmoq = أَقَامَ"
+    },
+    {
+      "q": "«أَجَّلَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Kechiktirmoq, keyinga surmoq",
+        "...dan foydalandi",
+        "Xurmo",
+        "اَلْمُعَدَّلُ"
+      ],
+      "correct": 0,
+      "izoh": "Kechiktirmoq, keyinga surmoq = أَجَّلَ"
+    },
+    {
+      "q": "«Kechqurun suhbatlashmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "Tanlov, ixtiyor",
+        "تَسَامَرَ",
+        "بَعْدَ أَنْ أَمْضَى",
+        "حَكَى"
+      ],
+      "correct": 1,
+      "izoh": "Kechqurun suhbatlashmoq = تَسَامَرَ"
+    },
+    {
+      "q": "«تَطَوَّرَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Jazolamoq",
+        "Rivojlanmoq, taraqqiy etmoq",
+        "Muhayyo bo'lmoq, mavjud bo'lmoq",
+        "Sayr, sayil"
+      ],
+      "correct": 1,
+      "izoh": "Rivojlanmoq, taraqqiy etmoq = تَطَوَّرَ"
+    },
+    {
+      "q": "«Ortiqcha mashaqqatga kirmoq, takalluf qilmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَنَا أَنْ نَتَسَاءَلَ!",
+        "تَكَلَّفَ",
+        "اَلْمُعَدَّلُ الطَّبِيعِيُّ",
+        "أَكْثَرُ مِنَ اللَّازِمِ"
+      ],
+      "correct": 1,
+      "izoh": "Ortiqcha mashaqqatga kirmoq, takalluf qilmoq = تَكَلَّفَ"
+    },
+    {
+      "q": "«اِخْتَلَفَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "...dan oshmasligi/kam bo'lmasligi kerak",
+        "Farq qilmoq, o'xshamaslik",
+        "Baliq boyligi",
+        "Sigaret"
+      ],
+      "correct": 1,
+      "izoh": "Farq qilmoq, o'xshamaslik = اِخْتَلَفَ"
+    },
+    {
+      "q": "«Muhayyo bo'lmoq, mavjud bo'lmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "نَاضِجٌ",
+        "أَقَامَ",
+        "اَلطَّاقَةُ",
+        "تَوَفَّرَ"
+      ],
+      "correct": 3,
+      "izoh": "Muhayyo bo'lmoq, mavjud bo'lmoq = تَوَفَّرَ"
+    },
+    {
+      "q": "«أَعْلَنَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Masalan",
+        "E'lon qilmoq",
+        "Sayyoh, sayohatchi",
+        "Kechqurun suhbatlashmoq"
+      ],
+      "correct": 1,
+      "izoh": "E'lon qilmoq = أَعْلَنَ"
+    },
+    {
+      "q": "«Ko'mir» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلْفَحْمُ",
+        "تُعَدُّ ... ذَاتَ أَهَمِّيَّةٍ",
+        "أَكْثَرُ انْتِشَارًا",
+        "اَلْمَشْرُوبَاتُ الْمُنَبِّهَةُ"
+      ],
+      "correct": 0,
+      "izoh": "Ko'mir = اَلْفَحْمُ"
+    },
+    {
+      "q": "«اَلرَّفَاهِيَةُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Madaniyat",
+        "...ga yo'l oldi",
+        "Chekish",
+        "Farovonlik, qulaylik"
+      ],
+      "correct": 3,
+      "izoh": "Farovonlik, qulaylik = اَلرَّفَاهِيَةُ"
+    },
+    {
+      "q": "«Qishloq joy, qishloq hududi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلرِّيفُ",
+        "أَرْشَدَ",
+        "اَلطَّاقَةُ",
+        "اَلتَّعَرُّفُ عَلَى"
+      ],
+      "correct": 0,
+      "izoh": "Qishloq joy, qishloq hududi = اَلرِّيفُ"
+    },
+    {
+      "q": "«تَقْلِيدٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Umuman",
+        "An'ana, urf-odat",
+        "Hikoya qilmoq, naql qilmoq",
+        "Xalq"
+      ],
+      "correct": 1,
+      "izoh": "An'ana, urf-odat = تَقْلِيدٌ"
+    },
+    {
+      "q": "«G'am, qayg'u» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اِحْتِرَامٌ",
+        "يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ",
+        "وَفَاةٌ",
+        "حُزْنٌ"
+      ],
+      "correct": 3,
+      "izoh": "G'am, qayg'u = حُزْنٌ"
+    },
+    {
+      "q": "«عُرْسٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "To'y, nikoh to'yi",
+        "Sigaret",
+        "Haj qilmoq",
+        "Balki, ehtimol"
+      ],
+      "correct": 0,
+      "izoh": "To'y, nikoh to'yi = عُرْسٌ"
+    },
+    {
+      "q": "«اَلْمُعَدَّلُ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تُعَدُّ ... ذَاتَ أَهَمِّيَّةٍ",
+        "O'rtacha ko'rsatkich, me'yor",
+        "حَالَةٌ نَفْسِيَّةٌ",
+        "اَلرَّفَاهِيَةُ"
+      ],
+      "correct": 1,
+      "izoh": "اَلْمُعَدَّلُ = O'rtacha ko'rsatkich, me'yor"
+    },
+    {
+      "q": "«نُزْهَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "... mamlakatdan mamlakatga farq qiladi",
+        "Chekish",
+        "Sayr, sayil",
+        "O'zimizga savol beraylik!"
+      ],
+      "correct": 2,
+      "izoh": "Sayr, sayil = نُزْهَةٌ"
+    },
+    {
+      "q": "«Hurmat, ehtirom» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ",
+        "تَكَلَّفَ",
+        "اِحْتِرَامٌ",
+        "نُزْهَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Hurmat, ehtirom = اِحْتِرَامٌ"
+    },
+    {
+      "q": "«مَشَاعِرُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Sayr, sayil",
+        "Quvvatlantiruvchi ichimliklar (choy, qahva)",
+        "Yashamoq, istiqomat qilmoq",
+        "His-tuyg'ular"
+      ],
+      "correct": 3,
+      "izoh": "His-tuyg'ular = مَشَاعِرُ"
+    },
+    {
+      "q": "«Duradgor» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "نَجَّارٌ",
+        "عُمُومًا",
+        "تَكَالِيفُ",
+        "اَلرَّفَاهِيَةُ"
+      ],
+      "correct": 0,
+      "izoh": "Duradgor = نَجَّارٌ"
+    },
+    {
+      "q": "«Saqich» — to'g'ri tarjimasi?",
+      "opts": [
+        "... bilan mashhur bo'ldi",
+        "عِلْكَةٌ",
+        "Hazil, askiya",
+        "O'rinbosar, deputat"
+      ],
+      "correct": 1,
+      "izoh": "عِلْكَةٌ = Saqich"
+    },
+    {
+      "q": "«Xalq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلشَّعْبُ",
+        "اَلْمُعَدَّلُ الطَّبِيعِيُّ",
+        "نَجَّارٌ",
+        "يَجِبُ أَلَّا تَزِيدَ/تَقِلَّ عَنْ"
+      ],
+      "correct": 0,
+      "izoh": "Xalq = اَلشَّعْبُ"
+    },
+    {
+      "q": "«اَلتَّمْرُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Farovonlik, qulaylik",
+        "بِلُطْفٍ",
+        "Hurmat, ehtirom",
+        "Xurmo"
+      ],
+      "correct": 3,
+      "izoh": "Xurmo = اَلتَّمْرُ"
+    },
+    {
+      "q": "«Oddiy, sodda» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بَسِيطٌ",
+        "ثَرْوَةٌ",
+        "اِتَّجَهَ إِلَى",
+        "تَعَلَّقَ"
+      ],
+      "correct": 0,
+      "izoh": "Oddiy, sodda = بَسِيطٌ"
     }
   ]
 }
