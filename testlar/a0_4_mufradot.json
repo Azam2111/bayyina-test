@@ -6,365 +6,365 @@
     {
       "q": "«يَكْتُبُ» so'zining ma'nosi?",
       "opts": [
-        "Yozadi",
-        "Ular",
-        "Kiradi",
-        "Ichadi"
+        "Yozadi.",
+        "Kechqurun.",
+        "Tepasida",
+        "Ishlaydi."
       ],
       "correct": 0,
-      "izoh": "يَكْتُبُ = Yozadi."
+      "izoh": "Yozadi. = يَكْتُبُ"
     },
     {
       "q": "«يَدْرُسُ» so'zining ma'nosi?",
       "opts": [
-        "Dars qiladi",
-        "Sizlar",
-        "Ichadi",
-        "Ishlaydi"
+        "Kiradi.",
+        "Dars qiladi.",
+        "Ketadi.",
+        "Oldin."
       ],
-      "correct": 0,
-      "izoh": "يَدْرُسُ = Dars qiladi."
+      "correct": 1,
+      "izoh": "Dars qiladi. = يَدْرُسُ"
     },
     {
       "q": "«يَقْرَأُ» so'zining ma'nosi?",
       "opts": [
-        "O'qiydi",
-        "O'ynaydi",
-        "Ertalab",
-        "Eshitadi"
+        "O'ynaydi.",
+        "O'qiydi.",
+        "Sizlar.",
+        "Ertalab."
       ],
-      "correct": 0,
-      "izoh": "يَقْرَأُ = O'qiydi."
+      "correct": 1,
+      "izoh": "O'qiydi. = يَقْرَأُ"
     },
     {
       "q": "«يَذْهَبُ» so'zining ma'nosi?",
       "opts": [
-        "Ketadi",
-        "Sizlar",
-        "Pishiradi",
-        "Hozir"
+        "Oldin.",
+        "Kiradi.",
+        "Dars qiladi.",
+        "Ketadi."
       ],
-      "correct": 0,
-      "izoh": "يَذْهَبُ = Ketadi."
+      "correct": 3,
+      "izoh": "Ketadi. = يَذْهَبُ"
     },
     {
       "q": "«يَدْخُلُ» so'zining ma'nosi?",
       "opts": [
-        "Kiradi",
-        "O'ynaydi",
-        "Oladi",
-        "Qaytadi"
+        "Oldin.",
+        "Dars qiladi.",
+        "Kiradi.",
+        "Ketadi."
       ],
-      "correct": 0,
-      "izoh": "يَدْخُلُ = Kiradi."
+      "correct": 2,
+      "izoh": "Kiradi. = يَدْخُلُ"
     },
     {
       "q": "«يَخْرُجُ» so'zining ma'nosi?",
       "opts": [
-        "Chiqadi",
-        "Eshitadi",
-        "Hozir",
-        "So'ng"
+        "Ular.",
+        "O'tiradi.",
+        "Oladi.",
+        "Chiqadi."
       ],
-      "correct": 0,
-      "izoh": "يَخْرُجُ = Chiqadi."
+      "correct": 3,
+      "izoh": "Chiqadi. = يَخْرُجُ"
     },
     {
       "q": "«يَرْجِعُ» so'zining ma'nosi?",
       "opts": [
-        "Qaytadi",
-        "O'qiydi",
-        "Hozir",
-        "U ikkisi"
+        "Tepasida",
+        "Qaytadi.",
+        "Oladi.",
+        "Kechqurun."
       ],
-      "correct": 0,
-      "izoh": "يَرْجِعُ = Qaytadi."
+      "correct": 1,
+      "izoh": "Qaytadi. = يَرْجِعُ"
     },
     {
       "q": "«يَجْلِسُ» so'zining ma'nosi?",
       "opts": [
-        "O'tiradi",
-        "Chiqadi",
-        "Dars qiladi",
-        "Qaytadi"
+        "O'tiradi.",
+        "O'qiydi.",
+        "Choy.",
+        "Kechqurun."
       ],
       "correct": 0,
-      "izoh": "يَجْلِسُ = O'tiradi."
+      "izoh": "O'tiradi. = يَجْلِسُ"
     },
     {
       "q": "«يَسْمَعُ» so'zining ma'nosi?",
       "opts": [
-        "Eshitadi",
-        "O'qiydi",
-        "Ertalab",
-        "Ichadi"
+        "Qaytadi.",
+        "Hozir.",
+        "Eshitadi.",
+        "O'qiydi."
       ],
-      "correct": 0,
-      "izoh": "يَسْمَعُ = Eshitadi."
+      "correct": 2,
+      "izoh": "Eshitadi. = يَسْمَعُ"
     },
     {
       "q": "«يَشْرَبُ» so'zining ma'nosi?",
       "opts": [
-        "Ichadi",
-        "Ishlaydi",
-        "Qaytadi",
-        "O'tiradi"
+        "Eshitadi.",
+        "O'qiydi.",
+        "Ular.",
+        "Ichadi."
       ],
-      "correct": 0,
-      "izoh": "يَشْرَبُ = Ichadi."
+      "correct": 3,
+      "izoh": "Ichadi. = يَشْرَبُ"
     },
     {
       "q": "«يَلْعَبُ» so'zining ma'nosi?",
       "opts": [
-        "O'ynaydi",
-        "Dars qiladi",
-        "Pishiradi",
-        "Choy"
+        "O'ynaydi.",
+        "Chiqadi.",
+        "Kechqurun.",
+        "Sizlar."
       ],
       "correct": 0,
-      "izoh": "يَلْعَبُ = O'ynaydi."
+      "izoh": "O'ynaydi. = يَلْعَبُ"
     },
     {
       "q": "«يَطْبُخُ» so'zining ma'nosi?",
       "opts": [
-        "Pishiradi",
-        "U ikkisi",
-        "O'ynaydi",
-        "Choy"
+        "Choy.",
+        "O'qiydi.",
+        "Ishlaydi.",
+        "Pishiradi."
       ],
-      "correct": 0,
-      "izoh": "يَطْبُخُ = Pishiradi."
+      "correct": 3,
+      "izoh": "Pishiradi. = يَطْبُخُ"
     },
     {
       "q": "«يَأْخُذُ» so'zining ma'nosi?",
       "opts": [
-        "Oladi",
-        "Ketadi",
-        "Yozadi",
-        "Ular"
+        "Eshitadi.",
+        "Oladi.",
+        "Ichadi.",
+        "O'qiydi."
       ],
-      "correct": 0,
-      "izoh": "يَأْخُذُ = Oladi."
+      "correct": 1,
+      "izoh": "Oladi. = يَأْخُذُ"
     },
     {
       "q": "«يَعْمَلُ» so'zining ma'nosi?",
       "opts": [
-        "Ishlaydi",
-        "U ikkisi",
-        "Oldin",
-        "Choy"
+        "Ishlaydi.",
+        "O'qiydi.",
+        "Pishiradi.",
+        "Tepasida"
       ],
       "correct": 0,
-      "izoh": "يَعْمَلُ = Ishlaydi."
+      "izoh": "Ishlaydi. = يَعْمَلُ"
     },
     {
       "q": "«قَبْلَ» so'zining ma'nosi?",
       "opts": [
-        "Oldin",
-        "O'qiydi",
-        "Ichadi",
-        "Chiqadi"
+        "Ketadi.",
+        "Kiradi.",
+        "Oldin.",
+        "Dars qiladi."
       ],
-      "correct": 0,
-      "izoh": "قَبْلَ = Oldin."
+      "correct": 2,
+      "izoh": "Oldin. = قَبْلَ"
     },
     {
       "q": "«بَعْدَ» so'zining ma'nosi?",
       "opts": [
-        "Keyin",
-        "Ishlaydi",
-        "Kechqurun",
-        "Kiradi"
+        "Ismingiz nima?.",
+        "Ko'rishguncha.",
+        "Keyin.",
+        "So'ng."
       ],
-      "correct": 0,
-      "izoh": "بَعْدَ = Keyin."
+      "correct": 2,
+      "izoh": "Keyin. = بَعْدَ"
     },
     {
       "q": "«ثُمَّ» so'zining ma'nosi?",
       "opts": [
-        "So'ng",
-        "Choy",
-        "O'ynaydi",
-        "Qaytadi"
+        "Kim.",
+        "Keyin.",
+        "...mi? (savol yuklamasi).",
+        "So'ng."
       ],
-      "correct": 0,
-      "izoh": "ثُمَّ = So'ng."
+      "correct": 3,
+      "izoh": "So'ng. = ثُمَّ"
     },
     {
       "q": "«صَبَاحًا» so'zining ma'nosi?",
       "opts": [
-        "Ertalab",
-        "U ikkisi",
-        "Ishlaydi",
-        "O'qiydi"
+        "Ular.",
+        "Ishlaydi.",
+        "Kechqurun.",
+        "Ertalab."
       ],
-      "correct": 0,
-      "izoh": "صَبَاحًا = Ertalab."
+      "correct": 3,
+      "izoh": "Ertalab. = صَبَاحًا"
     },
     {
       "q": "«مَسَاءً» so'zining ma'nosi?",
       "opts": [
-        "Kechqurun",
-        "Ishlaydi",
-        "Hozir",
-        "Oldin"
+        "Kechqurun.",
+        "Chiqadi.",
+        "Choy.",
+        "Biz."
       ],
       "correct": 0,
-      "izoh": "مَسَاءً = Kechqurun."
+      "izoh": "Kechqurun. = مَسَاءً"
     },
     {
       "q": "«الآنَ» so'zining ma'nosi?",
       "opts": [
-        "Hozir",
-        "Yozadi",
-        "Keyin",
-        "Ular"
+        "Pishiradi.",
+        "Hozir.",
+        "Qaytadi.",
+        "Tepasida"
       ],
-      "correct": 0,
-      "izoh": "الآنَ = Hozir."
+      "correct": 1,
+      "izoh": "Hozir. = الآنَ"
     },
     {
       "q": "«شَايٌ» so'zining ma'nosi?",
       "opts": [
-        "Choy",
-        "Kechqurun",
-        "Biz",
-        "Ichadi"
+        "Choy.",
+        "Hozir.",
+        "Ular.",
+        "Oy"
       ],
       "correct": 0,
-      "izoh": "شَايٌ = Choy."
+      "izoh": "Choy. = شَايٌ"
     },
     {
       "q": "«نَحْنُ» so'zining ma'nosi?",
       "opts": [
-        "Biz",
-        "O'ynaydi",
-        "U ikkisi",
-        "Chiqadi"
+        "Tepasida",
+        "O'tiradi.",
+        "Ular.",
+        "Biz."
       ],
-      "correct": 0,
-      "izoh": "نَحْنُ = Biz."
+      "correct": 3,
+      "izoh": "Biz. = نَحْنُ"
     },
     {
       "q": "«هُمْ» so'zining ma'nosi?",
       "opts": [
-        "Ular",
-        "So'ng",
-        "Chiqadi",
-        "Ertalab"
+        "Eshitadi.",
+        "Pishiradi.",
+        "Ular.",
+        "O'ynaydi."
       ],
-      "correct": 0,
-      "izoh": "هُمْ = Ular."
+      "correct": 2,
+      "izoh": "Ular. = هُمْ"
     },
     {
       "q": "«أَنْتُمْ» so'zining ma'nosi?",
       "opts": [
-        "Sizlar",
-        "Oladi",
-        "Hozir",
-        "Ishlaydi"
+        "Sizlar.",
+        "U ikkisi.",
+        "Ichadi.",
+        "O'tiradi."
       ],
       "correct": 0,
-      "izoh": "أَنْتُمْ = Sizlar."
+      "izoh": "Sizlar. = أَنْتُمْ"
     },
     {
       "q": "«هُمَا» so'zining ma'nosi?",
       "opts": [
-        "U ikkisi",
-        "Ular",
-        "So'ng",
-        "Kiradi"
+        "Ular.",
+        "Yozadi.",
+        "Sizlar.",
+        "U ikkisi."
       ],
-      "correct": 0,
-      "izoh": "هُمَا = U ikkisi."
+      "correct": 3,
+      "izoh": "U ikkisi. = هُمَا"
     },
     {
       "q": "🔁 «جَدَّةٌ» so'zining ma'nosi?",
       "opts": [
-        "Buvi",
-        "So'ng",
-        "Oldin",
-        "Ishlaydi"
+        "Opa/singil.",
+        "Do'st.",
+        "Xona.",
+        "Buvi."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (3-dars): جَدَّةٌ = Buvi."
+      "correct": 3,
+      "izoh": "Buvi. = 🔁 Takror (3-dars): جَدَّةٌ"
     },
     {
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
-        "Restoran",
-        "Ular",
-        "Qaytadi",
-        "Hozir"
+        "Do'st.",
+        "Xona.",
+        "Restoran.",
+        "Uy."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
+      "correct": 2,
+      "izoh": "Restoran. = 🔁 Takror (2-dars): مَطْعَمٌ"
     },
     {
       "q": "«شَهْرٌ» so'zining ma'nosi?",
       "opts": [
+        "Hozir.",
         "Oy",
-        "Yonida",
-        "Men",
-        "Ko'pincha"
+        "Chiqadi.",
+        "Kechqurun."
       ],
-      "correct": 0,
-      "izoh": "شَهْرٌ = Oy"
+      "correct": 1,
+      "izoh": "Oy = شَهْرٌ"
     },
     {
       "q": "🔁 «أُخْتٌ» so'zining ma'nosi?",
       "opts": [
-        "Opa/singil",
-        "Ishlaydi",
-        "Ketadi",
-        "Qaytadi"
+        "Xona.",
+        "Uy.",
+        "Opa/singil.",
+        "Restoran."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (3-dars): أُخْتٌ = Opa/singil."
+      "correct": 2,
+      "izoh": "Opa/singil. = 🔁 Takror (3-dars): أُخْتٌ"
     },
     {
       "q": "🔁 «بَيْتٌ» so'zining ma'nosi?",
       "opts": [
-        "Uy",
-        "Kechqurun",
-        "Yozadi",
-        "Ertalab"
+        "Uy.",
+        "Do'st.",
+        "Restoran.",
+        "Opa/singil."
       ],
       "correct": 0,
-      "izoh": "🔁 Takror (3-dars): بَيْتٌ = Uy."
+      "izoh": "Uy. = 🔁 Takror (3-dars): بَيْتٌ"
     },
     {
       "q": "«فَوْقَ» so'zining ma'nosi?",
       "opts": [
+        "Pishiradi.",
         "Tepasida",
-        "Ko'cha",
-        "Tushunadi",
-        "O'qituvchi"
+        "Chiqadi.",
+        "Biz."
       ],
-      "correct": 0,
-      "izoh": "فَوْقَ = Tepasida"
+      "correct": 1,
+      "izoh": "Tepasida = فَوْقَ"
     },
     {
       "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Xona",
-        "Yozadi",
-        "Keyin",
-        "Ertalab"
+        "Do'st.",
+        "Opa/singil.",
+        "Xona.",
+        "Restoran."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
+      "correct": 2,
+      "izoh": "Xona. = 🔁 Takror (3-dars): غُرْفَةٌ"
     },
     {
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
-        "Do'st",
-        "O'tiradi",
-        "Kechqurun",
-        "O'ynaydi"
+        "Xona.",
+        "Do'st.",
+        "Uy.",
+        "Restoran."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
+      "correct": 1,
+      "izoh": "Do'st. = 🔁 Takror (2-dars): صَدِيقٌ"
     }
   ]
 }
