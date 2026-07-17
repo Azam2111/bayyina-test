@@ -6,343 +6,343 @@
     {
       "q": "«اَلسَّلَامُ عَلَيْكُمْ» so'zining ma'nosi?",
       "opts": [
-        "Assalomu alaykum",
-        "Vaalaykum assalom",
-        "Sen",
-        "Salomat bo'ling"
+        "U (erkak).",
+        "Ba'zi",
+        "Assalomu alaykum.",
+        "Amma"
       ],
-      "correct": 0,
-      "izoh": "اَلسَّلَامُ عَلَيْكُمْ = Assalomu alaykum."
+      "correct": 2,
+      "izoh": "Assalomu alaykum. = اَلسَّلَامُ عَلَيْكُمْ"
     },
     {
       "q": "«وَعَلَيْكُمُ السَّلَامُ» so'zining ma'nosi?",
       "opts": [
-        "Vaalaykum assalom",
-        "Men",
-        "Xush kelibsiz",
-        "Qayerdansiz?"
+        "U (erkak).",
+        "Shifokor.",
+        "Amma",
+        "Vaalaykum assalom."
       ],
-      "correct": 0,
-      "izoh": "وَعَلَيْكُمُ السَّلَامُ = Vaalaykum assalom."
+      "correct": 3,
+      "izoh": "Vaalaykum assalom. = وَعَلَيْكُمُ السَّلَامُ"
     },
     {
       "q": "«كَيْفَ حَالُكَ؟» so'zining ma'nosi?",
       "opts": [
-        "Ahvolingiz qanday?",
-        "Shifokor",
-        "Surat",
-        "Ismingiz nima?"
+        "Nima.",
+        "Ahvolingiz qanday?.",
+        "Ismingiz nima?.",
+        "Bu."
       ],
-      "correct": 0,
-      "izoh": "كَيْفَ حَالُكَ؟ = Ahvolingiz qanday?."
+      "correct": 1,
+      "izoh": "Ahvolingiz qanday?. = كَيْفَ حَالُكَ؟"
     },
     {
       "q": "«بِخَيْرٍ وَالْحَمْدُ لِلَّهِ» so'zining ma'nosi?",
       "opts": [
-        "Yaxshi, Allohga shukr",
-        "Men",
-        "Xayrli kech",
-        "Xayrli tong"
+        "Yaxshi, Allohga shukr.",
+        "O'qituvchi.",
+        "Assalomu alaykum.",
+        "Qayerdansiz?."
       ],
       "correct": 0,
-      "izoh": "بِخَيْرٍ وَالْحَمْدُ لِلَّهِ = Yaxshi, Allohga shukr."
+      "izoh": "Yaxshi, Allohga shukr. = بِخَيْرٍ وَالْحَمْدُ لِلَّهِ"
     },
     {
       "q": "«مَا اسْمُكَ؟» so'zining ma'nosi?",
       "opts": [
-        "Ismingiz nima?",
-        "Ha",
-        "Xush kelibsiz",
-        "Qalam"
+        "Nima.",
+        "Ham.",
+        "Ko'rishguncha.",
+        "Ismingiz nima?."
       ],
-      "correct": 0,
-      "izoh": "مَا اسْمُكَ؟ = Ismingiz nima?."
+      "correct": 3,
+      "izoh": "Ismingiz nima?. = مَا اسْمُكَ؟"
     },
     {
       "q": "«مِنْ أَيْنَ أَنْتَ؟» so'zining ma'nosi?",
       "opts": [
-        "Qayerdansiz?",
-        "Ahvolingiz qanday?",
-        "Men",
-        "Ham"
+        "Yaxshi, Allohga shukr.",
+        "Xayrli kech.",
+        "Yodlaydi",
+        "Qayerdansiz?."
       ],
-      "correct": 0,
-      "izoh": "مِنْ أَيْنَ أَنْتَ؟ = Qayerdansiz?."
+      "correct": 3,
+      "izoh": "Qayerdansiz?. = مِنْ أَيْنَ أَنْتَ؟"
     },
     {
       "q": "«أَهْلًا وَسَهْلًا» so'zining ma'nosi?",
       "opts": [
-        "Xush kelibsiz",
-        "Qayerdansiz?",
-        "Xayrli kech",
-        "Rahmat"
+        "Xush kelibsiz.",
+        "Ba'zi",
+        "Ha.",
+        "Tanishganimdan xursandman."
       ],
       "correct": 0,
-      "izoh": "أَهْلًا وَسَهْلًا = Xush kelibsiz."
+      "izoh": "Xush kelibsiz. = أَهْلًا وَسَهْلًا"
     },
     {
       "q": "«تَشَرَّفْتُ» so'zining ma'nosi?",
       "opts": [
-        "Tanishganimdan xursandman",
-        "Qalam",
-        "Yaxshi, Allohga shukr",
-        "U (erkak)"
+        "Tanishganimdan xursandman.",
+        "Shifokor.",
+        "U (erkak).",
+        "Xona"
       ],
       "correct": 0,
-      "izoh": "تَشَرَّفْتُ = Tanishganimdan xursandman."
+      "izoh": "Tanishganimdan xursandman. = تَشَرَّفْتُ"
     },
     {
       "q": "«صَبَاحُ الْخَيْرِ» so'zining ma'nosi?",
       "opts": [
-        "Xayrli tong",
-        "Kim",
-        "Kitob",
-        "Surat"
+        "Xayrli kech.",
+        "Ba'zi",
+        "Xayrli tong.",
+        "Vaalaykum assalom."
       ],
-      "correct": 0,
-      "izoh": "صَبَاحُ الْخَيْرِ = Xayrli tong."
+      "correct": 2,
+      "izoh": "Xayrli tong. = صَبَاحُ الْخَيْرِ"
     },
     {
       "q": "«مَسَاءُ الْخَيْرِ» so'zining ma'nosi?",
       "opts": [
-        "Xayrli kech",
-        "Sen",
-        "Ha",
-        "Arzimaydi"
+        "Surat.",
+        "Xayrli tong.",
+        "Xayrli kech.",
+        "Ba'zi"
       ],
-      "correct": 0,
-      "izoh": "مَسَاءُ الْخَيْرِ = Xayrli kech."
+      "correct": 2,
+      "izoh": "Xayrli kech. = مَسَاءُ الْخَيْرِ"
     },
     {
       "q": "«إِلَى اللِّقَاءِ» so'zining ma'nosi?",
       "opts": [
-        "Ko'rishguncha",
-        "Kim",
-        "Talaba",
-        "Rahmat"
+        "Bu.",
+        "Ahvolingiz qanday?.",
+        "Ko'rishguncha.",
+        "Kim."
       ],
-      "correct": 0,
-      "izoh": "إِلَى اللِّقَاءِ = Ko'rishguncha."
+      "correct": 2,
+      "izoh": "Ko'rishguncha. = إِلَى اللِّقَاءِ"
     },
     {
       "q": "«مَعَ السَّلَامَةِ» so'zining ma'nosi?",
       "opts": [
-        "Salomat bo'ling",
-        "Ha",
-        "Kitob",
-        "Sen"
+        "Ham.",
+        "Salomat bo'ling.",
+        "...mi? (savol yuklamasi).",
+        "Kim."
       ],
-      "correct": 0,
-      "izoh": "مَعَ السَّلَامَةِ = Salomat bo'ling."
+      "correct": 1,
+      "izoh": "Salomat bo'ling. = مَعَ السَّلَامَةِ"
     },
     {
       "q": "«نَعَمْ» so'zining ma'nosi?",
       "opts": [
-        "Ha",
-        "Yaxshi, Allohga shukr",
-        "Kitob",
-        "Xayrli tong"
+        "O'qituvchi.",
+        "Amma",
+        "Ha.",
+        "Xayrli kech."
       ],
-      "correct": 0,
-      "izoh": "نَعَمْ = Ha."
+      "correct": 2,
+      "izoh": "Ha. = نَعَمْ"
     },
     {
       "q": "«لَا» so'zining ma'nosi?",
       "opts": [
-        "Yo'q",
-        "Ha",
-        "Qalam",
-        "Xayrli tong"
+        "Bu.",
+        "Ko'rishguncha.",
+        "Salomat bo'ling.",
+        "Yo'q."
       ],
-      "correct": 0,
-      "izoh": "لَا = Yo'q."
+      "correct": 3,
+      "izoh": "Yo'q. = لَا"
     },
     {
       "q": "«شُكْرًا» so'zining ma'nosi?",
       "opts": [
-        "Rahmat",
-        "O'qituvchi",
-        "Ismingiz nima?",
-        "Yo'q"
+        "O'qituvchi.",
+        "U (erkak).",
+        "Rahmat.",
+        "Ha."
       ],
-      "correct": 0,
-      "izoh": "شُكْرًا = Rahmat."
+      "correct": 2,
+      "izoh": "Rahmat. = شُكْرًا"
     },
     {
       "q": "«عَفْوًا» so'zining ma'nosi?",
       "opts": [
-        "Arzimaydi",
-        "Talaba",
-        "Sen",
-        "Yo'q"
+        "Arzimaydi.",
+        "Shifokor.",
+        "Xona",
+        "U (erkak)."
       ],
       "correct": 0,
-      "izoh": "عَفْوًا = Arzimaydi."
+      "izoh": "Arzimaydi. = عَفْوًا"
     },
     {
       "q": "«غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
+        "Arzimaydi.",
+        "Sen.",
         "Xona",
-        "Bu",
-        "Ichadi",
-        "...mi? (savol yuklamasi)"
+        "Men."
       ],
-      "correct": 0,
-      "izoh": "غُرْفَةٌ = Xona"
+      "correct": 2,
+      "izoh": "Xona = غُرْفَةٌ"
     },
     {
       "q": "«مُعَلِّمٌ» so'zining ma'nosi?",
       "opts": [
-        "O'qituvchi",
-        "Salomat bo'ling",
-        "Xush kelibsiz",
-        "Rahmat"
+        "Assalomu alaykum.",
+        "Ba'zi",
+        "O'qituvchi.",
+        "Shifokor."
       ],
-      "correct": 0,
-      "izoh": "مُعَلِّمٌ = O'qituvchi."
+      "correct": 2,
+      "izoh": "O'qituvchi. = مُعَلِّمٌ"
     },
     {
       "q": "«عَمَّةٌ» so'zining ma'nosi?",
       "opts": [
+        "Xayrli kech.",
         "Amma",
-        "Men",
-        "Kasb",
-        "Tagida"
+        "Arzimaydi.",
+        "Tanishganimdan xursandman."
       ],
-      "correct": 0,
-      "izoh": "عَمَّةٌ = Amma"
+      "correct": 1,
+      "izoh": "Amma = عَمَّةٌ"
     },
     {
       "q": "«بَعْضٌ» so'zining ma'nosi?",
       "opts": [
+        "Tanishganimdan xursandman.",
         "Ba'zi",
-        "Kir",
-        "Nabira",
-        "Kamdan-kam"
+        "Shifokor.",
+        "U (erkak)."
       ],
-      "correct": 0,
-      "izoh": "بَعْضٌ = Ba'zi"
+      "correct": 1,
+      "izoh": "Ba'zi = بَعْضٌ"
     },
     {
       "q": "«يَحْفَظُ» so'zining ma'nosi?",
       "opts": [
         "Yodlaydi",
-        "Kun",
-        "Biz",
-        "Yil"
+        "Amma",
+        "Sen.",
+        "Surat."
       ],
       "correct": 0,
-      "izoh": "يَحْفَظُ = Yodlaydi"
+      "izoh": "Yodlaydi = يَحْفَظُ"
     },
     {
       "q": "«طَبِيبٌ» so'zining ma'nosi?",
       "opts": [
-        "Shifokor",
-        "Yaxshi, Allohga shukr",
-        "Qayerdansiz?",
-        "Sen"
+        "Xayrli tong.",
+        "Shifokor.",
+        "Arzimaydi.",
+        "O'qituvchi."
       ],
-      "correct": 0,
-      "izoh": "طَبِيبٌ = Shifokor."
+      "correct": 1,
+      "izoh": "Shifokor. = طَبِيبٌ"
     },
     {
       "q": "«صُورَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Surat",
-        "Men",
-        "Nima",
-        "Xush kelibsiz"
+        "Surat.",
+        "Shifokor.",
+        "Arzimaydi.",
+        "O'qituvchi."
       ],
       "correct": 0,
-      "izoh": "صُورَةٌ = Surat."
+      "izoh": "Surat. = صُورَةٌ"
     },
     {
       "q": "«أَيْضًا» so'zining ma'nosi?",
       "opts": [
-        "Ham",
-        "Xayrli tong",
-        "Tanishganimdan xursandman",
-        "Arzimaydi"
+        "Bu.",
+        "Ham.",
+        "Ahvolingiz qanday?.",
+        "Nima."
       ],
-      "correct": 0,
-      "izoh": "أَيْضًا = Ham."
+      "correct": 1,
+      "izoh": "Ham. = أَيْضًا"
     },
     {
       "q": "«أَنَا» so'zining ma'nosi?",
       "opts": [
-        "Men",
-        "Sen",
-        "Yaxshi, Allohga shukr",
-        "Tanishganimdan xursandman"
+        "Rahmat.",
+        "Vaalaykum assalom.",
+        "Men.",
+        "Arzimaydi."
       ],
-      "correct": 0,
-      "izoh": "أَنَا = Men."
+      "correct": 2,
+      "izoh": "Men. = أَنَا"
     },
     {
       "q": "«أَنْتَ» so'zining ma'nosi?",
       "opts": [
-        "Sen",
-        "Xayrli kech",
-        "Ismingiz nima?",
-        "Ha"
+        "Arzimaydi.",
+        "Amma",
+        "Sen.",
+        "Rahmat."
       ],
-      "correct": 0,
-      "izoh": "أَنْتَ = Sen."
+      "correct": 2,
+      "izoh": "Sen. = أَنْتَ"
     },
     {
       "q": "«هُوَ» so'zining ma'nosi?",
       "opts": [
-        "U (erkak)",
-        "...mi? (savol yuklamasi)",
-        "Xayrli tong",
-        "Kitob"
+        "U (erkak).",
+        "Surat.",
+        "Rahmat.",
+        "Xush kelibsiz."
       ],
       "correct": 0,
-      "izoh": "هُوَ = U (erkak)."
+      "izoh": "U (erkak). = هُوَ"
     },
     {
       "q": "«هَذَا» so'zining ma'nosi?",
       "opts": [
-        "Bu",
-        "Xayrli tong",
-        "Assalomu alaykum",
-        "Yo'q"
+        "Ismingiz nima?.",
+        "Kim.",
+        "Ko'rishguncha.",
+        "Bu."
       ],
-      "correct": 0,
-      "izoh": "هَذَا = Bu."
+      "correct": 3,
+      "izoh": "Bu. = هَذَا"
     },
     {
       "q": "«هَلْ» so'zining ma'nosi?",
       "opts": [
-        "...mi? (savol yuklamasi)",
-        "Salomat bo'ling",
-        "Xayrli kech",
-        "Assalomu alaykum"
+        "...mi? (savol yuklamasi).",
+        "Ko'rishguncha.",
+        "Kim.",
+        "Yo'q."
       ],
       "correct": 0,
-      "izoh": "هَلْ = ...mi? (savol yuklamasi)."
+      "izoh": "...mi? (savol yuklamasi). = هَلْ"
     },
     {
       "q": "«مَنْ» so'zining ma'nosi?",
       "opts": [
-        "Kim",
-        "Kitob",
-        "...mi? (savol yuklamasi)",
-        "Xayrli kech"
+        "Ham.",
+        "Yo'q.",
+        "Ahvolingiz qanday?.",
+        "Kim."
       ],
-      "correct": 0,
-      "izoh": "مَنْ = Kim."
+      "correct": 3,
+      "izoh": "Kim. = مَنْ"
     },
     {
       "q": "«مَا» so'zining ma'nosi?",
       "opts": [
-        "Nima",
-        "Xush kelibsiz",
-        "Tanishganimdan xursandman",
-        "Yo'q"
+        "Nima.",
+        "...mi? (savol yuklamasi).",
+        "Bu.",
+        "Yo'q."
       ],
       "correct": 0,
-      "izoh": "مَا = Nima."
+      "izoh": "Nima. = مَا"
     }
   ]
 }
