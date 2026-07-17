@@ -6,409 +6,409 @@
     {
       "q": "«صَفٌّ» so'zining ma'nosi?",
       "opts": [
-        "Sinf",
-        "Yil",
-        "Hafta",
-        "Ba'zi"
+        "Sinf.",
+        "Kun.",
+        "Yo'l.",
+        "Yil."
       ],
       "correct": 0,
-      "izoh": "صَفٌّ = Sinf."
+      "izoh": "Sinf. = صَفٌّ"
     },
     {
       "q": "«مَكْتَبَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Kutubxona",
-        "Nima (fe'l uchun)",
-        "U yerda",
-        "Yodlaydi"
+        "Kamdan-kam.",
+        "Kutubxona.",
+        "Kun.",
+        "Qiziqarli."
       ],
-      "correct": 0,
-      "izoh": "مَكْتَبَةٌ = Kutubxona."
+      "correct": 1,
+      "izoh": "Kutubxona. = مَكْتَبَةٌ"
     },
     {
       "q": "«شَارِعٌ» so'zining ma'nosi?",
       "opts": [
-        "Ko'cha",
-        "Sinf",
-        "Birga",
-        "Yil"
+        "Yeydi.",
+        "Zal.",
+        "Ko'cha.",
+        "Yil."
       ],
-      "correct": 0,
-      "izoh": "شَارِعٌ = Ko'cha."
+      "correct": 2,
+      "izoh": "Ko'cha. = شَارِعٌ"
     },
     {
       "q": "«طَرِيقٌ» so'zining ma'nosi?",
       "opts": [
-        "Yo'l",
-        "Ba'zan",
-        "Ba'zi",
-        "Qani ketdik"
+        "Ba'zan.",
+        "Yo'l.",
+        "Kamdan-kam.",
+        "Ko'pincha."
       ],
-      "correct": 0,
-      "izoh": "طَرِيقٌ = Yo'l."
+      "correct": 1,
+      "izoh": "Yo'l. = طَرِيقٌ"
     },
     {
       "q": "«يَفْهَمُ» so'zining ma'nosi?",
       "opts": [
-        "Tushunadi",
-        "Tavsiya qiladi",
-        "Ba'zi",
-        "Ba'zan"
+        "Qiziqarli.",
+        "Yodlaydi.",
+        "Tushunadi.",
+        "Nima (fe'l uchun)."
       ],
-      "correct": 0,
-      "izoh": "يَفْهَمُ = Tushunadi."
+      "correct": 2,
+      "izoh": "Tushunadi. = يَفْهَمُ"
     },
     {
       "q": "«يَضْحَكُ» so'zining ma'nosi?",
       "opts": [
-        "Kuladi",
-        "Birga",
-        "Ba'zi",
-        "Qani ketdik"
+        "Kuladi.",
+        "Buvi",
+        "Yo'l.",
+        "Hech qachon."
       ],
       "correct": 0,
-      "izoh": "يَضْحَكُ = Kuladi."
+      "izoh": "Kuladi. = يَضْحَكُ"
     },
     {
       "q": "«يَنْصَحُ» so'zining ma'nosi?",
       "opts": [
-        "Tavsiya qiladi",
-        "Kamdan-kam",
-        "Ko'cha",
-        "Iltimos"
+        "Oldida.",
+        "Ketadi.",
+        "Tavsiya qiladi.",
+        "Dars qiladi."
       ],
-      "correct": 0,
-      "izoh": "يَنْصَحُ = Tavsiya qiladi."
+      "correct": 2,
+      "izoh": "Tavsiya qiladi. = يَنْصَحُ"
     },
     {
       "q": "«يَحْفَظُ» so'zining ma'nosi?",
       "opts": [
-        "Yodlaydi",
-        "Iltimos",
-        "Yil",
-        "Yeydi"
+        "Hech qachon.",
+        "Yodlaydi.",
+        "Sinf.",
+        "Ba'zi."
       ],
-      "correct": 0,
-      "izoh": "يَحْفَظُ = Yodlaydi."
+      "correct": 1,
+      "izoh": "Yodlaydi. = يَحْفَظُ"
     },
     {
       "q": "«يَأْكُلُ» so'zining ma'nosi?",
       "opts": [
-        "Yeydi",
-        "Hech qachon",
-        "Kamdan-kam",
-        "U yerda"
+        "Yeydi.",
+        "Oy.",
+        "Kutubxona.",
+        "Tushunadi."
       ],
       "correct": 0,
-      "izoh": "يَأْكُلُ = Yeydi."
+      "izoh": "Yeydi. = يَأْكُلُ"
     },
     {
       "q": "«يَوْمٌ» so'zining ma'nosi?",
       "opts": [
-        "Kun",
-        "Ba'zan",
-        "Hafta",
-        "Qani ketdik"
+        "Ba'zi.",
+        "Ko'pincha.",
+        "Yil.",
+        "Kun."
       ],
-      "correct": 0,
-      "izoh": "يَوْمٌ = Kun."
+      "correct": 3,
+      "izoh": "Kun. = يَوْمٌ"
     },
     {
       "q": "«أُسْبُوعٌ» so'zining ma'nosi?",
       "opts": [
-        "Hafta",
-        "Ko'cha",
-        "Doim",
-        "Ko'pincha"
+        "Xayrli kech.",
+        "Yil.",
+        "Hafta.",
+        "Xayrli tong."
       ],
-      "correct": 0,
-      "izoh": "أُسْبُوعٌ = Hafta."
+      "correct": 2,
+      "izoh": "Hafta. = أُسْبُوعٌ"
     },
     {
       "q": "«شَهْرٌ» so'zining ma'nosi?",
       "opts": [
-        "Oy",
-        "Kutubxona",
-        "Kuladi",
-        "Nima (fe'l uchun)"
+        "Ba'zan.",
+        "Kun.",
+        "Oy.",
+        "Qani ketdik."
       ],
-      "correct": 0,
-      "izoh": "شَهْرٌ = Oy."
+      "correct": 2,
+      "izoh": "Oy. = شَهْرٌ"
     },
     {
       "q": "«سَنَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Yil",
-        "Ba'zan",
-        "Birga",
-        "Tushunadi"
+        "Hafta.",
+        "Xayrli kech.",
+        "Xayrli tong.",
+        "Yil."
       ],
-      "correct": 0,
-      "izoh": "سَنَةٌ = Yil."
+      "correct": 3,
+      "izoh": "Yil. = سَنَةٌ"
     },
     {
       "q": "«جَدَّةٌ» so'zining ma'nosi?",
       "opts": [
-        "Buvi",
-        "Sotuvchi",
-        "Toza",
-        "Mehmon"
+        "Sinf.",
+        "Oy.",
+        "Yodlaydi.",
+        "Buvi"
       ],
-      "correct": 0,
-      "izoh": "جَدَّةٌ = Buvi"
+      "correct": 3,
+      "izoh": "Buvi = جَدَّةٌ"
     },
     {
       "q": "«غَالِبًا» so'zining ma'nosi?",
       "opts": [
-        "Ko'pincha",
-        "Ba'zan",
-        "Bu yerda",
-        "Sinf"
+        "Ko'pincha.",
+        "Kamdan-kam.",
+        "Birga.",
+        "Hech qachon."
       ],
       "correct": 0,
-      "izoh": "غَالِبًا = Ko'pincha."
+      "izoh": "Ko'pincha. = غَالِبًا"
     },
     {
       "q": "«أَحْيَانًا» so'zining ma'nosi?",
       "opts": [
-        "Ba'zan",
-        "Tushunadi",
-        "Doim",
-        "Birga"
+        "Sinf.",
+        "Kun.",
+        "Ko'cha.",
+        "Ba'zan."
       ],
-      "correct": 0,
-      "izoh": "أَحْيَانًا = Ba'zan."
+      "correct": 3,
+      "izoh": "Ba'zan. = أَحْيَانًا"
     },
     {
       "q": "«نَادِرًا» so'zining ma'nosi?",
       "opts": [
-        "Kamdan-kam",
-        "Birga",
-        "Ba'zi",
-        "Qiziqarli"
+        "Qani ketdik.",
+        "Kuladi.",
+        "Ba'zi.",
+        "Kamdan-kam."
       ],
-      "correct": 0,
-      "izoh": "نَادِرًا = Kamdan-kam."
+      "correct": 3,
+      "izoh": "Kamdan-kam. = نَادِرًا"
     },
     {
       "q": "«أَبَدًا» so'zining ma'nosi?",
       "opts": [
-        "Hech qachon",
-        "Hafta",
-        "Tushunadi",
-        "Ko'pincha"
+        "Hech qachon.",
+        "Kamdan-kam.",
+        "Yodlaydi.",
+        "Qani ketdik."
       ],
       "correct": 0,
-      "izoh": "أَبَدًا = Hech qachon."
+      "izoh": "Hech qachon. = أَبَدًا"
     },
     {
       "q": "«مَعًا» so'zining ma'nosi?",
       "opts": [
-        "Birga",
-        "Yo'l",
-        "Bu yerda",
-        "Nima (fe'l uchun)"
+        "Birga.",
+        "Tushunadi.",
+        "Buvi",
+        "Sinf."
       ],
       "correct": 0,
-      "izoh": "مَعًا = Birga."
+      "izoh": "Birga. = مَعًا"
     },
     {
       "q": "«مُمْتِعٌ» so'zining ma'nosi?",
       "opts": [
-        "Qiziqarli",
-        "Birga",
-        "Oy",
-        "Yo'l"
+        "Oy.",
+        "Qiziqarli.",
+        "Buvi",
+        "Kamdan-kam."
       ],
-      "correct": 0,
-      "izoh": "مُمْتِعٌ = Qiziqarli."
+      "correct": 1,
+      "izoh": "Qiziqarli. = مُمْتِعٌ"
     },
     {
       "q": "«هُنَا» so'zining ma'nosi?",
       "opts": [
-        "Bu yerda",
-        "U yerda",
-        "Qiziqarli",
-        "Kun"
+        "Iltimos.",
+        "U yerda.",
+        "Salomat bo'ling.",
+        "Bu yerda."
       ],
-      "correct": 0,
-      "izoh": "هُنَا = Bu yerda."
+      "correct": 3,
+      "izoh": "Bu yerda. = هُنَا"
     },
     {
       "q": "«هُنَاكَ» so'zining ma'nosi?",
       "opts": [
-        "U yerda",
-        "Kun",
-        "Kuladi",
-        "Qiziqarli"
+        "Iltimos.",
+        "U yerda.",
+        "Bu yerda.",
+        "Keyin."
       ],
-      "correct": 0,
-      "izoh": "هُنَاكَ = U yerda."
+      "correct": 1,
+      "izoh": "U yerda. = هُنَاكَ"
     },
     {
       "q": "«هَيَّا بِنَا» so'zining ma'nosi?",
       "opts": [
-        "Qani ketdik",
-        "Birga",
-        "Yeydi",
-        "Bu yerda"
+        "Oy.",
+        "Qani ketdik.",
+        "Ko'cha.",
+        "Sinf."
       ],
-      "correct": 0,
-      "izoh": "هَيَّا بِنَا = Qani ketdik."
+      "correct": 1,
+      "izoh": "Qani ketdik. = هَيَّا بِنَا"
     },
     {
       "q": "«مِنْ فَضْلِكَ» so'zining ma'nosi?",
       "opts": [
-        "Iltimos",
-        "Qiziqarli",
-        "Tushunadi",
-        "Yo'l"
+        "Iltimos.",
+        "Ko'rishguncha.",
+        "U yerda.",
+        "Bu yerda."
       ],
       "correct": 0,
-      "izoh": "مِنْ فَضْلِكَ = Iltimos."
+      "izoh": "Iltimos. = مِنْ فَضْلِكَ"
     },
     {
       "q": "«مَاذَا» so'zining ma'nosi?",
       "opts": [
-        "Nima (fe'l uchun)",
-        "Ko'pincha",
-        "Ba'zan",
-        "Sinf"
+        "Kun.",
+        "Nima (fe'l uchun).",
+        "Hafta.",
+        "Oy."
       ],
-      "correct": 0,
-      "izoh": "مَاذَا = Nima (fe'l uchun)."
+      "correct": 1,
+      "izoh": "Nima (fe'l uchun). = مَاذَا"
     },
     {
       "q": "«بَعْضٌ» so'zining ma'nosi?",
       "opts": [
-        "Ba'zi",
-        "Oy",
-        "Ba'zan",
-        "Qiziqarli"
+        "Ba'zi.",
+        "Nima (fe'l uchun).",
+        "Yo'l.",
+        "Yil."
       ],
       "correct": 0,
-      "izoh": "بَعْضٌ = Ba'zi."
+      "izoh": "Ba'zi. = بَعْضٌ"
     },
     {
       "q": "🔁 «بَابٌ» so'zining ma'nosi?",
       "opts": [
-        "Eshik",
-        "Ko'cha",
-        "Sinf",
-        "Qiziqarli"
+        "O'qiydi.",
+        "Ichadi.",
+        "Yonida.",
+        "Eshik."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (5-dars): بَابٌ = Eshik."
+      "correct": 3,
+      "izoh": "Eshik. = 🔁 Takror (5-dars): بَابٌ"
     },
     {
       "q": "🔁 «أَمَامَ» so'zining ma'nosi?",
       "opts": [
-        "Oldida",
-        "Qiziqarli",
-        "Nima (fe'l uchun)",
-        "Birga"
+        "Oldin.",
+        "Dars qiladi.",
+        "Oldida.",
+        "Tavsiya qiladi."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (5-dars): أَمَامَ = Oldida."
+      "correct": 2,
+      "izoh": "Oldida. = 🔁 Takror (5-dars): أَمَامَ"
     },
     {
       "q": "🔁 «يَجْلِسُ» so'zining ma'nosi?",
       "opts": [
-        "O'tiradi",
-        "Tavsiya qiladi",
-        "Ba'zi",
-        "Iltimos"
+        "Chiroyli.",
+        "O'tiradi.",
+        "Xona.",
+        "Eshik."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (4-dars): يَجْلِسُ = O'tiradi."
+      "correct": 1,
+      "izoh": "O'tiradi. = 🔁 Takror (4-dars): يَجْلِسُ"
     },
     {
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
-        "Restoran",
-        "Iltimos",
-        "Tavsiya qiladi",
-        "Yeydi"
+        "Restoran.",
+        "Do'st.",
+        "Ichadi.",
+        "O'tiradi."
       ],
       "correct": 0,
-      "izoh": "🔁 Takror (2-dars): مَطْعَمٌ = Restoran."
+      "izoh": "Restoran. = 🔁 Takror (2-dars): مَطْعَمٌ"
     },
     {
       "q": "🔁 «يَشْرَبُ» so'zining ma'nosi?",
       "opts": [
-        "Ichadi",
-        "Oy",
-        "Yo'l",
-        "Kun"
+        "O'qiydi.",
+        "O'tiradi.",
+        "Ichadi.",
+        "Eshik."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (4-dars): يَشْرَبُ = Ichadi."
+      "correct": 2,
+      "izoh": "Ichadi. = 🔁 Takror (4-dars): يَشْرَبُ"
     },
     {
       "q": "🔁 «جَمِيلٌ» so'zining ma'nosi?",
       "opts": [
-        "Chiroyli",
-        "Nima (fe'l uchun)",
-        "Sinf",
-        "Hech qachon"
+        "Chiroyli.",
+        "Do'st.",
+        "Ichadi.",
+        "O'qiydi."
       ],
       "correct": 0,
-      "izoh": "🔁 Takror (5-dars): جَمِيلٌ = Chiroyli."
+      "izoh": "Chiroyli. = 🔁 Takror (5-dars): جَمِيلٌ"
     },
     {
       "q": "🔁 «جَانِبَ» so'zining ma'nosi?",
       "opts": [
-        "Yonida",
-        "Tavsiya qiladi",
-        "Ko'pincha",
-        "Birga"
+        "O'tiradi.",
+        "Yonida.",
+        "O'qiydi.",
+        "Xona."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (5-dars): جَانِبَ = Yonida."
+      "correct": 1,
+      "izoh": "Yonida. = 🔁 Takror (5-dars): جَانِبَ"
     },
     {
       "q": "«الآنَ» so'zining ma'nosi?",
       "opts": [
+        "Toza.",
         "Hozir",
-        "Kutubxona",
-        "Qiz",
-        "Orasida"
+        "U (erkak).",
+        "O'qiydi."
       ],
-      "correct": 0,
-      "izoh": "الآنَ = Hozir"
+      "correct": 1,
+      "izoh": "Hozir = الآنَ"
     },
     {
       "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
       "opts": [
-        "Do'st",
-        "Sinf",
-        "Qani ketdik",
-        "Kamdan-kam"
+        "Ichadi.",
+        "O'tiradi.",
+        "Yonida.",
+        "Do'st."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (2-dars): صَدِيقٌ = Do'st."
+      "correct": 3,
+      "izoh": "Do'st. = 🔁 Takror (2-dars): صَدِيقٌ"
     },
     {
       "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Xona",
-        "Ko'pincha",
-        "Tavsiya qiladi",
-        "Nima (fe'l uchun)"
+        "O'tiradi.",
+        "Xona.",
+        "Do'st.",
+        "Eshik."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (3-dars): غُرْفَةٌ = Xona."
+      "correct": 1,
+      "izoh": "Xona. = 🔁 Takror (3-dars): غُرْفَةٌ"
     },
     {
       "q": "🔁 «يَقْرَأُ» so'zining ma'nosi?",
       "opts": [
-        "O'qiydi",
-        "Iltimos",
-        "Yo'l",
-        "Kun"
+        "Chiroyli.",
+        "O'qiydi.",
+        "Do'st.",
+        "Restoran."
       ],
-      "correct": 0,
-      "izoh": "🔁 Takror (4-dars): يَقْرَأُ = O'qiydi."
+      "correct": 1,
+      "izoh": "O'qiydi. = 🔁 Takror (4-dars): يَقْرَأُ"
     }
   ]
 }
