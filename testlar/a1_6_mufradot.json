@@ -6,142 +6,142 @@
     {
       "q": "«Bo'ron» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "دَافِئٌ",
         "عَاصِفَةٌ",
-        "صَافٍ",
-        "تَحْتَ الصِّفْرِ"
+        "اَلشِّتَاءُ",
+        "غَزِيرٌ",
+        "نَاسٌ"
       ],
-      "correct": 1,
+      "correct": 0,
       "izoh": "Bo'ron = عَاصِفَةٌ"
     },
     {
       "q": "«Odamlar» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَائِحٌ",
-        "أَنْحَاءُ",
-        "سَاحِلٌ",
-        "نَاسٌ"
+        "إِشَارَاتُ الْمُرُورِ",
+        "نَاسٌ",
+        "مُتَنَزَّهٌ",
+        "عَلَم"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Odamlar = نَاسٌ"
     },
     {
       "q": "«اَلْقِيَادَةُ» so'zining ma'nosi?",
       "opts": [
-        "Avtoturargoh",
-        "Ehtiyotkorlik",
+        "Yo'l tirbandligi",
         "Mashina haydash",
-        "Taksi"
+        "Svetofor, yo'l belgilari",
+        "Yo'l."
       ],
-      "correct": 2,
-      "izoh": "اَلْقِيَادَةُ = Mashina haydash"
+      "correct": 1,
+      "izoh": "Mashina haydash = اَلْقِيَادَةُ"
     },
     {
       "q": "«أَرْضٌ» so'zining ma'nosi?",
       "opts": [
+        "Shuning uchun",
         "Yer",
-        "Ichida, ichkarisida",
-        "Mashina haydash",
+        "Shim",
         "Eng yuqori (harorat)"
       ],
-      "correct": 0,
-      "izoh": "أَرْضٌ = Yer"
+      "correct": 1,
+      "izoh": "Yer = أَرْضٌ"
     },
     {
       "q": "«Uy» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "دَوَاءٌ",
+        "اَلصُّغْرَى",
         "بَيْت",
-        "يَسْكُنُ",
-        "بِنْت",
-        "عَلَم"
+        "فِقْرَةٌ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Uy = بَيْت"
     },
     {
       "q": "«Ertaga» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "اَلطِّبُّ",
+        "اَلْعُظْمَى",
         "غَدًا",
-        "قَارُورَةٌ",
-        "بَقَرَةٌ",
-        "اَلشَّبُورَةُ"
+        "نَهَارًا"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Ertaga = غَدًا"
     },
     {
       "q": "«Tun» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلصَّيْفُ",
-        "لَيْلًا",
-        "اَللَّيْلُ",
-        "اَلشِّتَاءُ"
+        "خَارِجَ",
+        "وَرَقَةٌ",
+        "صِيغَةٌ",
+        "اَللَّيْلُ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Tun = اَللَّيْلُ"
     },
     {
       "q": "«Shuning uchun» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "أَرْضٌ",
         "لِذَلِكَ",
-        "رُبَّمَا",
-        "لِأَنَّ",
-        "لَكِنَّ"
+        "اَلْحَذَرُ",
+        "اَللَّيْلُ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Shuning uchun = لِذَلِكَ"
     },
     {
       "q": "«اَلْفُطُورُ» so'zining ma'nosi?",
       "opts": [
-        "Chunki",
-        "Lekin, biroq",
+        "Yomg'irli",
+        "Harorat darajasi",
         "Nonushta",
-        "Yana bir bor"
+        "Avtoturargoh"
       ],
       "correct": 2,
-      "izoh": "اَلْفُطُورُ = Nonushta"
+      "izoh": "Nonushta = اَلْفُطُورُ"
     },
     {
       "q": "«مُنْخَفِضٌ» so'zining ma'nosi?",
       "opts": [
-        "Past",
-        "Ertalabki",
-        "Foydali",
-        "Asosiy"
+        "Eng past (harorat)",
+        "Uzunroq, eng uzun",
+        "Noldan past",
+        "Past"
       ],
-      "correct": 0,
-      "izoh": "مُنْخَفِضٌ = Past"
+      "correct": 3,
+      "izoh": "Past = مُنْخَفِضٌ"
     },
     {
       "q": "«خَمْسُونَ» so'zining ma'nosi?",
       "opts": [
-        "O'ttiz (30)",
-        "Yetti (7)",
-        "Yuz (100)",
-        "Ellik (50)"
+        "Salomlashish",
+        "Baland, yuqori",
+        "Ellik (50)",
+        "Qor"
       ],
-      "correct": 3,
-      "izoh": "خَمْسُونَ = Ellik (50)"
+      "correct": 2,
+      "izoh": "Ellik (50) = خَمْسُونَ"
     },
     {
       "q": "«مُمْطِرٌ» so'zining ma'nosi?",
       "opts": [
-        "Bo'ron",
-        "Quyoshli",
-        "Yomg'ir",
-        "Yomg'irli"
+        "Yomg'irli",
+        "Baland, yuqori",
+        "Charaqlagan, porloq",
+        "Musaffo, tiniq"
       ],
-      "correct": 3,
-      "izoh": "مُمْطِرٌ = Yomg'irli"
+      "correct": 0,
+      "izoh": "Yomg'irli = مُمْطِرٌ"
     },
     {
       "q": "«Dori» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلشِّفَاءُ",
+        "مَرَضٌ",
         "دَوَاءٌ",
         "اَلْعِلَاجُ",
-        "عَالَجَ"
+        "اَلطِّبُّ"
       ],
       "correct": 1,
       "izoh": "Dori = دَوَاءٌ"
@@ -149,65 +149,65 @@
     {
       "q": "«مُرْتَفِعٌ» so'zining ma'nosi?",
       "opts": [
-        "Zehnli, aqlli",
-        "Tinch, osoyishta",
+        "Noldan past",
+        "Uzunroq, eng uzun",
         "Baland, yuqori",
-        "Notanish, begona"
+        "Past"
       ],
       "correct": 2,
-      "izoh": "مُرْتَفِعٌ = Baland, yuqori"
+      "izoh": "Baland, yuqori = مُرْتَفِعٌ"
     },
     {
       "q": "«سَيَّارَةُ أُجْرَةٍ» so'zining ma'nosi?",
       "opts": [
-        "Bekat",
-        "Metr",
-        "Taksi",
-        "Avtobus"
+        "Iliq",
+        "Sero'b, kuchli (yomg'ir)",
+        "Dunyo, olam",
+        "Taksi"
       ],
-      "correct": 2,
-      "izoh": "سَيَّارَةُ أُجْرَةٍ = Taksi"
+      "correct": 3,
+      "izoh": "Taksi = سَيَّارَةُ أُجْرَةٍ"
     },
     {
       "q": "«Aloqa, bog'lanish» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تَعْبِيرَاتٌ شَائِعَةٌ",
-        "اَلرِّيَاضَةُ",
-        "دُولَارٌ",
-        "تَوَاصُلٌ"
+        "أَثْنَاءَ",
+        "غَدًا",
+        "تَوَاصُلٌ",
+        "صِيغَةٌ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Aloqa, bog'lanish = تَوَاصُلٌ"
     },
     {
       "q": "«Tirishmoq, harakat qilmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اِحْتَاجَ",
-        "اِشْتَهَرَ",
+        "تَمَنَّى",
         "اِجْتَهَدَ",
-        "اِتَّجَهَ"
+        "أَنْزَلَ",
+        "سَكَنَ"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Tirishmoq, harakat qilmoq = اِجْتَهَدَ"
     },
     {
       "q": "«رَكِبَ» so'zining ma'nosi?",
       "opts": [
-        "Bilmoq, tanimoq",
-        "Yo'nalmoq, burilmoq",
-        "Yiqilmoq; yog'moq",
-        "Minmoq (ulovga)"
+        "Unutmoq",
+        "Minmoq (ulovga)",
+        "To'kilmoq; sochilib yog'moq",
+        "Paydo bo'lmoq, ko'rinmoq"
       ],
-      "correct": 3,
-      "izoh": "رَكِبَ = Minmoq (ulovga)"
+      "correct": 1,
+      "izoh": "Minmoq (ulovga) = رَكِبَ"
     },
     {
       "q": "«Foydali» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "مُفِيدٌ",
-        "خَفِيفٌ",
-        "مُنْخَفِضٌ",
-        "مُرْتَفِعٌ"
+        "بِنْطَالٌ",
+        "عَمٌّ",
+        "مَتْجَرٌ"
       ],
       "correct": 0,
       "izoh": "Foydali = مُفِيدٌ"
@@ -215,86 +215,86 @@
     {
       "q": "«أَوْ» so'zining ma'nosi?",
       "opts": [
-        "Nonushta",
-        "Balki, ehtimol",
         "Chunki",
-        "Yoki"
+        "Yoki",
+        "Inkor yuklamalari",
+        "U yerda."
       ],
-      "correct": 3,
-      "izoh": "أَوْ = Yoki"
+      "correct": 1,
+      "izoh": "Yoki = أَوْ"
     },
     {
       "q": "«Tayyor» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "ذَكِيٌّ",
         "جَاهِزٌ",
-        "سَرِيرٌ",
-        "رَعَى",
-        "صَعْبٌ"
+        "اَلْبَرْدُ",
+        "حَارٌّ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Tayyor = جَاهِزٌ"
     },
     {
       "q": "«غَيْرُ» so'zining ma'nosi?",
       "opts": [
+        "Plyaj, qirg'oq",
         "...emas; boshqa",
-        "Yonida",
-        "Quyoshli",
-        "Universitet"
+        "Sero'b, kuchli (yomg'ir)",
+        "Kech (vaqtda)"
       ],
-      "correct": 0,
-      "izoh": "غَيْرُ = ...emas; boshqa"
+      "correct": 1,
+      "izoh": "...emas; boshqa = غَيْرُ"
     },
     {
       "q": "«Xursandchilik, shodlik» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "جَارٌ",
         "اَلْفَرَحُ",
-        "إِذَا",
-        "هُبُوطٌ",
-        "نَزَلَ"
+        "مُشْمِسٌ",
+        "اَلْعَالَمُ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Xursandchilik, shodlik = اَلْفَرَحُ"
     },
     {
       "q": "«دِيسَمْبِر» so'zining ma'nosi?",
       "opts": [
-        "Kunduzi",
-        "Kechasi",
-        "Kunduz",
-        "Dekabr"
+        "Dekabr",
+        "Shuning uchun",
+        "Past",
+        "Uzunroq, eng uzun"
       ],
-      "correct": 3,
-      "izoh": "دِيسَمْبِر = Dekabr"
+      "correct": 0,
+      "izoh": "Dekabr = دِيسَمْبِر"
     },
     {
       "q": "«اَلْمَطْلُوبُ» so'zining ma'nosi?",
       "opts": [
+        "Tashqarisida",
+        "Kecha (o'tgan kun)",
         "Talab qilingan (ish)",
-        "Keltir, ber",
-        "Mashqlar",
-        "Diqqat bilan qara"
+        "(Ertalabki) tuman"
       ],
-      "correct": 0,
-      "izoh": "اَلْمَطْلُوبُ = Talab qilingan (ish)"
+      "correct": 2,
+      "izoh": "Talab qilingan (ish) = اَلْمَطْلُوبُ"
     },
     {
       "q": "«سَمَاءٌ» so'zining ma'nosi?",
       "opts": [
+        "Tibbiyot",
         "Osmon",
-        "Shamol",
-        "Sovuq",
-        "Bo'ron"
+        "Tun",
+        "Yashaydi"
       ],
-      "correct": 0,
-      "izoh": "سَمَاءٌ = Osmon"
+      "correct": 1,
+      "izoh": "Osmon = سَمَاءٌ"
     },
     {
       "q": "«Bekat» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "شَجَرَةٌ",
+        "خَفِيفٌ",
         "مَوْقِفُ السَّيَّارَاتِ",
-        "حَافِلَةٌ",
-        "مِتْرٌ",
         "مَحَطَّةٌ"
       ],
       "correct": 3,
@@ -303,21 +303,21 @@
     {
       "q": "«سَقَطَ» so'zining ma'nosi?",
       "opts": [
-        "To'kilmoq; sochilib yog'moq",
-        "Bilmoq, tanimoq",
-        "Tushmoq; yog'moq",
-        "Yiqilmoq; yog'moq"
+        "Yiqilmoq; yog'moq",
+        "Tirishmoq, harakat qilmoq",
+        "Yetib bormoq",
+        "Bilmoq, tanimoq"
       ],
-      "correct": 3,
-      "izoh": "سَقَطَ = Yiqilmoq; yog'moq"
+      "correct": 0,
+      "izoh": "Yiqilmoq; yog'moq = سَقَطَ"
     },
     {
       "q": "«Ertalabki» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أَسَاسِيٌّ",
-        "غَرِيبٌ",
+        "جَاهِزٌ",
+        "اَلْبَرْدُ",
         "صَبَاحِيٌّ",
-        "مُفِيدٌ"
+        "ذَكِيٌّ"
       ],
       "correct": 2,
       "izoh": "Ertalabki = صَبَاحِيٌّ"
@@ -325,10 +325,10 @@
     {
       "q": "«Muammo» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلرَّبِيعُ",
-        "مُقَابَلَةٌ",
+        "اَلنَّجَاحُ",
+        "تَأَمَّلْ",
         "مُشْكِلَةٌ",
-        "عَيِّنْ"
+        "مُذِيعٌ"
       ],
       "correct": 2,
       "izoh": "Muammo = مُشْكِلَةٌ"
@@ -336,19 +336,19 @@
     {
       "q": "«Kecha (o'tgan kun)» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "مُتَأَخِّرٌ",
         "أَمْسِ",
-        "كَسْلَانُ",
-        "ظَهَرَ",
-        "قِصَّةٌ"
+        "اَلنَّهَارُ",
+        "قَادِمٌ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Kecha (o'tgan kun) = أَمْسِ"
     },
     {
       "q": "«Sovuq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "دَافِئٌ",
-        "اَلْبَرْدُ",
+        "صَبَاحِيٌّ",
+        "مَقْلِيٌّ",
         "بَارِدٌ",
         "حَارٌّ"
       ],
@@ -358,10 +358,10 @@
     {
       "q": "«(Ertalabki) tuman» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلصُّغْرَى",
+        "اَلصَّيْفُ",
         "اَلشَّبُورَةُ",
-        "اَلْبَرْدُ",
-        "اَلْجَوُّ"
+        "اَلشِّتَاءُ",
+        "مَطَرٌ"
       ],
       "correct": 1,
       "izoh": "(Ertalabki) tuman = اَلشَّبُورَةُ"
@@ -369,240 +369,240 @@
     {
       "q": "«رِيحٌ» so'zining ma'nosi?",
       "opts": [
-        "Quyoshli",
-        "Osmon",
-        "Sovuq",
-        "Shamol"
+        "Shamol",
+        "Istirohat bog'i",
+        "Ichida, ichkarisida",
+        "Musaffo, tiniq"
       ],
-      "correct": 3,
-      "izoh": "رِيحٌ = Shamol"
+      "correct": 0,
+      "izoh": "Shamol = رِيحٌ"
     },
     {
       "q": "«اَلْعِلَاجُ» so'zining ma'nosi?",
       "opts": [
-        "Davolamoq",
         "Davo, muolaja",
-        "Shifo",
-        "Dori"
+        "Dori",
+        "Kasallik",
+        "Tibbiyot"
       ],
-      "correct": 1,
-      "izoh": "اَلْعِلَاجُ = Davo, muolaja"
+      "correct": 0,
+      "izoh": "Davo, muolaja = اَلْعِلَاجُ"
     },
     {
       "q": "«دَافِئٌ» so'zining ma'nosi?",
       "opts": [
-        "Yomg'irli",
+        "Dekabr",
         "Iliq",
-        "Issiq",
-        "Bulutli"
+        "Kasallik",
+        "Qaytadan bajar, takrorla"
       ],
       "correct": 1,
-      "izoh": "دَافِئٌ = Iliq"
+      "izoh": "Iliq = دَافِئٌ"
     },
     {
       "q": "«Topmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أَعِدْ",
-        "وَصَلَ",
+        "اِشْتَهَرَ",
         "نَجَحَ",
-        "وَجَدَ"
+        "وَجَدَ",
+        "اِجْتَهَدَ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Topmoq = وَجَدَ"
     },
     {
       "q": "«Sero'b, kuchli (yomg'ir)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُفِيدٌ",
-        "خَفِيفٌ",
+        "حَافِلَةٌ",
         "غَزِيرٌ",
+        "شَجَرَةٌ",
         "غَرِيبٌ"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Sero'b, kuchli (yomg'ir) = غَزِيرٌ"
     },
     {
       "q": "«Barg; varaq» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "اَلشَّبُورَةُ",
         "وَرَقَةٌ",
-        "مُتَنَزَّهٌ",
-        "مَنْظَرٌ",
-        "شَجَرَةٌ"
+        "مَطَرٌ",
+        "اَلشِّتَاءُ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Barg; varaq = وَرَقَةٌ"
     },
     {
       "q": "«Bulutli» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَمَاءٌ",
-        "دَافِئٌ",
-        "مُتَغَيِّرٌ",
-        "غَائِمٌ"
+        "غَزِيرٌ",
+        "لَيْلًا",
+        "غَائِمٌ",
+        "سَمَاءٌ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Bulutli = غَائِمٌ"
     },
     {
       "q": "«بَعِيدٌ» so'zining ma'nosi?",
       "opts": [
+        "Harorat darajasi",
         "Uzoq",
-        "Avtoturargoh",
-        "Metr",
-        "Avtobus"
+        "Qish",
+        "Mango"
       ],
-      "correct": 0,
-      "izoh": "بَعِيدٌ = Uzoq"
+      "correct": 1,
+      "izoh": "Uzoq = بَعِيدٌ"
     },
     {
       "q": "«Qovurilgan» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَقْلِيٌّ",
-        "كَسْلَانُ",
-        "أَوْ",
-        "اَلْفَجْرُ"
+        "اَلْبَرْدُ",
+        "جَاهِزٌ",
+        "صَبَاحِيٌّ",
+        "مَقْلِيٌّ"
       ],
-      "correct": 0,
+      "correct": 3,
       "izoh": "Qovurilgan = مَقْلِيٌّ"
     },
     {
       "q": "«Muvaffaqiyat qozonmoq, o'tmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "وَجَدَ",
-        "نَجَحَ",
-        "نَسِيَ",
-        "نَزَلَ"
+        "نَزَلَ",
+        "عَادَ",
+        "وَصَلَ",
+        "نَجَحَ"
       ],
-      "correct": 1,
+      "correct": 3,
       "izoh": "Muvaffaqiyat qozonmoq, o'tmoq = نَجَحَ"
     },
     {
       "q": "«سَكَنَ» so'zining ma'nosi?",
       "opts": [
-        "Yo'nalmoq, burilmoq",
+        "Orzu qilmoq",
         "Tirishmoq, harakat qilmoq",
-        "Paydo bo'lmoq, ko'rinmoq",
+        "Nozil qilmoq, tushirmoq",
         "Yashamoq, istiqomat qilmoq"
       ],
       "correct": 3,
-      "izoh": "سَكَنَ = Yashamoq, istiqomat qilmoq"
+      "izoh": "Yashamoq, istiqomat qilmoq = سَكَنَ"
     },
     {
       "q": "«اَلصُّغْرَى» so'zining ma'nosi?",
       "opts": [
+        "Uzunroq, eng uzun",
+        "Baland, yuqori",
         "Eng past (harorat)",
-        "Harorat darajasi",
-        "Eng yuqori (harorat)",
-        "Sovuq, sovuqlik (ot)"
+        "Past"
       ],
-      "correct": 0,
-      "izoh": "اَلصُّغْرَى = Eng past (harorat)"
+      "correct": 2,
+      "izoh": "Eng past (harorat) = اَلصُّغْرَى"
     },
     {
       "q": "«اَلطِّبُّ» so'zining ma'nosi?",
       "opts": [
-        "Ingliz tili",
-        "Tabiiy fanlar",
+        "Davo, muolaja",
         "Tibbiyot",
-        "Muhandislik"
+        "Kasallik",
+        "Dori"
       ],
-      "correct": 2,
-      "izoh": "اَلطِّبُّ = Tibbiyot"
+      "correct": 1,
+      "izoh": "Tibbiyot = اَلطِّبُّ"
     },
     {
       "q": "«رُبَّمَا» so'zining ma'nosi?",
       "opts": [
-        "Shuning uchun",
-        "Yana bir bor",
-        "Lekin, biroq",
+        "O'ttiz (30)",
+        "Bulutli",
+        "Avtobus",
         "Balki, ehtimol"
       ],
       "correct": 3,
-      "izoh": "رُبَّمَا = Balki, ehtimol"
+      "izoh": "Balki, ehtimol = رُبَّمَا"
     },
     {
       "q": "«Salomlashish» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "أَمْسِ",
+        "رَاتِبٌ",
         "التَّحِيَّة",
-        "أَبْيَضُ",
-        "خَمْسُونَ",
-        "اِقْتَرَبَ"
+        "اَلْعِلَاجُ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Salomlashish = التَّحِيَّة"
     },
     {
       "q": "«ظَرْفُ الزَّمَانِ وَالْمَكَانِ» so'zining ma'nosi?",
       "opts": [
+        "O'tiradi.",
+        "Xona.",
         "Payt va o'rin ravishi",
-        "Ichida, ichkarisida",
-        "Ega va kesim (mubtado-xabar)",
-        "Shakl (so'z shakli)"
+        "Do'st."
       ],
-      "correct": 0,
-      "izoh": "ظَرْفُ الزَّمَانِ وَالْمَكَانِ = Payt va o'rin ravishi"
+      "correct": 2,
+      "izoh": "Payt va o'rin ravishi = ظَرْفُ الزَّمَانِ وَالْمَكَانِ"
     },
     {
       "q": "«ثَلَاثُون» so'zining ma'nosi?",
       "opts": [
         "O'ttiz (30)",
-        "Yuz (100)",
-        "Ellik (50)",
-        "To'qqiz (9)"
+        "Musaffo, tiniq",
+        "Kech (vaqtda)",
+        "Kecha (o'tgan kun)"
       ],
       "correct": 0,
-      "izoh": "ثَلَاثُون = O'ttiz (30)"
+      "izoh": "O'ttiz (30) = ثَلَاثُون"
     },
     {
       "q": "«Turizm, sayyohlik» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "اَلشَّبُورَةُ",
+        "لَيْلًا",
         "اَلسِّيَاحَةُ",
-        "اَلْعَالَمُ",
-        "سَاحِلٌ",
-        "أَنْحَاءُ"
+        "مُفِيدٌ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Turizm, sayyohlik = اَلسِّيَاحَةُ"
     },
     {
       "q": "«تَمَنَّى» so'zining ma'nosi?",
       "opts": [
-        "Muhtoj bo'lmoq",
-        "Yetib bormoq",
+        "Tirishmoq, harakat qilmoq",
         "Orzu qilmoq",
-        "Bo'lmoq"
+        "Nozil qilmoq, tushirmoq",
+        "Yashamoq, istiqomat qilmoq"
       ],
-      "correct": 2,
-      "izoh": "تَمَنَّى = Orzu qilmoq"
+      "correct": 1,
+      "izoh": "Orzu qilmoq = تَمَنَّى"
     },
     {
       "q": "«Yashaydi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "بَيْت",
-        "سَعِيد",
         "يَسْكُنُ",
-        "عَلَم"
+        "أَطْوَلُ",
+        "اَلْحَذَرُ",
+        "اَلْمَطْلُوبُ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "Yashaydi = يَسْكُنُ"
     },
     {
       "q": "«Daraxt» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَنْظَرٌ",
-        "شَاطِئٌ",
-        "وَرَقَةٌ",
-        "شَجَرَةٌ"
+        "شَجَرَةٌ",
+        "مَرَضٌ",
+        "التَّحِيَّة",
+        "اَلطِّبُّ"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Daraxt = شَجَرَةٌ"
     },
     {
       "q": "«Qaytadan bajar, takrorla» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اِجْتَهَدَ",
-        "عَادَ",
-        "اِسْتَمْتَعَ",
+        "عُنْوَانٌ",
+        "اَلنَّهَارُ",
+        "شَاطِئٌ",
         "أَعِدْ"
       ],
       "correct": 3,
@@ -611,20 +611,20 @@
     {
       "q": "«حَافِلَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Bekat",
-        "Avtoturargoh",
-        "Taksi",
-        "Avtobus"
+        "Salomlashish",
+        "Asos, ustun",
+        "Avtobus",
+        "Maosh, oylik"
       ],
-      "correct": 3,
-      "izoh": "حَافِلَةٌ = Avtobus"
+      "correct": 2,
+      "izoh": "Avtobus = حَافِلَةٌ"
     },
     {
       "q": "«Yo'nalmoq, burilmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اِشْتَهَرَ",
-        "اِجْتَهَدَ",
-        "اِحْتَاجَ",
+        "نَزَلَ",
+        "كَانَ",
+        "حَدِّدْ",
         "اِتَّجَهَ"
       ],
       "correct": 3,
@@ -633,67 +633,67 @@
     {
       "q": "«اَلصَّيْفُ» so'zining ma'nosi?",
       "opts": [
-        "Kunduz",
-        "Tun",
-        "Kunduzi",
-        "Yoz"
+        "Yoz",
+        "Barg; varaq",
+        "Yomg'ir",
+        "(Ertalabki) tuman"
       ],
-      "correct": 3,
-      "izoh": "اَلصَّيْفُ = Yoz"
+      "correct": 0,
+      "izoh": "Yoz = اَلصَّيْفُ"
     },
     {
       "q": "«عَلَم» so'zining ma'nosi?",
       "opts": [
-        "Shahar",
-        "Uy",
-        "Yashaydi",
-        "Bayroq"
+        "Bayroq",
+        "Uzoq",
+        "Yoz",
+        "Dunyo, olam"
       ],
-      "correct": 3,
-      "izoh": "عَلَم = Bayroq"
+      "correct": 0,
+      "izoh": "Bayroq = عَلَم"
     },
     {
       "q": "«عُنْوَانٌ» so'zining ma'nosi?",
       "opts": [
+        "Dengiz",
         "Manzil",
-        "Uyg'onmoq",
-        "Sovg'a",
-        "Muhtoj bo'lmoq"
+        "Shahar",
+        "Zal."
       ],
-      "correct": 0,
-      "izoh": "عُنْوَانٌ = Manzil"
+      "correct": 1,
+      "izoh": "Manzil = عُنْوَانٌ"
     },
     {
       "q": "«عَالَجَ» so'zining ma'nosi?",
       "opts": [
-        "Davo, muolaja",
-        "Shifo",
+        "Muhtoj bo'lmoq",
         "Davolamoq",
-        "Dori"
+        "Orzu qilmoq",
+        "Afzal ko'rmoq"
       ],
-      "correct": 2,
-      "izoh": "عَالَجَ = Davolamoq"
+      "correct": 1,
+      "izoh": "Davolamoq = عَالَجَ"
     },
     {
       "q": "«اَلْعَالَمُ» so'zining ma'nosi?",
       "opts": [
-        "Hududlar, tomonlar",
-        "Barg; varaq",
-        "Plyaj, qirg'oq",
-        "Dunyo, olam"
+        "Dunyo, olam",
+        "Charaqlagan, porloq",
+        "Tun",
+        "Keyingi, kelayotgan"
       ],
-      "correct": 3,
-      "izoh": "اَلْعَالَمُ = Dunyo, olam"
+      "correct": 0,
+      "izoh": "Dunyo, olam = اَلْعَالَمُ"
     },
     {
       "q": "«Yurmoq (piyoda)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُسَابَقَةٌ",
-        "اَلنَّادِي",
-        "اَلْمَشْيُ",
-        "مَشَى"
+        "مَشَى",
+        "نَزَلَ",
+        "سَافَرَ",
+        "سَلَكَ"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Yurmoq (piyoda) = مَشَى"
     },
     {
@@ -701,294 +701,294 @@
       "opts": [
         "Matn",
         "Paragraf, band",
-        "So'z",
-        "Amman"
+        "Kecha (o'tgan kun)",
+        "Manzil"
       ],
       "correct": 0,
-      "izoh": "نَصٌّ = Matn"
+      "izoh": "Matn = نَصٌّ"
     },
     {
       "q": "«Muhtoj bo'lmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "اِشْتَهَرَ",
-        "اِجْتَهَدَ",
         "اِحْتَاجَ",
-        "اِتَّجَهَ"
+        "كَانَ",
+        "ظَهَرَ"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Muhtoj bo'lmoq = اِحْتَاجَ"
     },
     {
       "q": "«اِشْتَهَرَ» so'zining ma'nosi?",
       "opts": [
-        "Qaytadan bajar, takrorla",
-        "Yashamoq, istiqomat qilmoq",
-        "Tirishmoq, harakat qilmoq",
-        "...bilan mashhur bo'lmoq"
+        "...bilan mashhur bo'lmoq",
+        "Muhtoj bo'lmoq",
+        "Paydo bo'lmoq, ko'rinmoq",
+        "Bo'lmoq"
       ],
-      "correct": 3,
-      "izoh": "اِشْتَهَرَ = ...bilan mashhur bo'lmoq"
+      "correct": 0,
+      "izoh": "...bilan mashhur bo'lmoq = اِشْتَهَرَ"
     },
     {
       "q": "«أَثْنَاءَ» so'zining ma'nosi?",
       "opts": [
-        "Kechasi",
-        "Davomida, paytida",
+        "Mumkin",
         "Dekabr",
-        "Kunduzi"
+        "Shim",
+        "Davomida, paytida"
       ],
-      "correct": 1,
-      "izoh": "أَثْنَاءَ = Davomida, paytida"
+      "correct": 3,
+      "izoh": "Davomida, paytida = أَثْنَاءَ"
     },
     {
       "q": "«Yonida» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْغَرْبُ",
-        "اَلْجَنُوبُ",
-        "بِجَانِبِ",
-        "اِتِّجَاهٌ"
+        "أَعِدْ",
+        "جِنْسِيَّةٌ",
+        "إِذَنْ",
+        "بِجَانِبِ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Yonida = بِجَانِبِ"
     },
     {
       "q": "«تَأَخَّرَ» so'zining ma'nosi?",
       "opts": [
-        "Kechikmoq",
-        "Orzu qilmoq",
+        "Muhtoj bo'lmoq",
         "Unutmoq",
-        "Yetib bormoq"
+        "Kechikmoq",
+        "Bilmoq, tanimoq"
       ],
-      "correct": 0,
-      "izoh": "تَأَخَّرَ = Kechikmoq"
+      "correct": 2,
+      "izoh": "Kechikmoq = تَأَخَّرَ"
     },
     {
       "q": "«Yana bir bor» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "مُفِيدٌ",
         "مَرَّةً أُخْرَى",
-        "رُبَّمَا",
-        "أَوْ",
-        "اَلْفُطُورُ"
+        "بَيْت",
+        "بِجَانِبِ"
       ],
-      "correct": 0,
+      "correct": 1,
       "izoh": "Yana bir bor = مَرَّةً أُخْرَى"
     },
     {
       "q": "«فَضَّلَ» so'zining ma'nosi?",
       "opts": [
-        "Yetib bormoq",
+        "Davolamoq",
+        "Tushmoq; yog'moq",
         "...dan zavqlanmoq",
-        "Muhtoj bo'lmoq",
         "Afzal ko'rmoq"
       ],
       "correct": 3,
-      "izoh": "فَضَّلَ = Afzal ko'rmoq"
+      "izoh": "Afzal ko'rmoq = فَضَّلَ"
     },
     {
       "q": "«مَطَرٌ» so'zining ma'nosi?",
       "opts": [
         "Yomg'ir",
-        "Yomg'irli",
-        "Quyoshli",
-        "Bo'ron"
+        "Qish",
+        "(Ertalabki) tuman",
+        "Barg; varaq"
       ],
       "correct": 0,
-      "izoh": "مَطَرٌ = Yomg'ir"
+      "izoh": "Yomg'ir = مَطَرٌ"
     },
     {
       "q": "«اَلشِّتَاءُ» so'zining ma'nosi?",
       "opts": [
+        "Barg; varaq",
         "Qish",
-        "Fasl",
-        "Kechasi",
-        "Yoz"
+        "(Ertalabki) tuman",
+        "Yomg'ir"
       ],
-      "correct": 0,
-      "izoh": "اَلشِّتَاءُ = Qish"
+      "correct": 1,
+      "izoh": "Qish = اَلشِّتَاءُ"
     },
     {
       "q": "«طُولٌ» so'zining ma'nosi?",
       "opts": [
-        "Keyingi, kelayotgan",
-        "Vazn, og'irlik",
-        "Diktor, boshlovchi",
+        "Nonushta",
+        "Yo'nalish",
+        "Kerak, lozim",
         "Bo'y, uzunlik"
       ],
       "correct": 3,
-      "izoh": "طُولٌ = Bo'y, uzunlik"
+      "izoh": "Bo'y, uzunlik = طُولٌ"
     },
     {
       "q": "«Paragraf, band» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "وَرَقَةٌ",
-        "نَصٌّ",
-        "كَلِمَةٌ",
-        "فِقْرَةٌ"
+        "فِقْرَةٌ",
+        "أَطْوَلُ",
+        "اَللَّيْلُ",
+        "أَرْضٌ"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Paragraf, band = فِقْرَةٌ"
     },
     {
       "q": "«Mango» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "عِيَادَةٌ",
+        "اَلشَّبُورَةُ",
         "مَانْجُو",
-        "دَجَاجٌ",
-        "صُنْدُوقٌ",
-        "طِفْلٌ"
+        "أَطْوَلُ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Mango = مَانْجُو"
     },
     {
       "q": "«هَادِئٌ» so'zining ma'nosi?",
       "opts": [
-        "Baland, yuqori",
-        "Notanish, begona",
         "Tinch, osoyishta",
-        "Uzunroq, eng uzun"
+        "Plyaj, qirg'oq",
+        "Yonida",
+        "Ota"
       ],
-      "correct": 2,
-      "izoh": "هَادِئٌ = Tinch, osoyishta"
+      "correct": 0,
+      "izoh": "Tinch, osoyishta = هَادِئٌ"
     },
     {
       "q": "«نَسِيَ» so'zining ma'nosi?",
       "opts": [
-        "Unutmoq",
-        "Bo'lmoq",
-        "Qaytmoq",
-        "Topmoq"
+        "Aniqla, belgila",
+        "Yiqilmoq; yog'moq",
+        "Muvaffaqiyat qozonmoq, o'tmoq",
+        "Unutmoq"
       ],
-      "correct": 0,
-      "izoh": "نَسِيَ = Unutmoq"
+      "correct": 3,
+      "izoh": "Unutmoq = نَسِيَ"
     },
     {
       "q": "«عَرَفَ» so'zining ma'nosi?",
       "opts": [
-        "Yiqilmoq; yog'moq",
+        "Aniqla, belgila",
         "Nozil qilmoq, tushirmoq",
         "Bilmoq, tanimoq",
-        "Minmoq (ulovga)"
+        "To'kilmoq; sochilib yog'moq"
       ],
       "correct": 2,
-      "izoh": "عَرَفَ = Bilmoq, tanimoq"
+      "izoh": "Bilmoq, tanimoq = عَرَفَ"
     },
     {
       "q": "«Bo'lmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "يُمْكِنُ أَنْ",
-        "أَنْزَلَ",
+        "اِحْتَاجَ",
         "كَانَ",
-        "سَكَنَ"
+        "اِشْتَهَرَ",
+        "ظَهَرَ"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Bo'lmoq = كَانَ"
     },
     {
       "q": "«تَسَاقَطَ» so'zining ma'nosi?",
       "opts": [
         "Nozil qilmoq, tushirmoq",
-        "Tushmoq; yog'moq",
-        "Paydo bo'lmoq, ko'rinmoq",
-        "To'kilmoq; sochilib yog'moq"
+        "Muvaffaqiyat qozonmoq, o'tmoq",
+        "To'kilmoq; sochilib yog'moq",
+        "Muhtoj bo'lmoq"
       ],
-      "correct": 3,
-      "izoh": "تَسَاقَطَ = To'kilmoq; sochilib yog'moq"
+      "correct": 2,
+      "izoh": "To'kilmoq; sochilib yog'moq = تَسَاقَطَ"
     },
     {
       "q": "«شَاطِئٌ» so'zining ma'nosi?",
       "opts": [
-        "Istirohat bog'i",
-        "Barg; varaq",
-        "Dunyo, olam",
-        "Plyaj, qirg'oq"
+        "Parij",
+        "Plyaj, qirg'oq",
+        "Matn",
+        "Notanish, begona"
       ],
-      "correct": 3,
-      "izoh": "شَاطِئٌ = Plyaj, qirg'oq"
+      "correct": 1,
+      "izoh": "Plyaj, qirg'oq = شَاطِئٌ"
     },
     {
       "q": "«Yo'nalish» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْجَنُوبُ",
-        "بِجَانِبِ",
-        "اَلشَّرْقُ",
-        "اِتِّجَاهٌ"
+        "أَعِدْ",
+        "تَدْرِيبَاتٌ",
+        "اِتِّجَاهٌ",
+        "مَطَرٌ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Yo'nalish = اِتِّجَاهٌ"
     },
     {
       "q": "«Diqqat bilan qara» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "هَاتِ",
-        "تَدْرِيبَاتٌ",
+        "عَاصِفَةٌ",
         "تَأَمَّلْ",
-        "اَلْمَطْلُوبُ"
+        "حَافِلَةٌ",
+        "مَرَضٌ"
       ],
-      "correct": 2,
+      "correct": 1,
       "izoh": "Diqqat bilan qara = تَأَمَّلْ"
     },
     {
       "q": "«أَنْزَلَ» so'zining ma'nosi?",
       "opts": [
-        "Yo'nalmoq, burilmoq",
-        "Nozil qilmoq, tushirmoq",
-        "Paydo bo'lmoq, ko'rinmoq",
-        "To'kilmoq; sochilib yog'moq"
+        "Orzu qilmoq",
+        "Yashamoq, istiqomat qilmoq",
+        "Tirishmoq, harakat qilmoq",
+        "Nozil qilmoq, tushirmoq"
       ],
-      "correct": 1,
-      "izoh": "أَنْزَلَ = Nozil qilmoq, tushirmoq"
+      "correct": 3,
+      "izoh": "Nozil qilmoq, tushirmoq = أَنْزَلَ"
     },
     {
       "q": "«Istirohat bog'i» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَنْظَرٌ",
-        "مُتَنَزَّهٌ",
-        "اَلْعَالَمُ",
-        "أَنْحَاءُ"
+        "دَرَجَةُ الْحَرَارَةِ",
+        "يَسْكُنُ",
+        "حَافِلَةٌ",
+        "مُتَنَزَّهٌ"
       ],
-      "correct": 1,
+      "correct": 3,
       "izoh": "Istirohat bog'i = مُتَنَزَّهٌ"
     },
     {
       "q": "«عَادَ» so'zining ma'nosi?",
       "opts": [
+        "Bilmoq, tanimoq",
         "Qaytmoq",
-        "Bo'lmoq",
-        "Unutmoq",
-        "Topmoq"
+        "Tushmoq; yog'moq",
+        "...dan zavqlanmoq"
       ],
-      "correct": 0,
-      "izoh": "عَادَ = Qaytmoq"
+      "correct": 1,
+      "izoh": "Qaytmoq = عَادَ"
     },
     {
       "q": "«Chunki» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "لَكِنَّ",
+        "لَمْ",
+        "أَوْ",
         "لِأَنَّ",
-        "لِذَلِكَ",
-        "أَوْ"
+        "بَعْدَ"
       ],
-      "correct": 1,
+      "correct": 2,
       "izoh": "Chunki = لِأَنَّ"
     },
     {
       "q": "«أَكْمِلْ» so'zining ma'nosi?",
       "opts": [
-        "To'ldir, yakunla",
-        "O'xshaydi",
-        "Muammo",
-        "Oltmish (60)"
+        "Kech (vaqtda)",
+        "Quyoshli",
+        "Mashina haydash",
+        "To'ldir, yakunla"
       ],
-      "correct": 0,
-      "izoh": "أَكْمِلْ = To'ldir, yakunla"
+      "correct": 3,
+      "izoh": "To'ldir, yakunla = أَكْمِلْ"
     },
     {
       "q": "«Eng yuqori (harorat)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلصُّغْرَى",
-        "اَلشَّبُورَةُ",
+        "مُشْكِلَةٌ",
+        "جِنْسِيَّةٌ",
         "اَلْعُظْمَى",
-        "مُعْتَدِلٌ"
+        "مُفِيدٌ"
       ],
       "correct": 2,
       "izoh": "Eng yuqori (harorat) = اَلْعُظْمَى"
@@ -996,42 +996,42 @@
     {
       "q": "«بِنْطَالٌ» so'zining ma'nosi?",
       "opts": [
-        "Shimol",
+        "Tinch, osoyishta",
         "Shim",
-        "Sohil",
-        "Poyabzal, oyoq kiyim"
+        "O'ttiz (30)",
+        "Xursandchilik, shodlik"
       ],
       "correct": 1,
-      "izoh": "بِنْطَالٌ = Shim"
+      "izoh": "Shim = بِنْطَالٌ"
     },
     {
       "q": "«Qabulxona, klinika» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عِيَادَةٌ",
-        "مَشْرُوبَاتٌ",
-        "لَدَيْهِ",
-        "حِذَاءٌ"
+        "أَعِدْ",
+        "بِنْطَالٌ",
+        "أَكْمِلْ",
+        "عِيَادَةٌ"
       ],
-      "correct": 0,
+      "correct": 3,
       "izoh": "Qabulxona, klinika = عِيَادَةٌ"
     },
     {
       "q": "«صَافٍ» so'zining ma'nosi?",
       "opts": [
-        "Mo''tadil, o'rtacha",
-        "(Ertalabki) tuman",
-        "Ob-havo, havo",
-        "Musaffo, tiniq"
+        "Harorat darajasi",
+        "Musaffo, tiniq",
+        "Avtoturargoh",
+        "Iliq"
       ],
-      "correct": 3,
-      "izoh": "صَافٍ = Musaffo, tiniq"
+      "correct": 1,
+      "izoh": "Musaffo, tiniq = صَافٍ"
     },
     {
       "q": "«Avtoturargoh» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "سَيَّارَةُ أُجْرَةٍ",
-        "إِشَارَاتُ الْمُرُورِ",
-        "مِتْرٌ",
+        "أَكْمِلْ",
+        "اَلْقِيَادَةُ",
+        "اَلْعَالَمُ",
         "مَوْقِفُ السَّيَّارَاتِ"
       ],
       "correct": 3,
@@ -1040,87 +1040,87 @@
     {
       "q": "«Kilogramm» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "طُولٌ",
-        "وَزْنٌ",
         "كِيلُو",
-        "مُذِيعٌ"
+        "مُشْمِسٌ",
+        "مَتْجَرٌ",
+        "هَاتِ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "Kilogramm = كِيلُو"
     },
     {
       "q": "«Paydo bo'lmoq, ko'rinmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عَرَفَ",
         "ظَهَرَ",
-        "رَكِبَ",
-        "تَأَخَّرَ"
+        "اِحْتَاجَ",
+        "اِشْتَهَرَ",
+        "كَانَ"
       ],
-      "correct": 1,
+      "correct": 0,
       "izoh": "Paydo bo'lmoq, ko'rinmoq = ظَهَرَ"
     },
     {
       "q": "«Quyoshli» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُشْرِقٌ",
-        "مُمْطِرٌ",
         "مُشْمِسٌ",
+        "غَدًا",
+        "مَرَضٌ",
         "مَطَرٌ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "Quyoshli = مُشْمِسٌ"
     },
     {
       "q": "«حَارٌّ» so'zining ma'nosi?",
       "opts": [
-        "Osmon",
         "Issiq",
-        "Iliq",
-        "Sovuq"
+        "Tayyor",
+        "Sovuq",
+        "Ertalabki"
       ],
-      "correct": 1,
-      "izoh": "حَارٌّ = Issiq"
+      "correct": 0,
+      "izoh": "Issiq = حَارٌّ"
     },
     {
       "q": "«رُكْنٌ» so'zining ma'nosi?",
       "opts": [
-        "Asos, ustun",
-        "Zamon, vaqt",
-        "Tur, xil",
-        "Tashqarisida"
+        "Daraxt",
+        "Bayroq",
+        "Keltir, ber",
+        "Asos, ustun"
       ],
-      "correct": 0,
-      "izoh": "رُكْنٌ = Asos, ustun"
+      "correct": 3,
+      "izoh": "Asos, ustun = رُكْنٌ"
     },
     {
       "q": "«Harorat darajasi» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلشَّبُورَةُ",
-        "اَلْبَرْدُ",
-        "دَرَجَةُ الْحَرَارَةِ",
-        "تَحْتَ الصِّفْرِ"
+        "أَطْوَلُ",
+        "يَسْكُنُ",
+        "مُذِيعٌ",
+        "دَرَجَةُ الْحَرَارَةِ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Harorat darajasi = دَرَجَةُ الْحَرَارَةِ"
     },
     {
       "q": "«نَوْعٌ» so'zining ma'nosi?",
       "opts": [
-        "Tashqarisida",
-        "Tur, xil",
-        "Asos, ustun",
-        "Zamon, vaqt"
+        "Yana bir bor",
+        "Aloqa, bog'lanish",
+        "Kunduz",
+        "Tur, xil"
       ],
-      "correct": 1,
-      "izoh": "نَوْعٌ = Tur, xil"
+      "correct": 3,
+      "izoh": "Tur, xil = نَوْعٌ"
     },
     {
       "q": "«Kerak, lozim» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "يَجِبُ أَنْ",
-        "تَمَنَّى",
-        "يُمْكِنُ أَنْ",
-        "كَانَ"
+        "دَافِئٌ",
+        "اَلْجَوُّ",
+        "اَلطِّبُّ"
       ],
       "correct": 0,
       "izoh": "Kerak, lozim = يَجِبُ أَنْ"
@@ -1128,120 +1128,120 @@
     {
       "q": "«رَاتِبٌ» so'zining ma'nosi?",
       "opts": [
+        "Ichida, ichkarisida",
         "Maosh, oylik",
-        "Xizmatchi, xodim",
-        "Sartaroshxona",
-        "Xabar, yangilik"
+        "Unday bo'lsa",
+        "Ehtiyotkorlik"
       ],
-      "correct": 0,
-      "izoh": "رَاتِبٌ = Maosh, oylik"
+      "correct": 1,
+      "izoh": "Maosh, oylik = رَاتِبٌ"
     },
     {
       "q": "«مُتَأَخِّرٌ» so'zining ma'nosi?",
       "opts": [
-        "Vazn, og'irlik",
-        "Keyingi, kelayotgan",
         "Kech (vaqtda)",
-        "Bo'y, uzunlik"
+        "Kunduz",
+        "Kecha (o'tgan kun)",
+        "Keyingi, kelayotgan"
       ],
-      "correct": 2,
-      "izoh": "مُتَأَخِّرٌ = Kech (vaqtda)"
+      "correct": 0,
+      "izoh": "Kech (vaqtda) = مُتَأَخِّرٌ"
     },
     {
       "q": "«Kunduz» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "قَادِمٌ",
+        "مُتَأَخِّرٌ",
         "اَلنَّهَارُ",
-        "اَللَّيْلُ",
-        "أَثْنَاءَ",
-        "نَهَارًا"
+        "أَمْسِ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Kunduz = اَلنَّهَارُ"
     },
     {
       "q": "«عَمٌّ» so'zining ma'nosi?",
       "opts": [
+        "...emas; boshqa",
         "Amaki",
-        "Tana",
-        "Quti",
-        "Bufet (yemakxona)"
+        "Maosh, oylik",
+        "Qabulxona, klinika"
       ],
-      "correct": 0,
-      "izoh": "عَمٌّ = Amaki"
+      "correct": 1,
+      "izoh": "Amaki = عَمٌّ"
     },
     {
       "q": "«اَلرَّبِيعُ» so'zining ma'nosi?",
       "opts": [
-        "Bahor",
-        "Belgilab ko'rsat",
-        "Baliq",
-        "Muammo"
+        "Foydali",
+        "Dori",
+        "Bulutli",
+        "Bahor"
       ],
-      "correct": 0,
-      "izoh": "اَلرَّبِيعُ = Bahor"
+      "correct": 3,
+      "izoh": "Bahor = اَلرَّبِيعُ"
     },
     {
       "q": "«جَارٌ» so'zining ma'nosi?",
       "opts": [
-        "Lift",
-        "Oshxona",
-        "Qo'shni",
-        "Yotoq xonasi"
+        "Poyabzal, oyoq kiyim",
+        "Diqqat bilan qara",
+        "Sero'b, kuchli (yomg'ir)",
+        "Qo'shni"
       ],
-      "correct": 2,
-      "izoh": "جَارٌ = Qo'shni"
+      "correct": 3,
+      "izoh": "Qo'shni = جَارٌ"
     },
     {
       "q": "«Uzunroq, eng uzun» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أَسَاسِيٌّ",
-        "صَبَاحِيٌّ",
-        "هَادِئٌ",
-        "أَطْوَلُ"
+        "مُنْخَفِضٌ",
+        "أَطْوَلُ",
+        "خَفِيفٌ",
+        "تَحْتَ الصِّفْرِ"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Uzunroq, eng uzun = أَطْوَلُ"
     },
     {
       "q": "«مُذِيعٌ» so'zining ma'nosi?",
       "opts": [
-        "Kech (vaqtda)",
         "Diktor, boshlovchi",
-        "Keyingi, kelayotgan",
-        "Santimetr"
+        "Ota",
+        "Uy",
+        "Tinch, osoyishta"
       ],
-      "correct": 1,
-      "izoh": "مُذِيعٌ = Diktor, boshlovchi"
+      "correct": 0,
+      "izoh": "Diktor, boshlovchi = مُذِيعٌ"
     },
     {
       "q": "«اَلْبَرْدُ» so'zining ma'nosi?",
       "opts": [
-        "Eng past (harorat)",
-        "Eng yuqori (harorat)",
-        "Charaqlagan, porloq",
-        "Sovuq, sovuqlik (ot)"
+        "Sovuq, sovuqlik (ot)",
+        "Tayyor",
+        "Qovurilgan",
+        "Sovuq"
       ],
-      "correct": 3,
-      "izoh": "اَلْبَرْدُ = Sovuq, sovuqlik (ot)"
+      "correct": 0,
+      "izoh": "Sovuq, sovuqlik (ot) = اَلْبَرْدُ"
     },
     {
       "q": "«عَيِّنْ» so'zining ma'nosi?",
       "opts": [
+        "Diqqat bilan qara",
+        "Davo, muolaja",
         "Belgilab ko'rsat",
-        "Televizor ko'rish",
-        "Muammo",
-        "Bahor"
+        "Maosh, oylik"
       ],
-      "correct": 0,
-      "izoh": "عَيِّنْ = Belgilab ko'rsat"
+      "correct": 2,
+      "izoh": "Belgilab ko'rsat = عَيِّنْ"
     },
     {
       "q": "«Charaqlagan, porloq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُشْمِسٌ",
+        "غَائِمٌ",
         "مُشْرِقٌ",
-        "مَطَرٌ",
-        "مُمْطِرٌ"
+        "رَاتِبٌ",
+        "مَطَرٌ"
       ],
       "correct": 1,
       "izoh": "Charaqlagan, porloq = مُشْرِقٌ"
@@ -1249,98 +1249,98 @@
     {
       "q": "«بَارِيس» so'zining ma'nosi?",
       "opts": [
-        "Riyod",
-        "Amman",
-        "Rossiya",
+        "Iliq",
+        "Qor",
+        "Unday bo'lsa",
         "Parij"
       ],
       "correct": 3,
-      "izoh": "بَارِيس = Parij"
+      "izoh": "Parij = بَارِيس"
     },
     {
       "q": "«اَلْحَذَرُ» so'zining ma'nosi?",
       "opts": [
-        "Avtoturargoh",
-        "Svetofor, yo'l belgilari",
-        "Mashina haydash",
-        "Ehtiyotkorlik"
+        "Ehtiyotkorlik",
+        "To'ldir, yakunla",
+        "Bekat",
+        "Keyingi, kelayotgan"
       ],
-      "correct": 3,
-      "izoh": "اَلْحَذَرُ = Ehtiyotkorlik"
+      "correct": 0,
+      "izoh": "Ehtiyotkorlik = اَلْحَذَرُ"
     },
     {
       "q": "«Ob-havo, havo» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "اَلْجَوُّ",
         "اَلْعُظْمَى",
-        "ثَلْجٌ",
-        "اَلشَّبُورَةُ"
+        "اَلصَّيْفُ",
+        "اَلْجَوُّ",
+        "نَهَارًا"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Ob-havo, havo = اَلْجَوُّ"
     },
     {
       "q": "«يُمْكِنُ أَنْ» so'zining ma'nosi?",
       "opts": [
-        "Topmoq",
+        "Mashqlar",
+        "Plyaj, qirg'oq",
         "Mumkin",
-        "Kechikmoq",
-        "Qaytmoq"
+        "Fuqarolik, millat"
       ],
-      "correct": 1,
-      "izoh": "يُمْكِنُ أَنْ = Mumkin"
+      "correct": 2,
+      "izoh": "Mumkin = يُمْكِنُ أَنْ"
     },
     {
       "q": "«ثَلْجٌ» so'zining ma'nosi?",
       "opts": [
-        "Iliq",
-        "Yomg'ir",
-        "Bo'ron",
+        "Ota",
+        "Daraxt",
+        "Davomida, paytida",
         "Qor"
       ],
       "correct": 3,
-      "izoh": "ثَلْجٌ = Qor"
+      "izoh": "Qor = ثَلْجٌ"
     },
     {
       "q": "«أَنْحَاءُ» so'zining ma'nosi?",
       "opts": [
-        "Hududlar, tomonlar",
-        "Dunyo, olam",
-        "Plyaj, qirg'oq",
-        "Turizm, sayyohlik"
+        "Davomida, paytida",
+        "Musaffo, tiniq",
+        "Mumkin",
+        "Hududlar, tomonlar"
       ],
-      "correct": 0,
-      "izoh": "أَنْحَاءُ = Hududlar, tomonlar"
+      "correct": 3,
+      "izoh": "Hududlar, tomonlar = أَنْحَاءُ"
     },
     {
       "q": "«Bufet (yemakxona)» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَعْهَدُ اللُّغَاتِ",
-        "كُلِّيَّةٌ",
-        "مَرْحَلَةٌ",
-        "مَقْصِفٌ"
+        "فِقْرَةٌ",
+        "مُشْكِلَةٌ",
+        "مَقْصِفٌ",
+        "دَاخِلَ"
       ],
-      "correct": 3,
+      "correct": 2,
       "izoh": "Bufet (yemakxona) = مَقْصِفٌ"
     },
     {
       "q": "«Yetib bormoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "نَزَلَ",
+        "عَرَفَ",
         "وَجَدَ",
-        "فَضَّلَ",
-        "وَصَلَ",
-        "نَزَلَ"
+        "وَصَلَ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Yetib bormoq = وَصَلَ"
     },
     {
       "q": "«Notanish, begona» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "غَرِيبٌ",
-        "غَزِيرٌ",
-        "صَبَاحِيٌّ",
-        "ذَكِيٌّ"
+        "أَرْضٌ",
+        "وَرَقَةٌ",
+        "غَيْرُ"
       ],
       "correct": 0,
       "izoh": "Notanish, begona = غَرِيبٌ"
@@ -1348,21 +1348,21 @@
     {
       "q": "«صِيغَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Asos, ustun",
         "Shakl (so'z shakli)",
-        "Ega va kesim (mubtado-xabar)",
-        "Payt va o'rin ravishi"
+        "Yashaydi",
+        "To'ldir, yakunla",
+        "Maosh, oylik"
       ],
-      "correct": 1,
-      "izoh": "صِيغَةٌ = Shakl (so'z shakli)"
+      "correct": 0,
+      "izoh": "Shakl (so'z shakli) = صِيغَةٌ"
     },
     {
       "q": "«Ota» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أَقَارِبُ",
+        "أُسْرَةٌ",
         "أَبٌ",
-        "أَخٌ",
-        "اِبْنٌ"
+        "بِنْت",
+        "وَالِدٌ"
       ],
       "correct": 1,
       "izoh": "Ota = أَبٌ"
@@ -1370,97 +1370,97 @@
     {
       "q": "«نَهَارًا» so'zining ma'nosi?",
       "opts": [
-        "Kunduz",
-        "Kechasi",
-        "Tun",
+        "Xursandchilik, shodlik",
+        "Yomg'irli",
+        "Yoz",
         "Kunduzi"
       ],
       "correct": 3,
-      "izoh": "نَهَارًا = Kunduzi"
+      "izoh": "Kunduzi = نَهَارًا"
     },
     {
       "q": "«مُتَغَيِّرٌ» so'zining ma'nosi?",
       "opts": [
-        "Mo''tadil, o'rtacha",
-        "Ob-havo, havo",
-        "Noldan past",
-        "O'zgaruvchan"
+        "Yuz (100)",
+        "O'zgaruvchan",
+        "Eng yuqori (harorat)",
+        "(Ertalabki) tuman"
       ],
-      "correct": 3,
-      "izoh": "مُتَغَيِّرٌ = O'zgaruvchan"
+      "correct": 1,
+      "izoh": "O'zgaruvchan = مُتَغَيِّرٌ"
     },
     {
       "q": "«ذَكِيٌّ» so'zining ma'nosi?",
       "opts": [
-        "Sero'b, kuchli (yomg'ir)",
+        "Sovuq",
+        "Sovuq, sovuqlik (ot)",
         "Zehnli, aqlli",
-        "Baland, yuqori",
-        "Tinch, osoyishta"
+        "Qovurilgan"
       ],
-      "correct": 1,
-      "izoh": "ذَكِيٌّ = Zehnli, aqlli"
+      "correct": 2,
+      "izoh": "Zehnli, aqlli = ذَكِيٌّ"
     },
     {
       "q": "«Mebel» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "حَاجِزٌ",
+        "غُرْفَةٌ",
         "أَرِيكَةٌ",
-        "أَثَاثٌ",
-        "ثَلَّاجَةٌ"
+        "طُولٌ",
+        "أَثَاثٌ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Mebel = أَثَاثٌ"
     },
     {
       "q": "«Poyabzal, oyoq kiyim» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "بِنْطَالٌ",
-        "اَلْحَذَرُ",
-        "حِذَاءٌ",
-        "حَارٌّ"
+        "أَثَاثٌ",
+        "بَارِيس",
+        "اَلْفُطُورُ",
+        "حِذَاءٌ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Poyabzal, oyoq kiyim = حِذَاءٌ"
     },
     {
       "q": "«Tushmoq; yog'moq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "أَنْزَلَ",
-        "نَسِيَ",
+        "نَزَلَ",
+        "اِحْتَاجَ",
         "نَجَحَ",
-        "نَزَلَ"
+        "سَقَطَ"
       ],
-      "correct": 3,
+      "correct": 0,
       "izoh": "Tushmoq; yog'moq = نَزَلَ"
     },
     {
       "q": "«جِنْسِيَّةٌ» so'zining ma'nosi?",
       "opts": [
         "Fuqarolik, millat",
-        "Zehnli, aqlli",
-        "Kuchli",
-        "Bodring"
+        "Yengil",
+        "Shamol",
+        "Eng past (harorat)"
       ],
       "correct": 0,
-      "izoh": "جِنْسِيَّةٌ = Fuqarolik, millat"
+      "izoh": "Fuqarolik, millat = جِنْسِيَّةٌ"
     },
     {
       "q": "«مِئَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Ellik (50)",
-        "O'ttiz (30)",
-        "O'n (10)",
+        "Qaytadan bajar, takrorla",
+        "Xursandchilik, shodlik",
+        "Tinch, osoyishta",
         "Yuz (100)"
       ],
       "correct": 3,
-      "izoh": "مِئَةٌ = Yuz (100)"
+      "izoh": "Yuz (100) = مِئَةٌ"
     },
     {
       "q": "«Noldan past» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "دَرَجَةُ الْحَرَارَةِ",
-        "اَلصُّغْرَى",
-        "عَاصِفَةٌ",
+        "خَفِيفٌ",
+        "مُرْتَفِعٌ",
+        "أَطْوَلُ",
         "تَحْتَ الصِّفْرِ"
       ],
       "correct": 3,
@@ -1469,65 +1469,65 @@
     {
       "q": "«Yengil» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "غَزِيرٌ",
-        "مُفِيدٌ",
-        "مُنْخَفِضٌ",
-        "خَفِيفٌ"
+        "اَلصُّغْرَى",
+        "خَفِيفٌ",
+        "أَطْوَلُ",
+        "مُرْتَفِعٌ"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Yengil = خَفِيفٌ"
     },
     {
       "q": "«Lift» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "جَارٌ",
-        "مَطْبَخٌ",
-        "حَمَّامٌ",
-        "مِصْعَدٌ"
+        "عَاصِفَةٌ",
+        "مِصْعَدٌ",
+        "صِيغَةٌ",
+        "مُفِيدٌ"
       ],
-      "correct": 3,
+      "correct": 1,
       "izoh": "Lift = مِصْعَدٌ"
     },
     {
       "q": "«Keltir, ber» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تَدْرِيبَاتٌ",
-        "تَأَمَّلْ",
         "هَاتِ",
-        "اَلْمَطْلُوبُ"
+        "بِجَانِبِ",
+        "اَللَّيْلُ",
+        "غَزِيرٌ"
       ],
-      "correct": 2,
+      "correct": 0,
       "izoh": "Keltir, ber = هَاتِ"
     },
     {
       "q": "«تَدْرِيبَاتٌ» so'zining ma'nosi?",
       "opts": [
-        "Talab qilingan (ish)",
-        "Mashqlar",
-        "Keltir, ber",
-        "Diqqat bilan qara"
+        "To'ldir, yakunla",
+        "Avtoturargoh",
+        "Yonida",
+        "Mashqlar"
       ],
-      "correct": 1,
-      "izoh": "تَدْرِيبَاتٌ = Mashqlar"
+      "correct": 3,
+      "izoh": "Mashqlar = تَدْرِيبَاتٌ"
     },
     {
       "q": "«Kechasi» — to'g'ri arabcha tarjimasi?",
       "opts": [
+        "عَمٌّ",
+        "مَحَطَّةٌ",
         "لَيْلًا",
-        "اَلصَّيْفُ",
-        "اَللَّيْلُ",
-        "اَلنَّهَارُ"
+        "شَجَرَةٌ"
       ],
-      "correct": 0,
+      "correct": 2,
       "izoh": "Kechasi = لَيْلًا"
     },
     {
       "q": "«...dan zavqlanmoq» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "تَسَاقَطَ",
+        "سَقَطَ",
         "اِسْتَمْتَعَ",
-        "أَعِدْ",
-        "اِحْتَاجَ"
+        "نَجَحَ",
+        "تَأَخَّرَ"
       ],
       "correct": 1,
       "izoh": "...dan zavqlanmoq = اِسْتَمْتَعَ"
@@ -1535,43 +1535,43 @@
     {
       "q": "«مَرَضٌ» so'zining ma'nosi?",
       "opts": [
+        "Tibbiyot",
         "Kasallik",
-        "Yonida, ro'parasida",
-        "Diktor, boshlovchi",
-        "O'rganmoq"
+        "Dori",
+        "Davo, muolaja"
       ],
-      "correct": 0,
-      "izoh": "مَرَضٌ = Kasallik"
+      "correct": 1,
+      "izoh": "Kasallik = مَرَضٌ"
     },
     {
       "q": "«Svetofor, yo'l belgilari» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مَوْقِفُ السَّيَّارَاتِ",
-        "اَلْحَذَرُ",
-        "إِشَارَاتُ الْمُرُورِ",
-        "اَلْقِيَادَةُ"
+        "طَرِيقٌ",
+        "اِزْدِحَامُ الطَّرِيقِ",
+        "اَلْقِيَادَةُ",
+        "إِشَارَاتُ الْمُرُورِ"
       ],
-      "correct": 2,
+      "correct": 3,
       "izoh": "Svetofor, yo'l belgilari = إِشَارَاتُ الْمُرُورِ"
     },
     {
       "q": "«Sharbat» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "عَصِيرٌ",
-        "تِلْكَ",
-        "حَدَثَ",
-        "رَجَا"
+        "بِطِّيخٌ",
+        "شَايٌ",
+        "سَمَكٌ",
+        "عَصِيرٌ"
       ],
-      "correct": 0,
+      "correct": 3,
       "izoh": "Sharbat = عَصِيرٌ"
     },
     {
       "q": "«Magazin, savdo shoxobchasi» — to'g'ri arabcha tarjimasi?",
       "opts": [
         "مَتْجَرٌ",
-        "طُولٌ",
-        "مَعْجُونٌ",
-        "الإِمَارَات"
+        "شِرَاءٌ",
+        "ثَمَنٌ",
+        "حَافِزٌ"
       ],
       "correct": 0,
       "izoh": "Magazin, savdo shoxobchasi = مَتْجَرٌ"
@@ -1579,42 +1579,42 @@
     {
       "q": "«خَارِجَ» so'zining ma'nosi?",
       "opts": [
-        "Tur, xil",
-        "Asos, ustun",
-        "Tashqarisida",
-        "Ichida, ichkarisida"
+        "Bo'ron",
+        "Ichida, ichkarisida",
+        "Poyabzal, oyoq kiyim",
+        "Tashqarisida"
       ],
-      "correct": 2,
-      "izoh": "خَارِجَ = Tashqarisida"
+      "correct": 3,
+      "izoh": "Tashqarisida = خَارِجَ"
     },
     {
       "q": "«إِذَنْ» so'zining ma'nosi?",
       "opts": [
-        "Noldan past",
+        "Yana bir bor",
+        "Svetofor, yo'l belgilari",
         "Unday bo'lsa",
-        "Aloqa, bog'lanish",
-        "Aniqla, belgila"
+        "Baland, yuqori"
       ],
-      "correct": 1,
-      "izoh": "إِذَنْ = Unday bo'lsa"
+      "correct": 2,
+      "izoh": "Unday bo'lsa = إِذَنْ"
     },
     {
       "q": "«حَدِّدْ» so'zining ma'nosi?",
       "opts": [
-        "Aniqla, belgila",
-        "Aloqa, bog'lanish",
-        "Davomida, paytida",
-        "Notanish, begona"
+        "Muhtoj bo'lmoq",
+        "Minmoq (ulovga)",
+        "Yurmoq (piyoda)",
+        "Aniqla, belgila"
       ],
-      "correct": 0,
-      "izoh": "حَدِّدْ = Aniqla, belgila"
+      "correct": 3,
+      "izoh": "Aniqla, belgila = حَدِّدْ"
     },
     {
       "q": "«Ichida, ichkarisida» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "خَارِجَ",
-        "اَلزَّمَانُ",
-        "اَلْمُبْتَدَأُ وَالْخَبَرُ",
+        "يُمْكِنُ أَنْ",
+        "اَلْجَوُّ",
+        "مَانْجُو",
         "دَاخِلَ"
       ],
       "correct": 3,
@@ -1623,12 +1623,12 @@
     {
       "q": "«Keyingi, kelayotgan» — to'g'ri arabcha tarjimasi?",
       "opts": [
-        "مُذِيعٌ",
-        "قَادِمٌ",
         "مُتَأَخِّرٌ",
-        "كِيلُو"
+        "اَلنَّهَارُ",
+        "قَادِمٌ",
+        "أَمْسِ"
       ],
-      "correct": 1,
+      "correct": 2,
       "izoh": "Keyingi, kelayotgan = قَادِمٌ"
     }
   ]
