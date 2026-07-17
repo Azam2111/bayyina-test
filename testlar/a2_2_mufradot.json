@@ -1,7 +1,7 @@
 {
   "title": "Mufradot — A2 2-dars",
   "otish": 80,
-  "vaqt": 19,
+  "vaqt": 40,
   "questions": [
     {
       "q": "«بُنَيَّ» — to'g'ri tarjimasi?",
@@ -530,6 +530,578 @@
       ],
       "correct": 1,
       "izoh": "Ha (inkor savolga tasdiq) = بَلَى"
+    },
+    {
+      "q": "«لَا أَدْرِي» — to'g'ri tarjimasi?",
+      "opts": [
+        "Dam olish kuni, ta'til",
+        "...dan boshqa, faqat",
+        "Ulashish; ishtirok",
+        "Bilmayman"
+      ],
+      "correct": 3,
+      "izoh": "Bilmayman = لَا أَدْرِي"
+    },
+    {
+      "q": "«Yig'moq, to'plamoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "إِلَّا",
+        "مُتَأَكِّدٌ",
+        "مَنْزِلِيٌّ",
+        "جَمَعَ"
+      ],
+      "correct": 3,
+      "izoh": "Yig'moq, to'plamoq = جَمَعَ"
+    },
+    {
+      "q": "«رَدَّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Javob qaytarmoq",
+        "Ro'za tutmoq",
+        "Kutib olish",
+        "...dan boshqa, faqat"
+      ],
+      "correct": 0,
+      "izoh": "Javob qaytarmoq = رَدَّ"
+    },
+    {
+      "q": "«Qishki» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مُنَاسَبَةٌ",
+        "شَتْوِيٌّ",
+        "اَلتَّعْلِيقُ",
+        "مَوْقِعٌ"
+      ],
+      "correct": 1,
+      "izoh": "Qishki = شَتْوِيٌّ"
+    },
+    {
+      "q": "«اَلصَّدَاقَةُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Do'stlik",
+        "Harakat, kuch-g'ayrat",
+        "Xatti-harakatlar",
+        "Javob qaytarmoq"
+      ],
+      "correct": 0,
+      "izoh": "Do'stlik = اَلصَّدَاقَةُ"
+    },
+    {
+      "q": "«O'quv (ga oid)» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "هَنْدَسِيٌّ",
+        "صَامَ",
+        "دِرَاسِيٌّ",
+        "خَسِرَ"
+      ],
+      "correct": 2,
+      "izoh": "O'quv (ga oid) = دِرَاسِيٌّ"
+    },
+    {
+      "q": "«Peshtoq, vitrina» — to'g'ri tarjimasi?",
+      "opts": [
+        "Kutib olish",
+        "وَاجِهَةٌ",
+        "Ramazon (oyi)",
+        "Xatti-harakatlar"
+      ],
+      "correct": 1,
+      "izoh": "وَاجِهَةٌ = Peshtoq, vitrina"
+    },
+    {
+      "q": "«Diqqat qil, e'tibor ber» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَخَرَّجَ",
+        "اِنْتَبِهْ",
+        "تَرْفِيهِيٌّ",
+        "رَدَّ"
+      ],
+      "correct": 1,
+      "izoh": "Diqqat qil, e'tibor ber = اِنْتَبِهْ"
+    },
+    {
+      "q": "«خَفَّضَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'zgartirmoq",
+        "Uyg'unlashtirmoq; muvaffaq qilmoq",
+        "To'y xarajatlari",
+        "Tushirmoq, arzonlashtirmoq"
+      ],
+      "correct": 3,
+      "izoh": "Tushirmoq, arzonlashtirmoq = خَفَّضَ"
+    },
+    {
+      "q": "«Ko'tarmoq, chidamoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلزَّوَاجُ",
+        "قَبِلَ",
+        "عُطْلَةٌ",
+        "تَحَمَّلَ"
+      ],
+      "correct": 3,
+      "izoh": "Ko'tarmoq, chidamoq = تَحَمَّلَ"
+    },
+    {
+      "q": "«أَزْعَجَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Quruq qo'l bilan",
+        "Bezovta qilmoq",
+        "Ro'za tutmoq",
+        "مَقْصِفٌ"
+      ],
+      "correct": 1,
+      "izoh": "Bezovta qilmoq = أَزْعَجَ"
+    },
+    {
+      "q": "«Uchrashmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "Keyinroq ko'rishamiz",
+        "اِلْتَقَى",
+        "Muhabbat, sevgi",
+        "رَمَضَانُ"
+      ],
+      "correct": 1,
+      "izoh": "Uchrashmoq = اِلْتَقَى"
+    },
+    {
+      "q": "«كُلُّ شَيْءٍ عَلَى مَا يُرَامُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Hammasi joyida",
+        "Xavotir olma",
+        "Tugash, yakun",
+        "Tugatmoq, oxiriga yetkazmoq"
+      ],
+      "correct": 0,
+      "izoh": "Hammasi joyida = كُلُّ شَيْءٍ عَلَى مَا يُرَامُ"
+    },
+    {
+      "q": "«Tuz» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "O'z ichiga olmoq",
+        "اَلْمِلْحُ",
+        "بِمُجَرَّدِ أَنْ",
+        "تَخَرَّجَ"
+      ],
+      "correct": 1,
+      "izoh": "Tuz = اَلْمِلْحُ"
+    },
+    {
+      "q": "«عُصْفُورٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Uyga oid, uy-ro'zg'or",
+        "Kelishmoq",
+        "To'y (nikoh bazmi)",
+        "Chumchuq, qushcha"
+      ],
+      "correct": 3,
+      "izoh": "Chumchuq, qushcha = عُصْفُورٌ"
+    },
+    {
+      "q": "«Ramazon (oyi)» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "رَمَضَانُ",
+        "اِنْتَبِهْ",
+        "بِسُرْعَةٍ",
+        "Tayanmoq, suyanmoq"
+      ],
+      "correct": 0,
+      "izoh": "Ramazon (oyi) = رَمَضَانُ"
+    },
+    {
+      "q": "«مَنْزِلِيٌّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Oldinga o'tmoq, ilgarilamoq",
+        "Tuz",
+        "To'liq, aynan",
+        "Uyga oid, uy-ro'zg'or"
+      ],
+      "correct": 3,
+      "izoh": "Uyga oid, uy-ro'zg'or = مَنْزِلِيٌّ"
+    },
+    {
+      "q": "«Ulashish; ishtirok» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "قَابَلَ",
+        "Bufet (yemakxona)",
+        "اَلْمُشَارَكَةُ",
+        "اَلْفَرَحُ"
+      ],
+      "correct": 2,
+      "izoh": "Ulashish; ishtirok = اَلْمُشَارَكَةُ"
+    },
+    {
+      "q": "«قَبِلَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "أَرْنَبٌ",
+        "Qishki",
+        "Qabul qilmoq",
+        "Gaplashmoq (birovga)"
+      ],
+      "correct": 2,
+      "izoh": "Qabul qilmoq = قَبِلَ"
+    },
+    {
+      "q": "«Gapirmoq, so'zlashmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَحْدَهُ",
+        "Uchish, parvozga ko'tarilish",
+        "تَكَلَّمَ",
+        "حَدِيثٌ"
+      ],
+      "correct": 2,
+      "izoh": "Gapirmoq, so'zlashmoq = تَكَلَّمَ"
+    },
+    {
+      "q": "«هَكَذَا» — to'g'ri tarjimasi?",
+      "opts": [
+        "Oila, yaqinlar",
+        "Lozim bo'lmoq, kerak bo'lmoq",
+        "Shunday, shu tarzda",
+        "Uylanish, nikoh"
+      ],
+      "correct": 2,
+      "izoh": "Shunday, shu tarzda = هَكَذَا"
+    },
+    {
+      "q": "«O'zingni bos, yengil ol» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَزِمَ",
+        "وَحْدَهُ",
+        "اَلْبَرِيدُ",
+        "هَوِّنْ عَلَيْكَ"
+      ],
+      "correct": 3,
+      "izoh": "O'zingni bos, yengil ol = هَوِّنْ عَلَيْكَ"
+    },
+    {
+      "q": "«Quyon» — to'g'ri tarjimasi?",
+      "opts": [
+        "أَرْنَبٌ",
+        "Uylanish, nikoh",
+        "الظُّهْر",
+        "Bolalik"
+      ],
+      "correct": 0,
+      "izoh": "أَرْنَبٌ = Quyon"
+    },
+    {
+      "q": "«...dan beri» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مُنْذُ",
+        "حَلَا",
+        "بَلَى",
+        "مَنْزِلِيٌّ"
+      ],
+      "correct": 0,
+      "izoh": "...dan beri = مُنْذُ"
+    },
+    {
+      "q": "«أَفْسَدَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "مَحَبَّةٌ",
+        "Iltimos, o'tinaman",
+        "Chumchuq, qushcha",
+        "Buzmoq, ishdan chiqarmoq"
+      ],
+      "correct": 3,
+      "izoh": "Buzmoq, ishdan chiqarmoq = أَفْسَدَ"
+    },
+    {
+      "q": "«Uchratmoq, yuzma-yuz uchrashmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "دِرَاسِيٌّ",
+        "هَوِّنْ عَلَيْكَ",
+        "حَدِيثٌ",
+        "قَابَلَ"
+      ],
+      "correct": 3,
+      "izoh": "Uchratmoq, yuzma-yuz uchrashmoq = قَابَلَ"
+    },
+    {
+      "q": "«لَا عَلَيْكَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Faollik, g'ayrat",
+        "Pochta",
+        "Xavotir olma",
+        "أَرْنَبٌ"
+      ],
+      "correct": 2,
+      "izoh": "Xavotir olma = لَا عَلَيْكَ"
+    },
+    {
+      "q": "«Mashaqqat, qiyinchilik» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "إِلَّا",
+        "بَلَى",
+        "زِيَادَةٌ",
+        "مَشَقَّةٌ"
+      ],
+      "correct": 3,
+      "izoh": "Mashaqqat, qiyinchilik = مَشَقَّةٌ"
+    },
+    {
+      "q": "«اَلتَّعْلِيقُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Izoh, komment",
+        "Rahbar, nazoratchi",
+        "Ko'tarmoq, chidamoq",
+        "Chumchuq, qushcha"
+      ],
+      "correct": 0,
+      "izoh": "Izoh, komment = اَلتَّعْلِيقُ"
+    },
+    {
+      "q": "«Rahbar, nazoratchi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مُشْرِفٌ",
+        "أَفْسَدَ",
+        "تَقَدَّمَ",
+        "تَزَوَّجَ"
+      ],
+      "correct": 0,
+      "izoh": "Rahbar, nazoratchi = مُشْرِفٌ"
+    },
+    {
+      "q": "«مَوْقِعُ التَّوَاصُلِ الِاجْتِمَاعِيِّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ijtimoiy tarmoq sayti",
+        "Ulashish; ishtirok",
+        "Sog'inmoq",
+        "Xursandchilik, shodlik"
+      ],
+      "correct": 0,
+      "izoh": "Ijtimoiy tarmoq sayti = مَوْقِعُ التَّوَاصُلِ الِاجْتِمَاعِيِّ"
+    },
+    {
+      "q": "«Xatti-harakatlar» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَلَيْسَ كَذَلِكَ؟",
+        "أَفْسَدَ",
+        "اَلْمُشَارَكَةُ",
+        "تَصَرُّفَاتٌ"
+      ],
+      "correct": 3,
+      "izoh": "Xatti-harakatlar = تَصَرُّفَاتٌ"
+    },
+    {
+      "q": "«رَضِيَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Rozi bo'lmoq, mamnun bo'lmoq",
+        "Do'stlik",
+        "Bezovta qilmoq",
+        "Tushirmoq, arzonlashtirmoq"
+      ],
+      "correct": 0,
+      "izoh": "Rozi bo'lmoq, mamnun bo'lmoq = رَضِيَ"
+    },
+    {
+      "q": "«Rozi bo'lmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَافَقَ",
+        "جَمَعَ",
+        "اِشْتَاقَ",
+        "فَارِغُو الْأَيْدِي"
+      ],
+      "correct": 0,
+      "izoh": "Rozi bo'lmoq = وَافَقَ"
+    },
+    {
+      "q": "«كَلَّمَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Gaplashmoq (birovga)",
+        "Shirin (yoqimli) bo'lmoq",
+        "Qabul qilmoq",
+        "Javob qaytarmoq"
+      ],
+      "correct": 0,
+      "izoh": "Gaplashmoq (birovga) = كَلَّمَ"
+    },
+    {
+      "q": "«مَحَبَّةٌ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بِطِّيخٌ",
+        "اِسْمٌ ظَاهِرٌ",
+        "هَوِّنْ عَلَيْكَ",
+        "Muhabbat, sevgi"
+      ],
+      "correct": 3,
+      "izoh": "مَحَبَّةٌ = Muhabbat, sevgi"
+    },
+    {
+      "q": "«خَسِرَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Lozim bo'lmoq, kerak bo'lmoq",
+        "Xursandchilik, shodlik",
+        "Yo'qotmoq, boy bermoq",
+        "Asaldan ham shirin"
+      ],
+      "correct": 2,
+      "izoh": "Yo'qotmoq, boy bermoq = خَسِرَ"
+    },
+    {
+      "q": "«Muvaffaqiyatli, omadli» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَرْجُوكَ",
+        "نَاجِحٌ",
+        "أَكْمَلَ",
+        "اَلطُّفُولَةُ"
+      ],
+      "correct": 1,
+      "izoh": "Muvaffaqiyatli, omadli = نَاجِحٌ"
+    },
+    {
+      "q": "«أَرْجُوكَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Uchrashmoq",
+        "Tarvuz",
+        "Iltimos, o'tinaman",
+        "اِحْتَوَى"
+      ],
+      "correct": 2,
+      "izoh": "Iltimos, o'tinaman = أَرْجُوكَ"
+    },
+    {
+      "q": "«Ko'ngilochar» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَرْفِيهِيٌّ",
+        "بِطِّيخٌ",
+        "مُتَأَكِّدٌ",
+        "Uchish, parvozga ko'tarilish"
+      ],
+      "correct": 0,
+      "izoh": "Ko'ngilochar = تَرْفِيهِيٌّ"
+    },
+    {
+      "q": "«بِسُرْعَةٍ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ha (inkor savolga tasdiq)",
+        "Muhandislikka oid",
+        "Xavotir olma",
+        "Tezda, tezlik bilan"
+      ],
+      "correct": 3,
+      "izoh": "Tezda, tezlik bilan = بِسُرْعَةٍ"
+    },
+    {
+      "q": "«Pochta» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَكَالِيفُ الزَّوَاجِ",
+        "مَنْزِلِيٌّ",
+        "اَلْبَرِيدُ",
+        "تَكَلَّمَ"
+      ],
+      "correct": 2,
+      "izoh": "Pochta = اَلْبَرِيدُ"
+    },
+    {
+      "q": "«اَلْفَرَحُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "أَرَاكَ لَاحِقًا",
+        "Xursandchilik, shodlik",
+        "Faollik, g'ayrat",
+        "Ey... (murojaat)"
+      ],
+      "correct": 1,
+      "izoh": "Xursandchilik, shodlik = اَلْفَرَحُ"
+    },
+    {
+      "q": "«مَقْصِفٌ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بِطِّيخٌ",
+        "بَلَى",
+        "Muhabbat, sevgi",
+        "Bufet (yemakxona)"
+      ],
+      "correct": 3,
+      "izoh": "مَقْصِفٌ = Bufet (yemakxona)"
+    },
+    {
+      "q": "«عُطْلَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Voqea, hodisa",
+        "Javob qaytarmoq",
+        "Uylanish, nikoh",
+        "Dam olish kuni, ta'til"
+      ],
+      "correct": 3,
+      "izoh": "Dam olish kuni, ta'til = عُطْلَةٌ"
+    },
+    {
+      "q": "«اَلْقِيَادَةُ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "هَوِّنْ عَلَيْكَ",
+        "أَرْجُوكَ",
+        "مُنْذُ",
+        "Mashina haydash"
+      ],
+      "correct": 3,
+      "izoh": "اَلْقِيَادَةُ = Mashina haydash"
+    },
+    {
+      "q": "«Tush payt» — to'g'ri tarjimasi?",
+      "opts": [
+        "الظُّهْر",
+        "Sayt; joylashuv o'rni",
+        "Uchrashmoq",
+        "...dan beri"
+      ],
+      "correct": 0,
+      "izoh": "الظُّهْر = Tush payt"
+    },
+    {
+      "q": "«Tarvuz» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بِطِّيخٌ",
+        "حَفْلُ زِفَافٍ",
+        "رَمَضَانُ",
+        "فَارِغُو الْأَيْدِي"
+      ],
+      "correct": 0,
+      "izoh": "Tarvuz = بِطِّيخٌ"
+    },
+    {
+      "q": "«Keyinroq ko'rishamiz» — to'g'ri tarjimasi?",
+      "opts": [
+        "أَرَاكَ لَاحِقًا",
+        "Pochta",
+        "Bajarmoq; turmoq",
+        "Ko'payish, ortish"
+      ],
+      "correct": 0,
+      "izoh": "أَرَاكَ لَاحِقًا = Keyinroq ko'rishamiz"
+    },
+    {
+      "q": "«لَاعِب» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اِبْنَةٌ",
+        "O'yinchi",
+        "Mashina haydash",
+        "اَلتَّعْلِيقُ"
+      ],
+      "correct": 1,
+      "izoh": "لَاعِب = O'yinchi"
+    },
+    {
+      "q": "«Uchish, parvozga ko'tarilish» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ijtimoiy tarmoq sayti",
+        "إِقْلَاعٌ",
+        "Ramazon (oyi)",
+        "O'qishni bitirmoq"
+      ],
+      "correct": 1,
+      "izoh": "إِقْلَاعٌ = Uchish, parvozga ko'tarilish"
+    },
+    {
+      "q": "«زَمِيلٌ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "Tush payt",
+        "Hamkasb; kursdosh",
+        "اِسْتِقْبَالٌ",
+        "تَجْهِيزٌ"
+      ],
+      "correct": 1,
+      "izoh": "زَمِيلٌ = Hamkasb; kursdosh"
     }
   ]
 }
