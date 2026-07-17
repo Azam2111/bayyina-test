@@ -1,7 +1,7 @@
 {
   "title": "Mufradot — B1 10-dars",
   "otish": 80,
-  "vaqt": 10,
+  "vaqt": 40,
   "questions": [
     {
       "q": "«تَخَيَّلَ» — to'g'ri tarjimasi?",
@@ -277,6 +277,831 @@
       ],
       "correct": 2,
       "izoh": "...ga asosan, ...ga ko'ra = بِنَاءً عَلَى"
+    },
+    {
+      "q": "«Yashirinmoq, berkinmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "يَجِبُ أَنْ نَعْلَمَ أَنَّ",
+        "أَصْدِقَاءُ السُّوءِ",
+        "لَوْ ... لَكَانَ خَيْرًا لَكَ",
+        "اِخْتَبَأَ"
+      ],
+      "correct": 3,
+      "izoh": "Yashirinmoq, berkinmoq = اِخْتَبَأَ"
+    },
+    {
+      "q": "«عَاقَبَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ko'pincha, aksariyat hollarda",
+        "...ga e'tibor berish",
+        "Moddiy daromad",
+        "Jazolamoq"
+      ],
+      "correct": 3,
+      "izoh": "Jazolamoq = عَاقَبَ"
+    },
+    {
+      "q": "«Qamoq, qamoqxona» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَسْلِيَةُ الْوَقْتِ",
+        "اَلسِّجْنُ",
+        "حُرِّيَّةُ التَّعْبِيرِ",
+        "سَامِحْنِي عَلَى"
+      ],
+      "correct": 1,
+      "izoh": "Qamoq, qamoqxona = اَلسِّجْنُ"
+    },
+    {
+      "q": "«اَلْخَجَلُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "...ni faqat ...dan keyin o'ylayman",
+        "Uyat, hijolat",
+        "Davr, muddat",
+        "Tasavvur qilmoq, xayol qilmoq"
+      ],
+      "correct": 1,
+      "izoh": "Uyat, hijolat = اَلْخَجَلُ"
+    },
+    {
+      "q": "«Latifa, qiziqarli voqea» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "ضَيَاعُ الْوَقْتِ",
+        "لَا ... إِلَّا إِذَا ...",
+        "طُرْفَةٌ",
+        "اَلدِّرَاسَاتُ الْعُلْيَا"
+      ],
+      "correct": 2,
+      "izoh": "Latifa, qiziqarli voqea = طُرْفَةٌ"
+    },
+    {
+      "q": "«لِصٌّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'g'ri",
+        "Unashtirish, fotiha to'yi",
+        "Hokim, voliy",
+        "Ayni paytda, shu bilan birga"
+      ],
+      "correct": 0,
+      "izoh": "O'g'ri = لِصٌّ"
+    },
+    {
+      "q": "«Hokim, voliy» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مُتَشَابِهٌ",
+        "وَالٍ",
+        "اِخْتِيَارٌ",
+        "مُنْذُ وَقْتٍ طَوِيلٍ"
+      ],
+      "correct": 1,
+      "izoh": "Hokim, voliy = وَالٍ"
+    },
+    {
+      "q": "«حِكْمَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Hikmat, donolik",
+        "Hozirgi lahza, ayni damdagi payt",
+        "Ancha, katta darajada",
+        "Soxta, qalbaki"
+      ],
+      "correct": 0,
+      "izoh": "Hikmat, donolik = حِكْمَةٌ"
+    },
+    {
+      "q": "«Hazil-mutoyiba, kulgili» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مَشَاعِرُ مُزَيَّفَةٌ",
+        "فُكَاهِيٌّ",
+        "رَشَّحَ",
+        "اَلتَّحْصِيلُ الدِّرَاسِيُّ"
+      ],
+      "correct": 1,
+      "izoh": "Hazil-mutoyiba, kulgili = فُكَاهِيٌّ"
+    },
+    {
+      "q": "«اَلْبَقْلُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ko'pincha, aksariyat hollarda",
+        "... uchun nima qilay?",
+        "Dukkakli ekin, ko'kat",
+        "Ochko'zlik bilan, to'ymay"
+      ],
+      "correct": 2,
+      "izoh": "Dukkakli ekin, ko'kat = اَلْبَقْلُ"
+    },
+    {
+      "q": "«Ochko'zlik bilan, to'ymay» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "حُرِّيَّةُ التَّعْبِيرِ",
+        "مُزَيَّفٌ",
+        "بِشَرَاهَةٍ",
+        "وَيْحَكَ!"
+      ],
+      "correct": 2,
+      "izoh": "Ochko'zlik bilan, to'ymay = بِشَرَاهَةٍ"
+    },
+    {
+      "q": "«نُسِبَتْ إِلَى» — to'g'ri tarjimasi?",
+      "opts": [
+        "اَلتَّشَاؤُمُ",
+        "Davr, muddat",
+        "Bilishimiz kerakki...",
+        "...ga nisbat berildi"
+      ],
+      "correct": 3,
+      "izoh": "...ga nisbat berildi = نُسِبَتْ إِلَى"
+    },
+    {
+      "q": "«Voy sho'ring! (tanbeh)» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "فُكَاهِيٌّ",
+        "وَيْحَكَ!",
+        "حُرِّيَّةُ التَّعْبِيرِ",
+        "طُقُوسٌ"
+      ],
+      "correct": 1,
+      "izoh": "Voy sho'ring! (tanbeh) = وَيْحَكَ!"
+    },
+    {
+      "q": "«تَسْلِيَةُ الْوَقْتِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Vaqtni xushchaqchaq o'tkazish",
+        "Armiya, qo'shin",
+        "Shu kunlarda",
+        "Hikmat, donolik"
+      ],
+      "correct": 0,
+      "izoh": "Vaqtni xushchaqchaq o'tkazish = تَسْلِيَةُ الْوَقْتِ"
+    },
+    {
+      "q": "«Shubhasiz, muqarrar» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَا مَحَالَةَ",
+        "مَشَاعِرُ مُزَيَّفَةٌ",
+        "مُسْتَخْدِمٌ",
+        "مَقْصُورٌ عَلَى"
+      ],
+      "correct": 0,
+      "izoh": "Shubhasiz, muqarrar = لَا مَحَالَةَ"
+    },
+    {
+      "q": "«مِمَّا نَتَجَ عَنْهُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Mahbus, qamoqdagi",
+        "...dan uyaldim",
+        "Natijada, shu sababdan",
+        "Erkin, ozod, hur"
+      ],
+      "correct": 2,
+      "izoh": "Natijada, shu sababdan = مِمَّا نَتَجَ عَنْهُ"
+    },
+    {
+      "q": "«Kishidan kishiga» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مِنْ شَخْصٍ لِآخَرَ",
+        "مَسْؤُولِيَّةٌ",
+        "يُؤَدِّي إِلَى",
+        "لَا تُؤَاخِذْنِي"
+      ],
+      "correct": 0,
+      "izoh": "Kishidan kishiga = مِنْ شَخْصٍ لِآخَرَ"
+    },
+    {
+      "q": "«رُبَّمَا تَخْتَلِفُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "...ga olib keladi",
+        "Ba'zi paytlarda",
+        "Dukkakli ekin, ko'kat",
+        "Balki farq qiladi"
+      ],
+      "correct": 3,
+      "izoh": "Balki farq qiladi = رُبَّمَا تَخْتَلِفُ"
+    },
+    {
+      "q": "«Meni ayblama, kechir» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اِسْتَمْتِعْ بِـ",
+        "لَا ... إِلَّا إِذَا ...",
+        "أُرِيدُ أَنْ أُؤَكِّدَ عَلَى",
+        "لَا تُؤَاخِذْنِي"
+      ],
+      "correct": 3,
+      "izoh": "Meni ayblama, kechir = لَا تُؤَاخِذْنِي"
+    },
+    {
+      "q": "«خِلَالَ هَذِهِ الْمُدَّةِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Shu muddat ichida",
+        "Yengmoq, g'olib kelmoq",
+        "... bo'lib qoldi, ... emas",
+        "...ga e'tibor berish"
+      ],
+      "correct": 0,
+      "izoh": "Shu muddat ichida = خِلَالَ هَذِهِ الْمُدَّةِ"
+    },
+    {
+      "q": "«Agar ... bo'lganingda yaxshi bo'lardi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَلِيمَةٌ",
+        "لَوْ ... لَكَانَ خَيْرًا لَكَ",
+        "يَتَمَيَّزُ بِـ",
+        "مُسْتَخْدِمٌ"
+      ],
+      "correct": 1,
+      "izoh": "Agar ... bo'lganingda yaxshi bo'lardi = لَوْ ... لَكَانَ خَيْرًا لَكَ"
+    },
+    {
+      "q": "«شَعَرْتُ بِالْخَجَلِ مِنْ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Meni ayblama, kechir",
+        "Hazil-mutoyiba, kulgili",
+        "...dan uyaldim",
+        "Mehr, shafqat"
+      ],
+      "correct": 2,
+      "izoh": "...dan uyaldim = شَعَرْتُ بِالْخَجَلِ مِنْ"
+    },
+    {
+      "q": "«Nomzod ko'rsatmoq, tavsiya qilmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَلِيمَةٌ",
+        "اَلتَّحْصِيلُ الدِّرَاسِيُّ",
+        "رَشَّحَ",
+        "فِي بَعْضِ الْأَوْقَاتِ"
+      ],
+      "correct": 2,
+      "izoh": "Nomzod ko'rsatmoq, tavsiya qilmoq = رَشَّحَ"
+    },
+    {
+      "q": "«قَرَّرَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Vaqtni behuda sarflash",
+        "Meni ayblama, kechir",
+        "اَلتَّشَاؤُمُ",
+        "Qaror qilmoq"
+      ],
+      "correct": 3,
+      "izoh": "Qaror qilmoq = قَرَّرَ"
+    },
+    {
+      "q": "«Tanlov, ixtiyor» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مَسْجُونٌ",
+        "أَكْثَرُ قُدْرَةٍ عَلَى",
+        "مُزَيَّفٌ",
+        "اِخْتِيَارٌ"
+      ],
+      "correct": 3,
+      "izoh": "Tanlov, ixtiyor = اِخْتِيَارٌ"
+    },
+    {
+      "q": "«وَلِيمَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "To'y oshi, ziyofat",
+        "Tanlov, ixtiyor",
+        "... his qilaman, ...dek tuyuladi",
+        "Balki farq qiladi"
+      ],
+      "correct": 0,
+      "izoh": "To'y oshi, ziyofat = وَلِيمَةٌ"
+    },
+    {
+      "q": "«Unashtirish, fotiha to'yi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "خِطْبَةٌ",
+        "وَالٍ",
+        "تَخَيَّلَ",
+        "اَلِاكْتِئَابُ"
+      ],
+      "correct": 0,
+      "izoh": "Unashtirish, fotiha to'yi = خِطْبَةٌ"
+    },
+    {
+      "q": "«طُقُوسٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Marosimlar, urf-odatlar",
+        "...ga nisbat berildi",
+        "Shu muddat ichida",
+        "Yoqtirish, 'like'"
+      ],
+      "correct": 0,
+      "izoh": "Marosimlar, urf-odatlar = طُقُوسٌ"
+    },
+    {
+      "q": "«اَلتَّشَاؤُمُ» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "رُبَّمَا تَخْتَلِفُ",
+        "تَحْقِيقٌ",
+        "مَسْجُونٌ",
+        "Pessimizm, badbinlik"
+      ],
+      "correct": 3,
+      "izoh": "اَلتَّشَاؤُمُ = Pessimizm, badbinlik"
+    },
+    {
+      "q": "«لِقَاءٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "...dan uyaldim",
+        "...gan paytda",
+        "Uchrashuv",
+        "Vaqtni behuda sarflash"
+      ],
+      "correct": 2,
+      "izoh": "Uchrashuv = لِقَاءٌ"
+    },
+    {
+      "q": "«O'xshash» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "يَتَمَيَّزُ بِـ",
+        "تَسْلِيَةُ الْوَقْتِ",
+        "مُتَشَابِهٌ",
+        "شَرِيكُ الْحَيَاةِ"
+      ],
+      "correct": 2,
+      "izoh": "O'xshash = مُتَشَابِهٌ"
+    },
+    {
+      "q": "«شَرِيكُ الْحَيَاةِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Yumshoqlik bilan, muloyim",
+        "Uchrashuv",
+        "Vaqtni behuda sarflash",
+        "Hayot yo'ldoshi"
+      ],
+      "correct": 3,
+      "izoh": "Hayot yo'ldoshi = شَرِيكُ الْحَيَاةِ"
+    },
+    {
+      "q": "«... bilan ajralib turadi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "فَاشِلٌ",
+        "يَتَمَيَّزُ بِـ",
+        "مِنْ شَخْصٍ لِآخَرَ",
+        "اَلتَّرْفِيهُ"
+      ],
+      "correct": 1,
+      "izoh": "... bilan ajralib turadi = يَتَمَيَّزُ بِـ"
+    },
+    {
+      "q": "«فِي أَغْلَبِ الْأَحْيَانِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ko'pincha, aksariyat hollarda",
+        "Yolg'onchi, yolg'on",
+        "Soxta his-tuyg'ular",
+        "Yoqtirish, 'like'"
+      ],
+      "correct": 0,
+      "izoh": "Ko'pincha, aksariyat hollarda = فِي أَغْلَبِ الْأَحْيَانِ"
+    },
+    {
+      "q": "«Ancha, katta darajada» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَا أُفَكِّرُ فِي ... إِلَّا بَعْدَ",
+        "إِلَى حَدٍّ كَبِيرٍ",
+        "ضَيَاعُ الْوَقْتِ",
+        "عِنْدَمَا ..."
+      ],
+      "correct": 1,
+      "izoh": "Ancha, katta darajada = إِلَى حَدٍّ كَبِيرٍ"
+    },
+    {
+      "q": "«مُنْذُ وَقْتٍ طَوِيلٍ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Hurmat qilmoq",
+        "Uzoq vaqtdan beri",
+        "تَكَالِيفُ",
+        "Balki farq qiladi"
+      ],
+      "correct": 1,
+      "izoh": "Uzoq vaqtdan beri = مُنْذُ وَقْتٍ طَوِيلٍ"
+    },
+    {
+      "q": "«... uchun meni kechir» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَوْ ... لَكَانَ خَيْرًا لَكَ",
+        "وَالٍ",
+        "سَامِحْنِي عَلَى",
+        "حُرٌّ"
+      ],
+      "correct": 2,
+      "izoh": "... uchun meni kechir = سَامِحْنِي عَلَى"
+    },
+    {
+      "q": "«مَقْصُورٌ عَلَى» — to'g'ri tarjimasi?",
+      "opts": [
+        "Faqat ...ga xos, cheklangan",
+        "Hazil-mutoyiba, kulgili",
+        "Meni ayblama, kechir",
+        "Vaqtni behuda sarflash"
+      ],
+      "correct": 0,
+      "izoh": "Faqat ...ga xos, cheklangan = مَقْصُورٌ عَلَى"
+    },
+    {
+      "q": "«...ni ta'kidlamoqchiman» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أُرِيدُ أَنْ أُؤَكِّدَ عَلَى",
+        "قَرَّرَ",
+        "عِنْدَمَا ...",
+        "مَهَارَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "...ni ta'kidlamoqchiman = أُرِيدُ أَنْ أُؤَكِّدَ عَلَى"
+    },
+    {
+      "q": "«اِحْتَرَمَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "تَكَالِيفُ",
+        "Hurmat qilmoq",
+        "Shu kunlarda",
+        "Taklif qilingan (mehmon)"
+      ],
+      "correct": 1,
+      "izoh": "Hurmat qilmoq = اِحْتَرَمَ"
+    },
+    {
+      "q": "«Shikoyat qilmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلْعَطْفُ",
+        "اَلتَّرْفِيهُ",
+        "اِشْتَكَى",
+        "لَا أُفَكِّرُ فِي ... إِلَّا بَعْدَ"
+      ],
+      "correct": 2,
+      "izoh": "Shikoyat qilmoq = اِشْتَكَى"
+    },
+    {
+      "q": "«اِهْتِمَامٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "E'tibor, qiziqish, g'amxo'rlik",
+        "...ga nisbat berildi",
+        "Erkin, ozod, hur",
+        "Unashtirish, fotiha to'yi"
+      ],
+      "correct": 0,
+      "izoh": "E'tibor, qiziqish, g'amxo'rlik = اِهْتِمَامٌ"
+    },
+    {
+      "q": "«Mahbus, qamoqdagi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلتَّحْصِيلُ الدِّرَاسِيُّ",
+        "مَدْعُوٌّ",
+        "مَسْجُونٌ",
+        "لَا تُؤَاخِذْنِي"
+      ],
+      "correct": 2,
+      "izoh": "Mahbus, qamoqdagi = مَسْجُونٌ"
+    },
+    {
+      "q": "«اَلْعَطْفُ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ko'pincha, aksariyat hollarda",
+        "Mehr, shafqat",
+        "To'y oshi, ziyofat",
+        "...ga ko'proq qodir"
+      ],
+      "correct": 1,
+      "izoh": "Mehr, shafqat = اَلْعَطْفُ"
+    },
+    {
+      "q": "«Mas'uliyat, javobgarlik» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلتَّرْفِيهُ",
+        "تَخَيَّلَ",
+        "اَلتَّحْصِيلُ الدِّرَاسِيُّ",
+        "مَسْؤُولِيَّةٌ"
+      ],
+      "correct": 3,
+      "izoh": "Mas'uliyat, javobgarlik = مَسْؤُولِيَّةٌ"
+    },
+    {
+      "q": "«مَدْعُوٌّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "O'quv o'zlashtirishi",
+        "...ga olib keladi",
+        "Taklif qilingan (mehmon)",
+        "Yashirinmoq, berkinmoq"
+      ],
+      "correct": 2,
+      "izoh": "Taklif qilingan (mehmon) = مَدْعُوٌّ"
+    },
+    {
+      "q": "«Erkin, ozod, hur» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "طُرْفَةٌ",
+        "حُرٌّ",
+        "عَاقَبَ",
+        "أَصْدِقَاءُ السُّوءِ"
+      ],
+      "correct": 1,
+      "izoh": "Erkin, ozod, hur = حُرٌّ"
+    },
+    {
+      "q": "«يَتَحَمَّلُ الْمَسْؤُولِيَّةَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Mas'uliyatni zimmasiga oladi",
+        "Muvaffaqiyatsiz, omadsiz",
+        "Nomzod ko'rsatmoq, tavsiya qilmoq",
+        "Davr, muddat"
+      ],
+      "correct": 0,
+      "izoh": "Mas'uliyatni zimmasiga oladi = يَتَحَمَّلُ الْمَسْؤُولِيَّةَ"
+    },
+    {
+      "q": "«...ga olib keladi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "مُزَيَّفٌ",
+        "سَامِحْنِي عَلَى",
+        "تَسْلِيَةُ الْوَقْتِ",
+        "يُؤَدِّي إِلَى"
+      ],
+      "correct": 3,
+      "izoh": "...ga olib keladi = يُؤَدِّي إِلَى"
+    },
+    {
+      "q": "«بِلُطْفٍ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Mas'uliyat, javobgarlik",
+        "Yumshoqlik bilan, muloyim",
+        "Armiya, qo'shin",
+        "Yomon do'stlar"
+      ],
+      "correct": 1,
+      "izoh": "Yumshoqlik bilan, muloyim = بِلُطْفٍ"
+    },
+    {
+      "q": "«...ga nisbatan, ... uchun» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلْجَيْشُ",
+        "بِالنِّسْبَةِ إِلَى",
+        "عِنْدَمَا ...",
+        "وَفِي الْوَقْتِ نَفْسِهِ"
+      ],
+      "correct": 1,
+      "izoh": "...ga nisbatan, ... uchun = بِالنِّسْبَةِ إِلَى"
+    },
+    {
+      "q": "«أَصْدِقَاءُ السُّوءِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "اَلتَّشَاؤُمُ",
+        "Ochko'zlik bilan, to'ymay",
+        "Yomon do'stlar",
+        "Depressiya, ruhiy tushkunlik"
+      ],
+      "correct": 2,
+      "izoh": "Yomon do'stlar = أَصْدِقَاءُ السُّوءِ"
+    },
+    {
+      "q": "«...ga ishonadi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "يَثِقُ بِـ",
+        "سَامِحْنِي عَلَى",
+        "مِنْ شَخْصٍ لِآخَرَ",
+        "تَرْجَمَ"
+      ],
+      "correct": 0,
+      "izoh": "...ga ishonadi = يَثِقُ بِـ"
+    },
+    {
+      "q": "«أَصْبَحَ ... وَلَيْسَ ...» — to'g'ri tarjimasi?",
+      "opts": [
+        "Taklif qilingan (mehmon)",
+        "... bo'lib qoldi, ... emas",
+        "Hazil-mutoyiba, kulgili",
+        "...ga asosan, ...ga ko'ra"
+      ],
+      "correct": 1,
+      "izoh": "... bo'lib qoldi, ... emas = أَصْبَحَ ... وَلَيْسَ ..."
+    },
+    {
+      "q": "«... bo'lmasa, ...ma» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَا ... إِلَّا إِذَا ...",
+        "كَاذِبٌ",
+        "تَخَيَّلَ",
+        "مَقْصُورٌ عَلَى"
+      ],
+      "correct": 0,
+      "izoh": "... bo'lmasa, ...ma = لَا ... إِلَّا إِذَا ..."
+    },
+    {
+      "q": "«عِنْدَمَا ...» — to'g'ri tarjimasi?",
+      "opts": [
+        "...dan zavq ol, huzurlan",
+        "Moddiy daromad",
+        "Tanlov, ixtiyor",
+        "...gan paytda"
+      ],
+      "correct": 3,
+      "izoh": "...gan paytda = عِنْدَمَا ..."
+    },
+    {
+      "q": "«Shu kunlarda» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أُرِيدُ أَنْ أُؤَكِّدَ عَلَى",
+        "... فِي هَذِهِ الْأَيَّامِ",
+        "فِي حِينٍ",
+        "عَائِدٌ مَادِّيٌّ"
+      ],
+      "correct": 1,
+      "izoh": "Shu kunlarda = ... فِي هَذِهِ الْأَيَّامِ"
+    },
+    {
+      "q": "«أَشْعُرُ أَنَّ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Moddiy daromad",
+        "Hikmat, donolik",
+        "... his qilaman, ...dek tuyuladi",
+        "Jazolamoq"
+      ],
+      "correct": 2,
+      "izoh": "... his qilaman, ...dek tuyuladi = أَشْعُرُ أَنَّ"
+    },
+    {
+      "q": "«Kuzatib bormoq, davom ettirmoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "تَابَعَ",
+        "مُنْذُ وَقْتٍ طَوِيلٍ",
+        "حُرٌّ",
+        "أَكْثَرُ قُدْرَةٍ عَلَى"
+      ],
+      "correct": 0,
+      "izoh": "Kuzatib bormoq, davom ettirmoq = تَابَعَ"
+    },
+    {
+      "q": "«اِزْدَادَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Isbotlamoq",
+        "...ga ishonadi",
+        "Ko'paymoq, ortmoq",
+        "Armiya, qo'shin"
+      ],
+      "correct": 2,
+      "izoh": "Ko'paymoq, ortmoq = اِزْدَادَ"
+    },
+    {
+      "q": "«Isbotlamoq» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَثْبَتَ",
+        "بِلُطْفٍ",
+        "كَاذِبٌ",
+        "لَا أُفَكِّرُ فِي ... إِلَّا بَعْدَ"
+      ],
+      "correct": 0,
+      "izoh": "Isbotlamoq = أَثْبَتَ"
+    },
+    {
+      "q": "«اِضْطِرَابٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Pessimizm, badbinlik",
+        "Vaqtni xushchaqchaq o'tkazish",
+        "Ayni paytda, shu bilan birga",
+        "Buzilish, asabiy buzilish"
+      ],
+      "correct": 3,
+      "izoh": "Buzilish, asabiy buzilish = اِضْطِرَابٌ"
+    },
+    {
+      "q": "«Ko'ngilochar, dam olish» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "اَلْعَطْفُ",
+        "حُرِّيَّةُ التَّعْبِيرِ",
+        "بِنَاءً عَلَى",
+        "اَلتَّرْفِيهُ"
+      ],
+      "correct": 3,
+      "izoh": "Ko'ngilochar, dam olish = اَلتَّرْفِيهُ"
+    },
+    {
+      "q": "«مَهَارَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Ayni paytda, shu bilan birga",
+        "Telefon qaramligi",
+        "Mahorat, malaka",
+        "Muvaffaqiyatsiz, omadsiz"
+      ],
+      "correct": 2,
+      "izoh": "Mahorat, malaka = مَهَارَةٌ"
+    },
+    {
+      "q": "«Yoqtirish, 'like'» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "عَاقَبَ",
+        "حُرٌّ",
+        "إِعْجَابٌ",
+        "أُرِيدُ أَنْ أُؤَكِّدَ عَلَى"
+      ],
+      "correct": 2,
+      "izoh": "Yoqtirish, 'like' = إِعْجَابٌ"
+    },
+    {
+      "q": "«مُسْتَخْدِمٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "... bilan ajralib turadi",
+        "Erkin, ozod, hur",
+        "Foydalanuvchi",
+        "Pessimizm, badbinlik"
+      ],
+      "correct": 2,
+      "izoh": "Foydalanuvchi = مُسْتَخْدِمٌ"
+    },
+    {
+      "q": "«Davr, muddat» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "كَاذِبٌ",
+        "حُرٌّ",
+        "فَتْرَةٌ",
+        "لَا تُؤَاخِذْنِي"
+      ],
+      "correct": 2,
+      "izoh": "Davr, muddat = فَتْرَةٌ"
+    },
+    {
+      "q": "«كَاذِبٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "E'tiborni tortadi",
+        "Yomon do'stlar",
+        "...ga nisbatan, ... uchun",
+        "Yolg'onchi, yolg'on"
+      ],
+      "correct": 3,
+      "izoh": "Yolg'onchi, yolg'on = كَاذِبٌ"
+    },
+    {
+      "q": "«Soxta, qalbaki» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "أَكْثَرُ قُدْرَةٍ عَلَى",
+        "مُزَيَّفٌ",
+        "سَامِحْنِي عَلَى",
+        "كَاذِبٌ"
+      ],
+      "correct": 1,
+      "izoh": "Soxta, qalbaki = مُزَيَّفٌ"
+    },
+    {
+      "q": "«إِدْمَانُ الْهَاتِفِ» — to'g'ri tarjimasi?",
+      "opts": [
+        "... his qilaman, ...dek tuyuladi",
+        "Telefon qaramligi",
+        "To'y oshi, ziyofat",
+        "Tasavvur qilmoq, xayol qilmoq"
+      ],
+      "correct": 1,
+      "izoh": "Telefon qaramligi = إِدْمَانُ الْهَاتِفِ"
+    },
+    {
+      "q": "«O'quv o'zlashtirishi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "بِنَاءً عَلَى",
+        "لَا مَحَالَةَ",
+        "إِعْجَابٌ",
+        "اَلتَّحْصِيلُ الدِّرَاسِيُّ"
+      ],
+      "correct": 3,
+      "izoh": "O'quv o'zlashtirishi = اَلتَّحْصِيلُ الدِّرَاسِيُّ"
+    },
+    {
+      "q": "«يَلْفِتُ الْأَنْظَارَ» — to'g'ri tarjimasi?",
+      "opts": [
+        "E'tiborni tortadi",
+        "Davr, muddat",
+        "O'g'ri",
+        "Muvaffaqiyatsiz, omadsiz"
+      ],
+      "correct": 0,
+      "izoh": "E'tiborni tortadi = يَلْفِتُ الْأَنْظَارَ"
+    },
+    {
+      "q": "«So'z erkinligi» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "وَيْحَكَ!",
+        "حُرِّيَّةُ التَّعْبِيرِ",
+        "اِهْتِمَامٌ",
+        "يَثِقُ بِـ"
+      ],
+      "correct": 1,
+      "izoh": "So'z erkinligi = حُرِّيَّةُ التَّعْبِيرِ"
+    },
+    {
+      "q": "«مَشَاعِرُ مُزَيَّفَةٌ» — to'g'ri tarjimasi?",
+      "opts": [
+        "Vaqtni xushchaqchaq o'tkazish",
+        "Pessimizm, badbinlik",
+        "Soxta his-tuyg'ular",
+        "...ga e'tibor berish"
+      ],
+      "correct": 2,
+      "izoh": "Soxta his-tuyg'ular = مَشَاعِرُ مُزَيَّفَةٌ"
+    },
+    {
+      "q": "«Vaqtni behuda sarflash» — to'g'ri arabcha tarjimasi?",
+      "opts": [
+        "لَوْ ... لَكَانَ خَيْرًا لَكَ",
+        "عِنْدَمَا ...",
+        "Pessimizm, badbinlik",
+        "ضَيَاعُ الْوَقْتِ"
+      ],
+      "correct": 3,
+      "izoh": "Vaqtni behuda sarflash = ضَيَاعُ الْوَقْتِ"
     }
   ]
 }
