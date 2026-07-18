@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Profilim — Bayyina</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Mulish:wght@400;600;700;800&family=Amiri:wght@700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#f4ecdb; --paper2:#ece0c8; --ink:#241a10; --ink2:#4a3a26;
+    --brown:#6e4a29; --brown2:#8a6038; --gold:#c2913f; --gold-soft:#e7cf9a; --gold-bright:#e6bd6a;
+    --line:#d8c4a0; --night:#12241d; --emerald:#1f6f5c; --emerald-soft:#7fb8a6;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Mulish',system-ui,sans-serif; color:var(--ink);
+    background:var(--paper); min-height:100vh; padding:16px 14px 40px;
+  }
+  .kicker{
+    font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--brown2);
+    font-weight:800; display:flex; align-items:center; gap:10px; justify-content:center;
+    margin-bottom:6px;
+  }
+  .kicker::before,.kicker::after{content:"";width:22px;height:2px;background:var(--gold);}
+  h1{
+    font-family:'Fraunces',serif; font-weight:900; text-align:center;
+    font-size:clamp(24px,7vw,32px); margin-bottom:22px; letter-spacing:-.01em;
+  }
+  .card{
+    background:#fffdf8; border:1px solid var(--line); border-radius:18px;
+    padding:18px 18px; margin-bottom:14px; box-shadow:0 6px 18px rgba(110,74,41,.08);
+  }
+  .card h2{
+    font-family:'Fraunces',serif; font-weight:900; font-size:16px; color:var(--brown);
+    margin-bottom:12px; display:flex; align-items:center; gap:8px;
+  }
+  .progressbar-outer{
+    width:100%; height:12px; background:var(--paper2); border-radius:20px; overflow:hidden;
+    border:1px solid var(--line);
+  }
+  .progressbar-inner{
+    height:100%; background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+    border-radius:20px; transition:width .6s ease;
+  }
+  .row{display:flex; justify-content:space-between; align-items:baseline; margin-top:10px;}
+  .row .label{font-size:13px; color:var(--brown2); font-weight:700;}
+  .row .value{font-size:15px; font-weight:800; color:var(--ink);}
+  .big-num{
+    font-family:'Fraunces',serif; font-weight:900; font-size:38px; color:var(--brown);
+    line-height:1;
+  }
+  .streak-card{
+    background:linear-gradient(135deg,#1f6f5c,#12241d); color:#f4ecdb; border:none;
+  }
+  .streak-card h2{color:var(--gold-soft);}
+  .streak-flame{font-size:34px; margin-right:6px;}
+  .streak-row{display:flex; align-items:center; gap:10px;}
+  .streak-sub{font-size:12px; color:var(--emerald-soft); margin-top:4px;}
+  .unvon-pill{
+    font-family:'Amiri',serif; direction:rtl; font-size:20px; font-weight:700;
+    background:rgba(194,145,63,.14); border:1px solid var(--gold); color:var(--brown);
+    border-radius:12px; padding:8px 14px; display:inline-block; margin-top:4px;
+  }
+  .rank-badge{
+    display:inline-flex; align-items:center; gap:6px; background:var(--paper2);
+    border-radius:100px; padding:6px 14px; font-weight:800; font-size:13px; color:var(--brown);
+    margin-top:10px;
+  }
+  .muted{color:var(--brown2); font-size:12px; margin-top:8px; line-height:1.5;}
+  .center{text-align:center;}
+  .state-box{
+    text-align:center; padding:60px 20px; color:var(--brown2); font-size:15px; font-weight:700;
+  }
+  .spinner{
+    width:34px; height:34px; border:4px solid var(--paper2); border-top-color:var(--gold);
+    border-radius:50%; margin:0 auto 16px; animation:spin .8s linear infinite;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .tarif-price{font-family:'Fraunces',serif; font-weight:900; font-size:22px; color:var(--brown);}
+  #app{display:none;}
+</style>
+</head>
+<body>
+
+<div id="loading" class="state-box">
+  <div class="spinner"></div>
+  Ma'lumotlar yuklanmoqda...
+</div>
+
+<div id="errorbox" class="state-box" style="display:none;"></div>
+
+<div id="app">
+  <div class="kicker">Bayyina</div>
+  <h1 id="greeting">Profilim</h1>
+
+  <div class="card">
+    <h2>📚 Progress</h2>
+    <div class="row"><span class="label">Daraja</span><span class="value" id="p-level">—</span></div>
+    <div class="row"><span class="label">Dars</span><span class="value" id="p-lesson">—</span></div>
+    <div class="row"><span class="label">Bosqich</span><span class="value" id="p-step">—</span></div>
+    <div style="margin-top:12px;">
+      <div class="progressbar-outer"><div class="progressbar-inner" id="p-bar" style="width:0%"></div></div>
+      <div class="muted" id="p-bar-label" style="text-align:right;"></div>
+    </div>
+  </div>
+
+  <div class="card streak-card">
+    <h2>🔥 Faollik streak</h2>
+    <div class="streak-row">
+      <span class="streak-flame">🔥</span>
+      <span class="big-num" id="p-streak" style="color:var(--gold-bright);">0</span>
+      <span style="font-weight:700;">kun ketma-ket</span>
+    </div>
+    <div class="streak-sub" id="p-longest">Eng uzun streak: —</div>
+  </div>
+
+  <div class="card">
+    <h2>🏅 HP va unvon</h2>
+    <div class="row"><span class="label">Jami HP</span><span class="value" id="p-hp">—</span></div>
+    <div class="unvon-pill" id="p-unvon">—</div>
+    <div class="muted" id="p-next-rank"></div>
+    <div class="rank-badge" id="p-rank" style="display:none;">🏆 <span id="p-rank-text"></span></div>
+  </div>
+
+  <div class="card">
+    <h2>💳 Tarif</h2>
+    <div class="row"><span class="label">Guruh</span><span class="value" id="p-group">—</span></div>
+    <div class="row"><span class="label">Oylik narx</span><span class="tarif-price" id="p-price">—</span></div>
+  </div>
+
+  <div class="muted center" style="margin-top:6px;">
+    Ma'lumotlar botning o'zidan olinadi. Savol bo'lsa ustozga yozing.
+  </div>
+</div>
+
+<script>
+(function () {
+  // ⚠️ Agar Railway domeni o'zgarsa, shu yerni yangilang.
+  var API_BASE = "https://web-production-06809.up.railway.app";
+  var API_URL = API_BASE + "/api/profile";
+
+  var STEP_LABELS = {
+    mufradot: "Mufradot (lug'at)",
+    qovaid:   "Qovaid (grammatika)",
+    istima:   "Istima (tinglash)",
+    qiroat:   "Qiroat (o'qish)",
+    kitoba:   "Kitoba (yozish)"
+  };
+
+  function showError(msg) {
+    document.getElementById("loading").style.display = "none";
+    var box = document.getElementById("errorbox");
+    box.style.display = "block";
+    box.innerHTML = "⚠️<br><br>" + msg;
+  }
+
+  function fmtNum(n) {
+    n = Number(n) || 0;
+    return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function render(data) {
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("app").style.display = "block";
+
+    document.getElementById("greeting").textContent =
+      "Assalomu alaykum, " + (data.full_name || "Talaba") + "!";
+
+    document.getElementById("p-level").textContent = data.level || "—";
+    document.getElementById("p-lesson").textContent = (data.lesson_number || 1) + "-dars";
+    document.getElementById("p-step").textContent = STEP_LABELS[data.step] || data.step || "—";
+
+    var pct = data.step_total ? Math.round((data.step_index / data.step_total) * 100) : 0;
+    document.getElementById("p-bar").style.width = pct + "%";
+    document.getElementById("p-bar-label").textContent =
+      data.step_index + " / " + data.step_total + " bosqich";
+
+    document.getElementById("p-streak").textContent = data.current_streak || 0;
+    document.getElementById("p-longest").textContent =
+      "Eng uzun streak: " + (data.longest_streak || 0) + " kun";
+
+    document.getElementById("p-hp").textContent = fmtNum(data.total_hp) + " HP";
+    document.getElementById("p-unvon").textContent = data.unvon || "—";
+
+    if (data.next_rank) {
+      document.getElementById("p-next-rank").textContent =
+        "Keyingi unvon (" + data.next_rank.name + ") gacha: " +
+        fmtNum(data.next_rank.remaining) + " HP qoldi.";
+    } else {
+      document.getElementById("p-next-rank").textContent = "Eng yuqori unvonga yetdingiz! 🎉";
+    }
+
+    if (data.hp_rank && data.hp_rank_total) {
+      var rankBadge = document.getElementById("p-rank");
+      rankBadge.style.display = "inline-flex";
+      document.getElementById("p-rank-text").textContent =
+        "Hamjamiyatda " + data.hp_rank + "-o'rin (" + data.hp_rank_total + " kishidan)";
+    }
+
+    document.getElementById("p-group").textContent = data.crm_group_id || "—";
+    document.getElementById("p-price").textContent =
+      data.monthly_price ? fmtNum(data.monthly_price) + " so'm" : "—";
+  }
+
+  function init() {
+    var tg = window.Telegram && window.Telegram.WebApp;
+    if (!tg || !tg.initData) {
+      showError("Bu sahifa faqat Bayyina bot ichidan ochiladi.<br>Botga qayting va \"Profilim\" tugmasini bosing.");
+      return;
+    }
+    tg.ready();
+    try { tg.expand(); } catch (e) {}
+
+    fetch(API_URL, {
+      method: "GET",
+      headers: { "X-Telegram-Init-Data": tg.initData }
+    })
+      .then(function (resp) {
+        if (resp.status === 401) throw new Error("unauthorized");
+        if (resp.status === 404) throw new Error("not_found");
+        if (!resp.ok) throw new Error("server_error");
+        return resp.json();
+      })
+      .then(render)
+      .catch(function (err) {
+        if (err.message === "not_found") {
+          showError("Sizning profilingiz hali topilmadi.<br>Avval daraja testini o'ting yoki ustozga murojaat qiling.");
+        } else if (err.message === "unauthorized") {
+          showError("Sessiya tasdiqlanmadi.<br>Botni qayta oching va qayta urinib ko'ring.");
+        } else {
+          showError("Ma'lumotlarni yuklab bo'lmadi.<br>Birozdan so'ng qayta urinib ko'ring.");
+        }
+      });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
