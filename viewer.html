@@ -546,9 +546,20 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
   // ====== KITOB (pdf.js) ======
   let pdfDoc=null,curPage=1,userZoom=1,rendering=false,pend=null,pdfLoaded=false,lockPage=null;
+  // Har bir savol o'z sahifasiga (item.bet) ishora qilishi mumkin (masalan 3-darsda
+  // 68 va 69-betlar). Kitob shu joriy savolning betini ko'rsatishi kerak, top-level
+  // "bet"ga muzlab qolmasligi kerak — aks holda 69-bet savollarida ham doim 68 chiqadi.
+  function pageForCurrent(){
+    const item = QUESTIONS[cur];
+    return (item && item.bet) ? item.bet : startPage;
+  }
   function openBook(){
     document.getElementById('bookOverlay').style.display='flex';
     if(!pdfLoaded){ pdfLoaded=true; loadPdf(); }
+    else if(pdfDoc){
+      lockPage = Math.min(pageForCurrent(), pdfDoc.numPages);
+      gotoPage(lockPage);
+    }
   }
   function closeBook(){ document.getElementById('bookOverlay').style.display='none'; }
   async function loadPdf(){
@@ -558,7 +569,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       document.getElementById('loadingMsg').style.display='none';
       document.getElementById('pageTotal').textContent=pdfDoc.numPages;
       document.getElementById('pageInput').max=pdfDoc.numPages;
-      lockPage = Math.min(startPage, pdfDoc.numPages);   // qiroat: faqat shu bet ko'rsatiladi
+      lockPage = Math.min(pageForCurrent(), pdfDoc.numPages);   // qiroat: joriy savolning bet raqami
       const pn=document.getElementById('pageNav'); if(pn) pn.style.display='none';
       gotoPage(lockPage);
     }catch(e){
