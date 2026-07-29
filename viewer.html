@@ -224,6 +224,26 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   const AUDIO_BASE = BOOK_BASE;
   const DEFAULT_BOOK = "A0 Bayyina_compressed (1).pdf";
 
+  // Ba'zi kitob PDF fayllarida muqova/kirish betlari borligi sababli, PDF
+  // fayl ICHIDAGI sahifa raqami (pdf.js "bet" sifatida ishlatadigan, "kitob"ni
+  // ochish uchun kerak) bilan o'quvchi ko'rib turgan BOSILGAN bet raqami mos
+  // kelmaydi (2026-07-29, "A1 Qiroat 7-dars: dialog 128-betda, savollar
+  // 130-betdan" shikoyati). Bu xarita FAQAT ko'rsatiladigan "X-betga qarang"
+  // yorlig'i uchun ishlatiladi — pdfDoc.getPage() navigatsiyasi hamon xom
+  // "bet" qiymati bilan ishlaydi (u to'g'ri sahifani ochadi, buzilmagan).
+  // Tekshirilgan (PDF sahifalarini render qilib, bosilgan raqam bilan solishtirib):
+  //   A0 Bayyina_compressed (1).pdf              -> siljish yo'q (0)
+  //   A1-Almanhajul-Alamiy_compressed.pdf         -> siljish 2 (bet:130 -> bosilgan 128)
+  //   المنهج_العالمي_المستوي_المبتدئ_2_1 (3).pdf  -> siljish 2 (bet:118 -> bosilgan 116)
+  const BOOK_PAGE_OFFSET = {
+    "A1-Almanhajul-Alamiy_compressed.pdf": 2,
+    "المنهج_العالمي_المستوي_المبتدئ_2_1 (3).pdf": 2,
+  };
+  function displayBet(betVal){
+    const off = BOOK_PAGE_OFFSET[bookName] || 0;
+    return betVal - off;
+  }
+
   const P = new URLSearchParams(location.search);
   let bookName = P.get("kitob") || DEFAULT_BOOK;
   let startPage = parseInt(P.get("bet") || "21", 10);
@@ -360,7 +380,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
     const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
-    const betHint  = item.bet  ? '<div class="bet-hint">📄 '+item.bet+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
+    const betHint  = item.bet  ? '<div class="bet-hint">📄 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
       let arc='', otext, odir='';
@@ -417,7 +437,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
       const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
-      const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+item.bet+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
+      const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
         let arc='', otext, odir='';
