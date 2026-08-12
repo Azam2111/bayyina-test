@@ -285,6 +285,8 @@ function finish(){
   const pct=Math.round(score/total*100);
   const thr=Math.ceil(total*PASS_PCT/100);
   const passed=score>=thr;
+  try{if(window.Telegram&&window.Telegram.WebApp){window.Telegram.WebApp.sendData(JSON.stringify({passed:passed,score:pct}));}}catch(e){}
+
 
   document.getElementById('resPct').textContent=pct+'%';
   document.getElementById('resFrac').textContent=score+'/'+total;
