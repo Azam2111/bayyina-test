@@ -16,7 +16,7 @@
   *{box-sizing:border-box; margin:0; padding:0;}
   body{
     font-family:'Mulish',system-ui,sans-serif; color:var(--ink);
-    background:var(--paper); min-height:100vh; padding:16px 14px 40px;
+    background:var(--paper); min-height:100vh; padding:16px 14px 92px;
   }
   .kicker{
     font-size:12px; letter-spacing:.28em; text-transform:uppercase; color:var(--brown2);
@@ -77,9 +77,52 @@
     width:34px; height:34px; border:4px solid var(--paper2); border-top-color:var(--gold);
     border-radius:50%; margin:0 auto 16px; animation:spin .8s linear infinite;
   }
+  .spinner.small{width:22px; height:22px; border-width:3px; margin:14px auto;}
   @keyframes spin{to{transform:rotate(360deg);}}
   .tarif-price{font-family:'Fraunces',serif; font-weight:900; font-size:22px; color:var(--brown);}
   #app{display:none;}
+
+  /* ---- Tab-bar (2026-08-13, Mini App 1-bosqich) ---- */
+  .tab-content{display:none;}
+  .tab-content.active{display:block;}
+  .tabbar{
+    display:none; position:fixed; left:0; right:0; bottom:0; z-index:20;
+    background:#fffdf8; border-top:1px solid var(--line);
+    padding:8px 10px calc(8px + env(safe-area-inset-bottom));
+    box-shadow:0 -6px 18px rgba(110,74,41,.10);
+  }
+  .tabbar.show{display:flex;}
+  .tab-btn{
+    flex:1; display:flex; flex-direction:column; align-items:center; gap:2px;
+    background:none; border:none; padding:8px 4px; border-radius:12px;
+    font-family:'Mulish',sans-serif; font-size:11px; font-weight:800; color:var(--brown2);
+    cursor:pointer;
+  }
+  .tab-btn .ic{font-size:20px; line-height:1;}
+  .tab-btn.active{color:var(--brown); background:rgba(194,145,63,.14);}
+
+  /* ---- Reyting tab ---- */
+  .lb-item{
+    display:flex; align-items:center; gap:12px; padding:10px 0;
+    border-bottom:1px solid var(--paper2);
+  }
+  .lb-item:last-child{border-bottom:none;}
+  .lb-medal{font-size:20px; width:28px; text-align:center; flex-shrink:0;}
+  .lb-name{flex:1; font-weight:700; font-size:14px; color:var(--ink);}
+  .lb-hp{font-weight:800; font-size:13px; color:var(--brown); white-space:nowrap;}
+  .lb-ym{text-align:center; color:var(--brown2); font-size:12px; margin-bottom:4px;}
+
+  /* ---- Nishonlar tab ---- */
+  .badge-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .badge-card{
+    background:var(--paper2); border:1px solid var(--line); border-radius:14px;
+    padding:14px 10px; text-align:center;
+  }
+  .badge-card.earned{background:#fffdf8; border-color:var(--gold);}
+  .badge-card.locked{opacity:.45; filter:grayscale(60%);}
+  .badge-emoji{font-size:30px; margin-bottom:6px;}
+  .badge-name{font-weight:800; font-size:13px; color:var(--ink); margin-bottom:2px;}
+  .badge-desc{font-size:11px; color:var(--brown2); line-height:1.4;}
 </style>
 </head>
 <body>
@@ -95,44 +138,75 @@
   <div class="kicker">Bayyina</div>
   <h1 id="greeting">Profilim</h1>
 
-  <div class="card">
-    <h2>📚 Progress</h2>
-    <div class="row"><span class="label">Daraja</span><span class="value" id="p-level">—</span></div>
-    <div class="row"><span class="label">Dars</span><span class="value" id="p-lesson">—</span></div>
-    <div class="row"><span class="label">Bosqich</span><span class="value" id="p-step">—</span></div>
-    <div style="margin-top:12px;">
-      <div class="progressbar-outer"><div class="progressbar-inner" id="p-bar" style="width:0%"></div></div>
-      <div class="muted" id="p-bar-label" style="text-align:right;"></div>
+  <!-- ============ TAB: PROFIL ============ -->
+  <div id="tab-profil" class="tab-content active">
+    <div class="card">
+      <h2>📚 Progress</h2>
+      <div class="row"><span class="label">Daraja</span><span class="value" id="p-level">—</span></div>
+      <div class="row"><span class="label">Dars</span><span class="value" id="p-lesson">—</span></div>
+      <div class="row"><span class="label">Bosqich</span><span class="value" id="p-step">—</span></div>
+      <div style="margin-top:12px;">
+        <div class="progressbar-outer"><div class="progressbar-inner" id="p-bar" style="width:0%"></div></div>
+        <div class="muted" id="p-bar-label" style="text-align:right;"></div>
+      </div>
+    </div>
+
+    <div class="card streak-card">
+      <h2>🔥 Faollik streak</h2>
+      <div class="streak-row">
+        <span class="streak-flame">🔥</span>
+        <span class="big-num" id="p-streak" style="color:var(--gold-bright);">0</span>
+        <span style="font-weight:700;">kun ketma-ket</span>
+      </div>
+      <div class="streak-sub" id="p-longest">Eng uzun streak: —</div>
+    </div>
+
+    <div class="card">
+      <h2>🏅 HP va unvon</h2>
+      <div class="row"><span class="label">Jami HP</span><span class="value" id="p-hp">—</span></div>
+      <div class="unvon-pill" id="p-unvon">—</div>
+      <div class="muted" id="p-next-rank"></div>
+      <div class="rank-badge" id="p-rank" style="display:none;">🏆 <span id="p-rank-text"></span></div>
+    </div>
+
+    <div class="card">
+      <h2>💳 Tarif</h2>
+      <div class="row"><span class="label">Guruh</span><span class="value" id="p-group">—</span></div>
+      <div class="row"><span class="label">Oylik narx</span><span class="tarif-price" id="p-price">—</span></div>
+    </div>
+
+    <div class="muted center" style="margin-top:6px;">
+      Ma'lumotlar botning o'zidan olinadi. Savol bo'lsa ustozga yozing.
     </div>
   </div>
 
-  <div class="card streak-card">
-    <h2>🔥 Faollik streak</h2>
-    <div class="streak-row">
-      <span class="streak-flame">🔥</span>
-      <span class="big-num" id="p-streak" style="color:var(--gold-bright);">0</span>
-      <span style="font-weight:700;">kun ketma-ket</span>
+  <!-- ============ TAB: REYTING ============ -->
+  <div id="tab-reyting" class="tab-content">
+    <div class="card">
+      <h2>🏆 Oylik HP reytingi</h2>
+      <div class="lb-ym" id="lb-ym"></div>
+      <div id="lb-list">
+        <div class="spinner small"></div>
+      </div>
     </div>
-    <div class="streak-sub" id="p-longest">Eng uzun streak: —</div>
   </div>
 
-  <div class="card">
-    <h2>🏅 HP va unvon</h2>
-    <div class="row"><span class="label">Jami HP</span><span class="value" id="p-hp">—</span></div>
-    <div class="unvon-pill" id="p-unvon">—</div>
-    <div class="muted" id="p-next-rank"></div>
-    <div class="rank-badge" id="p-rank" style="display:none;">🏆 <span id="p-rank-text"></span></div>
+  <!-- ============ TAB: NISHONLAR ============ -->
+  <div id="tab-nishonlar" class="tab-content">
+    <div class="card">
+      <h2>🏅 Nishonlaringiz</h2>
+      <div id="badge-list">
+        <div class="spinner small"></div>
+      </div>
+    </div>
   </div>
+</div>
 
-  <div class="card">
-    <h2>💳 Tarif</h2>
-    <div class="row"><span class="label">Guruh</span><span class="value" id="p-group">—</span></div>
-    <div class="row"><span class="label">Oylik narx</span><span class="tarif-price" id="p-price">—</span></div>
-  </div>
-
-  <div class="muted center" style="margin-top:6px;">
-    Ma'lumotlar botning o'zidan olinadi. Savol bo'lsa ustozga yozing.
-  </div>
+<!-- ============ PASTKI TAB-BAR ============ -->
+<div id="tabbar" class="tabbar">
+  <button class="tab-btn active" data-tab="profil"><span class="ic">🪪</span><span>Profil</span></button>
+  <button class="tab-btn" data-tab="reyting"><span class="ic">🏆</span><span>Reyting</span></button>
+  <button class="tab-btn" data-tab="nishonlar"><span class="ic">🏅</span><span>Nishonlar</span></button>
 </div>
 
 <script>
@@ -140,6 +214,11 @@
   // ⚠️ Agar Railway domeni o'zgarsa, shu yerni yangilang.
   var API_BASE = "https://web-production-06809.up.railway.app";
   var API_URL = API_BASE + "/api/profile";
+  var API_URL_LEADERBOARD = API_BASE + "/api/leaderboard";
+  var API_URL_BADGES = API_BASE + "/api/badges";
+
+  var initData = null; // tg.initData — reyting/nishonlar tablarida qayta ishlatiladi
+  var loadedTabs = {reyting: false, nishonlar: false}; // har tab faqat 1 marta yuklanadi
 
   var STEP_LABELS = {
     mufradot: "Mufradot (lug'at)",
@@ -164,6 +243,7 @@
   function render(data) {
     document.getElementById("loading").style.display = "none";
     document.getElementById("app").style.display = "block";
+    document.getElementById("tabbar").classList.add("show");
 
     document.getElementById("greeting").textContent =
       "Assalomu alaykum, " + (data.full_name || "Talaba") + "!";
@@ -204,6 +284,115 @@
       data.monthly_price ? fmtNum(data.monthly_price) + " so'm" : "—";
   }
 
+  // ---------------------------------------------
+  // REYTING tab
+  // ---------------------------------------------
+  function renderLeaderboard(data) {
+    document.getElementById("lb-ym").textContent = "Shu oy: " + (data.ym || "");
+    var list = document.getElementById("lb-list");
+    var top = data.top || [];
+    if (!top.length) {
+      list.innerHTML = '<div class="muted center">Bu oyда hali HP yig\'ilmagan.</div>';
+      return;
+    }
+    var medals = ["🥇", "🥈", "🥉"];
+    var html = "";
+    for (var i = 0; i < top.length; i++) {
+      var s = top[i];
+      var medal = medals[i] || "🏅";
+      html += '<div class="lb-item">' +
+        '<span class="lb-medal">' + medal + '</span>' +
+        '<span class="lb-name">' + (s.full_name || "Nomalum") + '</span>' +
+        '<span class="lb-hp">' + fmtNum(s.hp) + ' HP</span>' +
+        '</div>';
+    }
+    list.innerHTML = html;
+  }
+
+  function loadLeaderboard() {
+    if (loadedTabs.reyting) return;
+    fetch(API_URL_LEADERBOARD, {
+      method: "GET",
+      headers: { "X-Telegram-Init-Data": initData }
+    })
+      .then(function (resp) {
+        if (!resp.ok) throw new Error("server_error");
+        return resp.json();
+      })
+      .then(function (data) {
+        loadedTabs.reyting = true;
+        renderLeaderboard(data);
+      })
+      .catch(function () {
+        document.getElementById("lb-list").innerHTML =
+          '<div class="muted center">Reytingni yuklab bo\'lmadi. Qayta urinib ko\'ring.</div>';
+      });
+  }
+
+  // ---------------------------------------------
+  // NISHONLAR tab
+  // ---------------------------------------------
+  function renderBadges(data) {
+    var list = document.getElementById("badge-list");
+    var badges = data.badges || [];
+    if (!badges.length) {
+      list.innerHTML = '<div class="muted center">Nishonlar hali sozlanmagan.</div>';
+      return;
+    }
+    var html = '<div class="badge-grid">';
+    for (var i = 0; i < badges.length; i++) {
+      var b = badges[i];
+      var cls = "badge-card " + (b.earned ? "earned" : "locked");
+      html += '<div class="' + cls + '">' +
+        '<div class="badge-emoji">' + (b.emoji || "🏅") + '</div>' +
+        '<div class="badge-name">' + (b.name || "") + '</div>' +
+        '<div class="badge-desc">' + (b.desc || "") + '</div>' +
+        '</div>';
+    }
+    html += '</div>';
+    list.innerHTML = html;
+  }
+
+  function loadBadges() {
+    if (loadedTabs.nishonlar) return;
+    fetch(API_URL_BADGES, {
+      method: "GET",
+      headers: { "X-Telegram-Init-Data": initData }
+    })
+      .then(function (resp) {
+        if (!resp.ok) throw new Error("server_error");
+        return resp.json();
+      })
+      .then(function (data) {
+        loadedTabs.nishonlar = true;
+        renderBadges(data);
+      })
+      .catch(function () {
+        document.getElementById("badge-list").innerHTML =
+          '<div class="muted center">Nishonlarni yuklab bo\'lmadi. Qayta urinib ko\'ring.</div>';
+      });
+  }
+
+  // ---------------------------------------------
+  // Tab-bar almashtirish
+  // ---------------------------------------------
+  function initTabbar() {
+    var buttons = document.querySelectorAll(".tab-btn");
+    var contents = document.querySelectorAll(".tab-content");
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var tab = btn.getAttribute("data-tab");
+        buttons.forEach(function (b) { b.classList.remove("active"); });
+        contents.forEach(function (c) { c.classList.remove("active"); });
+        btn.classList.add("active");
+        document.getElementById("tab-" + tab).classList.add("active");
+
+        if (tab === "reyting") loadLeaderboard();
+        if (tab === "nishonlar") loadBadges();
+      });
+    });
+  }
+
   function init() {
     var tg = window.Telegram && window.Telegram.WebApp;
     if (!tg || !tg.initData) {
@@ -212,10 +401,13 @@
     }
     tg.ready();
     try { tg.expand(); } catch (e) {}
+    initData = tg.initData;
+
+    initTabbar();
 
     fetch(API_URL, {
       method: "GET",
-      headers: { "X-Telegram-Init-Data": tg.initData }
+      headers: { "X-Telegram-Init-Data": initData }
     })
       .then(function (resp) {
         if (resp.status === 401) throw new Error("unauthorized");
