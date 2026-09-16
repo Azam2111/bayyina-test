@@ -79,7 +79,7 @@ def is_mufradot(q):
     «X» - to'g'ri tarjimasi?  /  «X» so'zining ma'nosi?"""
     t = q["q"].strip()
     return ("tarjima" in t) or (t.startswith("«") and
-                                re.search(r"ma['ʼ’]nosi\?$", t) is not None)
+                                re.search(r"ma[''']nosi\?$", t) is not None)
 
 def from_tanvir():
     qs = load(YAKUNIY)["questions"]
@@ -111,7 +111,7 @@ def main():
     exam = {
         "meta": {
             "title": "A2 — Yakuniy imtihon (klassik guruh)",
-            "subtitle": "Bayyina Akademiya · grammatika, lugat, tinglash, oqish va yozish bolimlari",
+            "subtitle": "Bayyina Akademiya · grammatika, lug'at, tinglash, o'qish va yozish bo'limlari",
             "pass": 80,
             "write_pass": 0.85,
             "write_half": 0.70,
@@ -121,13 +121,13 @@ def main():
         },
         "sections": [
             {"id": "qovaid", "name": "1. Qovaid (grammatika)", "type": "mcq", "minutes": 55, "weight": 30,
-             "desc": str(len(qovaid)) + " ta test. Har savolda bitta togri javob.", "questions": qovaid},
-            {"id": "mufradot", "name": "2. Mufradot (lugat)", "type": "mcq", "minutes": 40, "weight": 30,
-             "desc": str(len(mufradot)) + " ta test. Sozning togri tarjimasini tanlang.", "questions": mufradot},
+             "desc": str(len(qovaid)) + " ta test. Har savolda bitta to'g'ri javob.", "questions": qovaid},
+            {"id": "mufradot", "name": "2. Mufradot (lug'at)", "type": "mcq", "minutes": 40, "weight": 30,
+             "desc": str(len(mufradot)) + " ta test. So'zning to'g'ri tarjimasini tanlang.", "questions": mufradot},
             {"id": "istima", "name": "3. Istima (tinglab tushunish)", "type": "group", "minutes": 25, "weight": 15,
-             "desc": "3 ta audio. Har audioni eng kopi 2 marta tinglash mumkin.", "groups": istima_groups},
-            {"id": "qiroat", "name": "4. Qiroat (oqib tushunish)", "type": "group", "minutes": 20, "weight": 15,
-             "desc": "2 ta matn. Matnni oqib, savollarga javob bering.", "groups": qiroat_groups},
+             "desc": "3 ta audio. Har audioni eng ko'pi 2 marta tinglash mumkin.", "groups": istima_groups},
+            {"id": "qiroat", "name": "4. Qiroat (o'qib tushunish)", "type": "group", "minutes": 20, "weight": 15,
+             "desc": "2 ta matn. Matnni o'qib, savollarga javob bering.", "groups": qiroat_groups},
             {"id": "kitoba", "name": "5. Kitoba (yozish)", "type": "write", "minutes": 25, "weight": 10,
              "desc": "10 ta gapni arabchaga tarjima qiling.", "items": KITOBA},
         ],

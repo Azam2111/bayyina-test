@@ -131,8 +131,8 @@ const LSKEY = 'bayyina_a2_klassik_v2';
 const app = document.getElementById('app');
 let S = null, timerId = null;
 /* KO'RISH REJIMI — faqat ustoz uchun: ?rejim=korish
-   Bolimlar orasida erkin sakrash, tasodifiy toldirish, natijani darrov korish.
-   Oquvchilarga beriladigan oddiy havolada bu rejim yoq. */
+   Bo'limlar orasida erkin sakrash, tasodifiy to'ldirish, natijani darrov ko'rish.
+   O'quvchilarga beriladigan oddiy havolada bu rejim yo'q. */
 const PREVIEW = (new URLSearchParams(location.search).get('rejim') === 'korish');
 
 /* ---------- storage ---------- */
@@ -248,7 +248,7 @@ function previewBar(){
     `<button class="pv-b${(S&&S.si===i)?' on':''}" onclick="pvJump(${i})">${i+1}</button>`).join('');
   return `<div class="pvbar noprint">
     <span class="pv-tag">KO'RISH REJIMI</span>${btns}
-    <button class="pv-b wide" onclick="pvFill()">Shu bolimni toldirish</button>
+    <button class="pv-b wide" onclick="pvFill()">Shu bo'limni to'ldirish</button>
     <button class="pv-b wide" onclick="pvResult()">Natija</button>
     <button class="pv-b wide" onclick="pvReset()">Boshidan</button>
   </div>`;
@@ -284,10 +284,10 @@ function screenStart(){
   const resume = (old && old.name && !old.finished) ? `
     <div class="warnbox" style="margin-bottom:14px">
       <b>${esc(old.name)}</b> nomi bilan tugallanmagan imtihon bor
-      (${esc(EXAM.sections[old.si] ? EXAM.sections[old.si].name : '')} bolimi).
+      (${esc(EXAM.sections[old.si] ? EXAM.sections[old.si].name : '')} bo'limi).
       <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap">
         <button class="btn gold" onclick="resumeExam()">Davom ettirish</button>
-        <button class="btn ghost" onclick="if(confirm('Eski natija ochiriladi. Davom etaymi?')){wipe();screenStart();}">Yangidan boshlash</button>
+        <button class="btn ghost" onclick="if(confirm('Eski natija o\'chiriladi. Davom etaymi?')){wipe();screenStart();}">Yangidan boshlash</button>
       </div>
     </div>` : '';
   const secList = EXAM.sections.map(s =>
@@ -299,18 +299,18 @@ function screenStart(){
     <p class="muted">${esc(EXAM.meta.subtitle)}</p>
     ${resume}
     <table style="margin:14px 0">
-      <tr><th>Bolim</th><th style="text-align:right">Savol</th><th style="text-align:right">Vaqt</th></tr>
+      <tr><th>Bo'lim</th><th style="text-align:right">Savol</th><th style="text-align:right">Vaqt</th></tr>
       ${secList}
       <tr><td><b>Jami</b></td><td class="n">${EXAM.sections.reduce((a,s)=>a+secCount(s),0)} ta</td>
       <td class="n">${EXAM.sections.reduce((a,s)=>a+s.minutes,0)} daq</td></tr>
     </table>
     <h3>Qoidalar</h3>
     <ol class="rules muted">
-      <li>Har bolimning <b>oz vaqti</b> bor. Vaqt tugasa bolim avtomatik yopiladi.</li>
-      <li>Bolim yakunlangach unga <b>qaytib bolmaydi</b>.</li>
-      <li>Istima audiosini <b>2 martadan</b> ortiq tinglab bolmaydi.</li>
-      <li>Brauzer yopilib qolsa, xuddi shu qurilmada ochsangiz <b>qoldigan joydan</b> davom etadi.</li>
-      <li>Yozish bolimida arabcha klaviatura kerak; bolmasa sahifadagi <b>harflar paneli</b>dan foydalaning.</li>
+      <li>Har bo'limning <b>o'z vaqti</b> bor. Vaqt tugasa bo'lim avtomatik yopiladi.</li>
+      <li>Bo'lim yakunlangach unga <b>qaytib bo'lmaydi</b>.</li>
+      <li>Istima audiosini <b>2 martadan</b> ortiq tinglab bo'lmaydi.</li>
+      <li>Brauzer yopilib qolsa, xuddi shu qurilmada ochsangiz <b>qolgan joydan</b> davom etadi.</li>
+      <li>Yozish bo'limida arabcha klaviatura kerak; bo'lmasa sahifadagi <b>harflar paneli</b>dan foydalaning.</li>
     </ol>
     <h3>Qanday topshirasiz?</h3>
     <div class="modes">
@@ -344,7 +344,7 @@ function pickMode(m){
 }
 function startExam(){
   const name = (document.getElementById('nameIn').value||'').trim();
-  if(name.length<3){ alert('Iltimos, toliq ism-familiyangizni yozing.'); return; }
+  if(name.length<3){ alert('Iltimos, to\'liq ism-familiyangizni yozing.'); return; }
   S = { name:name, started:Date.now(), si:0, finished:false, mode:chosenMode,
         orders:{}, opts:{}, ans:{}, left:{}, done:{}, plays:{} };
   EXAM.sections.forEach(sec=>{
@@ -427,8 +427,8 @@ function screenSection(){
     html += out;
   } else if(sec.type==='write'){
     html += `<div class="card">
-      <p class="muted">Quyidagi ozbekcha gaplarning <b>arabcha</b> tarjimasini yozing.
-      Harakat (tashkil) qoyish shart emas. Tekshirishda imlo yaqinligi hisobga olinadi.</p>
+      <p class="muted">Quyidagi o'zbekcha gaplarning <b>arabcha</b> tarjimasini yozing.
+      Harakat (tashkil) qo'yish shart emas. Tekshirishda imlo yaqinligi hisobga olinadi.</p>
       <button class="btn ghost" onclick="toggleKbd()" id="kbdBtn">Arabcha harflar panelini ochish</button>
       <div id="kbdWrap" class="hide"></div>
     </div><div class="card">`;
@@ -442,7 +442,7 @@ function screenSection(){
 
   html += `<div class="card noprint">
     <p class="muted" id="unans"></p>
-    <button class="btn block" onclick="finishSection(false)">Bolimni yakunlash va keyingisiga otish</button>
+    <button class="btn block" onclick="finishSection(false)">Bo'limni yakunlash va keyingisiga o'tish</button>
   </div>` + previewBar();
   app.innerHTML = html;
   window.scrollTo(0,0);
@@ -510,7 +510,7 @@ function toggleKbd(){
   } else { w.classList.add('hide'); b.textContent='Arabcha harflar panelini ochish'; }
 }
 function ins(ch){
-  if(!ACTIVE){ alert('Avval yozmoqchi bolgan katakni bosing.'); return; }
+  if(!ACTIVE){ alert('Avval yozmoqchi bo\'lgan katakni bosing.'); return; }
   const s=ACTIVE.selectionStart||ACTIVE.value.length, e=ACTIVE.selectionEnd||s;
   ACTIVE.value = ACTIVE.value.slice(0,s)+ch+ACTIVE.value.slice(e);
   ACTIVE.selectionStart=ACTIVE.selectionEnd=s+ch.length;
@@ -528,11 +528,11 @@ function del(){
 function finishSection(auto){
   const sec=curSec(); if(!sec||S.done[sec.id]) return;
   const left = secCount(sec)-answeredCount(sec);
-  if(!auto && !PREVIEW && left>0 && !confirm(left+' ta savol javobsiz qoldi. Baribir yakunlaymizmi? Bu bolimga qaytib bolmaydi.')) return;
-  if(!auto && !PREVIEW && left===0 && !confirm('Bolimni yakunlaymizmi? Qaytib bolmaydi.')) return;
+  if(!auto && !PREVIEW && left>0 && !confirm(left+' ta savol javobsiz qoldi. Baribir yakunlaymizmi? Bu bo\'limga qaytib bo\'lmaydi.')) return;
+  if(!auto && !PREVIEW && left===0 && !confirm('Bo\'limni yakunlaymizmi? Qaytib bo\'lmaydi.')) return;
   stopTimer();
   S.done[sec.id]=true; S.si++; save();
-  if(auto) alert('«'+sec.name+'» bolimi vaqti tugadi. Keyingi bolimga otamiz.');
+  if(auto) alert('«'+sec.name+'» bo\'limi vaqti tugadi. Keyingi bo\'limga o\'tamiz.');
   if(S.si>=EXAM.sections.length){ S.finished=true; save(); screenResult(); }
   else if(S.mode==='two' && S.si===DAY1_LAST+1 && !PREVIEW) screenDayEnd();
   else screenBreak();
@@ -575,10 +575,10 @@ function screenBreak(){
   document.getElementById('topbar').classList.add('hide');
   const nx=curSec();
   app.innerHTML = `<div style="height:20px"></div><div class="card">
-    <h2>Bolim yakunlandi ✅</h2>
-    <p>Keyingi bolim: <b>${esc(nx.name)}</b> — ${secCount(nx)} ta savol, ${nx.minutes} daqiqa.</p>
-    <p class="muted">Dam olib, tayyor bolganingizda bosing. Taymer siz bosganda boshlanadi.</p>
-    <button class="btn block" onclick="screenSection()">Keyingi bolimni boshlash</button>
+    <h2>Bo'lim yakunlandi ✅</h2>
+    <p>Keyingi bo'lim: <b>${esc(nx.name)}</b> — ${secCount(nx)} ta savol, ${nx.minutes} daqiqa.</p>
+    <p class="muted">Dam olib, tayyor bo'lganingizda bosing. Taymer siz bosganda boshlanadi.</p>
+    <button class="btn block" onclick="screenSection()">Keyingi bo'limni boshlash</button>
   </div>` + previewBar();
   window.scrollTo(0,0);
 }
@@ -622,7 +622,7 @@ function screenResult(){
   const writes = R.writes.map((w,i)=>`<div class="wrow">
       <div class="muted" style="font-size:13px">${i+1}. ${esc(w.uz)}</div>
       <div class="ar" style="font-size:19px">${esc(w.ans||'— (yozilmagan)')}</div>
-      <div style="margin:4px 0"><span class="tag ${w.tag}">${w.tag==='ok'?'Togri':(w.tag==='half'?'Qisman ('+Math.round(w.sim*100)+'%)':'Xato ('+Math.round(w.sim*100)+'%)')}</span></div>
+      <div style="margin:4px 0"><span class="tag ${w.tag}">${w.tag==='ok'?'To\'g\'ri':(w.tag==='half'?'Qisman ('+Math.round(w.sim*100)+'%)':'Xato ('+Math.round(w.sim*100)+'%)')}</span></div>
       ${w.tag!=='ok'?`<div class="ar" style="font-size:18px;color:#1B5E4B">${esc(w.key)}</div>
       <div class="muted" style="font-size:13px">${esc(w.izoh||'')}</div>`:''}
     </div>`).join('');
@@ -630,7 +630,7 @@ function screenResult(){
       <div class="muted" style="font-size:13px">${esc(w.sec)}</div>
       ${dirBlock(w.q)}
       <div style="font-size:14px;margin-top:6px"><b>Siz:</b></div>${dirBlock(w.your)}
-      <div style="font-size:14px;color:#1B5E4B"><b>Togri:</b></div>${dirBlock(w.right)}
+      <div style="font-size:14px;color:#1B5E4B"><b>To'g'ri:</b></div>${dirBlock(w.right)}
       ${w.izoh?`<div class="muted" style="font-size:13px">${dirBlock(w.izoh)}</div>`:''}
     </div>`).join('');
 
@@ -642,12 +642,12 @@ function screenResult(){
       <h1 style="margin:6px 0 2px">${esc(S.name)}</h1>
       <div class="muted">${stamp}</div>
       <div class="score">${R.total.toFixed(1)}%</div>
-      <div class="muted" style="margin-top:6px">Umumiy natija · bahoni ustoz qoyadi</div>
+      <div class="muted" style="margin-top:6px">Umumiy natija · bahoni ustoz qo'yadi</div>
     </div>
     <table style="margin-top:16px">
-      <tr><th>Bolim</th><th style="text-align:right">Ball</th><th style="text-align:right">Foiz</th><th style="text-align:right">Ulush</th></tr>
+      <tr><th>Bo'lim</th><th style="text-align:right">Ball</th><th style="text-align:right">Foiz</th><th style="text-align:right">Ulush</th></tr>
       ${rows}
-      <tr><td><b>Umumiy (ogirlikli)</b></td><td class="n">—</td><td class="n"><b>${R.total.toFixed(1)}%</b></td><td class="n muted">100%</td></tr>
+      <tr><td><b>Umumiy (og'irlikli)</b></td><td class="n">—</td><td class="n"><b>${R.total.toFixed(1)}%</b></td><td class="n muted">100%</td></tr>
     </table>
     <p class="muted" style="margin-top:12px">Shu kartani <b>skrinshot qilib ustozga yuboring</b>.</p>
     <div class="noprint" style="display:flex; gap:8px; flex-wrap:wrap">
@@ -657,22 +657,22 @@ function screenResult(){
   </div>
 
   <div class="card">
-    <h2>Yozish bolimi — javoblaringiz</h2>
-    ${writes || '<p class="muted">Javob yoq.</p>'}
+    <h2>Yozish bo'limi — javoblaringiz</h2>
+    ${writes || `<p class="muted">Javob yo'q.</p>`}
   </div>
 
   <div class="card noprint">
     <h2>Xatolar tahlili (${R.wrong.length} ta)</h2>
-    <p class="muted">Bu royxat siz uchun — qaysi mavzuni takrorlash kerakligini korsatadi.</p>
-    <button class="btn ghost" onclick="document.getElementById('wl').classList.toggle('hide')">Royxatni ochish/yopish</button>
-    <div id="wl" class="hide" style="margin-top:10px">${wrongRows || '<p class="muted">Xato yoq — ajoyib!</p>'}</div>
+    <p class="muted">Bu ro'yxat siz uchun — qaysi mavzuni takrorlash kerakligini ko'rsatadi.</p>
+    <button class="btn ghost" onclick="document.getElementById('wl').classList.toggle('hide')">Ro'yxatni ochish/yopish</button>
+    <div id="wl" class="hide" style="margin-top:10px">${wrongRows || `<p class="muted">Xato yo'q — ajoyib!</p>`}</div>
   </div>
 
   ${PREVIEW ? `<div class="card noprint">
-    <p class="muted">Bu tugma faqat ustozga korinadi (?rejim=korish). Oquvchida chiqmaydi —
-    aks holda u oz natijasini tasodifan ochirib yuborishi mumkin edi.</p>
-    <button class="btn ghost block" onclick="if(confirm('Natija ochiriladi va yangi oquvchi imtihon topshira oladi. Davom etaymi?')){wipe();S=null;screenStart();}">
-      Yangi oquvchi uchun tozalash</button>
+    <p class="muted">Bu tugma faqat ustozga ko'rinadi (?rejim=korish). O'quvchida chiqmaydi —
+    aks holda u o'z natijasini tasodifan o'chirib yuborishi mumkin edi.</p>
+    <button class="btn ghost block" onclick="if(confirm('Natija o\'chiriladi va yangi o\'quvchi imtihon topshira oladi. Davom etaymi?')){wipe();S=null;screenStart();}">
+      Yangi o'quvchi uchun tozalash</button>
   </div>` : ''}` + previewBar();
   window.scrollTo(0,0);
   window.__R = R; window.__stamp = stamp;

@@ -45,7 +45,7 @@ QIROAT = [
                 "q": "صَحِيحٌ أَمْ خَطَأٌ: زَارَتِ الْأُسْرَةُ السُّوقَ الْقَدِيمَ فِي الْيَوْمِ الثَّانِي.",
                 "opts": ["صَحِيحٌ", "خَطَأٌ"],
                 "correct": 1,
-                "izoh": "Xato: yomgir kuchli yoggani uchun ular mehmonxonada qolishdi.",
+                "izoh": "Xato: yomg'ir kuchli yog'gani uchun ular mehmonxonada qolishdi.",
             },
             {
                 "q": "لِمَاذَا بَقِيَتِ الْأُسْرَةُ فِي الْفُنْدُقِ فِي الْيَوْمِ الثَّانِي؟",
@@ -60,9 +60,9 @@ QIROAT = [
             },
             {
                 "q": "«بِغَزَارَةٍ» كَلِمَةٍ مَعْنَاهَا:",
-                "opts": ["Kam miqdorda", "Kuchli, koʻp miqdorda", "Sekin-asta", "Kutilmaganda"],
+                "opts": ["Kam miqdorda", "Kuchli, ko'p miqdorda", "Sekin-asta", "Kutilmaganda"],
                 "correct": 1,
-                "izoh": "«بِغَزَارَةٍ» — serob, koʻp miqdorda (yomgʻir kuchli yogʻdi).",
+                "izoh": "«بِغَزَارَةٍ» — serob, ko'p miqdorda (yomg'ir kuchli yog'di).",
             },
         ],
     },
@@ -101,7 +101,7 @@ QIROAT = [
                     "لِأَنَّهُ يَسْتَيْقِظُ مُتَأَخِّرًا",
                 ],
                 "correct": 1,
-                "izoh": "Ikki sabab matnda aniq: yoʻl qisqa va yurish sogʻliq uchun foydali.",
+                "izoh": "Ikki sabab matnda aniq: yo'l qisqa va yurish sog'liq uchun foydali.",
             },
             {
                 "q": "كَمْ سَاعَةً يَعْمَلُ عُمَرُ فِي الْمَسَاءِ؟",
@@ -131,11 +131,11 @@ QIROAT = [
     },
 ]
 
-# Kitoba: oʻzbekcha gap -> arabcha tarjima. `ar` — asosiy kalit,
-# `variants` — teng darajada toʻgʻri deb qabul qilinadigan boshqa shakllar.
+# Kitoba: o'zbekcha gap -> arabcha tarjima. `ar` — asosiy kalit,
+# `variants` — teng darajada to'g'ri deb qabul qilinadigan boshqa shakllar.
 KITOBA = [
     {
-        "uz": "Men har kuni soat yettida uyg‘onaman.",
+        "uz": "Men har kuni soat yettida uyg'onaman.",
         "ar": "أَسْتَيْقِظُ فِي السَّاعَةِ السَّابِعَةِ كُلَّ يَوْمٍ.",
         "variants": [
             "أَسْتَيْقِظُ كُلَّ يَوْمٍ فِي السَّاعَةِ السَّابِعَةِ.",
@@ -145,13 +145,13 @@ KITOBA = [
         "izoh": "«أَسْتَيْقِظُ» (VIII bob) + «فِي السَّاعَةِ السَّابِعَةِ» + «كُلَّ يَوْمٍ» (zarf, mansub).",
     },
     {
-        "uz": "Do‘stim yangi mashina sotib oldi.",
+        "uz": "Do'stim yangi mashina sotib oldi.",
         "ar": "اِشْتَرَى صَدِيقِي سَيَّارَةً جَدِيدَةً.",
         "variants": [
             "صَدِيقِي اِشْتَرَى سَيَّارَةً جَدِيدَةً.",
             "اشْتَرَى صَدِيقِي سَيَّارَةً جَدِيدَةً.",
         ],
-        "izoh": "Oʻtgan zamon feʼli + foil (صَدِيقِي) + mafʼul (سَيَّارَةً) va sifat mosligi (جَدِيدَةً).",
+        "izoh": "O'tgan zamon fe'li + foil (صَدِيقِي) + maf'ul (سَيَّارَةً) va sifat mosligi (جَدِيدَةً).",
     },
     {
         "uz": "Biz kecha restoranda kechki ovqat yedik.",
@@ -164,17 +164,17 @@ KITOBA = [
         "izoh": "«تَنَاوَلَ» yoki «أَكَلَ» — ikkalasi ham qabul qilinadi; «أَمْسِ» — zamon zarfi.",
     },
     {
-        "uz": "U kasal bo‘lgani uchun maktabga bormadi.",
+        "uz": "U kasal bo'lgani uchun maktabga bormadi.",
         "ar": "لَمْ يَذْهَبْ إِلَى الْمَدْرَسَةِ لِأَنَّهُ مَرِيضٌ.",
         "variants": [
             "هُوَ لَمْ يَذْهَبْ إِلَى الْمَدْرَسَةِ لِأَنَّهُ مَرِيضٌ.",
             "مَا ذَهَبَ إِلَى الْمَدْرَسَةِ لِأَنَّهُ مَرِيضٌ.",
             "لَمْ يَذْهَبْ إِلَى الْمَدْرَسَةِ لِأَنَّهُ كَانَ مَرِيضًا.",
         ],
-        "izoh": "Inkor: «لَمْ» + muzoriʼ majzum (يَذْهَبْ). Sabab: «لِأَنَّ» + olmosh.",
+        "izoh": "Inkor: «لَمْ» + muzori' majzum (يَذْهَبْ). Sabab: «لِأَنَّ» + olmosh.",
     },
     {
-        "uz": "Ertaga ob-havo issiq bo‘ladi.",
+        "uz": "Ertaga ob-havo issiq bo'ladi.",
         "ar": "سَيَكُونُ الطَّقْسُ حَارًّا غَدًا.",
         "variants": [
             "الطَّقْسُ سَيَكُونُ حَارًّا غَدًا.",
@@ -192,7 +192,7 @@ KITOBA = [
             "أُمِّي تَشْتَرِي الْفَوَاكِهَ وَالْخَضْرَاوَاتِ مِنَ السُّوقِ.",
             "تَشْتَرِي أُمِّي الْفَاكِهَةَ وَالْخَضْرَاوَاتِ مِنَ السُّوقِ.",
         ],
-        "izoh": "Muzoriʼ feʼl + foil (أُمِّي) + mafʼul; «الْخُضَار» yoki «الْخَضْرَاوَات» — ikkisi ham toʻgʻri.",
+        "izoh": "Muzori' fe'l + foil (أُمِّي) + maf'ul; «الْخُضَار» yoki «الْخَضْرَاوَات» — ikkisi ham to'g'ri.",
     },
     {
         "uz": "Bu kitob u kitobdan foydaliroq.",
@@ -202,10 +202,10 @@ KITOBA = [
             "هَذَا الْكِتَابُ أَنْفَعُ مِنْ ذَاكَ الْكِتَابِ.",
             "هَذَا الْكِتَابُ أَفْيَدُ مِنْ ذَلِكَ الْكِتَابِ.",
         ],
-        "izoh": "Ismut-tafzil: «أَفْعَلُ مِنْ». Koʻrsatkich + maʼrifa ism (هَذَا الْكِتَابُ).",
+        "izoh": "Ismut-tafzil: «أَفْعَلُ مِنْ». Ko'rsatkich + ma'rifa ism (هَذَا الْكِتَابُ).",
     },
     {
-        "uz": "Men arab tilini o‘rganish uchun Qohiraga keldim.",
+        "uz": "Men arab tilini o'rganish uchun Qohiraga keldim.",
         "ar": "جِئْتُ إِلَى الْقَاهِرَةِ لِأَتَعَلَّمَ اللُّغَةَ الْعَرَبِيَّةَ.",
         "variants": [
             "أَتَيْتُ إِلَى الْقَاهِرَةِ لِأَتَعَلَّمَ اللُّغَةَ الْعَرَبِيَّةَ.",
@@ -213,7 +213,7 @@ KITOBA = [
             "جِئْتُ إِلَى الْقَاهِرَةِ لِدِرَاسَةِ اللُّغَةِ الْعَرَبِيَّةِ.",
             "حَضَرْتُ إِلَى الْقَاهِرَةِ لِأَتَعَلَّمَ اللُّغَةَ الْعَرَبِيَّةَ.",
         ],
-        "izoh": "Maqsad «لِـ» + muzoriʼ mansub (أَتَعَلَّمَ) yoki masdar bilan «لِدِرَاسَةِ».",
+        "izoh": "Maqsad «لِـ» + muzori' mansub (أَتَعَلَّمَ) yoki masdar bilan «لِدِرَاسَةِ».",
     },
     {
         "uz": "Iltimos, menga kompaniyaning manzilini yuboring.",
@@ -224,10 +224,10 @@ KITOBA = [
             "لَوْ سَمَحْتَ، أَرْسِلْ لِي عُنْوَانَ الشَّرِكَةِ.",
             "مِنْ فَضْلِكَ أَرْسِلْ إِلَيَّ عُنْوَانَ الشَّرِكَةِ.",
         ],
-        "izoh": "Buyruq feʼli «أَرْسِلْ» + «لِي» + idofa «عُنْوَانَ الشَّرِكَةِ».",
+        "izoh": "Buyruq fe'li «أَرْسِلْ» + «لِي» + idofa «عُنْوَانَ الشَّرِكَةِ».",
     },
     {
-        "uz": "Talabalar imtihonga yaxshi tayyorgarlik ko‘rishdi.",
+        "uz": "Talabalar imtihonga yaxshi tayyorgarlik ko'rishdi.",
         "ar": "اِسْتَعَدَّ الطُّلَّابُ لِلِامْتِحَانِ جَيِّدًا.",
         "variants": [
             "الطُّلَّابُ اِسْتَعَدُّوا لِلِامْتِحَانِ جَيِّدًا.",
@@ -235,6 +235,6 @@ KITOBA = [
             "اسْتَعَدَّ الطُّلَّابُ لِلْامْتِحَانِ جَيِّدًا.",
             "تَحَضَّرَ الطُّلَّابُ لِلِامْتِحَانِ جَيِّدًا.",
         ],
-        "izoh": "«اِسْتَعَدَّ لِـ» — biror narsaga tayyorgarlik koʻrmoq; «جَيِّدًا» — hol/sifat zarfi.",
+        "izoh": "«اِسْتَعَدَّ لِـ» — biror narsaga tayyorgarlik ko'rmoq; «جَيِّدًا» — hol/sifat zarfi.",
     },
 ]
