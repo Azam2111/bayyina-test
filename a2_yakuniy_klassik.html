@@ -100,6 +100,12 @@ td.n{text-align:right; white-space:nowrap; font-weight:700}
 .pv-b.wide{min-width:auto}
 body:has(.pvbar) .wrap{padding-bottom:110px}
 .warnbox{background:#fdf3e0; border:1px solid #e7cf9f; border-radius:12px; padding:12px 14px; font-size:14px}
+.modes{display:grid; gap:10px}
+.mode{display:block; border:1.5px solid var(--cream-dim); background:#fffdf7; border-radius:12px;
+  padding:12px 14px; cursor:pointer}
+.mode.sel{border-color:var(--brown); background:#fff7e8}
+.mode b{display:block; margin-bottom:4px; color:var(--brown)}
+.mode span{font-size:13.5px; color:#7a6749; line-height:1.5}
 ol.rules{padding-left:20px; margin:0}
 ol.rules li{margin-bottom:6px}
 @media print{ .noprint{display:none !important} body{background:#fff} }
@@ -306,16 +312,41 @@ function screenStart(){
       <li>Brauzer yopilib qolsa, xuddi shu qurilmada ochsangiz <b>qoldigan joydan</b> davom etadi.</li>
       <li>Yozish bolimida arabcha klaviatura kerak; bolmasa sahifadagi <b>harflar paneli</b>dan foydalaning.</li>
     </ol>
+    <h3>Qanday topshirasiz?</h3>
+    <div class="modes">
+      <label class="mode sel" id="m_one" onclick="pickMode('one')">
+        <b>Bir kunda — hammasi</b>
+        <span>5 bo'lim ketma-ket, taxminan ${EXAM.sections.reduce((a,s)=>a+s.minutes,0)} daqiqa (tanaffuslar bilan).</span>
+      </label>
+      <label class="mode" id="m_two" onclick="pickMode('two')">
+        <b>2 kunga bo'lib</b>
+        <span><b>1-kun:</b> ${esc(EXAM.sections[0].name.replace(/^\d+\.\s*/,''))} + ${esc(EXAM.sections[1].name.replace(/^\d+\.\s*/,''))} (~${EXAM.sections[0].minutes+EXAM.sections[1].minutes} daq).
+        <b>2-kun:</b> qolgan 3 bo'lim (~${EXAM.sections.slice(2).reduce((a,s)=>a+s.minutes,0)} daq).</span>
+      </label>
+    </div>
+    <div class="warnbox" style="margin-top:12px">
+      <b>Muhim:</b> imtihonni <b>xuddi shu telefon/kompyuterda va shu brauzerda</b> davom ettiring —
+      javoblaringiz shu qurilmada saqlanadi. Brauzer tarixini tozalasangiz yoki boshqa qurilmada ochsangiz,
+      hammasi boshidan boshlanadi.
+    </div>
     <h3>Ism-familiyangiz</h3>
     <input type="text" id="nameIn" placeholder="Masalan: Aziza Karimova" autocomplete="name"${PREVIEW?' value="Ustoz — ko\'rish rejimi"':''}>
     <div style="height:12px"></div>
     <button class="btn block" onclick="startExam()">Imtihonni boshlash</button>
   </div>${previewBar()}`;
 }
+let chosenMode = 'one';
+function pickMode(m){
+  chosenMode = m;
+  const a=document.getElementById('m_one'), b=document.getElementById('m_two');
+  if(a) a.classList.toggle('sel', m==='one');
+  if(b) b.classList.toggle('sel', m==='two');
+}
 function startExam(){
   const name = (document.getElementById('nameIn').value||'').trim();
   if(name.length<3){ alert('Iltimos, toliq ism-familiyangizni yozing.'); return; }
-  S = { name:name, started:Date.now(), si:0, finished:false, orders:{}, opts:{}, ans:{}, left:{}, done:{}, plays:{} };
+  S = { name:name, started:Date.now(), si:0, finished:false, mode:chosenMode,
+        orders:{}, opts:{}, ans:{}, left:{}, done:{}, plays:{} };
   EXAM.sections.forEach(sec=>{
     const items = secQuestions(sec);
     if(sec.type==='write'){ S.orders[sec.id] = [...Array(items.length).keys()]; }
@@ -331,7 +362,12 @@ function startExam(){
   });
   save(); screenSection();
 }
-function resumeExam(){ S = load(); if(!S){ screenStart(); return; } S.finished ? screenResult() : screenSection(); }
+function resumeExam(){
+  S = load(); if(!S){ screenStart(); return; }
+  if(S.finished){ screenResult(); return; }
+  if(S.mode==='two' && S.si===DAY1_LAST+1 && !S.day2 && !PREVIEW){ screenDay2(); return; }
+  screenSection();
+}
 
 /* ---------- bolim ---------- */
 function curSec(){ return EXAM.sections[S.si]; }
@@ -498,7 +534,42 @@ function finishSection(auto){
   S.done[sec.id]=true; S.si++; save();
   if(auto) alert('«'+sec.name+'» bolimi vaqti tugadi. Keyingi bolimga otamiz.');
   if(S.si>=EXAM.sections.length){ S.finished=true; save(); screenResult(); }
+  else if(S.mode==='two' && S.si===DAY1_LAST+1 && !PREVIEW) screenDayEnd();
   else screenBreak();
+}
+/* 2 kunlik rejim: 1-kun 1-2 bolim, 2-kun 3-4-5 bolim */
+const DAY1_LAST = 1;
+function screenDayEnd(){
+  stopTimer();
+  document.getElementById('topbar').classList.add('hide');
+  const done = EXAM.sections.slice(0,DAY1_LAST+1).map(s=>esc(s.name)).join(' va ');
+  const rest = EXAM.sections.slice(DAY1_LAST+1).map(s=>`<li>${esc(s.name)} — ${secCount(s)} ta, ${s.minutes} daq</li>`).join('');
+  app.innerHTML = `<div style="height:20px"></div><div class="card">
+    <h2>1-kun tugadi ✅</h2>
+    <p>${done} bo'limlari topshirildi. Natija <b>hali chiqmaydi</b> — imtihon tugagach bir marta ko'rsatiladi.</p>
+    <h3>Ertaga davom etasiz:</h3>
+    <ul class="muted" style="margin:0 0 12px 18px; padding:0">${rest}</ul>
+    <div class="warnbox">
+      Ertaga <b>xuddi shu havolani, xuddi shu qurilmada va brauzerda</b> oching —
+      imtihon o'zi qolgan joydan davom etadi. Brauzer tarixini tozalamang.
+    </div>
+    <div style="height:12px"></div>
+    <button class="btn ghost block" onclick="screenBreak()">Men hozir davom ettirmoqchiman</button>
+  </div>` + previewBar();
+  window.scrollTo(0,0);
+}
+function screenDay2(){
+  stopTimer();
+  document.getElementById('topbar').classList.add('hide');
+  const rest = EXAM.sections.slice(DAY1_LAST+1).map(s=>`<li>${esc(s.name)} — ${secCount(s)} ta, ${s.minutes} daq</li>`).join('');
+  app.innerHTML = `<div style="height:20px"></div><div class="card">
+    <h2>Xush kelibsiz, ${esc(S.name)} 👋</h2>
+    <p>1-kun javoblaringiz saqlangan. Bugun <b>2-kun</b> qismi:</p>
+    <ul class="muted" style="margin:0 0 12px 18px; padding:0">${rest}</ul>
+    <p class="muted">Taymer siz tugmani bosganda boshlanadi.</p>
+    <button class="btn block" onclick="S.day2=true;save();screenSection()">2-kunni boshlash</button>
+  </div>` + previewBar();
+  window.scrollTo(0,0);
 }
 function screenBreak(){
   document.getElementById('topbar').classList.add('hide');
