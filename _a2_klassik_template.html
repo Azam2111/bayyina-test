@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Bayyina — A2 yakuniy imtihon</title>
+<link rel="icon" href="logo_icon_cream.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5ECD7; --cream-dim:#E6D9BC; --brown:#4A2C0A; --gold:#C9883A;
+  --teal:#1B5E4B; --red:#B3452F; --ink:#3a2a14; --white:#fff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--cream); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  font-size:16px; line-height:1.6; -webkit-text-size-adjust:100%;
+}
+.ar{direction:rtl; text-align:right; font-family:'Noto Naskh Arabic',serif; line-height:2.1}
+.wrap{max-width:760px; margin:0 auto; padding:0 16px 80px}
+.card{background:var(--white); border:1px solid var(--cream-dim); border-radius:16px;
+  padding:18px; box-shadow:0 4px 18px rgba(60,40,20,.07); margin-bottom:16px}
+h1{font-size:22px; margin:0 0 6px; color:var(--brown)}
+h2{font-size:18px; margin:0 0 10px; color:var(--brown)}
+h3{font-size:16px; margin:18px 0 8px; color:var(--brown)}
+p{margin:0 0 10px}
+.muted{color:#7a6749; font-size:14px}
+.btn{display:inline-block; border:0; border-radius:12px; padding:13px 20px; font-size:16px;
+  font-weight:700; cursor:pointer; background:var(--brown); color:var(--cream); font-family:inherit}
+.btn:active{transform:translateY(1px)}
+.btn[disabled]{opacity:.45; cursor:not-allowed}
+.btn.gold{background:var(--gold); color:#fff}
+.btn.ghost{background:transparent; color:var(--brown); border:1.5px solid var(--cream-dim)}
+.btn.block{display:block; width:100%; text-align:center}
+input[type=text]{width:100%; padding:13px 14px; font-size:16px; border:1.5px solid var(--cream-dim);
+  border-radius:12px; font-family:inherit; background:#fffdf7}
+textarea{width:100%; min-height:64px; padding:12px 14px; font-size:19px; border:1.5px solid var(--cream-dim);
+  border-radius:12px; font-family:'Noto Naskh Arabic',serif; background:#fffdf7; direction:rtl; line-height:2}
+.topbar{position:sticky; top:0; z-index:20; background:var(--cream); border-bottom:1px solid var(--cream-dim);
+  padding:10px 16px; margin-bottom:14px}
+.topbar-in{max-width:760px; margin:0 auto; display:flex; align-items:center; gap:12px; flex-wrap:wrap}
+.pill{background:var(--white); border:1px solid var(--cream-dim); border-radius:999px;
+  padding:5px 12px; font-size:13px; font-weight:700; color:var(--brown)}
+.pill.warn{background:#fdecea; border-color:#f3c6bd; color:var(--red)}
+.bar{height:6px; background:var(--cream-dim); border-radius:999px; overflow:hidden; flex:1 1 100px; min-width:80px}
+.bar > i{display:block; height:100%; background:var(--gold); width:0%}
+.q{border-top:1px solid var(--cream-dim); padding:16px 0}
+.q:first-of-type{border-top:0}
+.qnum{font-size:12px; font-weight:800; letter-spacing:.08em; color:var(--gold); margin-bottom:6px}
+.qtext{font-size:17px; margin-bottom:12px; white-space:pre-wrap}
+.qtext.ar{font-size:21px}
+.opts{display:grid; gap:8px}
+.opt{display:flex; gap:10px; align-items:flex-start; border:1.5px solid var(--cream-dim); background:#fffdf7;
+  border-radius:12px; padding:11px 13px; cursor:pointer; font-size:16px}
+.opt.ar{direction:rtl; font-size:20px; text-align:right}
+.opt input{margin:5px 0 0; flex:0 0 auto; accent-color:var(--brown); width:18px; height:18px}
+.opt.sel{border-color:var(--brown); background:#fff7e8}
+.matn{background:var(--cream); border:1px solid var(--cream-dim); border-right:4px solid var(--gold);
+  border-radius:12px; padding:14px 16px; margin-bottom:6px; font-size:20px; white-space:pre-wrap}
+.audio-card{background:var(--cream); border:1px solid var(--cream-dim); border-radius:12px; padding:12px; margin-bottom:12px}
+.audio-card audio{width:100%; display:block; margin-top:8px}
+.grp{margin:22px 0 4px; padding:12px 14px; background:#fff7e8; border:1px dashed var(--gold); border-radius:12px}
+.kbd{display:flex; flex-wrap:wrap; gap:5px; margin-top:8px}
+.kbd button{font-family:'Noto Naskh Arabic',serif; font-size:19px; padding:6px 10px; min-width:38px;
+  border:1px solid var(--cream-dim); background:#fff; border-radius:8px; cursor:pointer}
+.res-head{text-align:center; padding:8px 0 4px}
+.score{font-size:52px; font-weight:800; line-height:1.1; color:var(--brown)}
+.verdict{display:inline-block; padding:7px 18px; border-radius:999px; font-weight:800; margin-top:8px}
+.verdict.ok{background:#e4f1ea; color:var(--teal)}
+.verdict.no{background:#fdecea; color:var(--red)}
+table{width:100%; border-collapse:collapse; font-size:15px}
+th,td{padding:9px 8px; border-bottom:1px solid var(--cream-dim); text-align:left}
+th{font-size:12px; text-transform:uppercase; letter-spacing:.06em; color:#7a6749}
+td.n{text-align:right; white-space:nowrap; font-weight:700}
+.wrow{border-top:1px solid var(--cream-dim); padding:12px 0}
+.tag{display:inline-block; font-size:12px; font-weight:800; padding:3px 9px; border-radius:999px}
+.tag.ok{background:#e4f1ea; color:var(--teal)}
+.tag.half{background:#fdf3e0; color:#9a6a1a}
+.tag.no{background:#fdecea; color:var(--red)}
+.hide{display:none !important}
+.foot{text-align:center; font-size:13px; color:#8a7757; padding:22px 0}
+.warnbox{background:#fdf3e0; border:1px solid #e7cf9f; border-radius:12px; padding:12px 14px; font-size:14px}
+ol.rules{padding-left:20px; margin:0}
+ol.rules li{margin-bottom:6px}
+@media print{ .noprint{display:none !important} body{background:#fff} }
+</style>
+</head>
+<body>
+
+<div id="topbar" class="topbar hide noprint">
+  <div class="topbar-in">
+    <span class="pill" id="tbSection">—</span>
+    <div class="bar"><i id="tbBar"></i></div>
+    <span class="pill" id="tbCount">0/0</span>
+    <span class="pill" id="tbTime">--:--</span>
+  </div>
+</div>
+
+<div class="wrap" id="app"></div>
+<div class="foot noprint">Bayyina Akademiya · A2 yakuniy imtihon</div>
+
+<script>
+const EXAM = /*__DATA__*/{}/*__ENDDATA__*/;
+const LSKEY = 'bayyina_a2_klassik_v2';
+const app = document.getElementById('app');
+let S = null, timerId = null;
+
+/* ---------- storage ---------- */
+function save(){ try{ localStorage.setItem(LSKEY, JSON.stringify(S)); }catch(e){} }
+function load(){ try{ const r=localStorage.getItem(LSKEY); return r?JSON.parse(r):null; }catch(e){ return null; } }
+function wipe(){ try{ localStorage.removeItem(LSKEY); }catch(e){} }
+
+/* ---------- utils ---------- */
+function shuffled(n){ const a=[...Array(n).keys()]; for(let i=n-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function isAr(t){ return /[؀-ۿ]/.test(String(t||'')); }
+function esc(t){ return String(t==null?'':t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function mmss(s){ s=Math.max(0,Math.round(s)); const m=Math.floor(s/60), r=s%60; return m+':'+String(r).padStart(2,'0'); }
+function secQuestions(sec){
+  if(sec.type==='mcq') return sec.questions;
+  if(sec.type==='group'){ let out=[]; sec.groups.forEach((g,gi)=>g.questions.forEach((q,qi)=>out.push({g:gi,q:qi,ref:q}))); return out; }
+  return sec.items;
+}
+function secCount(sec){ return secQuestions(sec).length; }
+
+/* ---------- arabcha normalizatsiya va oxshashlik ---------- */
+function norm(s){
+  s = String(s||'');
+  s = s.replace(/[ً-ْٰٓ-ٕـ]/g,'');          // harakat, tatweel
+  s = s.replace(/[أإآٱ]/g,'ا');                   // أإآٱ -> ا
+  s = s.replace(/ى/g,'ي').replace(/ة/g,'ه');           // ى->ي , ة->ه
+  s = s.replace(/ؤ/g,'و').replace(/ئ/g,'ي');           // ؤ->و , ئ->ي
+  s = s.replace(/ء/g,'');                                             // yolgiz hamza
+  s = s.replace(/[^ء-ي\s]/g,' ');                                // tinish belgi/lotin
+  return s.replace(/\s+/g,' ').trim();
+}
+function lev(a,b){
+  const m=a.length, n=b.length;
+  if(!m) return n; if(!n) return m;
+  let prev=new Array(n+1), cur=new Array(n+1);
+  for(let j=0;j<=n;j++) prev[j]=j;
+  for(let i=1;i<=m;i++){
+    cur[0]=i;
+    for(let j=1;j<=n;j++){
+      cur[j]=Math.min(prev[j]+1, cur[j-1]+1, prev[j-1]+(a[i-1]===b[j-1]?0:1));
+    }
+    [prev,cur]=[cur,prev];
+  }
+  return prev[n];
+}
+function simRatio(a,b){
+  if(!a && !b) return 1; if(!a || !b) return 0;
+  const d = lev(a,b); return 1 - d/Math.max(a.length,b.length);
+}
+const MEANING_TOKENS = ['لا','لم','لن','ما','ليس','ليست','غير','هل','بلا'];
+function meaningGuard(stu, key){
+  const sw = new Set(stu.split(' ')), kw = new Set(key.split(' '));
+  for(const t of MEANING_TOKENS){ if(sw.has(t) !== kw.has(t)) return false; }
+  return true;
+}
+/* Harf darajasidagi oxshashlikning ozi yetarli emas: «السابعة»/«الثامنة» yoki
+   «حارا»/«باردا» 90% oxshash chiqadi, lekin mano butunlay boshqa.
+   Shuning uchun kalitdagi HAR BIR SOZ oquvchi javobida bor-yoqligi ham tekshiriladi
+   (uzun sozlar kop vaznga ega, kichik imlo xatosiga yol qoyiladi). */
+function wordCoverage(stu, key){
+  const sw = stu.split(' ').filter(Boolean), kw = key.split(' ').filter(Boolean);
+  const used = new Array(sw.length).fill(false);
+  // uzun sozdan boshlab juftlaymiz; har bir soz FAQAT BIR MARTA ishlatiladi
+  // (aks holda «الساعة» sozi «السابعة» ni ham «qoplab» yuboradi).
+  const order = kw.map((k,i)=>i).sort((a,b)=>kw[b].length-kw[a].length);
+  let tot=0, got=0;
+  order.forEach(ki=>{
+    const k = kw[ki], w = Math.max(1, k.length-1);
+    tot += w;
+    let best=0, bi=-1;
+    sw.forEach((s,si)=>{ if(used[si]) return; const r=simRatio(s,k); if(r>best){ best=r; bi=si; } });
+    if(best>=0.75){ got += w; used[bi]=true; }
+    else if(best>=0.60){ got += w*0.5; used[bi]=true; }
+  });
+  return tot ? got/tot : 1;
+}
+function gradeWrite(answer, item){
+  const stu = norm(answer);
+  if(!stu) return {score:0, sim:0, cov:0, best:item.ar, tag:'no'};
+  const keys = [item.ar].concat(item.variants||[]);
+  let bestRank=-1, sim=0, cov=0, bestKey=item.ar, guardOk=false;
+  keys.forEach(k=>{
+    const nk = norm(k);
+    const s = simRatio(stu, nk);
+    const c = wordCoverage(stu, nk);
+    const rank = (s+c)/2;
+    if(rank>bestRank){ bestRank=rank; sim=s; cov=c; bestKey=k; guardOk=meaningGuard(stu,nk); }
+  });
+  let score = 0, tag='no';
+  if(sim>=EXAM.meta.write_pass && cov>=EXAM.meta.write_cov && guardOk){ score=1; tag='ok'; }
+  else if(sim>=EXAM.meta.write_half && cov>=EXAM.meta.write_cov_half && guardOk){ score=0.5; tag='half'; }
+  return {score:score, sim:sim, cov:cov, best:bestKey, tag:tag, guard:guardOk};
+}
+
+/* ---------- boshlash ---------- */
+function screenStart(){
+  stopTimer();
+  const old = load();
+  const resume = (old && old.name && !old.finished) ? `
+    <div class="warnbox" style="margin-bottom:14px">
+      <b>${esc(old.name)}</b> nomi bilan tugallanmagan imtihon bor
+      (${esc(EXAM.sections[old.si] ? EXAM.sections[old.si].name : '')} bolimi).
+      <div style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap">
+        <button class="btn gold" onclick="resumeExam()">Davom ettirish</button>
+        <button class="btn ghost" onclick="if(confirm('Eski natija ochiriladi. Davom etaymi?')){wipe();screenStart();}">Yangidan boshlash</button>
+      </div>
+    </div>` : '';
+  const secList = EXAM.sections.map(s =>
+    `<tr><td>${esc(s.name)}</td><td class="n">${secCount(s)} ta</td><td class="n">${s.minutes} daq</td></tr>`).join('');
+  app.innerHTML = `
+  <div style="height:18px"></div>
+  <div class="card">
+    <h1>${esc(EXAM.meta.title)}</h1>
+    <p class="muted">${esc(EXAM.meta.subtitle)}</p>
+    ${resume}
+    <table style="margin:14px 0">
+      <tr><th>Bolim</th><th style="text-align:right">Savol</th><th style="text-align:right">Vaqt</th></tr>
+      ${secList}
+      <tr><td><b>Jami</b></td><td class="n">${EXAM.sections.reduce((a,s)=>a+secCount(s),0)} ta</td>
+      <td class="n">${EXAM.sections.reduce((a,s)=>a+s.minutes,0)} daq</td></tr>
+    </table>
+    <h3>Qoidalar</h3>
+    <ol class="rules muted">
+      <li>Har bolimning <b>oz vaqti</b> bor. Vaqt tugasa bolim avtomatik yopiladi.</li>
+      <li>Bolim yakunlangach unga <b>qaytib bolmaydi</b>.</li>
+      <li>Istima audiosini <b>2 martadan</b> ortiq tinglab bolmaydi.</li>
+      <li>Brauzer yopilib qolsa, xuddi shu qurilmada ochsangiz <b>qoldigan joydan</b> davom etadi.</li>
+      <li>Yozish bolimida arabcha klaviatura kerak; bolmasa sahifadagi <b>harflar paneli</b>dan foydalaning.</li>
+    </ol>
+    <h3>Ism-familiyangiz</h3>
+    <input type="text" id="nameIn" placeholder="Masalan: Aziza Karimova" autocomplete="name">
+    <div style="height:12px"></div>
+    <button class="btn block" onclick="startExam()">Imtihonni boshlash</button>
+  </div>`;
+}
+function startExam(){
+  const name = (document.getElementById('nameIn').value||'').trim();
+  if(name.length<3){ alert('Iltimos, toliq ism-familiyangizni yozing.'); return; }
+  S = { name:name, started:Date.now(), si:0, finished:false, orders:{}, opts:{}, ans:{}, left:{}, done:{}, plays:{} };
+  EXAM.sections.forEach(sec=>{
+    const items = secQuestions(sec);
+    if(sec.type==='write'){ S.orders[sec.id] = [...Array(items.length).keys()]; }
+    else if(sec.type==='group'){
+      let ord=[], off=0;
+      sec.groups.forEach((g,gi)=>{ shuffled(g.questions.length).forEach(k=>ord.push(off+k)); off+=g.questions.length; });
+      S.orders[sec.id]=ord;
+    } else { S.orders[sec.id] = shuffled(items.length); }
+    S.opts[sec.id] = items.map(it=>{ const q = it.ref||it; return q.opts? shuffled(q.opts.length):null; });
+    S.ans[sec.id] = {};
+    S.left[sec.id] = sec.minutes*60;
+    S.done[sec.id] = false;
+  });
+  save(); screenSection();
+}
+function resumeExam(){ S = load(); if(!S){ screenStart(); return; } S.finished ? screenResult() : screenSection(); }
+
+/* ---------- bolim ---------- */
+function curSec(){ return EXAM.sections[S.si]; }
+function answeredCount(sec){
+  const a=S.ans[sec.id]||{}; let n=0;
+  Object.keys(a).forEach(k=>{ const v=a[k]; if(v!==null&&v!==undefined&&String(v).trim()!=='') n++; });
+  return n;
+}
+function updateTop(){
+  const sec=curSec(); if(!sec) return;
+  const tot=secCount(sec), n=answeredCount(sec);
+  document.getElementById('tbSection').textContent = (S.si+1)+'/'+EXAM.sections.length+' · '+sec.name;
+  document.getElementById('tbCount').textContent = n+'/'+tot;
+  document.getElementById('tbBar').style.width = (tot? Math.round(n/tot*100):0)+'%';
+  const left=S.left[sec.id];
+  const tt=document.getElementById('tbTime'); tt.textContent='⏱ '+mmss(left);
+  tt.className = left<=120 ? 'pill warn' : 'pill';
+}
+function stopTimer(){ if(timerId){ clearInterval(timerId); timerId=null; } }
+function startTimer(){
+  stopTimer();
+  let tick=0;
+  timerId = setInterval(()=>{
+    const sec=curSec(); if(!sec||S.done[sec.id]) return;
+    S.left[sec.id] = Math.max(0, S.left[sec.id]-1);
+    updateTop();
+    if(++tick%5===0) save();
+    if(S.left[sec.id]<=0){ save(); finishSection(true); }
+  },1000);
+}
+function screenSection(){
+  const sec=curSec();
+  if(!sec){ screenResult(); return; }
+  if(S.done[sec.id]){ S.si++; save(); screenSection(); return; }
+  document.getElementById('topbar').classList.remove('hide');
+  const items=secQuestions(sec), ord=S.orders[sec.id];
+  let html = `<div class="card"><h2>${esc(sec.name)}</h2><p class="muted">${esc(sec.desc||'')}</p></div>`;
+
+  if(sec.type==='group'){
+    let rendered=new Set(), out='';
+    sec.groups.forEach((g,gi)=>{
+      out += `<div class="card">`;
+      out += `<div class="grp"><b>${esc(g.title)}</b>`;
+      if(g.audio){
+        out += `<div class="audio-card"><div id="alab_${gi}" style="font-size:13px;font-weight:700;color:#4A2C0A"></div>
+          <audio id="aud_${gi}" controls controlsList="nodownload" preload="none" src="${esc(g.audio)}"></audio></div>`;
+      }
+      out += `</div>`;
+      if(g.matn){ out += `<div class="matn ar">${esc(g.matn)}</div>`; }
+      ord.forEach((gi2,pos)=>{
+        const it=items[gi2]; if(it.g!==gi) return;
+        out += renderQ(sec, gi2, pos, it.ref);
+      });
+      out += `</div>`;
+    });
+    html += out;
+  } else if(sec.type==='write'){
+    html += `<div class="card">
+      <p class="muted">Quyidagi ozbekcha gaplarning <b>arabcha</b> tarjimasini yozing.
+      Harakat (tashkil) qoyish shart emas. Tekshirishda imlo yaqinligi hisobga olinadi.</p>
+      <button class="btn ghost" onclick="toggleKbd()" id="kbdBtn">Arabcha harflar panelini ochish</button>
+      <div id="kbdWrap" class="hide"></div>
+    </div><div class="card">`;
+    ord.forEach((idx,pos)=>{ html += renderWrite(sec, idx, pos, items[idx]); });
+    html += `</div>`;
+  } else {
+    html += `<div class="card">`;
+    ord.forEach((idx,pos)=>{ html += renderQ(sec, idx, pos, items[idx]); });
+    html += `</div>`;
+  }
+
+  html += `<div class="card noprint">
+    <p class="muted" id="unans"></p>
+    <button class="btn block" onclick="finishSection(false)">Bolimni yakunlash va keyingisiga otish</button>
+  </div>`;
+  app.innerHTML = html;
+  window.scrollTo(0,0);
+  if(sec.type==='group') sec.groups.forEach((g,gi)=>{ if(g.audio) wireAudio(sec,g,gi); });
+  refreshUnans();
+  updateTop(); startTimer(); save();
+}
+function renderQ(sec, idx, pos, q){
+  const oo = S.opts[sec.id][idx] || [...Array(q.opts.length).keys()];
+  const cur = S.ans[sec.id][idx];
+  const arQ = isAr(q.q);
+  const opts = oo.map((origIdx,di)=>{
+    const txt=q.opts[origIdx], a=isAr(txt);
+    const sel = (cur===di)?' sel':'';
+    return `<label class="opt${a?' ar':''}${sel}" id="o_${sec.id}_${idx}_${di}">
+      <input type="radio" name="q_${sec.id}_${idx}" ${cur===di?'checked':''}
+        onclick="pick('${sec.id}',${idx},${di},${oo.length})"><span>${esc(txt)}</span></label>`;
+  }).join('');
+  return `<div class="q"><div class="qnum">SAVOL ${pos+1}</div>
+    <div class="qtext${arQ?' ar':''}">${esc(q.q)}</div>
+    <div class="opts">${opts}</div></div>`;
+}
+function renderWrite(sec, idx, pos, it){
+  const cur = S.ans[sec.id][idx]||'';
+  return `<div class="q"><div class="qnum">GAP ${pos+1}</div>
+    <div class="qtext">${esc(it.uz)}</div>
+    <textarea id="w_${sec.id}_${idx}" dir="rtl" placeholder="Arabcha tarjimasini yozing…"
+      oninput="typed('${sec.id}',${idx},this.value)" onfocus="ACTIVE=this">${esc(cur)}</textarea></div>`;
+}
+function pick(sid, idx, di, n){
+  S.ans[sid][idx]=di;
+  for(let k=0;k<n;k++){ const el=document.getElementById('o_'+sid+'_'+idx+'_'+k); if(el) el.classList.toggle('sel', k===di); }
+  save(); updateTop(); refreshUnans();
+}
+function typed(sid, idx, val){ S.ans[sid][idx]=val; save(); updateTop(); refreshUnans(); }
+function refreshUnans(){
+  const sec=curSec(); if(!sec) return;
+  const left = secCount(sec)-answeredCount(sec);
+  const el=document.getElementById('unans'); if(!el) return;
+  el.innerHTML = left>0 ? `Javobsiz qolgan: <b>${left}</b> ta. Javobsiz savol xato deb hisoblanadi.`
+                        : `Barcha savollarga javob berildi.`;
+}
+/* audio: cheklangan tinglash */
+function wireAudio(sec,g,gi){
+  const key = sec.id+'_'+gi;
+  if(S.plays[key]===undefined) S.plays[key] = (g.tinglash||2);
+  const au=document.getElementById('aud_'+gi), lab=document.getElementById('alab_'+gi);
+  function paint(){ lab.textContent = '🎧 Tinglash imkoni: qolgan ' + S.plays[key] + ' marta'; }
+  paint();
+  au.addEventListener('play', ()=>{
+    if(S.plays[key]<=0){ au.pause(); au.currentTime=0; paint(); alert('Bu audioni tinglash limiti tugadi.'); return; }
+    if(au.currentTime < 1){ S.plays[key]--; save(); paint(); }
+  });
+  au.addEventListener('seeking', ()=>{ /* orqaga qaytarish erkin, qayta boshlash hisoblanadi */ });
+}
+/* arabcha klaviatura paneli */
+let ACTIVE=null;
+const AR_KEYS = ['ا','ب','ت','ث','ج','ح','خ','د','ذ','ر','ز','س','ش','ص','ض','ط','ظ','ع','غ','ف','ق','ك','ل','م','ن','ه','و','ي','ء','أ','إ','آ','ؤ','ئ','ى','ة','ﻻ','،','؟'];
+function toggleKbd(){
+  const w=document.getElementById('kbdWrap'), b=document.getElementById('kbdBtn');
+  if(w.classList.contains('hide')){
+    w.innerHTML = '<div class="kbd">'+AR_KEYS.map(k=>`<button type="button" onclick="ins('${k}')">${k}</button>`).join('')
+      + '<button type="button" onclick="ins(\' \')">bo\'sh joy</button>'
+      + '<button type="button" onclick="del()">⌫</button></div>';
+    w.classList.remove('hide'); b.textContent='Panelni yopish';
+  } else { w.classList.add('hide'); b.textContent='Arabcha harflar panelini ochish'; }
+}
+function ins(ch){
+  if(!ACTIVE){ alert('Avval yozmoqchi bolgan katakni bosing.'); return; }
+  const s=ACTIVE.selectionStart||ACTIVE.value.length, e=ACTIVE.selectionEnd||s;
+  ACTIVE.value = ACTIVE.value.slice(0,s)+ch+ACTIVE.value.slice(e);
+  ACTIVE.selectionStart=ACTIVE.selectionEnd=s+ch.length;
+  ACTIVE.dispatchEvent(new Event('input'));
+}
+function del(){
+  if(!ACTIVE) return;
+  const s=ACTIVE.selectionStart||ACTIVE.value.length;
+  if(s<=0) return;
+  ACTIVE.value = ACTIVE.value.slice(0,s-1)+ACTIVE.value.slice(ACTIVE.selectionEnd||s);
+  ACTIVE.selectionStart=ACTIVE.selectionEnd=s-1;
+  ACTIVE.dispatchEvent(new Event('input'));
+}
+/* bolimni yakunlash */
+function finishSection(auto){
+  const sec=curSec(); if(!sec||S.done[sec.id]) return;
+  const left = secCount(sec)-answeredCount(sec);
+  if(!auto && left>0 && !confirm(left+' ta savol javobsiz qoldi. Baribir yakunlaymizmi? Bu bolimga qaytib bolmaydi.')) return;
+  if(!auto && left===0 && !confirm('Bolimni yakunlaymizmi? Qaytib bolmaydi.')) return;
+  stopTimer();
+  S.done[sec.id]=true; S.si++; save();
+  if(auto) alert('«'+sec.name+'» bolimi vaqti tugadi. Keyingi bolimga otamiz.');
+  if(S.si>=EXAM.sections.length){ S.finished=true; save(); screenResult(); }
+  else screenBreak();
+}
+function screenBreak(){
+  document.getElementById('topbar').classList.add('hide');
+  const nx=curSec();
+  app.innerHTML = `<div style="height:20px"></div><div class="card">
+    <h2>Bolim yakunlandi ✅</h2>
+    <p>Keyingi bolim: <b>${esc(nx.name)}</b> — ${secCount(nx)} ta savol, ${nx.minutes} daqiqa.</p>
+    <p class="muted">Dam olib, tayyor bolganingizda bosing. Taymer siz bosganda boshlanadi.</p>
+    <button class="btn block" onclick="screenSection()">Keyingi bolimni boshlash</button>
+  </div>`;
+  window.scrollTo(0,0);
+}
+
+/* ---------- natija ---------- */
+function computeResult(){
+  const rows=[], wrong=[], writes=[];
+  let wSum=0, wMax=0;
+  EXAM.sections.forEach(sec=>{
+    const items=secQuestions(sec); let got=0, tot=0;
+    items.forEach((it,idx)=>{
+      if(sec.type==='write'){
+        tot++; const g=gradeWrite(S.ans[sec.id][idx]||'', it); got+=g.score;
+        writes.push({uz:it.uz, ans:(S.ans[sec.id][idx]||''), key:g.best, sim:g.sim, tag:g.tag, izoh:it.izoh});
+      } else {
+        const q=it.ref||it; tot++;
+        const oo=S.opts[sec.id][idx]||[...Array(q.opts.length).keys()];
+        const di=S.ans[sec.id][idx];
+        const chosen = (di===undefined||di===null)? null : oo[di];
+        if(chosen===q.correct) got++;
+        else wrong.push({sec:sec.name, q:q.q, your:(chosen===null?'— (javobsiz)':q.opts[chosen]), right:q.opts[q.correct], izoh:q.izoh||''});
+      }
+    });
+    const pct = tot? (got/tot*100) : 0;
+    rows.push({name:sec.name, got:got, tot:tot, pct:pct, weight:sec.weight});
+    wSum += pct*sec.weight; wMax += sec.weight;
+  });
+  const total = wMax? wSum/wMax : 0;
+  return {rows:rows, wrong:wrong, writes:writes, total:total};
+}
+function screenResult(){
+  stopTimer();
+  document.getElementById('topbar').classList.add('hide');
+  const R = computeResult();
+  const pass = R.total >= EXAM.meta.pass;
+  const dt = new Date(); const pad=n=>String(n).padStart(2,'0');
+  const stamp = dt.getFullYear()+'-'+pad(dt.getMonth()+1)+'-'+pad(dt.getDate())+' '+pad(dt.getHours())+':'+pad(dt.getMinutes());
+  const rows = R.rows.map(r=>`<tr><td>${esc(r.name)}</td>
+      <td class="n">${(Math.round(r.got*10)/10)}/${r.tot}</td>
+      <td class="n">${r.pct.toFixed(1)}%</td>
+      <td class="n muted">${r.weight}%</td></tr>`).join('');
+  const writes = R.writes.map((w,i)=>`<div class="wrow">
+      <div class="muted" style="font-size:13px">${i+1}. ${esc(w.uz)}</div>
+      <div class="ar" style="font-size:19px">${esc(w.ans||'— (yozilmagan)')}</div>
+      <div style="margin:4px 0"><span class="tag ${w.tag}">${w.tag==='ok'?'Togri':(w.tag==='half'?'Qisman ('+Math.round(w.sim*100)+'%)':'Xato ('+Math.round(w.sim*100)+'%)')}</span></div>
+      ${w.tag!=='ok'?`<div class="ar" style="font-size:18px;color:#1B5E4B">${esc(w.key)}</div>
+      <div class="muted" style="font-size:13px">${esc(w.izoh||'')}</div>`:''}
+    </div>`).join('');
+  const wrongRows = R.wrong.map((w,i)=>`<div class="wrow">
+      <div class="muted" style="font-size:13px">${esc(w.sec)}</div>
+      <div class="${isAr(w.q)?'ar ':''}" style="white-space:pre-wrap">${esc(w.q)}</div>
+      <div style="font-size:14px;margin-top:4px"><b>Siz:</b> <span class="${isAr(w.your)?'ar':''}">${esc(w.your)}</span></div>
+      <div style="font-size:14px;color:#1B5E4B"><b>Togri:</b> <span class="${isAr(w.right)?'ar':''}">${esc(w.right)}</span></div>
+      ${w.izoh?`<div class="muted" style="font-size:13px">${esc(w.izoh)}</div>`:''}
+    </div>`).join('');
+
+  app.innerHTML = `
+  <div style="height:18px"></div>
+  <div class="card">
+    <div class="res-head">
+      <div class="muted">${esc(EXAM.meta.title)}</div>
+      <h1 style="margin:6px 0 2px">${esc(S.name)}</h1>
+      <div class="muted">${stamp}</div>
+      <div class="score">${R.total.toFixed(1)}%</div>
+      <div class="verdict ${pass?'ok':'no'}">${pass?'OTDI ✅':'OTMADI ❌'} (otish chegarasi ${EXAM.meta.pass}%)</div>
+    </div>
+    <table style="margin-top:16px">
+      <tr><th>Bolim</th><th style="text-align:right">Ball</th><th style="text-align:right">Foiz</th><th style="text-align:right">Ulush</th></tr>
+      ${rows}
+      <tr><td><b>Umumiy (ogirlikli)</b></td><td class="n">—</td><td class="n"><b>${R.total.toFixed(1)}%</b></td><td class="n muted">100%</td></tr>
+    </table>
+    <p class="muted" style="margin-top:12px">Shu kartani <b>skrinshot qilib ustozga yuboring</b>.</p>
+    <div class="noprint" style="display:flex; gap:8px; flex-wrap:wrap">
+      <button class="btn gold" onclick="copyResult()">Natijani matn sifatida nusxalash</button>
+      <button class="btn ghost" onclick="window.print()">Chop etish / PDF</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Yozish bolimi — javoblaringiz</h2>
+    ${writes || '<p class="muted">Javob yoq.</p>'}
+  </div>
+
+  <div class="card noprint">
+    <h2>Xatolar tahlili (${R.wrong.length} ta)</h2>
+    <p class="muted">Bu royxat siz uchun — qaysi mavzuni takrorlash kerakligini korsatadi.</p>
+    <button class="btn ghost" onclick="document.getElementById('wl').classList.toggle('hide')">Royxatni ochish/yopish</button>
+    <div id="wl" class="hide" style="margin-top:10px">${wrongRows || '<p class="muted">Xato yoq — ajoyib!</p>'}</div>
+  </div>
+
+  <div class="card noprint">
+    <button class="btn ghost block" onclick="if(confirm('Natija ochiriladi va yangi oquvchi imtihon topshira oladi. Davom etaymi?')){wipe();S=null;screenStart();}">
+      Yangi oquvchi uchun tozalash</button>
+  </div>`;
+  window.scrollTo(0,0);
+  window.__R = R; window.__stamp = stamp;
+}
+function copyResult(){
+  const R=window.__R;
+  let t = EXAM.meta.title+'\n'+S.name+' — '+window.__stamp+'\n';
+  R.rows.forEach(r=> t += r.name+': '+r.pct.toFixed(1)+'% ('+(Math.round(r.got*10)/10)+'/'+r.tot+')\n');
+  t += 'UMUMIY: '+R.total.toFixed(1)+'% — '+(R.total>=EXAM.meta.pass?'OTDI':'OTMADI');
+  navigator.clipboard.writeText(t).then(()=>alert('Natija nusxalandi. Endi ustozga yuboring.'),
+    ()=>{ prompt('Quyidagi matnni nusxalang:', t); });
+}
+
+/* ---------- start ---------- */
+window.addEventListener('beforeunload', ()=>{ if(S) save(); });
+(function(){ const old=load(); if(old && old.finished){ S=old; screenResult(); } else { screenStart(); } })();
+</script>
+</body>
+</html>
