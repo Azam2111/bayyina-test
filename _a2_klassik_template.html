@@ -668,10 +668,12 @@ function screenResult(){
     <div id="wl" class="hide" style="margin-top:10px">${wrongRows || '<p class="muted">Xato yoq — ajoyib!</p>'}</div>
   </div>
 
-  <div class="card noprint">
+  ${PREVIEW ? `<div class="card noprint">
+    <p class="muted">Bu tugma faqat ustozga korinadi (?rejim=korish). Oquvchida chiqmaydi —
+    aks holda u oz natijasini tasodifan ochirib yuborishi mumkin edi.</p>
     <button class="btn ghost block" onclick="if(confirm('Natija ochiriladi va yangi oquvchi imtihon topshira oladi. Davom etaymi?')){wipe();S=null;screenStart();}">
       Yangi oquvchi uchun tozalash</button>
-  </div>` + previewBar();
+  </div>` : ''}` + previewBar();
   window.scrollTo(0,0);
   window.__R = R; window.__stamp = stamp;
 }
