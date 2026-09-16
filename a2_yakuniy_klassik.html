@@ -89,6 +89,16 @@ td.n{text-align:right; white-space:nowrap; font-weight:700}
 .tag.no{background:#fdecea; color:var(--red)}
 .hide{display:none !important}
 .foot{text-align:center; font-size:13px; color:#8a7757; padding:22px 0}
+/* ko'rish rejimi paneli (faqat ?rejim=korish) */
+.pvbar{position:fixed; left:0; right:0; bottom:0; z-index:50; display:flex; gap:6px; flex-wrap:wrap;
+  align-items:center; justify-content:center; padding:8px 10px;
+  background:var(--brown); box-shadow:0 -4px 16px rgba(60,40,20,.25)}
+.pv-tag{color:var(--gold); font-size:11px; font-weight:800; letter-spacing:.08em}
+.pv-b{border:0; border-radius:9px; padding:8px 12px; font-size:13px; font-weight:700;
+  background:#fff7e8; color:var(--brown); cursor:pointer; font-family:inherit; min-width:36px}
+.pv-b.on{background:var(--gold); color:#fff}
+.pv-b.wide{min-width:auto}
+body:has(.pvbar) .wrap{padding-bottom:110px}
 .warnbox{background:#fdf3e0; border:1px solid #e7cf9f; border-radius:12px; padding:12px 14px; font-size:14px}
 ol.rules{padding-left:20px; margin:0}
 ol.rules li{margin-bottom:6px}
@@ -114,6 +124,10 @@ const EXAM = {"meta":{"title":"A2 — Yakuniy imtihon (klassik guruh)","subtitle
 const LSKEY = 'bayyina_a2_klassik_v2';
 const app = document.getElementById('app');
 let S = null, timerId = null;
+/* KO'RISH REJIMI — faqat ustoz uchun: ?rejim=korish
+   Bolimlar orasida erkin sakrash, tasodifiy toldirish, natijani darrov korish.
+   Oquvchilarga beriladigan oddiy havolada bu rejim yoq. */
+const PREVIEW = (new URLSearchParams(location.search).get('rejim') === 'korish');
 
 /* ---------- storage ---------- */
 function save(){ try{ localStorage.setItem(LSKEY, JSON.stringify(S)); }catch(e){} }
@@ -221,6 +235,42 @@ function gradeWrite(answer, item){
   return {score:score, sim:sim, cov:cov, best:bestKey, tag:tag, guard:guardOk};
 }
 
+/* ---------- ko'rish rejimi paneli ---------- */
+function previewBar(){
+  if(!PREVIEW) return '';
+  const btns = EXAM.sections.map((s,i)=>
+    `<button class="pv-b${(S&&S.si===i)?' on':''}" onclick="pvJump(${i})">${i+1}</button>`).join('');
+  return `<div class="pvbar noprint">
+    <span class="pv-tag">KO'RISH REJIMI</span>${btns}
+    <button class="pv-b wide" onclick="pvFill()">Shu bolimni toldirish</button>
+    <button class="pv-b wide" onclick="pvResult()">Natija</button>
+    <button class="pv-b wide" onclick="pvReset()">Boshidan</button>
+  </div>`;
+}
+function pvJump(i){
+  if(!S) return;
+  S.si = i; S.finished = false;
+  EXAM.sections.forEach(sec=>{ S.done[sec.id]=false; });
+  save(); screenSection();
+}
+function pvFill(){
+  const sec = curSec(); if(!sec) return;
+  const items = secQuestions(sec);
+  items.forEach((it,idx)=>{
+    if(sec.type==='write'){ S.ans[sec.id][idx] = it.ar; }
+    else {
+      const q = it.ref||it;
+      const oo = S.opts[sec.id][idx] || [...Array(q.opts.length).keys()];
+      // 80% togri, 20% xato — natija kartasi real korinishi uchun
+      const right = oo.indexOf(q.correct);
+      S.ans[sec.id][idx] = (Math.random()<0.8) ? right : (right+1)%oo.length;
+    }
+  });
+  save(); screenSection();
+}
+function pvResult(){ if(!S) return; S.finished=true; save(); screenResult(); }
+function pvReset(){ wipe(); S=null; location.href = location.pathname + '?rejim=korish'; }
+
 /* ---------- boshlash ---------- */
 function screenStart(){
   stopTimer();
@@ -257,10 +307,10 @@ function screenStart(){
       <li>Yozish bolimida arabcha klaviatura kerak; bolmasa sahifadagi <b>harflar paneli</b>dan foydalaning.</li>
     </ol>
     <h3>Ism-familiyangiz</h3>
-    <input type="text" id="nameIn" placeholder="Masalan: Aziza Karimova" autocomplete="name">
+    <input type="text" id="nameIn" placeholder="Masalan: Aziza Karimova" autocomplete="name"${PREVIEW?' value="Ustoz — ko\'rish rejimi"':''}>
     <div style="height:12px"></div>
     <button class="btn block" onclick="startExam()">Imtihonni boshlash</button>
-  </div>`;
+  </div>${previewBar()}`;
 }
 function startExam(){
   const name = (document.getElementById('nameIn').value||'').trim();
@@ -306,6 +356,7 @@ function startTimer(){
   let tick=0;
   timerId = setInterval(()=>{
     const sec=curSec(); if(!sec||S.done[sec.id]) return;
+    if(PREVIEW) return;   // korish rejimida taymer yurmaydi
     S.left[sec.id] = Math.max(0, S.left[sec.id]-1);
     updateTop();
     if(++tick%5===0) save();
@@ -356,7 +407,7 @@ function screenSection(){
   html += `<div class="card noprint">
     <p class="muted" id="unans"></p>
     <button class="btn block" onclick="finishSection(false)">Bolimni yakunlash va keyingisiga otish</button>
-  </div>`;
+  </div>` + previewBar();
   app.innerHTML = html;
   window.scrollTo(0,0);
   if(sec.type==='group') sec.groups.forEach((g,gi)=>{ if(g.audio) wireAudio(sec,g,gi); });
@@ -441,8 +492,8 @@ function del(){
 function finishSection(auto){
   const sec=curSec(); if(!sec||S.done[sec.id]) return;
   const left = secCount(sec)-answeredCount(sec);
-  if(!auto && left>0 && !confirm(left+' ta savol javobsiz qoldi. Baribir yakunlaymizmi? Bu bolimga qaytib bolmaydi.')) return;
-  if(!auto && left===0 && !confirm('Bolimni yakunlaymizmi? Qaytib bolmaydi.')) return;
+  if(!auto && !PREVIEW && left>0 && !confirm(left+' ta savol javobsiz qoldi. Baribir yakunlaymizmi? Bu bolimga qaytib bolmaydi.')) return;
+  if(!auto && !PREVIEW && left===0 && !confirm('Bolimni yakunlaymizmi? Qaytib bolmaydi.')) return;
   stopTimer();
   S.done[sec.id]=true; S.si++; save();
   if(auto) alert('«'+sec.name+'» bolimi vaqti tugadi. Keyingi bolimga otamiz.');
@@ -457,7 +508,7 @@ function screenBreak(){
     <p>Keyingi bolim: <b>${esc(nx.name)}</b> — ${secCount(nx)} ta savol, ${nx.minutes} daqiqa.</p>
     <p class="muted">Dam olib, tayyor bolganingizda bosing. Taymer siz bosganda boshlanadi.</p>
     <button class="btn block" onclick="screenSection()">Keyingi bolimni boshlash</button>
-  </div>`;
+  </div>` + previewBar();
   window.scrollTo(0,0);
 }
 
@@ -550,7 +601,7 @@ function screenResult(){
   <div class="card noprint">
     <button class="btn ghost block" onclick="if(confirm('Natija ochiriladi va yangi oquvchi imtihon topshira oladi. Davom etaymi?')){wipe();S=null;screenStart();}">
       Yangi oquvchi uchun tozalash</button>
-  </div>`;
+  </div>` + previewBar();
   window.scrollTo(0,0);
   window.__R = R; window.__stamp = stamp;
 }
