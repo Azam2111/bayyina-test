@@ -542,7 +542,6 @@ function screenResult(){
   stopTimer();
   document.getElementById('topbar').classList.add('hide');
   const R = computeResult();
-  const pass = R.total >= EXAM.meta.pass;
   const dt = new Date(); const pad=n=>String(n).padStart(2,'0');
   const stamp = dt.getFullYear()+'-'+pad(dt.getMonth()+1)+'-'+pad(dt.getDate())+' '+pad(dt.getHours())+':'+pad(dt.getMinutes());
   const rows = R.rows.map(r=>`<tr><td>${esc(r.name)}</td>
@@ -572,7 +571,7 @@ function screenResult(){
       <h1 style="margin:6px 0 2px">${esc(S.name)}</h1>
       <div class="muted">${stamp}</div>
       <div class="score">${R.total.toFixed(1)}%</div>
-      <div class="verdict ${pass?'ok':'no'}">${pass?'OTDI ✅':'OTMADI ❌'} (otish chegarasi ${EXAM.meta.pass}%)</div>
+      <div class="muted" style="margin-top:6px">Umumiy natija · bahoni ustoz qoyadi</div>
     </div>
     <table style="margin-top:16px">
       <tr><th>Bolim</th><th style="text-align:right">Ball</th><th style="text-align:right">Foiz</th><th style="text-align:right">Ulush</th></tr>
@@ -609,7 +608,7 @@ function copyResult(){
   const R=window.__R;
   let t = EXAM.meta.title+'\n'+S.name+' — '+window.__stamp+'\n';
   R.rows.forEach(r=> t += r.name+': '+r.pct.toFixed(1)+'% ('+(Math.round(r.got*10)/10)+'/'+r.tot+')\n');
-  t += 'UMUMIY: '+R.total.toFixed(1)+'% — '+(R.total>=EXAM.meta.pass?'OTDI':'OTMADI');
+  t += 'UMUMIY: '+R.total.toFixed(1)+'%';
   navigator.clipboard.writeText(t).then(()=>alert('Natija nusxalandi. Endi ustozga yuboring.'),
     ()=>{ prompt('Quyidagi matnni nusxalang:', t); });
 }
