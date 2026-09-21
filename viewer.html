@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Bayyina — Test</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -217,7 +216,37 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 </div>
 
 <script>
-  pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+  // ====== pdf.js — FAQAT kerak bo'lganda yuklanadi (2026-09-21) ======
+  // Ilgari pdf.js <head>da majburiy yuklanardi va skript shu qatordan boshlanardi:
+  // cdnjs ochilmagan telefonda (provayder/CDN bloki) `pdfjsLib` yo'q -> ReferenceError
+  // -> BUTUN skript to'xtardi -> test bo'sh qolardi ("Savol 1 / 1", 10:00, savol yo'q).
+  // Salomat (A0 1-dars mufradot) holatida topildi. Endi kitob kerak bo'lgandagina
+  // yuklanadi, ikkita CDN'dan navbat bilan; yuklanmasa faqat kitob oynasi xato beradi.
+  const PDFJS_CDNS = [
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/",
+    "https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/",
+  ];
+  let _pdfjsPromise = null;
+  function ensurePdfJs(){
+    if(window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
+    if(_pdfjsPromise) return _pdfjsPromise;
+    _pdfjsPromise = new Promise(function(resolve, reject){
+      let i = 0;
+      (function next(){
+        if(i >= PDFJS_CDNS.length){ _pdfjsPromise = null; reject(new Error("pdf.js yuklanmadi (internet yoki CDN)")); return; }
+        const base = PDFJS_CDNS[i++];
+        const s = document.createElement('script');
+        s.src = base + "pdf.min.js";
+        s.onload = function(){
+          if(window.pdfjsLib){ window.pdfjsLib.GlobalWorkerOptions.workerSrc = base + "pdf.worker.min.js"; resolve(window.pdfjsLib); }
+          else next();
+        };
+        s.onerror = next;
+        document.head.appendChild(s);
+      })();
+    });
+    return _pdfjsPromise;
+  }
 
   // ====== SOZLAMA ======
   const BOOK_BASE = "https://pub-fa6fab51991c40578a5947add75bc74e.r2.dev/";
@@ -286,7 +315,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
         }
       }catch(e){ /* SAMPLE bilan davom etadi */ }
     }
-    if(hasBook) document.getElementById('bookBtn').style.display='flex';
+    if(hasBook){ document.getElementById('bookBtn').style.display='flex'; ensurePdfJs().catch(function(){}); }  // kitobli testda oldindan fonda yuklab qo'yamiz
     if(QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
@@ -585,7 +614,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   async function loadPdf(){
     const url = BOOK_BASE + encodeURIComponent(bookName);
     try{
-      pdfDoc = await pdfjsLib.getDocument({url, rangeChunkSize: 262144}).promise;
+      const pdfjs = await ensurePdfJs();
+      pdfDoc = await pdfjs.getDocument({url, rangeChunkSize: 262144}).promise;
       document.getElementById('loadingMsg').style.display='none';
       document.getElementById('pageTotal').textContent=pdfDoc.numPages;
       document.getElementById('pageInput').max=pdfDoc.numPages;
