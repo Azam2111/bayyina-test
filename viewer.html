@@ -277,6 +277,12 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let bookName = P.get("kitob") || DEFAULT_BOOK;
   let startPage = parseInt(P.get("bet") || "21", 10);
   const darsId  = P.get("dars") || "";
+  // 2026-09-23 (bo'lim 61): «Xatolar ustida ishlash» rejimi — ?takror=a0_3,a0_4
+  // Shu 2 darsning mufradot+qovaid xatolari + eski xatolardan takrorlash vaqti
+  // kelganlari (1-3-7-14 kun). Natija botga YUBORILMAYDI — faqat mashq.
+  const TAKROR = (P.get("takror")||"").split(",").map(function(x){return x.trim().toLowerCase();})
+                   .filter(function(x){return /^[a-c][0-2]_\d{1,2}$/.test(x);});
+  let NO_TIMER = false;
   const IS_QIROAT = /qiroat/i.test(darsId);   // qiroat: matn (shpargalka) ko'rsatilmaydi — o'quvchi kitobdan o'qiydi
   const SINGLE  = /istima/i.test(darsId);   // istima: barcha savollar bitta ekranda
   let PASS = parseInt(P.get("otish") || "70", 10);
@@ -299,6 +305,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   document.documentElement.style.setProperty('--mscale',MSCALE);
   function adjScale(d){ MSCALE=Math.max(0.7,Math.min(2.4,Math.round((MSCALE+d)*100)/100)); document.documentElement.style.setProperty('--mscale',MSCALE); try{localStorage.setItem('bayyina_mscale',MSCALE);}catch(e){} }
   async function loadConfig(){
+    if(TAKROR.length){ await loadTakror(); return; }
     if(darsId){
       try{
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
@@ -317,6 +324,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     }
     if(hasBook){ document.getElementById('bookBtn').style.display='flex'; ensurePdfJs().catch(function(){}); }  // kitobli testda oldindan fonda yuklab qo'yamiz
     if(QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
+    // Asl indeks (xatolar xotirasi uchun) — aralashtirishdan OLDIN belgilanadi.
+    QUESTIONS.forEach(function(q,i){ if(q && q._i==null){ q._i=i; } });
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
     for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
@@ -510,6 +519,117 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
   function goNext(){ if(cur<QUESTIONS.length-1) renderQuestion(cur+1); }
 
+  // ====== XATOLAR XOTIRASI (2026-09-23, bo'lim 61) ======
+  // Telegram CloudStorage (foydalanuvchi+bot bo'yicha, qurilmadan mustaqil) +
+  // localStorage nusxasi (CloudStorage bo'lmasa). Kalitlar:
+  //   x_<dars>  -> [[asl_indeks, savol_hash, bosqich, vaqt_sek], ...]  (mufradot/qovaid xatolari)
+  //   a_<dars>  -> urinishlar soni (natija metrikasi uchun botga yuboriladi)
+  const XINT = [1,3,7,14];           // takrorlash oraliqlari (kun), bosqich 0..3
+  const XMAX_OLD = 10;               // eski xatolardan bir martada ko'pi bilan
+  let ATTEMPT = 0, WRONG_N = 0;
+  function qHash(q){ var t=String((q&&(q.q||q.img))||''), h=5381; for(var i=0;i<t.length;i++){ h=((h<<5)+h+t.charCodeAt(i))|0; } return (h>>>0).toString(36); }
+  function cs(){ try{ var w=window.Telegram&&Telegram.WebApp; if(w&&w.CloudStorage&&(!w.isVersionAtLeast||w.isVersionAtLeast('6.9'))) return w.CloudStorage; }catch(e){} return null; }
+  function lsGet(k){ try{ return localStorage.getItem('bx_'+k); }catch(e){ return null; } }
+  function lsSet(k,v){ try{ if(v==null) localStorage.removeItem('bx_'+k); else localStorage.setItem('bx_'+k,v); }catch(e){} }
+  function stGetMany(keys){ return new Promise(function(res){
+    var out={}; keys.forEach(function(k){ out[k]=lsGet(k); });
+    var c=cs(); if(!c||!keys.length){ res(out); return; }
+    var done=false; var to=setTimeout(function(){ if(!done){ done=true; res(out); } }, 2500);
+    try{ c.getItems(keys, function(err,vals){ if(done) return; done=true; clearTimeout(to);
+      if(!err && vals){ keys.forEach(function(k){ if(vals[k]) out[k]=vals[k]; }); } res(out); });
+    }catch(e){ if(!done){ done=true; clearTimeout(to); res(out); } } }); }
+  function stSet(k,v){ lsSet(k,v); var c=cs(); if(!c) return;
+    try{ if(v==null) c.removeItem(k,function(){}); else c.setItem(k,v,function(){}); }catch(e){} }
+  function stKeys(){ return new Promise(function(res){
+    var loc=[]; try{ for(var i=0;i<localStorage.length;i++){ var kk=localStorage.key(i); if(kk&&kk.indexOf('bx_x_')===0) loc.push(kk.slice(3)); } }catch(e){}
+    var c=cs(); if(!c){ res(loc); return; }
+    var done=false; var to=setTimeout(function(){ if(!done){ done=true; res(loc); } }, 2500);
+    try{ c.getKeys(function(err,keys){ if(done) return; done=true; clearTimeout(to);
+      var all=loc.slice(); if(!err&&keys){ keys.forEach(function(k){ if(k.indexOf('x_')===0 && all.indexOf(k)<0) all.push(k); }); } res(all); });
+    }catch(e){ if(!done){ done=true; clearTimeout(to); res(loc); } } }); }
+  function parseArr(v){ try{ var a=JSON.parse(v||'[]'); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+  function isXatoDars(d){ return /^[a-c][0-2]_\d{1,2}_(mufradot|qovaid)$/i.test(d||''); }
+
+  // Oddiy test tugaganda: urinishlar sonini oshirish + xatolarni eslab qolish
+  async function recordAttempt(){
+    if(TAKROR.length || !darsId) return;
+    WRONG_N = QUESTIONS.filter(function(q){ return q._answered==null || q._answered!==q._correct; }).length;
+    var ak='a_'+darsId, xk='x_'+darsId;
+    var cur = await stGetMany(isXatoDars(darsId)?[ak,xk]:[ak]);
+    ATTEMPT = (parseInt(cur[ak]||'0',10)||0) + 1;
+    stSet(ak, String(ATTEMPT));
+    if(!isXatoDars(darsId)) return;
+    var now=Math.floor(Date.now()/1000), arr=parseArr(cur[xk]);
+    QUESTIONS.forEach(function(q){
+      if(q._i==null) return;
+      var wrong = (q._answered==null || q._answered!==q._correct); if(!wrong) return;
+      var h=qHash(q), f=null;
+      arr.forEach(function(e){ if(e[1]===h) f=e; });
+      if(f){ f[0]=q._i; f[2]=0; f[3]=now; } else { arr.push([q._i,h,0,now]); }
+    });
+    if(arr.length>150) arr=arr.slice(arr.length-150);
+    stSet(xk, arr.length?JSON.stringify(arr):null);
+  }
+
+  // Takror rejimi: savollarni yig'ish
+  async function loadTakror(){
+    document.getElementById('hdrSub').textContent = "Xatolar ustida ishlash";
+    PASS = 0;
+    var cur=[]; TAKROR.forEach(function(l){ cur.push('x_'+l+'_mufradot','x_'+l+'_qovaid'); });
+    var keys = await stKeys(); cur.forEach(function(k){ if(keys.indexOf(k)<0) keys.push(k); });
+    var vals = await stGetMany(keys), now=Math.floor(Date.now()/1000), want=[], old=[];
+    keys.forEach(function(k){
+      parseArr(vals[k]).forEach(function(e){
+        var rec={dars:k.slice(2), i:e[0], h:e[1], n:e[2]||0, t:e[3]||0};
+        if(cur.indexOf(k)>=0){ want.push(rec); }
+        else { var iv=XINT[Math.min(rec.n,XINT.length-1)]; if(now-rec.t >= iv*86400) old.push(rec); }
+      });
+    });
+    old.sort(function(a,b){ return a.t-b.t; });
+    want = want.concat(old.slice(0,XMAX_OLD));
+    var byDars={}; want.forEach(function(r){ (byDars[r.dars]=byDars[r.dars]||[]).push(r); });
+    var qs=[];
+    for(var d in byDars){
+      try{ var r=await fetch('testlar/'+d+'.json',{cache:'no-store'}); if(!r.ok) continue;
+        var j=await r.json(), list=Array.isArray(j.questions)?j.questions:[];
+        byDars[d].forEach(function(rec){
+          var q=list[rec.i]; if(!q || qHash(q)!==rec.h){ q=null; list.forEach(function(x){ if(!q && qHash(x)===rec.h) q=x; }); }
+          if(q){ var c=JSON.parse(JSON.stringify(q)); c._rec=rec; qs.push(c); }
+        });
+      }catch(e){}
+    }
+    for(var i=qs.length-1;i>0;i--){ var jx=Math.floor(Math.random()*(i+1)); var t=qs[i]; qs[i]=qs[jx]; qs[jx]=t; }
+    QUESTIONS = qs.slice(0,40);
+    if(!QUESTIONS.length){
+      NO_TIMER=true; document.getElementById('timer').style.display='none';
+      document.getElementById('qCounter').textContent='';
+      document.getElementById('qCard').innerHTML='<div class="q-prompt uz" style="text-align:center">🌟 Bu darslar bo\'yicha xatolaringiz yo\'q (yoki boshqa qurilmada saqlangan).<br><br>Takrorlash kerak bo\'lgan eski xatolar ham hozircha yo\'q. Barakalla!</div>'+
+        '<div style="text-align:center;margin-top:18px"><button class="btn-primary" onclick="closeApp()">Yopish</button></div>';
+      return;
+    }
+    MINUTES = Math.max(5, Math.ceil(QUESTIONS.length*0.5));
+    renderAudio();
+    renderQuestion(0);
+  }
+
+  // Takror natijasi: to'g'ri -> keyingi bosqich (4 bosqichdan keyin o'chadi), xato -> boshidan
+  async function saveTakror(){
+    var now=Math.floor(Date.now()/1000), by={};
+    QUESTIONS.forEach(function(q){ if(q._rec){ (by['x_'+q._rec.dars]=by['x_'+q._rec.dars]||[]).push(q); } });
+    var keys=Object.keys(by); if(!keys.length) return;
+    var vals=await stGetMany(keys);
+    keys.forEach(function(k){
+      var arr=parseArr(vals[k]);
+      by[k].forEach(function(q){
+        var ok=(q._answered!=null && q._answered===q._correct);
+        arr.forEach(function(e){ if(e[1]===q._rec.h){ if(ok){ e[2]=(e[2]||0)+1; } else { e[2]=0; } e[3]=now; } });
+      });
+      arr=arr.filter(function(e){ return (e[2]||0) < XINT.length; });
+      stSet(k, arr.length?JSON.stringify(arr):null);
+    });
+  }
+  function closeApp(){ try{ if(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.close){ Telegram.WebApp.close(); return; } }catch(e){} history.back(); }
+
   // ====== NATIJA ======
   // Xato/javob berilmagan savollar uchun tahlil kartalarini quradi
   function fmtRev(t){ return wrapMixed(String(t==null?'':t)); }
@@ -561,6 +681,17 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     document.getElementById('resTitle').textContent=passed?"Ajoyib! O'tdingiz":"Yana bir bor urinib ko'ring";
     document.getElementById('resSub').textContent=correctCount+' / '+QUESTIONS.length+" ta savolga to'g'ri javob berdingiz.";
     buildReview();
+    if(TAKROR.length){
+      saveTakror();
+      document.getElementById('resIcon').textContent = pct>=80?'🌟':'💪';
+      document.getElementById('resTitle').textContent = "Takrorlash yakunlandi";
+      const m2=document.getElementById('resMsg'); m2.className='res-msg pass';
+      m2.textContent = "To'g'ri javob bergan savollaringiz keyinroq yana bir necha marta qaytadi (1-3-7-14 kun), shunda uzoq xotiraga o'tadi. Xato qilganlaringiz qoladi.";
+      document.getElementById('resBtns').innerHTML='<button class="btn-primary" onclick="closeApp()">Yopish</button>';
+      document.getElementById('resultScreen').style.display='flex';
+      return;
+    }
+    try{ recordAttempt(); }catch(e){}
     const msg=document.getElementById('resMsg');
     msg.className='res-msg '+(passed?'pass':'fail');
     msg.textContent=passed?"Tugmani bossangiz keyingi bosqich ochiladi."
@@ -572,7 +703,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
   function sendResult(p,passed){
     if(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.sendData){
-      Telegram.WebApp.sendData(JSON.stringify({type:'test',dars:darsId,score:p,passed:passed}));
+      Telegram.WebApp.sendData(JSON.stringify({type:'test',dars:darsId,score:p,passed:passed,urinish:ATTEMPT||1,xato:WRONG_N}));
     } else {
       alert("DEMO: bot keyingi bosqichni ochadi. Natija: "+p+"%");
     }
@@ -674,7 +805,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
   // ====== ISHGA TUSHIRISH ======
   if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
-  (async function(){ await loadConfig(); startTimer(); })();
+  (async function(){ await loadConfig(); if(!NO_TIMER) startTimer(); })();
 </script>
 <div class="fscale" id="fscale" style="display:none">
   <button onclick="adjScale(-0.12)" aria-label="Kichraytirish" title="Kichraytirish">A−</button>
