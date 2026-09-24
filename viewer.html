@@ -283,6 +283,13 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   const TAKROR = (P.get("takror")||"").split(",").map(function(x){return x.trim().toLowerCase();})
                    .filter(function(x){return /^[a-c][0-2]_\d{1,2}$/.test(x);});
   let NO_TIMER = false;
+  // 2026-09-24 (bo'lim 63): «Mini-test» — ?mini=a1_5_mufradot,a1_5_qovaid,a1_2_mufradot&n=15
+  // Bot ro'yxatni YANGIDAN ESKIGA tartibda beradi (birinchi 4 tasi = oxirgi o'tilganlar).
+  // O'tilgan darslar mufradot+qovaid bazasidan qisqa aralash test; natija botga
+  // {type:'mini'} bilan yuboriladi (HP + streak + faollik), zanjirga ta'sir qilmaydi.
+  const MINI = (P.get("mini")||"").split(",").map(function(x){return x.trim().toLowerCase();})
+                 .filter(function(x){return /^[a-c][0-2]_\d{1,2}_(mufradot|qovaid)$/.test(x);}).slice(0,12);
+  const MINI_N = Math.max(8, Math.min(20, parseInt(P.get("n")||"15",10)||15));
   const IS_QIROAT = /qiroat/i.test(darsId);   // qiroat: matn (shpargalka) ko'rsatilmaydi — o'quvchi kitobdan o'qiydi
   const SINGLE  = /istima/i.test(darsId);   // istima: barcha savollar bitta ekranda
   let PASS = parseInt(P.get("otish") || "70", 10);
@@ -306,6 +313,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function adjScale(d){ MSCALE=Math.max(0.7,Math.min(2.4,Math.round((MSCALE+d)*100)/100)); document.documentElement.style.setProperty('--mscale',MSCALE); try{localStorage.setItem('bayyina_mscale',MSCALE);}catch(e){} }
   async function loadConfig(){
     if(TAKROR.length){ await loadTakror(); return; }
+    if(MINI.length){ await loadMini(); return; }
     if(darsId){
       try{
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
@@ -571,6 +579,118 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     stSet(xk, arr.length?JSON.stringify(arr):null);
   }
 
+  // Mini-test: savollarni yig'ish (xatolar ustuvor, 60% oxirgi darslar, qolgani eskilari)
+  async function loadMini(){
+    document.getElementById('hdrSub').textContent = "Mini-test · 5–7 daqiqa";
+    PASS = 0;
+    var recentIds = MINI.slice(0,4), pools={}, recent=[], older=[], mistakes=[];
+    var vals = await stGetMany(MINI.map(function(d){ return 'x_'+d; }));
+    for(var k=0;k<MINI.length;k++){
+      var d=MINI[k];
+      try{ var r=await fetch('testlar/'+d+'.json',{cache:'no-store'}); if(!r.ok) continue;
+        var j=await r.json(), list=Array.isArray(j.questions)?j.questions:[];
+        list.forEach(function(q,i){ if(!q||!Array.isArray(q.opts)||q.matn) return;
+          var c=JSON.parse(JSON.stringify(q)); c._src=d; c._i=i; c._h=qHash(q);
+          (recentIds.indexOf(d)>=0?recent:older).push(c); pools[d+'#'+c._h]=c; });
+        parseArr(vals['x_'+d]).forEach(function(e){ var c=pools[d+'#'+e[1]]; if(c) mistakes.push(c); });
+      }catch(e){}
+    }
+    function shuf(a){ for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
+    var picked=[], seen={};
+    function take(arr,n){ shuf(arr).forEach(function(c){ var key=c._src+'#'+c._h; if(n>0 && !seen[key]){ seen[key]=1; picked.push(c); n--; } }); }
+    take(mistakes, Math.min(4, Math.floor(MINI_N/3)));
+    var left=MINI_N-picked.length;
+    take(recent, older.length ? Math.ceil(left*0.6) : left);
+    take(older, MINI_N-picked.length);
+    take(recent, MINI_N-picked.length);   // eskilari yetmasa — yangilaridan to'ldirish
+    QUESTIONS = shuf(picked);
+    if(!QUESTIONS.length){
+      NO_TIMER=true; document.getElementById('timer').style.display='none';
+      document.getElementById('qCounter').textContent='';
+      document.getElementById('qCard').innerHTML='<div class="q-prompt uz" style="text-align:center">Hozircha mini-test uchun savol topilmadi. /lesson orqali darsni davom ettiring.</div>'+
+        '<div style="text-align:center;margin-top:18px"><button class="btn-primary" onclick="closeApp()">Yopish</button></div>';
+      return;
+    }
+    MINUTES = 8;
+    renderQuestion(0);
+  }
+
+  // Mini-test xatolarini manba darsining x_ xotirasiga qo'shish
+  async function recordMiniWrongs(){
+    var by={}; QUESTIONS.forEach(function(q){ if(q._src && (q._answered==null || q._answered!==q._correct)){ (by[q._src]=by[q._src]||[]).push(q); } });
+    var ds=Object.keys(by); if(!ds.length) return;
+    var vals=await stGetMany(ds.map(function(d){ return 'x_'+d; })), now=Math.floor(Date.now()/1000);
+    ds.forEach(function(d){ var arr=parseArr(vals['x_'+d]);
+      by[d].forEach(function(q){ var f=null; arr.forEach(function(e){ if(e[1]===q._h) f=e; });
+        if(f){ f[0]=q._i; f[2]=0; f[3]=now; } else { arr.push([q._i,q._h,0,now]); } });
+      if(arr.length>150) arr=arr.slice(arr.length-150);
+      stSet('x_'+d, JSON.stringify(arr)); });
+  }
+  function sendMini(p){
+    if(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.sendData){
+      Telegram.WebApp.sendData(JSON.stringify(withAl({type:'mini',score:p,n:QUESTIONS.length,correct:correctCount})));
+    } else { alert("DEMO: natija botga yuboriladi: "+p+"%"); }
+  }
+
+  // ====== JAVOBLAR LOGI -> BOT (2026-09-24, bo'lim 64) ======
+  // Har tugagan urinish (o'tdi/o'tmadi, oddiy/mini/takror): qaysi savolda xato
+  // qilingani botga yetkaziladi -- mavzu/so'z bo'yicha tahlil uchun.
+  // 1) POST /api/answers (Telegram initData imzosi bilan) -- mumkin bo'lsa darhol;
+  // 2) yetkazilmaganlari localStorage navbatida turadi va keyingi sendData'ga
+  //    qo'shib yuboriladi (bot takrorlarni uid bo'yicha o'zi tashlaydi).
+  const ANS_API = "https://web-production-06809.up.railway.app/api/answers";
+  function pqGet(){ try{ var a=JSON.parse(localStorage.getItem('bx_pq')||'[]'); return Array.isArray(a)?a:[]; }catch(e){ return []; } }
+  function pqSet(a){ try{ localStorage.setItem('bx_pq', JSON.stringify(a.slice(-8))); }catch(e){} }
+  function cut(t,n){ t=String(t==null?'':t).replace(/<[^>]*>/g,'').replace(/\s+/g,' ').trim(); return t.length>n?t.slice(0,n):t; }
+  function buildAttempt(){
+    var mode = TAKROR.length?'takror':(MINI.length?'mini':'test');
+    var t={}, w=[], r=[];
+    QUESTIONS.forEach(function(q){
+      var d = mode==='takror' ? (q._rec&&q._rec.dars) : (mode==='mini' ? q._src : darsId);
+      if(!d) return;
+      var ok = (q._answered!=null && q._answered===q._correct);
+      var h = q._h || qHash(q);
+      t[d]=t[d]||[0,0]; t[d][0]++; if(ok) t[d][1]++;
+      if(!ok && w.length<60) w.push([d,h,cut(q.q||'',90),cut((q.opts||[])[q.correct],40)]);
+      else if(ok && mode!=='test' && r.length<40) r.push([d,h]);
+    });
+    return {u: Date.now().toString(36)+Math.random().toString(36).slice(2,8), m: mode, t: t, w: w, r: r};
+  }
+  function recordAnswers(){
+    try{
+      var pq=pqGet(); pq.push(buildAttempt()); pqSet(pq); flushPending();
+    }catch(e){}
+  }
+  function flushPending(){
+    try{
+      var init = (window.Telegram&&Telegram.WebApp&&Telegram.WebApp.initData)||'';
+      var pq=pqGet(); if(!init || !pq.length) return;
+      fetch(ANS_API,{method:'POST',headers:{'Content-Type':'application/json','X-Telegram-Init-Data':init},
+        body:JSON.stringify({attempts:pq})}).then(function(r){
+          if(r.ok){ var sent={}; pq.forEach(function(a){ sent[a.u]=1; });
+            pqSet(pqGet().filter(function(a){ return !sent[a.u]; })); }
+        }).catch(function(){});
+    }catch(e){}
+  }
+  // sendData'ga navbatdagi urinishlarni sig'guncha qo'shish (Telegram chegarasi 4096 BAYT;
+  // arabcha harf UTF-8 da 2 bayt -- shuning uchun belgi emas, bayt sanaladi)
+  function bl(str){ try{ return new Blob([str]).size; }catch(e){ return unescape(encodeURIComponent(str)).length; } }
+  function withAl(obj){
+    try{
+      var pq=pqGet(), inc=[];
+      for(var i=pq.length-1;i>=0;i--){
+        var a=JSON.parse(JSON.stringify(pq[i]));
+        var trial=inc.concat([a]);
+        while(bl(JSON.stringify(Object.assign({},obj,{al:trial})))>3900 && a.w.length){ a.w.pop(); a.r=[]; }
+        if(bl(JSON.stringify(Object.assign({},obj,{al:trial})))>3900) break;
+        inc=trial;
+      }
+      if(inc.length){ obj.al=inc; var sent={}; inc.forEach(function(a){ sent[a.u]=1; });
+        pqSet(pq.filter(function(a){ return !sent[a.u]; })); }
+    }catch(e){}
+    return obj;
+  }
+
   // Takror rejimi: savollarni yig'ish
   async function loadTakror(){
     document.getElementById('hdrSub').textContent = "Xatolar ustida ishlash";
@@ -681,6 +801,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     document.getElementById('resTitle').textContent=passed?"Ajoyib! O'tdingiz":"Yana bir bor urinib ko'ring";
     document.getElementById('resSub').textContent=correctCount+' / '+QUESTIONS.length+" ta savolga to'g'ri javob berdingiz.";
     buildReview();
+    recordAnswers();
     if(TAKROR.length){
       saveTakror();
       document.getElementById('resIcon').textContent = pct>=80?'🌟':'💪';
@@ -688,6 +809,16 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       const m2=document.getElementById('resMsg'); m2.className='res-msg pass';
       m2.textContent = "To'g'ri javob bergan savollaringiz keyinroq yana bir necha marta qaytadi (1-3-7-14 kun), shunda uzoq xotiraga o'tadi. Xato qilganlaringiz qoladi.";
       document.getElementById('resBtns').innerHTML='<button class="btn-primary" onclick="closeApp()">Yopish</button>';
+      document.getElementById('resultScreen').style.display='flex';
+      return;
+    }
+    if(MINI.length){
+      try{ recordMiniWrongs(); }catch(e){}
+      document.getElementById('resIcon').textContent = pct>=80?'🌟':'💪';
+      document.getElementById('resTitle').textContent = "Mini-test yakunlandi";
+      const m3=document.getElementById('resMsg'); m3.className='res-msg pass';
+      m3.textContent = "Barakalla! Tugmani bosing — natija, HP va ketma-ket kunlaringiz hisobga olinadi. Xato qilganlaringiz «Xatolarim» testiga qo'shildi.";
+      document.getElementById('resBtns').innerHTML='<button class="btn-primary" onclick="sendMini('+pct+')">✅ Natijani yuborish</button>';
       document.getElementById('resultScreen').style.display='flex';
       return;
     }
@@ -703,7 +834,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
   function sendResult(p,passed){
     if(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.sendData){
-      Telegram.WebApp.sendData(JSON.stringify({type:'test',dars:darsId,score:p,passed:passed,urinish:ATTEMPT||1,xato:WRONG_N}));
+      Telegram.WebApp.sendData(JSON.stringify(withAl({type:'test',dars:darsId,score:p,passed:passed,urinish:ATTEMPT||1,xato:WRONG_N})));
     } else {
       alert("DEMO: bot keyingi bosqichni ochadi. Natija: "+p+"%");
     }
