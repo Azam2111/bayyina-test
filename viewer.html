@@ -825,11 +825,15 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     try{ recordAttempt(); }catch(e){}
     const msg=document.getElementById('resMsg');
     msg.className='res-msg '+(passed?'pass':'fail');
+    // 2026-09-24 (bo'lim 67): yiqilgan urinish ham botga DARHOL yuboriladi (urinish
+    // soni, faollik, 3/5-yiqilishda yordam). Sahifa yopiladi, bot test tugmasini qayta beradi.
+    var _tgSend = !!(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.sendData&&Telegram.WebApp.initData!==undefined&&window.Telegram.WebApp.platform!=='unknown');
     msg.textContent=passed?"Tugmani bossangiz keyingi bosqich ochiladi."
-                          :"O'tish chegarasi: "+PASS+"%. Xatolaringizni pastda ko'rib, qayta urinib ko'ring.";
+                          :"O'tish chegarasi: "+PASS+"%. Xatolaringizni pastda ko'rib chiqing, so'ng tugmani bosing — natija saqlanadi va test qayta ochiladi.";
     document.getElementById('resBtns').innerHTML = passed
       ? '<button class="btn-primary" onclick="sendResult('+pct+',true)">Keyingi bosqich ▶</button>'
-      : '<button class="btn-primary" onclick="location.reload()">🔄 Qayta urinish</button>';
+      : (_tgSend ? '<button class="btn-primary" onclick="sendResult('+pct+',false)">🔄 Qayta urinish</button>'
+                 : '<button class="btn-primary" onclick="location.reload()">🔄 Qayta urinish</button>');
     document.getElementById('resultScreen').style.display='flex';
   }
   function sendResult(p,passed){
