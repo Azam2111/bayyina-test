@@ -1576,13 +1576,20 @@ function fmtTime(sec) {
 }
 
 function sendToWebhook(lvl, pct, tot, max) {
+  // 2026-09-28 (bo'lim 76, Aman topilmasi): natija botga KAFOLATLI yetsin.
+  // Oldin: sendData chaqirilib darhol `return` qilinardi. sendData faqat
+  // pastdagi REPLY-tugmadan ochilganda ishlaydi; inline tugma / havola /
+  // menyudan ochilganda u XATOSIZ jim qoladi -> natija yo'qolardi, zaxira
+  // yo'li ham ishlamasdi. Endi tartib:
+  //   1) botning o'z API'si (initData imzosi bilan) -- har qanday ochilishda;
+  //   2) sendData (reply-tugma holati) -- API yetmasa;
+  //   3) Make.com + ekranda aniq ko'rsatma -- Telegram tashqarisida.
   let tgId = 'UNKNOWN', name = 'Web User', un = '';
   if(tg && tg.initDataUnsafe && tg.initDataUnsafe.user) {
     tgId = tg.initDataUnsafe.user.id;
     name = tg.initDataUnsafe.user.first_name || '';
     un = tg.initDataUnsafe.user.username || '';
   }
-  // Bot kutayotgan format: telegram_id, full_name, recommended_level, total_score_pct
   let payload = {
     type: 'placement',
     telegram_id: tgId,
@@ -1598,30 +1605,57 @@ function sendToWebhook(lvl, pct, tot, max) {
     qir: levelScore.R,
     ist: levelScore.I
   };
-  // 1) ISHONCHLI YO'L: Telegram sendData (reply-tugmadan ochilganda ishlaydi).
-  //    Botga to'g'ridan-to'g'ri yuboradi va webapp'ni yopadi — Make.com kerak emas.
-  if(tg && typeof tg.sendData === 'function') {
-    try { tg.sendData(JSON.stringify(payload)); return; } catch(e) {}
+  const PLACEMENT_API = 'https://web-production-06809.up.railway.app/api/placement';
+  const init = (tg && tg.initData) || '';
+  const whs = document.getElementById('whStatus');
+  function say(html, err) {
+    if(!whs) return;
+    whs.style.display = 'block';
+    whs.className = 'webhook-status' + (err ? ' err' : '');
+    whs.innerHTML = html;
   }
-  // 2) ZAXIRA: Make.com webhook (inline-tugmadan ochilgan eski holat uchun)
-  let whs = document.getElementById('whStatus');
-  if(!whs) return;
-  whs.style.display = 'block';
-  fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
-  .then(res => {
-    if(res.ok) {
-      whs.innerHTML = '✅ Natijalaringiz muvaffaqiyatli saqlandi!<br><br><button onclick="if(window.Telegram?.WebApp)window.Telegram.WebApp.close();else window.close();" style="background:#27ae60;color:white;border:none;padding:14px 20px;border-radius:12px;font-weight:800;cursor:pointer;width:100%;font-size:16px;margin-top:4px;">Botga qaytish ✓</button>';
-    } else {
-      whs.className = 'webhook-status err';
-      whs.innerText = '⚠️ Xatolik yuz berdi. Bot orqali yuboriladi.';
+  const closeBtn = '<br><br><button onclick="if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();else window.close();" style="background:#27ae60;color:white;border:none;padding:14px 20px;border-radius:12px;font-weight:800;cursor:pointer;width:100%;font-size:16px;margin-top:4px;">Botga qaytish \u2713</button>';
+  const manual = 'Natijangiz botga yetmadi. Iltimos, <b>shu ekranni skrinshot qilib</b> ustozga yuboring \u2014 darsingizni qo\'lda ochib beramiz.';
+
+  function viaSendData() {
+    if(init && tg && typeof tg.sendData === 'function') {
+      try { tg.sendData(JSON.stringify(payload)); return true; } catch(e) {}
     }
-  }).catch(() => {
-    whs.className = 'webhook-status err';
-    whs.innerText = '⚠️ Tarmoq xatosi. Natijangiz bot orqali saqlanadi.';
+    return false;
+  }
+  function viaMake() {
+    say('Natijalar yuborilmoqda...');
+    fetch(WEBHOOK_URL, { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) })
+      .then(function(){ say(manual, true); })
+      .catch(function(){ say(manual, true); });
+  }
+
+  if(!init) { viaMake(); return; }   // Telegram tashqarisida ochilgan
+
+  say('Natijalar botga yuborilmoqda...');
+  let done = false;
+  const ctrl = (typeof AbortController === 'function') ? new AbortController() : null;
+  const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 12000);
+  fetch(PLACEMENT_API, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json', 'X-Telegram-Init-Data': init},
+    body: JSON.stringify(payload),
+    signal: ctrl ? ctrl.signal : undefined
+  }).then(function(r){
+    clearTimeout(timer);
+    if(r.ok) {
+      done = true;
+      say('\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
+      setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
+    } else { throw new Error('status ' + r.status); }
+  }).catch(function(){
+    clearTimeout(timer);
+    if(done) return;
+    if(viaSendData()) say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
+    else say(manual, true);
   });
 }
 </script>
 </body>
 </html>
 
-                                                                                                                                                                                                                                                                                                                                            
