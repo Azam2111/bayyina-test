@@ -1617,8 +1617,14 @@ function sendToWebhook(lvl, pct, tot, max) {
   const closeBtn = '<br><br><button onclick="if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();else window.close();" style="background:#27ae60;color:white;border:none;padding:14px 20px;border-radius:12px;font-weight:800;cursor:pointer;width:100%;font-size:16px;margin-top:4px;">Botga qaytish \u2713</button>';
   const manual = 'Natijangiz botga yetmadi. Iltimos, <b>shu ekranni skrinshot qilib</b> ustozga yuboring \u2014 darsingizni qo\'lda ochib beramiz.';
 
+  // bo'lim 101 (01.10): REPLY-tugmadan ochilganda Telegram initData'ni BERMAYDI
+  // (WebAppInitData "keyboard button" holatida bo'sh). Oldin bu holat "Telegram
+  // tashqarisi" deb hisoblanib, sendData umuman chaqirilmasdi -> natija yo'qolardi.
+  function inTelegram() {
+    return !!(tg && tg.platform && tg.platform !== 'unknown');
+  }
   function viaSendData() {
-    if(init && tg && typeof tg.sendData === 'function') {
+    if(tg && inTelegram() && typeof tg.sendData === 'function') {
       try { tg.sendData(JSON.stringify(payload)); return true; } catch(e) {}
     }
     return false;
@@ -1630,7 +1636,14 @@ function sendToWebhook(lvl, pct, tot, max) {
       .catch(function(){ say(manual, true); });
   }
 
-  if(!init) { viaMake(); return; }   // Telegram tashqarisida ochilgan
+  if(!init) {
+    // Reply-tugmadan ochilgan (initData yo'q) -> sendData; u oynani o'zi yopadi.
+    if(viaSendData()) {
+      say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
+      return;
+    }
+    viaMake(); return;                 // haqiqatan Telegram tashqarisida
+  }
 
   say('Natijalar botga yuborilmoqda...');
   let done = false;
