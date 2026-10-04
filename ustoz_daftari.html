@@ -154,6 +154,41 @@ select{font:inherit;border:1px solid var(--line);border-radius:9px;padding:5px 8
   .tabs{padding-top:6px}
   .chip{text-transform:none;letter-spacing:0}
 }
+
+/* taymer (ixtiyoriy) */
+.tabs button{white-space:nowrap}
+.tabs .tbtn{margin-left:auto;color:var(--brown)}
+.timer.running .tr2{display:none}
+.timer .ctl svg{width:16px;height:16px;fill:currentColor;vertical-align:-2px}
+@media (max-width:520px){.tabs{gap:0}.tabs button{padding:8px 8px}.tabs .tbtn .tl{display:none}}
+.tabs .tbtn[aria-pressed="true"]{background:var(--gold-soft);color:var(--ink)}
+.timer{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:7;width:min(828px,calc(100% - 20px));background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 24px rgba(40,25,10,.18);padding:10px 12px}
+.timer .tr1{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.timer .clock{font:650 2rem/1 var(--f-disp);font-variant-numeric:tabular-nums;min-width:5.2ch;letter-spacing:.01em}
+.timer .clock.over{color:var(--bad)}
+.timer .clock.blink{animation:tblink 1s steps(2,start) infinite}
+@keyframes tblink{to{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.timer .clock.blink{animation:none}}
+.timer .seg-l{flex:1 1 140px;min-width:0;font-size:.9rem;line-height:1.3}
+.timer .seg-l b{display:block;font-size:.98rem}
+.timer .seg-l small{color:var(--muted)}
+.timer .ctl{display:flex;gap:6px;flex-wrap:wrap}
+.timer .ctl button{border:1px solid var(--line);background:var(--surface);border-radius:10px;min-width:42px;height:40px;padding:0 10px;font-weight:700}
+.timer .ctl button.go{background:var(--brown);color:var(--bg);border-color:var(--brown)}
+.timer .bar{height:4px;background:var(--surface2);border-radius:4px;margin-top:8px;overflow:hidden}
+.timer .bar i{display:block;height:100%;background:var(--gold);width:0;transition:width .25s linear}
+.timer .tr2{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.timer .tr2 button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 11px;font-weight:600;font-size:.88rem}
+.timer .tr2 button[aria-pressed="true"]{background:var(--gold);border-color:var(--gold);color:#fff}
+.timer .tr2 input{width:4.2em;font:inherit;border:1px solid var(--line);border-radius:8px;padding:3px 6px;background:var(--surface);color:var(--ink)}
+.timer .tr2 .sp{flex:1}
+.timer .plan-steps{display:flex;gap:4px;margin-top:8px}
+.timer .plan-steps span{flex:1;height:6px;border-radius:3px;background:var(--surface2)}
+.timer .plan-steps span.done{background:var(--gold-soft)}
+.timer .plan-steps span.cur{background:var(--gold)}
+body.has-timer .wrap{padding-bottom:230px}
+body.has-timer .fab{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+@media (max-width:520px){.timer .clock{font-size:1.7rem}.timer{padding:8px 10px}}
 @media (prefers-reduced-motion:no-preference){.ans,.opt{transition:background .15s,border-color .15s}}
 .fab{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:6;border:0;border-radius:999px;padding:10px 16px;background:var(--brown);color:var(--bg);font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25);font-variant-numeric:tabular-nums}
 @media (min-width:521px){.fab{display:none}}
@@ -179,10 +214,28 @@ select{font:inherit;border:1px solid var(--line);border-radius:9px;padding:5px 8
         <button data-tab="takror" aria-pressed="true">Takrorlash</button>
         <button data-tab="karta" aria-pressed="false">Dars kartasi</button>
         <button data-tab="guide" aria-pressed="false">Qo'llanma</button>
+        <button class="tbtn" id="tToggle" type="button" aria-pressed="false" aria-controls="timer" title="Ixtiyoriy taymer" aria-label="Taymer">⏱<span class="tl"> Taymer</span></button>
       </nav>
     </div>
   </header>
   <main id="main"></main>
+  <section class="timer" id="timer" hidden aria-label="Taymer">
+    <div class="tr1">
+      <div class="clock" id="tClock" role="timer" aria-live="off">5:00</div>
+      <div class="seg-l" id="tLabel"><b>Oddiy taymer</b><small>Vaqtni tanlang va ▶ bosing</small></div>
+      <div class="ctl">
+        <button class="go" id="tGo" type="button" aria-label="Boshlash"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg></button>
+        <button id="tPlus" type="button" title="+1 daqiqa">+1</button>
+        <button id="tReset" type="button" title="Qaytadan" aria-label="Qaytadan">↺</button>
+        <button id="tNext" type="button" title="Keyingi bosqich" aria-label="Keyingi bosqich" hidden>⏭</button>
+        <button id="tSound" type="button" title="Ovoz" aria-label="Ovozni o'chirish/yoqish">🔔</button>
+        <button id="tClose" type="button" title="Yopish" aria-label="Taymerni yopish">✕</button>
+      </div>
+    </div>
+    <div class="bar"><i id="tBar"></i></div>
+    <div class="plan-steps" id="tSteps" hidden></div>
+    <div class="tr2" id="tPresets"></div>
+  </section>
   <button class="fab" id="fab" hidden aria-label="Tepaga — dars tanlash">▲ A1-5</button>
 </div>
 
@@ -344,7 +397,7 @@ function renderKarta(id){
 
 function renderGuide(){
   return `<div class="guide"><div class="status"><div class="who">Jonli dars qanday o'tadi</div><p>Haftada bir marta, guruh, ~60 daqiqa. Maqsad — o'quvchi tizimda o'qiganini og'zaki ishlata olishini tekshirish.</p></div>
-  <section class="block"><div class="bh"><h2>60 daqiqalik reja</h2></div><div class="plan">
+  <section class="block"><div class="bh"><div><h2>60 daqiqalik reja</h2><div class="sub">Taymer ixtiyoriy: har bosqich tugaganda ovoz chiqaradi va keyingisiga o'tadi</div></div><button class="btn primary" data-plantimer>⏱ Rejani taymer bilan boshlash</button></div><div class="plan">
    <div><b>0–5</b><span>Salomlashish, har bir o'quvchidan «qaysi darsdasiz?» — tepada daraja va darsni tanlang. Turli joyda bo'lsa, «Guruh» qismiga hammasini qo'shing.</span></div>
    <div><b>5–20</b><span><strong>Muhodasa.</strong> Takrorlash sahifasidagi savollar. Har o'quvchiga 2–3 ta; javobni to'liq gap bilan so'rang.</span></div>
    <div><b>20–35</b><span><strong>O'qish.</strong> Matnni avval harakatsiz o'qiting (bu haqiqiy tekshiruv), xatoda harakatni oching. Keyin matn savollari.</span></div>
@@ -361,6 +414,7 @@ function renderGuide(){
    <li>Muhodasa savollari va o'qish matnlari shu daftar uchun yangidan yozilgan; matnlar faqat o'sha darsgacha bo'lgan so'zlardan tuzilgan, har matnda eng ko'pi 3–4 yangi so'z (ostida izohlangan).</li>
    <li>Tarjima jumlalari har dars uchun 4+4 ta, shu darsning grammatikasi va lug'atiga qurilgan. O'zbekcha → arabchada boshqa to'g'ri variantlar ham bo'lishi mumkin — namuna yagona javob emas.</li>
    <li>B1–C1 darslarida qoidalar tizimdagi qovaid testlari mavzusiga tayanadi; matnlar shu saviyadagi yangi matnlar (yangi so'zlar ostida izohlangan).</li>
+   <li><b>Taymer</b> (⏱, tepada o'ngda) — ixtiyoriy. «Oddiy» rejimda 1–15 daqiqa yoki o'zingiz kiritgan vaqt; «60 daq. reja» rejimida dars bosqichlari ketma-ket sanaladi. Vaqt tugasa ovoz chiqadi va ortiqcha vaqt qizil rangda sanaladi. Sahifani yangilasangiz ham taymer davom etadi.</li>
    <li>Havolaga <b>#a2-5</b> yoki <b>#b2-3</b> qo'shsangiz, sahifa to'g'ridan A2-5 da ochiladi.</li>
   </ul></section></div>`;
 }
@@ -391,6 +445,7 @@ document.getElementById('main').addEventListener('click',e=>{
   if(t.closest('[data-gadd]')){const k=key(S.lvl,S.n);if(!S.group.includes(k))S.group.push(k);render();return}
   const gd=t.closest('[data-gdel]'); if(gd){S.group.splice(+gd.dataset.gdel,1);render();return}
   if(t.closest('[data-gclear]')){S.group=[];render();return}
+  if(t.closest('[data-plantimer]')){window.tOpenPlan&&window.tOpenPlan();return}
 });
 document.getElementById('main').addEventListener('change',e=>{if(e.target.id==='textSel'){S.textFrom=e.target.value;const y=window.scrollY;render();window.scrollTo({top:y})}});
 const fab=document.getElementById('fab');
@@ -398,6 +453,86 @@ function fabUpd(){const id=currentId();fab.textContent='▲ '+label(id)+(S.group
 window.addEventListener('scroll',fabUpd,{passive:true});
 fab.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
 const _r=render;render=function(){_r();fabUpd()};
+/* ---------- Ixtiyoriy taymer ---------- */
+const PLAN=[
+ [5,'Salomlashish','Har kimdan «qaysi darsdasiz?»'],
+ [15,'Muhodasa','Har o\'quvchiga 2–3 savol, to\'liq gap bilan'],
+ [15,'O\'qish matni','Avval harakatsiz, keyin savollar'],
+ [10,'Qoida tekshiruvi','Og\'zaki so\'rab, keyin variant'],
+ [10,'Tarjima / mashg\'ulot','Tarjima mashqi yoki guruh o\'yini'],
+ [5,'Xulosa','Har kimga 1 zaif nuqta + 1 maqtov']];
+const PRE=[1,2,3,5,10,15];
+const $id=x=>document.getElementById(x);
+const tEl={box:$id('timer'),clock:$id('tClock'),label:$id('tLabel'),go:$id('tGo'),plus:$id('tPlus'),reset:$id('tReset'),next:$id('tNext'),sound:$id('tSound'),close:$id('tClose'),bar:$id('tBar'),steps:$id('tSteps'),pre:$id('tPresets'),tog:$id('tToggle')};
+let T=Object.assign({open:false,mode:'free',min:5,sound:true,seg:0,endAt:0,left:300000,total:300000,run:false,rang:false},store.get('timer',{}));
+let tInt=null, actx=null;
+function tSave(){store.set('timer',T)}
+const fmt=ms=>{const neg=ms<0;let s=Math.ceil(Math.abs(ms)/1000);if(neg)s=Math.floor(Math.abs(ms)/1000);const m=Math.floor(s/60),x=s%60;return (neg?'+':'')+m+':'+String(x).padStart(2,'0')};
+function tRemain(){return T.run?T.endAt-Date.now():T.left}
+function tSetDur(min){T.total=Math.round(min*60000);T.left=T.total;T.run=false;T.rang=false;T.endAt=0}
+function beep(n){
+  if(!T.sound) return;
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();if(actx.state==='suspended')actx.resume();
+    for(let i=0;i<n;i++){const o=actx.createOscillator(),g=actx.createGain(),t0=actx.currentTime+i*.32;
+      o.type='sine';o.frequency.value=i===n-1?1046:880;g.gain.setValueAtTime(.0001,t0);g.gain.exponentialRampToValueAtTime(.35,t0+.02);g.gain.exponentialRampToValueAtTime(.0001,t0+.25);
+      o.connect(g).connect(actx.destination);o.start(t0);o.stop(t0+.27)}}catch(e){}
+  try{navigator.vibrate&&navigator.vibrate([200,100,200])}catch(e){}
+}
+function tStart(){
+  try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();actx.resume&&actx.resume()}catch(e){}
+  if(T.left<=0&&T.mode==='free'){T.left=T.total;T.rang=false}
+  T.endAt=Date.now()+T.left;T.run=true;tSave();tLoop()}
+function tPause(){T.left=tRemain();T.run=false;tSave();tDraw()}
+function tLoop(){clearInterval(tInt);if(T.run)tInt=setInterval(tTick,250);tDraw()}
+function tTick(){
+  const r=tRemain();
+  if(r<=0&&!T.rang){
+    T.rang=true;
+    if(T.mode==='plan'&&T.seg<PLAN.length-1){beep(2);T.seg++;tSetDur(PLAN[T.seg][0]);tStart();return}
+    beep(3);tSave();
+  }
+  tDraw();
+}
+function tDraw(){
+  const b=tEl;b.box.hidden=!T.open;document.body.classList.toggle('has-timer',T.open);b.tog.setAttribute('aria-pressed',T.open);
+  if(!T.open) return;
+  const r=tRemain(), over=r<0;
+  b.clock.textContent=fmt(r);b.clock.classList.toggle('over',over);b.clock.classList.toggle('blink',over&&T.run);
+  b.go.innerHTML=T.run?'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 2.5h3v11h-3zM9.5 2.5h3v11h-3z"/></svg>':'<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';b.box.classList.toggle('running',T.run);b.go.setAttribute('aria-label',T.run?'To\'xtatish':'Boshlash');
+  b.sound.textContent=T.sound?'🔔':'🔕';
+  b.bar.style.width=Math.max(0,Math.min(100,(1-Math.max(r,0)/T.total)*100))+'%';
+  b.next.hidden=T.mode!=='plan';b.steps.hidden=T.mode!=='plan';
+  if(T.mode==='plan'){
+    const [m,t,h]=PLAN[T.seg];let st=PLAN.slice(0,T.seg).reduce((a,x)=>a+x[0],0);
+    b.label.innerHTML=`<b>${T.seg+1}/${PLAN.length} · ${esc(t)}</b><small>${st}–${st+m} daq · ${esc(h)}</small>`;
+    b.steps.innerHTML=PLAN.map((_,i)=>`<span class="${i<T.seg?'done':i===T.seg?'cur':''}" title="${esc(PLAN[i][1])}"></span>`).join('');
+  } else {
+    b.label.innerHTML=over?`<b>Vaqt tugadi</b><small>Ortiqcha vaqt sanalmoqda</small>`:`<b>Oddiy taymer</b><small>${Math.round(T.total/60000*10)/10} daqiqa${T.run?' · to\'xtatsangiz vaqtni o\'zgartirasiz':' · ▶ bosing'}</small>`;
+  }
+  document.title=(T.run?fmt(r)+' · ':'')+'Tanvir ustoz daftari';
+}
+function tPresetsDraw(){
+  tEl.pre.innerHTML=`<button type="button" data-tm="free" aria-pressed="${T.mode==='free'}">Oddiy</button><button type="button" data-tm="plan" aria-pressed="${T.mode==='plan'}">60 daq. reja</button><span class="sp"></span>`+
+   (T.mode==='free'?PRE.map(m=>`<button type="button" data-tp="${m}" aria-pressed="${!T.run&&Math.abs(T.total-m*60000)<1}">${m} daq</button>`).join('')+
+   `<label class="muted" style="font-size:.85rem">yoki <input id="tCustom" type="number" min="0.5" max="180" step="0.5" inputmode="decimal" aria-label="Daqiqa" placeholder="daq"></label>`:'');
+}
+tEl.pre.addEventListener('click',e=>{
+  const m=e.target.closest('[data-tm]');if(m){T.mode=m.dataset.tm;T.seg=0;tSetDur(T.mode==='plan'?PLAN[0][0]:T.min);tSave();tPresetsDraw();tLoop();return}
+  const p=e.target.closest('[data-tp]');if(p){T.min=+p.dataset.tp;tSetDur(T.min);tSave();tPresetsDraw();tLoop()}
+});
+tEl.pre.addEventListener('change',e=>{if(e.target.id==='tCustom'){const v=parseFloat(String(e.target.value).replace(',','.'));if(v>0&&v<=180){T.min=v;tSetDur(v);tSave();tPresetsDraw();tLoop()}}});
+tEl.go.onclick=()=>{T.run?tPause():tStart();tPresetsDraw()};
+tEl.plus.onclick=()=>{if(T.run){T.endAt+=60000}else{T.left+=60000}T.total+=60000;if(tRemain()>0)T.rang=false;tSave();tDraw()};
+tEl.reset.onclick=()=>{if(T.mode==='plan')T.seg=0;tSetDur(T.mode==='plan'?PLAN[0][0]:T.min);clearInterval(tInt);tSave();tPresetsDraw();tDraw()};
+tEl.next.onclick=()=>{if(T.seg<PLAN.length-1){const was=T.run;T.seg++;tSetDur(PLAN[T.seg][0]);was?tStart():(tSave(),tDraw())}};
+tEl.sound.onclick=()=>{T.sound=!T.sound;tSave();tDraw()};
+tEl.close.onclick=()=>{T.open=false;tSave();tDraw()};
+tEl.tog.onclick=()=>{T.open=!T.open;tSave();tPresetsDraw();tLoop()};
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)tTick()});
+window.tOpenPlan=()=>{T.open=true;T.mode='plan';T.seg=0;tSetDur(PLAN[0][0]);tPresetsDraw();tStart()};
+if(T.run&&T.endAt-Date.now()< -3600000){T.run=false;T.left=0}
+tPresetsDraw();tLoop();
+
 render();
 </script>
 

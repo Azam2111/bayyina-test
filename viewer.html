@@ -946,7 +946,45 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 
   // ====== ISHGA TUSHIRISH ======
   if(window.Telegram&&Telegram.WebApp){Telegram.WebApp.expand();Telegram.WebApp.ready();}
-  (async function(){ await loadConfig(); if(!NO_TIMER) startTimer(); })();
+  // ====== KIRISH DARVOZASI (bo'lim 121b, 2026-10-04) ======
+  // Tanvirdan chiqarilgan / CRM'da Tanvir guruhida bo'lmagan o'quvchi testni
+  // umuman ocha olmaydi. Bot har havolaga ?t=<imzoli kalit> qo'shadi; sahifa
+  // botdan so'raydi. Kalitsiz (eski) havola ochilmaydi. Probniy tegilmaydi.
+  // Server butunlay javob bermasa (Railway o'chgan) -- ochiq qoldiramiz, aks
+  // holda bir nosozlik hamma o'quvchini to'xtatib qo'yadi.
+  const ACCESS_API = "https://web-production-06809.up.railway.app/api/test_access";
+  const ACCESS_TEXT = {
+    no_token: "<b>Test tugmasi yangilandi.</b><br><br>Botga qayting va <b>/lesson</b> ni bosing — yangi tugma keladi, testni o'sha yerdan oching.",
+    bad_token: "Havola noto'g'ri.<br><br>Botga o'ting va <b>/lesson</b> ni bosing.",
+    def: "<b>Tanvir kursidagi o'qishingiz to'xtatilgan.</b><br><br>Testlar hozir yopiq. Progressingiz saqlanib turadi.<br><br>Davom etmoqchi bo'lsangiz, <b>@bayyina_onlayn</b> ga yozing."
+  };
+  function showLock(key){
+    var d=document.createElement('div');
+    d.id='accessLock';
+    d.setAttribute('role','alert');
+    d.style.cssText='position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg,#F5EEE1);color:var(--ink,#2A2019);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;text-align:center';
+    d.innerHTML='<div style="max-width:420px"><div style="font-size:44px;line-height:1;margin-bottom:14px">🔒</div><div>'+(ACCESS_TEXT[key]||ACCESS_TEXT.def)+'</div>'+
+      '<button id="accessClose" style="margin-top:22px;border:0;border-radius:12px;padding:12px 22px;font:inherit;font-weight:700;background:#6B4423;color:#fff">Yopish</button></div>';
+    document.body.appendChild(d);
+    var b=document.getElementById('accessClose');
+    if(b) b.onclick=function(){ try{ Telegram.WebApp.close(); }catch(e){ history.back(); } };
+  }
+  async function accessGate(){
+    if(darsId && /^probniy_/.test(darsId)) return true;      // probniy -- ochiq
+    var t=P.get('t')||'';
+    if(!t){ showLock('no_token'); return false; }
+    try{
+      var ctl=('AbortController' in window)?new AbortController():null;
+      var tm=setTimeout(function(){ if(ctl) ctl.abort(); },7000);
+      var r=await fetch(ACCESS_API+'?t='+encodeURIComponent(t),{cache:'no-store',signal:ctl?ctl.signal:undefined});
+      clearTimeout(tm);
+      if(!r.ok) return true;                                  // server xatosi -- ochiq
+      var j=await r.json();
+      if(j && j.ok===false){ showLock(j.reason==='bad_token'?'bad_token':'def'); return false; }
+      return true;
+    }catch(e){ return true; }                                 // tarmoq xatosi -- ochiq
+  }
+  (async function(){ if(!(await accessGate())) return; await loadConfig(); if(!NO_TIMER) startTimer(); })();
 </script>
 <div class="fscale" id="fscale" style="display:none">
   <button onclick="adjScale(-0.12)" aria-label="Kichraytirish" title="Kichraytirish">A−</button>
