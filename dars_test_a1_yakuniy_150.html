@@ -463,6 +463,31 @@ function finish(){
   document.getElementById('resScreen').style.display='flex';
   window.scrollTo({top:0,behavior:'instant'});
 }
+
+// ====== KIRISH DARVOZASI (bo'lim 121b/122, 2026-10-04) ======
+// viewer.html bilan bir xil: bot havolaga ?t=<imzoli kalit> qo'shadi, sahifa
+// botdan so'raydi. Kalitsiz yoki kursda bo'lmasa -- imtihon ochilmaydi.
+(function(){
+  var API="https://web-production-06809.up.railway.app/api/test_access";
+  function lock(html){
+    var d=document.createElement('div'); d.id='accessLock'; d.setAttribute('role','alert');
+    d.style.cssText='position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;padding:24px;background:#F5EEE1;color:#2A2019;font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif;text-align:center';
+    d.innerHTML='<div style="max-width:420px"><div style="font-size:44px;line-height:1;margin-bottom:14px">🔒</div><div>'+html+'</div>'+
+      '<button id="accessClose" style="margin-top:22px;border:0;border-radius:12px;padding:12px 22px;font:inherit;font-weight:700;background:#6B4423;color:#fff">Yopish</button></div>';
+    document.body.appendChild(d);
+    document.getElementById('accessClose').onclick=function(){ try{Telegram.WebApp.close();}catch(e){history.back();} };
+  }
+  var t=new URLSearchParams(location.search).get('t')||'';
+  if(!t){ lock("<b>Imtihon tugmasi yangilandi.</b><br><br>Botga qayting va <b>/lesson</b> ni bosing — yangi tugma keladi."); return; }
+  var ctl=('AbortController' in window)?new AbortController():null;
+  var tm=setTimeout(function(){ if(ctl) ctl.abort(); },7000);
+  fetch(API+'?t='+encodeURIComponent(t),{cache:'no-store',signal:ctl?ctl.signal:undefined})
+    .then(function(r){ clearTimeout(tm); return r.ok?r.json():null; })
+    .then(function(j){ if(j && j.ok===false){ lock(j.reason==='bad_token'
+        ? "Havola noto'g'ri.<br><br>Botga o'ting va <b>/lesson</b> ni bosing."
+        : "<b>Tanvir kursidagi o'qishingiz to'xtatilgan.</b><br><br>Imtihon hozir yopiq. Progressingiz saqlanib turadi.<br><br>Davom etmoqchi bo'lsangiz, <b>@bayyina_onlayn</b> ga yozing."); } })
+    .catch(function(){});
+})();
 </script>
 </body>
 </html>
