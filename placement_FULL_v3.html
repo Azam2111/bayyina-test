@@ -1636,36 +1636,57 @@ function sendToWebhook(lvl, pct, tot, max) {
       .catch(function(){ say(manual, true); });
   }
 
-  if(!init) {
-    // Reply-tugmadan ochilgan (initData yo'q) -> sendData; u oynani o'zi yopadi.
-    if(viaSendData()) {
-      say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
-      return;
-    }
-    viaMake(); return;                 // haqiqatan Telegram tashqarisida
+  // bo'lim 131 (09.10, Marziya topilmasi): sendData jim yo'qolishi mumkin --
+  // reply-tugma / Business chatdan ochilganda u xatosiz "ishlaydi", lekin natija
+  // botga yetmaydi, sahifa esa "yuborildi" der edi. Endi:
+  //   1) bot havolaga imzoli kalit qo'yadi (?t=<id>.<imzo>) -> API har doim ishlaydi
+  //      (initData bo'lmasa ham); API "ok" desagina "yetib bordi" yoziladi;
+  //   2) API yetmasa -> sendData; agar oyna 3 soniyada yopilmasa (sendData ishlamadi)
+  //      -> halol "yetmadi" xabari + natija kodi (ustozga yuborish uchun).
+  let tok = '';
+  try { tok = new URLSearchParams(location.search).get('t') || ''; } catch(e) {}
+  if(tok && tgId === 'UNKNOWN') { tgId = tok.split('.')[0]; payload.telegram_id = tgId; }
+  const code = 'Daraja: ' + lvl + ' • Ball: ' + pct + '% • ID: ' + tgId;
+  const manualCode = manual + '<br><br><b>' + code + '</b>';
+  function viaSendDataChecked() {
+    if(!viaSendData()) return false;
+    say('Natija yuborilmoqda...');
+    setTimeout(function(){ say(manualCode, true); }, 3000);  // oyna yopilsa bu ko'rinmaydi
+    return true;
+  }
+
+  if(!init && !tok) {
+    // Kalitsiz eski havola: faqat sendData (tekshiruv bilan) yoki Make.com.
+    if(viaSendDataChecked()) return;
+    viaMake(); return;
   }
 
   say('Natijalar botga yuborilmoqda...');
   let done = false;
   const ctrl = (typeof AbortController === 'function') ? new AbortController() : null;
-  const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 12000);
-  fetch(PLACEMENT_API, {
-    method: 'POST',
-    headers: {'Content-Type':'application/json', 'X-Telegram-Init-Data': init},
-    body: JSON.stringify(payload),
-    signal: ctrl ? ctrl.signal : undefined
-  }).then(function(r){
+  const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 15000);
+  const hdr = {'Content-Type':'application/json'};
+  if(init) hdr['X-Telegram-Init-Data'] = init;
+  if(tok) { hdr['X-Placement-Token'] = tok; payload.t = tok; }
+  function tryApi(attempt) {
+    return fetch(PLACEMENT_API, {
+      method: 'POST', headers: hdr, body: JSON.stringify(payload),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function(r){
+      if(r.ok) return true;
+      if(attempt < 2 && r.status >= 500) return new Promise(function(res){ setTimeout(res, 2000); }).then(function(){ return tryApi(attempt+1); });
+      throw new Error('status ' + r.status);
+    });
+  }
+  tryApi(1).then(function(){
     clearTimeout(timer);
-    if(r.ok) {
-      done = true;
-      say('\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
-      setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
-    } else { throw new Error('status ' + r.status); }
+    done = true;
+    say('✅ Natijangiz botga yetib bordi! Botga qayting — birinchi darsingiz o\'sha yerda.' + closeBtn);
+    setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
   }).catch(function(){
     clearTimeout(timer);
     if(done) return;
-    if(viaSendData()) say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
-    else say(manual, true);
+    if(!viaSendDataChecked()) say(manualCode, true);
   });
 }
 </script>
