@@ -732,6 +732,12 @@ body.error-bg::after {
 
 <script>
 const tg = window.Telegram?.WebApp;
+// bo'lim 133: ?mode=diag -- /daraja_test (faqat daraja aniqlash, natija ustozga hisobot bo'lib boradi)
+const PL_MODE = (function(){ try { return (new URLSearchParams(location.search).get('mode') || '').toLowerCase(); } catch(e) { return ''; } })();
+const PL_DIAG = PL_MODE === 'diag';
+// Har javob logi: ustozga zaif nuqtalar hisoboti uchun (bosqichlar, javoblar, grammatika xatolari)
+let PL_LOG = {lv:{}, a:[], w:[]};
+let PL_T0 = 0;
 const WEBHOOK_URL = 'https://hook.us2.make.com/ekg9971ofyu11lfw8jxrf98awh819y2b';
 const AUDIO_URLS = {
   A0: 'https://Azam2111.github.io/bayyina-test/audio/a0_istima.mp3',
@@ -1228,6 +1234,8 @@ function startAdaptiveTest() {
   document.getElementById('testWrap').style.display = 'block';
   timedOut = false;
   timeLeft = TIMER_DURATION;
+  PL_LOG = {lv:{}, a:[], w:[]};
+  PL_T0 = Date.now();
   startTimer();
   startLevel('A0');
 }
@@ -1310,6 +1318,8 @@ function renderQuestion() {
   let opts = [...q.o];
   let correctOpt = opts[q.c];
   opts = shuffleArray(opts);
+  window._optTexts = window._optTexts || {};
+  window._optTexts[currentQIndex] = opts;
   let newCorrectIndex = opts.indexOf(correctOpt);
   let letters = ['A','B','C','D'];
   window._feedbacks = window._feedbacks || {};
@@ -1354,6 +1364,17 @@ function selectOption(el, isCorrect, type, qIdx) {
   let optsDiv = el.parentElement;
   if(optsDiv.classList.contains('locked')) return;
   optsDiv.classList.add('locked');
+  try {
+    const _q = allQuestions[qIdx];
+    if(_q && _q.id) {
+      PL_LOG.a.push(_q.id + (isCorrect ? '+' : '-'));
+      if(!isCorrect && _q.type === 'Q' && PL_LOG.w.length < 40) {
+        const _i = Array.prototype.indexOf.call(optsDiv.children, el);
+        const _ch = ((window._optTexts || {})[qIdx] || [])[_i] || '';
+        PL_LOG.w.push([_q.id, String(_q.q || '').slice(0, 90), String(_ch).slice(0, 50), String(_q.o[_q.c] || '').slice(0, 50)]);
+      }
+    }
+  } catch(e) {}
 
   if(isCorrect) {
     el.classList.add('ok');
@@ -1393,6 +1414,10 @@ function checkLevelResult() {
   const d = DATA[currentLevel];
   let tot = levelScore.M + levelScore.Q + levelScore.R + levelScore.I;
   let pct = Math.round((tot / d.totalQ) * 100);
+  try {
+    PL_LOG.lv[currentLevel] = {M:[levelScore.M, d.MQ.length], Q:[levelScore.Q, d.QQ.length],
+                               R:[levelScore.R, d.RQ.length], I:[levelScore.I, d.IQ.length], p:pct};
+  } catch(e) {}
 
   let outcome = null;
   for(let l of d.levels) {
@@ -1497,7 +1522,7 @@ function showFinalResult(outcome, pct, tot, maxQs) {
     <div class="bot-action">
       <strong>Keyingi qadam:</strong><br>
       Daraja: ${outcome.lvl} • Ball: ${pct}%<br>
-      ${outcome.action || 'Natijalar bot orqali yuboriladi.'}
+      ${PL_DIAG ? "Natijangiz ustozga yuboriladi. Ustoz uni ko'rib chiqib, sizga shaxsan yozadi." : (outcome.action || 'Natijalar bot orqali yuboriladi.')}
     </div>
     <div id="whStatus" class="webhook-status">Natijalar yuborilmoqda...</div>
   `;
@@ -1603,7 +1628,14 @@ function sendToWebhook(lvl, pct, tot, max) {
     muf: levelScore.M,
     qov: levelScore.Q,
     qir: levelScore.R,
-    ist: levelScore.I
+    ist: levelScore.I,
+    // bo'lim 133: ustoz hisoboti uchun
+    mode: PL_MODE,
+    sec: PL_T0 ? Math.round((Date.now() - PL_T0) / 1000) : 0,
+    tout: timedOut ? 1 : 0,
+    lv: PL_LOG.lv,
+    a: PL_LOG.a.join(','),
+    w: PL_LOG.w
   };
   const PLACEMENT_API = 'https://web-production-06809.up.railway.app/api/placement';
   const init = (tg && tg.initData) || '';
@@ -1625,7 +1657,15 @@ function sendToWebhook(lvl, pct, tot, max) {
   }
   function viaSendData() {
     if(tg && inTelegram() && typeof tg.sendData === 'function') {
-      try { tg.sendData(JSON.stringify(payload)); return true; } catch(e) {}
+      try {
+        // sendData chegarasi 4096 bayt: sig'masa batafsil log tashlanadi (asosiy natija har doim yetadi)
+        const _bytes = function(t){ try { return new TextEncoder().encode(t).length; } catch(e) { return t.length * 2; } };
+        let p2 = Object.assign({}, payload), js = JSON.stringify(p2);
+        if(_bytes(js) > 3800) { delete p2.w; js = JSON.stringify(p2); }
+        if(_bytes(js) > 3800) { delete p2.a; js = JSON.stringify(p2); }
+        if(_bytes(js) > 3800) { delete p2.lv; js = JSON.stringify(p2); }
+        tg.sendData(js); return true;
+      } catch(e) {}
     }
     return false;
   }
@@ -1658,7 +1698,9 @@ function sendToWebhook(lvl, pct, tot, max) {
     clearTimeout(timer);
     if(r.ok) {
       done = true;
-      say('\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
+      say(PL_DIAG
+          ? '\u2705 Natijangiz ustozga yetib bordi! Ustoz natijangizni ko\'rib chiqib, sizga shaxsan yozadi.' + closeBtn
+          : '\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
       setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
     } else { throw new Error('status ' + r.status); }
   }).catch(function(){
