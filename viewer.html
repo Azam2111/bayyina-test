@@ -972,11 +972,17 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   async function accessGate(){
     if(darsId && /^probniy_/.test(darsId)) return true;      // probniy -- ochiq
     var t=P.get('t')||'';
-    if(!t){ showLock('no_token'); return false; }
+    var initData=(window.Telegram&&Telegram.WebApp&&Telegram.WebApp.initData)||'';
+    if(!t&&!initData){ showLock('no_token'); return false; }
     try{
       var ctl=('AbortController' in window)?new AbortController():null;
       var tm=setTimeout(function(){ if(ctl) ctl.abort(); },7000);
-      var r=await fetch(ACCESS_API+'?t='+encodeURIComponent(t),{cache:'no-store',signal:ctl?ctl.signal:undefined});
+      var r=await fetch(ACCESS_API,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({t:t,init_data:initData}),
+        cache:'no-store',signal:ctl?ctl.signal:undefined
+      });
       clearTimeout(tm);
       if(!r.ok) return true;                                  // server xatosi -- ochiq
       var j=await r.json();
