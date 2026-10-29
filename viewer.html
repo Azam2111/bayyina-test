@@ -83,6 +83,10 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .qmatn.mix{background:var(--cream); border:1px solid var(--cream-dim); border-left:4px solid var(--gold); padding:12px 14px; border-radius:10px; margin-bottom:16px}
 .qmatn.mix .pl-ar{font-size:calc(19px*var(--mscale,1)); line-height:1.9; color:#5a4326}
 .qmatn.mix .pl-lat{font-size:calc(14px*var(--mscale,1)); line-height:1.6; color:#5a4326}
+.qiroat-reading{background:#fffdf8; border:1px solid var(--cream-dim); border-radius:16px; padding:18px 16px; margin:0 0 22px; box-shadow:0 4px 16px rgba(74,52,29,.08)}
+.qiroat-reading-title{font-size:13px; font-weight:800; color:var(--tan); letter-spacing:.4px; margin-bottom:10px}
+.qiroat-reading .qmatn{margin:0; border:0; border-right:4px solid var(--gold); border-left:0; background:var(--cream); color:var(--ink)}
+.qiroat-reading .qmatn.ar{font-size:calc(clamp(22px,6vw,29px)*var(--mscale,1)); line-height:2.15; text-align:right}
 .opt .pl{margin:2px 0; text-align:inherit}
 .opt .pl-ar{font-size:1.4em; line-height:1.5}
 .opt .pl-lat{font-size:1em}
@@ -295,11 +299,12 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   const MINI = (P.get("mini")||"").split(",").map(function(x){return x.trim().toLowerCase();})
                  .filter(function(x){return /^[a-c][0-2]_\d{1,2}_(mufradot|qovaid)$/.test(x);}).slice(0,12);
   const MINI_N = Math.max(8, Math.min(20, parseInt(P.get("n")||"15",10)||15));
-  const IS_QIROAT = /qiroat/i.test(darsId);   // qiroat: matn (shpargalka) ko'rsatilmaydi — o'quvchi kitobdan o'qiydi
+  const IS_QIROAT = /qiroat/i.test(darsId);
   const SINGLE  = /istima/i.test(darsId);   // istima: barcha savollar bitta ekranda
   let PASS = parseInt(P.get("otish") || "70", 10);
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
   let hasBook = !!P.get("kitob");
+  let READING_TEXT = "";
   let audioUrl = "";
   let audioPlaysLeft = 2;
 
@@ -325,6 +330,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
         if(r.ok){ const j = await r.json();
           if(Array.isArray(j.questions)) QUESTIONS = j.questions;
+          if(typeof j.matn === "string") READING_TEXT = j.matn.trim();
           hasBook = !!j.kitob;
           if(j.kitob) bookName  = j.kitob;
           if(j.bet)   startPage = parseInt(j.bet,10);
@@ -337,14 +343,14 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       }catch(e){ /* SAMPLE bilan davom etadi */ }
     }
     if(hasBook){ document.getElementById('bookBtn').style.display='flex'; ensurePdfJs().catch(function(){}); }  // kitobli testda oldindan fonda yuklab qo'yamiz
-    if(QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
+    if(READING_TEXT || QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
     // Asl indeks (xatolar xotirasi uchun) — aralashtirishdan OLDIN belgilanadi.
     QUESTIONS.forEach(function(q,i){ if(q && q._i==null){ q._i=i; } });
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
     for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
     renderAudio();
-    if(SINGLE){ renderAllSingle(); } else { renderQuestion(0); }
+    if(SINGLE || (IS_QIROAT && READING_TEXT)){ renderAllSingle(); } else { renderQuestion(0); }
   }
 
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
@@ -431,8 +437,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
-    const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
-    const betHint  = item.bet  ? '<div class="bet-hint">📄 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
+    const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? renderMatn(item.matn) : '';
+    const betHint  = (item.bet && !(IS_QIROAT && READING_TEXT)) ? '<div class="bet-hint">📄 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
       let arc='', otext, odir='';
@@ -486,10 +492,13 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     wrap.className='';
     document.getElementById('navArea').innerHTML='';
     let html='';
+    if(IS_QIROAT && READING_TEXT){
+      html += '<section class="qiroat-reading"><div class="qiroat-reading-title">📖 MATNNI O\'QING</div>'+renderMatn(READING_TEXT)+'</section>';
+    }
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
-      const matnHtml = (item.matn && (!IS_QIROAT || !hasBook)) ? renderMatn(item.matn) : '';
-      const betHint  = item.bet  ? '<div class="bet-hint">\U0001F4C4 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
+      const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? renderMatn(item.matn) : '';
+      const betHint  = (item.bet && !(IS_QIROAT && READING_TEXT)) ? '<div class="bet-hint">\U0001F4C4 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
         let arc='', otext, odir='';
