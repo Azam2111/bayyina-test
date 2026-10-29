@@ -1,348 +1,722 @@
 {
   "title": "Mufradot — 5-dars: Al-Bayt (Uy va joy hollari)",
   "otish": 80,
-  "vaqt": 19,
+  "vaqt": 40,
   "questions": [
     {
       "q": "«بَابٌ» so'zining ma'nosi?",
       "opts": [
-        "Eshik.",
-        "Katta.",
-        "Kichik.",
-        "Tor."
+        "Shkaf",
+        "Eshik",
+        "Stol",
+        "Kursi"
       ],
-      "correct": 0,
-      "izoh": "Eshik. = بَابٌ"
+      "correct": 1,
+      "izoh": "بَابٌ = Eshik"
+    },
+    {
+      "q": "«Eshik» so'zining ma'nosi?",
+      "opts": [
+        "خِزَانَةٌ",
+        "بَابٌ",
+        "طَاوِلَةٌ",
+        "كُرْسِيٌّ"
+      ],
+      "correct": 1,
+      "izoh": "بَابٌ = Eshik"
     },
     {
       "q": "«طَاوِلَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Tor.",
-        "Eshik.",
-        "Keng.",
-        "Stol."
+        "Xona",
+        "Eshik",
+        "Stol",
+        "Shkaf"
       ],
-      "correct": 3,
-      "izoh": "Stol. = طَاوِلَةٌ"
+      "correct": 2,
+      "izoh": "طَاوِلَةٌ = Stol"
+    },
+    {
+      "q": "«Stol» so'zining ma'nosi?",
+      "opts": [
+        "كُرْسِيٌّ",
+        "طَاوِلَةٌ",
+        "صَالَةٌ",
+        "بَيْتٌ"
+      ],
+      "correct": 1,
+      "izoh": "طَاوِلَةٌ = Stol"
     },
     {
       "q": "«خِزَانَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Zal.",
-        "Stol.",
-        "Yozadi",
-        "Shkaf."
+        "Zal (mehmonxona)",
+        "Shkaf",
+        "Kursi",
+        "Daftar"
       ],
-      "correct": 3,
-      "izoh": "Shkaf. = خِزَانَةٌ"
+      "correct": 1,
+      "izoh": "خِزَانَةٌ = Shkaf"
     },
     {
-      "q": "«هُنَا» so'zining ma'nosi?",
+      "q": "«Shkaf» so'zining ma'nosi?",
       "opts": [
-        "O'ng tomonida.",
-        "Chap tomonida.",
-        "Ustida.",
-        "Bu yerda"
+        "بَابٌ",
+        "غُرْفَةٌ",
+        "خِزَانَةٌ",
+        "طَاوِلَةٌ"
       ],
-      "correct": 3,
-      "izoh": "Bu yerda = هُنَا"
+      "correct": 2,
+      "izoh": "خِزَانَةٌ = Shkaf"
     },
     {
       "q": "«صَالَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Orasida.",
-        "Zal.",
-        "Tor.",
-        "Kir."
+        "Xona",
+        "Zal (mehmonxona)",
+        "Oshxona / restoran",
+        "Eshik"
       ],
       "correct": 1,
-      "izoh": "Zal. = صَالَةٌ"
+      "izoh": "صَالَةٌ = Zal (mehmonxona)"
+    },
+    {
+      "q": "«Zal (mehmonxona)» so'zining ma'nosi?",
+      "opts": [
+        "غُرْفَةٌ",
+        "مَطْعَمٌ",
+        "صَالَةٌ",
+        "بَيْتٌ"
+      ],
+      "correct": 2,
+      "izoh": "صَالَةٌ = Zal (mehmonxona)"
     },
     {
       "q": "«كَبِيرٌ» so'zining ma'nosi?",
       "opts": [
-        "Kichik.",
-        "Yangi.",
-        "Katta.",
-        "Eski."
+        "Kichik",
+        "Katta",
+        "Yangi",
+        "Eski"
+      ],
+      "correct": 1,
+      "izoh": "كَبِيرٌ = Katta"
+    },
+    {
+      "q": "«Katta» so'zining ma'nosi?",
+      "opts": [
+        "صَغِيرٌ",
+        "جَدِيدٌ",
+        "كَبِيرٌ",
+        "وَسِخٌ"
       ],
       "correct": 2,
-      "izoh": "Katta. = كَبِيرٌ"
+      "izoh": "كَبِيرٌ = Katta"
     },
     {
       "q": "«صَغِيرٌ» so'zining ma'nosi?",
       "opts": [
-        "Tor.",
-        "Kichik.",
-        "Eski.",
-        "Chiroyli."
+        "Katta",
+        "Toza",
+        "Kichik",
+        "Tor"
+      ],
+      "correct": 2,
+      "izoh": "صَغِيرٌ = Kichik"
+    },
+    {
+      "q": "«Kichik» so'zining ma'nosi?",
+      "opts": [
+        "كَبِيرٌ",
+        "صَغِيرٌ",
+        "قَدِيمٌ",
+        "جَمِيلٌ"
       ],
       "correct": 1,
-      "izoh": "Kichik. = صَغِيرٌ"
+      "izoh": "صَغِيرٌ = Kichik"
     },
     {
       "q": "«نَظِيفٌ» so'zining ma'nosi?",
       "opts": [
-        "Toza.",
-        "Kichik.",
-        "Orasida.",
-        "Stol."
+        "Toza",
+        "Kir",
+        "Chiroyli",
+        "Keng"
       ],
       "correct": 0,
-      "izoh": "Toza. = نَظِيفٌ"
+      "izoh": "نَظِيفٌ = Toza"
+    },
+    {
+      "q": "«Toza» so'zining ma'nosi?",
+      "opts": [
+        "وَسِخٌ",
+        "وَاسِعٌ",
+        "نَظِيفٌ",
+        "ضَيِّقٌ"
+      ],
+      "correct": 2,
+      "izoh": "نَظِيفٌ = Toza"
     },
     {
       "q": "«وَسِخٌ» so'zining ma'nosi?",
       "opts": [
-        "Orqasida.",
-        "Kir.",
-        "Katta.",
-        "Chiroyli."
+        "Toza",
+        "Kir",
+        "Eski",
+        "Tor"
       ],
       "correct": 1,
-      "izoh": "Kir. = وَسِخٌ"
+      "izoh": "وَسِخٌ = Kir"
+    },
+    {
+      "q": "«Kir» so'zining ma'nosi?",
+      "opts": [
+        "نَظِيفٌ",
+        "وَسِخٌ",
+        "جَدِيدٌ",
+        "جَمِيلٌ"
+      ],
+      "correct": 1,
+      "izoh": "وَسِخٌ = Kir"
     },
     {
       "q": "«جَمِيلٌ» so'zining ma'nosi?",
       "opts": [
-        "Chiroyli.",
-        "Keng.",
-        "Kichik.",
-        "Tor."
+        "Eski",
+        "Yangi",
+        "Katta",
+        "Chiroyli"
+      ],
+      "correct": 3,
+      "izoh": "جَمِيلٌ = Chiroyli"
+    },
+    {
+      "q": "«Chiroyli» so'zining ma'nosi?",
+      "opts": [
+        "جَمِيلٌ",
+        "قَدِيمٌ",
+        "وَاسِعٌ",
+        "ضَيِّقٌ"
       ],
       "correct": 0,
-      "izoh": "Chiroyli. = جَمِيلٌ"
+      "izoh": "جَمِيلٌ = Chiroyli"
     },
     {
       "q": "«جَدِيدٌ» so'zining ma'nosi?",
       "opts": [
-        "Katta.",
-        "Tor.",
-        "Kichik.",
-        "Yangi."
+        "Eski",
+        "Toza",
+        "Yangi",
+        "Kir"
       ],
-      "correct": 3,
-      "izoh": "Yangi. = جَدِيدٌ"
+      "correct": 2,
+      "izoh": "جَدِيدٌ = Yangi"
+    },
+    {
+      "q": "«Yangi» so'zining ma'nosi?",
+      "opts": [
+        "قَدِيمٌ",
+        "جَدِيدٌ",
+        "وَسِخٌ",
+        "صَغِيرٌ"
+      ],
+      "correct": 1,
+      "izoh": "جَدِيدٌ = Yangi"
     },
     {
       "q": "«قَدِيمٌ» so'zining ma'nosi?",
       "opts": [
-        "Tor.",
-        "Chiroyli.",
-        "Eski.",
-        "Katta."
+        "Eski",
+        "Yangi",
+        "Chiroyli",
+        "Keng"
+      ],
+      "correct": 0,
+      "izoh": "قَدِيمٌ = Eski"
+    },
+    {
+      "q": "«Eski» so'zining ma'nosi?",
+      "opts": [
+        "جَدِيدٌ",
+        "نَظِيفٌ",
+        "قَدِيمٌ",
+        "كَبِيرٌ"
       ],
       "correct": 2,
-      "izoh": "Eski. = قَدِيمٌ"
+      "izoh": "قَدِيمٌ = Eski"
     },
     {
       "q": "«وَاسِعٌ» so'zining ma'nosi?",
       "opts": [
-        "Keng.",
-        "Yangi.",
-        "Eski.",
-        "Kichik."
+        "Tor",
+        "Keng",
+        "Eski",
+        "Kichik"
       ],
-      "correct": 0,
-      "izoh": "Keng. = وَاسِعٌ"
+      "correct": 1,
+      "izoh": "وَاسِعٌ = Keng"
+    },
+    {
+      "q": "«Keng» so'zining ma'nosi?",
+      "opts": [
+        "ضَيِّقٌ",
+        "جَدِيدٌ",
+        "وَاسِعٌ",
+        "صَغِيرٌ"
+      ],
+      "correct": 2,
+      "izoh": "وَاسِعٌ = Keng"
     },
     {
       "q": "«ضَيِّقٌ» so'zining ma'nosi?",
       "opts": [
-        "Tor.",
-        "Kichik.",
-        "Yangi.",
-        "Katta."
+        "Keng",
+        "Eski",
+        "Chiroyli",
+        "Tor"
+      ],
+      "correct": 3,
+      "izoh": "ضَيِّقٌ = Tor"
+    },
+    {
+      "q": "«Tor» so'zining ma'nosi?",
+      "opts": [
+        "ضَيِّقٌ",
+        "وَاسِعٌ",
+        "نَظِيفٌ",
+        "قَدِيمٌ"
       ],
       "correct": 0,
-      "izoh": "Tor. = ضَيِّقٌ"
+      "izoh": "ضَيِّقٌ = Tor"
     },
     {
       "q": "«أَمَامَ» so'zining ma'nosi?",
       "opts": [
-        "Dars qiladi.",
-        "Oldida.",
-        "Ketadi.",
-        "Oldin."
+        "Orqasida",
+        "Tepasida",
+        "Oldida",
+        "Tagida"
       ],
-      "correct": 1,
-      "izoh": "Oldida. = أَمَامَ"
+      "correct": 2,
+      "izoh": "أَمَامَ = Oldida"
+    },
+    {
+      "q": "«Oldida» so'zining ma'nosi?",
+      "opts": [
+        "خَلْفَ",
+        "فَوْقَ",
+        "أَمَامَ",
+        "تَحْتَ"
+      ],
+      "correct": 2,
+      "izoh": "أَمَامَ = Oldida"
     },
     {
       "q": "«فَوْقَ» so'zining ma'nosi?",
       "opts": [
-        "Yonida.",
-        "Orasida.",
-        "Eski.",
-        "Tepasida."
+        "Tagida",
+        "Oldida",
+        "Tepasida",
+        "Yonida"
       ],
-      "correct": 3,
-      "izoh": "Tepasida. = فَوْقَ"
+      "correct": 2,
+      "izoh": "فَوْقَ = Tepasida"
+    },
+    {
+      "q": "«Tepasida» so'zining ma'nosi?",
+      "opts": [
+        "تَحْتَ",
+        "أَمَامَ",
+        "فَوْقَ",
+        "جَانِبَ"
+      ],
+      "correct": 2,
+      "izoh": "فَوْقَ = Tepasida"
     },
     {
       "q": "«عَلَى» so'zining ma'nosi?",
       "opts": [
-        "O'ng tomonida.",
-        "Bu yerda",
-        "Ustida.",
-        "Chap tomonida."
+        "Ustida",
+        "Orasida",
+        "Orqasida",
+        "Yonida"
       ],
-      "correct": 2,
-      "izoh": "Ustida. = عَلَى"
+      "correct": 0,
+      "izoh": "عَلَى = Ustida"
     },
     {
-      "q": "«وَرَاءَ» so'zining ma'nosi?",
+      "q": "«Ustida» so'zining ma'nosi?",
       "opts": [
-        "Orasida.",
-        "Zal.",
-        "Eski.",
-        "Orqasida."
+        "تَحْتَ",
+        "عَلَى",
+        "بَيْنَ",
+        "خَلْفَ"
       ],
-      "correct": 3,
-      "izoh": "Orqasida. = وَرَاءَ"
+      "correct": 1,
+      "izoh": "عَلَى = Ustida"
+    },
+    {
+      "q": "«وَرَاءَ / خَلْفَ» so'zining ma'nosi?",
+      "opts": [
+        "Oldida",
+        "Ustida",
+        "Orqasida",
+        "Orasida"
+      ],
+      "correct": 2,
+      "izoh": "وَرَاءَ / خَلْفَ = Orqasida"
+    },
+    {
+      "q": "«Orqasida» so'zining ma'nosi?",
+      "opts": [
+        "وَرَاءَ / خَلْفَ",
+        "أَمَامَ",
+        "فَوْقَ",
+        "جَانِبَ"
+      ],
+      "correct": 0,
+      "izoh": "وَرَاءَ / خَلْفَ = Orqasida"
     },
     {
       "q": "«تَحْتَ» so'zining ma'nosi?",
       "opts": [
-        "Orasida.",
-        "Tagida.",
-        "Shkaf.",
-        "Yangi."
+        "Tepasida",
+        "Tagida",
+        "Ustida",
+        "Oldida"
       ],
       "correct": 1,
-      "izoh": "Tagida. = تَحْتَ"
+      "izoh": "تَحْتَ = Tagida"
+    },
+    {
+      "q": "«Tagida» so'zining ma'nosi?",
+      "opts": [
+        "فَوْقَ",
+        "عَلَى",
+        "تَحْتَ",
+        "بَيْنَ"
+      ],
+      "correct": 2,
+      "izoh": "تَحْتَ = Tagida"
     },
     {
       "q": "«جَانِبَ» so'zining ma'nosi?",
       "opts": [
-        "Toza.",
-        "Shkaf.",
-        "Tor.",
-        "Yonida."
+        "O'ng tarafida",
+        "Orasida",
+        "Yonida",
+        "Chap tarafida"
       ],
-      "correct": 3,
-      "izoh": "Yonida. = جَانِبَ"
+      "correct": 2,
+      "izoh": "جَانِبَ = Yonida"
+    },
+    {
+      "q": "«Yonida» so'zining ma'nosi?",
+      "opts": [
+        "جَانِبَ",
+        "بَيْنَ",
+        "عَنْ يَمِينِ",
+        "خَلْفَ"
+      ],
+      "correct": 0,
+      "izoh": "جَانِبَ = Yonida"
     },
     {
       "q": "«بَيْنَ» so'zining ma'nosi?",
       "opts": [
-        "Orasida.",
-        "Katta.",
-        "Eshik.",
-        "Eski."
+        "Yonida",
+        "O'ng tarafida",
+        "Orasida",
+        "Chap tarafida"
       ],
-      "correct": 0,
-      "izoh": "Orasida. = بَيْنَ"
+      "correct": 2,
+      "izoh": "بَيْنَ = Orasida"
+    },
+    {
+      "q": "«Orasida» so'zining ma'nosi?",
+      "opts": [
+        "جَانِبَ",
+        "بَيْنَ",
+        "عَنْ يَسَارِ",
+        "أَمَامَ"
+      ],
+      "correct": 1,
+      "izoh": "بَيْنَ = Orasida"
     },
     {
       "q": "«عَنْ يَمِينِ» so'zining ma'nosi?",
       "opts": [
-        "Chap tomonida.",
-        "Bu yerda",
-        "O'ng tomonida.",
-        "Ustida."
+        "O'ng tarafida",
+        "Chap tarafida",
+        "Orasida",
+        "Yonida"
+      ],
+      "correct": 0,
+      "izoh": "عَنْ يَمِينِ = O'ng tarafida"
+    },
+    {
+      "q": "«O'ng tarafida» so'zining ma'nosi?",
+      "opts": [
+        "عَنْ يَسَارِ",
+        "جَانِبَ",
+        "عَنْ يَمِينِ",
+        "بَيْنَ"
       ],
       "correct": 2,
-      "izoh": "O'ng tomonida. = عَنْ يَمِينِ"
+      "izoh": "عَنْ يَمِينِ = O'ng tarafida"
     },
     {
       "q": "«عَنْ يَسَارِ» so'zining ma'nosi?",
       "opts": [
-        "O'ng tomonida.",
-        "Ustida.",
-        "Chap tomonida.",
-        "Bu yerda"
-      ],
-      "correct": 2,
-      "izoh": "Chap tomonida. = عَنْ يَسَارِ"
-    },
-    {
-      "q": "🔁 «يَقْرَأُ» so'zining ma'nosi?",
-      "opts": [
-        "Do'st.",
-        "Restoran.",
-        "Bobo.",
-        "O'qiydi."
+        "O'ng tarafida",
+        "Orasida",
+        "Yonida",
+        "Chap tarafida"
       ],
       "correct": 3,
-      "izoh": "O'qiydi. = 🔁 Takror (4-dars): يَقْرَأُ"
+      "izoh": "عَنْ يَسَارِ = Chap tarafida"
+    },
+    {
+      "q": "🔁 «كَتَبَ» so'zining ma'nosi?",
+      "opts": [
+        "O'qimoq (matn)",
+        "Yozmoq",
+        "Ketmoq, bormoq",
+        "O'tirmoq"
+      ],
+      "correct": 1,
+      "izoh": "Yozmoq = 🔁 Takror (4-dars): كَتَبَ"
+    },
+    {
+      "q": "🔁 «O'qimoq (maktabda)» so'zining ma'nosi?",
+      "opts": [
+        "دَرَسَ",
+        "خَرَجَ",
+        "كَتَبَ",
+        "ذَهَبَ"
+      ],
+      "correct": 0,
+      "izoh": "O'qimoq (maktabda) = 🔁 Takror (4-dars): دَرَسَ"
+    },
+    {
+      "q": "🔁 «قَرَأَ» so'zining ma'nosi?",
+      "opts": [
+        "Yozmoq",
+        "O'qimoq (matn)",
+        "Eshitmoq",
+        "Olish"
+      ],
+      "correct": 1,
+      "izoh": "O'qimoq (matn) = 🔁 Takror (4-dars): قَرَأَ"
+    },
+    {
+      "q": "🔁 «Ketmoq, bormoq» so'zining ma'nosi?",
+      "opts": [
+        "دَخَلَ",
+        "خَرَجَ",
+        "ذَهَبَ",
+        "رَجَعَ"
+      ],
+      "correct": 2,
+      "izoh": "Ketmoq, bormoq = 🔁 Takror (4-dars): ذَهَبَ"
+    },
+    {
+      "q": "🔁 «دَخَلَ» so'zining ma'nosi?",
+      "opts": [
+        "Chiqmoq",
+        "Qaytmoq",
+        "Kirmoq",
+        "O'tirmoq"
+      ],
+      "correct": 2,
+      "izoh": "Kirmoq = 🔁 Takror (4-dars): دَخَلَ"
+    },
+    {
+      "q": "🔁 «Chiqmoq» so'zining ma'nosi?",
+      "opts": [
+        "خَرَجَ",
+        "دَخَلَ",
+        "رَجَعَ",
+        "ذَهَبَ"
+      ],
+      "correct": 0,
+      "izoh": "Chiqmoq = 🔁 Takror (4-dars): خَرَجَ"
+    },
+    {
+      "q": "🔁 «رَجَعَ» so'zining ma'nosi?",
+      "opts": [
+        "Kirmoq",
+        "Ketmoq, bormoq",
+        "Qaytmoq",
+        "Chiqmoq"
+      ],
+      "correct": 2,
+      "izoh": "Qaytmoq = 🔁 Takror (4-dars): رَجَعَ"
+    },
+    {
+      "q": "🔁 «O'tirmoq» so'zining ma'nosi?",
+      "opts": [
+        "سَمِعَ",
+        "جَلَسَ",
+        "لَعِبَ",
+        "أَخَذَ"
+      ],
+      "correct": 1,
+      "izoh": "O'tirmoq = 🔁 Takror (4-dars): جَلَسَ"
+    },
+    {
+      "q": "🔁 «سَمِعَ» so'zining ma'nosi?",
+      "opts": [
+        "Eshitmoq",
+        "Ichmoq",
+        "O'ynamoq",
+        "Olish"
+      ],
+      "correct": 0,
+      "izoh": "Eshitmoq = 🔁 Takror (4-dars): سَمِعَ"
+    },
+    {
+      "q": "🔁 «Ichmoq» so'zining ma'nosi?",
+      "opts": [
+        "طَبَخَ",
+        "لَعِبَ",
+        "شَرِبَ",
+        "فَعَلَ"
+      ],
+      "correct": 2,
+      "izoh": "Ichmoq = 🔁 Takror (4-dars): شَرِبَ"
+    },
+    {
+      "q": "🔁 «لَعِبَ» so'zining ma'nosi?",
+      "opts": [
+        "Eshitmoq",
+        "Taom pishirmoq",
+        "Qilmoq",
+        "O'ynamoq"
+      ],
+      "correct": 3,
+      "izoh": "O'ynamoq = 🔁 Takror (4-dars): لَعِبَ"
+    },
+    {
+      "q": "🔁 «Oldin» so'zining ma'nosi?",
+      "opts": [
+        "بَعْدَ",
+        "ثُمَّ",
+        "قَبْلَ",
+        "اَلْآنَ"
+      ],
+      "correct": 2,
+      "izoh": "Oldin = 🔁 Takror (4-dars): قَبْلَ"
+    },
+    {
+      "q": "🔁 «بَعْدَ» so'zining ma'nosi?",
+      "opts": [
+        "Oldin",
+        "Ertalab",
+        "Keyin",
+        "Hozir"
+      ],
+      "correct": 2,
+      "izoh": "Keyin = 🔁 Takror (4-dars): بَعْدَ"
+    },
+    {
+      "q": "🔁 «Hozir» so'zining ma'nosi?",
+      "opts": [
+        "صَبَاحًا",
+        "اَلْآنَ",
+        "مَسَاءً",
+        "ثُمَّ"
+      ],
+      "correct": 1,
+      "izoh": "Hozir = 🔁 Takror (4-dars): اَلْآنَ"
+    },
+    {
+      "q": "🔁 «أَبٌ» so'zining ma'nosi?",
+      "opts": [
+        "Ona",
+        "Bobo",
+        "Ota",
+        "Aka/uka"
+      ],
+      "correct": 2,
+      "izoh": "Ota = 🔁 Takror (3-dars): أَبٌ"
+    },
+    {
+      "q": "🔁 «Ona» so'zining ma'nosi?",
+      "opts": [
+        "أَبٌ",
+        "أُمٌّ",
+        "جَدَّةٌ",
+        "أُخْتٌ"
+      ],
+      "correct": 1,
+      "izoh": "Ona = 🔁 Takror (3-dars): أُمٌّ"
+    },
+    {
+      "q": "🔁 «شَجَرَةٌ» so'zining ma'nosi?",
+      "opts": [
+        "Daraxt",
+        "Uy",
+        "Xona",
+        "Mehmon"
+      ],
+      "correct": 0,
+      "izoh": "Daraxt = 🔁 Takror (3-dars): شَجَرَةٌ"
+    },
+    {
+      "q": "🔁 «Mehmon» so'zining ma'nosi?",
+      "opts": [
+        "حَفِيدٌ",
+        "صَدِيقٌ",
+        "ضَيْفٌ",
+        "عَمٌّ"
+      ],
+      "correct": 2,
+      "izoh": "Mehmon = 🔁 Takror (3-dars): ضَيْفٌ"
     },
     {
       "q": "🔁 «غُرْفَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Bobo.",
-        "O'tiradi.",
-        "O'qiydi.",
-        "Xona."
+        "Uy",
+        "Daraxt",
+        "Oshxona / restoran",
+        "Xona"
       ],
       "correct": 3,
-      "izoh": "Xona. = 🔁 Takror (3-dars): غُرْفَةٌ"
+      "izoh": "Xona = 🔁 Takror (3-dars): غُرْفَةٌ"
     },
     {
-      "q": "🔁 «يَشْرَبُ» so'zining ma'nosi?",
+      "q": "🔁 «مِهْنَةٌ» so'zining ma'nosi?",
       "opts": [
-        "Restoran.",
-        "Ichadi.",
-        "O'tiradi.",
-        "Bobo."
+        "Ishchi",
+        "Kasb",
+        "Savdogar / Tadbirkor",
+        "Do'st"
       ],
       "correct": 1,
-      "izoh": "Ichadi. = 🔁 Takror (4-dars): يَشْرَبُ"
-    },
-    {
-      "q": "🔁 «جَدٌّ» so'zining ma'nosi?",
-      "opts": [
-        "Restoran.",
-        "Bobo.",
-        "Xona.",
-        "Do'st."
-      ],
-      "correct": 1,
-      "izoh": "Bobo. = 🔁 Takror (3-dars): جَدٌّ"
+      "izoh": "Kasb = 🔁 Takror (2-dars): مِهْنَةٌ"
     },
     {
       "q": "🔁 «مَطْعَمٌ» so'zining ma'nosi?",
       "opts": [
-        "Bobo.",
-        "Xona.",
-        "Restoran.",
-        "Do'st."
+        "Kasb",
+        "Xona",
+        "Uy",
+        "Oshxona / restoran"
       ],
-      "correct": 2,
-      "izoh": "Restoran. = 🔁 Takror (2-dars): مَطْعَمٌ"
+      "correct": 3,
+      "izoh": "Oshxona / restoran = 🔁 Takror (2-dars): مَطْعَمٌ"
     },
     {
-      "q": "«يَكْتُبُ» so'zining ma'nosi?",
+      "q": "🔁 «Savdogar / Tadbirkor» so'zining ma'nosi?",
       "opts": [
-        "Tepasida.",
-        "Kir.",
-        "Yozadi",
-        "Kichik."
+        "حَلَّاقٌ",
+        "سَائِقٌ",
+        "تَاجِرٌ",
+        "مُدِيرٌ"
       ],
       "correct": 2,
-      "izoh": "Yozadi = يَكْتُبُ"
-    },
-    {
-      "q": "🔁 «يَجْلِسُ» so'zining ma'nosi?",
-      "opts": [
-        "O'tiradi.",
-        "O'qiydi.",
-        "Do'st.",
-        "Restoran."
-      ],
-      "correct": 0,
-      "izoh": "O'tiradi. = 🔁 Takror (4-dars): يَجْلِسُ"
-    },
-    {
-      "q": "🔁 «صَدِيقٌ» so'zining ma'nosi?",
-      "opts": [
-        "O'tiradi.",
-        "Ichadi.",
-        "Do'st.",
-        "Restoran."
-      ],
-      "correct": 2,
-      "izoh": "Do'st. = 🔁 Takror (2-dars): صَدِيقٌ"
+      "izoh": "Savdogar / Tadbirkor = 🔁 Takror (2-dars): تَاجِرٌ"
     }
   ]
 }
