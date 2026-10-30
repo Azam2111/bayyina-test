@@ -105,6 +105,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .opt.ok .opt-text{color:var(--green-text)}
 .opt.no{background:var(--red-bg); border-color:var(--red)}
 .opt.no .opt-text{color:var(--red-text)}
+.opt.chosen{background:#fbf3e6; border-color:var(--gold); box-shadow:0 0 0 2px rgba(200,157,79,.12)}
+.opt.chosen .ltr{background:var(--gold); color:#fff}
 .ltr{flex-shrink:0; width:34px; height:34px; border-radius:50%; background:var(--cream); display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; color:var(--brown-mid)}
 .opt.ok .ltr{background:var(--green); color:#fff}
 .opt.no .ltr{background:var(--red); color:#fff}
@@ -346,9 +348,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(READING_TEXT || QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
     // Asl indeks (xatolar xotirasi uchun) — aralashtirishdan OLDIN belgilanadi.
     QUESTIONS.forEach(function(q,i){ if(q && q._i==null){ q._i=i; } });
-    // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
-    // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
-    for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
+    // Matnli qiroatda savollar pedagogik ketma-ketlikda qoladi; faqat variantlar aralashadi.
+    // Boshqa testlarda savol ham, javob ham har urinishda har xil tartibda chiqadi.
+    if(!(IS_QIROAT && READING_TEXT)){
+      for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
+    }
     renderAudio();
     if(SINGLE || (IS_QIROAT && READING_TEXT)){ renderAllSingle(); } else { renderQuestion(0); }
   }
@@ -521,6 +525,16 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     item._answered=oi; answeredCount++;
     if(oi===item._correct) correctCount++;
     const opts=document.getElementById('opts'+i); if(opts) opts.classList.add('locked');
+    if(IS_QIROAT && READING_TEXT){
+      const picked=document.querySelector('#opts'+i+' .opt[data-o="'+oi+'"]');
+      if(picked) picked.classList.add('chosen');
+      updateSingleProgress();
+      if(answeredCount>=QUESTIONS.length){
+        const fbtn=document.getElementById('finishBtn');
+        if(fbtn){ fbtn.style.display='block'; fbtn.scrollIntoView({behavior:'smooth',block:'center'}); }
+      }
+      return;
+    }
     document.querySelectorAll('#opts'+i+' .opt').forEach(function(b){
       const bo=+b.dataset.o;
       if(bo===item._correct) b.classList.add('ok');

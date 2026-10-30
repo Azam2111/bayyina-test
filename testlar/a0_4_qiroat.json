@@ -1,86 +1,20 @@
 {
-  "title": "Qiroat — 4-dars: Oila nima qilyapti? (Fe'llar)",
+  "title": "Qiroat — 4-dars: Oila nima qilyapti?",
   "matn": "أَنْوَرُ: مَاذَا تَفْعَلُ هَذِهِ الْعَائِلَةُ يَا زَيْدُ؟\nزَيْدٌ: الأَبُ يَخْرُجُ مِنَ الْبَيْتِ الْآنَ، وَهُوَ يَذْهَبُ إِلَى الْعَمَلِ.\nأَنْوَرُ: وَمَاذَا تَفْعَلُ الأُمُّ؟\nزَيْدٌ: هِيَ تَطْبُخُ الطَّعَامَ.\nأَنْوَرُ: هَلِ ابْنُهَا يَدْرُسُ مَعَ أُخْتِهِ؟\nزَيْدٌ: لَا، هُوَ يَلْعَبُ.\nأَنْوَرُ: هَلْ هُوَ يَلْعَبُ مَعَ جَدِّهِ؟\nزَيْدٌ: لَا، جَدُّهُ لَا يَلْعَبُ، جَدُّهُ يَشْرَبُ الشَّايَ.\nأَنْوَرُ: هَلْ أُخْتُهُ تَقْرَأُ الْكِتَابَ؟\nزَيْدٌ: نَعَمْ، هِيَ تَقْرَأُ الْكِتَابَ وَتَدْرُسُ.\nأَنْوَرُ: كَمْ كِتَابًا عِنْدَهَا؟\nزَيْدٌ: عِنْدَهَا ثَلَاثَةُ كُتُبٍ.",
   "kitob": "A0 Bayyina_compressed (1).pdf",
   "bet": 87,
   "otish": 80,
   "vaqt": 10,
   "questions": [
-    {
-      "q": "Ota (الأَب) hozir nima qilyapti?",
-      "opts": ["Uydan chiqib ishga ketyapti", "Choy ichyapti", "Kitob o'qiyapti", "O'ynayapti"],
-      "correct": 0,
-      "matn": "الأَبُ يَخْرُجُ مِنَ الْبَيْتِ ... يَذْهَبُ إِلَى الْعَمَلِ",
-      "izoh": "Ota uydan chiqib ishga ketyapti.",
-      "bet": 87
-    },
-    {
-      "q": "«الْعَمَل» so'zining ma'nosi nima?",
-      "opts": ["Ish", "Uy", "Maktab", "Bozor"],
-      "correct": 0,
-      "izoh": "عَمَل = ish.",
-      "bet": 87
-    },
-    {
-      "q": "Ona (الأُم) nima qilyapti?",
-      "opts": ["Ovqat pishiryapti", "Kitob o'qiyapti", "Choy ichyapti", "Ishlayapti"],
-      "correct": 0,
-      "matn": "هِيَ تَطْبُخُ الطَّعَامَ",
-      "izoh": "«تَطْبُخُ الطَّعَامَ» — ovqat pishiryapti.",
-      "bet": 87
-    },
-    {
-      "q": "«يَطْبُخُ» fe'li nimani bildiradi?",
-      "opts": ["Pishiradi", "O'qiydi", "O'ynaydi", "Ichadi"],
-      "correct": 0,
-      "izoh": "طَبَخَ = pishirmoq.",
-      "bet": 87
-    },
-    {
-      "q": "O'g'il (ابن) nima qilyapti?",
-      "opts": ["O'ynayapti", "O'qiyapti", "Ishlayapti", "Uxlayapti"],
-      "correct": 0,
-      "matn": "هُوَ يَلْعَبُ",
-      "izoh": "«هُوَ يَلْعَبُ» — u o'ynayapti.",
-      "bet": 87
-    },
-    {
-      "q": "Bobo (جَدّ) nima qilyapti?",
-      "opts": ["Choy ichyapti", "O'ynayapti", "Kitob o'qiyapti", "Ishlayapti"],
-      "correct": 0,
-      "matn": "جَدُّهُ يَشْرَبُ الشَّايَ",
-      "izoh": "«يَشْرَبُ الشَّايَ» — choy ichyapti.",
-      "bet": 87
-    },
-    {
-      "q": "«يَشْرَبُ» fe'li nimani bildiradi?",
-      "opts": ["Ichadi", "Yeydi", "O'qiydi", "Yozadi"],
-      "correct": 0,
-      "izoh": "شَرِبَ = ichmoq.",
-      "bet": 87
-    },
-    {
-      "q": "Singil (أُخت) nima qilyapti?",
-      "opts": ["Kitob o'qiyapti va dars qilyapti", "Ovqat pishiryapti", "O'ynayapti", "Choy ichyapti"],
-      "correct": 0,
-      "matn": "هِيَ تَقْرَأُ الْكِتَابَ وَتَدْرُسُ",
-      "izoh": "«تَقْرَأُ الْكِتَابَ وَتَدْرُسُ» — kitob o'qiyapti va dars qilyapti.",
-      "bet": 87
-    },
-    {
-      "q": "Singlining nechta kitobi bor?",
-      "opts": ["3 ta", "2 ta", "4 ta", "5 ta"],
-      "correct": 0,
-      "matn": "عِنْدَهَا ثَلَاثَةُ كُتُبٍ",
-      "izoh": "«ثَلَاثَةُ كُتُبٍ» — uchta kitob.",
-      "bet": 87
-    },
-    {
-      "q": "«يَقْرَأُ» fe'li nimani bildiradi?",
-      "opts": ["O'qiydi", "Yozadi", "O'ynaydi", "Ichadi"],
-      "correct": 0,
-      "izoh": "قَرَأَ = o'qimoq.",
-      "bet": 87
-    }
+    {"q": "Matnning asosiy mavzusi nima?", "opts": ["Oila a'zolari hozir nima qilayotgani", "Oilaning qayerda yashashi", "Oila a'zolarining kasblari", "Oilaning sayohati"], "correct": 0, "izoh": "Matnda ota, ona, o'g'il, bobo va qizning ayni paytdagi ishlari aytilgan.", "bet": 87},
+    {"q": "مَاذَا يَفْعَلُ الأَبُ؟", "opts": ["يَخْرُجُ مِنَ الْبَيْتِ وَيَذْهَبُ إِلَى الْعَمَلِ", "يَشْرَبُ الشَّايَ", "يَقْرَأُ الْكِتَابَ", "يَطْبُخُ الطَّعَامَ"], "correct": 0, "matn": "الأَبُ يَخْرُجُ مِنَ الْبَيْتِ الْآنَ، وَهُوَ يَذْهَبُ إِلَى الْعَمَلِ", "izoh": "Ota uydan chiqib, ishga ketyapti.", "bet": 87},
+    {"q": "مَاذَا تَفْعَلُ الأُمُّ؟", "opts": ["تَطْبُخُ الطَّعَامَ", "تَقْرَأُ الْكِتَابَ", "تَشْرَبُ الشَّايَ", "تَذْهَبُ إِلَى الْعَمَلِ"], "correct": 0, "matn": "هِيَ تَطْبُخُ الطَّعَامَ", "izoh": "Ona ovqat pishiryapti.", "bet": 87},
+    {"q": "هَلِ ابْنُهَا يَدْرُسُ مَعَ أُخْتِهِ؟", "opts": ["لَا، هُوَ يَلْعَبُ", "نَعَمْ، هُوَ يَدْرُسُ مَعَهَا", "لَا، هُوَ يَشْرَبُ الشَّايَ", "نَعَمْ، هُوَ يَقْرَأُ الْكِتَابَ"], "correct": 0, "matn": "لَا، هُوَ يَلْعَبُ", "izoh": "Yo'q, o'g'il o'qimayapti; u o'ynayapti.", "bet": 87},
+    {"q": "مَنْ يَشْرَبُ الشَّايَ؟", "opts": ["الْجَدُّ", "الأَبُ", "الأُمُّ", "الابْنُ"], "correct": 0, "matn": "جَدُّهُ يَشْرَبُ الشَّايَ", "izoh": "Choyni bobo ichyapti.", "bet": 87},
+    {"q": "Matnga mos juftlikni toping.", "opts": ["O'g'il — o'ynayapti; bobo — choy ichyapti", "O'g'il — choy ichyapti; bobo — o'ynayapti", "O'g'il — dars qilyapti; bobo — ishlayapti", "O'g'il — ovqat pishiryapti; bobo — kitob o'qiyapti"], "correct": 0, "izoh": "O'g'il o'ynaydi, bobo esa o'ynamaydi — choy ichadi.", "bet": 87},
+    {"q": "مَاذَا تَفْعَلُ الأُخْتُ؟", "opts": ["تَقْرَأُ الْكِتَابَ وَتَدْرُسُ", "تَطْبُخُ الطَّعَامَ", "تَلْعَبُ مَعَ أَخِيهَا", "تَذْهَبُ إِلَى الْعَمَلِ"], "correct": 0, "matn": "هِيَ تَقْرَأُ الْكِتَابَ وَتَدْرُسُ", "izoh": "Qiz kitob o'qiyapti va dars qilyapti.", "bet": 87},
+    {"q": "كَمْ كِتَابًا عِنْدَ الأُخْتِ؟", "opts": ["ثَلَاثَةُ كُتُبٍ", "كِتَابٌ وَاحِدٌ", "كِتَابَانِ", "أَرْبَعَةُ كُتُبٍ"], "correct": 0, "matn": "عِنْدَهَا ثَلَاثَةُ كُتُبٍ", "izoh": "Uning uchta kitobi bor.", "bet": 87},
+    {"q": "«عِنْدَهَا ثَلَاثَةُ كُتُبٍ» jumlasidagi «هَا» kimni bildiradi?", "opts": ["Singilni", "Onani", "Otani", "Boboni"], "correct": 0, "izoh": "Oldingi gapdagi shaxs — singil; «عِنْدَهَا» — uning huzurida/unda.", "bet": 87},
+    {"q": "Qaysi ish matnda aytilmagan?", "opts": ["O'g'il kitob o'qiyapti", "Ota ishga ketyapti", "Ona ovqat pishiryapti", "Bobo choy ichyapti"], "correct": 0, "izoh": "Kitobni o'g'il emas, singil o'qiyapti; o'g'il esa o'ynayapti.", "bet": 87}
   ]
 }
