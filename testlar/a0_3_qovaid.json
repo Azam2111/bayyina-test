@@ -4,73 +4,51 @@
   "vaqt": 30,
   "questions": [
     {
-      "q": "«لَدَيَّ فِكْرَةٌ» gapining tarjimasi nima?",
+      "q": "لِـ + أَنَا = ؟",
       "opts": [
-        "Menda bir fikr bor",
-        "Mening mashinam bor",
-        "Yonimda kalit bor",
-        "Mening do'stim bor"
+        "لِي",
+        "لَكَ",
+        "لَهُ",
+        "لأَنَا"
       ],
       "correct": 0,
-      "izoh": "فِكْرَةٌ — fikr, لَدَيَّ فِكْرَةٌ = «Menda bir fikr bor»."
+      "izoh": "«لِـ» + أَنَا (men) = لِي (meniki / menda bor)."
     },
     {
-      "q": "1-shaxs «Men» (أَنَا) ga to'g'ri birikkan egalik qatorini toping.",
+      "q": "لِـ + هُوَ = ؟",
       "opts": [
-        "لِي، عِنْدِي، لَدَيَّ، مَعِي",
-        "لَكَ، عِنْدَكَ، لَدَيْكَ، مَعَكَ",
-        "لَهُ، عِنْدَهُ، لَدَيْهِ، مَعَهُ",
-        "لَكِ، عِنْدَكِ، لَدَيْكِ، مَعَكِ"
+        "لَهُ",
+        "لِهُ",
+        "لَهَا",
+        "لِي"
       ],
       "correct": 0,
-      "izoh": "1-shaxs birligida: لِي، عِنْدِي، لَدَيَّ، مَعِي bo'ladi."
+      "izoh": "«لِـ» 3-shaxs muzakkar zamiriga qo'shilganda fatha oladi: لَهُ (uniki — erkak)."
     },
     {
-      "q": "3-shaxs «U — erkak» (هُوَ) ga to'g'ri birikkan qatorni toping.",
-      "opts": [
-        "لَهُ، عِنْدَهُ، لَدَيْهِ، مَعَهُ",
-        "لَهَا، عِنْدَهَا، لَدَيْهَا، مَعَهَا",
-        "لَكَ، عِنْدَكَ، لَدَيْكَ، مَعَكَ",
-        "لِي، عِنْدِي، لَدَيَّ، مَعِي"
-      ],
-      "correct": 0,
-      "izoh": "3-shaxs muzakkar zamiri «ـهُ» («لَدَى» bilan «لَدَيْهِ»): لَهُ، عِنْدَهُ، لَدَيْهِ، مَعَهُ."
-    },
-    {
-      "q": "3-shaxs «U — ayol» (هِيَ) ga to'g'ri birikkan qatorni toping.",
-      "opts": [
-        "لَهَا، عِنْدَهَا، لَدَيْهَا، مَعَهَا",
-        "لَهُ، عِنْدَهُ، لَدَيْهِ، مَعَهُ",
-        "لَكِ، عِنْدَكِ، لَدَيْكِ، مَعَكِ",
-        "لِي، عِنْدِي، لَدَيَّ، مَعِي"
-      ],
-      "correct": 0,
-      "izoh": "3-shaxs muannas zamiri «ـهَا»: لَهَا، عِنْدَهَا، لَدَيْهَا، مَعَهَا."
-    },
-    {
-      "q": "«مَعَ» (bilan) so'zining «u (ayol) bilan» shakli qaysi?",
-      "opts": [
-        "مَعَهَا",
-        "مَعَهُ",
-        "مَعَكِ",
-        "مَعِي"
-      ],
-      "correct": 0,
-      "izoh": "3-shaxs muannas: مَعَهَا. مَعَهُ = u (erkak) bilan."
-    },
-    {
-      "q": "«لَدَى» so'zining «menda» (1-shaxs) shakli qanday yoziladi?",
+      "q": "لَدَى + أَنَا = ؟",
       "opts": [
         "لَدَيَّ",
         "لَدَيْكَ",
         "لَدَيْهِ",
-        "لَدَيْهَا"
+        "لَدَايَ"
       ],
       "correct": 0,
-      "izoh": "لَدَى + ـِي qo'shilganda tashdid bilan لَدَيَّ («menda») deb yoziladi."
+      "izoh": "لَدَى + أَنَا qo'shilganda tashdid bilan لَدَيَّ («menda») deb yoziladi."
     },
     {
-      "q": "«عِنْدَ» so'ziga «senda (erkak)» zamiri qo'shilsa qanday bo'ladi?",
+      "q": "لَدَى + هُوَ = ؟",
+      "opts": [
+        "لَدَيْهِ",
+        "لَدَيْهُ",
+        "لَدَيْهَا",
+        "لَدَيَّ"
+      ],
+      "correct": 0,
+      "izoh": "لَدَى + هُوَ qo'shilganda zamir kasrali o'qiladi: لَدَيْهِ («unda — erkakda»)."
+    },
+    {
+      "q": "عِنْدَ + أَنْتَ = ؟",
       "opts": [
         "عِنْدَكَ",
         "عِنْدَكِ",
@@ -78,7 +56,29 @@
         "عِنْدِي"
       ],
       "correct": 0,
-      "izoh": "2-shaxs muzakkar zamiri «ـكَ»: عِنْدَكَ. «عِنْدَكِ» — ayol kishiga."
+      "izoh": "عِنْدَ + أَنْتَ (sen — erkak) = عِنْدَكَ («senda»)."
+    },
+    {
+      "q": "مَعَ + أَنْتِ = ؟",
+      "opts": [
+        "مَعَكِ",
+        "مَعَكَ",
+        "مَعَهَا",
+        "مَعِي"
+      ],
+      "correct": 0,
+      "izoh": "مَعَ + أَنْتِ (sen — ayol) = مَعَكِ («sen bilan / senda»)."
+    },
+    {
+      "q": "مَعَ + هِيَ = ؟",
+      "opts": [
+        "مَعَهَا",
+        "مَعَهُ",
+        "مَعَكِ",
+        "مَعِي"
+      ],
+      "correct": 0,
+      "izoh": "مَعَ + هِيَ (u — ayol) = مَعَهَا («u bilan / unda»)."
     },
     {
       "q": "«لِـ» harfi «ـكَ، ـكِ، ـهُ، ـهَا» zamirlari bilan qanday o'qiladi?",
