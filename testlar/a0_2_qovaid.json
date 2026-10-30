@@ -4,18 +4,18 @@
   "vaqt": 25,
   "questions": [
     {
-      "q": "Arab tilida kishilik olmoshlari (zamirlar) yozilishiga ko'ra necha turga bo'linadi?",
+      "q": "Arab tilida zamirlar (olmoshlar) yozilishiga ko'ra necha turga bo'linadi?",
       "opts": [
         "3 turga",
         "2 turga (Munfasil va Muttasil)",
         "4 turga",
-        "Bo'linmaydi, barchasi bir xil yoziladi"
+        "Bo'linmaydi, bir xil"
       ],
       "correct": 1,
       "izoh": "Zamirlar 2 turga bo'linadi: Munfasil (alohida yoziladigan) va Muttasil (so'z oxiriga qo'shilib yoziladigan)."
     },
     {
-      "q": "Gapda boshqa so'zga qo'shilmasdan, yakka (alohida) holda yoziladigan olmoshlar qanday nomlanadi?",
+      "q": "So'zga qo'shilmay, alohida yoziladigan olmoshlar nima deyiladi?",
       "opts": [
         "Munfasil zamirlar",
         "Muttasil zamirlar",
@@ -26,7 +26,7 @@
       "izoh": "Munfasil zamirlar (أَنَا, أَنْتَ, أَنْتِ, هُوَ, هِيَ) alohida so'z sifatida yoziladi."
     },
     {
-      "q": "So'z oxiriga qo'shilib yoziladigan va egalik ma'nosini bildiradigan olmoshlar qanday nomlanadi?",
+      "q": "So'z oxiriga qo'shilib yoziladigan egalik olmoshlari nima deyiladi?",
       "opts": [
         "Munfasil zamirlar",
         "Muzakkar ismlar",
@@ -37,7 +37,7 @@
       "izoh": "Muttasil zamirlar (ـِي, ـكَ, ـكِ, ـهُ, ـهَا) ismlarga qo'shilib, «mening, sening, uning» ma'nosini beradi."
     },
     {
-      "q": "Quyidagi olmoshlardan qaysi biri muttasil (so'zga qo'shilib yoziladigan) zamir hisoblanadi?",
+      "q": "Qaysi olmosh muttasil (so'zga qo'shilib yoziladigan) zamir hisoblanadi?",
       "opts": [
         "أَنَا",
         "أَنْتَ",
@@ -48,7 +48,7 @@
       "izoh": "«ـهَا» — muttasil zamir (uning — ayolga). أَنَا, أَنْتَ, هِيَ — munfasil (alohida) zamirlardir."
     },
     {
-      "q": "Quyidagilardan qaysi biri 1-shaxs birlik («mening») ma'nosini bildiruvchi muttasil zamir hisoblanadi?",
+      "q": "1-shaxs birlik («mening») ma'nosini beruvchi muttasil zamir qaysi?",
       "opts": [
         "ـكَ",
         "ـِي",
@@ -59,7 +59,7 @@
       "izoh": "So'z oxiriga qo'shiladigan «ـِي» yo harfi «mening» ma'nosini bildiradi (masalan: كِتَابِي — mening kitobim)."
     },
     {
-      "q": "«كِتَابٌ» (kitob) so'ziga «mening» zamirini qo'shsak, to'g'ri shakl qanday bo'ladi?",
+      "q": "«كِتَابٌ» so'ziga «mening» zamiri qo'shilsa qanday yoziladi?",
       "opts": [
         "كِتَابِي",
         "كِتَابُكَ",
@@ -70,7 +70,7 @@
       "izoh": "«ـِي» qo'shilganda tanvin tushadi va oxirgi harf kasrali bo'ladi: كِتَابٌ + ـِي = كِتَابِي."
     },
     {
-      "q": "«Sening kitobing» (erkak kishiga nisbatan) birikmasi arab tilida qanday ifodalanadi?",
+      "q": "«Sening kitobing» (erkakka) birikmasi qanday ifodalanadi?",
       "opts": [
         "كِتَابُكِ",
         "كِتَابُكَ",
@@ -147,7 +147,7 @@
       "izoh": "صَدِيقٌ (do'st) + ـهُ (uning - erkak) = صَدِيقُهُ."
     },
     {
-      "q": "Oxiri «ta marbuta» (ة) bilan tugagan so'zlarga (masalan: صُورَةٌ, مِهْنَةٌ) muttasil zamir qo'shilganda «ta marbuta» qanday o'zgaradi?",
+      "q": "Oxiri «ة» bilan tugagan so'zga muttasil zamir qo'shilsa, «ة» qanday o'zgaradi?",
       "opts": [
         "O'zgarishsiz «ة» holida qoladi",
         "Ochiq «ta» (ت) harfiga aylanadi",
@@ -180,7 +180,7 @@
       "izoh": "Sen (erkak) = ـكَ; ة → ت bo'ladi: مِهْنَتُكَ."
     },
     {
-      "q": "«Sening (ayol kishiga) surating» birikmasi to'g'ri yozilgan variantni toping.",
+      "q": "«Sening (ayolga) surating» birikmasi qaysi javobda to'g'ri?",
       "opts": [
         "صُورَتُكَ",
         "صُورَتِي",
@@ -202,7 +202,7 @@
       "izoh": "صُورَةٌ + ـهَا = صُورَتُهَا (uning surati — ayolga nisbatan)."
     },
     {
-      "q": "«هَلْ أَنْتَ مُعَلِّمٌ ___ مُهَنْدِسٌ؟» (Sen o'qituvchimisan yoki muhandismisan?) gapida «yoki» ma'nosini qaysi bog'lovchi beradi?",
+      "q": "«هَلْ أَنْتَ مُعَلِّمٌ ___ مُهَنْدِسٌ؟» gapida «yoki» bog'lovchisi qaysi?",
       "opts": [
         "وَ",
         "أَوْ",
@@ -235,7 +235,7 @@
       "izoh": "طَالِبٌ so'zining siniq ko'pligi — طُلَّابٌ (talabalar)."
     },
     {
-      "q": "«تِلْمِيذٌ» (o'quvchi) so'zining ko'plik shakli qaysi variantda to'g'ri yozilgan?",
+      "q": "«تِلْمِيذٌ» (o'quvchi) so'zining ko'plik shakli qaysi?",
       "opts": [
         "تَلَامِيذُ",
         "تِلْمِيذُونَ",
@@ -279,7 +279,7 @@
       "izoh": "تَاجِرٌ so'zining siniq ko'pligi — تُجَّارٌ (savdogarlar)."
     },
     {
-      "q": "Gapni to'ldiring: «هَذَا مُحَمَّدٌ وَهَذَا ___» (Bu Muhammad va bu uning sartaroshi).",
+      "q": "To'ldiring: «هَذَا مُحَمَّدٌ وَهَذَا ___» (Bu Muhammad va bu uning sartaroshi).",
       "opts": [
         "حَلَّاقُهَا",
         "حَلَّاقُكَ",
@@ -312,7 +312,7 @@
       "izoh": "Zuhra (muannas) uchun هَذِهِ, surat (muannas) uchun هَذِهِ va «uning (ayol) surati» — صُورَتُهَا."
     },
     {
-      "q": "«أَنَا مُعَلِّمٌ وَهَذَا طَالِبِي» gapidagi «طَالِبِي» so'zining ma'nosi nima?",
+      "q": "«أَنَا مُعَلِّمٌ وَهَذَا طَالِبِي» gapidagi «طَالِبِي» ma'nosi nima?",
       "opts": [
         "Uning talabasi",
         "Sening talabang",
@@ -323,7 +323,7 @@
       "izoh": "طَالِبٌ + ـِي = طَالِبِي (mening talabam)."
     },
     {
-      "q": "Gapni grammatik jihatdan to'g'ri to'ldiring: «أَنْتِ مُعَلِّمَةٌ وَهِيَ ___» (Sen ayol o'qituvchisan va u sening o'quvchi qizing).",
+      "q": "To'ldiring: «أَنْتِ مُعَلِّمَةٌ وَهِيَ ___» (u sening o'quvchi qizing).",
       "opts": [
         "تِلْمِيذُهُ",
         "تِلْمِيذَتُكَ",
@@ -334,7 +334,7 @@
       "izoh": "O'quvchi qiz — تِلْمِيذَةٌ; senga (ayolga) qarashli bo'lgani uchun «ـكِ» qo'shiladi: تِلْمِيذَتُكِ."
     },
     {
-      "q": "«U (erkak) oshpaz va bu uning oshxonasi» gapidagi «uning oshxonasi» so'zi qanday yoziladi?",
+      "q": "«U (erkak) oshpaz va bu uning oshxonasi» — «uning oshxonasi» qaysi?",
       "opts": [
         "مَطْعَمُهَا",
         "مَطْعَمُهُ",
@@ -349,25 +349,25 @@
       "opts": [
         "O'zi haqida",
         "Suhbatdosh ayol haqida",
-        "G'oyibdagi (uchinchi shaxsdagi) bir erkak haqida",
+        "3-shaxsdagi bir erkak haqida",
         "Suhbatdosh erkak haqida"
       ],
       "correct": 2,
       "izoh": "«هُوَ» (u) va «ـهُ» (uning) zamirlari suhbatda qatnashmayotgan 3-shaxs erkakka ishora qiladi."
     },
     {
-      "q": "«هَذِهِ دُكْتُورَةٌ وَهَذَا قَلَمُهَا» gapida nima uchun «قَلَمُهَا» shakli ishlatilgan?",
+      "q": "«هَذِهِ دُكْتُورَةٌ وَهَذَا قَلَمُهَا» gapida nega «قَلَمُهَا» ishlatilgan?",
       "opts": [
-        "Qalam muannas jinsida bo'lgani uchun",
-        "Qalamning egasi — ayol shifokor (دُكْتُورَةٌ) jinsiga moslashgani uchun",
-        "Gap boshida «هَذِهِ» kelgani uchun",
+        "Qalam muannas bo'lgani uchun",
+        "Egasi ayol (دُكْتُورَةٌ) bo'lgani",
+        "«هَذِهِ» kelgani uchun",
         "Qalam ko'plikda bo'lgani uchun"
       ],
       "correct": 1,
       "izoh": "Muttasil zamir (ـهَا) narsaning (qalamning) jinsiga emas, balki uning egasining (دُكْتُورَةٌ — ayol) jinsiga moslashadi."
     },
     {
-      "q": "«U Zaynab va u sening (erkak) o'qituvchingdir» gapining to'g'ri arabcha variantini toping.",
+      "q": "«U Zaynab va u sening (erkak) o'qituvchingdir» — to'g'ri tarjima qaysi?",
       "opts": [
         "هُوَ زَيْنَبُ وَهُوَ مُعَلِّمُكَ",
         "هِيَ زَيْنَبُ وَهُوَ مُعَلِّمُكِ",
@@ -378,7 +378,7 @@
       "izoh": "Zaynab ayol bo'lgani uchun «هِيَ» va «مُعَلِّمَةٌ» (ayol o'qituvchi) olinadi, erkak suhbatdoshga «ـكَ» qo'shiladi: مُعَلِّمَتُكَ."
     },
     {
-      "q": "«Haydovchilar mening do'stlarimdir» gapidagi «mening do'stlarim» so'zining arabcha ko'rinishi qanday bo'ladi?",
+      "q": "«Haydovchilar mening do'stlarimdir» — «mening do'stlarim» qaysi?",
       "opts": [
         "أَصْدِقَائِي",
         "صَدِيقِي",

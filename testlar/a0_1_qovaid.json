@@ -17,10 +17,10 @@
     {
       "q": "«Ism» (اِسْمٌ) so'z turkumining eng asosiy belgisi nima?",
       "opts": [
-        "Ma'lum bir zamonga bog'langan bo'lishi",
-        "Harakatni va uning zamonini ifodalashi",
-        "O'z ma'nosini anglatishda hech qanday zamonga bog'lanmasligi",
-        "Faqat gapning boshida kelishi"
+        "Ma'lum zamonga bog'langani",
+        "Harakat va zamonni bildirishi",
+        "Zamonga bog'lanmasligi",
+        "Faqat gap boshida kelishi"
       ],
       "correct": 2,
       "izoh": "Ism — shaxs, narsa, sifat yoki tushuncha nomi bo'lib, zamonga bog'lanmaydi (masalan: كِتَابٌ, مُحَمَّدٌ)."
@@ -37,7 +37,7 @@
       "izoh": "كِتَابٌ (kitob) — jonsiz narsa nomi. مُحَمَّدٌ — shaxs ismi, طَشْقَنْدُ — joy nomi, جَمِيلٌ — sifat."
     },
     {
-      "q": "«Biror ish-harakatni bildiradi va albatta ma'lum bir zamonga bog'langan bo'ladi» — bu ta'rif qaysi so'z turkumiga tegishli?",
+      "q": "Ish-harakat va zamonni bildiruvchi so'z turkumi qaysi?",
       "opts": [
         "Ism",
         "Harf",
@@ -59,7 +59,7 @@
       "izoh": "يَكْتُبُ — hozirgi-kelasi zamon (muzori') fe'li bo'lib, «u yozyapti / yozadi» ma'nosini beradi."
     },
     {
-      "q": "Yolg'iz holida to'liq ma'no anglatmaydigan, faqat ism yoki fe'lga qo'shilgandagina ma'no beradigan yordamchi so'z nima deyiladi?",
+      "q": "Yolg'iz o'zi ma'no bermaydigan yordamchi so'z nima deyiladi?",
       "opts": [
         "Harf",
         "Ism",
@@ -83,9 +83,9 @@
     {
       "q": "Arab tilida otlar jins jihatidan nechta turga bo'linadi?",
       "opts": [
-        "2 turga: Muzakkar (erkak) va Muannas (ayol)",
-        "3 turga: Muzakkar, Muannas va O'rta jins",
-        "Faqat 1 turga: Umumiy jins",
+        "2 turga: Muzakkar va Muannas",
+        "3 turga: Muzakkar, Muannas, O'rta",
+        "1 turga: Umumiy jins",
         "4 turga"
       ],
       "correct": 0,
@@ -95,9 +95,9 @@
       "q": "Muannas (ayol) jinsidagi ismlarning eng asosiy ko'rinadigan belgisi nima?",
       "opts": [
         "So'z oxiridagi tanvin",
-        "So'z oxiriga qo'shiladigan «ta marbuta» (ة / ـة)",
-        "So'z boshidagi alif-lom (ال)",
-        "So'z oxiridagi sukun"
+        "Oxiridagi «ta marbuta» (ة / ـة)",
+        "Boshidagi alif-lom (ال)",
+        "Oxiridagi sukun"
       ],
       "correct": 1,
       "izoh": "So'z oxiridagi «ta marbuta» (ة) ko'pincha muannaslik belgisidir (masalan: طَالِبَةٌ, مُعَلِّمَةٌ)."
@@ -114,18 +114,18 @@
       "izoh": "طَالِبَةٌ so'zi oxiridagi ta marbuta (ة) sababli muannas jinsidadir (qiz talaba)."
     },
     {
-      "q": "«مُعَلِّمٌ» (o'qituvchi - erkak) so'zini ayol o'qituvchiga aylantirish uchun nima qilinadi?",
+      "q": "«مُعَلِّمٌ» (erkak o'qituvchi) so'zidan ayol jinsi qanday yasaladi?",
       "opts": [
         "Boshiga «alif» qo'shiladi",
         "Oxiriga «vov» qo'shiladi",
-        "Oxiriga «ta marbuta» (ة) qo'shiladi (مُعَلِّمَةٌ)",
-        "Oxiridagi harakat o'chiriladi"
+        "Oxiriga «ة» qo'shiladi (مُعَلِّمَةٌ)",
+        "Harakati o'chiriladi"
       ],
       "correct": 2,
       "izoh": "Muzakkar kasb-holat otlariga ta marbuta qo'shilsa muannas bo'ladi: مُعَلِّمٌ → مُعَلِّمَةٌ."
     },
     {
-      "q": "«طَبِيبٌ» (shifokor) so'ziga ta marbuta qo'shilib «طَبِيبَةٌ» bo'lsa, qanday ma'no beradi?",
+      "q": "«طَبِيبٌ» so'ziga «ة» qo'shilib «طَبِيبَةٌ» bo'lsa, nimani anglatadi?",
       "opts": [
         "Shifokorlar (ko'plik)",
         "Ayol shifokor",
@@ -147,7 +147,7 @@
       "izoh": "صُورَةٌ, طَالِبَةٌ va خَالَةٌ so'zlarida ta marbuta bor (muannas). دَفْتَرٌ esa muzakkardir."
     },
     {
-      "q": "Yaqindagi muzakkar (erkak jinsidagi) narsa yoki shaxsga «Bu» deb ko'rsatish uchun qaysi olmosh ishlatiladi?",
+      "q": "Muzakkar (erkak jinsidagi) so'zga «Bu» deb ishora qilish uchun nima ishlatiladi?",
       "opts": [
         "هَذِهِ",
         "هُوَ",
@@ -160,10 +160,10 @@
     {
       "q": "«هَذِهِ» ko'rsatish olmoshi qanday so'zlar uchun ishlatiladi?",
       "opts": [
-        "Faqat muzakkar (erkak) jinsidagi shaxslar uchun",
-        "Muannas (ayol) jinsidagi shaxs va narsalar uchun",
-        "O'tgan zamondagi fe'llar uchun",
-        "Faqat ko'plikdagi narsalar uchun"
+        "Muzakkar (erkak) so'zlar uchun",
+        "Muannas (ayol) so'zlar uchun",
+        "O'tgan zamon fe'llari uchun",
+        "Ko'plikdagi narsalar uchun"
       ],
       "correct": 1,
       "izoh": "Muannas so'zlar uchun «bu» — هَذِهِ (masalan: هَذِهِ طَالِبَةٌ, هَذِهِ صُورَةٌ)."
@@ -191,7 +191,7 @@
       "izoh": "صُورَةٌ — oxirida ta marbuta bo'lgan muannas so'z, unga «هَذِهِ» mos keladi."
     },
     {
-      "q": "«Bu o'qituvchi (erkak), bu esa surat» jumlasining to'g'ri arabcha tarjimasini toping.",
+      "q": "«Bu o'qituvchi (erkak), bu esa surat» — to'g'ri tarjima qaysi?",
       "opts": [
         "هَذِهِ مُعَلِّمٌ وَهَذَا صُورَةٌ",
         "هَذَا مُعَلِّمٌ وَهَذِهِ صُورَةٌ",
@@ -268,18 +268,18 @@
       "izoh": "طَبِيبَةٌ — muannas shaxs, unga 3-shaxsda «هِيَ» (u) mos keladi."
     },
     {
-      "q": "Arab tilida so'roq olmoshlari (kim, nima, qanday, qayerdan) gapning qayerida keladi?",
+      "q": "Arab tilida so'roq olmoshlari (مَنْ، مَا، كَيْفَ) gapning qayerida keladi?",
       "opts": [
-        "Har doim gapning oxirida",
-        "Odatda gapning boshida",
+        "Gapning oxirida",
+        "Gapning boshida",
         "Faqat fe'ldan keyin",
-        "Istalgan joyda kelishi mumkin, qat'iy qoida yo'q"
+        "Istalgan joyida"
       ],
       "correct": 1,
       "izoh": "Arab tilida so'roq so'zlari (adavatul istifhom) gapning eng boshida kelish huquqiga ega."
     },
     {
-      "q": "Jonsiz narsalarga nisbatan «Bu nima?» deb so'rash uchun qaysi jumla ishlatiladi?",
+      "q": "Narsalarga nisbatan «Bu nima?» deb qanday so'raladi?",
       "opts": [
         "مَا هَذَا؟",
         "مَنْ هَذَا؟",
@@ -290,7 +290,7 @@
       "izoh": "Jonsiz narsa uchun «مَا» (nima) ishlatiladi: مَا هَذَا؟ = Bu nima?"
     },
     {
-      "q": "Insonlarga (shaxslarga) nisbatan «Bu kim?» deb so'rash uchun qaysi jumla to'g'ri?",
+      "q": "Shaxslarga nisbatan «Bu kim?» deb qanday so'raladi?",
       "opts": [
         "مَا هَذَا؟",
         "مَنْ هَذَا؟",
@@ -301,7 +301,7 @@
       "izoh": "Aql egalari (shaxslar) uchun «مَنْ» (kim) ishlatiladi: مَنْ هَذَا؟ = Bu kim?"
     },
     {
-      "q": "«Ahvolingiz qanday?» (erkak kishiga) deb so'rashning to'g'ri arabcha shakli qaysi?",
+      "q": "«Ahvolingiz qanday?» (erkakka) savolining arabchasi qaysi?",
       "opts": [
         "مَا اسْمُكَ؟",
         "مِنْ أَيْنَ أَنْتَ؟",
@@ -312,7 +312,7 @@
       "izoh": "كَيْفَ حَالُكَ؟ = Ahvoling qanday? (مَا اسْمُكَ — ismingiz nima, مِنْ أَيْنَ أَنْتَ — qayerdansiz)."
     },
     {
-      "q": "«Sen talabamisan?» (erkak kishiga) degan umumiy tasdiq/inkor so'rog'i qanday tuziladi?",
+      "q": "«Sen talabamisan?» (erkakka) savoli qanday tuziladi?",
       "opts": [
         "مَا أَنْتَ طَالِبٌ؟",
         "مَنْ أَنْتَ طَالِبٌ؟",
@@ -323,7 +323,7 @@
       "izoh": "«...mi?» so'rog'i uchun «هَلْ» yuklamasi gap boshiga qo'yiladi: هَلْ أَنْتَ طَالِبٌ؟"
     },
     {
-      "q": "«U qayerdan?» (ayol kishiga nisbatan) deb so'rash uchun bo'sh joyga qaysi olmosh qo'yiladi: «مِنْ أَيْنَ ___ ؟»",
+      "q": "«U qayerdan?» (ayolga) — bo'sh joyni to'ldiring: «مِنْ أَيْنَ ___ ؟»",
       "opts": [
         "أَنْتَ",
         "هِيَ",
@@ -345,7 +345,7 @@
       "izoh": "Inkor javob «لَا» (yo'q) bilan boshlanadi va to'g'ri ma'lumot beriladi: لَا، هَذَا كِتَابٌ (Yo'q, bu kitob)."
     },
     {
-      "q": "Kundalik muloqotda «صَبَاحُ الْخَيْرِ» (Xayrli tong!) tabrigiga javoban an'anaviy ravishda nima deyiladi?",
+      "q": "«صَبَاحُ الْخَيْرِ» (Xayrli tong!) tabrigiga nima deb javob beriladi?",
       "opts": [
         "صَبَاحُ النُّورِ",
         "مَسَاءُ الْخَيْرِ",
@@ -356,7 +356,7 @@
       "izoh": "«صَبَاحُ الْخَيْرِ» ga chiroyli javob — «صَبَاحُ النُّورِ» (Nurli tong bo'lsin)."
     },
     {
-      "q": "«أَهْلًا وَسَهْلًا» (Xush kelibsiz!) deb kutib olinganda unga javoban nima deyiladi?",
+      "q": "«أَهْلًا وَسَهْلًا» (Xush kelibsiz!) deganda nima deb javob beriladi?",
       "opts": [
         "عَفْوًا",
         "صَبَاحُ الْخَيْرِ",
