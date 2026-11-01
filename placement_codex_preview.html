@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#17110d">
+<title>Bayyina Placement — Codex preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Gloock&family=Noto+Naskh+Arabic:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1e1712;--night:#17110d;--coffee:#34241a;--cream:#f6f0e6;--paper:#fffdf8;--sand:#dfcfb7;--gold:#bd9140;--muted:#796d63;--line:#e7ddcf;--green:#356c51;--red:#a24b3a;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#ddd4c6;color:var(--ink);font-family:'DM Sans',sans-serif}button{font:inherit}
+body:before{content:"";position:fixed;inset:0;background:radial-gradient(circle at 15% 10%,#f8f1e7 0,transparent 34%),radial-gradient(circle at 85% 80%,#cbbca8 0,transparent 38%);pointer-events:none}
+.phone{position:relative;width:min(100%,430px);min-height:100dvh;margin:auto;background:var(--cream);overflow:hidden;box-shadow:0 0 80px #67594740}
+.screen{display:none;min-height:100dvh}.screen.active{display:flex;animation:enter .55s var(--ease)}@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* LANDING — academic passport */
+.landing{background:var(--night);color:var(--cream);padding:24px 22px 28px;flex-direction:column;isolation:isolate}
+.landing:before{content:"ب";position:absolute;right:-34px;top:42px;font:700 280px/1 'Noto Naskh Arabic';color:#fff;opacity:.035;z-index:-1}
+.grain{position:absolute;inset:0;opacity:.16;z-index:-1;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.17'/%3E%3C/svg%3E")}
+.brand{display:flex;align-items:center;justify-content:space-between}.wordmark{font:400 24px/1 'Gloock',serif;letter-spacing:.02em}.edition{font-size:10px;letter-spacing:.17em;text-transform:uppercase;color:#bfae9d}
+.hero{margin-top:auto;padding-top:64px}.eyebrow{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.17em;text-transform:uppercase;color:#d6bc87}.eyebrow:before{content:"";width:34px;height:1px;background:var(--gold)}
+h1{font:400 clamp(48px,14vw,64px)/.96 'Gloock',serif;margin:18px 0 20px;letter-spacing:-.035em}.hero p{max-width:320px;color:#cfc3b8;font-size:15px;line-height:1.65;margin:0}
+.route{position:relative;margin:42px 0 32px;padding:0 3px;display:flex;justify-content:space-between}.route:before{content:"";position:absolute;left:12px;right:12px;top:13px;height:1px;background:#5e4b3b}.route span{position:relative;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1px solid #6a5544;background:var(--night);font:600 10px 'DM Sans';color:#a89483}.route span:first-child{color:var(--night);background:var(--gold);border-color:var(--gold);box-shadow:0 0 0 6px #bd914017}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid #49382c;margin-bottom:24px}.fact{padding:17px 8px;text-align:center;border-right:1px solid #49382c}.fact:last-child{border:0}.fact b{display:block;font:400 23px 'Gloock';color:#fff7ea}.fact small{font-size:10px;color:#a9998b;letter-spacing:.05em}
+.primary{width:100%;border:0;border-radius:3px;background:var(--gold);color:#20160e;padding:18px 20px;font-weight:700;display:flex;justify-content:space-between;align-items:center;cursor:pointer;box-shadow:0 12px 30px #0005;transition:.2s}.primary:active{transform:scale(.985)}.primary i{font-style:normal;font-size:22px}
+.note{text-align:center;font-size:11px;color:#8f8074;margin:14px 0 0}
+/* TEST */
+.test{background:var(--cream);flex-direction:column}.top{background:var(--night);color:white;padding:calc(15px + env(safe-area-inset-top)) 18px 16px;border-radius:0 0 22px 22px;box-shadow:0 10px 30px #34241726;position:sticky;top:0;z-index:5}
+.topline{display:flex;align-items:center;justify-content:space-between}.mini-brand{font:400 18px 'Gloock'}.level{display:flex;align-items:center;gap:7px;color:#d6c5b4;font-size:12px}.level b{color:#21160e;background:var(--gold);padding:4px 8px;border-radius:20px}.clock{font-variant-numeric:tabular-nums;font-size:12px;color:#d8ccbf}
+.progress-meta{display:flex;justify-content:space-between;margin:18px 0 8px;font-size:10px;color:#a9998d;letter-spacing:.05em}.progress{height:4px;background:#49392d;border-radius:5px;overflow:hidden}.progress i{display:block;height:100%;width:8%;background:linear-gradient(90deg,var(--gold),#ead7a2);transition:width .55s var(--ease)}
+.section-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:17px 18px 0}.rail{height:38px;border-bottom:2px solid #d8cbb9;color:#9b8d80;font-size:10px;display:grid;place-items:center}.rail.active{color:var(--coffee);border-color:var(--gold);font-weight:700}.rail.done{color:var(--green);border-color:#87aa98}
+.canvas{padding:22px 18px 34px;flex:1;display:flex;flex-direction:column}.kicker{color:var(--gold);font-size:10px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;margin-bottom:10px}.question{font:400 26px/1.22 'Gloock',serif;margin:0;color:var(--coffee)}.arabic{font:600 42px/1.55 'Noto Naskh Arabic';direction:rtl;text-align:center;background:var(--paper);border:1px solid var(--line);margin:22px 0 18px;padding:17px 15px 21px;box-shadow:0 13px 35px #4d3a2410;position:relative}.arabic:after{content:"";position:absolute;left:50%;bottom:-1px;width:44px;height:2px;background:var(--gold);transform:translateX(-50%)}
+.options{display:grid;gap:10px;margin-top:6px}.option{position:relative;width:100%;border:1px solid var(--line);background:rgba(255,253,248,.82);border-radius:12px;padding:15px 15px 15px 54px;text-align:left;color:var(--coffee);font-weight:600;min-height:56px;cursor:pointer;transition:.2s var(--ease);box-shadow:0 5px 16px #503b2410}.option:before{content:attr(data-letter);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:27px;height:27px;border-radius:50%;display:grid;place-items:center;background:#eee4d6;color:#735f4e;font-size:11px}.option:hover{transform:translateY(-1px);border-color:#cfb98e}.option.correct{background:#e7f0e9;border-color:#8bb09b;color:#254d3b}.option.correct:before{content:"✓";background:var(--green);color:#fff}.option.wrong{background:#f6e8e4;border-color:#d8a79b;color:#783a2d;animation:shake .35s}.option.wrong:before{content:"×";background:var(--red);color:#fff}@keyframes shake{25%{transform:translateX(-5px)}50%{transform:translateX(5px)}75%{transform:translateX(-3px)}}
+.feedback{display:none;margin-top:14px;border-left:2px solid var(--gold);padding:8px 12px;color:#6f6054;font-size:12px;line-height:1.5}.feedback.show{display:block;animation:enter .3s}.next{display:none;margin-top:auto;padding-top:18px}.next.show{display:block}
+/* RESULT */
+.result{background:var(--paper);flex-direction:column;padding:22px 20px 28px}.result-head{display:flex;align-items:center;justify-content:space-between}.seal{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font:700 25px 'Noto Naskh Arabic';color:var(--gold)}
+.result-main{padding:48px 0 30px}.overline{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:.16em;text-transform:uppercase}.recommend{font:400 42px/1 'Gloock';margin:12px 0 3px}.recommend span{color:var(--gold)}.result-copy{font-size:13px;line-height:1.55;color:var(--muted);max-width:340px}
+.scoreline{display:grid;grid-template-columns:112px 1fr;gap:20px;align-items:center;margin:20px 0 28px}.ring{width:112px;height:112px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--gold) 0 78%,#ece2d5 78%);position:relative}.ring:before{content:"";position:absolute;inset:8px;background:var(--paper);border-radius:50%}.ring strong{position:relative;font:400 29px 'Gloock'}.summary{display:grid;gap:10px}.summary div{display:grid;grid-template-columns:68px 1fr 30px;gap:8px;align-items:center;font-size:10px;color:#6d5f53}.bar{height:4px;background:#eee4d7;border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--coffee)}
+.advice{background:var(--night);color:#f6eee3;padding:19px;border-radius:14px;margin-bottom:18px}.advice small{color:#bba993;font-size:10px;letter-spacing:.1em;text-transform:uppercase}.advice h3{font:400 21px 'Gloock';margin:8px 0}.advice p{font-size:12px;line-height:1.5;color:#cfc1b4;margin:0}
+.secondary{width:100%;border:1px solid #c9bda9;background:transparent;color:var(--coffee);padding:16px;border-radius:3px;font-weight:700;cursor:pointer}
+@media(min-width:600px){body{padding:24px}.phone{min-height:844px;height:844px;border-radius:28px;border:8px solid #231a14}.screen{min-height:828px}.landing{padding:26px}.canvas{overflow:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main class="phone">
+  <section id="landing" class="screen landing active">
+    <div class="grain"></div>
+    <header class="brand"><div class="wordmark">Bayyina</div><div class="edition">Arabic academy · 2026</div></header>
+    <div class="hero">
+      <div class="eyebrow">Darajangizni aniqlang</div>
+      <h1>Arabchangiz<br>qayergacha<br>yetgan?</h1>
+      <p>Yodlangan javobni emas, haqiqiy bilimingizni o‘lchaydigan bosqichma-bosqich test.</p>
+      <div class="route"><span>A0</span><span>A1</span><span>A2</span><span>B1</span><span>B2</span><span>C1</span></div>
+      <div class="facts"><div class="fact"><b>4</b><small>ko‘nikma</small></div><div class="fact"><b>60</b><small>daqiqa</small></div><div class="fact"><b>6</b><small>daraja</small></div></div>
+      <button class="primary" onclick="startDemo()"><span>Testni boshlash</span><i>→</i></button>
+      <p class="note">Natija yakunda ustozga yuboriladi</p>
+    </div>
+  </section>
+
+  <section id="test" class="screen test">
+    <header class="top">
+      <div class="topline"><div class="mini-brand">Bayyina</div><div class="level">Bosqich <b id="level">A0</b></div><div class="clock" id="clock">59:58</div></div>
+      <div class="progress-meta"><span id="progressLabel">1 / 6 savol</span><span id="sectionLabel">Mufradot</span></div>
+      <div class="progress"><i id="progressFill"></i></div>
+    </header>
+    <nav class="section-rail"><div class="rail active" data-sec="Mufradot">Lug‘at</div><div class="rail" data-sec="Qovaid">Qovaid</div><div class="rail" data-sec="Qiroat">Qiroat</div><div class="rail" data-sec="Istima">Istima’</div></nav>
+    <div class="canvas">
+      <div class="kicker" id="kicker">So‘z ma’nosini ajrating</div>
+      <h2 class="question" id="question">Quyidagi so‘zning to‘g‘ri ma’nosini tanlang.</h2>
+      <div class="arabic" id="arabic">أَجْدَادٌ</div>
+      <div class="options" id="options"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="next" id="next"><button class="primary" onclick="nextQuestion()"><span>Keyingi savol</span><i>→</i></button></div>
+    </div>
+  </section>
+
+  <section id="result" class="screen result">
+    <header class="result-head"><div class="wordmark">Bayyina</div><div class="seal">ب</div></header>
+    <div class="result-main">
+      <div class="overline">Placement natijasi</div>
+      <h2 class="recommend">Sizga <span>A1</span> mos</h2>
+      <p class="result-copy">Asosiy tuzilmalar yaxshi. Murakkab gaplar va tinglab tushunishda yana mustahkamlash kerak.</p>
+      <div class="scoreline">
+        <div class="ring"><strong>78%</strong></div>
+        <div class="summary">
+          <div><span>Lug‘at</span><div class="bar"><i style="width:86%"></i></div><b>86</b></div>
+          <div><span>Qovaid</span><div class="bar"><i style="width:78%"></i></div><b>78</b></div>
+          <div><span>Qiroat</span><div class="bar"><i style="width:81%"></i></div><b>81</b></div>
+          <div><span>Istima’</span><div class="bar"><i style="width:62%"></i></div><b>62</b></div>
+        </div>
+      </div>
+      <div class="advice"><small>Ustoz tavsiyasi</small><h3>A1dan boshlang</h3><p>Tinglashni alohida kuchaytirib, A1 bazasini tartibli yopish eng to‘g‘ri yo‘l.</p></div>
+      <button class="secondary" onclick="restartDemo()">Previewni qayta ko‘rish</button>
+    </div>
+  </section>
+</main>
+<script>
+const questions=[
+ {sec:'Mufradot',k:'So‘z ma’nosini ajrating',q:'Quyidagi so‘zning to‘g‘ri ma’nosini tanlang.',ar:'أَجْدَادٌ',o:['Nevaralar','Bobolar','Ota-onalar','Amakilar'],c:1,f:'أَجْدَادٌ — bobolar.'},
+ {sec:'Mufradot',k:'Yaqin variantlarni farqlang',q:'“Kamdan-kam” ma’nosidagi so‘zni toping.',ar:'',o:['دَائِمًا','غَالِبًا','نَادِرًا','أَحْيَانًا'],c:2,f:'نَادِرًا — kamdan-kam.'},
+ {sec:'Qovaid',k:'Gap tuzilishini tekshiring',q:'“Sen (ayol) yozyapsan” qaysi shaklda?',ar:'',o:['أَنْتِ تَكْتُبُ','أَنْتِ تَكْتُبِينَ','أَنْتَ تَكْتُبِينَ','هِيَ تَكْتُبِينَ'],c:1,f:'أَنْتِ bilan muzori’ fe’l ـينَ qo‘shimchasini oladi.'},
+ {sec:'Qovaid',k:'Son va jins mosligi',q:'“Uning uchta opa-singlisi bor” qaysi?',ar:'',o:['لَهُ ثَلَاثُ أَخَوَاتٍ','لَهُ ثَلَاثَةُ أَخَوَاتٍ','لَهُ ثَلَاثَةٌ أُخْتٌ','لَهُ ثَلَاثُ أُخْتٍ'],c:1,f:'3–10 sonlarda son va sanalmish jinsda teskari moslashadi.'},
+ {sec:'Qiroat',k:'Matndan dalil toping',q:'عُمَرُ يَقْرَأُ الْكِتَابَ قَبْلَ النَّوْمِ. Umar kitobni qachon o‘qiydi?',ar:'',o:['Ertalab','Darsdan keyin','Uxlashdan oldin','Tush payti'],c:2,f:'قَبْلَ النَّوْمِ — uxlashdan oldin.'},
+ {sec:'Istima',k:'Eshitilgan ma’noni ajrating',q:'Demo uchun: “الشُّقَّةُ فِي الطَّابِقِ الثَّالِثِ” jumlasi nimani anglatadi?',ar:'',o:['Uy uch xonali','Kvartira uchinchi qavatda','Bino uch qavatli','Kvartira uchinchi ko‘chada'],c:1,f:'الطَّابِقِ الثَّالِثِ — uchinchi qavat.'}
+];
+let qi=0,answered=false,time=3598,timer;
+const $=id=>document.getElementById(id);
+function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));$(id).classList.add('active')}
+function startDemo(){show('test');render();timer=setInterval(()=>{time--;let m=Math.floor(time/60),s=time%60;$('clock').textContent=`${m}:${String(s).padStart(2,'0')}`},1000)}
+function render(){answered=false;let x=questions[qi];$('progressLabel').textContent=`${qi+1} / ${questions.length} savol`;$('sectionLabel').textContent=x.sec;$('progressFill').style.width=`${((qi+1)/questions.length)*100}%`;$('kicker').textContent=x.k;$('question').textContent=x.q;$('arabic').textContent=x.ar;$('arabic').style.display=x.ar?'block':'none';$('feedback').className='feedback';$('next').className='next';let letters='ABCD';$('options').innerHTML=x.o.map((o,i)=>`<button class="option" data-letter="${letters[i]}" onclick="answer(${i},this)">${o}</button>`).join('');document.querySelectorAll('.rail').forEach(r=>{let order=['Mufradot','Qovaid','Qiroat','Istima'],cur=order.indexOf(x.sec),n=order.indexOf(r.dataset.sec);r.className='rail'+(n===cur?' active':n<cur?' done':'')})}
+function answer(i,btn){if(answered)return;answered=true;let x=questions[qi],buttons=[...document.querySelectorAll('.option')];buttons.forEach(b=>b.disabled=true);if(i===x.c)btn.classList.add('correct');else{btn.classList.add('wrong');buttons[x.c].classList.add('correct')}$('feedback').textContent=x.f;$('feedback').classList.add('show');$('next').classList.add('show')}
+function nextQuestion(){if(qi<questions.length-1){qi++;render();document.querySelector('.canvas').scrollTop=0}else{clearInterval(timer);show('result')}}
+function restartDemo(){qi=0;time=3598;answered=false;show('landing')}
+</script>
+</body>
+</html>
