@@ -626,6 +626,11 @@ body.error-bg::after{box-shadow:inset 0 0 120px rgba(229,72,77,.20)}
 .q-text.ar-text{font-size:calc(25px*var(--k))}
 .otx.ar{font-size:calc(22px*var(--k))}
 .optmix .pl-ar{font-size:calc(21px*var(--k))}
+/* bo'lim 241g: xato javobda "Keyingi savol" tugmasi ekran pastiga mahkamlanadi, izoh ixcham */
+.next-btn.dock{position:fixed;left:16px;right:16px;bottom:calc(14px + var(--safe-b));width:auto;max-width:448px;margin:0 auto;z-index:70;box-shadow:0 0 0 8px rgba(238,240,245,.92),0 14px 30px rgba(47,107,255,.35)}
+body.has-dock{padding-bottom:92px}
+.feedback-box{margin-top:8px;padding:9px 12px;font-size:13px;line-height:1.45}
+.feedback-box .fa{font-size:15px}
 </style>
 </head>
 <body>
@@ -1503,7 +1508,7 @@ function fitArabic(shrinkOnly){
   try{
     const card=document.querySelector('#questionBody .q-card'); if(!card) return;
     const H=window.innerHeight;
-    const fits=()=>card.getBoundingClientRect().bottom+window.scrollY+56<=H && card.scrollWidth<=card.clientWidth+1;
+    const fits=()=>card.getBoundingClientRect().bottom+window.scrollY+(shrinkOnly?92:56)<=H && card.scrollWidth<=card.clientWidth+1;
     // dastlab (savol ochilganda) arabcha eng katta o'lchamgacha; xato javobda izoh + "Keyingi savol" qo'shilgach
     // kerak bo'lsa faqat shu qadar kichraytiriladi (to'g'ri javob o'zi avtomatik o'tadi, unga joy ajratmaymiz)
     let k=shrinkOnly?(parseFloat(card.style.getPropertyValue('--k'))||1):1.9;
@@ -1559,6 +1564,7 @@ function selectOption(el, isCorrect, type, qIdx) {
     if(card && !REDUCED) card.classList.add('q-leave');
     setTimeout(() => {
       document.body.classList.remove('success-bg', 'error-bg');
+      document.body.classList.remove('has-dock'); document.querySelectorAll('.next-btn.dock').forEach(n=>n.remove());
       if(_advanceQ === goNext) _advanceQ = null;
       currentQIndex++;
       renderQuestion();
@@ -1575,9 +1581,8 @@ function selectOption(el, isCorrect, type, qIdx) {
   nb.className = 'next-btn';
   nb.innerHTML = 'Keyingi savol ' + ico('i-arrow');
   nb.onclick = () => { if(nb.disabled) return; nb.disabled = true; haptic('light'); goNext(); };
-  (card || optsDiv.parentElement).appendChild(nb);
+  nb.classList.add('dock'); document.body.appendChild(nb); document.body.classList.add('has-dock');
   fitArabic(true);
-  setTimeout(() => { try { nb.scrollIntoView({block:'nearest', behavior: REDUCED ? 'auto' : 'smooth'}); } catch(e) {} }, 120);
 }
 
 function checkLevelResult() {
