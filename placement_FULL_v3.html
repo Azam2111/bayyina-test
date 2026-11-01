@@ -181,7 +181,9 @@ body.on-dark .grain{mix-blend-mode:screen;opacity:.06}
 .qir-box::before{content:'';position:absolute;right:0;top:18px;bottom:18px;width:3px;border-radius:3px 0 0 3px;background:linear-gradient(180deg,var(--gold),var(--gold-d))}
 .qir-h{display:flex;align-items:center;gap:8px;font-size:11.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--gold-d);margin-bottom:6px}
 .qir-t{font-size:15px;font-weight:700;color:var(--espresso);margin-bottom:12px;unicode-bidi:plaintext}
-.qir-ar{font-family:var(--ar);font-size:24px;line-height:2.05;color:var(--ink);direction:rtl;text-align:right;white-space:pre-line;font-weight:500}
+.qir-ar{font-family:var(--ar);font-size:24px;line-height:2.05;color:var(--ink);direction:rtl;text-align:right;white-space:pre-line;font-weight:500;max-height:min(40vh,340px);overflow-y:auto;overscroll-behavior:contain;padding-left:6px;
+  background:linear-gradient(var(--paper) 30%,rgba(255,255,255,0)) top/100% 28px no-repeat local,linear-gradient(rgba(255,255,255,0),var(--paper) 70%) bottom/100% 28px no-repeat local,radial-gradient(farthest-side at 50% 0,rgba(42,24,15,.14),transparent) top/100% 10px no-repeat scroll,radial-gradient(farthest-side at 50% 100%,rgba(42,24,15,.14),transparent) bottom/100% 10px no-repeat scroll}
+.qir-ar::-webkit-scrollbar{width:3px}.qir-ar::-webkit-scrollbar-thumb{background:var(--gold);border-radius:3px}
 .qir-uz{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:14px;line-height:1.6;color:var(--muted)}
 
 /* audio */
@@ -256,7 +258,8 @@ body.on-dark .grain{mix-blend-mode:screen;opacity:.06}
 @keyframes shake{0%,100%{transform:none}20%{transform:translateX(-7px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(2px)}}
 .opts.locked .opt{pointer-events:none}
 .opts.locked .opt:not(.ok):not(.no){opacity:.45;transition:opacity .4s}
-.feedback-box{display:flex;gap:10px;margin-top:14px;padding:13px 14px;border-radius:16px;background:#FBF4E2;border:1px solid #EBD9A8;font-size:14px;line-height:1.55;color:#5B4422;font-weight:600;animation:rise .45s var(--ease) both;unicode-bidi:plaintext}
+.feedback-box{display:flex;gap:10px;margin-top:14px;padding:13px 14px;border-radius:16px;background:#FBF4E2;border:1px solid #EBD9A8;font-size:14px;line-height:1.55;color:#5B4422;font-weight:600;animation:rise .45s var(--ease) both;direction:ltr;text-align:left;unicode-bidi:isolate}
+.feedback-box .fa{font-family:var(--ar);font-size:17px;font-weight:700;color:var(--espresso);unicode-bidi:isolate;direction:rtl}
 
 /* javob paytidagi yengil chegaraviy nur */
 body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opacity:0;transition:opacity .45s ease}
@@ -319,6 +322,7 @@ canvas.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 .res-lvl{font-family:var(--serif);font-size:112px;line-height:.95;letter-spacing:-3px;margin:10px 0 4px;background:linear-gradient(170deg,#F2DFA6,var(--gold) 55%,var(--gold-d));-webkit-background-clip:text;background-clip:text;color:transparent;animation:popIn 1s var(--spring) .3s both}
 .res-name{font-size:18px;font-weight:800;color:var(--ivory);margin-bottom:18px}
 .res-meta{display:flex;align-items:center;justify-content:center;gap:16px}
+.res-meta:has(.res-path){display:block;width:100%}
 .res-meta .score-ring{width:96px;height:96px;margin:0}
 .res-meta .score-ring .rt,.res-meta .score-ring .rv{stroke-width:7}
 .res-pct{font-family:var(--serif);font-size:32px;line-height:1;color:var(--ivory);font-variant-numeric:tabular-nums}
@@ -362,6 +366,55 @@ canvas.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
 }
+/* bo'lim 241b: natija yo'li */
+.res-path{width:100%;display:flex;flex-direction:column;gap:9px;margin-top:4px}
+.rp-row{display:grid;grid-template-columns:34px 1fr 44px 18px;align-items:center;gap:10px;opacity:0;animation:rise .6s var(--ease) both}
+.rp-row:nth-child(2){animation-delay:.12s}.rp-row:nth-child(3){animation-delay:.24s}.rp-row:nth-child(4){animation-delay:.36s}.rp-row:nth-child(5){animation-delay:.48s}.rp-row:nth-child(6){animation-delay:.6s}
+.rp-lv{font-family:var(--serif);font-size:20px;color:rgba(245,241,235,.55);text-align:left}
+.rp-row.ok .rp-lv{color:var(--gold)}
+.rp-bar{height:6px;border-radius:6px;background:rgba(245,241,235,.08);overflow:hidden}
+.rp-bar i{display:block;height:100%;width:0;border-radius:6px;background:rgba(245,241,235,.28);transition:width 1.2s var(--ease)}
+.rp-row.ok .rp-bar i{background:linear-gradient(90deg,var(--gold-d),var(--gold))}
+.rp-p{font-size:13px;font-weight:700;color:rgba(245,241,235,.7);text-align:right;font-variant-numeric:tabular-nums}
+.rp-ic .i{width:16px;height:16px;color:var(--gold)}
+.bd-cap{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(245,241,235,.45);margin:18px 2px 8px;text-align:left}
+/* bo'lim 241c: ixcham test ekrani -- savol va 4 variant bitta ekranga sig'adi */
+.hdr{padding:8px 16px 6px}
+.hdr .mk{width:30px;height:30px}
+.level-pill{font-size:23px}
+.sec-nav{padding:0 12px 6px;gap:4px}
+.sn-item{padding:6px 2px 7px;font-size:12px}
+.gbar-wrap{padding:0 16px 9px}
+.q-container{padding:12px 14px 0}
+.sec-intro{padding:10px 14px;margin-bottom:10px;border-radius:16px}
+.sec-intro .ic{width:32px;height:32px;border-radius:10px;font-size:17px}
+.sec-intro .sh{font-size:14px}
+.sec-intro .sd{font-size:12px;margin-top:2px;line-height:1.4}
+.q-card{padding:14px 14px 14px;border-radius:22px}
+.q-meta{margin-bottom:8px}
+.q-ar{font-size:36px;line-height:1.45;padding:2px 0 0;margin-bottom:2px}
+.q-text{font-size:17.5px;line-height:1.42;margin:2px 0 14px}
+.q-text.ar-text{font-size:25px;line-height:1.65}
+.opts{gap:8px}
+.opt{padding:9px 12px;min-height:54px;gap:12px;border-radius:16px}
+.ltr{width:32px;height:32px;min-width:32px;border-radius:10px;font-size:13px}
+.otx.ar{font-size:22px;line-height:1.5}
+.optmix .pl-ar{font-size:21px}
+/* ✓/✗ belgisi endi harf o'rnida chiqadi -- matnga to'liq kenglik qoladi */
+.opt .mark{position:absolute;left:12px;top:50%;width:32px;height:32px;min-width:32px;margin-top:-16px;border-radius:10px;z-index:2}
+.opt.ok .ltr,.opt.no .ltr{color:transparent}
+/* Keyingi savol tugmasi */
+.next-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:12px;padding:15px 18px;border:0;border-radius:16px;background:var(--espresso);color:var(--ivory);font:800 16px/1 var(--sans,inherit);letter-spacing:.1px;cursor:pointer;box-shadow:0 12px 28px rgba(42,24,15,.22);animation:rise .45s var(--ease) both;-webkit-tap-highlight-color:transparent}
+.next-btn .i{width:18px;height:18px;color:var(--gold-l);transition:transform .3s var(--ease)}
+.next-btn:active{transform:scale(.98)}
+.next-btn:active .i{transform:translateX(4px)}
+.feedback-box{margin-top:10px;padding:11px 13px}
+@media (max-height:700px){
+  .q-ar{font-size:32px}
+  .opt{min-height:50px;padding:7px 12px}
+  .sec-intro .sd{display:none}
+}
+.wh-code{margin-top:10px;padding:9px 11px;border-radius:12px;background:rgba(0,0,0,.22);font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:.1px}
 </style>
 </head>
 <body class="on-dark">
@@ -572,7 +625,7 @@ A0: {
     borderColor:'#c0415a',
     warn:true
   },
-  MQ:[{"id":"a0m1","ar":"أَخْوَالٌ","q":"Ma’nosini tanlang.","o":["Xolalar","Ammalar","Tog‘alar","Amakilar"],"c":2,"f":"أَخْوَالٌ — Tog‘alar."},{"id":"a0m2","ar":"أَحْفَادٌ","q":"“Nevaralar” iborasini tanlang.","o":["آبَاءٌ","أَحْفَادٌ","أَجْدَادٌ","أَبْنَاءٌ"],"c":1,"f":"Nevaralar — أَحْفَادٌ."},{"id":"a0m3","ar":"عَمَّاتٌ","q":"Ma’nosini tanlang.","o":["Ammalar","Xolalar","Tog‘alar","Amakilar"],"c":0,"f":"عَمَّاتٌ — Ammalar."},{"id":"a0m4","ar":"حَفِظَ","q":"“Yodlamoq” iborasini tanlang.","o":["فَهِمَ","سَمِعَ","نَصَحَ","حَفِظَ"],"c":3,"f":"Yodlamoq — حَفِظَ."},{"id":"a0m5","ar":"نَادِرًا","q":"Ma’nosini tanlang.","o":["Ko‘pincha","Ba‘zida","Kamdan-kam","Doim"],"c":2,"f":"نَادِرًا — Kamdan-kam."},{"id":"a0m6","ar":"ضَيِّقٌ","q":"“Tor” iborasini tanlang.","o":["قَرِيبٌ","ضَيِّقٌ","وَاسِعٌ","وَسِخٌ"],"c":1,"f":"Tor — ضَيِّقٌ."},{"id":"a0m7","ar":"عَنْ يَسَارِ","q":"Ma’nosini tanlang.","o":["Chap tarafida","عَنْ يَمِينِ","أَمَامَ","خَلْفَ"],"c":0,"f":"عَنْ يَسَارِ — Chap tarafida."},{"id":"a0m8","ar":"عِدَّةٌ","q":"“Bir necha” iborasini tanlang.","o":["بَعْضٌ","كَثِيرٌ","قَلِيلٌ","عِدَّةٌ"],"c":3,"f":"Bir necha — عِدَّةٌ."},{"id":"a0m9","ar":"نَصَحَ","q":"Ma’nosini tanlang.","o":["Yodlamoq","Yordam bermoq","Nasihat qilmoq","Tushunmoq"],"c":2,"f":"نَصَحَ — Nasihat qilmoq."},{"id":"a0m10","ar":"وَسِخٌ","q":"“Kir, iflos” iborasini tanlang.","o":["وَاسِعٌ","وَسِخٌ","نَظِيفٌ","ضَيِّقٌ"],"c":1,"f":"Kir, iflos — وَسِخٌ."},{"id":"a0m11","ar":"بَيْنَ","q":"Ma’nosini tanlang.","o":["Orasida","Yonida","Oldida","Orqasida"],"c":0,"f":"بَيْنَ — Orasida."},{"id":"a0m12","ar":"جَانِبَ","q":"“Yonida” iborasini tanlang.","o":["بَيْنَ","أَمَامَ","وَرَاءَ","جَانِبَ"],"c":3,"f":"Yonida — جَانِبَ."},{"id":"a0m13","ar":"أَمَامَ","q":"Ma’nosini tanlang.","o":["Yonida","Orqasida","Oldida","Orasida"],"c":2,"f":"أَمَامَ — Oldida."},{"id":"a0m14","ar":"وَرَاءَ / خَلْفَ","q":"“Orqasida” iborasini tanlang.","o":["جَانِبَ","وَرَاءَ / خَلْفَ","أَمَامَ","بَيْنَ"],"c":1,"f":"Orqasida — وَرَاءَ / خَلْفَ."},{"id":"a0m15","ar":"فَوْقَ","q":"“Tepasida” iborasini tanlang.","o":["فَوْقَ","تَحْتَ","أَمَامَ","بَيْنَ"],"c":0,"f":"Tepasida — فَوْقَ."},{"id":"a0m16","ar":"أَجْدَادٌ","q":"“Bobolar” iborasini tanlang.","o":["أَحْفَادٌ","آبَاءٌ","أَبْنَاءٌ","أَجْدَادٌ"],"c":3,"f":"Bobolar — أَجْدَادٌ."},{"id":"a0m17","ar":"إِخْوَةٌ","q":"Ma’nosini tanlang.","o":["Amakilar","Tog‘alar","Aka-ukalar","Opa-singillar"],"c":2,"f":"إِخْوَةٌ — Aka-ukalar."},{"id":"a0m18","ar":"فَهِمَ","q":"“Tushunmoq” iborasini tanlang.","o":["نَصَحَ","فَهِمَ","سَمِعَ","حَفِظَ"],"c":1,"f":"Tushunmoq — فَهِمَ."},{"id":"a0m19","ar":"رَجَعَ","q":"Ma’nosini tanlang.","o":["Qaytmoq","Kirmoq","Chiqmoq","O‘tirmoq"],"c":0,"f":"رَجَعَ — Qaytmoq."},{"id":"a0m20","ar":"دَخَلَ","q":"“Kirmoq” iborasini tanlang.","o":["خَرَجَ","رَجَعَ","جَلَسَ","دَخَلَ"],"c":3,"f":"Kirmoq — دَخَلَ."}],
+  MQ:[{"id":"a0m1","ar":"أَخْوَالٌ","q":"Ma’nosini tanlang.","o":["Xolalar","Ammalar","Tog‘alar","Amakilar"],"c":2,"f":"أَخْوَالٌ — Tog‘alar."},{"id":"a0m2","ar":"أَحْفَادٌ","q":"“Nevaralar” iborasini tanlang.","o":["آبَاءٌ","أَحْفَادٌ","أَجْدَادٌ","أَبْنَاءٌ"],"c":1,"f":"Nevaralar — أَحْفَادٌ."},{"id":"a0m3","ar":"عَمَّاتٌ","q":"Ma’nosini tanlang.","o":["Ammalar","Xolalar","Tog‘alar","Amakilar"],"c":0,"f":"عَمَّاتٌ — Ammalar."},{"id":"a0m4","ar":"حَفِظَ","q":"“Yodlamoq” iborasini tanlang.","o":["فَهِمَ","سَمِعَ","نَصَحَ","حَفِظَ"],"c":3,"f":"Yodlamoq — حَفِظَ."},{"id":"a0m5","ar":"نَادِرًا","q":"Ma’nosini tanlang.","o":["Ko‘pincha","Ba‘zida","Kamdan-kam","Doim"],"c":2,"f":"نَادِرًا — Kamdan-kam."},{"id":"a0m6","ar":"ضَيِّقٌ","q":"“Tor” iborasini tanlang.","o":["قَرِيبٌ","ضَيِّقٌ","وَاسِعٌ","وَسِخٌ"],"c":1,"f":"Tor — ضَيِّقٌ."},{"id":"a0m7","ar":"عَنْ يَسَارِ","q":"Ma’nosini tanlang.","o":["Chap tarafida","O‘ng tarafida","Oldida","Orqasida"],"c":0,"f":"عَنْ يَسَارِ — Chap tarafida."},{"id":"a0m8","ar":"عِدَّةٌ","q":"“Bir necha” iborasini tanlang.","o":["بَعْضٌ","كَثِيرٌ","قَلِيلٌ","عِدَّةٌ"],"c":3,"f":"Bir necha — عِدَّةٌ."},{"id":"a0m9","ar":"نَصَحَ","q":"Ma’nosini tanlang.","o":["Yodlamoq","Yordam bermoq","Nasihat qilmoq","Tushunmoq"],"c":2,"f":"نَصَحَ — Nasihat qilmoq."},{"id":"a0m10","ar":"وَسِخٌ","q":"“Kir, iflos” iborasini tanlang.","o":["وَاسِعٌ","وَسِخٌ","نَظِيفٌ","ضَيِّقٌ"],"c":1,"f":"Kir, iflos — وَسِخٌ."},{"id":"a0m11","ar":"بَيْنَ","q":"Ma’nosini tanlang.","o":["Orasida","Yonida","Oldida","Orqasida"],"c":0,"f":"بَيْنَ — Orasida."},{"id":"a0m12","ar":"جَانِبَ","q":"“Yonida” iborasini tanlang.","o":["بَيْنَ","أَمَامَ","وَرَاءَ","جَانِبَ"],"c":3,"f":"Yonida — جَانِبَ."},{"id":"a0m13","ar":"أَمَامَ","q":"Ma’nosini tanlang.","o":["Yonida","Orqasida","Oldida","Orasida"],"c":2,"f":"أَمَامَ — Oldida."},{"id":"a0m14","ar":"وَرَاءَ / خَلْفَ","q":"“Orqasida” iborasini tanlang.","o":["جَانِبَ","وَرَاءَ / خَلْفَ","أَمَامَ","بَيْنَ"],"c":1,"f":"Orqasida — وَرَاءَ / خَلْفَ."},{"id":"a0m15","ar":"فَوْقَ","q":"“Tepasida” iborasini tanlang.","o":["فَوْقَ","تَحْتَ","أَمَامَ","بَيْنَ"],"c":0,"f":"Tepasida — فَوْقَ."},{"id":"a0m16","ar":"أَجْدَادٌ","q":"“Bobolar” iborasini tanlang.","o":["أَحْفَادٌ","آبَاءٌ","أَبْنَاءٌ","أَجْدَادٌ"],"c":3,"f":"Bobolar — أَجْدَادٌ."},{"id":"a0m17","ar":"إِخْوَةٌ","q":"Ma’nosini tanlang.","o":["Amakilar","Tog‘alar","Aka-ukalar","Opa-singillar"],"c":2,"f":"إِخْوَةٌ — Aka-ukalar."},{"id":"a0m18","ar":"فَهِمَ","q":"“Tushunmoq” iborasini tanlang.","o":["نَصَحَ","فَهِمَ","سَمِعَ","حَفِظَ"],"c":1,"f":"Tushunmoq — فَهِمَ."},{"id":"a0m19","ar":"رَجَعَ","q":"Ma’nosini tanlang.","o":["Qaytmoq","Kirmoq","Chiqmoq","O‘tirmoq"],"c":0,"f":"رَجَعَ — Qaytmoq."},{"id":"a0m20","ar":"دَخَلَ","q":"“Kirmoq” iborasini tanlang.","o":["خَرَجَ","رَجَعَ","جَلَسَ","دَخَلَ"],"c":3,"f":"Kirmoq — دَخَلَ."}],
   QQ:[{"id":"a0q1","q":"مُعَلِّمَةٌ so'zidagi ة nimani ko'rsatadi?","o":["Ko'plik","Muannas","Ikkilik","Egalik"],"c":1,"f":"Manba asosida: Muannas."},{"id":"a0q2","q":"Qaysi qatorda ism, fe'l va harf to'g'ri ajratilgan?","o":["كِتَابٌ / يَكْتُبُ / فِي","يَكْتُبُ / كِتَابٌ / هَلْ","فِي / يَكْتُبُ / كِتَابٌ","كِتَابٌ / فِي / يَكْتُبُ"],"c":0,"f":"Manba asosida: كِتَابٌ / يَكْتُبُ / فِي."},{"id":"a0q3","q":"Bu talaba qiz birikmasi qaysi?","o":["هَذَا طَالِبَةٌ","هَذِهِ طَالِبَةٌ","هَذَا طَالِبٌ","هَذِهِ طَالِبٌ"],"c":1,"f":"Manba asosida: هَذِهِ طَالِبَةٌ."},{"id":"a0q4","q":"Fotimaning kitobi o'rniga zamir bilan qaysi shakl keladi?","o":["كِتَابُهُ","كِتَابُكِ","كِتَابُهَا","كِتَابِي"],"c":2,"f":"Manba asosida: كِتَابُهَا."},{"id":"a0q5","q":"Sening (ayol) qalamingiz qaysi?","o":["قَلَمُكَ","قَلَمُكِ","قَلَمُهَا","قَلَمُنَا"],"c":1,"f":"Manba asosida: قَلَمُكِ."},{"id":"a0q6","q":"“Ikki surat” qaysi shaklda to'g'ri?","o":["صُورَةٌ اثْنَانِ","صُورَتَانِ","صُورَاتٌ","صُورَةَيْنِ"],"c":1,"f":"Manba asosida: صُورَتَانِ."},{"id":"a0q7","q":"Menda uchta do'st bor qaysi?","o":["عِنْدِي ثَلَاثَةُ صَدِيقٍ","لِي ثَلَاثَةُ أَصْدِقَاءَ","لِي ثَلَاثَةُ أَصْدِقَاءٍ","لِي ثَلَاثُ أَصْدِقَاءٍ"],"c":2,"f":"Manba asosida: لِي ثَلَاثَةُ أَصْدِقَاءٍ."},{"id":"a0q8","q":"Uning to'rtta opa-singlisi bor qaysi?","o":["لَهُ أَرْبَعُ أَخَوَاتٍ","لَهُ أَرْبَعَةُ أَخَوَاتٍ","لَهُ أَرْبَعَةُ أُخْتٍ","لَهُ أَرْبَعُ أُخْتٍ"],"c":1,"f":"Manba asosida: لَهُ أَرْبَعَةُ أَخَوَاتٍ."},{"id":"a0q9","q":"Uning (erkak) bitta xolasi bor qaysi?","o":["لَهُ خَالَةٌ","لَهُ وَاحِدٌ خَالَةٌ","لَهُ وَاحِدَةٌ خَالَةٌ","لَهُ خَالَاتٌ"],"c":0,"f":"Manba asosida: لَهُ خَالَةٌ."},{"id":"a0q10","q":"Senda nechta kitob bor? qaysi?","o":["كَمْ كِتَابًا لَكَ؟","كَمْ كِتَابٍ لَكَ؟","كَمْ كِتَابٌ لَكَ؟","كَمْ كُتُبٌ لَكَ؟"],"c":0,"f":"Manba asosida: كَمْ كِتَابًا لَكَ؟."},{"id":"a0q11","q":"Ularning (erkaklar) kitobi qaysi?","o":["كِتَابُهُمْ","كِتَابُهُنَّ","كِتَابُكُمْ","كِتَابُنَا"],"c":0,"f":"Manba asosida: كِتَابُهُمْ."},{"id":"a0q12","q":"U hozir yozayapti qaysi?","o":["هُوَ تَكْتُبُ","هُوَ يَكْتُبُ","هُوَ أَكْتُبُ","هُوَ نَكْتُبُ"],"c":1,"f":"Manba asosida: هُوَ يَكْتُبُ."},{"id":"a0q13","q":"Sen (ayol) yozyapsan qaysi?","o":["أَنْتِ تَكْتُبُ","أَنْتِ تَكْتُبِينَ","أَنْتِ يَكْتُبُ","أَنْتِ تَكْتُبُونَ"],"c":1,"f":"Manba asosida: أَنْتِ تَكْتُبِينَ."},{"id":"a0q14","q":"Biz maktabdan chiqyapmiz qaysi?","o":["نَخْرُجُ مِنَ الْمَدْرَسَةِ","يَخْرُجُونَ مِنَ الْمَدْرَسَةِ","تَخْرُجِينَ مِنَ الْمَدْرَسَةِ","نَخْرُجَ مِنَ الْمَدْرَسَةِ"],"c":0,"f":"Manba asosida: نَخْرُجُ مِنَ الْمَدْرَسَةِ."},{"id":"a0q15","q":"Ular (ayollar) yozyaptilar qaysi?","o":["هُنَّ يَكْتُبُونَ","هُنَّ تَكْتُبْنَ","هُنَّ يَكْتُبْنَ","هُنَّ تَكْتُبَانِ"],"c":2,"f":"Manba asosida: هُنَّ يَكْتُبْنَ."},{"id":"a0q16","q":"Siz ikkingiz darsga kirasiz qaysi?","o":["أَنْتُمَا تَدْخُلَانِ الدَّرْسَ","أَنْتُمَا تَدْخُلُونَ الدَّرْسَ","أَنْتُمَا تَدْخُلِينَ الدَّرْسَ","أَنْتُمَا يَدْخُلَانِ الدَّرْسَ"],"c":0,"f":"Manba asosida: أَنْتُمَا تَدْخُلَانِ الدَّرْسَ."},{"id":"a0q17","q":"Kitob stol ustidadir qaysi?","o":["الْكِتَابُ عَلَى الطَّاوِلَةِ","الْكِتَابَ عَلَى الطَّاوِلَةِ","عَلَى الْكِتَابِ الطَّاوِلَةُ","الطَّاوِلَةُ فِي الْكِتَابِ"],"c":0,"f":"Manba asosida: الْكِتَابُ عَلَى الطَّاوِلَةِ."},{"id":"a0q18","q":"Stol ustida kitob bor qaysi?","o":["عَلَى الطَّاوِلَةِ كِتَابٌ","عَلَى الطَّاوِلَةِ الْكِتَابُ","كِتَابٌ عَلَى الطَّاوِلَةَ","عَلَى كِتَابٍ الطَّاوِلَةُ"],"c":0,"f":"Manba asosida: عَلَى الطَّاوِلَةِ كِتَابٌ."},{"id":"a0q19","q":"Daftar qalam va kitob orasida qaysi?","o":["الدَّفْتَرُ بَيْنَ الْقَلَمِ وَالْكِتَابِ","الدَّفْتَرُ فَوْقَ الْقَلَمِ وَالْكِتَابِ","الدَّفْتَرُ خَلْفَ الْقَلَمِ وَالْكِتَابِ","الدَّفْتَرُ عِنْدَ الْقَلَمِ وَالْكِتَابِ"],"c":0,"f":"Manba asosida: الدَّفْتَرُ بَيْنَ الْقَلَمِ وَالْكِتَابِ."},{"id":"a0q20","q":"Maktab uyning chap tarafidadir qaysi?","o":["الْمَدْرَسَةُ عَنْ يَمِينِ الْبَيْتِ","الْمَدْرَسَةُ عَنْ يَسَارِ الْبَيْتِ","الْمَدْرَسَةُ أَمَامَ الْبَيْتِ","الْمَدْرَسَةُ تَحْتَ الْبَيْتِ"],"c":1,"f":"Manba asosida: الْمَدْرَسَةُ عَنْ يَسَارِ الْبَيْتِ."}],
   RQ:[
     {id:'a0r1',q:'مَا مِهْنَةُ عَلِيٍّ فِي النَّصِّ؟',o:['مُدَرِّسٌ','مُهَنْدِسٌ','طَبِيبٌ','تَاجِرٌ'],c:1,f:'Matnda: أَنَا مُهَنْدِسٌ جَدِيدٌ — "Men yangi muhandisман."'},
@@ -1231,6 +1284,7 @@ function renderQuestion() {
   window.scrollTo({top: 0, behavior: REDUCED ? 'auto' : 'smooth'});
 }
 
+var _advanceQ = null;
 function selectOption(el, isCorrect, type, qIdx) {
   let feedbackText = (window._feedbacks && window._feedbacks[qIdx]) || '';
   let optsDiv = el.parentElement;
@@ -1266,20 +1320,33 @@ function selectOption(el, isCorrect, type, qIdx) {
   if(feedbackText) {
     let fb = document.createElement('div');
     fb.className = 'feedback-box';
-    fb.innerText = feedbackText;
+    fb.innerHTML = String(feedbackText).replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch])).replace(/([\u0600-\u06FF][\u0600-\u06FF\u064B-\u0652\s/،]*[\u0600-\u06FF\u064B-\u0652])/g, '<bdi class="fa">$1</bdi>');
     optsDiv.parentElement.appendChild(fb);
   }
 
-  setTimeout(() => {
-    const card = optsDiv.closest('.q-card');
+  const card = optsDiv.closest('.q-card');
+  const goNext = () => {
     if(card && !REDUCED) card.classList.add('q-leave');
-  }, 640);
+    setTimeout(() => {
+      document.body.classList.remove('success-bg', 'error-bg');
+      if(_advanceQ === goNext) _advanceQ = null;
+      currentQIndex++;
+      renderQuestion();
+    }, REDUCED ? 0 : 260);
+  };
 
-  setTimeout(() => {
-    document.body.classList.remove('success-bg', 'error-bg');
-    currentQIndex++;
-    renderQuestion();
-  }, 900);
+  if(isCorrect) { setTimeout(goNext, 640); return; }
+
+  // bo'lim 241c (Azam): xato javobda TO'XTAYMIZ -- to'g'ri va xato ko'rinib turadi,
+  // o'quvchi tushunib olgach "Keyingi savol" ni o'zi bosadi. Taymer yuraveradi.
+  _advanceQ = goNext;
+  const nb = document.createElement('button');
+  nb.type = 'button';
+  nb.className = 'next-btn';
+  nb.innerHTML = 'Keyingi savol ' + ico('i-arrow');
+  nb.onclick = () => { if(nb.disabled) return; nb.disabled = true; haptic('light'); goNext(); };
+  (card || optsDiv.parentElement).appendChild(nb);
+  setTimeout(() => { try { nb.scrollIntoView({block:'nearest', behavior: REDUCED ? 'auto' : 'smooth'}); } catch(e) {} }, 120);
 }
 
 function checkLevelResult() {
@@ -1378,6 +1445,16 @@ function showFinalResult(outcome, pct, tot, maxQs) {
   if(outcome.lvl === 'B2') motDesc = "Qoyilmaqom! Siz B2 darajasiga erishdingiz!";
   if(outcome.lvl === 'C1' || outcome.lvl === 'C1+') motDesc = "Ajoyib natija! Siz C1 darajadasiz!";
 
+  // bo'lim 241b: o'tilgan bosqichlar yo'li (oxirgi bosqichning 0% i yutuqni yashirmasin)
+  const _ord = ['A0','A1','A2','B1','B2','C1'];
+  const _lv = (PL_LOG && PL_LOG.lv) || {};
+  let _done = _ord.filter(l => _lv[l]);
+  if(!_done.length) _done = [currentLevel];
+  const pathHtml = '<div class="res-path">' + _done.map(l => {
+    const p = _lv[l] ? _lv[l].p : pct; const last = (l === currentLevel);
+    const passed = !last || _done.indexOf(l) < _done.length - 1 || (outcome.lvl && outcome.lvl.indexOf(_ord[_ord.indexOf(l)+1] || '~') === 0);
+    return `<div class="rp-row${passed ? ' ok' : ''}"><span class="rp-lv">${l}</span><span class="rp-bar"><i data-w="${p/100}"></i></span><span class="rp-p">${p}%</span><span class="rp-ic">${passed ? ico('i-check') : ''}</span></div>`;
+  }).join('') + '</div>';
   const item = (ic, nm, s, n) => `<div class="bd-item"><div class="bd-lbl">${ico(ic)}${nm}</div><div class="bd-num">${s}<small>/ ${n}</small></div><div class="sbar"><i data-w="${n ? s / n : 0}"></i></div></div>`;
   let html = `
     <div class="res-brand"><img class="mk" src="${document.querySelector('.brand .mk').src}" alt=""><img class="wm" src="${document.querySelector('.brand .wm').src}" alt="Bayyina"></div>
@@ -1387,10 +1464,10 @@ function showFinalResult(outcome, pct, tot, maxQs) {
       <div class="res-lvl">${outcome.lvl}</div>
       <div class="res-name">${outcome.name}</div>
       <div class="res-meta">
-        <div class="score-ring"><svg viewBox="0 0 96 96"><circle class="rt" cx="48" cy="48" r="40"/><circle class="rv" id="resRing" cx="48" cy="48" r="40"/></svg><div class="in"><div class="res-pct" id="resPct">0%</div></div></div>
-        <div class="res-total"><b>${tot} / ${maxQs}</b>to‘g‘ri javob<br>${currentLevel} bosqichida</div>
+        ${pathHtml}
       </div>
     </div>
+    <div class="bd-cap">${currentLevel} bosqichi · bo‘limlar bo‘yicha</div>
     <div class="bd-grid">
       ${item('i-muf', 'Mufradot', levelScore.M, d.MQ.length)}
       ${item('i-qov', 'Qovaid', levelScore.Q, d.QQ.length)}
@@ -1400,16 +1477,14 @@ function showFinalResult(outcome, pct, tot, maxQs) {
     <div class="res-desc">${motDesc}</div>
     <div class="bot-action">
       <div class="ba-l">${ico('i-arrow')} Keyingi qadam</div>
-      <div class="ba-v">Daraja: ${outcome.lvl} · Ball: ${pct}%</div>
+      <div class="ba-v">Daraja: ${outcome.lvl}</div>
       ${PL_DIAG ? "Natijangiz ustozga yuboriladi. Ustoz uni ko‘rib chiqib, sizga shaxsan yozadi." : (stripLead(outcome.action) || 'Natijalar bot orqali yuboriladi.')}
     </div>
     <div id="whStatus" class="webhook-status">Natijalar yuborilmoqda...</div>
   `;
   document.getElementById('resCard').innerHTML = html;
   window.scrollTo({top: 0, behavior: 'auto'});
-  countUp(document.getElementById('resPct'), pct, '%', 1500);
-  setRing(document.getElementById('resRing'), pct / 100);
-  document.querySelectorAll('#resCard .sbar i').forEach(el => { const w = parseFloat(el.getAttribute('data-w')) || 0; setTimeout(() => { el.style.width = (w * 100) + '%'; }, 80); });
+  document.querySelectorAll('#resCard .sbar i, #resCard .rp-bar i').forEach(el => { const w = parseFloat(el.getAttribute('data-w')) || 0; setTimeout(() => { el.style.width = (w * 100) + '%'; }, 80); });
   setTimeout(() => burst('resCanvas'), 350);
   sendToWebhook(outcome.lvl, pct, tot, maxQs);
 }
@@ -1533,7 +1608,27 @@ function sendToWebhook(lvl, pct, tot, max) {
     whs.innerHTML = html;
   }
   const closeBtn = '<button class="wh-close" onclick="if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();else window.close();">Botga qaytish \u2713</button>';
-  const manual = 'Natijangiz botga yetmadi. Iltimos, <b>shu ekranni skrinshot qilib</b> ustozga yuboring \u2014 darsingizni qo\'lda ochib beramiz.';
+  // bo'lim 241c (Azam): natija yetmasa o'quvchi emas, BIZ darhol bilamiz -- adminga avtomatik signal.
+  const _code = 'Daraja: <b>' + lvl + '</b> \u00b7 Ball: <b>' + pct + '%</b> (' + tot + '/' + max + ')' + (tgId !== 'UNKNOWN' ? ' \u00b7 ID: <b>' + tgId + '</b>' : '');
+  const manual = 'Natijangiz botga avtomatik yetib bormadi. <b>Ustozga xabar berildi</b> \u2014 darsingiz qo\'lda ochiladi. Ehtiyot uchun shu ekranni skrinshot qilib qo\'ying.<div class="wh-code">' + _code + '</div>';
+  let _failSent = false;
+  function reportFail(reason) {
+    if(_failSent) return; _failSent = true;
+    try {
+      const fp = {type:'placement_fail', reason: reason,
+        telegram_id: tgId, full_name: name, username: un,
+        recommended_level: lvl, reached_level: currentLevel, total_score_pct: pct, correct: tot, total: max,
+        mode: PL_MODE, platform: (tg && tg.platform) || 'browser', has_init: init ? 1 : 0,
+        ua: String(navigator.userAgent || '').slice(0, 120)};
+      // text/plain -- CORS preflight'siz oddiy so'rov; keepalive -- oyna yopilsa ham yetadi
+      fetch(PLACEMENT_API, {method:'POST', headers:{'Content-Type':'text/plain'}, body: JSON.stringify(fp), keepalive: true}).catch(function(){});
+    } catch(e) {}
+  }
+  // sendData muvaffaqiyatli bo'lsa Telegram oynani o'zi yopadi. 3.5 s dan keyin ham ochiq turgan bo'lsak -- yetmagan.
+  function watchSendData(reason) {
+    say('Natija yuborilmoqda...');
+    setTimeout(function(){ reportFail(reason); say(manual, true); }, 3500);
+  }
 
   // bo'lim 101 (01.10): REPLY-tugmadan ochilganda Telegram initData'ni BERMAYDI
   // (WebAppInitData "keyboard button" holatida bo'sh). Oldin bu holat "Telegram
@@ -1564,10 +1659,8 @@ function sendToWebhook(lvl, pct, tot, max) {
 
   if(!init) {
     // Reply-tugmadan ochilgan (initData yo'q) -> sendData; u oynani o'zi yopadi.
-    if(viaSendData()) {
-      say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
-      return;
-    }
+    if(viaSendData()) { watchSendData('senddata_jim'); return; }
+    reportFail(inTelegram() ? 'senddata_yoq' : 'telegram_tashqarisi');
     viaMake(); return;                 // haqiqatan Telegram tashqarisida
   }
 
@@ -1592,8 +1685,8 @@ function sendToWebhook(lvl, pct, tot, max) {
   }).catch(function(){
     clearTimeout(timer);
     if(done) return;
-    if(viaSendData()) say('Natija yuborildi. Agar botda 1 daqiqa ichida \u00abTest yakunlandi\u00bb xabari kelmasa, shu ekranni skrinshot qilib ustozga yuboring.');
-    else say(manual, true);
+    if(viaSendData()) watchSendData('api_xato_senddata_jim');
+    else { reportFail('api_xato'); say(manual, true); }
   });
 }
 </script>
