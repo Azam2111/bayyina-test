@@ -1499,22 +1499,19 @@ function renderQuestion() {
 }
 
 /* bo'lim 241e: arabcha matn ekranga sig'adigan eng katta o'lchamgacha kattalashadi (o'zbekcha o'zgarmaydi) */
-function fitArabic(){
+function fitArabic(shrinkOnly){
   try{
     const card=document.querySelector('#questionBody .q-card'); if(!card) return;
-    const root=document.documentElement, H=window.innerHeight;
-    // javobdan keyingi holatni (izoh + Keyingi savol) oldindan hisobga olamiz -- keyin sakrab ketmasin
-    const fbT=(window._feedbacks&&window._feedbacks[currentQIndex])||'';
-    const dummy=document.createElement('div'); dummy.style.cssText='visibility:hidden;pointer-events:none';
-    dummy.innerHTML='<div class="feedback-box"><span>'+(fbT||'x')+'</span></div><button class="next-btn" style="animation:none">x</button>';
-    card.appendChild(dummy);
-    const fits=()=>dummy.getBoundingClientRect().bottom+window.scrollY+70<=H && card.scrollWidth<=card.clientWidth+1;
-    let k=1.9; card.style.setProperty('--k',k);
+    const H=window.innerHeight;
+    const fits=()=>card.getBoundingClientRect().bottom+window.scrollY+56<=H && card.scrollWidth<=card.clientWidth+1;
+    // dastlab (savol ochilganda) arabcha eng katta o'lchamgacha; xato javobda izoh + "Keyingi savol" qo'shilgach
+    // kerak bo'lsa faqat shu qadar kichraytiriladi (to'g'ri javob o'zi avtomatik o'tadi, unga joy ajratmaymiz)
+    let k=shrinkOnly?(parseFloat(card.style.getPropertyValue('--k'))||1):1.9;
+    card.style.setProperty('--k',k);
     while(k>1 && !fits()){ k=Math.round((k-0.05)*100)/100; card.style.setProperty('--k',k); }
-    dummy.remove();
   }catch(e){}
 }
-window.addEventListener('resize',()=>{ if(typeof fitArabic==='function') fitArabic(); });
+window.addEventListener('resize',()=>{ if(typeof fitArabic==='function' && !document.querySelector('#questionBody .next-btn')) fitArabic(); });
 if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>fitArabic());
 
 var _advanceQ = null;
@@ -1579,6 +1576,7 @@ function selectOption(el, isCorrect, type, qIdx) {
   nb.innerHTML = 'Keyingi savol ' + ico('i-arrow');
   nb.onclick = () => { if(nb.disabled) return; nb.disabled = true; haptic('light'); goNext(); };
   (card || optsDiv.parentElement).appendChild(nb);
+  fitArabic(true);
   setTimeout(() => { try { nb.scrollIntoView({block:'nearest', behavior: REDUCED ? 'auto' : 'smooth'}); } catch(e) {} }, 120);
 }
 
