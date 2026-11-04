@@ -5,7 +5,7 @@
   "questions": [
     {
       "q": "«مَطَارٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Aeroport",
         "Mehmonxona",
         "Bozor",
@@ -16,7 +16,7 @@
     },
     {
       "q": "«Samolyot» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "حَافِلَةٌ",
         "طَائِرَةٌ",
         "سَفِينَةٌ",
@@ -27,7 +27,7 @@
     },
     {
       "q": "«إِقْلَاعٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Uchish, parvozga ko'tarilish",
         "Qaytish (ot)",
         "Yo'nalish",
@@ -38,7 +38,7 @@
     },
     {
       "q": "«Qo'nish» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "اَلْقِيَادَةُ",
         "هُبُوطٌ",
         "إِجْرَاءَاتٌ",
@@ -49,7 +49,7 @@
     },
     {
       "q": "«رِحْلَةٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Uchish, parvozga ko'tarilish",
         "Mashina haydash",
         "Belgilangan vaqt, uchrashuv",
@@ -60,7 +60,7 @@
     },
     {
       "q": "«Chipta» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "تَذْكِرَةٌ",
         "هُبُوطٌ",
         "عَوْدَةٌ",
@@ -71,7 +71,7 @@
     },
     {
       "q": "«جَوَازُ السَّفَرِ» iborasining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Reys; safar, sayohat",
         "Yo'nalish",
         "Pasport",
@@ -82,7 +82,7 @@
     },
     {
       "q": "«Yo'lovchi (ulovdagi)» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "رَاكِبٌ",
         "مُتَقَاعِدٌ",
         "مَرِيضٌ",
@@ -93,7 +93,7 @@
     },
     {
       "q": "«اَلْخُطُوطُ الْجَوِّيَّةُ» iborasining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Bolalar bog'chasi",
         "Havo yo'llari (aviakompaniya)",
         "Yotoq xonasi",
@@ -104,7 +104,7 @@
     },
     {
       "q": "«Kirish darvozasi» iborasining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "غُرْفَةُ الْجُلُوسِ",
         "مَعْهَدُ اللُّغَاتِ",
         "بَوَّابَةُ الدُّخُولِ",
@@ -115,7 +115,7 @@
     },
     {
       "q": "«ضَابِطٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Dehqon",
         "Oshpaz",
         "Ofitser",
@@ -126,7 +126,7 @@
     },
     {
       "q": "«Jarayonlar, rasmiyatchilik» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "إِجْرَاءَاتٌ",
         "تَذْكِرَةٌ",
         "إِقْلَاعٌ",
@@ -137,7 +137,7 @@
     },
     {
       "q": "«قِطَارٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Samolyot",
         "Avtomobil, mashina",
         "Poyezd",
@@ -148,7 +148,7 @@
     },
     {
       "q": "«Kema» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "سَيَّارَةُ أُجْرَةٍ",
         "طَائِرَةٌ",
         "قِطَارٌ",
@@ -159,7 +159,7 @@
     },
     {
       "q": "«مُتَّجِهٌ إِلَى» iborasining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "...ga yo'nalgan",
         "Chap tarafida",
         "O'ng tarafida",
@@ -170,7 +170,7 @@
     },
     {
       "q": "«Tezroq, eng tez» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "أَسْرَعُ",
         "أَطْوَلُ",
         "اَلْعُظْمَى",
@@ -181,7 +181,7 @@
     },
     {
       "q": "«ثَمَنٌ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Dam olish kuni, ta'til",
         "Rag'bat puli, bonus",
         "Narx",
@@ -192,7 +192,7 @@
     },
     {
       "q": "«Qo'ymoq, joylashtirmoq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "اِشْتَرَى - يَشْتَرِي",
         "تَبَادَلَ - يَتَبَادَلُ",
         "وَضَعَ - يَضَعُ",
@@ -203,7 +203,7 @@
     },
     {
       "q": "«اِسْتَغْرَقَ - يَسْتَغْرِقُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Ko'rmoq",
         "Eshitmoq",
         "Izlamoq, talab qilmoq",
@@ -214,7 +214,7 @@
     },
     {
       "q": "«Bermoq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "أَعْطَى - يُعْطِي",
         "أَخَذَ - يَأْخُذُ",
         "سَاعَدَ - يُسَاعِدُ",
@@ -225,7 +225,7 @@
     },
     {
       "q": "«اِتَّصَلَ - يَتَّصِلُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Qo'ng'iroq qilmoq, bog'lanmoq",
         "O'z ichiga olmoq",
         "Yaxshi ko'rmoq, sevmoq",
@@ -236,7 +236,7 @@
     },
     {
       "q": "«Aylanmoq, sayr qilmoq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "خَرَجَ - يَخْرُجُ",
         "تَجَوَّلَ - يَتَجَوَّلُ",
         "سَلَكَ - يَسْلُكُ",
@@ -247,7 +247,7 @@
     },
     {
       "q": "«بَحَثَ - يَبْحَثُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Marhamat qilmoq",
         "Qidirmoq",
         "Tugamoq, tamom bo'lmoq",
@@ -258,7 +258,7 @@
     },
     {
       "q": "«Uzoqlashmoq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "وَصَلَ - يَصِلُ",
         "اِبْتَعَدَ - يَبْتَعِدُ",
         "دَخَلَ - يَدْخُلُ",
@@ -269,7 +269,7 @@
     },
     {
       "q": "«اِقْتَرَبَ - يَقْتَرِبُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Qaytmoq",
         "Yaqinlashmoq",
         "Minmoq (ulovga)",
@@ -280,7 +280,7 @@
     },
     {
       "q": "«Ko'rinishidan, shekilli» iborasining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "يَبْدُو أَنَّ",
         "يَجِبُ أَنْ",
         "يُمْكِنُ أَنْ",
@@ -291,7 +291,7 @@
     },
     {
       "q": "«صَيْفِيٌّ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Yozgi",
         "Charaqlagan, porloq",
         "Tinch, osoyishta",
@@ -302,7 +302,7 @@
     },
     {
       "q": "«Dengizga oid» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "مُتَغَيِّرٌ",
         "مُرْتَفِعٌ",
         "مُتَوَقَّعٌ",
@@ -313,7 +313,7 @@
     },
     {
       "q": "«اَلْعَشَاءُ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Tushlik (ovqati)",
         "Kechki ovqat",
         "Taomlar, yeguliklar",
@@ -324,7 +324,7 @@
     },
     {
       "q": "«Yettinchi» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "اَلسَّابِعُ",
         "اَلثَّالِثُ",
         "اَلْأَوْسَطُ",
@@ -335,7 +335,7 @@
     },
     {
       "q": "«اَلثَّامِنُ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Beshinchi",
         "To'rtinchi",
         "Ikkinchi",
@@ -346,7 +346,7 @@
     },
     {
       "q": "«O'ninchi» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "اَلسَّابِعُ",
         "اَلْخَامِسُ",
         "اَلْعَاشِرُ",
@@ -357,7 +357,7 @@
     },
     {
       "q": "«عِنْدَ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Anaviy yerda (u yerda)",
         "Oldida, huzurida; ...da",
         "Ustida",
@@ -368,7 +368,7 @@
     },
     {
       "q": "«...gan paytda» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "عِنْدَمَا",
         "بَعْدَ",
         "أَثْنَاءَ",
@@ -379,7 +379,7 @@
     },
     {
       "q": "«أَعَادَ - يُعِيدُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Sotmoq",
         "Qo'ymoq, joylashtirmoq",
         "Topmoq",
@@ -390,7 +390,7 @@
     },
     {
       "q": "«Tashqarisida» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "هُنَا",
         "خَارِجَ",
         "تَحْتَ",
@@ -401,7 +401,7 @@
     },
     {
       "q": "«دَاخِلَ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Tepasida",
         "Yonida",
         "Ichida, ichkarisida",
@@ -412,7 +412,7 @@
     },
     {
       "q": "«Chunki» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "رُبَّمَا",
         "ثُمَّ",
         "لِأَنَّ",
@@ -423,7 +423,7 @@
     },
     {
       "q": "«لِذَلِكَ» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Yoki",
         "...gan paytda",
         "Shuning uchun",
@@ -434,7 +434,7 @@
     },
     {
       "q": "«Unday bo'lsa» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "لِأَنَّ",
         "إِذَنْ",
         "قَبْلَ",
@@ -445,7 +445,7 @@
     },
     {
       "q": "«تَمَنَّى - يَتَمَنَّى» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Yoqmoq",
         "Oson qilmoq, yengillatmoq",
         "Bilmoq, tanimoq",
@@ -456,7 +456,7 @@
     },
     {
       "q": "«Unutmoq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "بَدَأَ - يَبْدَأُ",
         "فَضَّلَ - يُفَضِّلُ",
         "نَسِيَ - يَنْسَى",
@@ -467,7 +467,7 @@
     },
     {
       "q": "«نَجَحَ - يَنْجَحُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "(Vaqt) olmoq, davom etmoq",
         "Qo'ng'iroq qilmoq, bog'lanmoq",
         "Orzu qilmoq",
@@ -478,7 +478,7 @@
     },
     {
       "q": "«To'kilmoq; sochilib yog'moq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "مَشَى - يَمْشِي",
         "تَسَاقَطَ - يَتَسَاقَطُ",
         "اِتَّجَهَ - يَتَّجِهُ",
@@ -489,7 +489,7 @@
     },
     {
       "q": "«سَقَطَ - يَسْقُطُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Aylanmoq, sayr qilmoq",
         "Yiqilmoq; yog'moq",
         "Yaqinlashmoq",
@@ -500,7 +500,7 @@
     },
     {
       "q": "«Tushmoq; yog'moq» fe'lining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "عَادَ - يَعُودُ",
         "دَخَلَ - يَدْخُلُ",
         "أَتَى - يَأْتِي",
@@ -511,7 +511,7 @@
     },
     {
       "q": "«وَجَدَ - يَجِدُ» fe'lining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Qaytadan bajarmoq, takrorlamoq",
         "Bermoq",
         "Ochmoq",
@@ -522,7 +522,7 @@
     },
     {
       "q": "«Svetofor, yo'l belgilari» iborasining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "شُقَّةٌ مَفْرُوشَةٌ",
         "اَلْخُطُوطُ الْجَوِّيَّةُ",
         "إِشَارَاتُ الْمُرُورِ",
@@ -533,7 +533,7 @@
     },
     {
       "q": "«مَوْقِفُ السَّيَّارَاتِ» iborasining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Jihozlangan kvartira",
         "Tillar instituti",
         "Shahar markazi",
@@ -544,7 +544,7 @@
     },
     {
       "q": "«Yonida» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "دَاخِلَ",
         "خَارِجَ",
         "تَحْتَ",
@@ -555,7 +555,7 @@
     },
     {
       "q": "«لَيْلًا» soʻzining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "Hozir",
         "Barvaqt, erta",
         "Kechasi",
@@ -566,7 +566,7 @@
     },
     {
       "q": "«Kunduzi» soʻzining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "نَهَارًا",
         "أَمْسِ",
         "أَحْيَانًا",
@@ -577,7 +577,7 @@
     },
     {
       "q": "«مِنْ خِلَالِ» iborasining oʻzbekcha ma'nosini toping",
-      "options": [
+      "opts": [
         "...ga yo'nalgan",
         "O'ng tarafida",
         "Yaqin (...ga)",
@@ -588,7 +588,7 @@
     },
     {
       "q": "«...da joylashgan» iborasining arabcha tarjimasini toping",
-      "options": [
+      "opts": [
         "عَنْ يَسَارِ",
         "تَقَعُ فِي",
         "مُتَّجِهٌ إِلَى",
