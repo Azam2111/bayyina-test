@@ -1,217 +1,447 @@
 {
   "title": "Qovaid — A1 4-dars",
   "otish": 80,
-  "vaqt": 35,
+  "vaqt": 40,
   "questions": [
     {
-      "q": "«الْمُهَنْدِسُ» so'zining to'g'ri tarjimasini toping.",
-      "opts": ["Shifokor", "Muhandis", "O'qituvchi", "Oshpaz"],
+      "q": "Vazifa (ish o‘rni) a‘lodir",
+      "opts": [
+        "الْوَظِيفَةُ مُمْتَازٌ",
+        "الْوَظِيفَةُ مُمْتَازَةٌ",
+        "الْوَظِيفَةُ مُمْتَازَانِ",
+        "الْوَظِيفَةُ مُمْتَازَاتٌ"
+      ],
       "correct": 1,
-      "izoh": "الْمُهَنْدِسُ = muhandis."
+      "izoh": "«الْوَظِيفَةُ» — muannas ism, shuning uchun xabar ham muannas: مُمْتَازَةٌ."
     },
     {
-      "q": "«Oshpaz» so'zining arabcha tarjimasi qaysi javobda to'g'ri berilgan?",
-      "opts": ["طَبَّاخٌ", "طَبِيبٌ", "فَلَّاحٌ", "مُعَلِّمٌ"],
+      "q": "Sen muallimsan (muzakkar)",
+      "opts": [
+        "أَنْتِ مُعَلِّمٌ",
+        "أَنْتَ مُعَلِّمَةٌ",
+        "أَنْتَ مُعَلِّمٌ",
+        "أَنْتِ مُعَلِّمَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-1): erkak kishiga «أَنْتَ», xabar ham muzakkar: مُعَلِّمٌ."
+    },
+    {
+      "q": "Sening ishing (muzakkar)",
+      "opts": [
+        "عَمَلُكِ",
+        "عَمَلُكَ",
+        "عَمَلُهُ",
+        "عَمَلِي"
+      ],
+      "correct": 1,
+      "izoh": "Erkak kishiga nisbatan egalik olmoshi — «ـكَ»: عَمَلُكَ."
+    },
+    {
+      "q": "Bu ikki muallim chaqqon",
+      "opts": [
+        "هَاتَانِ مُعَلِّمَانِ نَشِيطَانِ",
+        "هَذَانِ مُعَلِّمَانِ نَشِيطٌ",
+        "هَذَانِ مُعَلِّمَتَانِ نَشِيطَتَانِ",
+        "هَذَانِ مُعَلِّمَانِ نَشِيطَانِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-2): muzakkar ikkilik — «هَذَانِ», sifat ham ikkilik: نَشِيطَانِ."
+    },
+    {
+      "q": "Ish qiyindir",
+      "opts": [
+        "الْعَمَلُ صَعْبٌ",
+        "الْعَمَلُ صَعْبَةٌ",
+        "الْعَمَلُ صَعْبَانِ",
+        "الْعَمَلُ صَعْبَاتٌ"
+      ],
       "correct": 0,
-      "izoh": "Oshpaz = طَبَّاخٌ (طبيب — shifokor, فلاح — dehqon)."
+      "izoh": "«الْعَمَلُ» — muzakkar ism, shuning uchun xabar ham muzakkar: صَعْبٌ."
     },
     {
-      "q": "«O'qituvchi doskaga yozmoqda» gapidagi o'qituvchi (erkak) so'zini aniqlang.",
-      "opts": ["مُعَلِّمَةٌ", "فَلَّاحٌ", "مُعَلِّمٌ", "مُهَنْدِسٌ"],
+      "q": "Ular yangi talabalar (muzakkar)",
+      "opts": [
+        "هَؤُلَاءِ طُلَّابٌ جُدُدٌ",
+        "هُنَّ طُلَّابٌ جُدُدٌ",
+        "هُمْ طُلَّابٌ جُدُدٌ",
+        "هُمَا طُلَّابٌ جُدُدٌ"
+      ],
       "correct": 2,
-      "izoh": "Erkak o'qituvchi = مُعَلِّمٌ (مُعَلِّمَةٌ — ayol)."
+      "izoh": "Takror (A1-3): «Ular» — kishilik olmoshi «هُمْ»; «هَؤُلَاءِ» esa «bular» (ko'rsatish olmoshi)."
     },
     {
-      "q": "«الْقَهْوَةُ لَذِيذَةٌ» gapining tarjimasi qaysi?",
-      "opts": ["Choy shirin.", "Qahva mazali.", "Taom achchiq.", "Sut issiq."],
-      "correct": 1,
-      "izoh": "الْقَهْوَةُ = qahva, لَذِيذَةٌ = mazali."
-    },
-    {
-      "q": "«Mening amakim shifokor» gapining arabcha tarjimasini toping.",
-      "opts": ["عَمِّي طَبِيبٌ", "خَالِي فَلَّاحٌ", "أَخِي مُعَلِّمٌ", "أَبِي مُهَنْدِسٌ"],
+      "q": "Sening do‘koning (muannas)",
+      "opts": [
+        "دُكَّانُكِ",
+        "دُكَّانُكَ",
+        "دُكَّانُهَا",
+        "دُكَّانُهُ"
+      ],
       "correct": 0,
-      "izoh": "عَمِّي = amakim, طَبِيبٌ = shifokor."
+      "izoh": "Ayol kishiga nisbatan egalik olmoshi — «ـكِ»: دُكَّانُكِ."
     },
     {
-      "q": "«الْعَمَلُ» so'zining ma'nosi nima?",
-      "opts": ["Dam olish", "Ish, mehnat", "Sayohat", "O'qish"],
-      "correct": 1,
-      "izoh": "الْعَمَلُ = ish, mehnat."
+      "q": "«___ يَعْمَلُ الطَّبِيبُ؟ — يَعْمَلُ فِي الْمُسْتَشْفَى»",
+      "opts": [
+        "مَنْ",
+        "كَيْفَ",
+        "مَاذَا",
+        "أَيْنَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-1): ish joyini so'rash uchun «أَيْنَ» (qayerda) ishlatiladi."
     },
     {
-      "q": "«سَعِيدٌ بِـ...» iborasi qanday ma'noni anglatadi?",
-      "opts": ["...dan xafaman", "...dan xursandman / mamnunman", "...ga muhtojman", "...haqida o'ylayapman"],
-      "correct": 1,
-      "izoh": "سَعِيدٌ بِـ... = ...dan xursand/mamnun."
-    },
-    {
-      "q": "«طَوَالَ الْوَقْتِ» iborasining o'zbekcha tarjimasi nima?",
-      "opts": ["Vaqti-vaqti bilan", "Vaqtning boshida", "Butun vaqt davomida / doimo", "Kechki payt"],
-      "correct": 2,
-      "izoh": "طَوَالَ الْوَقْتِ = butun vaqt davomida."
-    },
-    {
-      "q": "Qoidaga ko'ra, ismiy gap (الجملة الاسمية) nima bilan boshlanadi?",
-      "opts": ["Fe'l (فِعْل)", "Ism (اِسْم)", "Harf (حَرْف)", "Zarf (ظَرْف)"],
-      "correct": 1,
-      "izoh": "Ismiy gap ism (mubtado) bilan boshlanadi."
-    },
-    {
-      "q": "Gapni to'g'ri to'ldiring: «الْعَمَلُ ___» (Ish qiyin).",
-      "opts": ["صَعْبَةٌ", "صَعْبٌ", "صَعْبَانِ", "صَعْبَاتٌ"],
-      "correct": 1,
-      "izoh": "«الْعَمَلُ» — muzakkar, xabar ham muzakkar: صَعْبٌ."
-    },
-    {
-      "q": "Gapdagi xatoni toping: «الْجَامِعَةُ قَرِيبٌ».",
-      "opts": ["«الجامعية» bo'lishi kerak", "«قَرِيبٌ» so'zi «قَرِيبَةٌ» bo'lishi kerak", "Gap to'g'ri", "«الـ» doimo tushib qolishi kerak"],
-      "correct": 1,
-      "izoh": "«الْجَامِعَةُ» — muannas, xabar «قَرِيبَةٌ» bo'lishi kerak."
-    },
-    {
-      "q": "«نَافِذَةُ الصَّفِّ ___» gapiga mos xabarni tanlang (Sinf oynasi ochiq).",
-      "opts": ["مَفْتُوحٌ", "مَفْتُوحَةٌ", "سَمِينَةٌ", "نَشِيطٌ"],
-      "correct": 1,
-      "izoh": "«نَافِذَةُ» — muannas, xabar «مَفْتُوحَةٌ» (ochiq)."
-    },
-    {
-      "q": "«الطَّالِبَةُ ___» (Talaba qiz tirishqoq).",
-      "opts": ["مُجْتَهِدٌ", "مُجْتَهِدَةٌ", "مُجْتَهِدُونَ", "سَعِيدٌ"],
-      "correct": 1,
-      "izoh": "«الطَّالِبَةُ» — muannas, xabar «مُجْتَهِدَةٌ»."
-    },
-    {
-      "q": "Qaysi gap grammatik jihatdan MUTLAQO TO'G'RI?",
-      "opts": ["خِزَانَةُ الصَّفِّ وَاسِعٌ.", "خِزَانَةُ الصَّفِّ وَاسِعَةٌ.", "الْخِزَانَةُ الصَّفِّ وَاسِعَةٌ.", "خِزَانَةٌ صَفٌّ وَاسِعٌ."],
-      "correct": 1,
-      "izoh": "خِزَانَةُ الصَّفِّ (idafa) + وَاسِعَةٌ (muannas xabar) — to'g'ri."
-    },
-    {
-      "q": "«الْعَمَلُ خَمْسَةَ أَيَّامٍ» gapida «الْعَمَلُ» qanday grammatik vazifada kelmoqda?",
-      "opts": ["خَبَر (Xabar)", "مُبْتَدَأ (Mubtado)", "فَاعِل (Foil)", "مَجْرُور (Majrur)"],
-      "correct": 1,
-      "izoh": "Gap boshidagi ism — mubtado."
-    },
-    {
-      "q": "Mubtado va xabar oxiridagi harakat (agar ular birlikda bo'lsa) odatda nima bo'ladi?",
-      "opts": ["Fatha ( َ )", "Kasra ( ِ )", "Damma ( ُ / ٌ )", "Sukun ( ْ )"],
-      "correct": 2,
-      "izoh": "Mubtado va xabar marfu' — damma (ٌ / ُ) bilan keladi."
-    },
-    {
-      "q": "«أَنَا» (Men) olmoshiga mos keluvchi, ismga birikadigan egalik olmoshi (mening) qaysi?",
-      "opts": ["ـنَا", "ـي", "ـكَ", "ـهُ"],
-      "correct": 1,
-      "izoh": "«mening» — ـي: كِتَابِي (kitobim)."
-    },
-    {
-      "q": "«كِتَابُ + نَحْنُ» birikmasi qanday shaklda yoziladi?",
-      "opts": ["كِتَابِي", "كِتَابُكَ", "كِتَابُنَا", "كِتَابُهُمْ"],
-      "correct": 2,
-      "izoh": "نَحْنُ ga mos egalik olmoshi ـنَا: كِتَابُنَا (kitobimiz)."
-    },
-    {
-      "q": "«Sening (erkak kishiga) kasbing nima?» gapining arabcha shakli:",
-      "opts": ["مَا مِهْنَتُكِ؟", "مَا مِهْنَتُهُ؟", "مَا مِهْنَتُكَ؟", "مَا مِهْنَتُنَا؟"],
-      "correct": 2,
-      "izoh": "Erkakka «ـكَ»: مَا مِهْنَتُكَ؟"
-    },
-    {
-      "q": "«عَمُّكُمْ طَوِيلٌ» gapidagi «ـكُمْ» olmoshi kimga ishora qiladi?",
-      "opts": ["Sizlarga (ko'plik, muzakkar)", "Ularga (ko'plik)", "Bizga", "Senga (muannas)"],
+      "q": "Alloh senga oson qilsin (muzakkar)",
+      "opts": [
+        "سَهَّلَ اللهُ لَكَ",
+        "سَهَّلَ اللهُ لَكِ",
+        "سَهَّلَ اللهُ لَهُ",
+        "سَهَّلَ اللهُ لَنَا"
+      ],
       "correct": 0,
-      "izoh": "ـكُمْ = sizlar (ko'plik, muzakkar)."
+      "izoh": "Erkak kishiga qaratilgan duoda «لِـ» harf-i jariga «ـكَ» birikadi: لَكَ."
     },
     {
-      "q": "«الْمُعَلِّمُ يُحِبُّ عَمَلَهُ» gapidagi «ـهُ» nimani anglatadi?",
-      "opts": ["Mening ishimni", "Sening ishingni", "Uning (erkak) o'z ishini", "Ularning ishini"],
+      "q": "Bu ikki talaba qiz tirishqoq",
+      "opts": [
+        "هَذَانِ طَالِبَتَانِ مُجْتَهِدَتَانِ",
+        "هَاتَانِ طَالِبَتَانِ مُجْتَهِدَتَانِ",
+        "هَاتَانِ طَالِبَانِ مُجْتَهِدَانِ",
+        "هَاتَانِ طَالِبَتَانِ مُجْتَهِدَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-2): muannas ikkilik — «هَاتَانِ», sifat ham muannas ikkilik: مُجْتَهِدَتَانِ."
+    },
+    {
+      "q": "Mening maoshim",
+      "opts": [
+        "رَاتِبُكَ",
+        "رَاتِبُهُ",
+        "رَاتِبِي",
+        "رَاتِبُنَا"
+      ],
       "correct": 2,
-      "izoh": "ـهُ = uning (erkak); عَمَلَهُ = uning ishi."
+      "izoh": "Birinchi shaxs (mening) egalik olmoshi — «ـي»: رَاتِبِي."
     },
     {
-      "q": "«كِتَابُكُنَّ» so'zidagi «ـكُنَّ» qaysi kishilik olmoshiga mos keladi?",
-      "opts": ["أَنْتُمْ", "أَنْتُنَّ", "هُنَّ", "أَنْتُمَا"],
-      "correct": 1,
-      "izoh": "ـكُنَّ = أَنْتُنَّ (sizlar — ayollar)."
+      "q": "Bular muhandislar",
+      "opts": [
+        "هَؤُلَاءِ مُهَنْدِسُونَ",
+        "هُمْ مُهَنْدِسُونَ",
+        "هَذِهِ مُهَنْدِسُونَ",
+        "هُنَّ مُهَنْدِسُونَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-3): «Bular» — ko'rsatish olmoshi «هَؤُلَاءِ»; «هُمْ» esa «ular»."
     },
     {
-      "q": "«Alloh uni oson qilsin» iborasi qaysi javobda to'g'ri ko'rsatilgan?",
-      "opts": ["سَهَّلَ اللهُ لَكَ", "سَهَّلَ اللهُ لَهُ", "سَهَّلَ اللهُ لَكِ", "سَهَّلَ اللهُ لَنَا"],
-      "correct": 1,
-      "izoh": "«uni/unga» — لَهُ: سَهَّلَ اللهُ لَهُ."
-    },
-    {
-      "q": "Bo'shliqni to'ldiring: «ذَهَبْتُ إِلَى ___» (Men o'z sinfimga ketdim).",
-      "opts": ["صَفِّهِ", "صَفِّكِ", "صَفِّي", "صَفِّهَا"],
+      "q": "Qishloq yaqindir",
+      "opts": [
+        "الْقَرْيَةُ قَرِيبٌ",
+        "الْقَرْيَةُ قَرِيبَانِ",
+        "الْقَرْيَةُ قَرِيبَةٌ",
+        "الْقَرْيَةُ قَرِيبَاتٌ"
+      ],
       "correct": 2,
-      "izoh": "«o'z sinfimga» (men) — صَفِّي."
+      "izoh": "«الْقَرْيَةُ» — muannas ism, shuning uchun xabar ham muannas: قَرِيبَةٌ."
     },
     {
-      "q": "«عَمَلُ كُلِّ يَوْمٍ» birikmasining ma'nosi nima?",
-      "opts": ["Haftada bir kunlik ish", "Har kungi ish / har kuni ishlash", "Ishning oxiri", "Kechki ish"],
+      "q": "U shifokor (muannas)",
+      "opts": [
+        "هُوَ طَبِيبَةٌ",
+        "هِيَ طَبِيبَةٌ",
+        "أَنْتَ طَبِيبَةٌ",
+        "هِيَ طَبِيبٌ"
+      ],
       "correct": 1,
-      "izoh": "عَمَلُ كُلِّ يَوْمٍ = har kungi ish."
+      "izoh": "Takror (A1-1): uchinchi shaxs ayol uchun «هِيَ», xabar ham muannas: طَبِيبَةٌ."
     },
     {
-      "q": "«الطَّبِيبُ يُحِبُّ عَمَلَهُ، لِأَنَّهُ ___» gapini mantiqan to'ldiring.",
-      "opts": ["يَأْكُلُ الطَّعَامَ", "يُسَاعِدُ النَّاسَ", "يَذْهَبُ إِلَى السُّوقِ", "يَنَامُ كَثِيرًا"],
+      "q": "Uning (muzakkar) lavozimi",
+      "opts": [
+        "وَظِيفَتُهَا",
+        "وَظِيفَتُكَ",
+        "وَظِيفَتِي",
+        "وَظِيفَتُهُ"
+      ],
+      "correct": 3,
+      "izoh": "Uchinchi shaxs muzakkar (erkak) uchun egalik olmoshi — «ـهُ»: وَظِيفَتُهُ."
+    },
+    {
+      "q": "Ular ikkisi do‘st (muzakkar)",
+      "opts": [
+        "هَذَانِ صَدِيقَانِ",
+        "هُمَا صَدِيقَانِ",
+        "هُمْ صَدِيقَانِ",
+        "هَاتَانِ صَدِيقَانِ"
+      ],
       "correct": 1,
-      "izoh": "Shifokor ishini sevadi, chunki «يُسَاعِدُ النَّاسَ» (odamlarga yordam beradi)."
+      "izoh": "Takror (A1-2): «Ular ikkisi» — kishilik olmoshi «هُمَا»; «هَذَانِ» esa «bu ikkisi»."
     },
     {
-      "q": "«الْكِتَابُ لِي» (Kitob meniki) gapini bog'langan olmosh yordamida qanday qisqartirish mumkin?",
-      "opts": ["كِتَابُكَ", "كِتَابِي", "كِتَابُهُ", "كِتَابُنَا"],
-      "correct": 1,
-      "izoh": "«meniki» — كِتَابِي."
+      "q": "«كَمْ سَاعَةً تَعْمَلُ؟» savoliga to‘g‘ri javob",
+      "opts": [
+        "أَعْمَلُ ثَمَانِيَ سَاعَاتٍ",
+        "أَعْمَلُ فِي الْمَدْرَسَةِ",
+        "أَعْمَلُ طَيَّارًا",
+        "الْعَمَلُ صَعْبٌ"
+      ],
+      "correct": 0,
+      "izoh": "«Necha soat ishlaysan?» savoliga soat miqdori bilan javob beriladi: ثَمَانِيَ سَاعَاتٍ."
     },
     {
-      "q": "«الْقَلَمُ لَكَ» (Qalam seniki) iborasi qaysi so'zga teng?",
-      "opts": ["قَلَمِي", "قَلَمُكَ", "قَلَمُهُ", "قَلَمُهَا"],
-      "correct": 1,
-      "izoh": "«seniki» — قَلَمُكَ."
-    },
-    {
-      "q": "«عَمَلُنَا صَعْبٌ» gapida kishilik olmoshi (نَحْنُ) qanday o'zgarish hosil qilgan?",
-      "opts": ["عَمِلْتُ bo'lgan", "عَمَلُنَا bo'lib, egalik shakliga o'tgan", "Hech qanday o'zgarish yo'q", "Bog'lanmagan shaklda qolgan"],
-      "correct": 1,
-      "izoh": "نَحْنُ → ـنَا egalik olmoshi: عَمَلُنَا (ishimiz)."
-    },
-    {
-      "q": "«أَنَا سَعِيدٌ بِـ ___ يَا أَصْدِقَائِي» (Ey do'stlarim, men sizlardan xursandman). Bo'sh joyga mos olmoshni qo'ying.",
-      "opts": ["بِهِ", "بِكَ", "بِكُمْ", "بِهِمَا"],
+      "q": "«___ بُيُوتٌ جَدِيدَةٌ» (Bular yangi uylar)",
+      "opts": [
+        "هَؤُلَاءِ",
+        "هَذَا",
+        "هَذِهِ",
+        "هَاتَانِ"
+      ],
       "correct": 2,
-      "izoh": "«sizlar» (do'stlar — ko'plik) — بِكُمْ."
+      "izoh": "Takror (A1-3): aqlsiz narsalar ko'pligi (بُيُوتٌ) birlik-muannas hisoblanib, «هَذِهِ» oladi."
     },
     {
-      "q": "«أَبِي وَأُمِّي فِي الْقَرْيَةِ، وَأَذْهَبُ ___» (Ota-onam qishloqda, men ularning oldiga boraman). Bo'sh joyga mos predlog va olmosh birikmasini toping.",
-      "opts": ["إِلَيْهِ", "إِلَيْهِمَا", "إِلَيْهَا", "إِلَيْكَ"],
-      "correct": 1,
-      "izoh": "Ota va ona — ikki kishi (ikkilik): إِلَيْهِمَا (ular ikkisiga)."
+      "q": "Do‘kon ochiqdir",
+      "opts": [
+        "الدُّكَّانُ مَفْتُوحَةٌ",
+        "الدُّكَّانُ مَفْتُوحَانِ",
+        "الدُّكَّانُ مَفْتُوحَاتٌ",
+        "الدُّكَّانُ مَفْتُوحٌ"
+      ],
+      "correct": 3,
+      "izoh": "«الدُّكَّانُ» — muzakkar ism, shuning uchun xabar ham muzakkar: مَفْتُوحٌ."
     },
     {
-      "q": "«يَجِبُ أَنْ نَدْرُسَ كَثِيرًا، لِأَنَّ ___ مُهِمٌّ جِدًّا» (Ko'p o'qishimiz kerak, chunki imtihonimiz juda muhim).",
-      "opts": ["اِمْتِحَانِي", "اِمْتِحَانَكُنَّ", "اِمْتِحَانَنَا", "اِمْتِحَانَهُ"],
+      "q": "«مَاذَا تَعْمَلُ؟» savoliga to‘g‘ri javob",
+      "opts": [
+        "أَعْمَلُ مُهَنْدِسًا",
+        "أَعْمَلُ فِي الْمُهَنْدِسِ",
+        "تَعْمَلُ مُهَنْدِسًا",
+        "أَعْمَلُ فِي الْمَدِينَةِ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-1): kasb so'ralganda «أَعْمَلُ ...-ًا» shaklida javob beriladi."
+    },
+    {
+      "q": "Uning (muannas) xonadoni (kvartirasi)",
+      "opts": [
+        "شُقَّتُهَا",
+        "شُقَّتُهُ",
+        "شُقَّتُكِ",
+        "شُقَّتِي"
+      ],
+      "correct": 0,
+      "izoh": "Uchinchi shaxs muannas (ayol) uchun egalik olmoshi — «ـهَا»: شُقَّتُهَا."
+    },
+    {
+      "q": "Siz ikkingiz shifokorsiz (muannas)",
+      "opts": [
+        "هُمَا طَبِيبَتَانِ",
+        "أَنْتُمْ طَبِيبَاتٌ",
+        "أَنْتُمَا طَبِيبَتَانِ",
+        "أَنْتُمَا طَبِيبَانِ"
+      ],
       "correct": 2,
-      "izoh": "«imtihonimiz» (biz) — اِمْتِحَانَنَا."
+      "izoh": "Takror (A1-2): ikkilik ayollarga «أَنْتُمَا», ism ham muannas ikkilik: طَبِيبَتَانِ."
     },
     {
-      "q": "«أَنَا أُحِبُّ الرِّيَاضَةَ كَثِيرًا» gapining tarjimasi qaysi javobda to'g'ri berilgan?",
-      "opts": ["Men kitob o'qishni yaxshi ko'raman.", "Men sportni juda yaxshi ko'raman.", "Men ishlashni afzal ko'raman.", "Men dam olishni xohlayman."],
+      "q": "Alloh senga yordam bersin (muzakkar)",
+      "opts": [
+        "أَعَانَكِ اللهُ",
+        "أَعَانَهُ اللهُ",
+        "أَعَانَنَا اللهُ",
+        "أَعَانَكَ اللهُ"
+      ],
+      "correct": 3,
+      "izoh": "Erkak kishiga qaratilgan duoda olmosh fatha bilan — «أَعَانَكَ اللهُ»."
+    },
+    {
+      "q": "Ular muallima ayollar",
+      "opts": [
+        "هَؤُلَاءِ مُعَلِّمَاتٌ",
+        "هُمْ مُعَلِّمَاتٌ",
+        "هِيَ مُعَلِّمَاتٌ",
+        "هُنَّ مُعَلِّمَاتٌ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-3): «Ular» (ayollar) — kishilik olmoshi «هُنَّ»; «هَؤُلَاءِ» esa «bular»."
+    },
+    {
+      "q": "Bizning qishlog‘imiz",
+      "opts": [
+        "قَرْيَتُكُمْ",
+        "قَرْيَتُنَا",
+        "قَرْيَتُهُمْ",
+        "قَرْيَتِي"
+      ],
       "correct": 1,
-      "izoh": "الرِّيَاضَةَ = sport, كَثِيرًا = juda."
+      "izoh": "Birinchi shaxs ko'plik (bizning) egalik olmoshi — «ـنَا»: قَرْيَتُنَا."
     },
     {
-      "q": "Qaysi javobda «Kishilik olmoshi → Bog'langan olmosh» juftligi XATO berilgan?",
-      "opts": ["هُوَ → ـهُ", "هِيَ → ـهَا", "أَنْتِ → ـكَ", "أَنْتُمْ → ـكُمْ"],
+      "q": "«___؟ — هَذَا طَبِيبٌ»",
+      "opts": [
+        "مَنْ هَذَا؟",
+        "مَا هَذَا؟",
+        "كَيْفَ هَذَا؟",
+        "مَنْ هَذِهِ؟"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-1): inson (طَبِيبٌ) haqida «مَنْ» va muzakkar bo'lgani uchun «هَذَا»."
+    },
+    {
+      "q": "Maosh kamdir",
+      "opts": [
+        "الرَّاتِبُ قَلِيلَةٌ",
+        "الرَّاتِبُ قَلِيلٌ",
+        "الرَّاتِبُ قَلِيلَانِ",
+        "الرَّاتِبُ قَلِيلَاتٌ"
+      ],
+      "correct": 1,
+      "izoh": "«الرَّاتِبُ» — muzakkar ism, shuning uchun xabar ham muzakkar: قَلِيلٌ."
+    },
+    {
+      "q": "«Ota-ona nima ish qiladi?»",
+      "opts": [
+        "مَنْ يَعْمَلُ الْوَالِدَانِ؟",
+        "أَيْنَ يَعْمَلُ الْوَالِدَانِ؟",
+        "كَمْ يَعْمَلُ الْوَالِدَانِ؟",
+        "مَاذَا يَعْمَلُ الْوَالِدَانِ؟"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-2): kasb/faoliyat haqida «مَاذَا», «الْوَالِدَانِ» = ota-ona."
+    },
+    {
+      "q": "Sizlarning manzilingiz (muzakkar ko'plik)",
+      "opts": [
+        "عُنْوَانُكُنَّ",
+        "عُنْوَانُهُمْ",
+        "عُنْوَانُكُمْ",
+        "عُنْوَانُنَا"
+      ],
       "correct": 2,
-      "izoh": "«أَنْتِ» (sen — ayol) ga «ـكِ» mos keladi, «ـكَ» emas."
+      "izoh": "Ikkinchi shaxs ko'plik muzakkar uchun egalik olmoshi — «ـكُمْ»: عُنْوَانُكُمْ."
     },
     {
-      "q": "«كَمْ سَاعَةً تَعْمَلُ؟» savoliga qaysi javob mos keladi?",
-      "opts": ["أَعْمَلُ فِي الْمَدْرَسَةِ.", "أَعْمَلُ ثَمَانِيَ سَاعَاتٍ.", "أَنَا مُهَنْدِسٌ نَشِيطٌ.", "الْعَمَلُ صَعْبٌ جِدًّا."],
+      "q": "Ular mohir muhandislar (muzakkar)",
+      "opts": [
+        "هُنَّ مُهَنْدِسَاتٌ مَاهِرَاتٌ",
+        "هُمْ مُهَنْدِسُونَ مَاهِرُونَ",
+        "هُمْ مُهَنْدِسُونَ مَاهِرٌ",
+        "هُمَا مُهَنْدِسَانِ مَاهِرَانِ"
+      ],
       "correct": 1,
-      "izoh": "«Necha soat ishlaysan?» ga soat soni bilan javob: ثَمَانِيَ سَاعَاتٍ (sakkiz soat)."
+      "izoh": "Takror (A1-3): erkaklar ko'pligi — «هُمْ», ism va sifat ham ـُونَ bilan."
+    },
+    {
+      "q": "Men sizlardan mamnunman (muzakkar ko'plik)",
+      "opts": [
+        "أَنَا سَعِيدٌ بِكَ",
+        "أَنَا سَعِيدٌ بِكِ",
+        "أَنَا سَعِيدٌ بِكُمْ",
+        "أَنَا سَعِيدٌ بِهِ"
+      ],
+      "correct": 2,
+      "izoh": "Ko'plikdagi shaxslarga «بِـ» harf-i jariga «ـكُمْ» qo'shiladi: بِكُمْ."
+    },
+    {
+      "q": "Bu talaba (muzakkar)",
+      "opts": [
+        "هُوَ طَالِبٌ",
+        "هَذِهِ طَالِبَةٌ",
+        "هِيَ طَالِبَةٌ",
+        "هَذَا طَالِبٌ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-1): «Bu» — ko'rsatish olmoshi «هَذَا»; «هُوَ» esa «u» (kishilik olmoshi)."
+    },
+    {
+      "q": "Sening kasbing nima? (muzakkar)",
+      "opts": [
+        "مَا مِهْنَتُكِ؟",
+        "مَا مِهْنَتُكَ؟",
+        "مَا مِهْنَتُهُ؟",
+        "مَا مِهْنَتُنَا؟"
+      ],
+      "correct": 1,
+      "izoh": "Erkak kishining kasbini so'rashda «ـكَ» birikadi: مَا مِهْنَتُكَ؟"
+    },
+    {
+      "q": "«مَدِينَةٌ» so‘zining ikkilik shakli",
+      "opts": [
+        "مَدِينَتَانِ",
+        "مَدِينَانِ",
+        "مُدُنٌ",
+        "مَدِينَةَانِ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-2): muannas ism oxiridagi «ة» harfi «ت»ga aylanib, «ـَانِ» qo'shiladi: مَدِينَتَانِ."
+    },
+    {
+      "q": "Qaysi jumla grammatik jihatdan XATO?",
+      "opts": [
+        "الدُّكَّانُ مَفْتُوحٌ",
+        "الْقَرْيَةُ قَرِيبَةٌ",
+        "الشُّقَّةُ وَاسِعٌ",
+        "الْعَمَلُ صَعْبٌ"
+      ],
+      "correct": 2,
+      "izoh": "«الشُّقَّةُ» — muannas ism, xabar «وَاسِعَةٌ» bo'lishi kerak edi, «وَاسِعٌ» xato."
+    },
+    {
+      "q": "«رَجُلٌ» so‘zining ko‘plik shakli",
+      "opts": [
+        "رَجُلُونَ",
+        "رِجَالٌ",
+        "رَجُلَاتٌ",
+        "رَجُلَانِ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-3): «رَجُلٌ» so'zining ko'pligi siniq shaklda — «رِجَالٌ»."
+    },
+    {
+      "q": "Ularning ishi (muzakkar ko'plik)",
+      "opts": [
+        "عَمَلُهُمْ",
+        "عَمَلُهُنَّ",
+        "عَمَلُكُمْ",
+        "عَمَلُنَا"
+      ],
+      "correct": 0,
+      "izoh": "Uchinchi shaxs ko'plik muzakkar uchun egalik olmoshi — «ـهُمْ»: عَمَلُهُمْ."
+    },
+    {
+      "q": "«___ أَوْلَادٌ صِغَارٌ» (Bular kichkina bolalar)",
+      "opts": [
+        "هَذَا",
+        "هَذِهِ",
+        "هَذَانِ",
+        "هَؤُلَاءِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-3): insonlar ko'pligi uchun yaqin ko'rsatish olmoshi — «هَؤُلَاءِ»."
+    },
+    {
+      "q": "Alloh senga oson qilsin (muannas)",
+      "opts": [
+        "سَهَّلَ اللهُ لَكَ",
+        "سَهَّلَ اللهُ لَهُ",
+        "سَهَّلَ اللهُ لَكِ",
+        "سَهَّلَ اللهُ لَهَا"
+      ],
+      "correct": 2,
+      "izoh": "Ayol kishiga qaratilgan duoda «لِـ» ga «ـكِ» qo'shilib «لَكِ» bo'ladi."
+    },
+    {
+      "q": "Qaysi jumla grammatik jihatdan XATO?",
+      "opts": [
+        "هَؤُلَاءِ طُلَّابٌ",
+        "هَؤُلَاءِ مُعَلِّمَاتٌ",
+        "هَذِهِ كُتُبٌ",
+        "هَؤُلَاءِ كُتُبٌ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-3): «كُتُبٌ» aqlsiz narsalar ko'pligi bo'lgani uchun «هَؤُلَاءِ» emas, «هَذِهِ» bilan kelishi shart."
     }
   ]
 }
