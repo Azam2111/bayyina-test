@@ -1,217 +1,502 @@
 {
   "title": "Qovaid — A1 9-dars",
   "otish": 80,
-  "vaqt": 35,
+  "vaqt": 45,
   "questions": [
     {
-      "q": "«Men darsni yozyapman» gapining arabcha to'g'ri tarjimasini toping.",
-      "opts": ["سَأَكْتُبُ الدَّرْسَ", "أَكْتُبُ الدَّرْسَ", "كَتَبْتُ الدَّرْسَ", "سَوْفَ أَكْتُبُ الدَّرْسَ"],
-      "correct": 1,
-      "izoh": "«yozyapman» — hozirgi zamon (muzori'): أَكْتُبُ الدَّرْسَ."
-    },
-    {
-      "q": "Kelasi zamonni ifodalash uchun fe'lning oldiga qaysi qo'shimchalar qo'shiladi?",
-      "opts": ["مَا / لَمْ", "سَـ / سَوْفَ", "إِنْ / أَنْ", "قَدْ / لَقَدْ"],
-      "correct": 1,
-      "izoh": "Kelasi zamon: سَـ (yaqin) yoki سَوْفَ (uzoq)."
-    },
-    {
-      "q": "«سَأَكْتُبُ» (Men yozaman) fe'lidagi «سَـ» qo'shimchasi qanday muddatdagi kelasi zamonni anglatadi?",
-      "opts": ["Yaqin kelasi zamon", "Uzoq kelasi zamon", "O'tgan zamon", "Buyruq mayli"],
+      "q": "«أَنْتِ ___ النَّافِذَةَ» gapni to‘ldiring",
+      "opts": [
+        "أَنْتِ تَفْتَحِينَ النَّافِذَةَ",
+        "أَنْتِ تَفْتَحُ النَّافِذَةَ",
+        "أَنْتِ تَفْتَحَانِ النَّافِذَةَ",
+        "أَنْتِ تَفْتَحْنَ النَّافِذَةَ"
+      ],
       "correct": 0,
-      "izoh": "«سَـ» — yaqin kelasi zamonni bildiradi."
+      "izoh": "أَنْتِ bilan fe’l تَـ va ـِينَ shaklida keladi."
     },
     {
-      "q": "«Uzoq kelasi zamon»ni ifodalash uchun qaysi yuklama ishlatiladi?",
-      "opts": ["سَـ", "سَوْفَ", "لَنْ", "لَا"],
+      "q": "«U (ayol) hamshira» jumlasini tanlang",
+      "opts": [
+        "هُوَ مُمَرِّضَةٌ",
+        "هِيَ مُمَرِّضَةٌ",
+        "هُمْ مُمَرِّضَةٌ",
+        "هُنَّ مُمَرِّضَةٌ"
+      ],
       "correct": 1,
-      "izoh": "«سَوْفَ» — uzoq kelasi zamon uchun ishlatiladi."
+      "izoh": "Takror (A1-1): Ayol birlik uchun هِيَ ishlatiladi."
     },
     {
-      "q": "«أُمِّي تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ» (Ona bozordan sabzavot sotib olyapti) gapini kelasi zamonga o'giring.",
-      "opts": ["أُمِّي اشْتَرَتِ الْخُضْرَةَ مِنَ الْبَقَّالِ", "أُمِّي سَوْفَ تَشْتَرِي الْخُضْرَةَ مِنَ الْبَقَّالِ", "أُمِّي لَمْ تَشْتَرِ الْخُضْرَةَ مِنَ الْبَقَّالِ", "أُمِّي تَشْتَرِي الْخُضْرَةَ"],
-      "correct": 1,
-      "izoh": "Kelasi zamon uchun fe'l oldiga «سَوْفَ» qo'shiladi: سَوْفَ تَشْتَرِي."
-    },
-    {
-      "q": "«هُمْ يَدْرُسُونَ» (Ular o'qiyapti) fe'lini kelasi zamon shakliga to'g'ri o'tkazilgan variantni toping.",
-      "opts": ["هُمْ دَرَسُوا", "هُمْ يَدْرُسُونَ", "هُمْ سَيَدْرُسُونَ", "هُمْ سَوْفَ دَرَسُوا"],
+      "q": "«هُمْ ___ الْمَاءَ» gapni to‘ldiring",
+      "opts": [
+        "هُمْ يَشْرَبَانِ الْمَاءَ",
+        "هُمْ يَشْرَبْنَ الْمَاءَ",
+        "هُمْ يَشْرَبُونَ الْمَاءَ",
+        "هُمْ تَشْرَبُونَ الْمَاءَ"
+      ],
       "correct": 2,
-      "izoh": "Muzori' oldiga «سَـ»: هُمْ سَيَدْرُسُونَ (ular o'qiydi)."
+      "izoh": "هُمْ bilan يَـ va ـُونَ ishlatiladi."
     },
     {
-      "q": "Berilgan gaplardan qaysi biri grammatik jihatdan TO'G'RI?",
-      "opts": ["سَوْفَ تَكْتُبِينَ الْوَاجِبَ.", "سَوْفَ شَاهَدْتُ التِّلْفَازَ.", "أُرِيدُ أَنْ سَأَخْرُجَ قَلِيلًا.", "هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟"],
-      "correct": 0,
-      "izoh": "«سَوْفَ + muzori'» to'g'ri: سَوْفَ تَكْتُبِينَ. Qolganlari xato: سَوْفَ o'tgan zamon bilan, أَنْ bilan سَـ birga, kelasi zamon «أَمْسِ» bilan kelmaydi."
-    },
-    {
-      "q": "Qaysi gap grammatik jihatdan XATO tuzilgan?",
-      "opts": ["أُرِيدُ أَنْ أَخْرُجَ قَلِيلًا.", "أُحِبُّ أَنْ أَعِيشَ فِي الْقَرْيَةِ.", "هَلْ سَتَكْتُبُ الْوَاجِبَ غَدًا؟", "هَلْ سَتَكْتُبُ الْوَاجِبَ أَمْسِ؟"],
+      "q": "Uyda to‘rtta xona bor",
+      "opts": [
+        "فِي الْبَيْتِ أَرْبَعَةُ غُرَفٍ",
+        "فِي الْبَيْتِ أَرْبَعُ غُرْفَةٍ",
+        "فِي الْبَيْتِ أَرْبَعُ غُرَفٌ",
+        "فِي الْبَيْتِ أَرْبَعُ غُرَفٍ"
+      ],
       "correct": 3,
-      "izoh": "Kelasi zamon (سَـ) o'tgan vaqt «أَمْسِ» (kecha) bilan kelmaydi — bu xato."
+      "izoh": "Takror (A1-8): غُرْفَةٌ muannas: أَرْبَعُ va undan keyin ko‘plik majrur keladi."
     },
     {
-      "q": "Bo'shliqqa mos fe'lni qo'ying: «الْمَدْرَسَةُ ___ بَعْدَ أُسْبُوعٍ» (Maktab bir haftadan keyin boshlanadi).",
-      "opts": ["بَدَأَتْ", "تَبْدَأُ", "سَتَبْدَأُ", "بَدَؤُوا"],
+      "q": "«هُنَّ ___ النَّافِذَةَ» gapni to‘ldiring",
+      "opts": [
+        "هُنَّ يَفْتَحْنَ النَّافِذَةَ",
+        "هُنَّ يَفْتَحُونَ النَّافِذَةَ",
+        "هُنَّ يَفْتَحَانِ النَّافِذَةَ",
+        "هُنَّ تَفْتَحْنَ النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "هُنَّ bilan يَـ va ـْنَ ishlatiladi."
+    },
+    {
+      "q": "«Bu ikki aka-ukam» jumlasini tanlang",
+      "opts": [
+        "هُمَا أَخَوَايَ",
+        "هَذَانِ أَخَوَايَ",
+        "هَاتَانِ أَخَوَايَ",
+        "هَؤُلَاءِ أَخَوَايَ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-2): Ko‘rsatilayotgan ikki erkak uchun هَذَانِ ishlatiladi."
+    },
+    {
+      "q": "«أَنْتُمَا ___ إِلَى السُّوقِ» gapni to‘ldiring",
+      "opts": [
+        "أَنْتُمَا يَذْهَبَانِ إِلَى السُّوقِ",
+        "أَنْتُمَا تَذْهَبُونَ إِلَى السُّوقِ",
+        "أَنْتُمَا تَذْهَبَانِ إِلَى السُّوقِ",
+        "أَنْتُمَا تَذْهَبِينَ إِلَى السُّوقِ"
+      ],
       "correct": 2,
-      "izoh": "«bir haftadan keyin» — kelasi zamon: سَتَبْدَأُ (boshlanadi)."
+      "izoh": "أَنْتُمَا uchun تَـ va ـَانِ keladi."
     },
     {
-      "q": "«Kilo» so'zining arabcha tarjimasi qanday?",
-      "opts": ["لِتْر", "كِيلُو", "غْرَام", "ثَمَن"],
+      "q": "Ular ikkisi (ayollar) derazani ochishdi",
+      "opts": [
+        "هُمَا فَتَحَا النَّافِذَةَ",
+        "هُمَا فَتَحْنَ النَّافِذَةَ",
+        "هُمَا فَتَحْتُمَا النَّافِذَةَ",
+        "هُمَا فَتَحَتَا النَّافِذَةَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-8): Ayol jinsdagi ikkilik moziyda فَتَحَتَا keladi."
+    },
+    {
+      "q": "«Bular tirishqoq tarjimonlar» jumlasini tanlang",
+      "opts": [
+        "هَؤُلَاءِ مُتَرْجِمُونَ مُجْتَهِدُونَ",
+        "هُمْ مُتَرْجِمُونَ مُجْتَهِدُونَ",
+        "هَذَا مُتَرْجِمُونَ مُجْتَهِدُونَ",
+        "هُمَا مُتَرْجِمُونَ مُجْتَهِدُونَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-3): Ko‘rsatish uchun هَؤُلَاءِ ishlatiladi."
+    },
+    {
+      "q": "«أَنْتُنَّ ___ الْحِسَابَ» gapni to‘ldiring",
+      "opts": [
+        "أَنْتُنَّ يَدْفَعْنَ الْحِسَابَ",
+        "أَنْتُنَّ تَدْفَعْنَ الْحِسَابَ",
+        "أَنْتُنَّ تَدْفَعُونَ الْحِسَابَ",
+        "أَنْتُنَّ تَدْفَعَانِ الْحِسَابَ"
+      ],
       "correct": 1,
-      "izoh": "Kilo = كِيلُو (لِتْر — litr, غْرَام — gramm)."
+      "izoh": "أَنْتُنَّ bilan تَـ va ـْنَ keladi."
     },
     {
-      "q": "«أَنَا» (Men) olmoshiga mos keluvchi hozirgi zamon fe'li shaklini toping.",
-      "opts": ["تَذْهَبُ", "يَذْهَبُ", "أَذْهَبُ", "نَذْهَبُ"],
+      "q": "Sumkada o‘ttizta lira bor",
+      "opts": [
+        "فِي الْحَقِيبَةِ ثَلَاثُونَ لِيرَةٌ",
+        "فِي الْحَقِيبَةِ ثَلَاثُونَ لِيرَةٍ",
+        "فِي الْحَقِيبَةِ ثَلَاثُونَ لِيرَةً",
+        "فِي الْحَقِيبَةِ ثَلَاثُونَ لِيرَاتٍ"
+      ],
       "correct": 2,
-      "izoh": "أَنَا uchun «أَـ»: أَذْهَبُ."
+      "izoh": "Takror (A1-8): O‘ttizdan keyin sanalmish birlik mansub keladi."
     },
     {
-      "q": "«أَنْتَ» (Sen — muzakkar) olmoshiga mos keluvchi hozirgi zamon fe'li shakli qaysi?",
-      "opts": ["أَذْهَبُ", "تَذْهَبُ", "تَذْهَبِينَ", "يَذْهَبُ"],
+      "q": "«هُمَا ___ إِلَى الْمَدْرَسَةِ» (ikkisi erkak)",
+      "opts": [
+        "هُمَا تَذْهَبَانِ إِلَى الْمَدْرَسَةِ",
+        "هُمَا يَذْهَبُونَ إِلَى الْمَدْرَسَةِ",
+        "هُمَا يَذْهَبْنَ إِلَى الْمَدْرَسَةِ",
+        "هُمَا يَذْهَبَانِ إِلَى الْمَدْرَسَةِ"
+      ],
+      "correct": 3,
+      "izoh": "Erkak jinsdagi هُمَا bilan يَذْهَبَانِ keladi."
+    },
+    {
+      "q": "Ayol xodim tirishqoq emas",
+      "opts": [
+        "الْمُوَظَّفَةُ لَيْسَتْ مُجْتَهِدَةً",
+        "الْمُوَظَّفَةُ لَيْسَ مُجْتَهِدَةً",
+        "الْمُوَظَّفَةُ لَسْتُ مُجْتَهِدَةً",
+        "الْمُوَظَّفَةُ لَسْتَ مُجْتَهِدَةً"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-4): Ayol birlik uchun لَيْسَتْ ishlatiladi."
+    },
+    {
+      "q": "«هُمَا ___ النَّافِذَةَ» (ikkisi ayol)",
+      "opts": [
+        "هُمَا يَفْتَحَانِ النَّافِذَةَ",
+        "هُمَا تَفْتَحَانِ النَّافِذَةَ",
+        "هُمَا تَفْتَحُونَ النَّافِذَةَ",
+        "هُمَا يَفْتَحْنَ النَّافِذَةَ"
+      ],
       "correct": 1,
-      "izoh": "أَنْتَ uchun «تَـ»: تَذْهَبُ."
+      "izoh": "Ayol jinsdagi هُمَا bilan تَفْتَحَانِ keladi."
     },
     {
-      "q": "«أَنْتِ» (Sen — muannas) olmoshiga mos keluvchi hozirgi zamon fe'li shakli qaysi?",
-      "opts": ["تَذْهَبُ", "تَذْهَبِينَ", "يَذْهَبُ", "تَذْهَبَانِ"],
-      "correct": 1,
-      "izoh": "أَنْتِ uchun «تَـ...ـينَ»: تَذْهَبِينَ."
-    },
-    {
-      "q": "«هُوَ» (U — muzakkar) olmoshi uchun to'g'ri fe'lni tanlang.",
-      "opts": ["تَذْهَبُ", "يَذْهَبُ", "نَذْهَبُ", "تَذْهَبِينَ"],
-      "correct": 1,
-      "izoh": "هُوَ uchun «يَـ»: يَذْهَبُ."
-    },
-    {
-      "q": "«هِيَ» (U — muannas) olmoshi uchun to'g'ri fe'lni tanlang.",
-      "opts": ["يَذْهَبُ", "نَذْهَبُ", "تَذْهَبُ", "أَذْهَبُ"],
+      "q": "Sizlar (ayollar) sumkani ko‘tardingiz",
+      "opts": [
+        "أَنْتُنَّ حَمَلْتُمْ الْحَقِيبَةَ",
+        "أَنْتُنَّ حَمَلْنَ الْحَقِيبَةَ",
+        "أَنْتُنَّ حَمَلْتُنَّ الْحَقِيبَةَ",
+        "أَنْتُنَّ حَمَلْنَا الْحَقِيبَةَ"
+      ],
       "correct": 2,
-      "izoh": "هِيَ uchun «تَـ»: تَذْهَبُ."
+      "izoh": "Takror (A1-8): أَنْتُنَّ bilan moziy ـْتُنَّ qo‘shimchasini oladi."
     },
     {
-      "q": "«أَنْتُمَا» (Siz ikkingiz) olmoshiga hozirgi zamonda qaysi shakl to'g'ri keladi?",
-      "opts": ["تَسْأَلَانِ", "يَسْأَلَانِ", "نَسْأَلُ", "تَسْأَلُونَ"],
+      "q": "«أَنْتُمْ ___ الْعَرَبِيَّةَ» gapni to‘ldiring",
+      "opts": [
+        "أَنْتُمْ يَدْرُسُونَ الْعَرَبِيَّةَ",
+        "أَنْتُمْ تَدْرُسَانِ الْعَرَبِيَّةَ",
+        "أَنْتُمْ تَدْرُسْنَ الْعَرَبِيَّةَ",
+        "أَنْتُمْ تَدْرُسُونَ الْعَرَبِيَّةَ"
+      ],
+      "correct": 3,
+      "izoh": "أَنْتُمْ bilan تَـ va ـُونَ keladi."
+    },
+    {
+      "q": "Sen (ayol) suv ichding",
+      "opts": [
+        "أَنْتِ شَرِبْتِ الْمَاءَ",
+        "أَنْتِ شَرِبْتَ الْمَاءَ",
+        "أَنْتِ شَرِبْتُ الْمَاءَ",
+        "أَنْتِ شَرِبَتِ الْمَاءَ"
+      ],
       "correct": 0,
-      "izoh": "أَنْتُمَا uchun «تَـ...ـانِ»: تَسْأَلَانِ."
+      "izoh": "Takror (A1-5): أَنْتِ bilan moziy oxiri ـْتِ bo‘ladi."
     },
     {
-      "q": "«هُمَا» (Ular ikkitasi — muzakkar) uchun qaysi fe'l shakli mos keladi?",
-      "opts": ["تَسْأَلَانِ", "يَسْأَلَانِ", "يَسْأَلُونَ", "تَسْأَلُونَ"],
+      "q": "Stolda uchta taom bor",
+      "opts": [
+        "عَلَى الْمَائِدَةِ ثَلَاثَةُ وَجَبَاتٍ",
+        "عَلَى الْمَائِدَةِ ثَلَاثُ وَجَبَاتٍ",
+        "عَلَى الْمَائِدَةِ ثَلَاثُ وَجْبَةٍ",
+        "عَلَى الْمَائِدَةِ ثَلَاثُ وَجَبَاتٌ"
+      ],
       "correct": 1,
-      "izoh": "هُمَا (muzakkar) uchun «يَـ...ـانِ»: يَسْأَلَانِ."
+      "izoh": "Takror (A1-8): وَجْبَةٌ muannas; uchdan keyin ko‘plik majrur keladi."
     },
     {
-      "q": "«هُمَا» (Ular ikkitasi — muannas) uchun to'g'ri fe'l shaklini toping.",
-      "opts": ["يَسْأَلَانِ", "تَسْأَلَانِ", "تَسْأَلُونَ", "يَسْأَلُونَ"],
-      "correct": 1,
-      "izoh": "هُمَا (muannas) uchun «تَـ...ـانِ»: تَسْأَلَانِ."
-    },
-    {
-      "q": "«أَنْتُمْ» (Sizlar — ko'plik, muzakkar) uchun to'g'ri fe'l shakli qaysi?",
-      "opts": ["تَسْأَلَانِ", "تَسْأَلُونَ", "يَسْأَلُونَ", "تَسْأَلْنَ"],
-      "correct": 1,
-      "izoh": "أَنْتُمْ uchun «تَـ...ـونَ»: تَسْأَلُونَ."
-    },
-    {
-      "q": "«هُمْ» (Ular — ko'plik, muzakkar) uchun to'g'ri fe'l shakli qaysi?",
-      "opts": ["يَسْأَلُونَ", "تَسْأَلُونَ", "يَسْأَلَانِ", "تَسْأَلَانِ"],
-      "correct": 0,
-      "izoh": "هُمْ uchun «يَـ...ـونَ»: يَسْأَلُونَ."
-    },
-    {
-      "q": "Bo'sh joyni to'ldiring: «الطَّالِبَتَانِ ___ إِلَى الْمَعْهَدِ» (Ikki talaba qiz institutga bormoqda).",
-      "opts": ["ذَهَبَتْ", "تَذْهَبَانِ", "يَذْهَبَانِ", "تَذْهَبُونَ"],
-      "correct": 1,
-      "izoh": "Muannas ikkilik (هُمَا): تَذْهَبَانِ."
-    },
-    {
-      "q": "«هَلْ ___ فِي هَذَا الْمَطْعَمِ يَا أَصْدِقَائِي؟» (Ey do'stlarim, bu restoranda ovqatlanasizlarmi?). Mos fe'lni qo'ying.",
-      "opts": ["تَأْكُلُ", "تَأْكُلُونَ", "تَأْكُلَانِ", "يَأْكُلُونَ"],
-      "correct": 1,
-      "izoh": "«يَا أَصْدِقَائِي» — sizlar (أَنْتُمْ): تَأْكُلُونَ."
-    },
-    {
-      "q": "«نَحْنُ ___ التِّلْفَازَ فِي الْغُرْفَةِ» (Biz xonada televizor ko'ryapmiz).",
-      "opts": ["شَاهَدْتُ", "نُشَاهِدُ", "تُشَاهِدُونَ", "يُشَاهِدُونَ"],
-      "correct": 1,
-      "izoh": "نَحْنُ uchun «نَـ»: نُشَاهِدُ."
-    },
-    {
-      "q": "Sotuvchining «Sizga qanday yordam bera olaman?» degan gapi arab tilida qanday bo'ladi?",
-      "opts": ["كَمِ الثَّمَنُ؟", "كَيْفَ أُسَاعِدُكَ؟", "مَا مَقَاسُكَ؟", "أَيُّ خِدْمَةٍ؟"],
-      "correct": 1,
-      "izoh": "كَيْفَ أُسَاعِدُكَ؟ = sizga qanday yordam beraman?"
-    },
-    {
-      "q": "«هَلْ تُرِيدُ شَيْئًا آخَرَ؟» jumlasining ma'nosi nima?",
-      "opts": ["Narxi qancha?", "Yana biror narsa xohlaysizmi?", "Qaysi rangni afzal ko'rasiz?", "Bu sizga mos keladimi?"],
-      "correct": 1,
-      "izoh": "هَلْ تُرِيدُ شَيْئًا آخَرَ؟ = yana biror narsa xohlaysizmi?"
-    },
-    {
-      "q": "«كَمْ كِيلُو تُرِيدُ؟» so'rovining ma'nosi nima?",
-      "opts": ["Necha kilo xohlaysiz?", "Narxi qancha?", "Bu nima?", "Qachon borasiz?"],
-      "correct": 0,
-      "izoh": "كَمْ كِيلُو تُرِيدُ؟ = necha kilo xohlaysiz?"
-    },
-    {
-      "q": "Kiyim do'konida sotuvchi sizdan o'lchamingizni qanday so'raydi?",
-      "opts": ["مَا لَوْنُكَ؟", "مَا مَقَاسُكَ؟", "كَمِ الثَّمَنُ؟", "أَيُّ لَوْنٍ تُفَضِّلُ؟"],
-      "correct": 1,
-      "izoh": "مَا مَقَاسُكَ؟ = o'lchamingiz qancha?"
-    },
-    {
-      "q": "«Menga qalam bering, iltimos» gapining arabcha to'g'ri tarjimasi qaysi?",
-      "opts": ["أَعْطِنِي قَلَمًا لَوْ سَمَحْتَ", "هَلْ تُرِيدُ دَجَاجًا؟", "كَيْفَ أُسَاعِدُكَ؟", "أَعْطِنِي كِيلُو مِلْحٍ"],
-      "correct": 0,
-      "izoh": "أَعْطِنِي قَلَمًا لَوْ سَمَحْتَ = iltimos, menga qalam bering."
-    },
-    {
-      "q": "«الْخَضْرَاوَاتُ» so'zining ma'nosi nima?",
-      "opts": ["Mevalar", "Sabzavotlar", "Shirinliklar", "Go'sht mahsulotlari"],
-      "correct": 1,
-      "izoh": "الْخَضْرَاوَاتُ = sabzavotlar."
-    },
-    {
-      "q": "«الْفَوَاكِهُ» so'zining o'zbekcha ma'nosi nima?",
-      "opts": ["Sabzavotlar", "Mevalar", "Ichimliklar", "Non mahsulotlari"],
-      "correct": 1,
-      "izoh": "الْفَوَاكِهُ = mevalar."
-    },
-    {
-      "q": "Quyidagi so'zlardan qaysi biri «الطَّمَاطِمُ» so'zining ma'nosi?",
-      "opts": ["Kartoshka", "Pomidor", "Bodring", "Tarvuz"],
-      "correct": 1,
-      "izoh": "الطَّمَاطِمُ = pomidor."
-    },
-    {
-      "q": "«الْبَطَاطِسُ» qaysi sabzavot?",
-      "opts": ["Sabzi", "Piyoz", "Kartoshka", "Sarimsoq"],
+      "q": "«الطَّالِبَاتُ ___ الْقُرْآنَ» gapni to‘ldiring",
+      "opts": [
+        "الطَّالِبَاتُ تَدْرُسْنَ الْقُرْآنَ",
+        "الطَّالِبَاتُ يَدْرُسُونَ الْقُرْآنَ",
+        "الطَّالِبَاتُ يَدْرُسْنَ الْقُرْآنَ",
+        "الطَّالِبَاتُ يَدْرُسَانِ الْقُرْآنَ"
+      ],
       "correct": 2,
-      "izoh": "الْبَطَاطِسُ = kartoshka."
+      "izoh": "Ayollar ko‘pligi ega bo‘lib oldinda kelsa يَدْرُسْنَ ishlatiladi."
     },
     {
-      "q": "«التُّفَّاحُ» so'zining ma'nosi nima?",
-      "opts": ["Olma", "Banan", "Apelsin", "Qovun"],
+      "q": "Yozda havo issiq",
+      "opts": [
+        "الْجَوُّ فِي الصَّيْفَ حَارٌّ",
+        "الْجَوُّ فِي الصَّيْفُ حَارٌّ",
+        "الْجَوُّ فِي الصَّيْفًا حَارٌّ",
+        "الْجَوُّ فِي الصَّيْفِ حَارٌّ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-6): فِي dan keyin الصَّيْفِ majrur keladi."
+    },
+    {
+      "q": "«الطُّلَّابُ ___ إِلَى الْمَعْهَدِ» gapni to‘ldiring",
+      "opts": [
+        "الطُّلَّابُ يَذْهَبُونَ إِلَى الْمَعْهَدِ",
+        "الطُّلَّابُ تَذْهَبُونَ إِلَى الْمَعْهَدِ",
+        "الطُّلَّابُ يَذْهَبَانِ إِلَى الْمَعْهَدِ",
+        "الطُّلَّابُ يَذْهَبْنَ إِلَى الْمَعْهَدِ"
+      ],
       "correct": 0,
-      "izoh": "التُّفَّاحُ = olma."
+      "izoh": "Erkaklar ko‘pligi ega bo‘lib oldinda kelgan: يَذْهَبُونَ."
     },
     {
-      "q": "«Narxi qancha?» so'rovining arabcha shakli qaysi?",
-      "opts": ["مَا هَذِهِ؟", "كَمِ الثَّمَنُ؟", "كَيْفَ حَالُكَ؟", "أَيُّ خِدْمَةٍ؟"],
+      "q": "Ular (erkaklar) suv ichishdi",
+      "opts": [
+        "هُمْ شَرِبْنَ الْمَاءَ",
+        "هُمْ شَرِبُوا الْمَاءَ",
+        "هُمْ شَرِبَا الْمَاءَ",
+        "هُمْ شَرِبْتُمْ الْمَاءَ"
+      ],
       "correct": 1,
-      "izoh": "كَمِ الثَّمَنُ؟ = narxi qancha?"
+      "izoh": "Takror (A1-8): هُمْ bilan moziy ـُوا shaklida keladi."
     },
     {
-      "q": "«Do'kondan ko'ra bozorda xarid qilishni afzal ko'raman» gapidagi «Bozor» so'zining arabcha muqobili qaysi?",
-      "opts": ["الْمَطْبَخُ", "السُّوقُ", "الْمَدْرَسَةُ", "الْبَيْتُ"],
+      "q": "«هِيَ ___ الْحِسَابَ» gapni to‘ldiring",
+      "opts": [
+        "هِيَ يَدْفَعُ الْحِسَابَ",
+        "هِيَ تَدْفَعِينَ الْحِسَابَ",
+        "هِيَ تَدْفَعُ الْحِسَابَ",
+        "هِيَ تَدْفَعَانِ الْحِسَابَ"
+      ],
+      "correct": 2,
+      "izoh": "هِيَ bilan تَدْفَعُ ishlatiladi."
+    },
+    {
+      "q": "Yo‘lovchi chiptani qidirdi",
+      "opts": [
+        "بَحَثَ الْمُسَافِرُ إِلَى التَّذْكِرَةِ",
+        "بَحَثَ الْمُسَافِرُ مِنْ التَّذْكِرَةِ",
+        "بَحَثَ الْمُسَافِرُ فِي التَّذْكِرَةِ",
+        "بَحَثَ الْمُسَافِرُ عَنْ التَّذْكِرَةِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-7): Qidirmoq ma’nosida بَحَثَ عَنْ ishlatiladi."
+    },
+    {
+      "q": "«أَنْتَ ___ الْعَصِيرَ» gapni to‘ldiring",
+      "opts": [
+        "أَنْتَ تَشْرَبُ الْعَصِيرَ",
+        "أَنْتَ يَشْرَبُ الْعَصِيرَ",
+        "أَنْتَ تَشْرَبِينَ الْعَصِيرَ",
+        "أَنْتَ تَشْرَبُونَ الْعَصِيرَ"
+      ],
+      "correct": 0,
+      "izoh": "أَنْتَ bilan تَشْرَبُ ishlatiladi."
+    },
+    {
+      "q": "O‘n yettita so‘z bor",
+      "opts": [
+        "سَبْعَةَ عَشْرَةَ كَلِمَةً",
+        "سَبْعَ عَشْرَةَ كَلِمَةً",
+        "سَبْعَ عَشَرَ كَلِمَةً",
+        "سَبْعَ عَشْرَةَ كَلِمَاتٍ"
+      ],
       "correct": 1,
-      "izoh": "Bozor = السُّوقُ."
+      "izoh": "Takror (A1-8): كَلِمَةٌ muannas; 17 dan keyin sanalmish birlik mansub."
+    },
+    {
+      "q": "«Bu ayol muhandisa» jumlasini tanlang",
+      "opts": [
+        "هِيَ مُهَنْدِسَةٌ",
+        "هَذَا مُهَنْدِسَةٌ",
+        "هَذِهِ مُهَنْدِسَةٌ",
+        "هَؤُلَاءِ مُهَنْدِسَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-1): Bir ayolni ko‘rsatishda هَذِهِ ishlatiladi."
+    },
+    {
+      "q": "«نَحْنُ ___ الْعَرَبِيَّةَ» gapni to‘ldiring",
+      "opts": [
+        "نَحْنُ أَدْرُسُ الْعَرَبِيَّةَ",
+        "نَحْنُ يَدْرُسُ الْعَرَبِيَّةَ",
+        "نَحْنُ تَدْرُسُ الْعَرَبِيَّةَ",
+        "نَحْنُ نَدْرُسُ الْعَرَبِيَّةَ"
+      ],
+      "correct": 3,
+      "izoh": "نَحْنُ bilan fe’l نَـ dan boshlanadi."
+    },
+    {
+      "q": "Siz ikkovingiz (erkaklar) suv ichdingiz",
+      "opts": [
+        "أَنْتُمَا شَرِبْتُمَا الْمَاءَ",
+        "أَنْتُمَا شَرِبْتُمْ الْمَاءَ",
+        "أَنْتُمَا شَرِبَا الْمَاءَ",
+        "أَنْتُمَا شَرِبْنَ الْمَاءَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-8): أَنْتُمَا bilan moziy ـْتُمَا oladi."
+    },
+    {
+      "q": "«أَنَا ___ الْبَيْتَ» gapni to‘ldiring",
+      "opts": [
+        "أَنَا نُغْلِقُ الْبَيْتَ",
+        "أَنَا أُغْلِقُ الْبَيْتَ",
+        "أَنَا يُغْلِقُ الْبَيْتَ",
+        "أَنَا تُغْلِقُ الْبَيْتَ"
+      ],
+      "correct": 1,
+      "izoh": "أَنَا bilan أُغْلِقُ shakli ishlatiladi."
+    },
+    {
+      "q": "«Ular ikkisi mening xolalarim» jumlasini tanlang",
+      "opts": [
+        "هَاتَانِ خَالَتَايَ",
+        "هِيَ خَالَتَايَ",
+        "هُمَا خَالَتَايَ",
+        "هُنَّ خَالَتَايَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-2): Ikki ayol haqida gap ketganda هُمَا ishlatiladi."
+    },
+    {
+      "q": "«هُمْ ___ الْحِسَابَ غَدًا» gapni to‘ldiring",
+      "opts": [
+        "هُمْ سَتَدْفَعُونَ الْحِسَابَ غَدًا",
+        "هُمْ سَيَدْفَعَانِ الْحِسَابَ غَدًا",
+        "هُمْ سَيَدْفَعْنَ الْحِسَابَ غَدًا",
+        "هُمْ سَيَدْفَعُونَ الْحِسَابَ غَدًا"
+      ],
+      "correct": 3,
+      "izoh": "هُمْ uchun kelasi zamonda سَيَدْفَعُونَ keladi."
+    },
+    {
+      "q": "Shaharda beshta bog‘ bor",
+      "opts": [
+        "فِي الْمَدِينَةِ خَمْسُ حَدَائِقَ",
+        "فِي الْمَدِينَةِ خَمْسَةُ حَدَائِقَ",
+        "فِي الْمَدِينَةِ خَمْسُ حَدِيقَةٍ",
+        "فِي الْمَدِينَةِ خَمْسُ حَدَائِقٍ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-8): حَدِيقَةٌ muannas; حَدَائِقَ g‘ayri munsarif bo‘lib bu yerda fatha bilan majrur."
+    },
+    {
+      "q": "«أَنْتِ ___ إِلَى السُّوقِ غَدًا» gapni to‘ldiring",
+      "opts": [
+        "أَنْتِ سَوْفَ تَذْهَبُ إِلَى السُّوقِ غَدًا",
+        "أَنْتِ سَوْفَ تَذْهَبِينَ إِلَى السُّوقِ غَدًا",
+        "أَنْتِ سَوْفَ تَذْهَبَانِ إِلَى السُّوقِ غَدًا",
+        "أَنْتِ سَوْفَ تَذْهَبْنَ إِلَى السُّوقِ غَدًا"
+      ],
+      "correct": 1,
+      "izoh": "سَوْفَ dan keyin أَنْتِ ga mos تَذْهَبِينَ keladi."
+    },
+    {
+      "q": "«Ular (ayollar) tarjimonlar» jumlasini tanlang",
+      "opts": [
+        "هَؤُلَاءِ مُتَرْجِمَاتٌ",
+        "هُمْ مُتَرْجِمَاتٌ",
+        "هُنَّ مُتَرْجِمَاتٌ",
+        "هُمَا مُتَرْجِمَاتٌ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-3): Ayollar ko‘pligi kishilik olmoshi هُنَّ bo‘ladi."
+    },
+    {
+      "q": "Ular ikkisi (erkaklar) suv ichishdi",
+      "opts": [
+        "هُمَا شَرِبَتَا الْمَاءَ",
+        "هُمَا شَرِبُوا الْمَاءَ",
+        "هُمَا شَرِبْتُمَا الْمَاءَ",
+        "هُمَا شَرِبَا الْمَاءَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-8): Erkak jinsidagi ikkilik moziyda ـَا qo‘shimchasini oladi."
+    },
+    {
+      "q": "«هُنَّ ___ الْعَرَبِيَّةَ غَدًا» gapni to‘ldiring",
+      "opts": [
+        "هُنَّ سَيَدْرُسْنَ الْعَرَبِيَّةَ غَدًا",
+        "هُنَّ سَتَدْرُسْنَ الْعَرَبِيَّةَ غَدًا",
+        "هُنَّ سَيَدْرُسُونَ الْعَرَبِيَّةَ غَدًا",
+        "هُنَّ سَيَدْرُسَانِ الْعَرَبِيَّةَ غَدًا"
+      ],
+      "correct": 0,
+      "izoh": "هُنَّ uchun سَيَدْرُسْنَ ishlatiladi."
+    },
+    {
+      "q": "Ayol oshpaz faol emas",
+      "opts": [
+        "الطَّبَّاخَةُ لَيْسَ نَشِيطَةً",
+        "الطَّبَّاخَةُ لَيْسَتْ نَشِيطَةً",
+        "الطَّبَّاخَةُ لَسْتُ نَشِيطَةً",
+        "الطَّبَّاخَةُ لَسْتَ نَشِيطَةً"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-4): Ayol birlik uchun لَيْسَتْ ishlatiladi."
+    },
+    {
+      "q": "«أَنْتُمَا ___ النَّافِذَةَ غَدًا» gapni to‘ldiring",
+      "opts": [
+        "أَنْتُمَا سَوْفَ يَفْتَحَانِ النَّافِذَةَ غَدًا",
+        "أَنْتُمَا سَوْفَ تَفْتَحُونَ النَّافِذَةَ غَدًا",
+        "أَنْتُمَا سَوْفَ تَفْتَحَانِ النَّافِذَةَ غَدًا",
+        "أَنْتُمَا سَوْفَ تَفْتَحْنَ النَّافِذَةَ غَدًا"
+      ],
+      "correct": 2,
+      "izoh": "أَنْتُمَا uchun سَوْفَ تَفْتَحَانِ keladi."
+    },
+    {
+      "q": "Men suv ichdim",
+      "opts": [
+        "أَنَا شَرِبْتَ الْمَاءَ",
+        "أَنَا شَرِبْتِ الْمَاءَ",
+        "أَنَا شَرِبَتِ الْمَاءَ",
+        "أَنَا شَرِبْتُ الْمَاءَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-5): أَنَا bilan moziy oxirida ـْتُ keladi."
+    },
+    {
+      "q": "«هُمَا ___ الْحِسَابَ غَدًا» (ikkisi erkak)",
+      "opts": [
+        "هُمَا سَيَدْفَعَانِ الْحِسَابَ غَدًا",
+        "هُمَا سَتَدْفَعَانِ الْحِسَابَ غَدًا",
+        "هُمَا سَيَدْفَعُونَ الْحِسَابَ غَدًا",
+        "هُمَا سَيَدْفَعْنَ الْحِسَابَ غَدًا"
+      ],
+      "correct": 0,
+      "izoh": "Erkak jinsdagi هُمَا uchun سَيَدْفَعَانِ keladi."
+    },
+    {
+      "q": "Mashina bekat yonida",
+      "opts": [
+        "السَّيَّارَةُ بِجَانِبِ الْمَحَطَّةَ",
+        "السَّيَّارَةُ بِجَانِبِ الْمَحَطَّةِ",
+        "السَّيَّارَةُ بِجَانِبِ الْمَحَطَّةُ",
+        "السَّيَّارَةُ بِجَانِبِ الْمَحَطَّةً"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-6): بِجَانِبِ dan keyingi الْمَحَطَّةِ majrur keladi."
+    },
+    {
+      "q": "«أَنْتُنَّ ___ الْعَصِيرَ غَدًا» gapni to‘ldiring",
+      "opts": [
+        "أَنْتُنَّ سَوْفَ يَشْرَبْنَ الْعَصِيرَ غَدًا",
+        "أَنْتُنَّ سَوْفَ تَشْرَبُونَ الْعَصِيرَ غَدًا",
+        "أَنْتُنَّ سَوْفَ تَشْرَبْنَ الْعَصِيرَ غَدًا",
+        "أَنْتُنَّ سَوْفَ تَشْرَبَانِ الْعَصِيرَ غَدًا"
+      ],
+      "correct": 2,
+      "izoh": "أَنْتُنَّ uchun سَوْفَ تَشْرَبْنَ keladi."
+    },
+    {
+      "q": "Sovg‘a yo‘lovchi uchun",
+      "opts": [
+        "الْهَدِيَّةُ مِنَ الْمُسَافِرِ",
+        "الْهَدِيَّةُ عَلَى الْمُسَافِرِ",
+        "الْهَدِيَّةُ عَنِ الْمُسَافِرِ",
+        "الْهَدِيَّةُ لِلْمُسَافِرِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-7): Tegishlilik uchun لِـ ishlatiladi."
+    },
+    {
+      "q": "«Qaysi aeroportdan?» iborasini tanlang",
+      "opts": [
+        "مِنْ أَيِّ مَطَارٍ",
+        "مِنْ أَيُّ مَطَارٍ",
+        "مِنْ أَيَّ مَطَارٍ",
+        "مِنْ أَيِّ مَطَارٌ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-7): مِنْ dan keyin أَيِّ majrur, unga qo‘shilgan ot ham majrur."
     }
   ]
 }
