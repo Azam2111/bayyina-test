@@ -1,247 +1,667 @@
 {
   "title": "Qovaid — A1 10-dars",
   "otish": 80,
-  "vaqt": 40,
+  "vaqt": 60,
   "questions": [
     {
-      "q": "Arab tilida fe'liy gap (الجملة الفعلية) qaysi tartibda boshlanadi?",
-      "opts": ["Foil + Fe'l + Maf'ul", "Fe'l + Foil + Maf'ulun bih", "Mubtado + Xabar", "Maf'ul + Fe'l + Foil"],
-      "correct": 1,
-      "izoh": "Fe'liy gap: fe'l + foil + maf'ulun bih tartibida."
+      "q": "Bemor xatni yubordi.",
+      "opts": [
+        "أَرْسَلَ الْمَرِيضُ الرِّسَالَةِ",
+        "أَرْسَلَ الْمَرِيضُ الرِّسَالَةُ",
+        "أَرْسَلَ الْمَرِيضُ الرِّسَالَةَ",
+        "أَرْسَلَ الْمَرِيضُ الرِّسَالَتَيْنِ"
+      ],
+      "correct": 2,
+      "izoh": "Fe’l ta’siri tushgan الرِّسَالَةَ mansub."
     },
     {
-      "q": "Gapdagi harakatni bajaruvchi shaxs (الفاعل) qaysi kelishikda (e'robda) bo'ladi?",
-      "opts": ["Marfu' (bosh kelishik, damma bilan)", "Mansub (tushum kelishigi, fatha bilan)", "Majrur (qaratqich kelishigi, kasra bilan)", "Jazm (sukun bilan)"],
+      "q": "«مَا كَتَبْتُ» qanday ma’noda?",
+      "opts": [
+        "Sen yozma.",
+        "Men yozmadim.",
+        "Men yozmayman.",
+        "Men yozmayapman."
+      ],
+      "correct": 1,
+      "izoh": "مَا + moziy o‘tgan ishni inkor qiladi; كَتَبْتُ — men yozdim."
+    },
+    {
+      "q": "«فَحَصَ الطَّبِيبُ الْمَرِيضَ فِي الْعِيَادَةِ»da jar-majrur qaysi?",
+      "opts": [
+        "فَحَصَ الطَّبِيبُ",
+        "الطَّبِيبُ",
+        "الْمَرِيضَ",
+        "فِي الْعِيَادَةِ"
+      ],
+      "correct": 3,
+      "izoh": "فِي — jar harfi, الْعِيَادَةِ — undan keyingi majrur ism."
+    },
+    {
+      "q": "Sizlar (ayollar) xatni yubordingiz.",
+      "opts": [
+        "أَنْتُنَّ أَرْسَلْتُنَّ الرِّسَالَةَ",
+        "أَنْتُنَّ أَرْسَلْنَا الرِّسَالَةَ",
+        "أَنْتُنَّ أَرْسَلْتُمْ الرِّسَالَةَ",
+        "أَنْتُنَّ أَرْسَلْنَ الرِّسَالَةَ"
+      ],
       "correct": 0,
-      "izoh": "Foil doimo marfu' — damma bilan keladi."
+      "izoh": "Takror (A1-8): أَنْتُنَّ uchun ـْتُنَّ ishlatiladi."
     },
     {
-      "q": "Mashqdagi gapga muvofiq bo'sh joyni to'ldiring: «___ يَنْتَظِرُ الْمُسَافِرُ».",
-      "opts": ["الطَّرِيقَ", "الْقِطَارَ", "النَّظَّارَةَ", "الْمَطْعَمَ"],
+      "q": "«هُمْ لَا يَدْفَعُونَ الْحِسَابَ الْآنَ» qanday ma’noda?",
+      "opts": [
+        "Ular ertaga hisobni to‘lashmaydi.",
+        "Ular hozir hisobni to‘lashmayapti.",
+        "Ular hozir hisobni to‘lashyapti.",
+        "Ular kecha hisobni to‘lashmadi."
+      ],
       "correct": 1,
-      "izoh": "Yo'lovchi poyezdni kutadi: الْقِطَارَ يَنْتَظِرُ الْمُسَافِرُ."
+      "izoh": "لَا va الْآنَ hozirgi inkorni bildiradi."
     },
     {
-      "q": "«أَعْطَى الطَّبِيبُ ___ جُرْعَةً» gapidagi bo'sh joyga mos maf'ulun bihni toping.",
-      "opts": ["الْحَقِيبَةَ", "الْمَرِيضَ", "الْجَدِيدَ", "الْجَمَلَ"],
-      "correct": 1,
-      "izoh": "Shifokor bemorga doza beradi: الْمَرِيضَ (bemor)."
-    },
-    {
-      "q": "«أَرْسَلْتُ ___ لِصَدِيقِي فِي مِصْرَ» gapida qaysi so'z mos keladi?",
-      "opts": ["طَبِيبًا", "رِسَالَةً", "طَرِيقًا", "حَافِلَةً"],
-      "correct": 1,
-      "izoh": "Misrdagi do'stga xat yuboriladi: رِسَالَةً (xat)."
-    },
-    {
-      "q": "«يَرْكَبُ سَعِيدٌ ___ لِلذَّهَابِ إِلَى الْمَدْرَسَةِ» gapida mantiqan to'g'ri so'zni tanlang.",
-      "opts": ["الْمَشْيَ", "الطَّرِيقَ", "الْحَافِلَةَ", "الْقِطَارَ"],
-      "correct": 2,
-      "izoh": "Maktabga borish uchun avtobusga minadi: الْحَافِلَةَ."
-    },
-    {
-      "q": "«يَسْتَخْدِمُ الْوَلَدُ فُرْشَاةَ الْأَسْنَانِ» gapida foil (bajaruvchi) qaysi so'z?",
-      "opts": ["يَسْتَخْدِمُ", "الْوَلَدُ", "فُرْشَاةَ", "الْأَسْنَانِ"],
-      "correct": 1,
-      "izoh": "الْوَلَدُ — foil (harakatni bajaruvchi); يَسْتَخْدِمُ — fe'l."
-    },
-    {
-      "q": "«يَشْعُرُ ثَامِرٌ بِأَلَمٍ شَدِيدٍ» gapining o'zbek tilidagi to'g'ri tarjimasi qaysi?",
-      "opts": ["Somir qattiq og'riqni davolayapti.", "Somir qattiq og'riq his qilyapti.", "Somir kasalxonaga yetib keldi.", "Bolaning tishi qattiq og'riyapti."],
-      "correct": 1,
-      "izoh": "يَشْعُرُ بِأَلَمٍ شَدِيدٍ = qattiq og'riq his qiladi."
-    },
-    {
-      "q": "«تَتَكَوَّنُ الْجُمْلَةُ الْفِعْلِيَّةُ مِنْ فِعْلٍ + فَاعِلٍ + تَتِمَّةِ الْجُمْلَةِ» qoidasiga ko'ra, gapning to'ldiruvchi qismi (تَتِمَّة) nimalardan iborat bo'lishi mumkin?",
-      "opts": ["Faqat ismlardan", "Faqat fe'llardan", "Maf'ulun bih, jar-majrur yoki zarf", "Faqat inkor yuklamalaridan"],
-      "correct": 2,
-      "izoh": "Tatimma — maf'ulun bih, jar-majrur yoki zarf bo'lishi mumkin."
-    },
-    {
-      "q": "«الْمَفْعُولُ بِهِ» (vositasiz to'ldiruvchi) doimo qanday holatda (e'robda) bo'ladi?",
-      "opts": ["Mansub (fatha yoki uning o'rniga keluvchi belgi bilan)", "Marfu' (damma bilan)", "Majrur (kasra bilan)", "Sokin (sukun bilan)"],
+      "q": "Bemor klinikadan chiqdi.",
+      "opts": [
+        "خَرَجَ الْمَرِيضُ مِنَ الْعِيَادَةِ",
+        "خَرَجَ الْمَرِيضُ مِنَ الْعِيَادَةُ",
+        "خَرَجَ الْمَرِيضُ مِنَ الْعِيَادَةَ",
+        "خَرَجَ الْمَرِيضُ مِنَ الْعِيَادَاتِ"
+      ],
       "correct": 0,
-      "izoh": "Maf'ulun bih doimo mansub — fatha (yoki o'rnini bosuvchi belgi) bilan."
+      "izoh": "مِنْ dan keyin الْعِيَادَةِ majrur keladi."
     },
     {
-      "q": "«اتَّصَلَ أَبِي ___ الطَّبِيبِ» gapidagi bo'sh joyga mos harfi jarni tanlang.",
-      "opts": ["فِي", "إِلَى", "بِـ", "عَنْ"],
+      "q": "«هُمْ لَنْ يَدْفَعُوا الْحِسَابَ غَدًا» qanday ma’noda?",
+      "opts": [
+        "Ular kecha hisobni to‘lashmadi.",
+        "Ular ertaga hisobni to‘lashmaydi.",
+        "Ular hozir hisobni to‘lashmayapti.",
+        "Ular ertaga hisobni to‘lashadi."
+      ],
+      "correct": 1,
+      "izoh": "لَنْ va غَدًا kelajakdagi inkorni bildiradi."
+    },
+    {
+      "q": "Sumkada yettita riyol bor.",
+      "opts": [
+        "فِي الْحَقِيبَةِ سَبْعُ رِيَالَاتٍ",
+        "فِي الْحَقِيبَةِ سَبْعَةُ رِيَالٍ",
+        "فِي الْحَقِيبَةِ سَبْعَةُ رِيَالَاتٍ",
+        "فِي الْحَقِيبَةِ سَبْعَةُ رِيَالَاتٌ"
+      ],
       "correct": 2,
-      "izoh": "اتَّصَلَ بِـ = ...ga qo'ng'iroq qildi."
+      "izoh": "Takror (A1-8): رِيَالٌ muzakkar, 7 bilan son teskari jinsda va sanalmish ko‘plik majrur keladi."
     },
     {
-      "q": "«ابْتَعِدْ ___ السَّيِّئِ» gapida qaysi harfi jar ishlatiladi?",
-      "opts": ["إِلَى", "عَنِ", "فِي", "بِـ"],
-      "correct": 1,
-      "izoh": "ابْتَعِدْ عَنْ = ...dan uzoqlash."
-    },
-    {
-      "q": "«يَنَامُ أَخِي ___ لِأَنَّهُ مَرِيضٌ» gapini mos keladigan variant bilan to'ldiring.",
-      "opts": ["إِلَى الْمُسْتَشْفَى", "فِي الْمُسْتَشْفَى", "عَنِ الْمُسْتَشْفَى", "مِنَ الْمُسْتَشْفَى"],
-      "correct": 1,
-      "izoh": "Joyda bo'lish «فِي»: فِي الْمُسْتَشْفَى (kasalxonada)."
-    },
-    {
-      "q": "«وَصَلَتِ الطَّائِرَةُ ___» gapiga qaysi birikma mos keladi?",
-      "opts": ["عَنِ الْمَطَارِ", "إِلَى الْمَطَارِ", "فِي الْمَطَارِ", "عَلَى الْمَطَارِ"],
-      "correct": 1,
-      "izoh": "وَصَلَ إِلَى = ...ga yetib keldi: إِلَى الْمَطَارِ."
-    },
-    {
-      "q": "Harfi jardan keyin kelgan ism (الاسم المجرور) qaysi kelishik belgisini oladi?",
-      "opts": ["Fatha", "Zamma", "Kasra", "Sukun"],
-      "correct": 2,
-      "izoh": "Majrur ism kasra (ِ) bilan keladi."
-    },
-    {
-      "q": "«نَتَنَاوَلُ طَعَامَ الْعَشَاءِ ___» gapida qaysi zamon zarfi mos keladi?",
-      "opts": ["صَبَاحًا", "مَسَاءً", "ظُهْرًا", "تَحْتَ"],
-      "correct": 1,
-      "izoh": "الْعَشَاء — kechki ovqat, mos zarf: مَسَاءً (kechqurun)."
-    },
-    {
-      "q": "«يَقِفُ الْمُعَلِّمُ ___ الطُّلَّابِ» gapida o'qituvchining o'rnini ko'rsatuvchi makon zarfini toping.",
-      "opts": ["خَلْفَ", "أَمَامَ", "تَحْتَ", "بَعْدَ"],
-      "correct": 1,
-      "izoh": "O'qituvchi talabalar oldida turadi: أَمَامَ."
-    },
-    {
-      "q": "«انْتَهَى الدَّرْسُ ___ الظُّهْرِ» gapiga mos keluvchi zarfni tanlang.",
-      "opts": ["بَعْدَ", "أَمَامَ", "صَبَاحًا", "تَحْتَ"],
+      "q": "«شَرِبَ الْوَلَدُ الْحَلِيبَ صَبَاحًا»da ishni bajargan kim?",
+      "opts": [
+        "الْوَلَدُ",
+        "شَرِبَ",
+        "صَبَاحًا",
+        "الْحَلِيبَ"
+      ],
       "correct": 0,
-      "izoh": "Dars peshindan keyin tugadi: بَعْدَ الظُّهْرِ."
+      "izoh": "الْوَلَدُ — ichish ishini bajaruvchi foil."
     },
     {
-      "q": "«يَقَعُ بَيْتُنَا ___ الْحَدِيقَةِ» gapida qaysi zarf mantiqan to'g'ri?",
-      "opts": ["دَاخِلَ", "يَمِينَ", "تَحْتَ", "مَسَاءً"],
-      "correct": 1,
-      "izoh": "Uy bog'ning o'ng tomonida joylashgan: يَمِينَ الْحَدِيقَةِ."
+      "q": "«لَنْ يَشْرَبَ الْمَرِيضُ الدَّوَاءَ غَدًا» qanday ma’noda?",
+      "opts": [
+        "Bemor ertaga dorini ichsin.",
+        "Bemor hozir dorini ichmayapti.",
+        "Bemor kecha dorini ichmadi.",
+        "Bemor ertaga dorini ichmaydi."
+      ],
+      "correct": 3,
+      "izoh": "لَنْ va غَدًا kelasi zamon inkorini bildiradi."
     },
     {
-      "q": "«صَبَاحًا» (ertalab) va «مَسَاءً» (kechqurun) so'zlari grammatik jihatdan qaysi turga kiradi?",
-      "opts": ["ظَرْفُ مَكَانٍ (Makon zarfi)", "ظَرْفُ زَمَانٍ (Zamon zarfi)", "حَرْفُ جَرٍّ (Jar harfi)", "فِعْلٌ مَاضٍ (O'tgan zamon fe'li)"],
-      "correct": 1,
-      "izoh": "صَبَاحًا، مَسَاءً — zamon (vaqt) zarflari."
-    },
-    {
-      "q": "«لَعِبَ الْأَصْدِقَاءُ ___ الْقَدَمِ» gapidagi bo'sh joyga mos so'zni qo'ying.",
-      "opts": ["رِيَاضَةَ", "كُرَةَ", "أَمَامَ", "الْعَمَلِ"],
-      "correct": 1,
-      "izoh": "كُرَةُ الْقَدَمِ = futbol; لَعِبَ كُرَةَ الْقَدَمِ (futbol o'ynadi)."
-    },
-    {
-      "q": "«أَنْتَظِرُ صَدِيقِي ___ الْمَكْتَبَةِ» gapida qaysi makon ifodasi to'g'ri keladi?",
-      "opts": ["أُسْبُوعًا", "فَوْقَ", "أَمَامَ", "شِتَاءً"],
-      "correct": 2,
-      "izoh": "Kutubxona oldida do'stimni kutaman: أَمَامَ الْمَكْتَبَةِ."
-    },
-    {
-      "q": "«يَبْحَثُ الطَّالِبُ عَنْ ___» gapini ma'no jihatidan to'ldiring.",
-      "opts": ["الْقَلَمِ", "الرِّيَاضَةِ", "الْبَيْتِ", "الشِّتَاءِ"],
+      "q": "Talaba kechqurun o‘qidi.",
+      "opts": [
+        "دَرَسَ الطَّالِبُ مَسَاءً",
+        "دَرَسَ الطَّالِبُ مَسَاءٍ",
+        "دَرَسَ الطَّالِبُ مَسَاءُ",
+        "دَرَسَ الطَّالِبُ مَسَاءٌ"
+      ],
       "correct": 0,
-      "izoh": "Talaba qalamni qidiryapti: يَبْحَثُ عَنِ الْقَلَمِ."
+      "izoh": "مَسَاءً harakat vaqtini bildiruvchi zarf."
     },
     {
-      "q": "«نُسَافِرُ ___ إِلَى الْقَرْيَةِ» gapida qaysi vaqt ifodasi to'g'ri?",
-      "opts": ["فَوْقَ", "أُسْبُوعًا", "شِتَاءً", "أَمَامَ"],
-      "correct": 2,
-      "izoh": "Qishda qishloqqa sayohat qilamiz: شِتَاءً (qishda)."
-    },
-    {
-      "q": "«نَظَّفَتْ أُمِّي ___» gapidagi bo'sh joyga to'g'ri so'zni tanlang.",
-      "opts": ["الْبَيْتَ", "الْعَمَلَ", "فَوْقَ", "كُرَةَ"],
+      "q": "Sizlar (ayollar) xatni yuborasizlar.",
+      "opts": [
+        "أَنْتُنَّ تُرْسِلْنَ الرِّسَالَةَ",
+        "أَنْتُنَّ تُرْسِلُونَ الرِّسَالَةَ",
+        "أَنْتُنَّ يُرْسِلْنَ الرِّسَالَةَ",
+        "أَنْتُنَّ تُرْسِلَانِ الرِّسَالَةَ"
+      ],
       "correct": 0,
-      "izoh": "Onam uyni tozaladi: نَظَّفَتْ ... الْبَيْتَ."
+      "izoh": "Takror (A1-9): أَنْتُنَّ uchun تُرْسِلْنَ keladi."
     },
     {
-      "q": "«يَرْجِعُ الْعُمَّالُ مِنَ ___ مَسَاءً» gapida ishchilar qayerdan qaytayotgani aytilgan?",
-      "opts": ["الْبَيْتِ", "الْعَمَلِ", "الرِّيَاضَةِ", "الْقَلَمِ"],
+      "q": "«لَنْ أَكْتُبَ غَدًا» qanday ma’noda?",
+      "opts": [
+        "Men kecha yozmadim.",
+        "Men hozir yozmayapman.",
+        "Sen ertaga yozma.",
+        "Men ertaga yozmayman."
+      ],
+      "correct": 3,
+      "izoh": "لَنْ kelasi zamon inkorini bildiradi."
+    },
+    {
+      "q": "Bemor klinikaga yetib keldi.",
+      "opts": [
+        "وَصَلَ الْمَرِيضُ إِلَى الْعِيَادَةَ",
+        "وَصَلَ الْمَرِيضُ إِلَى الْعِيَادَاتِ",
+        "وَصَلَ الْمَرِيضُ إِلَى الْعِيَادَةِ",
+        "وَصَلَ الْمَرِيضُ إِلَى الْعِيَادَةُ"
+      ],
+      "correct": 2,
+      "izoh": "إِلَى dan keyin الْعِيَادَةِ majrur keladi."
+    },
+    {
+      "q": "«لَمْ أَكْتُبْ أَمْسِ» qanday ma’noda?",
+      "opts": [
+        "Men ertaga yozmayman.",
+        "Men kecha yozmadim.",
+        "Men kecha yozdim.",
+        "Men hozir yozmayapman."
+      ],
       "correct": 1,
-      "izoh": "Ishchilar ishdan qaytadi: مِنَ الْعَمَلِ."
+      "izoh": "لَمْ + majzum muzori’ o‘tgan zamon inkorini bildiradi."
     },
     {
-      "q": "«وَضَعَتْ أُمِّي الطَّعَامَ ___ الطَّاوِلَةِ» gapiga mos keladigan o'rin-joy ko'rsatkichi qaysi?",
-      "opts": ["فَوْقَ", "أَمَامَ", "كُرَةَ", "الْعَمَلِ"],
+      "q": "Ular (ayollar) tirishqoq hamshiralar.",
+      "opts": [
+        "هُمَا مُمَرِّضَاتٌ مُجْتَهِدَاتٌ",
+        "هُمْ مُمَرِّضَاتٌ مُجْتَهِدَاتٌ",
+        "هُنَّ مُمَرِّضَاتٌ مُجْتَهِدَاتٌ",
+        "هَؤُلَاءِ مُمَرِّضَاتٌ مُجْتَهِدَاتٌ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-3): Ayollar ko‘pligi kishilik olmoshi هُنَّ."
+    },
+    {
+      "q": "«وَصَلَ الْمُسَافِرُ إِلَى الْمَطَارِ»da gapning tugallovchisi qaysi?",
+      "opts": [
+        "الْمُسَافِرُ",
+        "وَصَلَ",
+        "وَصَلَ الْمُسَافِرُ",
+        "إِلَى الْمَطَارِ"
+      ],
+      "correct": 3,
+      "izoh": "إِلَى الْمَطَارِ qayerga yetib kelganini bildiradi."
+    },
+    {
+      "q": "«أَنْتُمَا لَنْ ___ الْحِسَابَ غَدًا».",
+      "opts": [
+        "أَنْتُمَا لَنْ تَدْفَعَانِ الْحِسَابَ غَدًا",
+        "أَنْتُمَا لَنْ يَدْفَعَا الْحِسَابَ غَدًا",
+        "أَنْتُمَا لَنْ تَدْفَعُوا الْحِسَابَ غَدًا",
+        "أَنْتُمَا لَنْ تَدْفَعَا الْحِسَابَ غَدًا"
+      ],
+      "correct": 3,
+      "izoh": "لَنْ dan keyin ikkilik fe’lning nuni tushadi."
+    },
+    {
+      "q": "«فَحَصَ الطَّبِيبُ الْمَرِيضَ صَبَاحًا»da kim tekshirdi?",
+      "opts": [
+        "الطَّبِيبُ",
+        "فَحَصَ",
+        "صَبَاحًا",
+        "الْمَرِيضَ"
+      ],
       "correct": 0,
-      "izoh": "Taomni stol ustiga qo'ydi: فَوْقَ الطَّاوِلَةِ."
+      "izoh": "Ishni bajargan shaxs — الطَّبِيبُ."
     },
     {
-      "q": "«يُصَابُ أَخِي بِالزُّكَامِ ___» gapiga faslni ifodalovchi qaysi so'z mos keladi?",
-      "opts": ["أُسْبُوعًا", "شِتَاءً", "الْبَيْتِ", "الْجَرْيِ"],
+      "q": "Sen (erkak) eshikni ochding.",
+      "opts": [
+        "أَنْتَ فَتَحْتُ الْبَابَ",
+        "أَنْتَ فَتَحْتَ الْبَابَ",
+        "أَنْتَ فَتَحَتِ الْبَابَ",
+        "أَنْتَ فَتَحْتِ الْبَابَ"
+      ],
       "correct": 1,
-      "izoh": "Akam qishda shamollaydi: شِتَاءً (qishda)."
+      "izoh": "Takror (A1-5): أَنْتَ uchun moziy ـْتَ oladi."
     },
     {
-      "q": "Ismiy gapni (الجملة الاسمية) inkor qilish uchun qaysi yuklama ishlatiladi?",
-      "opts": ["لَمْ", "لَنْ", "لَيْسَ", "مَا"],
-      "correct": 2,
-      "izoh": "Ismiy gapni inkor qilish uchun «لَيْسَ» ishlatiladi."
-    },
-    {
-      "q": "Fe'liy gaplarni inkor qilishda quyidagi yuklamalardan qaysi biri ishlatilmaydi?",
-      "opts": ["مَا / لَا", "لَمْ / لَنْ", "لَيْسَ", "Hech biri, barchasi fe'liy gapga keladi"],
-      "correct": 2,
-      "izoh": "«لَيْسَ» — ismiy gap uchun; fe'liy gapda ishlatilmaydi."
-    },
-    {
-      "q": "Kelasi zamon fe'lini inkor qilib, ma'noni «hech qachon bajarilmaydi» shakliga o'zgartiradigan yuklama qaysi?",
-      "opts": ["لَمْ", "لَنْ", "مَا", "لَا"],
+      "q": "«لَنْ نَدْرُسَ غَدًا» qanday ma’noda?",
+      "opts": [
+        "Biz ertaga o‘qiymiz.",
+        "Biz ertaga o‘qimaymiz.",
+        "Biz hozir o‘qimayapmiz.",
+        "Biz kecha o‘qimadik."
+      ],
       "correct": 1,
-      "izoh": "«لَنْ» — kelasi zamonni qat'iy inkor qiladi."
+      "izoh": "لَنْ نَدْرُسَ — kelasi zamonda biz o‘qimaymiz."
     },
     {
-      "q": "Hozirgi-kelasi zamon (مُضَارِع) fe'lini inkor qilib, uning oxirini sokin (jazm) qiladigan va ma'noni o'tgan zamonga buradigan yuklama qaysi?",
-      "opts": ["لَمْ", "لَنْ", "لَا", "لَيْسَ"],
+      "q": "«شَرِبَ الْوَلَدُ الْحَلِيبَ صَبَاحًا»da nima ichildi?",
+      "opts": [
+        "شَرِبَ",
+        "صَبَاحًا",
+        "الْوَلَدُ",
+        "الْحَلِيبَ"
+      ],
+      "correct": 3,
+      "izoh": "الْحَلِيبَ — fe’l ta’siri tushgan to‘ldiruvchi."
+    },
+    {
+      "q": "«أَنْتُمْ لَمْ ___ الْعَصِيرَ» gapni to‘ldiring.",
+      "opts": [
+        "أَنْتُمْ لَمْ تَشْرَبُونَ الْعَصِيرَ",
+        "أَنْتُمْ لَمْ يَشْرَبُوا الْعَصِيرَ",
+        "أَنْتُمْ لَمْ تَشْرَبْنَ الْعَصِيرَ",
+        "أَنْتُمْ لَمْ تَشْرَبُوا الْعَصِيرَ"
+      ],
+      "correct": 3,
+      "izoh": "لَمْ dan keyin تَشْرَبُونَ shaklining nuni tushadi."
+    },
+    {
+      "q": "Sumkada o‘n beshta riyol bor.",
+      "opts": [
+        "فِي الْحَقِيبَةِ خَمْسَ عَشَرَ رِيَالًا",
+        "فِي الْحَقِيبَةِ خَمْسَةَ عَشْرَةَ رِيَالًا",
+        "فِي الْحَقِيبَةِ خَمْسَةَ عَشَرَ رِيَالًا",
+        "فِي الْحَقِيبَةِ خَمْسَةَ عَشَرَ رِيَالَاتٍ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-8): رِيَالٌ muzakkar; 15 dan keyin sanalmish birlik mansub keladi."
+    },
+    {
+      "q": "Yo‘lovchi poyezdni kutdi.",
+      "opts": [
+        "اِنْتَظَرَ الْمُسَافِرُ الْقِطَارِ",
+        "اِنْتَظَرَ الْمُسَافِرُ الْقِطَارَيْنِ",
+        "اِنْتَظَرَ الْمُسَافِرُ الْقِطَارُ",
+        "اِنْتَظَرَ الْمُسَافِرُ الْقِطَارَ"
+      ],
+      "correct": 3,
+      "izoh": "الْقِطَارَ fe’lning bevosita to‘ldiruvchisi."
+    },
+    {
+      "q": "«لَمْ يَذْهَبُوا إِلَى السُّوقِ أَمْسِ» qanday ma’noda?",
+      "opts": [
+        "Ular kecha bozorga borishmadi.",
+        "Ular hozir bozorga borishmayapti.",
+        "Ular ertaga bozorga borishmaydi.",
+        "Ular kecha bozorga borishdi."
+      ],
       "correct": 0,
-      "izoh": "«لَمْ» muzori'ni jazm qilib, o'tgan zamon ma'nosini beradi."
+      "izoh": "لَمْ va أَمْسِ o‘tgan zamon inkorini bildiradi."
     },
     {
-      "q": "«أَخَذَ الرَّجُلُ الدَّوَاءَ» (Kishi dorini oldi) o'tgan zamon gapining to'g'ri inkor shaklini toping.",
-      "opts": ["لَا يَأْخُذُ الرَّجُلُ الدَّوَاءَ", "لَنْ يَأْخُذَ الرَّجُلُ الدَّوَاءَ", "مَا أَخَذَ الرَّجُلُ الدَّوَاءَ", "لَيْسَ الرَّجُلُ الدَّوَاءَ"],
-      "correct": 2,
-      "izoh": "O'tgan zamonni inkor: مَا أَخَذَ (yoki لَمْ يَأْخُذْ)."
-    },
-    {
-      "q": "«الطَّبِيبُ مَشْغُولٌ» (Shifokor band) ismiy gapining inkor shakli qaysi javobda to'g'ri berilgan?",
-      "opts": ["مَا مَشْغُولٌ الطَّبِيبُ", "لَمْ يَشْغَلِ الطَّبِيبُ", "لَيْسَ الطَّبِيبُ مَشْغُولًا", "لَنِ الطَّبِيبُ مَشْغُولٌ"],
-      "correct": 2,
-      "izoh": "Ismiy gap inkori: لَيْسَ الطَّبِيبُ مَشْغُولًا (xabar mansub bo'ladi)."
-    },
-    {
-      "q": "«أَذْهَبُ إِلَى عَمَلِي غَدًا» gapini «ertaga borolmayman» ma'nosida inkor qilish uchun qaysi yuklama qo'yiladi?",
-      "opts": ["لَمْ", "لَنْ", "لَيْسَ", "مَا"],
+      "q": "«وَصَلَ الطَّبِيبُ إِلَى الْعِيَادَةِ صَبَاحًا»da vaqtni toping.",
+      "opts": [
+        "إِلَى الْعِيَادَةِ",
+        "صَبَاحًا",
+        "وَصَلَ",
+        "الطَّبِيبُ"
+      ],
       "correct": 1,
-      "izoh": "Kelajakni inkor: لَنْ أَذْهَبَ ... غَدًا (ertaga bormayman)."
+      "izoh": "صَبَاحًا harakat qachon bo‘lganini bildiradi."
     },
     {
-      "q": "«أَنَا بِخَيْرٍ الآنَ وَ___ أَشْعُرُ بِأَلَمٍ» gapiga mos inkor yuklamasini tanlang.",
-      "opts": ["لَنْ", "لَمْ", "لَا", "لَيْسَ"],
-      "correct": 2,
-      "izoh": "Hozirgi holatni inkor: لَا أَشْعُرُ (og'riq sezmayapman)."
-    },
-    {
-      "q": "«___ عِنْدِي تَسَوُّسٌ فِي أَسْنَانِي» (Tishimda karies yo'q) gapida qaysi yuklama to'g'ri?",
-      "opts": ["لَنْ", "لَمْ", "لَيْسَ", "مَا"],
-      "correct": 2,
-      "izoh": "«yo'q» (bor emas) — لَيْسَ عِنْدِي."
-    },
-    {
-      "q": "Biror ishni bajarishga imkoniyati yetmagan kishi qaysi iborani ishlatadi?",
-      "opts": ["يَجِبُ أَنْ", "لَا أَسْتَطِيعُ", "أَشْعُرُ بِـ", "شُكْرًا لَكَ"],
+      "q": "Ikki ayol hisobni to‘lashadi.",
+      "opts": [
+        "هُمَا يَدْفَعَانِ الْحِسَابَ",
+        "هُمَا تَدْفَعَانِ الْحِسَابَ",
+        "هُمَا يَدْفَعْنَ الْحِسَابَ",
+        "هُمَا تَدْفَعُونَ الْحِسَابَ"
+      ],
       "correct": 1,
-      "izoh": "لَا أَسْتَطِيعُ = qila olmayman / imkonim yo'q."
+      "izoh": "Takror (A1-9): Ayollar ikkiligida هُمَا تَدْفَعَانِ keladi."
     },
     {
-      "q": "Shifokor bemorga dorilarni vaqtida ichishi zarurligini aytganda qaysi iboradan foydalanadi?",
-      "opts": ["لَا أَسْتَطِيعُ أَنْ تَتَنَاوَلَ الدَّوَاءَ", "يَجِبُ أَنْ تَتَنَاوَلَ الدَّوَاءَ", "شُكْرًا لَكَ عَلَى الدَّوَاءِ", "أَشْعُرُ بِتَنَاوُلِ الدَّوَاءِ"],
-      "correct": 1,
-      "izoh": "يَجِبُ أَنْ = ...kerak: يَجِبُ أَنْ تَتَنَاوَلَ الدَّوَاءَ (dori ichishing kerak)."
+      "q": "Bemor kecha dorini ichmadi. «لَمْ» bilan tanlang.",
+      "opts": [
+        "لَمْ تَشْرَبِ الْمَرِيضُ الدَّوَاءَ أَمْسِ",
+        "لَمْ يَشْرَبَ الْمَرِيضُ الدَّوَاءَ أَمْسِ",
+        "لَمْ يَشْرَبِ الْمَرِيضُ الدَّوَاءَ أَمْسِ",
+        "لَمْ يَشْرَبُ الْمَرِيضُ الدَّوَاءَ أَمْسِ"
+      ],
+      "correct": 2,
+      "izoh": "لَمْ muzori’ni jazm qiladi; keyingi ال sabab tutashda kasra o‘qiladi."
     },
     {
-      "q": "Bemorga sog'liq tilanganda keng qo'llaniladigan ibora qaysi?",
-      "opts": ["شَفَاكَ اللهُ", "جَزَاكَ اللهُ خَيْرًا", "شُكْرًا لَكَ عَلَى مُسَاعَدَتِكَ", "أَسْتَطِيعُ الآنَ"],
+      "q": "«اِتَّصَلَ الْمَرِيضُ بِالطَّبِيبِ»da jar-majrurni toping.",
+      "opts": [
+        "اِتَّصَلَ",
+        "الْمَرِيضُ",
+        "بِالطَّبِيبِ",
+        "اِتَّصَلَ الْمَرِيضُ"
+      ],
+      "correct": 2,
+      "izoh": "بِـ jar harfi va الطَّبِيبِ majrur ismdan iborat."
+    },
+    {
+      "q": "«لَا يَشْرَبُ الْمَرِيضُ الدَّوَاءَ الْآنَ» qanday ma’noda?",
+      "opts": [
+        "Bemor hozir dorini ichmayapti.",
+        "Bemor kecha dorini ichmadi.",
+        "Bemor hozir dorini ichsin.",
+        "Bemor ertaga dorini ichmaydi."
+      ],
       "correct": 0,
-      "izoh": "شَفَاكَ اللهُ = Alloh senga shifo bersin."
+      "izoh": "الْآنَ bilan hozirgi harakat inkori ifodalangan."
+    },
+    {
+      "q": "Ular (erkaklar) ertaga hisobni to‘lashadi.",
+      "opts": [
+        "هُمْ سَوْفَ يَدْفَعُونَ الْحِسَابَ غَدًا",
+        "هُمْ سَوْفَ يَدْفَعْنَ الْحِسَابَ غَدًا",
+        "هُمْ سَوْفَ يَدْفَعَانِ الْحِسَابَ غَدًا",
+        "هُمْ سَوْفَ تَدْفَعُونَ الْحِسَابَ غَدًا"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-9): هُمْ uchun يَدْفَعُونَ keladi."
+    },
+    {
+      "q": "«فَحَصَ الطَّبِيبُ الْمَرِيضَ صَبَاحًا»da maf’ulun bih qaysi?",
+      "opts": [
+        "صَبَاحًا",
+        "الْمَرِيضَ",
+        "الطَّبِيبُ",
+        "فَحَصَ"
+      ],
+      "correct": 1,
+      "izoh": "الْمَرِيضَ — harakat ta’sir qilgan shaxs."
+    },
+    {
+      "q": "«أَنَا لَنْ ___ إِلَى السُّوقِ غَدًا».",
+      "opts": [
+        "أَنَا لَنْ أَذْهَبَ إِلَى السُّوقِ غَدًا",
+        "أَنَا لَنْ أَذْهَبُ إِلَى السُّوقِ غَدًا",
+        "أَنَا لَنْ نَذْهَبَ إِلَى السُّوقِ غَدًا",
+        "أَنَا لَنْ أَذْهَبْ إِلَى السُّوقِ غَدًا"
+      ],
+      "correct": 0,
+      "izoh": "لَنْ dan keyin أَذْهَبَ mansub bo‘ladi."
+    },
+    {
+      "q": "«وَصَلَ الطَّبِيبُ صَبَاحًا»da tugallovchi qism qaysi?",
+      "opts": [
+        "الطَّبِيبُ",
+        "صَبَاحًا",
+        "وَصَلَ الطَّبِيبُ",
+        "وَصَلَ"
+      ],
+      "correct": 1,
+      "izoh": "صَبَاحًا — kelish vaqtini bildiruvchi zarf."
+    },
+    {
+      "q": "Ular ikkisi mening tog‘alarim.",
+      "opts": [
+        "هُمَا خَالَايَ",
+        "هَذَانِ خَالَايَ",
+        "هُمْ خَالَايَ",
+        "هُوَ خَالَايَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-2): Ikki erkak haqida kishilik olmoshi هُمَا ishlatiladi."
+    },
+    {
+      "q": "«لَمْ يَشْرَبِ الْمَرِيضُ الدَّوَاءَ» qanday ma’noda?",
+      "opts": [
+        "Bemor dorini ichmaydi.",
+        "Bemor dorini ichmayapti.",
+        "Bemor dorini ichmadi.",
+        "Bemor dorini ichsin."
+      ],
+      "correct": 2,
+      "izoh": "لَمْ yordami bilan o‘tgan ish inkor qilingan."
+    },
+    {
+      "q": "«جَلَسَ الْمَرِيضُ أَمَامَ الْعِيَادَةِ»da joyni bildirgan qism qaysi?",
+      "opts": [
+        "جَلَسَ",
+        "جَلَسَ الْمَرِيضُ",
+        "أَمَامَ الْعِيَادَةِ",
+        "الْمَرِيضُ"
+      ],
+      "correct": 2,
+      "izoh": "أَمَامَ الْعِيَادَةِ — klinika oldida, joyni bildiradi."
+    },
+    {
+      "q": "Sen (ayol) hozir suv ichmayapsan.",
+      "opts": [
+        "أَنْتِ لَا تَشْرَبُ الْمَاءَ الْآنَ",
+        "أَنْتِ لَا تَشْرَبِينَ الْمَاءَ الْآنَ",
+        "أَنْتِ لَا تَشْرَبَانِ الْمَاءَ الْآنَ",
+        "أَنْتِ لَا تَشْرَبْنَ الْمَاءَ الْآنَ"
+      ],
+      "correct": 1,
+      "izoh": "أَنْتِ bilan لَا dan keyin تَشْرَبِينَ keladi."
+    },
+    {
+      "q": "Bu (ayol) mening xolam.",
+      "opts": [
+        "هُمْ خَالَتِي",
+        "هَذِهِ خَالَتِي",
+        "هِيَ خَالَتِي",
+        "هَذَا خَالَتِي"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-1): Bir ayolni ko‘rsatish uchun هَذِهِ ishlatiladi."
+    },
+    {
+      "q": "«اِنْتَظَرَ الْمُسَافِرُ الْقِطَارَ مَسَاءً»da vaqt zarfi qaysi?",
+      "opts": [
+        "الْقِطَارَ",
+        "اِنْتَظَرَ",
+        "مَسَاءً",
+        "الْمُسَافِرُ"
+      ],
+      "correct": 2,
+      "izoh": "مَسَاءً kutish vaqtini bildiradi."
+    },
+    {
+      "q": "«لَمْ تَفْتَحِي الْبَابَ أَمْسِ» qanday ma’noda? (ayolga murojaat)",
+      "opts": [
+        "Sen ertaga eshikni ochmaysan.",
+        "Sen kecha eshikni ochding.",
+        "Sen kecha eshikni ochmading.",
+        "Sen hozir eshikni ochmayapsan."
+      ],
+      "correct": 2,
+      "izoh": "لَمْ تَفْتَحِي — ayolga murojaatda o‘tgan zamon inkori."
+    },
+    {
+      "q": "«هُنَّ لَنْ ___ الرِّسَالَةَ غَدًا».",
+      "opts": [
+        "هُنَّ لَنْ يُرْسِلْنَ الرِّسَالَةَ غَدًا",
+        "هُنَّ لَنْ يُرْسِلُوا الرِّسَالَةَ غَدًا",
+        "هُنَّ لَنْ يُرْسِلَا الرِّسَالَةَ غَدًا",
+        "هُنَّ لَنْ تُرْسِلْنَ الرِّسَالَةَ غَدًا"
+      ],
+      "correct": 0,
+      "izoh": "Ayollar ko‘pligidagi ـْنَ لَنْ dan keyin ham saqlanadi."
+    },
+    {
+      "q": "Shaharda uchta klinika bor.",
+      "opts": [
+        "فِي الْمَدِينَةِ ثَلَاثُ عِيَادَاتٌ",
+        "فِي الْمَدِينَةِ ثَلَاثُ عِيَادَاتٍ",
+        "فِي الْمَدِينَةِ ثَلَاثَةُ عِيَادَاتٍ",
+        "فِي الْمَدِينَةِ ثَلَاثُ عِيَادَةٍ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-8): عِيَادَةٌ muannas; 3 dan keyin sanalmish ko‘plik majrur."
+    },
+    {
+      "q": "Shifokor bemorni tekshirdi. To‘g‘ri jumlani tanlang.",
+      "opts": [
+        "فَحَصَ الطَّبِيبَ الْمَرِيضَ",
+        "فَحَصَ الطَّبِيبِ الْمَرِيضَ",
+        "فَحَصَ الطَّبِيبُ الْمَرِيضَ",
+        "فَحَصَ الطَّبِيبَانِ الْمَرِيضَ"
+      ],
+      "correct": 2,
+      "izoh": "Bajaruvchi الطَّبِيبُ marfu’ keladi."
+    },
+    {
+      "q": "«مَا أَرْسَلْتُ الرِّسَالَةَ» qanday ma’noda?",
+      "opts": [
+        "Men xatni yubormadim.",
+        "Men xatni yubormayman.",
+        "Sen xatni yuborma.",
+        "Men xatni yubormayapman."
+      ],
+      "correct": 0,
+      "izoh": "مَا أَرْسَلْتُ — men yubormadim."
+    },
+    {
+      "q": "«نَحْنُ لَمْ ___ الْعَرَبِيَّةَ» gapni to‘ldiring.",
+      "opts": [
+        "نَحْنُ لَمْ نَدْرُسُ الْعَرَبِيَّةَ",
+        "نَحْنُ لَمْ نَدْرُسَ الْعَرَبِيَّةَ",
+        "نَحْنُ لَمْ أَدْرُسِ الْعَرَبِيَّةَ",
+        "نَحْنُ لَمْ نَدْرُسِ الْعَرَبِيَّةَ"
+      ],
+      "correct": 3,
+      "izoh": "لَمْ fe’lni jazm qiladi, tutashda سِ o‘qiladi."
+    },
+    {
+      "q": "Bu ikkisi (ayollar) mening opalarim.",
+      "opts": [
+        "هَؤُلَاءِ أُخْتَايَ",
+        "هَاتَانِ أُخْتَايَ",
+        "هُمَا أُخْتَايَ",
+        "هَذَانِ أُخْتَايَ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-2): Ikki ayolni ko‘rsatishda هَاتَانِ keladi."
+    },
+    {
+      "q": "«أَرْسَلَ الْمَرِيضُ الرِّسَالَةَ»da tugallovchi qism qaysi?",
+      "opts": [
+        "أَرْسَلَ",
+        "أَرْسَلَ الْمَرِيضُ",
+        "الْمَرِيضُ",
+        "الرِّسَالَةَ"
+      ],
+      "correct": 3,
+      "izoh": "الرِّسَالَةَ — yuborilgan narsa, maf’ulun bih."
+    },
+    {
+      "q": "«مَا دَفَعَ الْمَرِيضُ الْحِسَابَ» qanday ma’noda?",
+      "opts": [
+        "Bemor hisobni to‘lasin.",
+        "Bemor hisobni to‘lamayapti.",
+        "Bemor hisobni to‘lamadi.",
+        "Bemor hisobni to‘lamaydi."
+      ],
+      "correct": 2,
+      "izoh": "مَا + دَفَعَ o‘tgan zamon inkori."
+    },
+    {
+      "q": "«هُمْ لَنْ ___ الْمَاءَ غَدًا».",
+      "opts": [
+        "هُمْ لَنْ يَشْرَبُونَ الْمَاءَ غَدًا",
+        "هُمْ لَنْ تَشْرَبُوا الْمَاءَ غَدًا",
+        "هُمْ لَنْ يَشْرَبْنَ الْمَاءَ غَدًا",
+        "هُمْ لَنْ يَشْرَبُوا الْمَاءَ غَدًا"
+      ],
+      "correct": 3,
+      "izoh": "لَنْ dan keyin يَشْرَبُونَ ning nuni tushadi."
+    },
+    {
+      "q": "Sumkada qirqta riyol bor.",
+      "opts": [
+        "فِي الْحَقِيبَةِ أَرْبَعُونَ رِيَالًا",
+        "فِي الْحَقِيبَةِ أَرْبَعُونَ رِيَالَاتٍ",
+        "فِي الْحَقِيبَةِ أَرْبَعُونَ رِيَالٌ",
+        "فِي الْحَقِيبَةِ أَرْبَعُونَ رِيَالٍ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-8): O‘nlikdan keyin sanalmish birlik mansub."
+    },
+    {
+      "q": "«فَحَصَ الطَّبِيبُ الْمَرِيضَ»da ish kimga ta’sir qildi?",
+      "opts": [
+        "فَحَصَ",
+        "الطَّبِيبُ",
+        "الْمَرِيضَ",
+        "فَحَصَ الطَّبِيبُ"
+      ],
+      "correct": 2,
+      "izoh": "الْمَرِيضَ — tekshirilgan shaxs, maf’ulun bih."
+    },
+    {
+      "q": "«لَا أَكْتُبُ الْآنَ» qanday ma’noda?",
+      "opts": [
+        "Men ertaga yozmayman.",
+        "Sen hozir yozma.",
+        "Men kecha yozmadim.",
+        "Men hozir yozmayapman."
+      ],
+      "correct": 3,
+      "izoh": "لَا + muzori’, الْآنَ bilan hozirgi harakat inkor qilingan."
+    },
+    {
+      "q": "«أَنْتِ لَمْ ___ الْمَاءَ» gapni to‘ldiring.",
+      "opts": [
+        "أَنْتِ لَمْ تَشْرَبْنَ الْمَاءَ",
+        "أَنْتِ لَمْ تَشْرَبِينَ الْمَاءَ",
+        "أَنْتِ لَمْ تَشْرَبُوا الْمَاءَ",
+        "أَنْتِ لَمْ تَشْرَبِي الْمَاءَ"
+      ],
+      "correct": 3,
+      "izoh": "لَمْ dan keyin تَشْرَبِينَ ning nuni tushadi."
+    },
+    {
+      "q": "Bular (erkaklar) mohir shifokorlar.",
+      "opts": [
+        "هُمْ أَطِبَّاءُ مَاهِرُونَ",
+        "هُمَا أَطِبَّاءُ مَاهِرُونَ",
+        "هَؤُلَاءِ أَطِبَّاءُ مَاهِرُونَ",
+        "هَذَا أَطِبَّاءُ مَاهِرُونَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-3): Ko‘rsatish ma’nosida هَؤُلَاءِ ishlatiladi."
+    },
+    {
+      "q": "Bemor shifokorga qo‘ng‘iroq qildi.",
+      "opts": [
+        "اِتَّصَلَ الْمَرِيضُ بِالطَّبِيبُ",
+        "اِتَّصَلَ الْمَرِيضُ بِالطَّبِيبَيْنِ",
+        "اِتَّصَلَ الْمَرِيضُ بِالطَّبِيبَ",
+        "اِتَّصَلَ الْمَرِيضُ بِالطَّبِيبِ"
+      ],
+      "correct": 3,
+      "izoh": "بِـ dan keyingi ism majrur."
+    },
+    {
+      "q": "«مَا فَتَحَتِ الْمُمَرِّضَةُ النَّافِذَةَ» qanday ma’noda?",
+      "opts": [
+        "Hamshira derazani ochsin.",
+        "Hamshira derazani ochmayapti.",
+        "Hamshira derazani ochmaydi.",
+        "Hamshira derazani ochmadi."
+      ],
+      "correct": 3,
+      "izoh": "مَا + فَتَحَتْ — o‘tgan zamon inkori."
+    },
+    {
+      "q": "«هُنَّ لَمْ ___ الرِّسَالَةَ» gapni to‘ldiring.",
+      "opts": [
+        "هُنَّ لَمْ يُرْسِلَا الرِّسَالَةَ",
+        "هُنَّ لَمْ يُرْسِلْنَ الرِّسَالَةَ",
+        "هُنَّ لَمْ تُرْسِلْنَ الرِّسَالَةَ",
+        "هُنَّ لَمْ يُرْسِلُوا الرِّسَالَةَ"
+      ],
+      "correct": 1,
+      "izoh": "Ayollar ko‘pligidagi ـْنَ saqlanadi; u besh fe’l nuni emas."
+    },
+    {
+      "q": "Ayol shifokor band emas.",
+      "opts": [
+        "الطَّبِيبَةُ لَيْسَتْ مَشْغُولَةً",
+        "الطَّبِيبَةُ لَسْتَ مَشْغُولَةً",
+        "الطَّبِيبَةُ لَيْسَ مَشْغُولَةً",
+        "الطَّبِيبَةُ لَسْتُ مَشْغُولَةً"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-4): Ayol birlik bilan لَيْسَتْ ishlatiladi."
     }
   ]
 }
