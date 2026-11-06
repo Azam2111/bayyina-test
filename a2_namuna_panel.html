@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Bayyina — A2 Mufradot Interaktiv Panel</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Naskh+Arabic:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brown-deep:#3a2716;
+  --brown:#805a36;
+  --brown-mid:#a9805a;
+  --tan:#d9c3a3;
+  --gold:#cda35b;
+  --cream:#f6f1e8;
+  --cream-dim:#e8ddca;
+  --green:#27ae60;
+  --green-bg:#e8f9ee;
+  --green-text:#1a6b3a;
+  --yellow:#d97706;
+  --yellow-bg:#fef3c7;
+  --yellow-text:#92400e;
+  --red:#e74c3c;
+  --red-bg:#fce8e8;
+  --red-text:#8b1a1a;
+  --ink:#2c2014;
+  --card-bg:#ffffff;
+}
+*{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  color:var(--ink);
+  background-color:var(--cream);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23805a36' stroke-opacity='0.05' stroke-width='1.2'%3E%3Crect x='12' y='12' width='40' height='40'/%3E%3Crect x='12' y='12' width='40' height='40' transform='rotate(45 32 32)'/%3E%3C/g%3E%3C/svg%3E");
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  overflow-x:hidden;
+}
+.arabic{font-family:'Noto Naskh Arabic',serif; direction:rtl}
+
+/* ===== STICKY HEADER ===== */
+.t-hdr{
+  position:sticky; top:0; z-index:40;
+  background-color:var(--brown-deep);
+  color:#fff;
+  padding:12px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,.15);
+}
+.t-brand-box{display:flex; align-items:center; gap:10px}
+.t-logo{
+  width:32px; height:32px; border-radius:8px;
+  background:var(--cream); display:flex; align-items:center; justify-content:center;
+  font-weight:900; font-size:16px; color:var(--brown-deep);
+}
+.t-title-col{display:flex; flex-direction:column}
+.t-title{font-size:14px; font-weight:800; letter-spacing:0.5px; color:#fff}
+.t-sub{font-size:11px; font-weight:600; color:var(--tan)}
+.t-badge{
+  font-size:12px; font-weight:700;
+  background:rgba(205,163,91,.2); border:1px solid var(--gold);
+  color:var(--cream); padding:5px 12px; border-radius:20px;
+}
+
+/* ===== PROGRESS BAR ===== */
+.pbar-wrap{background:var(--brown-deep); padding:0 16px 8px}
+.pbar{height:6px; background:rgba(255,255,255,.14); border-radius:4px; overflow:hidden}
+.pbar-fill{height:100%; width:12%; background:linear-gradient(90deg,var(--gold),var(--cream)); transition:width .35s ease}
+.q-meta-row{
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:12px; font-weight:700; color:var(--tan); padding:6px 16px;
+  background:var(--brown-deep); border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+/* ===== MAIN CONTAINER ===== */
+.main-wrap{
+  flex:1; width:100%; max-width:620px; margin:0 auto; padding:20px 16px 40px;
+}
+.card{
+  background:var(--card-bg);
+  border-radius:20px;
+  border:1px solid var(--cream-dim);
+  box-shadow:0 8px 30px rgba(60,40,20,.07);
+  padding:26px 20px;
+  margin-bottom:16px;
+  position:relative;
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:translateY(0)}}
+
+.type-pill{
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:11.5px; font-weight:800; text-transform:uppercase; letter-spacing:.8px;
+  padding:5px 12px; border-radius:12px; margin-bottom:18px;
+}
+.pill-uz{background:#eff6ff; color:#1d4ed8; border:1px solid #bfdbfe}
+.pill-ar{background:#fdf4ff; color:#86198f; border:1px solid #f5d0fe}
+.pill-pair{background:#ecfdf5; color:#047857; border:1px solid #a7f3d0}
+
+.prompt-title{
+  font-size:13px; font-weight:700; color:var(--brown-mid);
+  text-align:center; margin-bottom:12px; text-transform:uppercase; letter-spacing:.5px;
+}
+.prompt-target{
+  text-align:center; margin:10px 0 20px; line-height:1.4;
+}
+.prompt-target.ar{
+  font-family:'Noto Naskh Arabic',serif; font-size:42px; font-weight:700;
+  color:var(--ink); padding:4px 0;
+}
+.prompt-target.uz{
+  font-size:26px; font-weight:800; color:var(--brown-deep);
+}
+.prompt-hint{
+  font-size:13px; color:#6b7280; text-align:center; margin-bottom:20px; font-style:italic;
+}
+
+/* ===== INPUT STYLES (TYPE 1 & TYPE 2) ===== */
+.input-wrap{position:relative; margin-bottom:16px}
+.main-input{
+  width:100%; padding:16px 18px;
+  border:2px solid var(--cream-dim); border-radius:14px;
+  font-size:18px; font-weight:600; color:var(--ink);
+  outline:none; transition:all .2s ease; background:#fff;
+  font-family:inherit;
+}
+.main-input.ar{
+  font-family:'Noto Naskh Arabic',serif; direction:rtl;
+  font-size:26px; font-weight:700; text-align:right;
+}
+.main-input:focus{
+  border-color:var(--gold); box-shadow:0 0 0 4px rgba(205,163,91,.15);
+}
+.main-input:disabled{background:#f9fafb; cursor:not-allowed}
+
+/* ===== LETTER BANK (HARF G'ISHTCHALARI - TYPE 2) ===== */
+.letter-bank-title{
+  display:flex; justify-content:space-between; align-items:center;
+  font-size:12px; font-weight:700; color:var(--brown-mid); margin-bottom:10px;
+}
+.btn-clear-all{
+  background:none; border:none; color:var(--red); font-size:12px;
+  font-weight:700; cursor:pointer; padding:2px 6px;
+}
+.letter-tiles{
+  display:flex; flex-wrap:wrap; gap:8px; justify-content:center;
+  direction:rtl; margin-bottom:22px; padding:12px;
+  background:var(--cream); border-radius:16px; border:1px solid var(--cream-dim);
+}
+.tile{
+  font-family:'Noto Naskh Arabic',serif; font-size:24px; font-weight:700;
+  min-width:44px; height:46px; border-radius:12px;
+  background:#fff; border:1.5px solid var(--tan); color:var(--brown-deep);
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:all .15s ease;
+  box-shadow:0 2px 6px rgba(0,0,0,.04);
+}
+.tile:active{transform:scale(.92)}
+.tile.used{opacity:.35; pointer-events:none; background:#e5e7eb; border-color:#d1d5db}
+.tile.backspace{
+  background:#fee2e2; border-color:#fca5a5; color:var(--red);
+  font-size:18px; font-family:'Inter',sans-serif;
+}
+
+/* ===== ACTION BUTTONS ===== */
+.btn-submit{
+  width:100%; padding:16px; border:none; border-radius:14px;
+  background:var(--brown); color:#fff; font-size:16px; font-weight:800;
+  cursor:pointer; transition:all .15s ease; font-family:inherit;
+  display:flex; align-items:center; justify-content:center; gap:8px;
+}
+.btn-submit:active{transform:scale(.98); background:var(--brown-deep)}
+.btn-next{
+  width:100%; padding:16px; border:none; border-radius:14px;
+  background:var(--brown-deep); color:var(--cream); font-size:16px; font-weight:800;
+  cursor:pointer; margin-top:14px; font-family:inherit;
+}
+
+/* ===== FEEDBACK NOTIFICATION ===== */
+.feedback-box{
+  margin-top:16px; padding:14px 16px; border-radius:14px;
+  font-size:14.5px; font-weight:600; line-height:1.55;
+  animation:fadeIn .25s ease; display:flex; flex-direction:column; gap:4px;
+}
+@keyframes fadeIn{from{opacity:0; transform:translateY(-6px)} to{opacity:1; transform:translateY(0)}}
+.fb-ok{background:var(--green-bg); border:1.5px solid var(--green); color:var(--green-text)}
+.fb-typo{background:var(--yellow-bg); border:1.5px solid var(--yellow); color:var(--yellow-text)}
+.fb-no{background:var(--red-bg); border:1.5px solid var(--red); color:var(--red-text)}
+.fb-head{font-weight:800; font-size:15px; display:flex; align-items:center; gap:6px}
+.fb-detail{font-size:13px; opacity:.9}
+
+/* ===== MATCHING PAIRS (TUR 3) ===== */
+.pairs-grid{
+  display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;
+}
+.pairs-col{display:flex; flex-direction:column; gap:10px}
+.p-btn{
+  padding:14px 12px; border-radius:13px; border:2px solid var(--cream-dim);
+  background:#fff; font-family:inherit; font-weight:700; font-size:15px;
+  color:var(--ink); cursor:pointer; text-align:center; min-height:58px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .15s ease; box-shadow:0 2px 6px rgba(0,0,0,.03);
+}
+.p-btn.ar{
+  font-family:'Noto Naskh Arabic',serif; font-size:22px; font-weight:700; direction:rtl;
+}
+.p-btn:active{transform:scale(.97)}
+.p-btn.selected{
+  border-color:var(--gold); background:#fdf9f0; color:var(--brown-deep);
+  box-shadow:0 0 0 3px rgba(205,163,91,.3);
+}
+.p-btn.matched{
+  background:var(--green-bg); border-color:var(--green); color:var(--green-text);
+  pointer-events:none; opacity:.9; transform:scale(.98);
+}
+.p-btn.wrong{
+  background:var(--red-bg); border-color:var(--red); color:var(--red-text);
+  animation:shake .3s ease;
+}
+@keyframes shake{
+  0%,100%{transform:translateX(0)}
+  25%{transform:translateX(-6px)}
+  75%{transform:translateX(6px)}
+}
+
+/* ===== RESULT SCREEN ===== */
+#resultScreen{
+  display:none; flex-direction:column; align-items:center; text-align:center;
+  padding:30px 16px 50px;
+}
+.res-card{
+  width:100%; max-width:540px; background:#fff; border-radius:24px;
+  padding:30px 20px; box-shadow:0 12px 40px rgba(58,39,22,.12);
+  border:1px solid var(--cream-dim);
+}
+.res-badge{
+  font-size:12px; font-weight:800; color:var(--tan); background:var(--brown-deep);
+  padding:6px 14px; border-radius:20px; text-transform:uppercase; letter-spacing:1px;
+  display:inline-block; margin-bottom:16px;
+}
+.score-circle{
+  width:130px; height:130px; border-radius:50%; margin:0 auto 16px;
+  background:var(--cream); border:6px solid var(--gold);
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.score-num{font-size:38px; font-weight:900; color:var(--brown-deep); line-height:1}
+.score-lbl{font-size:11px; font-weight:700; color:var(--brown-mid); text-transform:uppercase}
+
+.res-title{font-size:22px; font-weight:800; color:var(--ink); margin-bottom:8px}
+.res-sub{font-size:14px; color:#6b7280; margin-bottom:20px; line-height:1.5}
+
+.stats-grid{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:24px;
+}
+.stat-box{
+  background:var(--cream); padding:12px 8px; border-radius:14px; border:1px solid var(--cream-dim);
+}
+.stat-val{font-size:20px; font-weight:800; line-height:1.2}
+.stat-val.ok{color:var(--green)}
+.stat-val.typo{color:var(--yellow)}
+.stat-val.no{color:var(--red)}
+.stat-caption{font-size:11px; font-weight:700; color:var(--brown-mid); margin-top:4px}
+
+.review-list{text-align:left; margin-bottom:24px; display:flex; flex-direction:column; gap:10px}
+.rev-item{
+  background:var(--cream); padding:12px 14px; border-radius:12px;
+  border-left:4px solid var(--cream-dim); font-size:13.5px;
+}
+.rev-item.ok{border-left-color:var(--green)}
+.rev-item.typo{border-left-color:var(--yellow)}
+.rev-item.no{border-left-color:var(--red)}
+.rev-row{display:flex; justify-content:space-between; font-weight:700; margin-bottom:4px}
+.rev-target{color:var(--ink); font-size:14.5px}
+.rev-ans{font-size:13px; color:#4b5563}
+
+.btn-restart{
+  width:100%; padding:16px; border:none; border-radius:14px;
+  background:var(--brown); color:#fff; font-size:16px; font-weight:800;
+  cursor:pointer; font-family:inherit;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="t-hdr">
+  <div class="t-brand-box">
+    <div class="t-logo">ب</div>
+    <div class="t-title-col">
+      <span class="t-title">Bayyina LMS</span>
+      <span class="t-sub">A2-1 Mufradot (Yangi Format)</span>
+    </div>
+  </div>
+  <div class="t-badge" id="typeIndicator">Gibrid Test</div>
+</header>
+
+<!-- PROGRESS BAR -->
+<div class="pbar-wrap">
+  <div class="pbar"><div class="pbar-fill" id="pbarFill"></div></div>
+</div>
+<div class="q-meta-row">
+  <span id="qCountText">Savol: 1 / 8</span>
+  <span id="scoreText">Ball: 0</span>
+</div>
+
+<!-- TEST WORKSPACE -->
+<main class="main-wrap" id="quizScreen">
+  <div class="card" id="cardContainer">
+    <!-- Dynamic Content Loaded by JS -->
+  </div>
+</main>
+
+<!-- RESULT WORKSPACE -->
+<section id="resultScreen">
+  <div class="res-card">
+    <span class="res-badge">Sinov Natijasi</span>
+    <div class="score-circle">
+      <div class="score-num" id="resPercent">0%</div>
+      <div class="score-lbl">Umumiy ball</div>
+    </div>
+    <h2 class="res-title" id="resHeading">Natija</h2>
+    <p class="res-sub" id="resSubtitle">A2 darajasidagi faol xotira va yozma sinov natijalari</p>
+
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-val ok" id="statOk">0</div>
+        <div class="stat-caption">To'liq to'g'ri</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val typo" id="statTypo">0</div>
+        <div class="stat-caption">Imlo xatosi</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-val no" id="statNo">0</div>
+        <div class="stat-caption">Xato</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:14px; font-weight:800; color:var(--brown-mid); text-transform:uppercase; margin-bottom:10px; text-align:left">
+      Savollar bo'yicha tahlil:
+    </h3>
+    <div class="review-list" id="reviewList">
+      <!-- Injected by JS -->
+    </div>
+
+    <button class="btn-restart" onclick="restartQuiz()">Qaytadan topshirish ↻</button>
+  </div>
+</section>
+
+<script>
+// Telegram WebApp initialization
+if (window.Telegram && window.Telegram.WebApp) {
+  try {
+    Telegram.WebApp.ready();
+    Telegram.WebApp.expand();
+  } catch(e) {}
+}
+
+/* ========================================================
+   A2-1 REAL SO'ZLAR BAZASI (8 TA SAVOLLIK INTERAKTIV NAMUNA)
+   Taqsimot:
+   - 3 ta: Arabcha so'z -> O'zbekcha yozish (Sinonimlar + Typo)
+   - 3 ta: O'zbekcha so'z -> Arabcha yozish / Harf banki
+   - 2 ta: Juftlikni topish (Matching pairs, har birida 4 tadan so'z)
+======================================================== */
+const QUESTIONS = [
+  // --- 1-TUR: ARABCHA -> O'ZBEKCHA YOZISH ---
+  {
+    type: "ar_to_uz",
+    promptTypeLabel: "1-Tur: Arabcha ➔ O'zbekcha yozish",
+    badgeClass: "pill-uz",
+    arabic: "عُصْفُورٌ",
+    hint: "Uy hayvoni yoki tabiatdagi qushcha",
+    // Qabul qilinadigan barcha tabiiy sinonimlar
+    accept: ["chumchuq", "qushcha", "qush", "chumchuqcha"],
+    displayAnswer: "Chumchuq (qushcha)"
+  },
+  {
+    type: "ar_to_uz",
+    promptTypeLabel: "1-Tur: Arabcha ➔ O'zbekcha yozish",
+    badgeClass: "pill-uz",
+    arabic: "خَسِرَ",
+    hint: "Fe'l: moddiy yoki ma'naviy narsani...",
+    accept: [
+      "yo'qotmoq", "boy bermoq", "yutqazmoq", "zarar ko'rmoq",
+      "yoqotmoq", "boybermoq", "yo'qotdi", "boy berdi"
+    ],
+    displayAnswer: "Yo'qotmoq, boy bermoq"
+  },
+  {
+    type: "ar_to_uz",
+    promptTypeLabel: "1-Tur: Arabcha ➔ O'zbekcha yozish",
+    badgeClass: "pill-uz",
+    arabic: "هَوِّنْ عَلَيْكَ",
+    hint: "Ijtimoiy ibora: birov asabiylashganda aytiladi",
+    accept: [
+      "o'zingni bos", "yengil ol", "xavotir olma", "bosiq bo'l",
+      "ozingni bos", "yengilroq ol", "tinchlan"
+    ],
+    displayAnswer: "O'zingni bos, yengil ol"
+  },
+
+  // --- 2-TUR: O'ZBEKCHA -> ARABCHA (HARF BANKI BILAN) ---
+  {
+    type: "uz_to_ar",
+    promptTypeLabel: "2-Tur: O'zbekcha ➔ Arabcha (Harf banki)",
+    badgeClass: "pill-ar",
+    uzbek: "Do'stlik",
+    hint: "A2-1 darsining bosh mavzusi",
+    targetArabic: "صداقة",
+    accept: ["صداقة", "الصداقة", "صداقه", "الصداقه"],
+    // Klaviaturasi yo'qlar uchun harf g'ishtchalari (so'z harflari + 3 ta qo'shimcha)
+    letterBank: ["ص", "د", "ا", "ق", "ة", "س", "م", "ر"],
+    displayAnswer: "صَدَاقَةٌ (الصَّدَاقَةُ)"
+  },
+  {
+    type: "uz_to_ar",
+    promptTypeLabel: "2-Tur: O'zbekcha ➔ Arabcha (Harf banki)",
+    badgeClass: "pill-ar",
+    uzbek: "Muzey",
+    hint: "Sayohatda boriladigan tarixiy joy",
+    targetArabic: "متحف",
+    accept: ["متحف", "المتحف"],
+    letterBank: ["م", "ت", "ح", "ف", "ك", "ب", "ل"],
+    displayAnswer: "مَتْحَفٌ (الْمَتْحَفُ)"
+  },
+  {
+    type: "uz_to_ar",
+    promptTypeLabel: "2-Tur: O'zbekcha ➔ Arabcha (Harf banki)",
+    badgeClass: "pill-ar",
+    uzbek: "Bezovta qilmoq",
+    hint: "Fe'l: baland ovoz yoki kishi haqida",
+    targetArabic: "ازعج",
+    accept: ["ازعج", "أزعج", "يزعج", "إزعاج"],
+    letterBank: ["أ", "ز", "ع", "ج", "ص", "د", "و"],
+    displayAnswer: "أَزْعَجَ"
+  },
+
+  // --- 3-TUR: JUFTLIKLARNI TOPISH (MATCHING PAIRS) ---
+  {
+    type: "matching",
+    promptTypeLabel: "3-Tur: Juftliklarni toping (4 ta so'z)",
+    badgeClass: "pill-pair",
+    instruction: "Arabcha so'zni unga mos o'zbekcha ma'nosi bilan juftlang:",
+    pairs: [
+      { ar: "تَحَمَّلَ", uz: "Chidamoq, ko'tarmoq" },
+      { ar: "رَضِيَ", uz: "Rozi bo'lmoq" },
+      { ar: "بِسُرْعَةٍ", uz: "Tezda, tezlik bilan" },
+      { ar: "قَفَصٌ", uz: "Qafas" }
+    ]
+  },
+  {
+    type: "matching",
+    promptTypeLabel: "3-Tur: Juftliklarni toping (4 ta sifat)",
+    badgeClass: "pill-pair",
+    instruction: "Arabcha so'zni unga mos o'zbekcha ma'nosi bilan juftlang:",
+    pairs: [
+      { ar: "اِلْتَقَى", uz: "Uchrashmoq" },
+      { ar: "تَعْلِيمِيٌّ", uz: "Ta'limiy" },
+      { ar: "شَتْوِيٌّ", uz: "Qishki" },
+      { ar: "مُمْكِنٌ", uz: "Mumkin" }
+    ]
+  }
+];
+
+/* ========================================================
+   NORMALIZATSIYA VA MATN TAHLIL ALGORITMLARI
+======================================================== */
+
+// O'zbekcha imlo va apostroflarni normalizatsiya qilish
+function normalizeUzbek(text) {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .replace(/[ʻ’‘`´]/g, "'") // Barcha tutuq belgilarini bitta ' ga o'tkazish
+    .replace(/[^a-z0-9'\s]/g, "") // Tinish belgilarini tozalash
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+// Arabcha harakatlar, hamza va alif maqsuralarni normalizatsiya qilish
+function normalizeArabic(text) {
+  if (!text) return "";
+  let clean = text
+    .replace(/[\u064B-\u065F\u0670]/g, "") // Harakatlar (Fatha, Kasra, Zamma, Sukun, Shadda, Tanvin)
+    .replace(/[أإآء]/g, "ا") // Hamzalarni bitta Alifga keltirish
+    .replace(/ة/g, "ه") // Ta marbuta va Ha ni tenglashtirish
+    .replace(/ى/g, "ي") // Alif maqsura va Ya ni tenglashtirish
+    .replace(/\s+/g, "")
+    .trim();
+  return clean;
+}
+
+// Levenshtein masofasi (1 ta harf imlo xatosini [typo] aniqlash uchun)
+function levenshteinDistance(s1, s2) {
+  const m = s1.length, n = s2.length;
+  const d = [];
+  for (let i = 0; i <= m; i++) d[i] = [i];
+  for (let j = 0; j <= n; j++) d[0][j] = j;
+
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(
+        d[i - 1][j] + 1,     // o'chirish
+        d[i][j - 1] + 1,     // qo'shish
+        d[i - 1][j - 1] + cost // almashtirish
+      );
+    }
+  }
+  return d[m][n];
+}
+
+/* ========================================================
+   TEST BOSHQARUV TIZIMI (STATE)
+======================================================== */
+let currentIndex = 0;
+let score = 0;
+let userAnswers = []; // { target, userAns, status: 'ok'|'typo'|'no', note }
+
+function updateMeta() {
+  const total = QUESTIONS.length;
+  document.getElementById("qCountText").innerText = `Savol: ${currentIndex + 1} / ${total}`;
+  document.getElementById("scoreText").innerText = `Ball: ${Math.round(score * 10) / 10}`;
+  const pct = ((currentIndex) / total) * 100;
+  document.getElementById("pbarFill").style.width = `${pct}%`;
+}
+
+function renderCurrentQuestion() {
+  updateMeta();
+  const card = document.getElementById("cardContainer");
+  const q = QUESTIONS[currentIndex];
+
+  if (q.type === "ar_to_uz") {
+    renderArToUz(q, card);
+  } else if (q.type === "uz_to_ar") {
+    renderUzToAr(q, card);
+  } else if (q.type === "matching") {
+    renderMatching(q, card);
+  }
+}
+
+/* ========================================================
+   RENDER: 1-TUR (ARABCHA -> O'ZBEKCHA YOZISH)
+======================================================== */
+function renderArToUz(q, container) {
+  container.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center">
+      <span class="type-pill ${q.badgeClass}">${q.promptTypeLabel}</span>
+      <span style="font-size:12px; color:var(--brown-mid); font-weight:700">Faol yozish</span>
+    </div>
+    <div class="prompt-title">Ekranda berilgan so'zning o'zbekcha tarjimasini yozing:</div>
+    <div class="prompt-target ar">${q.arabic}</div>
+    <div class="prompt-hint">${q.hint}</div>
+
+    <div class="input-wrap">
+      <input type="text" id="uzInput" class="main-input" placeholder="O'zbekcha ma'nosi..." autocomplete="off">
+    </div>
+
+    <button class="btn-submit" id="btnAction" onclick="submitArToUz()">
+      Javobni tekshirish ➔
+    </button>
+    <div id="feedbackSlot"></div>
+  `;
+
+  setTimeout(() => {
+    const el = document.getElementById("uzInput");
+    if (el) el.focus();
+  }, 150);
+
+  document.getElementById("uzInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") submitArToUz();
+  });
+}
+
+function submitArToUz() {
+  const inputEl = document.getElementById("uzInput");
+  const rawVal = inputEl.value.trim();
+  if (!rawVal) {
+    alert("Iltimos, avval javobingizni yozing!");
+    return;
+  }
+
+  const q = QUESTIONS[currentIndex];
+  inputEl.disabled = true;
+  document.getElementById("btnAction").style.display = "none";
+
+  const normUser = normalizeUzbek(rawVal);
+  let isExact = false;
+  let isTypo = false;
+  let matchedWord = "";
+
+  for (let cand of q.accept) {
+    const normCand = normalizeUzbek(cand);
+    if (normUser === normCand) {
+      isExact = true;
+      matchedWord = cand;
+      break;
+    }
+  }
+
+  // Agar to'g'ridan-to'g'ri topilmasa, 1 ta harf imlo xatosini (Levenshtein) tekshiramiz
+  if (!isExact) {
+    for (let cand of q.accept) {
+      const normCand = normalizeUzbek(cand);
+      if (normCand.length >= 4) {
+        const dist = levenshteinDistance(normUser, normCand);
+        if (dist === 1) {
+          isTypo = true;
+          matchedWord = cand;
+          break;
+        }
+      }
+    }
+  }
+
+  const feedbackSlot = document.getElementById("feedbackSlot");
+  if (isExact) {
+    score += 1;
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-ok">
+        <div class="fb-head">To'g'ri! ✅</div>
+        <div class="fb-detail">Baza bilan 100% mos keldi. Asosiy ma'nosi: <b>${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.arabic, userAns: rawVal, status: "ok", display: q.displayAnswer });
+  } else if (isTypo) {
+    score += 0.85; // Imlo xatosi uchun 85% ball
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-typo">
+        <div class="fb-head">Deyarli to'g'ri! ⚠️ (Imlo xatosi kechirildi)</div>
+        <div class="fb-detail">Siz <b>"${rawVal}"</b> yozdingiz. To'g'ri varianti: <b>${matchedWord}</b>. Ma'nosi: <b>${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.arabic, userAns: rawVal + " (typo)", status: "typo", display: q.displayAnswer });
+  } else {
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-no">
+        <div class="fb-head">Xato ❌</div>
+        <div class="fb-detail">Siz yozgan javob: <b>"${rawVal}"</b>. To'g'ri javob: <b>${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.arabic, userAns: rawVal, status: "no", display: q.displayAnswer });
+  }
+}
+
+/* ========================================================
+   RENDER: 2-TUR (O'ZBEKCHA -> ARABCHA + HARF BANKI)
+======================================================== */
+function renderUzToAr(q, container) {
+  // Harflarni aralashtiramiz
+  const shuffledLetters = [...q.letterBank].sort(() => Math.random() - 0.5);
+
+  let tilesHtml = shuffledLetters.map((char, idx) => `
+    <button class="tile" onclick="appendLetter('${char}', this)" id="tile_${idx}">${char}</button>
+  `).join("");
+
+  // O'chirish tugmachasi
+  tilesHtml += `<button class="tile backspace" onclick="backspaceLetter()">⌫</button>`;
+
+  container.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center">
+      <span class="type-pill ${q.badgeClass}">${q.promptTypeLabel}</span>
+      <span style="font-size:12px; color:var(--brown-mid); font-weight:700">Harf banki</span>
+    </div>
+    <div class="prompt-title">Ushbu so'zning arabchasini yozing yoki harflardan tering:</div>
+    <div class="prompt-target uz">${q.uzbek}</div>
+    <div class="prompt-hint">${q.hint}</div>
+
+    <div class="input-wrap">
+      <input type="text" id="arInput" class="main-input ar" placeholder="كَلِمَة..." autocomplete="off">
+    </div>
+
+    <div class="letter-bank-title">
+      <span>💡 Pastdagi harflarni bosib tering:</span>
+      <button class="btn-clear-all" onclick="clearArabicInput()">Hammasini tozalash</button>
+    </div>
+    <div class="letter-tiles" id="tilesBox">
+      ${tilesHtml}
+    </div>
+
+    <button class="btn-submit" id="btnAction" onclick="submitUzToAr()">
+      Javobni tekshirish ➔
+    </button>
+    <div id="feedbackSlot"></div>
+  `;
+
+  document.getElementById("arInput").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") submitUzToAr();
+  });
+}
+
+function appendLetter(char, btn) {
+  const inputEl = document.getElementById("arInput");
+  inputEl.value += char;
+}
+
+function backspaceLetter() {
+  const inputEl = document.getElementById("arInput");
+  inputEl.value = inputEl.value.slice(0, -1);
+}
+
+function clearArabicInput() {
+  const inputEl = document.getElementById("arInput");
+  inputEl.value = "";
+}
+
+function submitUzToAr() {
+  const inputEl = document.getElementById("arInput");
+  const rawVal = inputEl.value.trim();
+  if (!rawVal) {
+    alert("Iltimos, avval so'zni tering yoki yozing!");
+    return;
+  }
+
+  const q = QUESTIONS[currentIndex];
+  inputEl.disabled = true;
+  document.getElementById("btnAction").style.display = "none";
+  document.getElementById("tilesBox").style.pointerEvents = "none";
+
+  const normUser = normalizeArabic(rawVal);
+  let isExact = false;
+  let isTypo = false;
+
+  for (let cand of q.accept) {
+    const normCand = normalizeArabic(cand);
+    if (normUser === normCand) {
+      isExact = true;
+      break;
+    }
+  }
+
+  // Agar topilmasa, 1 ta harf adashishini tekshiramiz
+  if (!isExact) {
+    for (let cand of q.accept) {
+      const normCand = normalizeArabic(cand);
+      if (normCand.length >= 3) {
+        const dist = levenshteinDistance(normUser, normCand);
+        if (dist === 1) {
+          isTypo = true;
+          break;
+        }
+      }
+    }
+  }
+
+  const feedbackSlot = document.getElementById("feedbackSlot");
+  if (isExact) {
+    score += 1;
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-ok">
+        <div class="fb-head">A'lo! To'g'ri topildi ✅</div>
+        <div class="fb-detail">Arabcha to'g'ri shakli: <b class="arabic" style="font-size:18px">${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.uzbek, userAns: rawVal, status: "ok", display: q.displayAnswer });
+  } else if (isTypo) {
+    score += 0.85;
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-typo">
+        <div class="fb-head">Deyarli to'g'ri! ⚠️ (1 ta harf imlo xatosi)</div>
+        <div class="fb-detail">Siz yozdingiz: <b class="arabic">${rawVal}</b>. To'g'ri yozilishi: <b class="arabic" style="font-size:18px">${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.uzbek, userAns: rawVal + " (typo)", status: "typo", display: q.displayAnswer });
+  } else {
+    feedbackSlot.innerHTML = `
+      <div class="feedback-box fb-no">
+        <div class="fb-head">Xato ❌</div>
+        <div class="fb-detail">Siz yozdingiz: <b class="arabic">${rawVal}</b>. To'g'ri javob: <b class="arabic" style="font-size:18px">${q.displayAnswer}</b></div>
+      </div>
+      <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+    `;
+    userAnswers.push({ target: q.uzbek, userAns: rawVal, status: "no", display: q.displayAnswer });
+  }
+}
+
+/* ========================================================
+   RENDER: 3-TUR (JUFTLIKLARNI TOPISH - MATCHING PAIRS)
+======================================================== */
+let selectedAr = null;
+let selectedUz = null;
+let matchedCount = 0;
+
+function renderMatching(q, container) {
+  selectedAr = null;
+  selectedUz = null;
+  matchedCount = 0;
+
+  // Arabcha va O'zbekcha qatorlarni alohida aralashtiramiz
+  const arList = q.pairs.map((p, i) => ({ text: p.ar, id: i })).sort(() => Math.random() - 0.5);
+  const uzList = q.pairs.map((p, i) => ({ text: p.uz, id: i })).sort(() => Math.random() - 0.5);
+
+  const arButtons = arList.map(item => `
+    <button class="p-btn ar" data-id="${item.id}" onclick="selectPairItem(this, 'ar')">${item.text}</button>
+  `).join("");
+
+  const uzButtons = uzList.map(item => `
+    <button class="p-btn" data-id="${item.id}" onclick="selectPairItem(this, 'uz')">${item.text}</button>
+  `).join("");
+
+  container.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:center">
+      <span class="type-pill ${q.badgeClass}">${q.promptTypeLabel}</span>
+      <span style="font-size:12px; color:var(--brown-mid); font-weight:700" id="matchCounter">0 / 4 juftlik</span>
+    </div>
+    <div class="prompt-title">${q.instruction}</div>
+    <div class="prompt-hint">Arabcha so'zni bosing, keyin uning o'zbekcha tarjimasini bosing</div>
+
+    <div class="pairs-grid">
+      <div class="pairs-col" id="arCol">${arButtons}</div>
+      <div class="pairs-col" id="uzCol">${uzButtons}</div>
+    </div>
+
+    <div id="feedbackSlot"></div>
+  `;
+}
+
+function selectPairItem(btn, type) {
+  if (btn.classList.contains("matched")) return;
+
+  if (type === "ar") {
+    if (selectedAr) selectedAr.classList.remove("selected");
+    selectedAr = btn;
+    selectedAr.classList.add("selected");
+  } else {
+    if (selectedUz) selectedUz.classList.remove("selected");
+    selectedUz = btn;
+    selectedUz.classList.add("selected");
+  }
+
+  // Agar ikkalasi ham tanlangan bo'lsa — tekshiramiz!
+  if (selectedAr && selectedUz) {
+    const idAr = selectedAr.getAttribute("data-id");
+    const idUz = selectedUz.getAttribute("data-id");
+
+    if (idAr === idUz) {
+      // TO'G'RI JUFTLIK!
+      selectedAr.classList.remove("selected");
+      selectedUz.classList.remove("selected");
+      selectedAr.classList.add("matched");
+      selectedUz.classList.add("matched");
+
+      selectedAr = null;
+      selectedUz = null;
+      matchedCount++;
+
+      document.getElementById("matchCounter").innerText = `${matchedCount} / 4 juftlik`;
+
+      if (matchedCount === 4) {
+        score += 1;
+        document.getElementById("feedbackSlot").innerHTML = `
+          <div class="feedback-box fb-ok">
+            <div class="fb-head">Barakalla! Barcha 4 juftlik to'g'ri topildi ✅</div>
+          </div>
+          <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
+        `;
+        userAnswers.push({ target: "4 ta juftlik", userAns: "4/4 to'liq", status: "ok", display: "To'liq moslandi" });
+      }
+    } else {
+      // XATO JUFTLIK!
+      const el1 = selectedAr;
+      const el2 = selectedUz;
+      el1.classList.add("wrong");
+      el2.classList.add("wrong");
+
+      setTimeout(() => {
+        el1.classList.remove("selected", "wrong");
+        el2.classList.remove("selected", "wrong");
+      }, 500);
+
+      selectedAr = null;
+      selectedUz = null;
+    }
+  }
+}
+
+/* ========================================================
+   KEYINGI SAVOL VA NATIJA
+======================================================== */
+function nextQuestion() {
+  currentIndex++;
+  if (currentIndex < QUESTIONS.length) {
+    renderCurrentQuestion();
+  } else {
+    showResults();
+  }
+}
+
+function showResults() {
+  document.getElementById("quizScreen").style.display = "none";
+  document.getElementById("resultScreen").style.display = "flex";
+  document.getElementById("pbarFill").style.width = "100%";
+
+  const total = QUESTIONS.length;
+  const pct = Math.round((score / total) * 100);
+
+  document.getElementById("resPercent").innerText = `${pct}%`;
+
+  let okCount = 0, typoCount = 0, noCount = 0;
+  let revHtml = "";
+
+  userAnswers.forEach((ans, i) => {
+    if (ans.status === "ok") okCount++;
+    else if (ans.status === "typo") typoCount++;
+    else noCount++;
+
+    const badge = ans.status === "ok" ? "✅ To'g'ri" : (ans.status === "typo" ? "⚠️ Imlo xatosi" : "❌ Xato");
+    revHtml += `
+      <div class="rev-item ${ans.status}">
+        <div class="rev-row">
+          <span class="rev-target">${i + 1}. ${ans.target}</span>
+          <span>${badge}</span>
+        </div>
+        <div class="rev-ans">Sizning javobingiz: <b>${ans.userAns}</b> | To'g'ri ma'nosi: <b>${ans.display}</b></div>
+      </div>
+    `;
+  });
+
+  document.getElementById("statOk").innerText = okCount;
+  document.getElementById("statTypo").innerText = typoCount;
+  document.getElementById("statNo").innerText = noCount;
+  document.getElementById("reviewList").innerHTML = revHtml;
+
+  if (pct >= 85) {
+    document.getElementById("resHeading").innerText = "Ajoyib natija! Mumtoz daraja 🌟";
+  } else if (pct >= 65) {
+    document.getElementById("resHeading").innerText = "Yaxshi natija! Mustahkamlash kerak 👍";
+  } else {
+    document.getElementById("resHeading").innerText = "Qayta takrorlash tavsiya etiladi 📚";
+  }
+}
+
+function restartQuiz() {
+  currentIndex = 0;
+  score = 0;
+  userAnswers = [];
+  document.getElementById("resultScreen").style.display = "none";
+  document.getElementById("quizScreen").style.display = "block";
+  renderCurrentQuestion();
+}
+
+// Start immediately on load
+renderCurrentQuestion();
+</script>
+</body>
+</html>
