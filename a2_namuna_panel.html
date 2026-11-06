@@ -468,34 +468,65 @@ const QUESTIONS = [
 ];
 
 /* ========================================================
-   NORMALIZATSIYA VA MATN TAHLIL ALGORITMLARI
+   NORMALIZATSIYA VA MATN TAHLIL ALGORITMLARI (YUMSHATILGAN)
 ======================================================== */
 
-// O'zbekcha imlo va apostroflarni normalizatsiya qilish
-function normalizeUzbek(text) {
+// 1. O'zbekcha standart tozalash
+function cleanUzbek(text) {
   if (!text) return "";
   return text
     .toLowerCase()
-    .replace(/[ʻ’‘`´]/g, "'") // Barcha tutuq belgilarini bitta ' ga o'tkazish
-    .replace(/[^a-z0-9'\s]/g, "") // Tinish belgilarini tozalash
+    .replace(/[ʻ’‘`´]/g, "'")
+    .replace(/[^a-z0-9'\s]/g, "")
     .replace(/\s+/g, " ")
     .trim();
 }
 
-// Arabcha harakatlar, hamza va alif maqsuralarni normalizatsiya qilish
-function normalizeArabic(text) {
+// 2. Fonetik va mobil yozuv normalizatsiyasi
+// "cumcuq" -> "chumchuq", "qus" -> "qush", "havotir" -> "xavotir", "ozingnibos" -> "o'zingni bos"
+function phoneticUzbek(text) {
   if (!text) return "";
-  let clean = text
-    .replace(/[\u064B-\u065F\u0670]/g, "") // Harakatlar (Fatha, Kasra, Zamma, Sukun, Shadda, Tanvin)
-    .replace(/[أإآء]/g, "ا") // Hamzalarni bitta Alifga keltirish
-    .replace(/ة/g, "ه") // Ta marbuta va Ha ni tenglashtirish
-    .replace(/ى/g, "ي") // Alif maqsura va Ya ni tenglashtirish
-    .replace(/\s+/g, "")
+  return text
+    .toLowerCase()
+    .replace(/[ʻ’‘`´']/g, "")
+    .replace(/ch/g, "c")
+    .replace(/sh/g, "s")
+    .replace(/x/g, "h")
+    .replace(/[^a-z0-9]/g, "")
     .trim();
-  return clean;
 }
 
-// Levenshtein masofasi (1 ta harf imlo xatosini [typo] aniqlash uchun)
+// 3. Fe'l o'zagini ajratish ("yoqotish" / "yoqotdi" -> "yo'qotmoq")
+function verbStemUzbek(text) {
+  if (!text) return "";
+  return text.replace(/(moq|mak|is|ish|di|gan|yapman|yapti)$/, "");
+}
+
+// 4. Imlo xatosi qoidasi (Typo tolerance)
+function isValidTypo(s1, s2, dist) {
+  if (!s1 || !s2) return false;
+  // Bosh harf bir xil bo'lishi shart ("musicha" "qushcha"ga aylanib ketmasligi uchun)
+  if (s1[0] !== s2[0]) return false;
+  const maxLen = Math.max(s1.length, s2.length);
+  if (dist === 1 && maxLen >= 3) return true;
+  if (dist === 2 && maxLen >= 7) return true;
+  return false;
+}
+
+// 5. Arabcha yumshatilgan normalizatsiya (Alif-Lam, harakatlar, hamza, ta marbuta)
+function normalizeArabicLenient(text) {
+  if (!text) return "";
+  return text
+    .replace(/[\u064B-\u065F\u0670]/g, "") // Harakatlar (Tashkeel)
+    .replace(/^[اأإآ]ل/, "") // Boshidagi Al- ni ixtiyoriy qilish
+    .replace(/[أإآء]/g, "ا") // Hamzalarni bitta Alifga
+    .replace(/[ةه]/g, "ه") // Ta marbuta va Ha
+    .replace(/[ىي]/g, "ي") // Alif maqsura va Ya
+    .replace(/\s+/g, "")
+    .trim();
+}
+
+// Levenshtein masofasi
 function levenshteinDistance(s1, s2) {
   const m = s1.length, n = s2.length;
   const d = [];
@@ -506,9 +537,9 @@ function levenshteinDistance(s1, s2) {
     for (let j = 1; j <= n; j++) {
       const cost = s1[i - 1] === s2[j - 1] ? 0 : 1;
       d[i][j] = Math.min(
-        d[i - 1][j] + 1,     // o'chirish
-        d[i][j - 1] + 1,     // qo'shish
-        d[i - 1][j - 1] + cost // almashtirish
+        d[i - 1][j] + 1,
+        d[i][j - 1] + 1,
+        d[i - 1][j - 1] + cost
       );
     }
   }
@@ -589,52 +620,77 @@ function submitArToUz() {
   inputEl.disabled = true;
   document.getElementById("btnAction").style.display = "none";
 
-  const normUser = normalizeUzbek(rawVal);
-  let isExact = false;
-  let isTypo = false;
-  let matchedWord = "";
+  let matchResult = null; // { type: 'exact'|'phonetic'|'stem'|'typo', cand: string, dist?: number }
 
+  // 1-QADAM: Aniq moslik (Exact match)
   for (let cand of q.accept) {
-    const normCand = normalizeUzbek(cand);
-    if (normUser === normCand) {
-      isExact = true;
-      matchedWord = cand;
+    if (cleanUzbek(rawVal) === cleanUzbek(cand)) {
+      matchResult = { type: 'exact', cand };
       break;
     }
   }
 
-  // Agar to'g'ridan-to'g'ri topilmasa, 1 ta harf imlo xatosini (Levenshtein) tekshiramiz
-  if (!isExact) {
+  // 2-QADAM: Fonetik va mobil yozuv mosligi (cumcuq -> chumchuq, qus -> qush, havotir -> xavotir, ozingnibos -> o'zingni bos)
+  if (!matchResult) {
+    const uPhon = phoneticUzbek(rawVal);
     for (let cand of q.accept) {
-      const normCand = normalizeUzbek(cand);
-      if (normCand.length >= 4) {
-        const dist = levenshteinDistance(normUser, normCand);
-        if (dist === 1) {
-          isTypo = true;
-          matchedWord = cand;
+      if (uPhon === phoneticUzbek(cand)) {
+        matchResult = { type: 'phonetic', cand };
+        break;
+      }
+    }
+  }
+
+  // 3-QADAM: Fe'l o'zagi mosligi (yoqotish / yoqotdi -> yo'qotmoq)
+  if (!matchResult) {
+    const uStem = verbStemUzbek(phoneticUzbek(rawVal));
+    if (uStem.length >= 3) {
+      for (let cand of q.accept) {
+        const cStem = verbStemUzbek(phoneticUzbek(cand));
+        if (cStem.length >= 3 && uStem === cStem) {
+          matchResult = { type: 'stem', cand };
           break;
         }
       }
     }
   }
 
+  // 4-QADAM: Imlo xatosi (Typo tolerance: 1 ta harf adashishi)
+  if (!matchResult) {
+    const uPhon = phoneticUzbek(rawVal);
+    for (let cand of q.accept) {
+      const cPhon = phoneticUzbek(cand);
+      const dist = levenshteinDistance(uPhon, cPhon);
+      if (isValidTypo(uPhon, cPhon, dist)) {
+        matchResult = { type: 'typo', cand, dist };
+        break;
+      }
+    }
+  }
+
   const feedbackSlot = document.getElementById("feedbackSlot");
-  if (isExact) {
+  if (matchResult && (matchResult.type === 'exact' || matchResult.type === 'phonetic' || matchResult.type === 'stem')) {
     score += 1;
+    let extraNote = "";
+    if (matchResult.type === 'phonetic' && cleanUzbek(rawVal) !== cleanUzbek(matchResult.cand)) {
+      extraNote = ` (Adabiy shakli: <b>${matchResult.cand}</b>)`;
+    } else if (matchResult.type === 'stem') {
+      extraNote = ` (Fe'l shakli: <b>${matchResult.cand}</b>)`;
+    }
     feedbackSlot.innerHTML = `
       <div class="feedback-box fb-ok">
         <div class="fb-head">To'g'ri! ✅</div>
-        <div class="fb-detail">Baza bilan 100% mos keldi. Asosiy ma'nosi: <b>${q.displayAnswer}</b></div>
+        <div class="fb-detail">Qabul qilindi${extraNote}. Asosiy ma'nosi: <b>${q.displayAnswer}</b></div>
       </div>
       <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
     `;
     userAnswers.push({ target: q.arabic, userAns: rawVal, status: "ok", display: q.displayAnswer });
-  } else if (isTypo) {
+  } else if (matchResult && matchResult.type === 'typo') {
     score += 0.85; // Imlo xatosi uchun 85% ball
     feedbackSlot.innerHTML = `
       <div class="feedback-box fb-typo">
         <div class="fb-head">Deyarli to'g'ri! ⚠️ (Imlo xatosi kechirildi)</div>
-        <div class="fb-detail">Siz <b>"${rawVal}"</b> yozdingiz. To'g'ri varianti: <b>${matchedWord}</b>. Ma'nosi: <b>${q.displayAnswer}</b></div>
+        <div class="fb-detail">Siz <b>"${rawVal}"</b> yozdingiz. To'g'ri varianti: <b>${matchResult.cand}</b>. Ma'nosi: <b>${q.displayAnswer}</b></div>
       </div>
       <button class="btn-next" onclick="nextQuestion()">Keyingisi ➔</button>
     `;
@@ -725,12 +781,12 @@ function submitUzToAr() {
   document.getElementById("btnAction").style.display = "none";
   document.getElementById("tilesBox").style.pointerEvents = "none";
 
-  const normUser = normalizeArabic(rawVal);
+  const normUser = normalizeArabicLenient(rawVal);
   let isExact = false;
   let isTypo = false;
 
   for (let cand of q.accept) {
-    const normCand = normalizeArabic(cand);
+    const normCand = normalizeArabicLenient(cand);
     if (normUser === normCand) {
       isExact = true;
       break;
@@ -740,13 +796,11 @@ function submitUzToAr() {
   // Agar topilmasa, 1 ta harf adashishini tekshiramiz
   if (!isExact) {
     for (let cand of q.accept) {
-      const normCand = normalizeArabic(cand);
-      if (normCand.length >= 3) {
-        const dist = levenshteinDistance(normUser, normCand);
-        if (dist === 1) {
-          isTypo = true;
-          break;
-        }
+      const normCand = normalizeArabicLenient(cand);
+      const dist = levenshteinDistance(normUser, normCand);
+      if (isValidTypo(normUser, normCand, dist)) {
+        isTypo = true;
+        break;
       }
     }
   }
