@@ -666,7 +666,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       var ok = (q._answered!=null && q._answered===q._correct);
       var h = q._h || qHash(q);
       t[d]=t[d]||[0,0]; t[d][0]++; if(ok) t[d][1]++;
-      if(!ok && w.length<60) w.push([d,h,cut(q.q||'',90),cut((q.opts||[])[q.correct],40)]);
+      if(!ok && w.length<60) w.push([d,h,cut(q.q||'',400),cut((q.opts||[])[q.correct],200)]);
       else if(ok && mode!=='test' && r.length<40) r.push([d,h]);
     });
     return {u: Date.now().toString(36)+Math.random().toString(36).slice(2,8), m: mode, t: t, w: w, r: r};
@@ -696,6 +696,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
       for(var i=pq.length-1;i>=0;i--){
         var a=JSON.parse(JSON.stringify(pq[i]));
         var trial=inc.concat([a]);
+        // Telegram sendData 4096 bayt: avval faqat nusxani qisqartiramiz.
+        // Asosiy API va navbatda savolning to'liqroq nusxasi qoladi.
+        if(bl(JSON.stringify(Object.assign({},obj,{al:trial})))>3900){
+          a.w.forEach(function(w){ if(w.length>2) w[2]=cut(w[2],90); if(w.length>3) w[3]=cut(w[3],40); });
+        }
         while(bl(JSON.stringify(Object.assign({},obj,{al:trial})))>3900 && a.w.length){ a.w.pop(); a.r=[]; }
         if(bl(JSON.stringify(Object.assign({},obj,{al:trial})))>3900) break;
         inc=trial;
