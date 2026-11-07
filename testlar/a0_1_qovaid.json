@@ -1,392 +1,502 @@
 {
-  "title": "Qovaid — 1-dars: At-Taoruf (Tanishuv)",
-  "otish": 80,
-  "vaqt": 25,
-  "questions": [
-    {
-      "q": "Arab tilida so'zlar turkum jihatidan nechta katta guruhga bo'linadi?",
-      "opts": [
-        "2 ta (Ism va Harf)",
-        "3 ta (Ism, Fe'l, Harf)",
-        "4 ta (Ism, Fe'l, Harf, Sifat)",
-        "5 ta (Ism, Sifat, Son, Fe'l, Harf)"
-      ],
-      "correct": 1,
-      "izoh": "Arab tilida barcha so'zlar 3 turkumga bo'linadi: Ism (اِسْمٌ), Fe'l (فِعْلٌ) va Harf (حَرْفٌ)."
-    },
-    {
-      "q": "«Ism» (اِسْمٌ) so'z turkumining eng asosiy belgisi nima?",
-      "opts": [
-        "Ma'lum zamonga bog'langani",
-        "Harakat va zamonni bildirishi",
-        "Zamonga bog'lanmasligi",
-        "Faqat gap boshida kelishi"
-      ],
-      "correct": 2,
-      "izoh": "Ism — shaxs, narsa, sifat yoki tushuncha nomi bo'lib, zamonga bog'lanmaydi (masalan: كِتَابٌ, مُحَمَّدٌ)."
-    },
-    {
-      "q": "Quyidagilardan qaysi biri jonsiz NARSA nomi hisoblanadi?",
-      "opts": [
-        "مُحَمَّدٌ",
-        "كِتَابٌ",
-        "جَمِيلٌ",
-        "طَشْقَنْدُ"
-      ],
-      "correct": 1,
-      "izoh": "كِتَابٌ (kitob) — jonsiz narsa nomi. مُحَمَّدٌ — shaxs ismi, طَشْقَنْدُ — joy nomi, جَمِيلٌ — sifat."
-    },
-    {
-      "q": "Ish-harakat va zamonni bildiruvchi so'z turkumi qaysi?",
-      "opts": [
-        "Ism",
-        "Harf",
-        "Fe'l",
-        "Sifat"
-      ],
-      "correct": 2,
-      "izoh": "Fe'l (فِعْلٌ) — muayyan zamonda bajarilgan yoki bajarilayotgan ish-harakatni bildiradi."
-    },
-    {
-      "q": "«يَكْتُبُ» (yozyapti) fe'li qaysi zamonga tegishli?",
-      "opts": [
-        "O'tgan zamon (moziy)",
-        "Hozirgi zamon (muzori')",
-        "Inkor shakli",
-        "Buyruq mayli"
-      ],
-      "correct": 1,
-      "izoh": "يَكْتُبُ — hozirgi-kelasi zamon (muzori') fe'li bo'lib, «u yozyapti / yozadi» ma'nosini beradi."
-    },
-    {
-      "q": "Yolg'iz o'zi ma'no bermaydigan yordamchi so'z nima deyiladi?",
-      "opts": [
-        "Harf",
-        "Ism",
-        "Zamir",
-        "Fe'l"
-      ],
-      "correct": 0,
-      "izoh": "Harf (حَرْفٌ) — o'zicha mustaqil ma'noga ega bo'lmagan yordamchi so'z (masalan: فِي, عَلَى, مِنْ)."
-    },
-    {
-      "q": "Quyidagi so'zlardan qaysi biri «harf» (yordamchi so'z) hisoblanadi?",
-      "opts": [
-        "أَنْتَ",
-        "طَالِبٌ",
-        "صُورَةٌ",
-        "مِنْ"
-      ],
-      "correct": 3,
-      "izoh": "مِنْ (…dan) — harfdir. أَنْتَ — olmosh (zamir), طَالِبٌ va صُورَةٌ — ism."
-    },
-    {
-      "q": "Arab tilida otlar jins jihatidan nechta turga bo'linadi?",
-      "opts": [
-        "2 turga: Muzakkar va Muannas",
-        "3 turga: Muzakkar, Muannas, O'rta",
-        "1 turga: Umumiy jins",
-        "4 turga"
-      ],
-      "correct": 0,
-      "izoh": "Arab tilida o'rta jins yo'q; har bir so'z yo Muzakkar (مُذَكَّرٌ) yoki Muannas (مُؤَنَّثٌ) bo'ladi."
-    },
-    {
-      "q": "Muannas (ayol) jinsidagi ismlarning eng asosiy ko'rinadigan belgisi nima?",
-      "opts": [
-        "So'z oxiridagi tanvin",
-        "Oxiridagi «ta marbuta» (ة / ـة)",
-        "Boshidagi alif-lom (ال)",
-        "Oxiridagi sukun"
-      ],
-      "correct": 1,
-      "izoh": "So'z oxiridagi «ta marbuta» (ة) ko'pincha muannaslik belgisidir (masalan: طَالِبَةٌ, مُعَلِّمَةٌ)."
-    },
-    {
-      "q": "Quyidagi so'zlardan qaysi biri muannas (ayol) jinsiga tegishli?",
-      "opts": [
-        "طَالِبٌ",
-        "طَالِبَةٌ",
-        "مُعَلِّمٌ",
-        "دَفْتَرٌ"
-      ],
-      "correct": 1,
-      "izoh": "طَالِبَةٌ so'zi oxiridagi ta marbuta (ة) sababli muannas jinsidadir (qiz talaba)."
-    },
-    {
-      "q": "«مُعَلِّمٌ» (erkak o'qituvchi) so'zidan ayol jinsi qanday yasaladi?",
-      "opts": [
-        "Boshiga «alif» qo'shiladi",
-        "Oxiriga «vov» qo'shiladi",
-        "Oxiriga «ة» qo'shiladi (مُعَلِّمَةٌ)",
-        "Harakati o'chiriladi"
-      ],
-      "correct": 2,
-      "izoh": "Muzakkar kasb-holat otlariga ta marbuta qo'shilsa muannas bo'ladi: مُعَلِّمٌ → مُعَلِّمَةٌ."
-    },
-    {
-      "q": "«طَبِيبٌ» so'ziga «ة» qo'shilib «طَبِيبَةٌ» bo'lsa, nimani anglatadi?",
-      "opts": [
-        "Shifokorlar (ko'plik)",
-        "Ayol shifokor",
-        "Katta shifoxona",
-        "Bolalar shifokori"
-      ],
-      "correct": 1,
-      "izoh": "طَبِيبٌ = erkak shifokor, طَبِيبَةٌ = ayol shifokor."
-    },
-    {
-      "q": "Quyidagi so'zlardan qaysi biri muzakkar (erkak jinsi) hisoblanadi?",
-      "opts": [
-        "دَفْتَرٌ",
-        "صُورَةٌ",
-        "طَالِبَةٌ",
-        "خَالَةٌ"
-      ],
-      "correct": 0,
-      "izoh": "صُورَةٌ, طَالِبَةٌ va خَالَةٌ so'zlarida ta marbuta bor (muannas). دَفْتَرٌ esa muzakkardir."
-    },
-    {
-      "q": "Muzakkar (erkak jinsidagi) so'zga «Bu» deb ishora qilish uchun nima ishlatiladi?",
-      "opts": [
-        "هَذِهِ",
-        "هُوَ",
-        "هَذَا",
-        "هِيَ"
-      ],
-      "correct": 2,
-      "izoh": "Muzakkar uchun ko'rsatish olmoshi — هَذَا (masalan: هَذَا كِتَابٌ, هَذَا مُعَلِّمٌ)."
-    },
-    {
-      "q": "«هَذِهِ» ko'rsatish olmoshi qanday so'zlar uchun ishlatiladi?",
-      "opts": [
-        "Muzakkar (erkak) so'zlar uchun",
-        "Muannas (ayol) so'zlar uchun",
-        "O'tgan zamon fe'llari uchun",
-        "Ko'plikdagi narsalar uchun"
-      ],
-      "correct": 1,
-      "izoh": "Muannas so'zlar uchun «bu» — هَذِهِ (masalan: هَذِهِ طَالِبَةٌ, هَذِهِ صُورَةٌ)."
-    },
-    {
-      "q": "Bo'sh joyni to'ldiring: «_____ كِتَابٌ» (Bu kitob).",
-      "opts": [
-        "هَذَا",
-        "هَذِهِ",
-        "أَنْتِ",
-        "هِيَ"
-      ],
-      "correct": 0,
-      "izoh": "كِتَابٌ — muzakkar so'z, unga «هَذَا» mos keladi."
-    },
-    {
-      "q": "Bo'sh joyni to'ldiring: «_____ صُورَةٌ» (Bu surat).",
-      "opts": [
-        "هَذَا",
-        "هَذِهِ",
-        "هُوَ",
-        "أَنْتَ"
-      ],
-      "correct": 1,
-      "izoh": "صُورَةٌ — oxirida ta marbuta bo'lgan muannas so'z, unga «هَذِهِ» mos keladi."
-    },
-    {
-      "q": "«Bu o'qituvchi (erkak), bu esa surat» — to'g'ri tarjima qaysi?",
-      "opts": [
-        "هَذِهِ مُعَلِّمٌ وَهَذَا صُورَةٌ",
-        "هَذَا مُعَلِّمٌ وَهَذِهِ صُورَةٌ",
-        "هَذَا مُعَلِّمٌ وَهَذَا صُورَةٌ",
-        "هَذِهِ مُعَلِّمٌ وَهَذِهِ صُورَةٌ"
-      ],
-      "correct": 1,
-      "izoh": "مُعَلِّمٌ (muzakkar) uchun هَذَا, صُورَةٌ (muannas) uchun هَذِهِ ishlatiladi."
-    },
-    {
-      "q": "Arab tilida «Men» ma'nosini bildiruvchi kishilik olmoshi qaysi?",
-      "opts": [
-        "أَنْتَ",
-        "هُوَ",
-        "أَنَا",
-        "نَحْنُ"
-      ],
-      "correct": 2,
-      "izoh": "أَنَا = men (ham erkak, ham ayol kishi uchun bir xil ishlatiladi)."
-    },
-    {
-      "q": "«Sen» kishilik olmoshi erkak kishiga nisbatan qanday bo'ladi?",
-      "opts": [
-        "أَنْتِ",
-        "أَنْتَ",
-        "هُوَ",
-        "أَنَا"
-      ],
-      "correct": 1,
-      "izoh": "Erkak kishiga qaratilgan «sen» — أَنْتَ (fathali «ta»)."
-    },
-    {
-      "q": "«Sen» kishilik olmoshi ayol kishiga nisbatan qanday aytiladi?",
-      "opts": [
-        "أَنْتِ",
-        "أَنْتَ",
-        "هِيَ",
-        "هَذِهِ"
-      ],
-      "correct": 0,
-      "izoh": "Ayol kishiga qaratilgan «sen» — أَنْتِ (kasrali «ti»)."
-    },
-    {
-      "q": "«U» kishilik olmoshi erkak kishiga nisbatan qaysi so'z bilan ifodalanadi?",
-      "opts": [
-        "هِيَ",
-        "هُوَ",
-        "أَنْتَ",
-        "هَذَا"
-      ],
-      "correct": 1,
-      "izoh": "هُوَ = u (erkak kishi)."
-    },
-    {
-      "q": "«U» kishilik olmoshi ayol kishiga nisbatan qaysi variantda to'g'ri berilgan?",
-      "opts": [
-        "هِيَ",
-        "هُوَ",
-        "أَنْتِ",
-        "أَنَا"
-      ],
-      "correct": 0,
-      "izoh": "هِيَ = u (ayol kishi)."
-    },
-    {
-      "q": "Bo'sh joyga to'g'ri olmoshni qo'ying: «_____ طَبِيبَةٌ» (U — ayol shifokor).",
-      "opts": [
-        "هُوَ",
-        "هِيَ",
-        "أَنْتَ",
-        "هَذَا"
-      ],
-      "correct": 1,
-      "izoh": "طَبِيبَةٌ — muannas shaxs, unga 3-shaxsda «هِيَ» (u) mos keladi."
-    },
-    {
-      "q": "Arab tilida so'roq olmoshlari (مَنْ، مَا، كَيْفَ) gapning qayerida keladi?",
-      "opts": [
-        "Gapning oxirida",
-        "Gapning boshida",
-        "Faqat fe'ldan keyin",
-        "Istalgan joyida"
-      ],
-      "correct": 1,
-      "izoh": "Arab tilida so'roq so'zlari (adavatul istifhom) gapning eng boshida kelish huquqiga ega."
-    },
-    {
-      "q": "Narsalarga nisbatan «Bu nima?» deb qanday so'raladi?",
-      "opts": [
-        "مَا هَذَا؟",
-        "مَنْ هَذَا؟",
-        "كَيْفَ هَذَا؟",
-        "هَلْ هَذَا؟"
-      ],
-      "correct": 0,
-      "izoh": "Jonsiz narsa uchun «مَا» (nima) ishlatiladi: مَا هَذَا؟ = Bu nima?"
-    },
-    {
-      "q": "Shaxslarga nisbatan «Bu kim?» deb qanday so'raladi?",
-      "opts": [
-        "مَا هَذَا؟",
-        "مَنْ هَذَا؟",
-        "كَيْفَ هَذَا؟",
-        "أَيْنَ هَذَا؟"
-      ],
-      "correct": 1,
-      "izoh": "Aql egalari (shaxslar) uchun «مَنْ» (kim) ishlatiladi: مَنْ هَذَا؟ = Bu kim?"
-    },
-    {
-      "q": "«Ahvolingiz qanday?» (erkakka) savolining arabchasi qaysi?",
-      "opts": [
-        "مَا اسْمُكَ؟",
-        "مِنْ أَيْنَ أَنْتَ؟",
-        "كَيْفَ حَالُكَ؟",
-        "هَلْ أَنْتَ بِخَيْرٍ؟"
-      ],
-      "correct": 2,
-      "izoh": "كَيْفَ حَالُكَ؟ = Ahvoling qanday? (مَا اسْمُكَ — ismingiz nima, مِنْ أَيْنَ أَنْتَ — qayerdansiz)."
-    },
-    {
-      "q": "«Sen talabamisan?» (erkakka) savoli qanday tuziladi?",
-      "opts": [
-        "مَا أَنْتَ طَالِبٌ؟",
-        "مَنْ أَنْتَ طَالِبٌ؟",
-        "هَلْ أَنْتَ طَالِبٌ؟",
-        "كَيْفَ أَنْتَ طَالِبٌ؟"
-      ],
-      "correct": 2,
-      "izoh": "«...mi?» so'rog'i uchun «هَلْ» yuklamasi gap boshiga qo'yiladi: هَلْ أَنْتَ طَالِبٌ؟"
-    },
-    {
-      "q": "«U qayerdan?» (ayolga) — bo'sh joyni to'ldiring: «مِنْ أَيْنَ ___ ؟»",
-      "opts": [
-        "أَنْتَ",
-        "هِيَ",
-        "هُوَ",
-        "أَنْتِ"
-      ],
-      "correct": 1,
-      "izoh": "Uchinchi shaxs ayol uchun «هِيَ» qo'yiladi: مِنْ أَيْنَ هِيَ؟ (أَنْتِ bo'lsa «sen qayerdansan» bo'lib qoladi)."
-    },
-    {
-      "q": "«هَلْ هَذَا دَفْتَرٌ؟» (Bu daftarmi?) savoliga to'g'ri inkor javobni toping.",
-      "opts": [
-        "نَعَمْ، هَذَا دَفْتَرٌ",
-        "شُكْرًا، هَذَا دَفْتَرٌ",
-        "لَا، هَذَا كِتَابٌ",
-        "مَعَ السَّلَامَةِ"
-      ],
-      "correct": 2,
-      "izoh": "Inkor javob «لَا» (yo'q) bilan boshlanadi va to'g'ri ma'lumot beriladi: لَا، هَذَا كِتَابٌ (Yo'q, bu kitob)."
-    },
-    {
-      "q": "«صَبَاحُ الْخَيْرِ» (Xayrli tong!) tabrigiga nima deb javob beriladi?",
-      "opts": [
-        "صَبَاحُ النُّورِ",
-        "مَسَاءُ الْخَيْرِ",
-        "أَهْلًا بِكَ",
-        "مَعَ السَّلَامَةِ"
-      ],
-      "correct": 0,
-      "izoh": "«صَبَاحُ الْخَيْرِ» ga chiroyli javob — «صَبَاحُ النُّورِ» (Nurli tong bo'lsin)."
-    },
-    {
-      "q": "«أَهْلًا وَسَهْلًا» (Xush kelibsiz!) deganda nima deb javob beriladi?",
-      "opts": [
-        "عَفْوًا",
-        "صَبَاحُ الْخَيْرِ",
-        "أَهْلًا بِكَ",
-        "إِلَى اللِّقَاءِ"
-      ],
-      "correct": 2,
-      "izoh": "«أَهْلًا وَسَهْلًا» ga erkak kishi «أَهْلًا بِكَ» (Xush ko'rdik), ayol kishi «أَهْلًا بِكِ» deb javob qaytaradi."
-    },
-    {
-      "q": "«أَنَا بِخَيْرٍ أَيْضًا» jumlasidagi «أَيْضًا» so'zi qanday ma'no anglatadi?",
-      "opts": [
-        "«Ham» (Men ham yaxshiman)",
-        "«Faqat» (Men faqat yaxshiman)",
-        "«Allohga shukr»",
-        "«Bugun»"
-      ],
-      "correct": 0,
-      "izoh": "«أَيْضًا» = ham. «أَنَا بِخَيْرٍ أَيْضًا» = Men ham yaxshiman."
-    },
-    {
-      "q": "Qaysi gapda olmosh va ism jins jihatidan grammatik to'g'ri moslashgan?",
-      "opts": [
-        "هَذِهِ طَالِبٌ",
-        "أَنْتِ مُعَلِّمٌ",
-        "هِيَ طَبِيبَةٌ",
-        "هُوَ طَالِبَةٌ"
-      ],
-      "correct": 2,
-      "izoh": "هِيَ (muannas) va طَبِيبَةٌ (muannas) jinsda to'liq mos: «U shifokordir». Qolganlarida muzakkar va muannas chalkashgan."
-    }
-  ]
+ "title": "Qovaid — A0 1-dars",
+ "otish": 80,
+ "vaqt": 45,
+ "questions": [
+  {
+   "q": "«___ صُورَةٌ»",
+   "opts": [
+    "هَذِهِ",
+    "هُوَ",
+    "هَذَا",
+    "أَنْتَ"
+   ],
+   "correct": 0,
+   "izoh": "«صُورَةٌ» muannas — «هَذِهِ»."
+  },
+  {
+   "q": "«مِنْ أَيْنَ أَنْتَ؟ — ___ مِنْ أُوزْبَكِسْتَانَ»",
+   "opts": [
+    "أَنْتَ",
+    "أَنَا",
+    "هِيَ",
+    "هُوَ"
+   ],
+   "correct": 1,
+   "izoh": "«Sen qayerdansan?» — javob o'zi haqida: «أَنَا»."
+  },
+  {
+   "q": "Qaysi so'z FE'L?",
+   "opts": [
+    "مِنْ",
+    "هَذَا",
+    "تَشَرَّفْتُ",
+    "صُورَةٌ"
+   ],
+   "correct": 2,
+   "izoh": "«تَشَرَّفْتُ» — ish-harakat va zamonni (o'tgan) bildiradi, demak fe'l."
+  },
+  {
+   "q": "Ahmad haqida: «U qayerdan?» savolining to'g'ri shakli qaysi?",
+   "opts": [
+    "مِنْ أَيْنَ هِيَ؟",
+    "أَيْنَ مِنْ هُوَ؟",
+    "هُوَ مِنْ أَيْنَ؟",
+    "مِنْ أَيْنَ هُوَ؟"
+   ],
+   "correct": 3,
+   "izoh": "So'roq so'zi boshida: «مِنْ أَيْنَ», keyin erkak uchun «هُوَ»."
+  },
+  {
+   "q": "«مُعَلِّمٌ» so'zining muannas shakli qaysi?",
+   "opts": [
+    "مُعَلِّمَةٌ",
+    "مُعَلِّمَهٌ",
+    "مُعَلِّمَتٌ",
+    "مُعَلِّمًا"
+   ],
+   "correct": 0,
+   "izoh": "Muannas «ة» (yopiq ta) bilan yasaladi: «مُعَلِّمَةٌ». Ochiq «ت» yoki «ه» emas."
+  },
+  {
+   "q": "«هَلْ أَنْتِ طَالِبَةٌ؟ — نَعَمْ، ___ طَالِبَةٌ»",
+   "opts": [
+    "هُوَ",
+    "هِيَ",
+    "أَنَا",
+    "أَنْتِ"
+   ],
+   "correct": 2,
+   "izoh": "«Sen talabamisan?» deb so'raldi — javob o'zi haqida: «أَنَا»."
+  },
+  {
+   "q": "«U — ayol shifokor» gapining tarjimasi qaysi?",
+   "opts": [
+    "أَنْتِ طَبِيبَةٌ",
+    "هِيَ طَبِيبَةٌ",
+    "هُوَ طَبِيبَةٌ",
+    "هِيَ طَبِيبٌ"
+   ],
+   "correct": 1,
+   "izoh": "Ayol haqida — «هِيَ», kasb ham muannas: «طَبِيبَةٌ»."
+  },
+  {
+   "q": "Qo'lingizda daftar. Savol: «هَلْ هَذَا كِتَابٌ؟» To'g'ri javob qaysi?",
+   "opts": [
+    "لَا، هَذَا دَفْتَرٌ",
+    "نَعَمْ، هَذَا كِتَابٌ",
+    "لَا، هَذِهِ دَفْتَرٌ",
+    "نَعَمْ، هَذَا دَفْتَرٌ"
+   ],
+   "correct": 0,
+   "izoh": "Bu kitob emas — «لَا», daftar muzakkar — «هَذَا دَفْتَرٌ»."
+  },
+  {
+   "q": "«___ دَفْتَرٌ»",
+   "opts": [
+    "هَذِهِ",
+    "هِيَ",
+    "أَنْتِ",
+    "هَذَا"
+   ],
+   "correct": 3,
+   "izoh": "«دَفْتَرٌ» muzakkar — «هَذَا»."
+  },
+  {
+   "q": "Qaysi gapda olmosh XATO tanlangan?",
+   "opts": [
+    "أَنَا أَحْمَدُ",
+    "هُوَ مُحَمَّدٌ",
+    "أَنْتِ زَيْنَبُ",
+    "أَنْتَ فَاطِمَةُ"
+   ],
+   "correct": 3,
+   "izoh": "Fotima — ayol, unga «أَنْتِ» deyiladi."
+  },
+  {
+   "q": "«Sen talabamisan?» savolining TO'G'RI tartibi qaysi?",
+   "opts": [
+    "أَنْتَ هَلْ طَالِبٌ؟",
+    "هَلْ أَنْتَ طَالِبٌ؟",
+    "أَنْتَ طَالِبٌ هَلْ؟",
+    "طَالِبٌ أَنْتَ هَلْ؟"
+   ],
+   "correct": 1,
+   "izoh": "So'roq so'zi gapning boshida keladi."
+  },
+  {
+   "q": "«طَبِيبٌ» nega ism hisoblanadi?",
+   "opts": [
+    "Shaxsning nomi, zamonni bildirmaydi",
+    "O'tgan zamonni bildiradi",
+    "Yolg'iz o'zi ma'no bermaydi",
+    "Ish-harakatni bildiradi"
+   ],
+   "correct": 0,
+   "izoh": "Ism — shaxs, narsa yoki tushunchaning nomi, zamonga bog'lanmaydi."
+  },
+  {
+   "q": "«___ هَذِهِ؟ — هَذِهِ زَيْنَبُ»",
+   "opts": [
+    "مِنْ أَيْنَ",
+    "مَا",
+    "مَنْ",
+    "كَيْفَ"
+   ],
+   "correct": 2,
+   "izoh": "Odam haqida — «مَنْ» (kim)."
+  },
+  {
+   "q": "Ahmadga: «Sen muallimsan». To'g'ri tarjimani toping.",
+   "opts": [
+    "أَنْتَ مُعَلِّمٌ",
+    "هُوَ مُعَلِّمٌ",
+    "أَنْتِ مُعَلِّمٌ",
+    "أَنْتَ مُعَلِّمَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "Erkakka murojaat — «أَنْتَ» (fatha), kasb muzakkar."
+  },
+  {
+   "q": "Qaysi so'z HARF?",
+   "opts": [
+    "تَشَرَّفْتُ",
+    "أَنَا",
+    "مُعَلِّمٌ",
+    "مِنْ"
+   ],
+   "correct": 3,
+   "izoh": "«مِنْ» yolg'iz o'zi to'liq ma'no bermaydi — harf. «أَنَا» olmosh, ya'ni ism."
+  },
+  {
+   "q": "«___ حَالُكَ؟ — بِخَيْرٍ وَالْحَمْدُ لِلَّهِ»",
+   "opts": [
+    "هَلْ",
+    "مَنْ",
+    "كَيْفَ",
+    "مِنْ أَيْنَ"
+   ],
+   "correct": 2,
+   "izoh": "Ahvol so'raladi — «كَيْفَ» (qanday)."
+  },
+  {
+   "q": "«هَذَا طَالِبٌ» gapini qiz haqida qilib o'zgartiring.",
+   "opts": [
+    "هَذَا طَالِبَةٌ",
+    "هَذِهِ طَالِبَةٌ",
+    "هِيَ طَالِبَةٌ",
+    "هَذِهِ طَالِبٌ"
+   ],
+   "correct": 1,
+   "izoh": "Ko'rsatish olmoshi ham, ism ham muannas bo'ladi. «هِيَ» — «U», ko'rsatish emas."
+  },
+  {
+   "q": "Qaysi savolga «نَعَمْ» yoki «لَا» bilan javob beriladi?",
+   "opts": [
+    "كَيْفَ حَالُكَ؟",
+    "مَنْ أَنْتِ؟",
+    "مِنْ أَيْنَ أَنْتِ؟",
+    "هَلْ أَنْتِ مُعَلِّمَةٌ؟"
+   ],
+   "correct": 3,
+   "izoh": "«هَلْ» bilan boshlangan savolga «ha / yo'q» bilan javob beriladi."
+  },
+  {
+   "q": "«هَلْ أَنْتَ طَالِبٌ؟» gapida nechta ISM bor?",
+   "opts": [
+    "Ism yo'q",
+    "1 ta",
+    "2 ta",
+    "3 ta"
+   ],
+   "correct": 2,
+   "izoh": "«أَنْتَ» va «طَالِبٌ» — ism; «هَلْ» — harf."
+  },
+  {
+   "q": "Qaysi juftlikda IKKALA so'z ham muannas?",
+   "opts": [
+    "دَفْتَرٌ، كِتَابٌ",
+    "طَالِبَةٌ، صُورَةٌ",
+    "طَالِبَةٌ، قَلَمٌ",
+    "طَبِيبٌ، صُورَةٌ"
+   ],
+   "correct": 1,
+   "izoh": "Ikkalasining oxirida ham «ة» bor."
+  },
+  {
+   "q": "Qaysi gapda JINS xatosi bor?",
+   "opts": [
+    "هِيَ طَبِيبٌ",
+    "هِيَ طَالِبَةٌ",
+    "هَذِهِ صُورَةٌ",
+    "هُوَ مُعَلِّمٌ"
+   ],
+   "correct": 0,
+   "izoh": "«هِيَ» muannas, demak «طَبِيبَةٌ» bo'lishi kerak."
+  },
+  {
+   "q": "Qaysi savol-javob TO'G'RI tuzilgan?",
+   "opts": [
+    "مَا هَذَا؟ — هَذَا طَبِيبٌ",
+    "مَنْ هَذَا؟ — هَذَا مُعَلِّمٌ",
+    "مَا هَذِهِ؟ — هَذِهِ مُعَلِّمَةٌ",
+    "مَنْ هَذَا؟ — هَذَا كِتَابٌ"
+   ],
+   "correct": 1,
+   "izoh": "Odam haqida «مَنْ», narsa haqida «مَا»."
+  },
+  {
+   "q": "«فَاطِمَةُ طَبِيبَةٌ» gapidagi ikki ism qaysi jinsda?",
+   "opts": [
+    "Ikkalasi muannas",
+    "Birinchisi muzakkar, ikkinchisi muannas",
+    "Birinchisi muannas, ikkinchisi muzakkar",
+    "Ikkalasi muzakkar"
+   ],
+   "correct": 0,
+   "izoh": "Ikkalasining oxirida «ة» bor — ikkalasi muannas. Gapda ism va unga tegishli so'z jinsda mos keladi."
+  },
+  {
+   "q": "«مَنْ أَنْتَ؟ — ___ أَحْمَدُ»",
+   "opts": [
+    "هَذَا",
+    "هُوَ",
+    "أَنْتَ",
+    "أَنَا"
+   ],
+   "correct": 3,
+   "izoh": "«Sen kimsan?» savoliga javob beruvchi o'zi haqida aytadi: «أَنَا»."
+  },
+  {
+   "q": "Zaynab haqida gapiryapmiz: «___ مِنْ مِصْرَ»",
+   "opts": [
+    "هُوَ",
+    "أَنْتِ",
+    "هِيَ",
+    "أَنَا"
+   ],
+   "correct": 2,
+   "izoh": "Uchinchi shaxs, ayol — «هِيَ»."
+  },
+  {
+   "q": "«___ أَنْتَ؟ — أَنَا مِنْ مِصْرَ»",
+   "opts": [
+    "مِنْ أَيْنَ",
+    "مَنْ",
+    "كَيْفَ",
+    "مَا"
+   ],
+   "correct": 0,
+   "izoh": "Qayerdanligini so'rash — «مِنْ أَيْنَ»."
+  },
+  {
+   "q": "«هُوَ مُعَلِّمٌ» qanday tarjima qilinadi?",
+   "opts": [
+    "Men muallimman",
+    "Sen muallimsan",
+    "U muallim",
+    "Bu muallim"
+   ],
+   "correct": 2,
+   "izoh": "«هُوَ» — U (kishilik olmoshi). «Bu» — «هَذَا» bo'lardi."
+  },
+  {
+   "q": "Qaysi qatordagi so'zlarning HAMMASI ism?",
+   "opts": [
+    "كِتَابٌ، تَشَرَّفْتُ، قَلَمٌ",
+    "مِنْ، إِلَى، هَلْ",
+    "قَلَمٌ، مِنْ، صُورَةٌ",
+    "كِتَابٌ، قَلَمٌ، طَبِيبٌ"
+   ],
+   "correct": 3,
+   "izoh": "Uchala so'z ham narsa/shaxs nomi. «تَشَرَّفْتُ» — fe'l, «مِنْ» — harf."
+  },
+  {
+   "q": "Qaysi qatordagi so'zlarning HAMMASI harf?",
+   "opts": [
+    "هَلْ، هُوَ، إِلَى",
+    "مِنْ، إِلَى، هَلْ",
+    "إِلَى، كِتَابٌ، مِنْ",
+    "مِنْ، أَنَا، هَلْ"
+   ],
+   "correct": 1,
+   "izoh": "«مِنْ، إِلَى، هَلْ» — harflar. «أَنَا، هُوَ» — olmosh (ism)."
+  },
+  {
+   "q": "Qaysi so'z MUANNAS?",
+   "opts": [
+    "دَفْتَرٌ",
+    "قَلَمٌ",
+    "صُورَةٌ",
+    "كِتَابٌ"
+   ],
+   "correct": 2,
+   "izoh": "Oxirida «ة» bor — muannas. Jonsiz narsalar ham jinsga ega."
+  },
+  {
+   "q": "«أَنَا مِنْ مِصْرَ» gapidagi harf qaysi?",
+   "opts": [
+    "مِنْ",
+    "أَنَا",
+    "Bu gapda harf yo'q",
+    "مِصْرَ"
+   ],
+   "correct": 0,
+   "izoh": "«مِنْ» — harf. «أَنَا» va «مِصْرَ» — ism."
+  },
+  {
+   "q": "«Bu — Fotima» gapining tarjimasi qaysi?",
+   "opts": [
+    "أَنْتِ فَاطِمَةُ",
+    "هَذِهِ فَاطِمَةُ",
+    "هِيَ فَاطِمَةُ",
+    "هَذَا فَاطِمَةُ"
+   ],
+   "correct": 1,
+   "izoh": "«Bu» — ko'rsatish: «هَذِهِ». «هِيَ» — «U» degani."
+  },
+  {
+   "q": "«هُوَ طَالِبٌ» gapini ayol haqida qilib o'zgartiring.",
+   "opts": [
+    "أَنْتِ طَالِبَةٌ",
+    "هُوَ طَالِبَةٌ",
+    "هِيَ طَالِبٌ",
+    "هِيَ طَالِبَةٌ"
+   ],
+   "correct": 3,
+   "izoh": "Olmosh ham, ism ham o'zgaradi: «هِيَ طَالِبَةٌ». «أَنْتِ» — boshqa shaxs (sen)."
+  },
+  {
+   "q": "«مِنْ أَيْنَ أَنْتِ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "هِيَ مِنْ مِصْرَ",
+    "نَعَمْ، أَنَا مِنْ مِصْرَ",
+    "أَنَا مِنْ مِصْرَ",
+    "أَنْتِ مِنْ مِصْرَ"
+   ],
+   "correct": 2,
+   "izoh": "Javob o'zi haqida — «أَنَا». «نَعَمْ» faqat «هَلْ» savoliga."
+  },
+  {
+   "q": "«هَذِهِ طَالِبَةٌ» qanday tarjima qilinadi?",
+   "opts": [
+    "Sen talaba qizsan",
+    "Bu talaba yigit",
+    "U talaba qiz",
+    "Bu talaba qiz"
+   ],
+   "correct": 3,
+   "izoh": "«هَذِهِ» — Bu (muannas)."
+  },
+  {
+   "q": "Fotima Ahmadning o'zidan so'rayapti: «هَلْ ___ طَبِيبٌ؟»",
+   "opts": [
+    "أَنْتَ",
+    "هِيَ",
+    "أَنَا",
+    "أَنْتِ"
+   ],
+   "correct": 0,
+   "izoh": "Fotima gapiryapti, lekin murojaat Ahmadga — erkakka: «أَنْتَ». Savol beruvchining jinsi emas, kimga murojaat qilinayotgani muhim."
+  },
+  {
+   "q": "Zaynab — talaba qiz. To'g'ri gapni toping.",
+   "opts": [
+    "هُوَ زَيْنَبُ",
+    "زَيْنَبُ طَالِبَةٌ",
+    "زَيْنَبُ طَالِبٌ",
+    "هَذَا زَيْنَبُ"
+   ],
+   "correct": 1,
+   "izoh": "«زَيْنَبُ» da «ة» yo'q, lekin ayol ismi — muannas. Shuning uchun «طَالِبَةٌ», «هَذِهِ», «هِيَ»."
+  },
+  {
+   "q": "Qaysi so'z jinsi bo'yicha qolganlaridan FARQ qiladi?",
+   "opts": [
+    "طَالِبَةٌ",
+    "قَلَمٌ",
+    "صُورَةٌ",
+    "مُعَلِّمَةٌ"
+   ],
+   "correct": 1,
+   "izoh": "«قَلَمٌ» — muzakkar, qolgan uchtasi muannas."
+  },
+  {
+   "q": "Qaysi gapda XATO bor?",
+   "opts": [
+    "هَذَا طَبِيبٌ",
+    "هَذَا قَلَمٌ",
+    "هَذِهِ مُعَلِّمَةٌ",
+    "هَذِهِ دَفْتَرٌ"
+   ],
+   "correct": 3,
+   "izoh": "«دَفْتَرٌ» muzakkar — «هَذَا دَفْتَرٌ»."
+  },
+  {
+   "q": "«يَكْتُبُ» (yozyapti) qaysi turkumga kiradi va nega?",
+   "opts": [
+    "Fe'l — ish va zamonni bildiradi",
+    "Ism — narsaning nomi",
+    "Ism — zamonga bog'lanmagan",
+    "Harf — yolg'iz ma'no bermaydi"
+   ],
+   "correct": 0,
+   "izoh": "Yozish harakati + hozirgi zamon = fe'l."
+  },
+  {
+   "q": "«Bu qalam, bu esa surat» gapining tarjimasi qaysi?",
+   "opts": [
+    "هَذَا قَلَمٌ وَهَذَا صُورَةٌ",
+    "هَذِهِ قَلَمٌ وَهَذَا صُورَةٌ",
+    "هَذَا قَلَمٌ وَهَذِهِ صُورَةٌ",
+    "هَذِهِ قَلَمٌ وَهَذِهِ صُورَةٌ"
+   ],
+   "correct": 2,
+   "izoh": "Har bir ismga o'z jinsidagi ko'rsatish olmoshi: قَلَمٌ — هَذَا, صُورَةٌ — هَذِهِ."
+  },
+  {
+   "q": "«أَنْتَ طَبِيبٌ» gapini ayolga murojaat qilib o'zgartiring.",
+   "opts": [
+    "أَنْتِ طَبِيبَةٌ",
+    "أَنْتِ طَبِيبٌ",
+    "هِيَ طَبِيبَةٌ",
+    "أَنْتَ طَبِيبَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "«أَنْتَ» → «أَنْتِ», «طَبِيبٌ» → «طَبِيبَةٌ». Shaxs (sen) o'zgarmaydi."
+  },
+  {
+   "q": "«___ هَذَا؟ — هَذَا قَلَمٌ»",
+   "opts": [
+    "هَلْ",
+    "مَنْ",
+    "كَيْفَ",
+    "مَا"
+   ],
+   "correct": 3,
+   "izoh": "Narsa haqida — «مَا» (nima)."
+  },
+  {
+   "q": "«فَاطِمَةُ» va «صُورَةٌ» so'zlarining muannaslik belgisi qaysi?",
+   "opts": [
+    "o'rtadagi «ا»",
+    "oxiridagi «ي»",
+    "oxiridagi «ة»",
+    "boshidagi «اَلْ»"
+   ],
+   "correct": 2,
+   "izoh": "Muannaslikning eng ko'p uchraydigan belgisi — oxiridagi «ة»."
+  },
+  {
+   "q": "«___ أَنْتَ طَبِيبٌ؟ — لَا، أَنَا مُعَلِّمٌ»",
+   "opts": [
+    "كَيْفَ",
+    "هَلْ",
+    "مَا",
+    "مَنْ"
+   ],
+   "correct": 1,
+   "izoh": "«Ha / yo'q» bilan javob beriladigan savol — «هَلْ»."
+  }
+ ]
 }
