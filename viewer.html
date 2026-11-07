@@ -286,6 +286,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let bookName = P.get("kitob") || DEFAULT_BOOK;
   let startPage = parseInt(P.get("bet") || "21", 10);
   const darsId  = P.get("dars") || "";
+  const PRACTICE = P.get("mashq") === "1";
   // 2026-09-23 (bo'lim 61): «Xatolar ustida ishlash» rejimi — ?takror=a0_3,a0_4
   // Shu 2 darsning mufradot+qovaid xatolari + eski xatolardan takrorlash vaqti
   // kelganlari (1-3-7-14 kun). Natija botga YUBORILMAYDI — faqat mashq.
@@ -331,6 +332,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(darsId){
       try{
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
+        if(!r.ok && PRACTICE) throw new Error("Test topilmadi");
         if(r.ok){ const j = await r.json();
           if(Array.isArray(j.questions)) QUESTIONS = j.questions;
           if(typeof j.matn === "string") READING_TEXT = j.matn.trim();
@@ -343,7 +345,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
           if(j.tinglash!=null){ const n=parseInt(j.tinglash,10); audioPlaysLeft = (isNaN(n)||n<=0) ? Infinity : n; }
           if(j.title) document.getElementById('hdrSub').textContent = j.title;
         }
-      }catch(e){ /* SAMPLE bilan davom etadi */ }
+      }catch(e){
+        if(PRACTICE){ NO_TIMER=true; document.getElementById("timer").style.display="none"; document.getElementById("qCard").textContent="Testni yuklab bo‘lmadi. Botga qaytib, keyinroq qayta urinib ko‘ring."; return; }
+      }
     }
     if(hasBook){ document.getElementById('bookBtn').style.display='flex'; ensurePdfJs().catch(function(){}); }  // kitobli testda oldindan fonda yuklab qo'yamiz
     if(READING_TEXT || QUESTIONS.some(function(q){return q&&q.matn;})){ var _fs=document.getElementById('fscale'); if(_fs) _fs.style.display='flex'; }
@@ -846,7 +850,15 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     document.getElementById('resTitle').textContent=passed?"Ajoyib! O'tdingiz":"Yana bir bor urinib ko'ring";
     document.getElementById('resSub').textContent=correctCount+' / '+QUESTIONS.length+" ta savolga to'g'ri javob berdingiz.";
     buildReview();
-    recordAnswers();
+    if(!PRACTICE) recordAnswers();
+    if(PRACTICE){
+      document.getElementById("resTitle").textContent="Mashq yakunlandi";
+      const msg=document.getElementById("resMsg"); msg.className="res-msg pass";
+      msg.textContent="Bu mashq hozirgi darsingizga ta’sir qilmaydi. Xatolaringizni quyida ko‘rib chiqing.";
+      document.getElementById("resBtns").innerHTML='<button class="btn-primary" onclick="closeApp()">Botga qaytish</button>';
+      document.getElementById("resultScreen").style.display="flex";
+      return;
+    }
     if(TAKROR.length){
       saveTakror();
       document.getElementById('resIcon').textContent = pct>=80?'🌟':'💪';
