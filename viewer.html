@@ -315,6 +315,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   ];
   let QUESTIONS = SAMPLE;
   let cur = 0, correctCount = 0, answeredCount = 0, finished = false, timerInt = null;
+  let reviewStarted = null, timerDeadline = null, singleReview = null;
+  function pauseReview(){ if(reviewStarted===null) reviewStarted=Date.now(); }
+  function resumeReview(){ if(reviewStarted!==null){ if(timerDeadline!==null) timerDeadline+=Date.now()-reviewStarted; reviewStarted=null; } }
 
   // ====== JSON YUKLASH ======
   let MSCALE=1;
@@ -464,7 +467,16 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(correct) correctCount++;
     applyAnswered(i);
     const last=(i===QUESTIONS.length-1);
-    setTimeout(function(){ if(last){ finish(); } else if(cur===i){ renderQuestion(i+1); } }, correct?900:1500);
+    if(correct){ setTimeout(function(){ if(finished || cur!==i) return; if(last) finish(); else renderQuestion(i+1); }, 900); }
+    else {
+      pauseReview();
+      document.getElementById('navArea').innerHTML='<button class="btn-next" onclick="continueQuestion('+i+')">'+(last?'Natijani ko‘rish ▶':'Keyingi savol ▶')+'</button>';
+    }
+  }
+  function continueQuestion(i){
+    if(finished || cur!==i || reviewStarted===null) return;
+    resumeReview();
+    if(i===QUESTIONS.length-1) finish(); else renderQuestion(i+1);
   }
   function applyAnswered(i){
     const item=QUESTIONS[i];
@@ -517,7 +529,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
   function pickSingle(i,oi){
     const item=QUESTIONS[i];
-    if(item._answered!=null) return;
+    if(finished || singleReview!==null || item._answered!=null) return;
     item._answered=oi; answeredCount++;
     if(oi===item._correct) correctCount++;
     const opts=document.getElementById('opts'+i); if(opts) opts.classList.add('locked');
@@ -531,10 +543,23 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(fb){ const izoh=item.izoh?' — '+item.izoh:'';
       fb.innerHTML='<div class="feedback-box '+(ok?'fb-ok':'fb-no')+'">'+(ok?"✅ To'g'ri":"❌ Noto'g'ri")+izoh+'</div>'; }
     updateSingleProgress();
+    if(!ok){
+      singleReview=i; pauseReview();
+      fb.insertAdjacentHTML('beforeend','<button class="btn-next" onclick="continueSingle('+i+')">'+(answeredCount>=QUESTIONS.length?'Natijani ko‘rish ▶':'Keyingi savol ▶')+'</button>');
+      return;
+    }
     if(answeredCount>=QUESTIONS.length){
       const fbtn=document.getElementById('finishBtn');
       if(fbtn){ fbtn.style.display='block'; fbtn.scrollIntoView({behavior:'smooth',block:'center'}); }
     }
+  }
+  function continueSingle(i){
+    if(finished || singleReview!==i) return;
+    singleReview=null; resumeReview();
+    const b=document.querySelector('#fb'+i+' .btn-next'); if(b) b.remove();
+    if(answeredCount>=QUESTIONS.length){ finish(); return; }
+    const next=QUESTIONS.findIndex(function(q){ return q._answered==null; });
+    const card=document.getElementById('card'+next); if(card) card.scrollIntoView({behavior:'smooth',block:'start'});
   }
   function updateSingleProgress(){
     const c=document.getElementById('qCounter'); if(c) c.textContent='Javob berildi: '+answeredCount+' / '+QUESTIONS.length;
@@ -867,10 +892,10 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   // ====== TAYMER ======
   function startTimer(){
     let left=MINUTES*60;
-    const __deadline=Date.now()+left*1000;
+    timerDeadline=Date.now()+left*1000;
     const t=document.getElementById('timer');
     t.textContent=String(MINUTES).padStart(2,'0')+":00";
-    timerInt=setInterval(function(){ left=Math.round((__deadline-Date.now())/1000);
+    timerInt=setInterval(function(){ if(reviewStarted!==null) return; left=Math.round((timerDeadline-Date.now())/1000);
       const m=String(Math.floor(left/60)).padStart(2,'0'), s=String(left%60).padStart(2,'0');
       t.textContent=m+':'+s;
       t.classList.toggle('warn', left<=60 && left>10);

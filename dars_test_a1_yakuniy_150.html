@@ -89,6 +89,7 @@ body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);-webkit-font-smoo
 .res-btns{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;width:100%;max-width:320px}
 .btn-sec{padding:14px;border-radius:12px;border:1.5px solid rgba(255,255,255,.22);background:transparent;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
 .btn-sec:active{background:rgba(255,255,255,.08)}
+.btn-next{display:block;width:100%;margin-top:20px;padding:16px;border:0;border-radius:12px;background:#6b4423;color:#fff;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer}
 </style>
 </head>
 <body>
@@ -409,11 +410,21 @@ function selectOpt(el,isOk,fb){
     box.innerHTML='💡 '+fb;
     document.getElementById('qCard').appendChild(box);
   }
-  setTimeout(()=>{
+  function advance(){
     qi++;
-    if(qi>=QUESTIONS.length){document.getElementById('gbarFill').style.width='100%';setTimeout(finish,400);}
+    if(qi>=QUESTIONS.length){document.getElementById('gbarFill').style.width='100%';finish();}
     else renderQ();
-  },1900);
+  }
+  if(isOk){ setTimeout(advance,1900); }
+  else {
+    timeLeft=Math.max(0,Math.ceil((window.__qzDeadline-Date.now())/1000));
+    clearInterval(timerInv);
+    const btn=document.createElement('button');
+    btn.className='btn-next';
+    btn.textContent=qi===QUESTIONS.length-1?'Natijani ko‘rish ▶':'Keyingi savol ▶';
+    btn.onclick=()=>{btn.disabled=true; if(qi<QUESTIONS.length-1) startTimer(); advance();};
+    document.getElementById('qCard').appendChild(btn);
+  }
 }
 
 function finish(){
