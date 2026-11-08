@@ -1,0 +1,607 @@
+{
+  "title": "A0 — Chiqish imtihoni: 2-qism — Qovaid",
+  "otish": 80,
+  "vaqt": 75,
+  "questions": [
+    {
+      "q": "Tarjima qiling: «U — mening muallimam, bu uning shkafi».",
+      "opts": ["هُوَ مُعَلِّمَتِي وَهَذَا خِزَانَتُهُ", "هِيَ مُعَلِّمَتِي وَهَذِهِ خِزَانَتُهَا", "هِيَ مُعَلِّمِي وَهَذِهِ خِزَانَتُهُ", "أَنْتِ مُعَلِّمَتِي وَهَذَا خِزَانَتُهَا"],
+      "correct": 1,
+      "izoh": "Ayol uchun هِيَ va هَذِهِ, «uning» uchun ـهَا ishlatiladi."
+    },
+    {
+      "q": "«Sizlarning onangiz» (ayollarga) qaysi?",
+      "opts": ["أُمُّكُمْ", "أُمُّهُمْ", "أُمُّكُنَّ", "أُمُّهُنَّ"],
+      "correct": 2,
+      "izoh": "ـكُنَّ — «sizlarning», ayollar ko'pligiga tegishli."
+    },
+    {
+      "q": "«Keng zal» birikmasini toping.",
+      "opts": ["صَالَةٌ كَبِيرَةٌ", "صَالَةٌ وَاسِعَةٌ", "غُرْفَةٌ نَظِيفَةٌ", "صَالَةٌ قَدِيمَةٌ"],
+      "correct": 1,
+      "izoh": "وَاسِعَةٌ — «keng»; sifat muannas ismga moslashgan."
+    },
+    {
+      "q": "«Sening yangi qalaming» (erkakka) qaysi?",
+      "opts": ["قَلَمُكَ الْجَدِيدُ", "قَلَمُكَ جَدِيدٌ", "قَلَمُكِ جَدِيدَةٌ", "قَلَمُكَ الْجَدِيدَةُ"],
+      "correct": 0,
+      "izoh": "قَلَمُكَ aniq bo'lgani uchun sifat ham الْ bilan keladi."
+    },
+    {
+      "q": "«U ikkisining mashinasi toza» qanday aytiladi?",
+      "opts": ["سَيَّارَتُهُمْ نَظِيفَةٌ", "سَيَّارَتُهُمَا نَظِيفَةٌ", "سَيَّارَتُكُمَا نَظِيفٌ", "سَيَّارَتُهُمَا نَظِيفٌ"],
+      "correct": 1,
+      "izoh": "ـهُمَا — «u ikkisining»; سَيَّارَةٌ muannas bo'lgani uchun نَظِيفَةٌ keladi."
+    },
+    {
+      "q": "Faqat muzakkar ismlar qatorini toping.",
+      "opts": ["شَجَرَةٌ، غُرْفَةٌ، أُمٌّ", "بِنْتٌ، طَاوِلَةٌ، صَالَةٌ", "بَابٌ، كُرْسِيٌّ، جَدٌّ", "سَيَّارَةٌ، صُورَةٌ، جَدَّةٌ"],
+      "correct": 2,
+      "izoh": "بَابٌ، كُرْسِيٌّ، جَدٌّ — uchalasi ham muzakkar."
+    },
+    {
+      "q": "«Bizning do'stlarimiz» qaysi?",
+      "opts": ["صَدِيقُنَا", "أَصْدِقَاؤُنَا", "صُدُوقُنَا", "أَصْدِقَائِي"],
+      "correct": 1,
+      "izoh": "أَصْدِقَاءُ — «do'stlar», ـنَا — «bizning»."
+    },
+    {
+      "q": "Ism jinsidagi xatoni toping.",
+      "opts": ["هَذَا حَلَّاقٌ", "هَذِهِ طَبَّاخَةٌ", "هَذَا سَيَّارَةٌ", "هَذِهِ عَمَّةٌ"],
+      "correct": 2,
+      "izoh": "سَيَّارَةٌ muannas, shuning uchun هَذِهِ ishlatiladi."
+    },
+    {
+      "q": "«Ular — ayol shifokorlar» qaysi?",
+      "opts": ["هُنَّ طَبِيبُونَ", "هُنَّ أَطِبَّاءُ", "هُمْ طَبِيبَاتٌ", "هُنَّ طَبِيبَاتٌ"],
+      "correct": 3,
+      "izoh": "هُنَّ va طَبِيبَاتٌ ayollar ko'pligini bildiradi."
+    },
+    {
+      "q": "«Mening amakim va uning o'g'li» qaysi?",
+      "opts": ["عَمِّي وَابْنُهُ", "خَالِي وَابْنُهُ", "عَمِّي وَابْنُهَا", "عَمُّهُ وَابْنِي"],
+      "correct": 0,
+      "izoh": "عَمِّي — amakim, ابْنُهُ — uning o'g'li."
+    },
+    {
+      "q": "لَدَيْهِ بَيْتٌ tarjimasi qaysi?",
+      "opts": ["U uyda yashaydi", "Uning uyi bor", "Uy uning ortida", "Uy uning o'ng tomonida"],
+      "correct": 1,
+      "izoh": "لَدَيْهِ — «unda/uning ... bor»."
+    },
+    {
+      "q": "عِنْدَنَا سَيَّارَةٌ tarjimasi qaysi?",
+      "opts": ["Bizda mashina bor", "Mashina uy oldida", "Biz mashinada o'tiribmiz", "Mashina bizning o'ngimizda"],
+      "correct": 0,
+      "izoh": "عِنْدَنَا — «bizda»."
+    },
+    {
+      "q": "مَعَهَا قَلَمٌ tarjimasi qaysi?",
+      "opts": ["U qalam bilan yozmoqda", "Unda qalam bor", "Qalam uning ortida", "Qalam stol ustida"],
+      "correct": 1,
+      "izoh": "مَعَهَا — «unda/u bilan», ayol kishiga tegishli."
+    },
+    {
+      "q": "لَكُمْ كِتَابٌ tarjimasi qaysi?",
+      "opts": ["Ularda kitob bor", "Sizlarda kitob bor", "Bizda kitob bor", "Menda kitob bor"],
+      "correct": 1,
+      "izoh": "ـكُمْ — «sizlar», erkaklar yoki aralash guruh."
+    },
+    {
+      "q": "عِنْدَ + نَحْنُ qaysi shaklga kiradi?",
+      "opts": ["عِنْدَنَا", "عِنْدَكُمْ", "عِنْدَهُمَا", "عِنْدِي"],
+      "correct": 0,
+      "izoh": "نَحْنُ ga tegishli muttasil zamir ـنَا."
+    },
+    {
+      "q": "لَدَى + هُوَ qaysi shaklga kiradi?",
+      "opts": ["لَدَيْهِ", "لَدَيْهَا", "لَدَيْكَ", "لَدَيْنَا"],
+      "correct": 0,
+      "izoh": "هُوَ uchun ـهِ qo'shiladi."
+    },
+    {
+      "q": "مَعَ + أَنْتُنَّ qaysi shaklga kiradi?",
+      "opts": ["مَعَكُنَّ", "مَعَكُمْ", "مَعَهُنَّ", "مَعَنَا"],
+      "correct": 0,
+      "izoh": "أَنْتُنَّ uchun ـكُنَّ ishlatiladi."
+    },
+    {
+      "q": "لِ + هُمَا qaysi shaklga kiradi?",
+      "opts": ["لَهُمَا", "لَكُمْ", "لَهُمْ", "لَنَا"],
+      "correct": 0,
+      "izoh": "هُمَا — «u ikkisi»; birikma لَهُمَا bo'ladi."
+    },
+    {
+      "q": "لَدَى + أَنَا qaysi shaklga kiradi?",
+      "opts": ["لَدَيَّ", "لَدَيْهِ", "لَدَيْكِ", "لَدَيْنَا"],
+      "correct": 0,
+      "izoh": "أَنَا bilan لَدَيَّ shakli ishlatiladi."
+    },
+    {
+      "q": "عِنْدَ + أَنْتُمَا qaysi shaklga kiradi?",
+      "opts": ["عِنْدَكُمَا", "عِنْدَهُمْ", "عِنْدَكُنَّ", "عِنْدَنَا"],
+      "correct": 0,
+      "izoh": "أَنْتُمَا uchun ـكُمَا qo'shiladi."
+    },
+    {
+      "q": "3–10 dan keyin ma'dud qanday keladi?",
+      "opts": ["Birlikda, fathali", "Ko'plikda, kasrali", "Ko'plikda, dammali", "Birlikda, kasrali"],
+      "correct": 1,
+      "izoh": "3–10 dan keyingi ma'dud ko'plik va majrur bo'ladi."
+    },
+    {
+      "q": "«To'rtta mehmon» qaysi?",
+      "opts": ["أَرْبَعَةُ ضُيُوفٍ", "أَرْبَعُ ضُيُوفٍ", "أَرْبَعَةُ ضَيْفٍ", "أَرْبَعُ ضَيْفٍ"],
+      "correct": 0,
+      "izoh": "ضَيْفٌ muzakkar, son esa ة bilan keladi."
+    },
+    {
+      "q": "«Beshta xona» qaysi?",
+      "opts": ["خَمْسَةُ غُرَفٍ", "خَمْسُ غُرَفٍ", "خَمْسَةُ غُرْفَةٍ", "خَمْسُ غُرْفَةٍ"],
+      "correct": 1,
+      "izoh": "غُرْفَةٌ muannas, shuning uchun son ةsiz keladi."
+    },
+    {
+      "q": "Son va ma'duddagi xatoni toping.",
+      "opts": ["ثَلَاثُ بَنَاتٍ", "عَشَرَةُ أَوْلَادٍ", "سِتَّةُ أُمَّهَاتٍ", "سَبْعُ شَجَرَاتٍ"],
+      "correct": 2,
+      "izoh": "أُمَّهَاتٌ muannas; to'g'risi سِتُّ أُمَّهَاتٍ."
+    },
+    {
+      "q": "«Sakkizta shkaf» qaysi?",
+      "opts": ["ثَمَانِيَةُ خَزَائِنَ", "ثَمَانِي خَزَائِنَ", "ثَمَانِيَةُ خِزَانَةٍ", "ثَمَانِي خِزَانَةٍ"],
+      "correct": 1,
+      "izoh": "خِزَانَةٌ muannas, shuning uchun ثَمَانِي ishlatiladi."
+    },
+    {
+      "q": "«To'qqizta amaki» qaysi?",
+      "opts": ["تِسْعُ أَعْمَامٍ", "تِسْعَةُ أَعْمَامٍ", "تِسْعَةُ عَمٍّ", "تِسْعُ أَعْمَامَةٍ"],
+      "correct": 1,
+      "izoh": "عَمٌّ muzakkar, son ة bilan keladi."
+    },
+    {
+      "q": "«O'nta qalam» qaysi?",
+      "opts": ["عَشَرَةُ أَقْلَامٍ", "عَشْرُ أَقْلَامٍ", "عَشَرَةُ قَلَمٍ", "عَشْرُ قَلَمٍ"],
+      "correct": 0,
+      "izoh": "قَلَمٌ muzakkar; ma'dud ko'plik va majrur."
+    },
+    {
+      "q": "«Yettita sotuvchi» qaysi?",
+      "opts": ["سَبْعُ بَائِعُونَ", "سَبْعَةُ بَائِعِينَ", "سَبْعَةُ بَائِعُونَ", "سَبْعُ بَائِعِينَ"],
+      "correct": 1,
+      "izoh": "بَائِعٌ muzakkar, son ة bilan; ma'dud majrur bo'ladi."
+    },
+    {
+      "q": "لِ bilan ayting: «Mening bitta xolam bor».",
+      "opts": ["لِي خَالَةٌ وَاحِدٌ", "لِي خَالَةٌ وَاحِدَةٌ", "لِي وَاحِدَةٌ خَالَةٌ", "عِنْدِي خَالَةٌ وَاحِدَةٌ"],
+      "correct": 1,
+      "izoh": "خَالَةٌ muannas, shuning uchun وَاحِدَةٌ keladi."
+    },
+    {
+      "q": "«Oshxonada oltita oshpaz bor» qaysi?",
+      "opts": ["فِي الْمَطْبَخِ سِتَّةُ طَبَّاخِينَ", "فِي الْمَطْبَخِ سِتُّ طَبَّاخُونَ", "فِي الْمَطْعَمِ سِتَّةُ طَبَّاخِينَ", "فِي الْمَطْبَخِ سِتَّةُ طَبَّاخُونَ"],
+      "correct": 0,
+      "izoh": "مَطْبَخٌ — oshxona; طَبَّاخِينَ majrur ko'plik."
+    },
+    {
+      "q": "كَمْ dan keyingi ma'dud qanday keladi?",
+      "opts": ["Ko'plikda, fathali", "Birlikda, kasrali", "Birlikda, tanvin fathali", "Birlikda, dammali"],
+      "correct": 2,
+      "izoh": "كَمْ dan keyingi tamyiz birlik va mansub bo'ladi."
+    },
+    {
+      "q": "«Senda nechta kitob bor?» (erkakka) qaysi?",
+      "opts": ["كَمْ كِتَابٌ عِنْدَكَ؟", "كَمْ كُتُبًا عِنْدَكَ؟", "كَمْ كِتَابًا عِنْدَكَ؟", "كَمْ كِتَابٍ عِنْدَكَ؟"],
+      "correct": 2,
+      "izoh": "كِتَابًا birlik va tanvin fathali keladi."
+    },
+    {
+      "q": "«Maktabda nechta muallim bor?» qaysi?",
+      "opts": ["كَمْ مُعَلِّمِينَ فِي الْمَدْرَسَةِ؟", "كَمْ مُعَلِّمًا فِي الْمَدْرَسَةِ؟", "كَمْ مُعَلِّمٌ فِي الْمَدْرَسَةِ؟", "كَمْ مُعَلِّمَاتٍ فِي الْمَدْرَسَةِ؟"],
+      "correct": 1,
+      "izoh": "كَمْ dan keyin مُعَلِّمًا birlikda keladi."
+    },
+    {
+      "q": "«Ikkita surat» qaysi?",
+      "opts": ["صُورَتَانِ", "صُورَتَيْنِ", "صُورُتَانِ", "صُورَانِ"],
+      "correct": 0,
+      "izoh": "Bosh kelishikdagi ikkilik ـَانِ bilan yasaladi."
+    },
+    {
+      "q": "«Ikki o'g'il nevara» qaysi?",
+      "opts": ["حَفِيدَاتٌ", "حَفِيدَانِ", "أَحْفَادَانِ", "حَفِيدُونَ"],
+      "correct": 1,
+      "izoh": "حَفِيدٌ ning ikkilik shakli حَفِيدَانِ."
+    },
+    {
+      "q": "لِ bilan ayting: «Mening ikkita akam bor».",
+      "opts": ["لِي أَخَوَانِ", "لِي أَخَانِ", "عِنْدِي أَخَوَانِ", "لِي أَخَانِ اثْنَانِ"],
+      "correct": 0,
+      "izoh": "أَخٌ ning bosh kelishikdagi ikkilik shakli أَخَوَانِ."
+    },
+    {
+      "q": "كَمْ qoidasidagi xatoni toping.",
+      "opts": ["كَمْ بِنْتًا؟", "كَمْ أَخًا؟", "كَمْ صُورَةً؟", "كَمْ دَفَاتِرًا؟"],
+      "correct": 3,
+      "izoh": "كَمْ dan keyin ko'plik emas, birlik keladi: دَفْتَرًا."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: فِيهَا ___. (ikkita mehmon)",
+      "opts": ["ضَيْفٌ", "ضَيْفَانِ", "ضَيْفَيْنِ", "ضُيُوفٌ"],
+      "correct": 1,
+      "izoh": "Bosh kelishikdagi ikkilik ضَيْفَانِ bo'ladi."
+    },
+    {
+      "q": "عِنْدِي كِتَابَانِ اثْنَانِ dagi اثْنَانِ vazifasi?",
+      "opts": ["Sonni ta'kidlash", "Joy zarfi", "Ismi ishora", "Fe'l"],
+      "correct": 0,
+      "izoh": "Ikkilik qo'shimchasi sonni bildiradi; اثْنَانِ uni ta'kidlaydi."
+    },
+    {
+      "q": "«Ikkita stol» qaysi?",
+      "opts": ["طَاوِلُتَانِ", "طَاوِلَتَانِ", "طَاوِلُونَ", "طَاوِلَاتَانِ"],
+      "correct": 1,
+      "izoh": "ة ochiq ت ga aylanib, ـَانِ qo'shiladi."
+    },
+    {
+      "q": "Zarf/harfi jardan keyingi ism qaysi harakatni oladi?",
+      "opts": ["Damma", "Fatha", "Kasra", "Sukun"],
+      "correct": 2,
+      "izoh": "Zarf va harfi jardan keyingi ism majrur bo'ladi."
+    },
+    {
+      "q": "«Daraxt ortida» qaysi?",
+      "opts": ["وَرَاءَ الشَّجَرَةِ", "وَرَاءَ الشَّجَرَةُ", "خَلْفَ الشَّجَرَةَ", "أَمَامَ الشَّجَرَةِ"],
+      "correct": 0,
+      "izoh": "Zarfga bog'langan الشَّجَرَةِ kasrali keladi."
+    },
+    {
+      "q": "«Kitob ustozning o'ng tarafida» qaysi?",
+      "opts": ["الْكِتَابُ عَنْ يَسَارِ الْأُسْتَاذِ", "الْكِتَابُ جَانِبَ الْأُسْتَاذِ", "الْكِتَابُ عَنْ يَمِينِ الْأُسْتَاذِ", "الْكِتَابُ أَمَامَ الْأُسْتَاذِ"],
+      "correct": 2,
+      "izoh": "عَنْ يَمِينِ — «o'ng tarafida»."
+    },
+    {
+      "q": "«Daftarim qalam va kitob orasida» qaysi?",
+      "opts": ["دَفْتَرِي بَيْنَ الْقَلَمِ وَالْكِتَابِ", "دَفْتَرِي أَمَامَ الْقَلَمِ وَالْكِتَابِ", "دَفْتَرِي جَانِبَ الْقَلَمِ وَالْكِتَابِ", "دَفْتَرِي بَيْنَ الْقَلَمُ وَالْكِتَابُ"],
+      "correct": 0,
+      "izoh": "بَيْنَ dan keyingi ikki ism kasrali keladi."
+    },
+    {
+      "q": "«Shkaf xonaning chap tarafida» qaysi?",
+      "opts": ["الْخِزَانَةُ عَنْ يَسَارِ الْغُرْفَةِ", "الْخِزَانَةُ عَنْ يَمِينِ الْغُرْفَةِ", "الْخِزَانَةُ بَيْنَ الْغُرْفَةِ", "الْخِزَانَةِ عَنْ يَسَارِ الْغُرْفَةُ"],
+      "correct": 0,
+      "izoh": "عَنْ يَسَارِ — «chap tarafida»."
+    },
+    {
+      "q": "Harakat xatosini toping.",
+      "opts": ["عَلَى الطَّاوِلَةِ", "تَحْتَ الْكُرْسِيِّ", "أَمَامَ الْمَدْرَسَةُ", "خَلْفَ الْبَابِ"],
+      "correct": 2,
+      "izoh": "To'g'risi أَمَامَ الْمَدْرَسَةِ."
+    },
+    {
+      "q": "«U eshik yonida o'tiribdi» (erkak) qaysi?",
+      "opts": ["هُوَ يَجْلِسُ وَرَاءَ الْبَابِ", "هُوَ يَجْلِسُ جَانِبَ الْبَابِ", "هُوَ تَقْرَأُ جَانِبَ الْبَابِ", "أَنْتَ تَجْلِسُ جَانِبَ الْبَابِ"],
+      "correct": 1,
+      "izoh": "هُوَ bilan يَجْلِسُ, «yonida» uchun جَانِبَ keladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: فِي الصَّالَةِ ___ كَرَاسِيَّ كَبِيرَةٍ.",
+      "opts": ["خَمْسَةُ", "خَمْسُ", "خَمْسَةَ", "خَمْسِ"],
+      "correct": 0,
+      "izoh": "كُرْسِيٌّ muzakkar, son esa ة bilan keladi."
+    },
+    {
+      "q": "Tarjima qiling: «Ukam daraxt tagida o'ynayapti».",
+      "opts": ["أَخِي يَلْعَبُ تَحْتَ الشَّجَرَةِ", "أَخِي يَلْعَبُ أَمَامَ الشَّجَرَةِ", "أُخْتِي تَلْعَبُ تَحْتَ الشَّجَرَةِ", "أَخِي أَلْعَبُ فَوْقَ الشَّجَرَةِ"],
+      "correct": 0,
+      "izoh": "أَخِي — ukam/akam; تَحْتَ — tagida."
+    },
+    {
+      "q": "«Yangi shkaf» qaysi?",
+      "opts": ["خِزَانَةٌ جَدِيدٌ", "خِزَانَةٌ جَدِيدَةٌ", "جَدِيدَةٌ خِزَانَةٌ", "خِزَانَاتٌ جَدِيدٌ"],
+      "correct": 1,
+      "izoh": "خِزَانَةٌ muannas, sifat ham جَدِيدَةٌ bo'ladi."
+    },
+    {
+      "q": "Tuslang: دَرَسَ — أَنْتِ (muzori').",
+      "opts": ["تَدْرُسُ", "يَدْرُسُ", "تَدْرُسِينَ", "أَدْرُسُ"],
+      "correct": 2,
+      "izoh": "أَنْتِ bilan fe'l تـ...ـينَ qolipida keladi."
+    },
+    {
+      "q": "أَنَا أَسْمَعُ الدَّرْسَ tarjimasi qaysi?",
+      "opts": ["Men darsni yozyapman", "Men darsni eshityapman", "Sen darsni eshityapsan", "U darsni eshityapti"],
+      "correct": 1,
+      "izoh": "أَنَا — men, أَسْمَعُ — eshityapman."
+    },
+    {
+      "q": "Tuslang: أَكَلَ — هِيَ (muzori').",
+      "opts": ["يَأْكُلُ", "نَأْكُلُ", "تَأْكُلِينَ", "تَأْكُلُ"],
+      "correct": 3,
+      "izoh": "هِيَ bilan muzori' fe'l تـ bilan boshlanadi."
+    },
+    {
+      "q": "Muzori' tuslanishidagi xatoni toping.",
+      "opts": ["هُوَ يَرْجِعُ", "أَنْتَ تَرْجِعُ", "أَنْتِ يَرْجِعِينَ", "أَنَا أَرْجِعُ"],
+      "correct": 2,
+      "izoh": "أَنْتِ bilan to'g'risi تَرْجِعِينَ."
+    },
+    {
+      "q": "«Onam taom pishiryapti» qaysi?",
+      "opts": ["أُمِّي يَطْبُخُ الطَّعَامَ", "أُمِّي تَطْبُخُ الطَّعَامَ", "أُمِّي أَطْبُخُ الطَّعَامَ", "أُمِّي تَطْبُخِينَ الطَّعَامَ"],
+      "correct": 1,
+      "izoh": "أُمِّي muannas birlik, fe'l تَطْبُخُ bo'ladi."
+    },
+    {
+      "q": "«Sen nima qilyapsan?» (erkakka) qaysi?",
+      "opts": ["مَاذَا يَفْعَلُ؟", "مَاذَا تَفْعَلِينَ؟", "مَاذَا تَفْعَلُ؟", "مَاذَا أَفْعَلُ؟"],
+      "correct": 2,
+      "izoh": "Erkak birlikdagi أَنْتَ uchun تَفْعَلُ ishlatiladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: أَنَا ___ الْكِتَابَ مِنَ الْخِزَانَةِ.",
+      "opts": ["آخُذُ", "يَأْخُذُ", "تَأْخُذُ", "أَخَذَ"],
+      "correct": 0,
+      "izoh": "أَنَا bilan muzori' shakli آخُذُ."
+    },
+    {
+      "q": "Qaysi so'z harf — yordamchi so'z?",
+      "opts": ["كِتَابٌ", "مِنْ", "يَكْتُبُ", "هُوَ"],
+      "correct": 1,
+      "izoh": "مِنْ harfi jar; qolganlari ism yoki fe'l."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: هُوَ ___ الشَّايَ فِي الْمَطْعَمِ.",
+      "opts": ["يَشْرَبُ", "تَشْرَبُ", "يَأْكُلُ", "أَشْرَبُ"],
+      "correct": 0,
+      "izoh": "هُوَ bilan «ichadi» — يَشْرَبُ."
+    },
+    {
+      "q": "أَنْتِ تَعْمَلِينَ فِي الْمَدْرَسَةِ tarjimasi qaysi?",
+      "opts": ["U ayol maktabda ishlayapti", "Sen erkak maktabda ishlayapsan", "Sen ayol maktabda ishlayapsan", "Men maktabda ishlayapman"],
+      "correct": 2,
+      "izoh": "أَنْتِ va ـينَ ayol birlikdagi ikkinchi shaxsni bildiradi."
+    },
+    {
+      "q": "«Ular — erkaklar o'ynashyapti» qaysi?",
+      "opts": ["هُمْ يَلْعَبُونَ", "هُمْ يَلْعَبْنَ", "هُمْ يَلْعَبَانِ", "أَنْتُمْ تَلْعَبُونَ"],
+      "correct": 0,
+      "izoh": "هُمْ bilan fe'l يـ...ـونَ qolipida keladi."
+    },
+    {
+      "q": "Tuslang: فَهِمَ — أَنْتُنَّ (muzori').",
+      "opts": ["تَفْهَمُونَ", "تَفْهَمْنَ", "يَفْهَمْنَ", "يَفْهَمُونَ"],
+      "correct": 1,
+      "izoh": "أَنْتُنَّ bilan fe'l تـ...ـنَ qolipida keladi."
+    },
+    {
+      "q": "«Biz darsni yodlayapmiz» qaysi?",
+      "opts": ["نَحْنُ نَحْفَظُ الدَّرْسَ", "نَحْنُ يَحْفَظُ الدَّرْسَ", "نَحْنُ نَفْهَمُ الدَّرْسَ", "نَحْنُ أَحْفَظُ الدَّرْسَ"],
+      "correct": 0,
+      "izoh": "نَحْنُ bilan fe'l نـ bilan boshlanadi."
+    },
+    {
+      "q": "«U ikkisi — erkaklar kulyapti» qaysi?",
+      "opts": ["هُمَا يَضْحَكُونَ", "هُمَا تَضْحَكَانِ", "هُمَا يَضْحَكَانِ", "أَنْتُمَا تَضْحَكَانِ"],
+      "correct": 2,
+      "izoh": "هُمَا muzakkar uchun يـ...ـانِ ishlatiladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: الطَّالِبَاتُ ___ فِي الصَّفِّ.",
+      "opts": ["يَجْلِسُونَ", "يَجْلِسْنَ", "تَجْلِسْنَ", "نَجْلِسُ"],
+      "correct": 1,
+      "izoh": "الطَّالِبَاتُ — uchinchi shaxs ayollar ko'pligi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: أَنْتُمَا ___ إِلَى الْمَدْرَسَةِ.",
+      "opts": ["تَذْهَبَانِ", "يَذْهَبَانِ", "تَذْهَبُونَ", "تَذْهَبْنَ"],
+      "correct": 0,
+      "izoh": "أَنْتُمَا bilan fe'l تـ...ـانِ qolipida keladi."
+    },
+    {
+      "q": "Ko'plik tuslanishidagi xatoni toping.",
+      "opts": ["هُنَّ يَخْرُجْنَ", "أَنْتُمْ تَنْصَحُونَ", "أَنْتُنَّ تَأْكُلْنَ", "هُمْ تَشْرَبُونَ"],
+      "correct": 3,
+      "izoh": "هُمْ bilan to'g'risi يَشْرَبُونَ."
+    },
+    {
+      "q": "Javob bering: مَاذَا تَفْعَلُونَ يَا أَوْلَادُ؟",
+      "opts": ["نَحْنُ نَقْرَأُ كِتَابًا", "أَنَا أَقْرَأُ كِتَابًا", "هُمْ يَقْرَءُونَ كِتَابًا", "أَنْتُمْ تَقْرَءُونَ كِتَابًا"],
+      "correct": 0,
+      "izoh": "Savol «sizlar»ga, javob esa «biz» — نَحْنُ bilan beriladi."
+    },
+    {
+      "q": "«Erkak muallimlar nasihat qilyapti» qaysi?",
+      "opts": ["الْمُعَلِّمُونَ يَنْصَحُونَ", "الْمُعَلِّمُونَ تَنْصَحُونَ", "الْمُعَلِّمُونَ يَنْصَحْنَ", "الْمُعَلِّمَانِ يَنْصَحَانِ"],
+      "correct": 0,
+      "izoh": "Erkaklar ko'pligi uchun يـ...ـونَ ishlatiladi."
+    },
+    {
+      "q": "«Ikki do'st taom yeyishyapti» qaysi?",
+      "opts": ["الصَّدِيقَانِ تَأْكُلَانِ الطَّعَامَ", "الصَّدِيقَانِ يَأْكُلَانِ الطَّعَامَ", "الصَّدِيقُونَ يَأْكُلُونَ الطَّعَامَ", "الصَّدِيقَانِ يَلْعَبَانِ الطَّعَامَ"],
+      "correct": 1,
+      "izoh": "Muzakkar ikkilik uchun يـ...ـانِ ishlatiladi."
+    },
+    {
+      "q": "«Sizlar — ayollar choy ichyapsizlar» qaysi?",
+      "opts": ["أَنْتُنَّ تَشْرَبُونَ الشَّايَ", "أَنْتُنَّ تَشْرَبْنَ الشَّايَ", "هُنَّ يَشْرَبْنَ الشَّايَ", "أَنْتُمْ تَشْرَبُونَ الشَّايَ"],
+      "correct": 1,
+      "izoh": "أَنْتُنَّ bilan تَشْرَبْنَ keladi."
+    },
+    {
+      "q": "«Biz uyga qaytyapmiz» qaysi?",
+      "opts": ["نَحْنُ تَرْجِعُ إِلَى الْبَيْتِ", "نَحْنُ نَرْجِعُ إِلَى الْبَيْتِ", "هُمْ يَرْجِعُونَ إِلَى الْبَيْتِ", "أَنَا أَرْجِعُ إِلَى الْبَيْتِ"],
+      "correct": 1,
+      "izoh": "نَحْنُ bilan نَرْجِعُ ishlatiladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: زَيْدٌ وَمَحْمُودٌ ___ فِي الطَّرِيقِ.",
+      "opts": ["يَعْمَلُونَ", "يَعْمَلَانِ", "تَعْمَلَانِ", "نَعْمَلُ"],
+      "correct": 1,
+      "izoh": "Zayd va Mahmud — ikkita erkak, fe'l ikkilikda keladi."
+    },
+    {
+      "q": "«Ular — ayollar xonadan chiqishyapti» qaysi?",
+      "opts": ["هُنَّ يَخْرُجْنَ مِنَ الْغُرْفَةِ", "هُنَّ تَخْرُجْنَ مِنَ الْغُرْفَةِ", "هُمْ يَخْرُجُونَ مِنَ الْغُرْفَةِ", "أَنْتُنَّ تَخْرُجْنَ مِنَ الْغُرْفَةِ"],
+      "correct": 0,
+      "izoh": "هُنَّ bilan fe'l يـ...ـنَ qolipida keladi."
+    },
+    {
+      "q": "Tuslang: نَظَرَ — أَنْتُمْ (muzori').",
+      "opts": ["تَنْظُرُونَ", "يَنْظُرُونَ", "تَنْظُرْنَ", "تَنْظُرَانِ"],
+      "correct": 0,
+      "izoh": "أَنْتُمْ bilan fe'l تـ...ـونَ qolipida keladi."
+    },
+    {
+      "q": "Ish-harakat va zamonni bildiruvchi turkum qaysi?",
+      "opts": ["Ism", "Fe'l", "Harf", "Zarf"],
+      "correct": 1,
+      "izoh": "Fe'l ish-harakatni zamon bilan birga bildiradi."
+    },
+    {
+      "q": "So'zga qo'shilib yoziladigan zamir nima deyiladi?",
+      "opts": ["Muttasil zamir", "Munfasil zamir", "Ismi ishora", "Ismi so'roq"],
+      "correct": 0,
+      "izoh": "Muttasil zamir so'zdan ajralmay yoziladi."
+    },
+    {
+      "q": "ة bilan tugagan ismga zamir qo'shilsa, ة nimaga aylanadi?",
+      "opts": ["ت", "ه", "ا", "ي"],
+      "correct": 0,
+      "izoh": "مِهْنَةٌ + هَا → مِهْنَتُهَا."
+    },
+    {
+      "q": "«Darsdan oldin»ni to'ldiring: ___ الدَّرْسِ",
+      "opts": ["بَعْدَ", "قَبْلَ", "ثُمَّ", "مَعَ"],
+      "correct": 1,
+      "izoh": "قَبْلَ — «oldin»."
+    },
+    {
+      "q": "«Bu kim?» qaysi?",
+      "opts": ["مَنْ هَذَا؟", "مَا هَذَا؟", "كَيْفَ هَذَا؟", "هَلْ هَذَا؟"],
+      "correct": 0,
+      "izoh": "Shaxs uchun مَنْ ishlatiladi."
+    },
+    {
+      "q": "«Bu nima?» qaysi?",
+      "opts": ["مَنْ هَذَا؟", "مَا هَذَا؟", "كَيْفَ حَالُكَ؟", "هَلْ أَنْتَ طَالِبٌ؟"],
+      "correct": 1,
+      "izoh": "Narsa uchun مَا ishlatiladi."
+    },
+    {
+      "q": "«Uning kasbi» — ayol egasi qaysi?",
+      "opts": ["مِهْنَتِي", "مِهْنَتُكَ", "مِهْنَتُهُ", "مِهْنَتُهَا"],
+      "correct": 3,
+      "izoh": "Ayol egasi uchun ـهَا qo'shiladi."
+    },
+    {
+      "q": "«Sen talabamisan?» (erkakka) qaysi?",
+      "opts": ["هَلْ أَنْتَ طَبِيبٌ؟", "هَلْ أَنْتَ طَالِبٌ؟", "مَنْ أَنْتَ؟", "مَا هَذَا؟"],
+      "correct": 1,
+      "izoh": "هَلْ tasdiq yoki inkor javobli savol yasaydi."
+    },
+    {
+      "q": "«Yoki» bog'lovchisini toping.",
+      "opts": ["وَ", "أَوْ", "ثُمَّ", "فِي"],
+      "correct": 1,
+      "izoh": "أَوْ — «yoki»."
+    },
+    {
+      "q": "Qaysi biri munfasil zamir?",
+      "opts": ["هُوَ", "ـهُ", "ـكَ", "ـنَا"],
+      "correct": 0,
+      "izoh": "هُوَ alohida yoziladi; qolganlari muttasil zamirlar."
+    },
+    {
+      "q": "Son va egaligi to'g'ri gapni toping.",
+      "opts": ["عِنْدِي سِتَّةُ أَقْلَامٍ", "لِي سِتُّ أَقْلَامٍ", "مَعِي سِتَّةُ قَلَمٍ", "عِنْدِي سِتَّةُ قَلَمًا"],
+      "correct": 0,
+      "izoh": "قَلَمٌ muzakkar; 3–10 dan keyin ko'plik majrur keladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: الطَّالِبَاتُ ___ فِي الْمَكْتَبَةِ.",
+      "opts": ["تَدْرُسْنَ", "يَدْرُسْنَ", "يَدْرُسُونَ", "تَدْرُسُونَ"],
+      "correct": 1,
+      "izoh": "الطَّالِبَاتُ — uchinchi shaxs ayollar ko'pligi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: فِي الْمَكْتَبَةِ ___ كُتُبٍ. (o'nta)",
+      "opts": ["عَشَرَةُ", "عَشْرُ", "عَشَرَةَ", "عَشْرَ"],
+      "correct": 0,
+      "izoh": "كِتَابٌ muzakkar, shuning uchun عَشَرَةُ ishlatiladi."
+    },
+    {
+      "q": "«Bobong va buving choy ichishyapti» qaysi?",
+      "opts": ["جَدُّكَ وَجَدَّتُكَ يَشْرَبُونَ الشَّايَ", "جَدُّكَ وَجَدَّتُكَ يَشْرَبَانِ الشَّايَ", "جَدُّكَ وَجَدَّتُكَ تَشْرَبَانِ الشَّايَ", "جَدُّكَ وَجَدَّتُكَ نَشْرَبُ الشَّايَ"],
+      "correct": 1,
+      "izoh": "Ikki shaxs uchun muzakkar ikkilik shakli يَشْرَبَانِ keladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: أَصْدِقَائِي ___ الدَّرْسَ الْمُمْتِعَ.",
+      "opts": ["يَحْفَظُ", "يَحْفَظُونَ", "يَحْفَظَانِ", "تَحْفَظُونَ"],
+      "correct": 1,
+      "izoh": "أَصْدِقَائِي — erkaklar ko'pligi, fe'l يـ...ـونَ qolipida."
+    },
+    {
+      "q": "«U — ayol kamdan-kam taom pishiradi» qaysi?",
+      "opts": ["هِيَ تَطْبُخُ الطَّعَامَ نَادِرًا", "هِيَ تَطْبُخُ الطَّعَامَ غَالِبًا", "هِيَ تَطْبُخُ الطَّعَامَ أَبَدًا", "هُوَ يَطْبُخُ الطَّعَامَ نَادِرًا"],
+      "correct": 0,
+      "izoh": "هِيَ bilan تَطْبُخُ, «kamdan-kam» uchun نَادِرًا."
+    },
+    {
+      "q": "«Men va akam uydan chiqyapmiz» qaysi?",
+      "opts": ["أَنَا وَأَخِي يَخْرُجَانِ مِنَ الْبَيْتِ", "أَنَا وَأَخِي نَخْرُجُ مِنَ الْبَيْتِ", "أَنَا وَأَخِي أَخْرُجُ مِنَ الْبَيْتِ", "أَنَا وَأَخِي تَخْرُجُونَ مِنَ الْبَيْتِ"],
+      "correct": 1,
+      "izoh": "Gapiruvchi o'zini ham qo'shgani uchun نَحْنُ shakli ishlatiladi."
+    },
+    {
+      "q": "لَدَيْكُنَّ ... مِنْ فَضْلِكُنَّ kimga qaratilgan?",
+      "opts": ["Bitta erkakka", "Bitta ayolga", "Erkaklar guruhiga", "Ayollar guruhiga"],
+      "correct": 3,
+      "izoh": "ـكُنَّ ikkinchi shaxs ayollar ko'pligini bildiradi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: نَحْنُ ___ فِي الطَّرِيقِ مَعًا دَائِمًا.",
+      "opts": ["نَلْعَبُ", "تَلْعَبُونَ", "نَعْمَلُ", "يَلْعَبُونَ"],
+      "correct": 0,
+      "izoh": "نَحْنُ bilan «o'ynaymiz» — نَلْعَبُ."
+    },
+    {
+      "q": "Qaysi gapda joy zarfi xato ishlatilgan?",
+      "opts": ["الْقَلَمُ بَيْنَ الْكِتَابِ", "الْوَلَدُ خَلْفَ الشَّجَرَةِ", "الْمُعَلِّمُ أَمَامَ السَّبُّورَةِ", "الْكِتَابُ عَلَى الطَّاوِلَةِ"],
+      "correct": 0,
+      "izoh": "بَيْنَ ikki narsa yoki ko'plik orasini bildiradi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: فِي الْغُرْفَةِ ___ مُعَلِّمَاتٍ يَجْلِسْنَ.",
+      "opts": ["ثَلَاثَةُ", "ثَلَاثُ", "ثَلَاثَ", "ثَلَاثَةَ"],
+      "correct": 1,
+      "izoh": "مُعَلِّمَاتٌ muannas, shuning uchun son ةsiz keladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: هَذَا زَيْدٌ وَهَذَا أَحْمَدُ وَهُمَا ___.",
+      "opts": ["يَدْرُسَانِ", "يَدْرُسُونَ", "تَدْرُسَانِ", "نَدْرُسُ"],
+      "correct": 0,
+      "izoh": "Zayd va Ahmad — ikkita erkak, fe'l muzakkar ikkilikda."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: جَدُّكُنَّ وَجَدَّتُكُنَّ ___ فِي هَذَا الْبَيْتِ.",
+      "opts": ["يَسْكُنَانِ", "يَسْكُنُونَ", "تَسْكُنَانِ", "تَسْكُنُونَ"],
+      "correct": 0,
+      "izoh": "Bobo va buvi ikki kishi; aralash jinsda muzakkar ikkilik ishlatiladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: أَنْتُمَا ___ كِتَابًا.",
+      "opts": ["تَقْرَءُونَ", "تَقْرَآنِ", "يَقْرَآنِ", "تَقْرَأْنَ"],
+      "correct": 1,
+      "izoh": "أَنْتُمَا bilan fe'l تـ...ـانِ qolipida keladi."
+    },
+    {
+      "q": "Bo'shliqni to'ldiring: سِتُّ طَالِبَاتٍ ___ هَذَا الْكِتَابَ.",
+      "opts": ["يَحْفَظُونَ", "يَحْفَظْنَ", "تَحْفَظْنَ", "تَحْفَظُونَ"],
+      "correct": 1,
+      "izoh": "طَالِبَاتٌ — uchinchi shaxs ayollar ko'pligi; fe'l يَحْفَظْنَ."
+    }
+  ]
+}
