@@ -337,7 +337,7 @@ body.has-dock{padding-bottom:96px}
     if(darsId){
       try{
         const r = await fetch(`testlar/${darsId}.json`,{cache:"no-store"});
-        if(!r.ok && PRACTICE) throw new Error("Test topilmadi");
+        if(!r.ok) throw new Error("Test topilmadi");
         if(r.ok){ const j = await r.json();
           if(Array.isArray(j.questions)) QUESTIONS = j.questions;
           if(typeof j.matn === "string") READING_TEXT = j.matn.trim();
@@ -351,7 +351,7 @@ body.has-dock{padding-bottom:96px}
           if(j.title) document.getElementById('hdrSub').textContent = j.title;
         }
       }catch(e){
-        if(PRACTICE){ NO_TIMER=true; document.getElementById("timer").style.display="none"; document.getElementById("qCard").textContent="Testni yuklab bo‘lmadi. Botga qaytib, keyinroq qayta urinib ko‘ring."; return; }
+        NO_TIMER=true; document.getElementById("timer").style.display="none"; document.getElementById("qCard").textContent="Testni yuklab bo‘lmadi. Botga qaytib, keyinroq qayta urinib ko‘ring."; return;
       }
     }
     if(hasBook){ document.getElementById('bookBtn').style.display='flex'; ensurePdfJs().catch(function(){}); }  // kitobli testda oldindan fonda yuklab qo'yamiz
@@ -360,7 +360,7 @@ body.has-dock{padding-bottom:96px}
     QUESTIONS.forEach(function(q,i){ if(q && q._i==null){ q._i=i; } });
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
-    for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
+    if(!(SINGLE && READING_TEXT)) for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
     renderAudio();
     if(SINGLE || (IS_QIROAT && READING_TEXT)){ renderAllSingle(); } else { renderQuestion(0); }
   }
@@ -514,7 +514,7 @@ body.has-dock{padding-bottom:96px}
     wrap.className='';
     document.getElementById('navArea').innerHTML='';
     let html='';
-    if(IS_QIROAT && READING_TEXT){
+    if((IS_QIROAT || SINGLE) && READING_TEXT){
       html += '<section class="qiroat-reading"><div class="qiroat-reading-title">📖 MATNNI O\'QING</div>'+renderMatn(READING_TEXT)+'</section>';
     }
     QUESTIONS.forEach(function(item,i){
