@@ -114,6 +114,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .feedback-box.fb-no{border-color:var(--red); background:var(--red-bg); color:var(--red-text)}
 .btn-next{display:block; width:100%; margin-top:22px; padding:16px; border:none; border-radius:14px; background:var(--brown); color:var(--cream); font-size:16px; font-weight:800; cursor:pointer; font-family:inherit}
 .btn-next:active{transform:scale(.98)}
+/* 08.11 (Azam, placement kabi): xato javobda "Keyingi savol" ekran pastiga mahkamlanadi -- scroll qilsa ham joyida turadi */
+.btn-next.dock{position:fixed; left:16px; right:16px; bottom:calc(14px + env(safe-area-inset-bottom,0px)); width:auto; max-width:448px; margin:0 auto; z-index:70; box-shadow:0 0 0 8px rgba(246,241,232,.92),0 14px 30px rgba(58,39,22,.35); animation:fadeIn .3s ease}
+body.has-dock{padding-bottom:96px}
 
 /* ===== RESULT ===== */
 #resultScreen{position:fixed; inset:0; z-index:60; display:none; flex-direction:column; align-items:center; justify-content:flex-start; padding:40px 20px; text-align:center; color:#fff; overflow:auto;
@@ -317,6 +320,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   let QUESTIONS = SAMPLE;
   let cur = 0, correctCount = 0, answeredCount = 0, finished = false, timerInt = null;
   let reviewStarted = null, timerDeadline = null, singleReview = null;
+  function clearDock(){ const b=document.getElementById('dockNext'); if(b) b.remove(); document.body.classList.remove('has-dock'); }
+  function showDock(label, fn){ clearDock(); const b=document.createElement('button'); b.type='button'; b.id='dockNext'; b.className='btn-next dock'; b.textContent=label; b.onclick=function(){ if(b.disabled) return; b.disabled=true; fn(); }; document.body.appendChild(b); document.body.classList.add('has-dock'); }
   function pauseReview(){ if(reviewStarted===null) reviewStarted=Date.now(); }
   function resumeReview(){ if(reviewStarted!==null){ if(timerDeadline!==null) timerDeadline+=Date.now()-reviewStarted; reviewStarted=null; } }
 
@@ -474,10 +479,11 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     if(correct){ setTimeout(function(){ if(finished || cur!==i) return; if(last) finish(); else renderQuestion(i+1); }, 900); }
     else {
       pauseReview();
-      document.getElementById('navArea').innerHTML='<button class="btn-next" onclick="continueQuestion('+i+')">'+(last?'Natijani ko‘rish ▶':'Keyingi savol ▶')+'</button>';
+      showDock(last?'Natijani ko‘rish ▶':'Keyingi savol ▶', function(){ continueQuestion(i); });
     }
   }
   function continueQuestion(i){
+    clearDock();
     if(finished || cur!==i || reviewStarted===null) return;
     resumeReview();
     if(i===QUESTIONS.length-1) finish(); else renderQuestion(i+1);
@@ -533,7 +539,8 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
   function pickSingle(i,oi){
     const item=QUESTIONS[i];
-    if(finished || singleReview!==null || item._answered!=null) return;
+    if(finished || item._answered!=null) return;
+    if(singleReview!==null){ clearDock(); singleReview=null; resumeReview(); }  // 08.11: boshqa savol qulflanmasin (Amina: "javoblarni belgilay olmayapman")
     item._answered=oi; answeredCount++;
     if(oi===item._correct) correctCount++;
     const opts=document.getElementById('opts'+i); if(opts) opts.classList.add('locked');
@@ -549,7 +556,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
     updateSingleProgress();
     if(!ok){
       singleReview=i; pauseReview();
-      fb.insertAdjacentHTML('beforeend','<button class="btn-next" onclick="continueSingle('+i+')">'+(answeredCount>=QUESTIONS.length?'Natijani ko‘rish ▶':'Keyingi savol ▶')+'</button>');
+      showDock(answeredCount>=QUESTIONS.length?'Natijani ko‘rish ▶':'Keyingi savol ▶', function(){ continueSingle(i); });
       return;
     }
     if(answeredCount>=QUESTIONS.length){
@@ -560,7 +567,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   function continueSingle(i){
     if(finished || singleReview!==i) return;
     singleReview=null; resumeReview();
-    const b=document.querySelector('#fb'+i+' .btn-next'); if(b) b.remove();
+    clearDock();
     if(answeredCount>=QUESTIONS.length){ finish(); return; }
     const next=QUESTIONS.findIndex(function(q){ return q._answered==null; });
     const card=document.getElementById('card'+next); if(card) card.scrollIntoView({behavior:'smooth',block:'start'});
@@ -842,6 +849,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
   }
 
   function finish(){
+    clearDock();
     if(finished) return; finished=true;
     if(timerInt) clearInterval(timerInt);
     const pct=Math.round(correctCount/QUESTIONS.length*100), passed=pct>=PASS;
