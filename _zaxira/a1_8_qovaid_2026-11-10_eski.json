@@ -1,0 +1,502 @@
+{
+  "title": "Qovaid — A1 8-dars",
+  "otish": 80,
+  "vaqt": 45,
+  "questions": [
+    {
+      "q": "Uyimizda uchta xona bor",
+      "opts": [
+        "فِي بَيْتِنَا ثَلَاثُ غُرَفٍ",
+        "فِي بَيْتِنَا ثَلَاثَةُ غُرَفٍ",
+        "فِي بَيْتِنَا ثَلَاثُ غُرْفَةٍ",
+        "فِي بَيْتِنَا ثَلَاثُ غُرَفًا"
+      ],
+      "correct": 0,
+      "izoh": "غُرْفَةٌ muannas: son teskari shaklda, sanalmish ko‘plikda keladi."
+    },
+    {
+      "q": "Uyda nechta xona bor?",
+      "opts": [
+        "كَمْ غُرْفَةٌ فِي الْبَيْتِ؟",
+        "كَمْ غُرْفَةً فِي الْبَيْتِ؟",
+        "كَمْ غُرْفَةٍ فِي الْبَيْتِ؟",
+        "كَمْ غُرَفٍ فِي الْبَيْتِ؟"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-7): كَمْ dan keyin sanalmish birlik va mansub keladi."
+    },
+    {
+      "q": "Ular (muannas) derazani ochishdi",
+      "opts": [
+        "هُنَّ فَتَحْنَ النَّافِذَةَ",
+        "هُنَّ فَتَحْنَا النَّافِذَةَ",
+        "هُنَّ فَتَحُوا النَّافِذَةَ",
+        "هُنَّ فَتَحَتَا النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "هُنَّ bilan fe‘l فَتَحْنَ shaklida keladi."
+    },
+    {
+      "q": "U (muannas) faol muallima",
+      "opts": [
+        "هُوَ مُعَلِّمَةٌ نَشِيطَةٌ",
+        "هِيَ مُعَلِّمَةٌ نَشِيطَةٌ",
+        "هَذِهِ مُعَلِّمَةٌ نَشِيطَةٌ",
+        "هُنَّ مُعَلِّمَةٌ نَشِيطَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-1): Shaxsni aytishda muannas birlik kishilik olmoshi هِيَ ishlatiladi."
+    },
+    {
+      "q": "Beshta dinor bor",
+      "opts": [
+        "خَمْسُ دَنَانِيرَ مَوْجُودَةٌ",
+        "خَمْسَةُ دِينَارٍ مَوْجُودَةٌ",
+        "خَمْسَةُ دَنَانِيرٍ مَوْجُودَةٌ",
+        "خَمْسَةُ دَنَانِيرَ مَوْجُودَةٌ"
+      ],
+      "correct": 3,
+      "izoh": "دِينَارٌ muzakkar; دَنَانِيرَ g‘ayri munsarif ko‘plik, jar holatida fatha oladi."
+    },
+    {
+      "q": "Kim xodim?",
+      "opts": [
+        "مَا مُوَظَّفٌ؟",
+        "مَنْ مُوَظَّفٌ؟",
+        "مَتَى مُوَظَّفٌ؟",
+        "أَيْنَ مُوَظَّفٌ؟"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-7): Inson haqida so‘rash uchun مَنْ ishlatiladi."
+    },
+    {
+      "q": "Siz ikkovingiz (muzakkar) xonani tartibladingiz",
+      "opts": [
+        "أَنْتُمَا رَتَّبْتُمْ الْغُرْفَةَ",
+        "أَنْتُمَا رَتَّبْنَا الْغُرْفَةَ",
+        "أَنْتُمَا رَتَّبَا الْغُرْفَةَ",
+        "أَنْتُمَا رَتَّبْتُمَا الْغُرْفَةَ"
+      ],
+      "correct": 3,
+      "izoh": "أَنْتُمَا uchun رَتَّبْتُمَا ishlatiladi."
+    },
+    {
+      "q": "Bu ikkisi (muannas) mening xolalarim",
+      "opts": [
+        "هَذَانِ خَالَتَايَ",
+        "هُمَا خَالَتَايَ",
+        "هَذِهِ خَالَتَايَ",
+        "هَاتَانِ خَالَتَايَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-2): Ikkita ayolni ko‘rsatishda هَاتَانِ ishlatiladi."
+    },
+    {
+      "q": "Sumkada yigirmata lira bor",
+      "opts": [
+        "فِي الْحَقِيبَةِ عِشْرُونَ لِيرَةٍ",
+        "فِي الْحَقِيبَةِ عِشْرُونَ لِيرَاتٍ",
+        "فِي الْحَقِيبَةِ عِشْرُونَ لِيرَةً",
+        "فِي الْحَقِيبَةِ عِشْرُونَ لِيرَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "O‘nlikdan keyingi sanalmish birlik va mansub keladi."
+    },
+    {
+      "q": "Bu chipta yo‘lovchi uchun",
+      "opts": [
+        "هَذِهِ التَّذْكِرَةُ لِالْمُسَافِرِ",
+        "هَذِهِ التَّذْكِرَةُ لَلْمُسَافِرِ",
+        "هَذِهِ التَّذْكِرَةُ لِلْمُسَافِرِ",
+        "هَذِهِ التَّذْكِرَةُ لِلْمُسَافِرُ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-7): لِ va ال birikkanda لِلْ shakli yoziladi, ot majrur bo‘ladi."
+    },
+    {
+      "q": "Biz taomni olib yurdik",
+      "opts": [
+        "نَحْنُ حَمَلْنَ الطَّعَامَ",
+        "نَحْنُ حَمَلْنَا الطَّعَامَ",
+        "نَحْنُ حَمَلُوا الطَّعَامَ",
+        "نَحْنُ حَمَلْتُمْ الطَّعَامَ"
+      ],
+      "correct": 1,
+      "izoh": "نَحْنُ bilan moziyda ـنَا qo‘shiladi."
+    },
+    {
+      "q": "Bular (muzakkar) mohir tarjimonlar",
+      "opts": [
+        "هُمْ مُتَرْجِمُونَ مَاهِرُونَ",
+        "هَؤُلَاءِ مُتَرْجِمُونَ مَاهِرُونَ",
+        "هَذَا مُتَرْجِمُونَ مَاهِرُونَ",
+        "هُمَا مُتَرْجِمُونَ مَاهِرُونَ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-3): Bularni ko‘rsatishda هَؤُلَاءِ ishlatiladi."
+    },
+    {
+      "q": "Matnda o‘n beshta so‘z bor",
+      "opts": [
+        "فِي النَّصِّ خَمْسَةَ عَشْرَةَ كَلِمَةً",
+        "فِي النَّصِّ خَمْسَ عَشَرَ كَلِمَةً",
+        "فِي النَّصِّ خَمْسَ عَشْرَةَ كَلِمَاتٍ",
+        "فِي النَّصِّ خَمْسَ عَشْرَةَ كَلِمَةً"
+      ],
+      "correct": 3,
+      "izoh": "كَلِمَةٌ muannas: birinchi qism teskari, ikkinchi qism mos keladi."
+    },
+    {
+      "q": "Safar qaysi aeroportdan?",
+      "opts": [
+        "مِنْ أَيُّ مَطَارٍ الرِّحْلَةُ؟",
+        "مِنْ أَيَّ مَطَارٍ الرِّحْلَةُ؟",
+        "مِنْ أَيِّ مَطَارٍ الرِّحْلَةُ؟",
+        "مِنْ أَيِّ مَطَارٌ الرِّحْلَةُ؟"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-7): مِنْ dan keyin أَيِّ va unga bog‘langan ot majrur keladi."
+    },
+    {
+      "q": "Ular ikkisi (muannas) xonani tartiblashdi",
+      "opts": [
+        "هُمَا رَتَّبَا الْغُرْفَةَ",
+        "هُمَا رَتَّبْتُمَا الْغُرْفَةَ",
+        "هُمَا رَتَّبَتَا الْغُرْفَةَ",
+        "هُمَا رَتَّبْنَ الْغُرْفَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Muannas ikkilik هُمَا bilan رَتَّبَتَا keladi."
+    },
+    {
+      "q": "Ayol shifokor tirishqoq",
+      "opts": [
+        "الطَّبِيبَةُ مُجْتَهِدٌ",
+        "الطَّبِيبَةُ مُجْتَهِدَاتٌ",
+        "الطَّبِيبَةُ مُجْتَهِدُونَ",
+        "الطَّبِيبَةُ مُجْتَهِدَةٌ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-4): Kesim muannas birlik egaga moslashadi."
+    },
+    {
+      "q": "Ikkita avtobus bor",
+      "opts": [
+        "حَافِلَةٌ مَوْجُودَتَانِ",
+        "حَافِلَاتٌ مَوْجُودَتَانِ",
+        "حَافِلَتَانِ مَوْجُودَتَانِ",
+        "حَافِلَتَيْنِ مَوْجُودَتَانِ"
+      ],
+      "correct": 2,
+      "izoh": "Ega o‘rnida ikkilik ـَانِ bilan keladi."
+    },
+    {
+      "q": "Sayyoh aeroportdan safarga chiqdi",
+      "opts": [
+        "سَافَرَ السَّائِحُ مِنَ الْمَطَارِ",
+        "سَافَرَ السَّائِحُ مِنْ الْمَطَارِ",
+        "سَافَرَ السَّائِحُ مِنَ الْمَطَارُ",
+        "سَافَرَ السَّائِحُ مِنَ الْمَطَارَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-7): مِنْ keyingi ال bilan tutashganda مِنَ الْ, undan keyin ot majrur keladi."
+    },
+    {
+      "q": "Sizlar (muzakkar) taomni olib yurdingiz",
+      "opts": [
+        "أَنْتُمْ حَمَلْتُمَا الطَّعَامَ",
+        "أَنْتُمْ حَمَلْتُمُ الطَّعَامَ",
+        "أَنْتُمْ حَمَلْنَ الطَّعَامَ",
+        "أَنْتُمْ حَمَلُوا الطَّعَامَ"
+      ],
+      "correct": 1,
+      "izoh": "أَنْتُمْ bilan حَمَلْتُمْ; keyingi ال bilan tutashda حَمَلْتُمُ aytiladi."
+    },
+    {
+      "q": "Sen (muannas) derazani ochding",
+      "opts": [
+        "أَنْتِ فَتَحْتِ النَّافِذَةَ",
+        "أَنْتِ فَتَحْتَ النَّافِذَةَ",
+        "أَنْتِ فَتَحْتُ النَّافِذَةَ",
+        "أَنْتِ فَتَحَتِ النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-5): أَنْتِ bilan moziy oxiri ـتِ bo‘ladi."
+    },
+    {
+      "q": "Uyda o‘n yettita dinor bor",
+      "opts": [
+        "فِي الْبَيْتِ سَبْعَ عَشَرَ دِينَارًا",
+        "فِي الْبَيْتِ سَبْعَةَ عَشْرَةَ دِينَارًا",
+        "فِي الْبَيْتِ سَبْعَةَ عَشَرَ دَنَانِيرَ",
+        "فِي الْبَيْتِ سَبْعَةَ عَشَرَ دِينَارًا"
+      ],
+      "correct": 3,
+      "izoh": "دِينَارٌ muzakkar: sonning birinchi qismi teskari, ikkinchisi mos."
+    },
+    {
+      "q": "Bu nima? — Bu sharbat",
+      "opts": [
+        "مَا هَذَا؟ هَذَا عَصِيرٌ",
+        "مَنْ هَذَا؟ هَذَا عَصِيرٌ",
+        "مَتَى هَذَا؟ هَذَا عَصِيرٌ",
+        "أَيْنَ هَذَا؟ هَذَا عَصِيرٌ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-7): Narsa haqida مَا bilan so‘raladi."
+    },
+    {
+      "q": "Ular ikkisi (muzakkar) mashinani tartiblashdi",
+      "opts": [
+        "هُمَا رَتَّبَتَا السَّيَّارَةَ",
+        "هُمَا رَتَّبْتُمَا السَّيَّارَةَ",
+        "هُمَا رَتَّبُوا السَّيَّارَةَ",
+        "هُمَا رَتَّبَا السَّيَّارَةَ"
+      ],
+      "correct": 3,
+      "izoh": "Muzakkar ikkilik هُمَا bilan رَتَّبَا keladi."
+    },
+    {
+      "q": "Men sportni afzal ko‘raman",
+      "opts": [
+        "أَنَا يُفَضِّلُ الرِّيَاضَةَ",
+        "أَنَا تُفَضِّلُ الرِّيَاضَةَ",
+        "أَنَا أُفَضِّلُ الرِّيَاضَةَ",
+        "أَنَا نُفَضِّلُ الرِّيَاضَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-6): أَنَا bilan muzori‘ أُفَضِّلُ bo‘ladi."
+    },
+    {
+      "q": "To‘rtta sendvich bor",
+      "opts": [
+        "أَرْبَعُ شَطَائِرَ مَوْجُودَةٌ",
+        "أَرْبَعَةُ شَطَائِرَ مَوْجُودَةٌ",
+        "أَرْبَعُ شَطِيرَةٍ مَوْجُودَةٌ",
+        "أَرْبَعُ شَطَائِرٍ مَوْجُودَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "شَطِيرَةٌ muannas; شَطَائِرَ g‘ayri munsarif bo‘lib, jar holatida fatha oladi."
+    },
+    {
+      "q": "Yo‘lovchi pasportni qidirdi",
+      "opts": [
+        "بَحَثَ الْمُسَافِرُ عَنَ الْجَوَازِ",
+        "بَحَثَ الْمُسَافِرُ عَنِ الْجَوَازُ",
+        "بَحَثَ الْمُسَافِرُ عَنِ الْجَوَازِ",
+        "بَحَثَ الْمُسَافِرُ عَنِ الْجَوَازَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-7): عَنْ ال bilan tutashganda عَنِ الْ bo‘ladi, ot majrur keladi."
+    },
+    {
+      "q": "Sizlar (muannas) taomni ko‘tardingiz",
+      "opts": [
+        "أَنْتُنَّ حَمَلْتُنَّ الطَّعَامَ",
+        "أَنْتُنَّ حَمَلْتُمْ الطَّعَامَ",
+        "أَنْتُنَّ حَمَلْنَ الطَّعَامَ",
+        "أَنْتُنَّ حَمَلْنَا الطَّعَامَ"
+      ],
+      "correct": 0,
+      "izoh": "أَنْتُنَّ bilan حَمَلْتُنَّ ishlatiladi."
+    },
+    {
+      "q": "Bu ayol (uni ko‘rsatyapmiz) muhandisa",
+      "opts": [
+        "هِيَ مُهَنْدِسَةٌ",
+        "هَذِهِ مُهَنْدِسَةٌ",
+        "هَذَا مُهَنْدِسَةٌ",
+        "هُمْ مُهَنْدِسَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-1): Ko‘rsatilayotgan muannas birlik uchun هَذِهِ ishlatiladi."
+    },
+    {
+      "q": "Bitta so‘z bor",
+      "opts": [
+        "كَلِمَةٌ وَاحِدٌ مَوْجُودَةٌ",
+        "كَلِمَةٌ وَاحِدَتَانِ مَوْجُودَةٌ",
+        "كَلِمَةٌ وَاحِدَةٌ مَوْجُودَةٌ",
+        "كَلِمَةٌ وَاحِدُونَ مَوْجُودَةٌ"
+      ],
+      "correct": 2,
+      "izoh": "Bir soni sanalmishdan keyin kelib jinsda unga moslashadi."
+    },
+    {
+      "q": "U masjidlarda xodim",
+      "opts": [
+        "هُوَ مُوَظَّفٌ فِي مَسَاجِدٍ",
+        "هُوَ مُوَظَّفٌ فِي مَسَاجِدُ",
+        "هُوَ مُوَظَّفٌ فِي مَسَاجِدًا",
+        "هُوَ مُوَظَّفٌ فِي مَسَاجِدَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-7): مَسَاجِدُ g‘ayri munsarif: bu yerda jar holatida fatha oladi."
+    },
+    {
+      "q": "Ular (muzakkar) derazani ochishdi",
+      "opts": [
+        "هُمْ فَتَحُوا النَّافِذَةَ",
+        "هُمْ فَتَحْنَ النَّافِذَةَ",
+        "هُمْ فَتَحَا النَّافِذَةَ",
+        "هُمْ فَتَحْتُمُ النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "هُمْ bilan فَتَحُوا yoziladi; oxiridagi alif yozuvda saqlanadi."
+    },
+    {
+      "q": "Ular ikkisi (muzakkar) mening tog‘alarim",
+      "opts": [
+        "هُمَا خَالَايَ",
+        "هَذَانِ خَالَايَ",
+        "هُوَ خَالَايَ",
+        "هُمْ خَالَايَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-2): Ikkilik kishilik olmoshi هُمَا; هَذَانِ ko‘rsatish uchun."
+    },
+    {
+      "q": "Uchta taom bor",
+      "opts": [
+        "ثَلَاثَةُ وَجَبَاتٍ مَوْجُودَةٌ",
+        "ثَلَاثُ وَجْبَةٍ مَوْجُودَةٌ",
+        "ثَلَاثُ وَجَبَاتٌ مَوْجُودَةٌ",
+        "ثَلَاثُ وَجَبَاتٍ مَوْجُودَةٌ"
+      ],
+      "correct": 3,
+      "izoh": "وَجْبَةٌ muannas; 3 soni teskari jinsda, sanalmish ko‘plikda keladi."
+    },
+    {
+      "q": "Qaysi reys uzoq?",
+      "opts": [
+        "أَيُّ رِحْلَةٌ بَعِيدَةٌ؟",
+        "أَيُّ رِحْلَةً بَعِيدَةٌ؟",
+        "أَيُّ رِحْلَاتٌ بَعِيدَةٌ؟",
+        "أَيُّ رِحْلَةٍ بَعِيدَةٌ؟"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-7): أَيُّ dan keyingi ot izofada majrur bo‘ladi."
+    },
+    {
+      "q": "Ular ikkisi (muannas) urinishdi",
+      "opts": [
+        "هُمَا حَاوَلَتَا",
+        "هُمَا حَاوَلَا",
+        "هُمَا حَاوَلْتُمَا",
+        "هُمَا حَاوَلْنَ"
+      ],
+      "correct": 0,
+      "izoh": "Muannas ikkilik uchun حَاوَلَتَا keladi."
+    },
+    {
+      "q": "Ular (muannas) mohir tarjimonlar",
+      "opts": [
+        "هَؤُلَاءِ مُتَرْجِمَاتٌ مَاهِرَاتٌ",
+        "هُنَّ مُتَرْجِمَاتٌ مَاهِرَاتٌ",
+        "هُمْ مُتَرْجِمَاتٌ مَاهِرَاتٌ",
+        "هُمَا مُتَرْجِمَاتٌ مَاهِرَاتٌ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-3): Muannas ko‘plik kishilik olmoshi هُنَّ."
+    },
+    {
+      "q": "O‘nta lira bor",
+      "opts": [
+        "عَشَرَةُ لِيرَاتٍ مَوْجُودَةٌ",
+        "عَشْرُ لِيرَاتٍ مَوْجُودَةٌ",
+        "عَشْرُ لِيرَةٍ مَوْجُودَةٌ",
+        "عَشْرُ لِيرَاتٌ مَوْجُودَةٌ"
+      ],
+      "correct": 1,
+      "izoh": "لِيرَةٌ muannas: 10 soni teskari, sanalmish ko‘plikda majrur."
+    },
+    {
+      "q": "Bu ikki xodim (muzakkar) tirishqoq",
+      "opts": [
+        "هَذَانِ مُوَظَّفَانِ مُجْتَهِدَانِ",
+        "هَاتَانِ مُوَظَّفَانِ مُجْتَهِدَانِ",
+        "هَذَا مُوَظَّفَانِ مُجْتَهِدَانِ",
+        "هَؤُلَاءِ مُوَظَّفَانِ مُجْتَهِدَانِ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-4): Muzakkar ikkilikni ko‘rsatishda هَذَانِ ishlatiladi."
+    },
+    {
+      "q": "Siz ikkovingiz (muannas) urindingiz",
+      "opts": [
+        "أَنْتُمَا حَاوَلْتُمَا",
+        "أَنْتُمَا حَاوَلْتُنَّ",
+        "أَنْتُمَا حَاوَلَتَا",
+        "أَنْتُمَا حَاوَلْنَ"
+      ],
+      "correct": 0,
+      "izoh": "أَنْتُمَا shakli ikki jinsga ham bir xil: حَاوَلْتُمَا."
+    },
+    {
+      "q": "U (muannas) derazani ochdi",
+      "opts": [
+        "هِيَ فَتَحْتِ النَّافِذَةَ",
+        "هِيَ فَتَحْتَ النَّافِذَةَ",
+        "هِيَ فَتَحَتِ النَّافِذَةَ",
+        "هِيَ فَتَحْتُ النَّافِذَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-5): هِيَ uchun فَتَحَتْ; keyingi ال bilan tutashda تِ bo‘ladi."
+    },
+    {
+      "q": "Siz (muannas) yozni afzal ko‘rasiz",
+      "opts": [
+        "أَنْتِ تُفَضِّلُ الصَّيْفَ",
+        "أَنْتِ تُفَضِّلِينَ الصَّيْفَ",
+        "أَنْتِ يُفَضِّلُ الصَّيْفَ",
+        "أَنْتِ أُفَضِّلُ الصَّيْفَ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-6): أَنْتِ bilan muzori‘ تُفَضِّلِينَ keladi."
+    },
+    {
+      "q": "Sayyoh aeroportga yetib keldi",
+      "opts": [
+        "وَصَلَ السَّائِحُ إِلَى الْمَطَارُ",
+        "وَصَلَ السَّائِحُ إِلَى الْمَطَارَ",
+        "وَصَلَ السَّائِحُ إِلَى الْمَطَارِ",
+        "وَصَلَ السَّائِحُ إِلَى الْمَطَارَاتِ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-7): إِلَى jar harfidan keyingi birlik ot majrur, bu yerda kasrali keladi."
+    },
+    {
+      "q": "Ayol oshpaz xodim emas",
+      "opts": [
+        "الطَّبَّاخَةُ لَيْسَ مُوَظَّفَةً",
+        "الطَّبَّاخَةُ لَسْتُ مُوَظَّفَةً",
+        "الطَّبَّاخَةُ لَيْسَتْ مُوَظَّفَةً",
+        "الطَّبَّاخَةُ لَسْتَ مُوَظَّفَةً"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-4): Muannas birlik uchun لَيْسَتْ ishlatiladi."
+    },
+    {
+      "q": "Men oynani ochdim",
+      "opts": [
+        "أَنَا فَتَحْتَ النَّافِذَةَ",
+        "أَنَا فَتَحْتِ النَّافِذَةَ",
+        "أَنَا فَتَحَتِ النَّافِذَةَ",
+        "أَنَا فَتَحْتُ النَّافِذَةَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-5): أَنَا bilan moziy qo‘shimchasi ـتُ bo‘ladi."
+    },
+    {
+      "q": "Mashina bekatning ichida",
+      "opts": [
+        "السَّيَّارَةُ دَاخِلُ الْمَحَطَّةِ",
+        "السَّيَّارَةُ دَاخِلَ الْمَحَطَّةِ",
+        "السَّيَّارَةُ دَاخِلِ الْمَحَطَّةِ",
+        "السَّيَّارَةُ دَاخِلٌ الْمَحَطَّةِ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-6): دَاخِلَ o‘rin ravishi mansub, undan keyingi ot majrur bo‘ladi."
+    }
+  ]
+}
