@@ -1,887 +1,832 @@
 {
   "title": "Mufradot — 6-dars: Asdiqai (Do'stlarim)",
   "otish": 80,
-  "vaqt": 50,
+  "vaqt": 43,
   "questions": [
     {
-      "q": "«Tushunmoq» so'zining ma'nosi?",
+      "q": "«فَهِمَ - يَفْهَمُ» fe'lining oʻzbekcha ma'nosini toping",
       "opts": [
-        "سَمِعَ",
-        "فَهِمَ",
-        "قَرَأَ",
-        "كَتَبَ"
-      ],
-      "correct": 1,
-      "izoh": "فَهِمَ = Tushunmoq"
-    },
-    {
-      "q": "«ضَحِكَ» so'zining ma'nosi?",
-      "opts": [
-        "O'qimoq (maktabda)",
-        "Yodlamoq",
-        "Kulmoq",
-        "Yozmoq"
+        "Bilmoq",
+        "O'ylamoq",
+        "Tushunmoq",
+        "Eslamoq"
       ],
       "correct": 2,
-      "izoh": "ضَحِكَ = Kulmoq"
+      "izoh": "فَهِمَ - يَفْهَمُ — tushunmoq degani."
     },
     {
-      "q": "«Nasihat qilmoq» so'zining ma'nosi?",
+      "q": "«Tushunmoq» fe'lining arabcha tarjimasini toping",
       "opts": [
-        "نَصَحَ",
-        "فَعَلَ",
-        "عَمِلَ",
-        "نَصَرَ"
+        "لَعِبَ - يَلْعَبُ",
+        "فَهِمَ - يَفْهَمُ",
+        "ضَحِكَ - يَضْحَكُ",
+        "حَفِظَ - يَحْفَظُ"
+      ],
+      "correct": 1,
+      "izoh": "فَهِمَ - يَفْهَمُ — tushunmoq degani."
+    },
+    {
+      "q": "«ضَحِكَ - يَضْحَكُ» fe'lining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Kulmoq",
+        "Yig'lamoq",
+        "Gapirmoq",
+        "Qichqirmoq"
       ],
       "correct": 0,
-      "izoh": "نَصَحَ = Nasihat qilmoq"
+      "izoh": "ضَحِكَ - يَضْحَكُ — kulmoq degani."
     },
     {
-      "q": "«حَفِظَ» so'zining ma'nosi?",
+      "q": "«Kulmoq» fe'lining arabcha tarjimasini toping",
       "opts": [
-        "Nasihat qilmoq",
-        "Yodlamoq",
-        "Tushunmoq",
-        "O'qimoq (matn)"
+        "ضَحِكَ - يَضْحَكُ",
+        "نَصَحَ - يَنْصَحُ",
+        "سَمِعَ - يَسْمَعُ",
+        "فَهِمَ - يَفْهَمُ"
       ],
-      "correct": 1,
-      "izoh": "حَفِظَ = Yodlamoq"
+      "correct": 0,
+      "izoh": "ضَحِكَ - يَضْحَكُ — kulmoq degani."
     },
     {
-      "q": "«Yordam bermoq» so'zining ma'nosi?",
+      "q": "«نَصَحَ - يَنْصَحُ» fe'lining oʻzbekcha ma'nosini toping",
       "opts": [
-        "أَخَذَ",
-        "طَبَخَ",
-        "نَصَرَ",
-        "جَلَسَ"
+        "Nasihat qilmoq, tavsiya bermoq",
+        "Maqtamoq, olqishlamoq",
+        "Urishmoq, koyimoq",
+        "So'ramoq, iltimos qilmoq"
+      ],
+      "correct": 0,
+      "izoh": "نَصَحَ - يَنْصَحُ — nasihat qilmoq, tavsiya bermoq degani."
+    },
+    {
+      "q": "«Nasihat qilmoq, tavsiya bermoq» fe'lining arabcha tarjimasini toping",
+      "opts": [
+        "لَعِبَ - يَلْعَبُ",
+        "ضَحِكَ - يَضْحَكُ",
+        "نَصَحَ - يَنْصَحُ",
+        "حَفِظَ - يَحْفَظُ"
       ],
       "correct": 2,
-      "izoh": "نَصَرَ = Yordam bermoq"
+      "izoh": "نَصَحَ - يَنْصَحُ — nasihat qilmoq, tavsiya bermoq degani."
     },
     {
-      "q": "«أَكَلَ» so'zining ma'nosi?",
+      "q": "«حَفِظَ - يَحْفَظُ» fe'lining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Unutmoq, yo'qotmoq",
+        "O'qimoq, ko'rib chiqmoq",
+        "Yozmoq, ko'chirmoq",
+        "Yodlamoq, asramoq"
+      ],
+      "correct": 3,
+      "izoh": "حَفِظَ - يَحْفَظُ — yodlamoq, asramoq degani."
+    },
+    {
+      "q": "«Yodlamoq, asramoq» fe'lining arabcha tarjimasini toping",
+      "opts": [
+        "فَهِمَ - يَفْهَمُ",
+        "نَصَحَ - يَنْصَحُ",
+        "حَفِظَ - يَحْفَظُ",
+        "سَمِعَ - يَسْمَعُ"
+      ],
+      "correct": 2,
+      "izoh": "حَفِظَ - يَحْفَظُ — yodlamoq, asramoq degani."
+    },
+    {
+      "q": "«نَصَرَ - يَنْصُرُ» fe'lining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Yordam bermoq",
+        "Xalaqit bermoq",
+        "Ruxsat bermoq",
+        "Javob bermoq"
+      ],
+      "correct": 0,
+      "izoh": "نَصَرَ - يَنْصُرُ — yordam bermoq degani."
+    },
+    {
+      "q": "«Yordam bermoq» fe'lining arabcha tarjimasini toping",
+      "opts": [
+        "عَمِلَ - يَعْمَلُ",
+        "نَصَرَ - يَنْصُرُ",
+        "أَخَذَ - يَأْخُذُ",
+        "شَرِبَ - يَشْرَبُ"
+      ],
+      "correct": 1,
+      "izoh": "نَصَرَ - يَنْصُرُ — yordam bermoq degani."
+    },
+    {
+      "q": "«أَكَلَ - يَأْكُلُ» fe'lining oʻzbekcha ma'nosini toping",
       "opts": [
         "Ichmoq",
-        "Yemoq",
         "Taom pishirmoq",
-        "O'ynamoq"
-      ],
-      "correct": 1,
-      "izoh": "أَكَلَ = Yemoq"
-    },
-    {
-      "q": "«Kun» so'zining ma'nosi?",
-      "opts": [
-        "أُسْبُوعٌ",
-        "يَوْمٌ",
-        "شَهْرٌ",
-        "سَنَةٌ"
-      ],
-      "correct": 1,
-      "izoh": "يَوْمٌ = Kun"
-    },
-    {
-      "q": "«أُسْبُوعٌ» so'zining ma'nosi?",
-      "opts": [
-        "Kun",
-        "Oy",
-        "Hafta",
-        "Yil"
+        "Yemoq",
+        "Yuvmoq"
       ],
       "correct": 2,
-      "izoh": "أُسْبُوعٌ = Hafta"
+      "izoh": "أَكَلَ - يَأْكُلُ — yemoq degani."
     },
     {
-      "q": "«Oy» so'zining ma'nosi?",
+      "q": "«Yemoq» fe'lining arabcha tarjimasini toping",
       "opts": [
-        "شَهْرٌ",
-        "يَوْمٌ",
-        "سَنَةٌ",
-        "أُسْبُوعٌ"
+        "أَكَلَ - يَأْكُلُ",
+        "نَصَرَ - يَنْصُرُ",
+        "طَبَخَ - يَطْبُخُ",
+        "عَمِلَ - يَعْمَلُ"
       ],
       "correct": 0,
-      "izoh": "شَهْرٌ = Oy"
+      "izoh": "أَكَلَ - يَأْكُلُ — yemoq degani."
     },
     {
-      "q": "«سَنَةٌ» so'zining ma'nosi?",
+      "q": "«يَوْمٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Kun",
-        "Yil",
-        "Hafta",
-        "Oy"
-      ],
-      "correct": 1,
-      "izoh": "سَنَةٌ = Yil"
-    },
-    {
-      "q": "«Doim» so'zining ma'nosi?",
-      "opts": [
-        "غَالِبًا",
-        "أَحْيَانًا",
-        "دَائِمًا",
-        "نَادِرًا"
-      ],
-      "correct": 2,
-      "izoh": "دَائِمًا = Doim"
-    },
-    {
-      "q": "«غَالِبًا» so'zining ma'nosi?",
-      "opts": [
-        "Ko'pincha",
-        "Ba'zida",
-        "Hech qachon",
-        "Kamdan-kam"
-      ],
-      "correct": 0,
-      "izoh": "غَالِبًا = Ko'pincha"
-    },
-    {
-      "q": "«Ba'zida» so'zining ma'nosi?",
-      "opts": [
-        "غَالِبًا",
-        "نَادِرًا",
-        "دَائِمًا",
-        "أَحْيَانًا"
-      ],
-      "correct": 3,
-      "izoh": "أَحْيَانًا = Ba'zida"
-    },
-    {
-      "q": "«نَادِرًا» so'zining ma'nosi?",
-      "opts": [
-        "Doim",
-        "Ko'pincha",
-        "Ba'zida",
-        "Kamdan-kam"
-      ],
-      "correct": 3,
-      "izoh": "نَادِرًا = Kamdan-kam"
-    },
-    {
-      "q": "«Hech qachon» so'zining ma'nosi?",
-      "opts": [
-        "أَبَدًا",
-        "نَادِرًا",
-        "دَائِمًا",
-        "غَالِبًا"
-      ],
-      "correct": 0,
-      "izoh": "أَبَدًا = Hech qachon"
-    },
-    {
-      "q": "«بَعْضٌ» so'zining ma'nosi?",
-      "opts": [
-        "Doim",
-        "Ba'zi",
-        "Kamdan-kam",
-        "Birgalikda"
-      ],
-      "correct": 1,
-      "izoh": "بَعْضٌ = Ba'zi"
-    },
-    {
-      "q": "«Ko'cha» so'zining ma'nosi?",
-      "opts": [
-        "بَيْتٌ",
-        "صَفٌّ",
-        "شَارِعٌ",
-        "مَكْتَبَةٌ"
-      ],
-      "correct": 2,
-      "izoh": "شَارِعٌ = Ko'cha"
-    },
-    {
-      "q": "«طَرِيقٌ» so'zining ma'nosi?",
-      "opts": [
-        "Sinf",
-        "Kutubxona",
-        "Yo'l",
-        "Uy"
-      ],
-      "correct": 2,
-      "izoh": "طَرِيقٌ = Yo'l"
-    },
-    {
-      "q": "«Birgalikda» so'zining ma'nosi?",
-      "opts": [
-        "هُنَا",
-        "عِدَّةٌ",
-        "بَعْضٌ",
-        "مَعًا"
-      ],
-      "correct": 3,
-      "izoh": "مَعًا = Birgalikda"
-    },
-    {
-      "q": "«مِنْ فَضْلِكَ» so'zining ma'nosi?",
-      "opts": [
-        "Iltimos",
-        "Qani ketdik",
-        "Bu yerda",
-        "Birgalikda"
-      ],
-      "correct": 0,
-      "izoh": "مِنْ فَضْلِكَ = Iltimos"
-    },
-    {
-      "q": "«Kutubxona» so'zining ma'nosi?",
-      "opts": [
-        "غُرْفَةٌ",
-        "مَطْعَمٌ",
-        "مَكْتَبَةٌ",
-        "خِزَانَةٌ"
-      ],
-      "correct": 2,
-      "izoh": "مَكْتَبَةٌ = Kutubxona"
-    },
-    {
-      "q": "«عِدَّةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Iltimos",
-        "Bir necha",
-        "Ko'pincha",
-        "Kamdan-kam"
-      ],
-      "correct": 1,
-      "izoh": "عِدَّةٌ = Bir necha"
-    },
-    {
-      "q": "«Sinf» so'zining ma'nosi?",
-      "opts": [
-        "غُرْفَةٌ",
-        "صَفٌّ",
-        "صَالَةٌ",
-        "بَيْتٌ"
-      ],
-      "correct": 1,
-      "izoh": "صَفٌّ = Sinf"
-    },
-    {
-      "q": "«مُمْتِعٌ» so'zining ma'nosi?",
-      "opts": [
-        "Keng",
-        "Yangi",
-        "Qiziqarli",
-        "Toza"
-      ],
-      "correct": 2,
-      "izoh": "مُمْتِعٌ = Qiziqarli"
-    },
-    {
-      "q": "«Nima (fe'llar uchun)» so'zining ma'nosi?",
-      "opts": [
-        "مَنْ",
-        "هَلْ",
-        "هُنَاكَ",
-        "مَاذَا"
-      ],
-      "correct": 3,
-      "izoh": "مَاذَا = Nima (fe'llar uchun)"
-    },
-    {
-      "q": "«هُنَا» so'zining ma'nosi?",
-      "opts": [
-        "Anaviy yerda (u yerda)",
-        "Qani ketdik",
-        "Iltimos",
-        "Bu yerda"
-      ],
-      "correct": 3,
-      "izoh": "هُنَا = Bu yerda"
-    },
-    {
-      "q": "«Anaviy yerda (u yerda)» so'zining ma'nosi?",
-      "opts": [
-        "هُنَاكَ",
-        "هُنَا",
-        "هَيَّا بِنَا",
-        "مَعًا"
-      ],
-      "correct": 0,
-      "izoh": "هُنَاكَ = Anaviy yerda (u yerda)"
-    },
-    {
-      "q": "«هَيَّا بِنَا» so'zining ma'nosi?",
-      "opts": [
-        "Qani ketdik",
-        "Iltimos",
-        "Birgalikda",
-        "Bu yerda"
-      ],
-      "correct": 0,
-      "izoh": "هَيَّا بِنَا = Qani ketdik"
-    },
-    {
-      "q": "«فَهِمَ» so'zining ma'nosi?",
-      "opts": [
-        "Yozmoq",
-        "O'qimoq (maktabda)",
-        "Tushunmoq",
-        "Eshitmoq"
-      ],
-      "correct": 2,
-      "izoh": "فَهِمَ = Tushunmoq"
-    },
-    {
-      "q": "«Kulmoq» so'zining ma'nosi?",
-      "opts": [
-        "ضَحِكَ",
-        "لَعِبَ",
-        "جَلَسَ",
-        "سَمِعَ"
-      ],
-      "correct": 0,
-      "izoh": "ضَحِكَ = Kulmoq"
-    },
-    {
-      "q": "«نَصَحَ» so'zining ma'nosi?",
-      "opts": [
-        "Tushunmoq",
-        "Nasihat qilmoq",
-        "Yordam bermoq",
-        "Yodlamoq"
-      ],
-      "correct": 1,
-      "izoh": "نَصَحَ = Nasihat qilmoq"
-    },
-    {
-      "q": "«Yodlamoq» so'zining ma'nosi?",
-      "opts": [
-        "دَرَسَ",
-        "قَرَأَ",
-        "حَفِظَ",
-        "كَتَبَ"
-      ],
-      "correct": 2,
-      "izoh": "حَفِظَ = Yodlamoq"
-    },
-    {
-      "q": "«نَصَرَ» so'zining ma'nosi?",
-      "opts": [
-        "Yordam bermoq",
-        "Nasihat qilmoq",
-        "Qilmoq",
-        "Olmoq"
-      ],
-      "correct": 0,
-      "izoh": "نَصَرَ = Yordam bermoq"
-    },
-    {
-      "q": "«Yemoq» so'zining ma'nosi?",
-      "opts": [
-        "شَرِبَ",
-        "طَبَخَ",
-        "أَكَلَ",
-        "أَخَذَ"
-      ],
-      "correct": 2,
-      "izoh": "أَكَلَ = Yemoq"
-    },
-    {
-      "q": "«يَوْمٌ» so'zining ma'nosi?",
-      "opts": [
-        "Hafta",
-        "Oy",
-        "Kun",
-        "Yil"
-      ],
-      "correct": 2,
-      "izoh": "يَوْمٌ = Kun"
-    },
-    {
-      "q": "«Hafta» so'zining ma'nosi?",
-      "opts": [
-        "أُسْبُوعٌ",
-        "يَوْمٌ",
-        "سَنَةٌ",
-        "شَهْرٌ"
-      ],
-      "correct": 0,
-      "izoh": "أُسْبُوعٌ = Hafta"
-    },
-    {
-      "q": "«شَهْرٌ» so'zining ma'nosi?",
-      "opts": [
-        "Yil",
-        "Oy",
+        "Soat",
+        "Daqiqa",
         "Kun",
         "Hafta"
       ],
-      "correct": 1,
-      "izoh": "شَهْرٌ = Oy"
+      "correct": 2,
+      "izoh": "يَوْمٌ — kun degani."
     },
     {
-      "q": "«Yil» so'zining ma'nosi?",
+      "q": "«أُسْبُوعٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "يَوْمٌ",
-        "شَهْرٌ",
-        "سَنَةٌ",
-        "أُسْبُوعٌ"
+        "Oy",
+        "Hafta",
+        "Kun",
+        "Yil"
+      ],
+      "correct": 1,
+      "izoh": "أُسْبُوعٌ — hafta degani."
+    },
+    {
+      "q": "«شَهْرٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Hafta",
+        "Yil",
+        "Oy",
+        "Kun"
       ],
       "correct": 2,
-      "izoh": "سَنَةٌ = Yil"
+      "izoh": "شَهْرٌ — oy degani."
     },
     {
-      "q": "«دَائِمًا» so'zining ma'nosi?",
+      "q": "«سَنَةٌ / عَامٌ» iborasining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Oy",
+        "Yil",
+        "Hafta",
+        "Asr"
+      ],
+      "correct": 1,
+      "izoh": "سَنَةٌ / عَامٌ — yil degani."
+    },
+    {
+      "q": "«غَالِبًا» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Ba'zida",
+        "Kamdan-kam",
+        "Ko'pincha",
+        "Hech qachon"
+      ],
+      "correct": 2,
+      "izoh": "غَالِبًا — ko'pincha degani."
+    },
+    {
+      "q": "«Ko'pincha» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "أَبَدًا",
+        "أَحْيَانًا",
+        "غَالِبًا",
+        "نَادِرًا"
+      ],
+      "correct": 2,
+      "izoh": "غَالِبًا — ko'pincha degani."
+    },
+    {
+      "q": "«أَحْيَانًا» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
         "Ko'pincha",
-        "Doim",
         "Ba'zida",
+        "Doim",
         "Hech qachon"
       ],
       "correct": 1,
-      "izoh": "دَائِمًا = Doim"
+      "izoh": "أَحْيَانًا — ba'zida degani."
     },
     {
-      "q": "«Ko'pincha» so'zining ma'nosi?",
+      "q": "«Ba'zida» soʻzining arabcha tarjimasini toping",
       "opts": [
+        "أَحْيَانًا",
         "غَالِبًا",
-        "دَائِمًا",
         "نَادِرًا",
-        "أَحْيَانًا"
+        "أَبَدًا"
       ],
       "correct": 0,
-      "izoh": "غَالِبًا = Ko'pincha"
+      "izoh": "أَحْيَانًا — ba'zida degani."
     },
     {
-      "q": "«أَحْيَانًا» so'zining ma'nosi?",
+      "q": "«نَادِرًا» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Hech qachon",
-        "Doim",
+        "Ko'pincha",
         "Kamdan-kam",
+        "Doim",
         "Ba'zida"
       ],
-      "correct": 3,
-      "izoh": "أَحْيَانًا = Ba'zida"
+      "correct": 1,
+      "izoh": "نَادِرًا — kamdan-kam degani."
     },
     {
-      "q": "«Kamdan-kam» so'zining ma'nosi?",
+      "q": "«Kamdan-kam» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "دَائِمًا",
+        "غَالِبًا",
         "أَحْيَانًا",
         "أَبَدًا",
         "نَادِرًا"
       ],
       "correct": 3,
-      "izoh": "نَادِرًا = Kamdan-kam"
+      "izoh": "نَادِرًا — kamdan-kam degani."
     },
     {
-      "q": "«أَبَدًا» so'zining ma'nosi?",
+      "q": "«أَبَدًا» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Doim",
-        "Ba'zida",
-        "Hech qachon",
-        "Kamdan-kam"
+        "Har doim",
+        "Ba'zi paytda",
+        "Ko'p marta",
+        "Hech qachon"
       ],
-      "correct": 2,
-      "izoh": "أَبَدًا = Hech qachon"
+      "correct": 3,
+      "izoh": "أَبَدًا — hech qachon degani."
     },
     {
-      "q": "«Ba'zi» so'zining ma'nosi?",
+      "q": "«Hech qachon» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "هُنَاكَ",
-        "بَعْضٌ",
-        "مَعًا",
-        "هُنَا"
-      ],
-      "correct": 1,
-      "izoh": "بَعْضٌ = Ba'zi"
-    },
-    {
-      "q": "«شَارِعٌ» so'zining ma'nosi?",
-      "opts": [
-        "Ko'cha",
-        "Uy",
-        "Kutubxona",
-        "Sinf"
+        "أَبَدًا",
+        "غَالِبًا",
+        "نَادِرًا",
+        "أَحْيَانًا"
       ],
       "correct": 0,
-      "izoh": "شَارِعٌ = Ko'cha"
+      "izoh": "أَبَدًا — hech qachon degani."
     },
     {
-      "q": "🔁 «Shkaf» so'zining ma'nosi?",
+      "q": "«بَعْضٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "طَاوِلَةٌ",
-        "خِزَانَةٌ",
-        "كُرْسِيٌّ",
-        "بَابٌ"
+        "Hamma",
+        "Ba'zi",
+        "Hech biri",
+        "Ko'p"
       ],
       "correct": 1,
-      "izoh": "Shkaf = 🔁 Takror (5-dars): خِزَانَةٌ"
+      "izoh": "بَعْضٌ — ba'zi degani."
     },
     {
-      "q": "🔁 «وَسِخٌ» so'zining ma'nosi?",
+      "q": "«شَارِعٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Toza",
-        "Keng",
-        "Kir",
-        "Tor"
+        "Maydon",
+        "Ko'prik",
+        "Ko'cha",
+        "Bekat"
       ],
       "correct": 2,
-      "izoh": "Kir = 🔁 Takror (5-dars): وَسِخٌ"
+      "izoh": "شَارِعٌ — ko'cha degani."
     },
     {
-      "q": "🔁 «Kichik» so'zining ma'nosi?",
+      "q": "«طَرِيقٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
+        "Ko'prik",
+        "Maydon",
+        "Bekat",
+        "Yo'l"
+      ],
+      "correct": 3,
+      "izoh": "طَرِيقٌ — yo'l degani."
+    },
+    {
+      "q": "«مَعًا» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Alohida",
+        "Yolg'iz",
+        "Birgalikda",
+        "Navbat bilan"
+      ],
+      "correct": 2,
+      "izoh": "مَعًا — birgalikda degani."
+    },
+    {
+      "q": "«مِنْ فَضْلِكَ» iborasining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Rahmat",
+        "Kechirasiz",
+        "Xayr",
+        "Iltimos"
+      ],
+      "correct": 3,
+      "izoh": "مِنْ فَضْلِكَ — iltimos degani."
+    },
+    {
+      "q": "«Iltimos» iborasining arabcha tarjimasini toping",
+      "opts": [
+        "مِنْ فَضْلِكَ",
+        "أَهْلًا وَسَهْلًا",
+        "مَعَ السَّلَامَةِ",
+        "أَهْلًا بِكَ"
+      ],
+      "correct": 0,
+      "izoh": "مِنْ فَضْلِكَ — iltimos degani."
+    },
+    {
+      "q": "«مَكْتَبَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Kutubxona",
+        "Maktab",
+        "Do'kon",
+        "Kasalxona"
+      ],
+      "correct": 0,
+      "izoh": "مَكْتَبَةٌ — kutubxona degani."
+    },
+    {
+      "q": "«عِدَّةٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Hamma",
+        "Hech biri",
+        "Bir necha",
+        "Faqat bitta"
+      ],
+      "correct": 2,
+      "izoh": "عِدَّةٌ — bir necha degani."
+    },
+    {
+      "q": "«صَفٌّ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Maktab",
+        "Sinf",
+        "Kutubxona",
+        "Yo'lak"
+      ],
+      "correct": 1,
+      "izoh": "صَفٌّ — sinf degani."
+    },
+    {
+      "q": "«مُمْتِعٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Zerikarli",
+        "Qiziqarli",
+        "Qiyin",
+        "Oson"
+      ],
+      "correct": 1,
+      "izoh": "مُمْتِعٌ — qiziqarli degani."
+    },
+    {
+      "q": "«Qiziqarli» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "وَاسِعٌ",
         "كَبِيرٌ",
         "صَغِيرٌ",
-        "جَمِيلٌ",
-        "قَدِيمٌ"
+        "مُمْتِعٌ"
+      ],
+      "correct": 3,
+      "izoh": "مُمْتِعٌ — qiziqarli degani."
+    },
+    {
+      "q": "«مَاذَا» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Kim",
+        "Qayer",
+        "Qachon",
+        "Nima"
+      ],
+      "correct": 3,
+      "izoh": "مَاذَا — nima degani."
+    },
+    {
+      "q": "«هُنَا» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Bu yerda",
+        "Anaviy yerda",
+        "Hamma yerda",
+        "Hech qayerda"
+      ],
+      "correct": 0,
+      "izoh": "هُنَا — bu yerda degani."
+    },
+    {
+      "q": "«هُنَاكَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Bu yerda",
+        "Anaviy yerda",
+        "Hamma yerda",
+        "Hech qayerda"
       ],
       "correct": 1,
-      "izoh": "Kichik = 🔁 Takror (5-dars): صَغِيرٌ"
+      "izoh": "هُنَاكَ — anaviy yerda degani."
     },
     {
-      "q": "🔁 «فَوْقَ» so'zining ma'nosi?",
+      "q": "«هَيَّا بِنَا» iborasining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Tagida",
-        "Oldida",
-        "Tepasida",
-        "Orqasida"
+        "Qani o'tiraylik",
+        "Qani ketdik",
+        "Qani kutaylik",
+        "Qani tinchlanaylik"
+      ],
+      "correct": 1,
+      "izoh": "هَيَّا بِنَا — qani ketdik degani."
+    },
+    {
+      "q": "«Qani ketdik» iborasining arabcha tarjimasini toping",
+      "opts": [
+        "مِنْ فَضْلِكَ",
+        "أَهْلًا وَسَهْلًا",
+        "هَيَّا بِنَا",
+        "مَعَ السَّلَامَةِ"
       ],
       "correct": 2,
-      "izoh": "Tepasida = 🔁 Takror (5-dars): فَوْقَ"
+      "izoh": "هَيَّا بِنَا — qani ketdik degani."
     },
     {
-      "q": "🔁 «Chap tarafida» so'zining ma'nosi?",
+      "q": "«عَنْ يَمِينِ» iborasining oʻzbekcha ma'nosini toping",
       "opts": [
-        "عَنْ يَسَارِ",
-        "عَنْ يَمِينِ",
-        "بَيْنَ",
-        "جَانِبَ"
+        "O'ng tarafida",
+        "Chap tarafida",
+        "Orqa tarafida",
+        "Old tarafida"
       ],
       "correct": 0,
-      "izoh": "Chap tarafida = 🔁 Takror (5-dars): عَنْ يَسَارِ"
+      "izoh": "عَنْ يَمِينِ — o'ng tarafida degani."
     },
     {
-      "q": "🔁 «صَالَةٌ» so'zining ma'nosi?",
+      "q": "«عَنْ يَسَارِ» iborasining oʻzbekcha ma'nosini toping",
       "opts": [
-        "Zal (mehmonxona)",
-        "Oshxona",
-        "Xona",
-        "Uy"
+        "Chap tarafida",
+        "O'ng tarafida",
+        "Orqa tarafida",
+        "Old tarafida"
       ],
       "correct": 0,
-      "izoh": "Zal (mehmonxona) = 🔁 Takror (5-dars): صَالَةٌ"
+      "izoh": "عَنْ يَسَارِ — chap tarafida degani."
     },
     {
-      "q": "🔁 «Orasida» so'zining ma'nosi?",
+      "q": "«وَرَاءَ / خَلْفَ» iborasining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Oldida",
+        "Ichida",
+        "Tashqarisida",
+        "Orqasida"
+      ],
+      "correct": 3,
+      "izoh": "وَرَاءَ / خَلْفَ — orqasida degani."
+    },
+    {
+      "q": "«Oldida» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "أَمَامَ",
+        "فِي",
+        "جَانِبَ",
+        "بَيْنَ"
+      ],
+      "correct": 0,
+      "izoh": "أَمَامَ — oldida degani."
+    },
+    {
+      "q": "«أَمَامَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Orqasida",
+        "Ichida",
+        "Oldida",
+        "Tagida"
+      ],
+      "correct": 2,
+      "izoh": "أَمَامَ — oldida degani."
+    },
+    {
+      "q": "«بَيْنَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Ichida",
+        "Tashqarisida",
+        "Atrofida",
+        "Orasida"
+      ],
+      "correct": 3,
+      "izoh": "بَيْنَ — orasida degani."
+    },
+    {
+      "q": "«Orasida» soʻzining arabcha tarjimasini toping",
       "opts": [
         "تَحْتَ",
         "عَلَى",
         "بَيْنَ",
-        "فَوْقَ"
+        "أَمَامَ"
       ],
       "correct": 2,
-      "izoh": "Orasida = 🔁 Takror (5-dars): بَيْنَ"
+      "izoh": "بَيْنَ — orasida degani."
     },
     {
-      "q": "🔁 «قَدِيمٌ» so'zining ma'nosi?",
+      "q": "«Ustida» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "Yangi",
-        "Katta",
-        "Chiroyli",
-        "Eski"
-      ],
-      "correct": 3,
-      "izoh": "Eski = 🔁 Takror (5-dars): قَدِيمٌ"
-    },
-    {
-      "q": "🔁 «Yonida» so'zining ma'nosi?",
-      "opts": [
+        "تَحْتَ",
+        "فِي",
         "جَانِبَ",
-        "وَرَاءَ",
-        "أَمَامَ",
         "عَلَى"
       ],
-      "correct": 0,
-      "izoh": "Yonida = 🔁 Takror (5-dars): جَانِبَ"
+      "correct": 3,
+      "izoh": "عَلَى — ustida degani."
     },
     {
-      "q": "🔁 «جَمِيلٌ» so'zining ma'nosi?",
+      "q": "«عَلَى» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Tagida",
+        "Ichida",
+        "Yonida",
+        "Ustida"
+      ],
+      "correct": 3,
+      "izoh": "عَلَى — ustida degani."
+    },
+    {
+      "q": "«ضَيِّقٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
         "Keng",
         "Tor",
-        "Chiroyli",
-        "Toza"
-      ],
-      "correct": 2,
-      "izoh": "Chiroyli = 🔁 Takror (5-dars): جَمِيلٌ"
-    },
-    {
-      "q": "🔁 «Orqasida» so'zining ma'nosi?",
-      "opts": [
-        "تَحْتَ",
-        "خَلْفَ",
-        "أَمَامَ",
-        "بَيْنَ"
+        "Qisqa",
+        "Past"
       ],
       "correct": 1,
-      "izoh": "Orqasida = 🔁 Takror (5-dars): خَلْفَ"
+      "izoh": "ضَيِّقٌ — tor degani."
     },
     {
-      "q": "🔁 «طَاوِلَةٌ» so'zining ma'nosi?",
+      "q": "«Tor» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "Kursi",
-        "Shkaf",
-        "Stol",
-        "Eshik"
+        "جَدِيدٌ",
+        "ضَيِّقٌ",
+        "مُمْتِعٌ",
+        "جَمِيلٌ"
       ],
-      "correct": 2,
-      "izoh": "Stol = 🔁 Takror (5-dars): طَاوِلَةٌ"
+      "correct": 1,
+      "izoh": "ضَيِّقٌ — tor degani."
     },
     {
-      "q": "🔁 «Keng» so'zining ma'nosi?",
+      "q": "«Katta» soʻzining arabcha tarjimasini toping",
       "opts": [
         "ضَيِّقٌ",
-        "جَدِيدٌ",
-        "وَاسِعٌ",
-        "نَظِيفٌ"
-      ],
-      "correct": 2,
-      "izoh": "Keng = 🔁 Takror (5-dars): وَاسِعٌ"
-    },
-    {
-      "q": "🔁 «نَظِيفٌ» so'zining ma'nosi?",
-      "opts": [
-        "Toza",
-        "Kir",
-        "Yangi",
-        "Kichik"
-      ],
-      "correct": 0,
-      "izoh": "Toza = 🔁 Takror (5-dars): نَظِيفٌ"
-    },
-    {
-      "q": "🔁 «Ustida» so'zining ma'nosi?",
-      "opts": [
-        "عَلَى",
-        "تَحْتَ",
-        "أَمَامَ",
-        "خَلْفَ"
-      ],
-      "correct": 0,
-      "izoh": "Ustida = 🔁 Takror (5-dars): عَلَى"
-    },
-    {
-      "q": "🔁 «Qaytmoq» so'zining ma'nosi?",
-      "opts": [
-        "دَخَلَ",
-        "رَجَعَ",
-        "خَرَجَ",
-        "ذَهَبَ"
-      ],
-      "correct": 1,
-      "izoh": "Qaytmoq = 🔁 Takror (4-dars): رَجَعَ"
-    },
-    {
-      "q": "🔁 «جَلَسَ» so'zining ma'nosi?",
-      "opts": [
-        "O'tirmoq",
-        "Eshitmoq",
-        "Ichmoq",
-        "O'ynamoq"
-      ],
-      "correct": 0,
-      "izoh": "O'tirmoq = 🔁 Takror (4-dars): جَلَسَ"
-    },
-    {
-      "q": "🔁 «Eshitmoq» so'zining ma'nosi?",
-      "opts": [
-        "لَعِبَ",
-        "قَرَأَ",
-        "سَمِعَ",
-        "طَبَخَ"
-      ],
-      "correct": 2,
-      "izoh": "Eshitmoq = 🔁 Takror (4-dars): سَمِعَ"
-    },
-    {
-      "q": "🔁 «ثُمَّ» so'zining ma'nosi?",
-      "opts": [
-        "Oldin",
-        "So'ng",
-        "Ertalab",
-        "Kechki payt"
-      ],
-      "correct": 1,
-      "izoh": "So'ng = 🔁 Takror (4-dars): ثُمَّ"
-    },
-    {
-      "q": "🔁 «Biz» so'zining ma'nosi?",
-      "opts": [
-        "نَحْنُ",
-        "هُمَا",
-        "هُمْ",
-        "أَنْتُمَا"
-      ],
-      "correct": 0,
-      "izoh": "Biz = 🔁 Takror (4-dars): نَحْنُ"
-    },
-    {
-      "q": "🔁 «فَعَلَ» so'zining ma'nosi?",
-      "opts": [
-        "Kirmoq",
-        "Olmoq",
-        "Qilmoq",
-        "Ketmoq, bormoq"
-      ],
-      "correct": 2,
-      "izoh": "Qilmoq = 🔁 Takror (4-dars): فَعَلَ"
-    },
-    {
-      "q": "🔁 «Oldin» so'zining ma'nosi?",
-      "opts": [
-        "بَعْدَ",
-        "قَبْلَ",
-        "ثُمَّ",
-        "مَسَاءً"
-      ],
-      "correct": 1,
-      "izoh": "Oldin = 🔁 Takror (4-dars): قَبْلَ"
-    },
-    {
-      "q": "🔁 «صَبَاحًا» so'zining ma'nosi?",
-      "opts": [
-        "Kechki payt",
-        "Ertalab",
-        "Hozir",
-        "Keyin"
-      ],
-      "correct": 1,
-      "izoh": "Ertalab = 🔁 Takror (4-dars): صَبَاحًا"
-    },
-    {
-      "q": "🔁 «O'qimoq (matn)» so'zining ma'nosi?",
-      "opts": [
-        "قَرَأَ",
-        "كَتَبَ",
-        "دَرَسَ",
-        "جَلَسَ"
-      ],
-      "correct": 0,
-      "izoh": "O'qimoq (matn) = 🔁 Takror (4-dars): قَرَأَ"
-    },
-    {
-      "q": "🔁 «خَرَجَ» so'zining ma'nosi?",
-      "opts": [
-        "Kirmoq",
-        "Qaytmoq",
-        "Ketmoq, bormoq",
-        "Chiqmoq"
+        "نَظِيفٌ",
+        "وَسِخٌ",
+        "كَبِيرٌ"
       ],
       "correct": 3,
-      "izoh": "Chiqmoq = 🔁 Takror (4-dars): خَرَجَ"
+      "izoh": "كَبِيرٌ — katta degani."
     },
     {
-      "q": "🔁 «Ular» so'zining ma'nosi?",
+      "q": "«كَبِيرٌ» soʻzining oʻzbekcha ma'nosini toping",
       "opts": [
-        "أَنْتُمْ",
-        "نَحْنُ",
-        "هُمْ",
-        "أَنْتُمَا"
+        "Kichik",
+        "Uzun",
+        "Og'ir",
+        "Katta"
+      ],
+      "correct": 3,
+      "izoh": "كَبِيرٌ — katta degani."
+    },
+    {
+      "q": "«تَحْتَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Tepasida",
+        "Ichida",
+        "Tagida",
+        "Atrofida"
       ],
       "correct": 2,
-      "izoh": "Ular = 🔁 Takror (4-dars): هُمْ"
+      "izoh": "تَحْتَ — tagida degani."
     },
     {
-      "q": "🔁 «ذَهَبَ» so'zining ma'nosi?",
+      "q": "«Tagida» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "Kirmoq",
-        "Ketmoq, bormoq",
-        "Qaytmoq",
-        "O'tirmoq"
+        "فَوْقَ",
+        "تَحْتَ",
+        "بَيْنَ",
+        "عَلَى"
       ],
       "correct": 1,
-      "izoh": "Ketmoq, bormoq = 🔁 Takror (4-dars): ذَهَبَ"
+      "izoh": "تَحْتَ — tagida degani."
     },
     {
-      "q": "🔁 «ضَيْفٌ» so'zining ma'nosi?",
+      "q": "«Kichik» soʻzining arabcha tarjimasini toping",
       "opts": [
-        "Ota",
-        "Mehmon",
-        "Er",
-        "Nevara"
+        "نَظِيفٌ",
+        "وَسِخٌ",
+        "ضَيِّقٌ",
+        "صَغِيرٌ"
+      ],
+      "correct": 3,
+      "izoh": "صَغِيرٌ — kichik degani."
+    },
+    {
+      "q": "«صَغِيرٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Katta",
+        "Qisqa",
+        "Kichik",
+        "Yengil"
+      ],
+      "correct": 2,
+      "izoh": "صَغِيرٌ — kichik degani."
+    },
+    {
+      "q": "«فَوْقَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Tagida",
+        "Tepasida",
+        "Ichida",
+        "Orqasida"
       ],
       "correct": 1,
-      "izoh": "Mehmon = 🔁 Takror (3-dars): ضَيْفٌ"
+      "izoh": "فَوْقَ — tepasida degani."
     },
     {
-      "q": "🔁 «Daraxt» so'zining ma'nosi?",
+      "q": "«Tepasida» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "فَوْقَ",
+        "أَمَامَ",
+        "تَحْتَ",
+        "فِي"
+      ],
+      "correct": 0,
+      "izoh": "فَوْقَ — tepasida degani."
+    },
+    {
+      "q": "«Yonida» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "فَوْقَ",
+        "بَيْنَ",
+        "جَانِبَ",
+        "عَلَى"
+      ],
+      "correct": 2,
+      "izoh": "جَانِبَ — yonida degani."
+    },
+    {
+      "q": "«جَانِبَ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Ichida",
+        "Tashqarisida",
+        "Orasida",
+        "Yonida"
+      ],
+      "correct": 3,
+      "izoh": "جَانِبَ — yonida degani."
+    },
+    {
+      "q": "«جَمِيلٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Chiroyli",
+        "Xunuk",
+        "Qiziq",
+        "Qimmat"
+      ],
+      "correct": 0,
+      "izoh": "جَمِيلٌ — chiroyli degani."
+    },
+    {
+      "q": "«Chiroyli» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "جَدِيدٌ",
+        "جَمِيلٌ",
+        "وَاسِعٌ",
+        "كَبِيرٌ"
+      ],
+      "correct": 1,
+      "izoh": "جَمِيلٌ — chiroyli degani."
+    },
+    {
+      "q": "«Keng» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "صَغِيرٌ",
+        "وَاسِعٌ",
+        "مُمْتِعٌ",
+        "جَمِيلٌ"
+      ],
+      "correct": 1,
+      "izoh": "وَاسِعٌ — keng degani."
+    },
+    {
+      "q": "«وَاسِعٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Keng",
+        "Tor",
+        "Uzun",
+        "Baland"
+      ],
+      "correct": 0,
+      "izoh": "وَاسِعٌ — keng degani."
+    },
+    {
+      "q": "«جَدِيدٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Eski",
+        "Arzon",
+        "Qimmat",
+        "Yangi"
+      ],
+      "correct": 3,
+      "izoh": "جَدِيدٌ — yangi degani."
+    },
+    {
+      "q": "«Yangi» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "جَدِيدٌ",
+        "وَسِخٌ",
+        "ضَيِّقٌ",
+        "وَاسِعٌ"
+      ],
+      "correct": 0,
+      "izoh": "جَدِيدٌ — yangi degani."
+    },
+    {
+      "q": "«Kir» soʻzining arabcha tarjimasini toping",
+      "opts": [
+        "جَدِيدٌ",
+        "كَبِيرٌ",
+        "صَغِيرٌ",
+        "وَسِخٌ"
+      ],
+      "correct": 3,
+      "izoh": "وَسِخٌ — kir degani."
+    },
+    {
+      "q": "«وَسِخٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Toza",
+        "Eski",
+        "Kir",
+        "Ho'l"
+      ],
+      "correct": 2,
+      "izoh": "وَسِخٌ — kir degani."
+    },
+    {
+      "q": "«نَظِيفٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Kir",
+        "Quruq",
+        "Toza",
+        "Ho'l"
+      ],
+      "correct": 2,
+      "izoh": "نَظِيفٌ — toza degani."
+    },
+    {
+      "q": "«طَاوِلَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Stol",
+        "Stul",
+        "Karavot",
+        "Gilam"
+      ],
+      "correct": 0,
+      "izoh": "طَاوِلَةٌ — stol degani."
+    },
+    {
+      "q": "«بَابٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Deraza",
+        "Eshik",
+        "Devor",
+        "Pol"
+      ],
+      "correct": 1,
+      "izoh": "بَابٌ — eshik degani."
+    },
+    {
+      "q": "«خِزَانَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Karavot",
+        "Stul",
+        "Javon",
+        "Shkaf"
+      ],
+      "correct": 3,
+      "izoh": "خِزَانَةٌ — shkaf degani."
+    },
+    {
+      "q": "«صَالَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+      "opts": [
+        "Zal",
+        "Yo'lak",
+        "Hammom",
+        "Yotoqxona"
+      ],
+      "correct": 0,
+      "izoh": "صَالَةٌ — zal degani."
+    },
+    {
+      "q": "«Zal» soʻzining arabcha tarjimasini toping",
       "opts": [
         "غُرْفَةٌ",
-        "شَجَرَةٌ",
-        "بَابٌ",
+        "صَالَةٌ",
+        "طَرِيقٌ",
         "بَيْتٌ"
       ],
       "correct": 1,
-      "izoh": "Daraxt = 🔁 Takror (3-dars): شَجَرَةٌ"
-    },
-    {
-      "q": "🔁 «خَالَةٌ» so'zining ma'nosi?",
-      "opts": [
-        "Amma",
-        "Buvi",
-        "Xola",
-        "Ona"
-      ],
-      "correct": 2,
-      "izoh": "Xola = 🔁 Takror (3-dars): خَالَةٌ"
-    },
-    {
-      "q": "🔁 «O'g'il» so'zining ma'nosi?",
-      "opts": [
-        "اِبْنٌ",
-        "بِنْتٌ",
-        "أَخٌ",
-        "أَبٌ"
-      ],
-      "correct": 0,
-      "izoh": "O'g'il = 🔁 Takror (3-dars): اِبْنٌ"
-    },
-    {
-      "q": "🔁 «جَدَّةٌ» so'zining ma'nosi?",
-      "opts": [
-        "O'quvchi",
-        "O'qituvchi",
-        "Buvi",
-        "Xotin"
-      ],
-      "correct": 2,
-      "izoh": "Buvi = 🔁 Takror (3-dars): جَدَّةٌ"
-    },
-    {
-      "q": "🔁 «Sartarosh» so'zining ma'nosi?",
-      "opts": [
-        "طَبَّاخٌ",
-        "سَائِقٌ",
-        "حَلَّاقٌ",
-        "عَامِلٌ"
-      ],
-      "correct": 2,
-      "izoh": "Sartarosh = 🔁 Takror (2-dars): حَلَّاقٌ"
-    },
-    {
-      "q": "🔁 «مَسَاءُ الْخَيْرِ» so'zining ma'nosi?",
-      "opts": [
-        "Xayrli tong",
-        "Ahvolingiz qanday?",
-        "Xayrli kech",
-        "Xush kelibsiz"
-      ],
-      "correct": 2,
-      "izoh": "Xayrli kech = 🔁 Takror (1-dars): مَسَاءُ الْخَيْرِ"
-    },
-    {
-      "q": "🔁 «شُكْرًا» so'zining ma'nosi?",
-      "opts": [
-        "Arzimaydi",
-        "Rahmat",
-        "Ha",
-        "Ham"
-      ],
-      "correct": 1,
-      "izoh": "Rahmat = 🔁 Takror (1-dars): شُكْرًا"
+      "izoh": "صَالَةٌ — zal degani."
     }
   ]
 }
