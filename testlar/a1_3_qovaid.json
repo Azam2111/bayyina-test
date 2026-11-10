@@ -1,447 +1,678 @@
 {
-  "title": "Qovaid — A1 3-dars",
-  "otish": 80,
-  "vaqt": 40,
-  "questions": [
-    {
-      "q": "Ular tirishqoq talabalar (muzakkar)",
-      "opts": [
-        "هُنَّ طُلَّابٌ مُجْتَهِدُونَ",
-        "هُمْ طُلَّابٌ مُجْتَهِدٌ",
-        "هُمَا طُلَّابٌ مُجْتَهِدُونَ",
-        "هُمْ طُلَّابٌ مُجْتَهِدُونَ"
-      ],
-      "correct": 3,
-      "izoh": "Erkaklar ko'pligi — «هُمْ», sifat ham ko'plik: مُجْتَهِدُونَ."
-    },
-    {
-      "q": "Ular mohir muhandislar (muannas)",
-      "opts": [
-        "هُمْ مُهَنْدِسَاتٌ مَاهِرَاتٌ",
-        "هُنَّ مُهَنْدِسُونَ مَاهِرُونَ",
-        "هُنَّ مُهَنْدِسَاتٌ مَاهِرٌ",
-        "هُنَّ مُهَنْدِسَاتٌ مَاهِرَاتٌ"
-      ],
-      "correct": 3,
-      "izoh": "Ayollar ko'pligi — «هُنَّ», ism va sifat ـَاتٌ bilan."
-    },
-    {
-      "q": "Bular tirishqoq talabalar",
-      "opts": [
-        "هَؤُلَاءِ طُلَّابٌ مُجْتَهِدُونَ",
-        "هُمْ طُلَّابٌ مُجْتَهِدُونَ",
-        "هَذِهِ طُلَّابٌ مُجْتَهِدُونَ",
-        "هُنَّ طُلَّابٌ مُجْتَهِدُونَ"
-      ],
-      "correct": 0,
-      "izoh": "«Bular» — ko'rsatish olmoshi هَؤُلَاءِ; «ular» — هُمْ."
-    },
-    {
-      "q": "«مُهَنْدِسٌ» so'zining ko'plik shakli",
-      "opts": [
-        "مُهَنْدِسُونَ",
-        "مُهَنْدِسَاتٌ",
-        "مُهَنْدِسَانِ",
-        "مَهَانِدِسُ"
-      ],
-      "correct": 0,
-      "izoh": "Muzakkar solim ko'plik: ـُونَ — مُهَنْدِسُونَ."
-    },
-    {
-      "q": "«مُعَلِّمَةٌ» so'zining ko'plik shakli",
-      "opts": [
-        "مُعَلِّمُونَ",
-        "مُعَلِّمَتَانِ",
-        "مُعَلِّمَاتٌ",
-        "مُعَلِّمَةَاتٌ"
-      ],
-      "correct": 2,
-      "izoh": "Muannas solim ko'plik: ة tushadi, ـَاتٌ qo'shiladi."
-    },
-    {
-      "q": "Sen mohir oshpazsan (muannas)",
-      "opts": [
-        "أَنْتَ طَبَّاخَةٌ مَاهِرَةٌ",
-        "أَنْتِ طَبَّاخٌ مَاهِرَةٌ",
-        "أَنْتِ طَبَّاخَةٌ مَاهِرَةٌ",
-        "أَنْتِ طَبَّاخَةٌ مَاهِرٌ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-1): ayolga «أَنْتِ», ism va sifat muannas."
-    },
-    {
-      "q": "«___ مُعَلِّمَاتٌ» (Ular o'qituvchi ayollar)",
-      "opts": [
-        "هَؤُلَاءِ",
-        "هُنَّ",
-        "هُمْ",
-        "هِيَ"
-      ],
-      "correct": 1,
-      "izoh": "«Ular» (ayollar) — kishilik olmoshi هُنَّ; هَؤُلَاءِ = bular."
-    },
-    {
-      "q": "«فَلَّاحٌ» so'zining ko'plik shakli",
-      "opts": [
-        "فَلَّاحَاتٌ",
-        "فَلَّاحُونَ",
-        "فَلَّاحَانِ",
-        "فُلُوحٌ"
-      ],
-      "correct": 1,
-      "izoh": "Dehqonlar (erkak) — فَلَّاحُونَ."
-    },
-    {
-      "q": "«كِتَابٌ» so'zining ko'plik shakli",
-      "opts": [
-        "كُتُبٌ",
-        "كِتَابُونَ",
-        "كِتَابَانِ",
-        "أَكْتَابٌ"
-      ],
-      "correct": 0,
-      "izoh": "Siniq ko'plik: كِتَابٌ → كُتُبٌ."
-    },
-    {
-      "q": "«رَجُلٌ» so'zining ko'plik shakli",
-      "opts": [
-        "رِجَالٌ",
-        "رَجُلُونَ",
-        "رَجُلَاتٌ",
-        "رَجُلَانِ"
-      ],
-      "correct": 0,
-      "izoh": "Siniq ko'plik: رَجُلٌ → رِجَالٌ."
-    },
-    {
-      "q": "«هَؤُلَاءِ مُهَنْدِسُونَ» gapining tarjimasi",
-      "opts": [
-        "Ular muhandislar",
-        "Bu muhandis",
-        "Bular muhandislar",
-        "Bu ikkisi muhandis"
-      ],
-      "correct": 2,
-      "izoh": "هَؤُلَاءِ = bular (ko'rsatish), هُمْ = ular (kishilik)."
-    },
-    {
-      "q": "«___ هَذِهِ؟ — هَذِهِ أُخْتِي»",
-      "opts": [
-        "مَا",
-        "أَيْنَ",
-        "مَنْ",
-        "كَمْ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-1): odam haqida — «مَنْ»."
-    },
-    {
-      "q": "«بَيْتٌ» so'zining ko'plik shakli",
-      "opts": [
-        "بَيْتُونَ",
-        "بُيُوتٌ",
-        "بَيْتَاتٌ",
-        "بَيْتَانِ"
-      ],
-      "correct": 1,
-      "izoh": "Siniq ko'plik: بَيْتٌ → بُيُوتٌ."
-    },
-    {
-      "q": "«___ أَوْلَادٌ صِغَارٌ» (Bular kichkina bolalar)",
-      "opts": [
-        "هَؤُلَاءِ",
-        "هَذِهِ",
-        "هَذَانِ",
-        "هَذَا"
-      ],
-      "correct": 0,
-      "izoh": "Odamlar ko'pligi — «هَؤُلَاءِ»."
-    },
-    {
-      "q": "Ular ikkisi shifokor (muzakkar)",
-      "opts": [
-        "هَذَانِ طَبِيبَانِ",
-        "هُمْ طَبِيبَانِ",
-        "هُمَا طَبِيبَانِ",
-        "هَاتَانِ طَبِيبَانِ"
-      ],
-      "correct": 2,
-      "izoh": "«Ular ikkisi» — هُمَا; هَذَانِ = bu ikkisi."
-    },
-    {
-      "q": "«___ سَيَّارَاتٌ جَدِيدَةٌ» (Bular yangi mashinalar)",
-      "opts": [
-        "هَذَا",
-        "هَاتَانِ",
-        "هَذِهِ",
-        "هَذَانِ"
-      ],
-      "correct": 2,
-      "izoh": "Jonsiz narsalar ko'pligi — «هَذِهِ»."
-    },
-    {
-      "q": "«___ تَسْكُنُ؟ — أَسْكُنُ فِي الْقَاهِرَةِ»",
-      "opts": [
-        "أَيْنَ",
-        "مَاذَا",
-        "كَيْفَ",
-        "كَمْ"
-      ],
-      "correct": 0,
-      "izoh": "Takror (A1-1): joy so'raladi — «أَيْنَ»."
-    },
-    {
-      "q": "Xato jumlani toping",
-      "opts": [
-        "هَؤُلَاءِ طُلَّابٌ",
-        "هَذَا رِجَالٌ",
-        "هَذِهِ كُتُبٌ",
-        "هَؤُلَاءِ مُعَلِّمَاتٌ"
-      ],
-      "correct": 1,
-      "izoh": "Odamlar ko'pligi — «هَؤُلَاءِ رِجَالٌ»; «هَذَا» birlik."
-    },
-    {
-      "q": "Qaysi biri اِسْمُ الْإِشَارَةِ (ko'rsatish olmoshi)?",
-      "opts": [
-        "هُمْ",
-        "هُنَّ",
-        "هَؤُلَاءِ",
-        "نَحْنُ"
-      ],
-      "correct": 2,
-      "izoh": "هَؤُلَاءِ — ko'rsatish olmoshi; هُمْ، هُنَّ، نَحْنُ — kishilik olmoshlari (ضَمِيرٌ)."
-    },
-    {
-      "q": "Bular yangi kitoblar",
-      "opts": [
-        "هَذِهِ كُتُبٌ جَدِيدَةٌ",
-        "هَذِهِ كُتُبٌ جَدِيدُونَ",
-        "هَذَا كُتُبٌ جَدِيدٌ",
-        "هَذِهِ كُتُبٌ جَدِيدَانِ"
-      ],
-      "correct": 0,
-      "izoh": "Jonsiz ko'plik muannas birlik kabi: هَذِهِ ... جَدِيدَةٌ."
-    },
-    {
-      "q": "«هُنَّ طَالِبَاتٌ» gapining tarjimasi",
-      "opts": [
-        "Ular talaba qizlar",
-        "Ular talaba yigitlar",
-        "Sizlar talaba qizlarsiz",
-        "Ular ikki talaba qiz"
-      ],
-      "correct": 0,
-      "izoh": "هُنَّ = ular (ayollar), طَالِبَاتٌ = talaba qizlar."
-    },
-    {
-      "q": "Bu mening maktabim",
-      "opts": [
-        "هَذَا مَدْرَسَتِي",
-        "هَذِهِ مَدْرَسَتِي",
-        "هَذِهِ مَدْرَسَتُكَ",
-        "هَذِهِ مَدْرَسَتُكِ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-1): مَدْرَسَةٌ muannas — «هَذِهِ», ـِي = mening."
-    },
-    {
-      "q": "Ular tirishqoq talabalar",
-      "opts": [
-        "هَؤُلَاءِ طُلَّابٌ مُجْتَهِدُونَ",
-        "هَذَا طُلَّابٌ مُجْتَهِدُونَ",
-        "هُوَ طُلَّابٌ مُجْتَهِدُونَ",
-        "هُمْ طُلَّابٌ مُجْتَهِدُونَ"
-      ],
-      "correct": 3,
-      "izoh": "«Ular» — kishilik olmoshi هُمْ; هَؤُلَاءِ = bular."
-    },
-    {
-      "q": "Sizlar mohir tarjimonlarsiz (erkaklar)",
-      "opts": [
-        "أَنْتُمْ مُتَرْجِمُونَ مَاهِرُونَ",
-        "أَنْتُنَّ مُتَرْجِمُونَ مَاهِرُونَ",
-        "أَنْتُمْ مُتَرْجِمُونَ مَاهِرٌ",
-        "أَنْتُمَا مُتَرْجِمُونَ مَاهِرُونَ"
-      ],
-      "correct": 0,
-      "izoh": "Erkaklarga — «أَنْتُمْ», sifat ham ko'plik."
-    },
-    {
-      "q": "Sizlar xursandsizlar (ayollar)",
-      "opts": [
-        "أَنْتُمْ مَسْرُورَاتٌ",
-        "أَنْتُنَّ مَسْرُورُونَ",
-        "أَنْتِ مَسْرُورَاتٌ",
-        "أَنْتُنَّ مَسْرُورَاتٌ"
-      ],
-      "correct": 3,
-      "izoh": "Ayollarga — «أَنْتُنَّ», sifat ـَاتٌ bilan."
-    },
-    {
-      "q": "Biz musulmonmiz (erkaklar)",
-      "opts": [
-        "نَحْنُ مُسْلِمٌ",
-        "نَحْنُ مُسْلِمُونَ",
-        "هُمْ مُسْلِمُونَ",
-        "أَنَا مُسْلِمُونَ"
-      ],
-      "correct": 1,
-      "izoh": "Biz — «نَحْنُ», ko'plik — مُسْلِمُونَ."
-    },
-    {
-      "q": "«___ مُعَلِّمَاتٌ» (Bular o'qituvchi ayollar)",
-      "opts": [
-        "هُنَّ",
-        "هَذِهِ",
-        "هَاتَانِ",
-        "هَؤُلَاءِ"
-      ],
-      "correct": 3,
-      "izoh": "«Bular» (odamlar) — هَؤُلَاءِ; هُنَّ = ular."
-    },
-    {
-      "q": "Bu ikki o'yinchi kuchli",
-      "opts": [
-        "هَاتَانِ لَاعِبَانِ قَوِيَّانِ",
-        "هَذَانِ لَاعِبَانِ قَوِيٌّ",
-        "هَذَانِ لَاعِبُونَ قَوِيَّانِ",
-        "هَذَانِ لَاعِبَانِ قَوِيَّانِ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-2): muzakkar ikkilik — هَذَانِ ... قَوِيَّانِ."
-    },
-    {
-      "q": "«___ فَلَّاحُونَ» (Ular dehqonlar)",
-      "opts": [
-        "هُنَّ",
-        "هُمْ",
-        "هُوَ",
-        "هُمَا"
-      ],
-      "correct": 1,
-      "izoh": "Erkaklar ko'pligi — «هُمْ»."
-    },
-    {
-      "q": "«___ مُعَلِّمَاتٌ» (Sizlar o'qituvchi ayollarsiz)",
-      "opts": [
-        "أَنْتُمْ",
-        "أَنْتِ",
-        "هُنَّ",
-        "أَنْتُنَّ"
-      ],
-      "correct": 3,
-      "izoh": "Ayollarga «sizlar» — «أَنْتُنَّ»."
-    },
-    {
-      "q": "«هُمْ مُهَنْدِسُونَ» gapining tarjimasi",
-      "opts": [
-        "Ular muhandislar",
-        "Bular muhandislar",
-        "U muhandis",
-        "Ular ikkisi muhandis"
-      ],
-      "correct": 0,
-      "izoh": "هُمْ = ular; هَؤُلَاءِ = bular."
-    },
-    {
-      "q": "Ular mashhur shifokorlar (erkaklar)",
-      "opts": [
-        "هُمْ أَطِبَّاءُ مَشْهُورٌ",
-        "هُمْ طَبِيبُونَ مَشْهُورُونَ",
-        "هُنَّ أَطِبَّاءُ مَشْهُورُونَ",
-        "هُمْ أَطِبَّاءُ مَشْهُورُونَ"
-      ],
-      "correct": 3,
-      "izoh": "طَبِيبٌ → أَطِبَّاءُ; odamlar sifati ko'plik — مَشْهُورُونَ."
-    },
-    {
-      "q": "Ular ikkisi xola",
-      "opts": [
-        "هُمَا خَالَانِ",
-        "هُمَا خَالَتَانِ",
-        "هِيَ خَالَتَانِ",
-        "هُنَّ خَالَتَانِ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-2): ikki kishi — «هُمَا»; خَالَةٌ → خَالَتَانِ."
-    },
-    {
-      "q": "Xato jumlani toping",
-      "opts": [
-        "هُمْ مُسْلِمُونَ",
-        "هُنَّ طَالِبَاتٌ",
-        "هُمْ مُعَلِّمَاتٌ",
-        "نَحْنُ مُعَلِّمُونَ"
-      ],
-      "correct": 2,
-      "izoh": "Ayollar uchun «هُنَّ مُعَلِّمَاتٌ» bo'lishi kerak."
-    },
-    {
-      "q": "Bu ikkisi shifokor (muzakkar)",
-      "opts": [
-        "هُمَا طَبِيبَانِ",
-        "هَذَانِ طَبِيبَانِ",
-        "هَؤُلَاءِ طَبِيبَانِ",
-        "هَاتَانِ طَبِيبَانِ"
-      ],
-      "correct": 1,
-      "izoh": "«Bu ikkisi» (muzakkar) — هَذَانِ; هُمَا = ular ikkisi."
-    },
-    {
-      "q": "Birinchi dars",
-      "opts": [
-        "الدَّرْسُ الْوَاحِدُ",
-        "الدَّرْسُ الثَّانِي",
-        "الدَّرْسُ الْأَوَّلُ",
-        "الْأَوَّلُ الدَّرْسُ"
-      ],
-      "correct": 2,
-      "izoh": "Tartib son sifat kabi ismdan keyin: الدَّرْسُ الْأَوَّلُ."
-    },
-    {
-      "q": "Uchinchi bosqich",
-      "opts": [
-        "الْمَرْحَلَةُ الثَّالِثُ",
-        "الْمَرْحَلَةُ الثَّالِثَةُ",
-        "الْمَرْحَلَةُ الثَّلَاثَةُ",
-        "الْمَرْحَلَةُ الثَّانِيَةُ"
-      ],
-      "correct": 1,
-      "izoh": "مَرْحَلَةٌ muannas — tartib son ham muannas: الثَّالِثَةُ."
-    },
-    {
-      "q": "«سَيَّارَةٌ» so'zining ikkilik shakli",
-      "opts": [
-        "سَيَّارَانِ",
-        "سَيَّارَاتٌ",
-        "سَيَّارَتَانِ",
-        "سَيَّارَةَانِ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-2): ة → ت + ـَانِ (سَيَّارَاتٌ — ko'plik)."
-    },
-    {
-      "q": "Qaysi biri ضَمِيرٌ (kishilik olmoshi)?",
-      "opts": [
-        "هَؤُلَاءِ",
-        "هَذِهِ",
-        "هَذَانِ",
-        "هُنَّ"
-      ],
-      "correct": 3,
-      "izoh": "هُنَّ — kishilik olmoshi; qolganlari ko'rsatish olmoshlari."
-    },
-    {
-      "q": "«___ وَقْتُ الْاِسْتِرَاحَةِ؟ — ظُهْرًا»",
-      "opts": [
-        "أَيْنَ",
-        "كَمْ",
-        "مَنْ",
-        "مَتَى"
-      ],
-      "correct": 3,
-      "izoh": "Vaqt so'raladi — «مَتَى»."
-    }
-  ]
+ "title": "Qovaid — A1 3-dars",
+ "otish": 80,
+ "vaqt": 61,
+ "questions": [
+  {
+   "q": "«هَؤُلَاءِ ___»",
+   "opts": [
+    "مُمَرِّضَاتٌ",
+    "مُمَرِّضٌ",
+    "مُمَرِّضَتَانِ",
+    "مُمَرِّضَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "«هَؤُلَاءِ» dan keyin ko'plik keladi."
+  },
+  {
+   "q": "Qaysi jumlada XATO bor?",
+   "opts": [
+    "هَؤُلَاءِ أَوْلَادٌ",
+    "هَؤُلَاءِ مُعَلِّمَاتٌ",
+    "هَذَا أَوْلَادٌ",
+    "هَذِهِ بُيُوتٌ"
+   ],
+   "correct": 2,
+   "izoh": "«أَوْلَادٌ» ko'plik — «هَؤُلَاءِ أَوْلَادٌ» bo'lishi kerak."
+  },
+  {
+   "q": "Qaysi so'z jam' muannas solim?",
+   "opts": [
+    "مَسَاجِدُ",
+    "أَوْقَاتٌ",
+    "بُيُوتٌ",
+    "كُلِّيَّاتٌ"
+   ],
+   "correct": 3,
+   "izoh": "«كُلِّيَّةٌ → كُلِّيَّاتٌ». «أَوْقَاتٌ» va «بُيُوتٌ» dagi «ت» so'zning o'ziniki (وَقْتٌ، بَيْتٌ) — bular siniq ko'plik."
+  },
+  {
+   "q": "Ustoz bir guruh qizlarni ko'rsatib aytdi: «___ طَالِبَاتٌ جَدِيدَاتٌ»",
+   "opts": [
+    "هَذِهِ",
+    "هَؤُلَاءِ",
+    "هَذَانِ",
+    "هَاتَانِ"
+   ],
+   "correct": 1,
+   "izoh": "Aqlli ayollar ko'pligiga ham «هَؤُلَاءِ». «هَاتَانِ» faqat ikkitasiga."
+  },
+  {
+   "q": "«___ مُعْجَمَانِ»",
+   "opts": [
+    "هَذَانِ",
+    "هَاتَانِ",
+    "هَذَا",
+    "هَؤُلَاءِ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-2): ikkita muzakkar narsa — «هَذَانِ». «هَؤُلَاءِ» ko'plikka."
+  },
+  {
+   "q": "Qaysi so'z jam' taksir (siniq ko'plik)?",
+   "opts": [
+    "مَعَاجِمُ",
+    "سَاعَاتٌ",
+    "مُتَرْجِمُونَ",
+    "مُعَلِّمَانِ"
+   ],
+   "correct": 0,
+   "izoh": "«مُعْجَمٌ → مَعَاجِمُ»: so'zning ichki shakli o'zgargan."
+  },
+  {
+   "q": "«شُرْطِيُّونَ» qaysi turga kiradi?",
+   "opts": [
+    "Jam' taksir (siniq ko'plik)",
+    "Ikkilik (musanno)",
+    "Jam' muannas solim",
+    "Jam' muzakkar solim"
+   ],
+   "correct": 3,
+   "izoh": "«ـُونَ» — jam' muzakkar solim belgisi."
+  },
+  {
+   "q": "«___ مُتَرْجِمُونَ»",
+   "opts": [
+    "هَذَا",
+    "هَؤُلَاءِ",
+    "هَاتَانِ",
+    "هَذَانِ"
+   ],
+   "correct": 1,
+   "izoh": "Aqlli ko'plikka — «هَؤُلَاءِ» (erkakka ham, ayolga ham)."
+  },
+  {
+   "q": "«هَذَا رَجُلٌ، هَذَانِ رَجُلَانِ، ___ رِجَالٌ»",
+   "opts": [
+    "هَذَا",
+    "هَذَانِ",
+    "هَؤُلَاءِ",
+    "هَاتَانِ"
+   ],
+   "correct": 2,
+   "izoh": "Birlik — «هَذَا», ikkilik — «هَذَانِ», ko'plik — «هَؤُلَاءِ»."
+  },
+  {
+   "q": "«أَبِي وَأُمِّي؟ ___ فِي الْبَيْتِ»",
+   "opts": [
+    "هُمْ",
+    "هُنَّ",
+    "هِيَ",
+    "هُمَا"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-2): ikki kishi — «هُمَا». «هُمْ» uch va undan ortiqqa."
+  },
+  {
+   "q": "«هَؤُلَاءِ مُؤْمِنُونَ» gapining tarjimasi qaysi?",
+   "opts": [
+    "Bu ikkisi — mo'min",
+    "Bu — mo'min",
+    "Bular — mo'minlar",
+    "Ular — mo'minlar"
+   ],
+   "correct": 2,
+   "izoh": "«هَؤُلَاءِ» — bular (ko'rsatish). «Ular» — «هُمْ»."
+  },
+  {
+   "q": "«هَذَا مُسْلِمٌ» gapining ko'plik shakli qaysi?",
+   "opts": [
+    "هَؤُلَاءِ مُسْلِمٌ",
+    "هَؤُلَاءِ مُسْلِمُونَ",
+    "هَذَا مُسْلِمُونَ",
+    "هَذَانِ مُسْلِمُونَ"
+   ],
+   "correct": 1,
+   "izoh": "Ishora ham, ism ham ko'plikka o'tadi."
+  },
+  {
+   "q": "«هَذِهِ ___ جَدِيدَةٌ»",
+   "opts": [
+    "هَوَاتِفُ",
+    "مُتَرْجِمُونَ",
+    "هَاتِفَانِ",
+    "هَاتِفٌ"
+   ],
+   "correct": 0,
+   "izoh": "Aqlsiz narsalar ko'pligiga «هَذِهِ» va muannas birlik sifat keladi: «هَذِهِ هَوَاتِفُ جَدِيدَةٌ»."
+  },
+  {
+   "q": "«Bular — qiyin imtihonlar» qaysi?",
+   "opts": [
+    "هَذِهِ امْتِحَانَاتٌ صَعْبَةٌ",
+    "هَذَا امْتِحَانَاتٌ صَعْبٌ",
+    "هَذِهِ امْتِحَانَاتٌ صَعْبُونَ",
+    "هَذَانِ امْتِحَانَاتٌ صَعْبَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "Aqlsiz ko'plik: «هَذِهِ» + sifat muannas birlik — «صَعْبَةٌ»."
+  },
+  {
+   "q": "«قِصَّةٌ» so'zining ikkilik shakli qaysi?",
+   "opts": [
+    "قِصَّانِ",
+    "قِصَصٌ",
+    "قِصَّتَانِ",
+    "قِصَّاتٌ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A1-2): «ة» → «ت» + «ـَانِ». «قِصَصٌ» — ko'plik."
+  },
+  {
+   "q": "«هَلْ أَنْتُمْ مُتَرْجِمُونَ؟ — نَعَمْ، ___ مُتَرْجِمُونَ»",
+   "opts": [
+    "أَنَا",
+    "نَحْنُ",
+    "هُمْ",
+    "أَنْتُمْ"
+   ],
+   "correct": 1,
+   "izoh": "«Sizlar»ga javob — «biz»: «نَحْنُ»."
+  },
+  {
+   "q": "«الْآبَاءُ وَالْأُمَّهَاتُ؟ ___ رُحَمَاءُ»",
+   "opts": [
+    "هُنَّ",
+    "هِيَ",
+    "هُمَا",
+    "هُمْ"
+   ],
+   "correct": 3,
+   "izoh": "Erkak va ayollar aralash ko'plik — muzakkar: «هُمْ»."
+  },
+  {
+   "q": "«هَوَاتِفُ» qaysi turga kiradi?",
+   "opts": [
+    "Jam' taksir (siniq ko'plik)",
+    "Jam' muzakkar solim",
+    "Ikkilik (musanno)",
+    "Jam' muannas solim"
+   ],
+   "correct": 0,
+   "izoh": "«هَاتِفٌ → هَوَاتِفُ»: qo'shimcha qo'shilmagan, so'z shakli o'zgargan — siniq ko'plik."
+  },
+  {
+   "q": "«يَا أَحْمَدُ وَيَا خَالِدُ، ___ مَاهِرَانِ» (siz ikkingiz)",
+   "opts": [
+    "أَنْتَ",
+    "أَنْتُمَا",
+    "أَنْتُمْ",
+    "هُمَا"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-2): ikki kishiga murojaat — «أَنْتُمَا»."
+  },
+  {
+   "q": "«أُمٌّ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "آمَامٌ",
+    "أُمَّانِ",
+    "أُمَّهَاتٌ",
+    "أُمُّونَ"
+   ],
+   "correct": 2,
+   "izoh": "«أُمٌّ» ning ko'pligi qoidadan tashqari: «أُمَّهَاتٌ»."
+  },
+  {
+   "q": "«فَقِيرٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "فَقِيرَاتٌ",
+    "فَقِيرَانِ",
+    "فَقِيرُونَ",
+    "فُقَرَاءُ"
+   ],
+   "correct": 3,
+   "izoh": "«فَقِيرٌ» — siniq ko'plik: «فُقَرَاءُ». «فَقِيرَاتٌ» — kambag'al ayollar."
+  },
+  {
+   "q": "Qaysi jumlada XATO bor?",
+   "opts": [
+    "هُنَّ مُهَنْدِسُونَ",
+    "نَحْنُ فَلَّاحُونَ",
+    "أَنْتُنَّ طَالِبَاتٌ",
+    "هُمْ مُسْلِمُونَ"
+   ],
+   "correct": 0,
+   "izoh": "«هُنَّ» ayollar — «مُهَنْدِسَاتٌ» bo'lishi kerak."
+  },
+  {
+   "q": "«الْمُعَلِّمَاتُ فِي الْمَدْرَسَةِ. ___ مَاهِرَاتٌ»",
+   "opts": [
+    "هِيَ",
+    "هُمَا",
+    "هُمْ",
+    "هُنَّ"
+   ],
+   "correct": 3,
+   "izoh": "Ayollar ko'pligi haqida — «هُنَّ»."
+  },
+  {
+   "q": "«هَاتَانِ ___»",
+   "opts": [
+    "كُلِّيَّةٌ",
+    "كُلِّيَّتَانِ",
+    "مَقْعَدَانِ",
+    "كُلِّيَّاتٌ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-2): «هَاتَانِ» — muannas ikkilikka."
+  },
+  {
+   "q": "Qaysi so'z ko'plikda EMAS?",
+   "opts": [
+    "مُسْلِمَاتٌ",
+    "رِجَالٌ",
+    "مُسْلِمَانِ",
+    "مُسْلِمُونَ"
+   ],
+   "correct": 2,
+   "izoh": "«مُسْلِمَانِ» — ikkilik (ikki musulmon)."
+  },
+  {
+   "q": "«الطُّلَّابُ فِي الْكُلِّيَّةِ. ___ مُجْتَهِدُونَ»",
+   "opts": [
+    "هُمْ",
+    "هُمَا",
+    "هُوَ",
+    "هُنَّ"
+   ],
+   "correct": 0,
+   "izoh": "Erkaklar ko'pligi haqida — «هُمْ»."
+  },
+  {
+   "q": "«أَنْتُنَّ مَشْهُورَاتٌ» gapining tarjimasi qaysi?",
+   "opts": [
+    "Siz ikkingiz mashhursiz",
+    "Sizlar (ayollar) mashhursiz",
+    "Sizlar (erkaklar) mashhursiz",
+    "Ular (ayollar) mashhur"
+   ],
+   "correct": 1,
+   "izoh": "«أَنْتُنَّ» — sizlar, ayollarga."
+  },
+  {
+   "q": "«هَذَانِ ___ وَهَؤُلَاءِ ___»",
+   "opts": [
+    "أَوْلَادٌ … وَلَدَانِ",
+    "وَلَدٌ … أَوْلَادٌ",
+    "وَلَدَانِ … أَوْلَادٌ",
+    "وَلَدَانِ … وَلَدٌ"
+   ],
+   "correct": 2,
+   "izoh": "«هَذَانِ» — ikkilikka, «هَؤُلَاءِ» — ko'plikka."
+  },
+  {
+   "q": "«___ هَؤُلَاءِ؟ — هَؤُلَاءِ إِخْوَتِي»",
+   "opts": [
+    "مَا",
+    "أَيْنَ",
+    "كَمْ",
+    "مَنْ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-1): javob odamlar haqida — «مَنْ»."
+  },
+  {
+   "q": "«مَقْعَدٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "مَقْعَدُونَ",
+    "مَقَاعِدُ",
+    "مَقْعَدَانِ",
+    "مَقْعَدَاتٌ"
+   ],
+   "correct": 1,
+   "izoh": "«مَقْعَدٌ» — siniq ko'plik: «مَقَاعِدُ». «ـُونَ» faqat aqlli erkaklarga."
+  },
+  {
+   "q": "«يَا أَوْلَادُ، ___ مَاهِرُونَ» (sizlar)",
+   "opts": [
+    "أَنْتُمَا",
+    "هُمْ",
+    "أَنْتُمْ",
+    "أَنْتُنَّ"
+   ],
+   "correct": 2,
+   "izoh": "Ko'p erkakka murojaat — «أَنْتُمْ»."
+  },
+  {
+   "q": "Qaysi qatorda ko'plik to'g'ri yasalgan?",
+   "opts": [
+    "مُسْلِمٌ — مَسَالِمُ",
+    "بَيْتٌ — بَيْتُونَ",
+    "رَجُلٌ — رَجُلَاتٌ",
+    "مَرْحَلَةٌ — مَرَاحِلُ"
+   ],
+   "correct": 3,
+   "izoh": "«مَرَاحِلُ» to'g'ri. Qolganlari: «مُسْلِمُونَ», «بُيُوتٌ», «رِجَالٌ»."
+  },
+  {
+   "q": "«___ مُعْجَمٌ وَ___ مِمْحَاةٌ»",
+   "opts": [
+    "هَذَا … هَذِهِ",
+    "هَؤُلَاءِ … هَذِهِ",
+    "هَذَا … هَذَا",
+    "هَذِهِ … هَذَا"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-1): bitta muzakkar — «هَذَا», bitta muannas — «هَذِهِ»."
+  },
+  {
+   "q": "«فَلَّاحٌ + فَلَّاحٌ + فَلَّاحٌ» = ?",
+   "opts": [
+    "فُلُوحٌ",
+    "فَلَّاحُونَ",
+    "فَلَّاحَاتٌ",
+    "فَلَّاحَانِ"
+   ],
+   "correct": 1,
+   "izoh": "Uch va undan ortiq erkak — «ـُونَ». «ـَانِ» faqat ikkitaga."
+  },
+  {
+   "q": "«يَا بَنَاتُ، ___ أَنِيقَاتٌ» (sizlar)",
+   "opts": [
+    "أَنْتِ",
+    "أَنْتُمْ",
+    "أَنْتُنَّ",
+    "هُنَّ"
+   ],
+   "correct": 2,
+   "izoh": "Ko'p ayolga murojaat — «أَنْتُنَّ»."
+  },
+  {
+   "q": "«قِصَصٌ» so'zining birlik shakli qaysi?",
+   "opts": [
+    "قِصَّتَانِ",
+    "قَصٌّ",
+    "قِصَّاتٌ",
+    "قِصَّةٌ"
+   ],
+   "correct": 3,
+   "izoh": "«قِصَصٌ» — «قِصَّةٌ» ning siniq ko'pligi."
+  },
+  {
+   "q": "«اِمْتِحَانٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "اِمْتِحَانَاتٌ",
+    "اِمْتِحَانَانِ",
+    "أَمَاحِينُ",
+    "اِمْتِحَانُونَ"
+   ],
+   "correct": 0,
+   "izoh": "Ba'zi muzakkar so'zlar ham «ـَاتٌ» bilan ko'plik oladi: «اِمْتِحَانَاتٌ»."
+  },
+  {
+   "q": "«عِنْدِي خَمْسُ ___»",
+   "opts": [
+    "قِصَّةً",
+    "قِصَصٍ",
+    "قِصَّتَانِ",
+    "قِصَّةٍ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A0-3): 3–10 dan keyin ko'plik, kasrali: «خَمْسُ قِصَصٍ»."
+  },
+  {
+   "q": "Fotima, Maryam va Zaynab o'zlari haqida aytyapti: «نَحْنُ ___»",
+   "opts": [
+    "مُسْلِمَةٌ",
+    "مُسْلِمَتَانِ",
+    "مُسْلِمَاتٌ",
+    "مُسْلِمُونَ"
+   ],
+   "correct": 2,
+   "izoh": "Uch ayol — «ـَاتٌ». «نَحْنُ» jinsga qarab o'zgarmaydi, xabar o'zgaradi."
+  },
+  {
+   "q": "«هَؤُلَاءِ أَطِبَّاءُ ___»",
+   "opts": [
+    "مَشْهُورُونَ",
+    "مَشْهُورَانِ",
+    "مَشْهُورٌ",
+    "مَشْهُورَاتٌ"
+   ],
+   "correct": 0,
+   "izoh": "«أَطِبَّاءُ» — aqlli erkaklar ko'pligi; sifati «ـُونَ» bilan."
+  },
+  {
+   "q": "«مُتَرْجِمٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "تَرَاجِمُ",
+    "مُتَرْجِمَاتٌ",
+    "مُتَرْجِمَانِ",
+    "مُتَرْجِمُونَ"
+   ],
+   "correct": 3,
+   "izoh": "Erkak kasb egasi — jam' muzakkar solim: «ـُونَ»."
+  },
+  {
+   "q": "«هُمْ فُقَرَاءُ» gapining tarjimasi qaysi?",
+   "opts": [
+    "Sizlar — kambag'allarsiz",
+    "Biz — kambag'allarmiz",
+    "Ular — kambag'allar",
+    "Ular ikkisi — kambag'al"
+   ],
+   "correct": 2,
+   "izoh": "«هُمْ» — ular (uch va undan ortiq)."
+  },
+  {
+   "q": "«كَمْ ___ فِي الْكُلِّيَّةِ؟»",
+   "opts": [
+    "طَالِبًا",
+    "طُلَّابًا",
+    "طُلَّابٌ",
+    "طَالِبٌ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A0-3): «كَمْ» dan keyin ko'plik emas, birlik mansub: «طَالِبًا»."
+  },
+  {
+   "q": "«أَنَا وَأَبِي وَأَخِي مُسْلِمُونَ. ___ نَعِيشُ فِي مِصْرَ»",
+   "opts": [
+    "أَنْتُمْ",
+    "نَحْنُ",
+    "أَنَا",
+    "هُمْ"
+   ],
+   "correct": 1,
+   "izoh": "«Men, otam va akam» = biz: «نَحْنُ»; fe'l ham «نَعِيشُ»."
+  },
+  {
+   "q": "«هُوَ مُتَرْجِمٌ مَاهِرٌ» gapining ko'plik shakli qaysi?",
+   "opts": [
+    "هُمَا مُتَرْجِمُونَ مَاهِرُونَ",
+    "هُمْ مُتَرْجِمُونَ مَاهِرٌ",
+    "هُنَّ مُتَرْجِمُونَ مَاهِرُونَ",
+    "هُمْ مُتَرْجِمُونَ مَاهِرُونَ"
+   ],
+   "correct": 3,
+   "izoh": "Zamir, ism va sifat — uchalasi erkaklar ko'pligiga o'tadi."
+  },
+  {
+   "q": "«هَؤُلَاءِ ___»",
+   "opts": [
+    "طِفْلَةٌ",
+    "أَطْفَالٌ",
+    "طِفْلَانِ",
+    "طِفْلٌ"
+   ],
+   "correct": 1,
+   "izoh": "«هَؤُلَاءِ» — ko'plikka: «أَطْفَالٌ»."
+  },
+  {
+   "q": "«هُمْ ___ فِي الْمَعْهَدِ» (o'qiydi)",
+   "opts": [
+    "تَدْرُسُونَ",
+    "يَدْرُسْنَ",
+    "يَدْرُسُونَ",
+    "يَدْرُسَانِ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A0-6): «هُمْ» — «يَـ … ـُونَ»."
+  },
+  {
+   "q": "«مَنْ هَؤُلَاءِ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "هَؤُلَاءِ فَلَّاحُونَ",
+    "هَذَانِ فَلَّاحُونَ",
+    "هَؤُلَاءِ فَلَّاحٌ",
+    "هَذِهِ مَقَاعِدُ"
+   ],
+   "correct": 0,
+   "izoh": "«مَنْ» — odamlar haqida; «هَؤُلَاءِ» — ko'plik."
+  },
+  {
+   "q": "«أَنْتُمْ ___» (boy)",
+   "opts": [
+    "غَنِيَّانِ",
+    "غَنِيٌّ",
+    "غَنِيَّاتٌ",
+    "أَغْنِيَاءُ"
+   ],
+   "correct": 3,
+   "izoh": "«أَنْتُمْ» — erkaklar ko'pligi; «غَنِيٌّ» ning ko'pligi siniq: «أَغْنِيَاءُ»."
+  },
+  {
+   "q": "«طَبِيبٌ — طَبِيبَانِ — ___»",
+   "opts": [
+    "أَطِبَّاءُ",
+    "طَبِيبُونَ",
+    "طَبِيبَاتٌ",
+    "طَبِيبَتَانِ"
+   ],
+   "correct": 0,
+   "izoh": "«طَبِيبٌ» ning ko'pligi siniq: «أَطِبَّاءُ». «طَبِيبَاتٌ» — ayol shifokorlar."
+  },
+  {
+   "q": "«مَنْ هُنَّ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "هُمْ إِخْوَتِي",
+    "هُنَّ أُخْتِي",
+    "هِيَ أُخْتِي",
+    "هُنَّ أَخَوَاتِي"
+   ],
+   "correct": 3,
+   "izoh": "«هُنَّ» — ayollar ko'pligi: «أَخَوَاتِي» (opa-singillarim)."
+  },
+  {
+   "q": "«هُنَّ ___ الْوَاجِبَاتِ» (yozadi)",
+   "opts": [
+    "تَكْتُبْنَ",
+    "يَكْتُبَانِ",
+    "يَكْتُبْنَ",
+    "يَكْتُبُونَ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A0-6): «هُنَّ» — «يَـ … ـْنَ»."
+  },
+  {
+   "q": "Qaysi so'z jam' muzakkar solim?",
+   "opts": [
+    "طَالِبَاتٌ",
+    "فَلَّاحُونَ",
+    "أَوْلَادٌ",
+    "رِجَالٌ"
+   ],
+   "correct": 1,
+   "izoh": "Jam' muzakkar solim «ـُونَ» bilan tugaydi. «أَوْلَادٌ», «رِجَالٌ» — siniq ko'plik."
+  },
+  {
+   "q": "«مُسْلِمُونَ» so'zining birlik shakli qaysi?",
+   "opts": [
+    "مُسْلِمٌ",
+    "مُسْلِمَةٌ",
+    "مُسْلِمَانِ",
+    "مُسْلِمَاتٌ"
+   ],
+   "correct": 0,
+   "izoh": "«ـُونَ» — erkaklar ko'pligi; birligi «مُسْلِمٌ»."
+  },
+  {
+   "q": "«مُمَرِّضَةٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "مُمَرِّضُونَ",
+    "مُمَرِّضَاتٌ",
+    "مُمَرِّضَتَانِ",
+    "مُمَرِّضَةَاتٌ"
+   ],
+   "correct": 1,
+   "izoh": "Jam' muannas solim: «ة» tushadi, «ـَاتٌ» qo'shiladi."
+  },
+  {
+   "q": "«مُعَلِّمَةٌ — مُعَلِّمَتَانِ — ___»",
+   "opts": [
+    "مَعَالِمُ",
+    "مُعَلِّمُونَ",
+    "مُعَلِّمَانِ",
+    "مُعَلِّمَاتٌ"
+   ],
+   "correct": 3,
+   "izoh": "Muannas: birlik «ة», ikkilik «ـتَانِ», ko'plik «ـَاتٌ»."
+  },
+  {
+   "q": "«هَذَا بَيْتُ الطُّلَّابِ» = «هَذَا ___»",
+   "opts": [
+    "بَيْتُكُمْ",
+    "بَيْتُهُمَا",
+    "بَيْتُهُمْ",
+    "بَيْتُهُنَّ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A0-4): erkaklar ko'pligi — «ـهُمْ»."
+  },
+  {
+   "q": "«هُمْ ___»",
+   "opts": [
+    "فَلَّاحٌ",
+    "فَلَّاحُونَ",
+    "فَلَّاحَاتٌ",
+    "فَلَّاحَانِ"
+   ],
+   "correct": 1,
+   "izoh": "«هُمْ» — erkaklar ko'pligi: xabar «ـُونَ»."
+  },
+  {
+   "q": "«هُنَّ ___»",
+   "opts": [
+    "مُتَرْجِمَةٌ",
+    "مُتَرْجِمُونَ",
+    "مُتَرْجِمَاتٌ",
+    "مُتَرْجِمَتَانِ"
+   ],
+   "correct": 2,
+   "izoh": "«هُنَّ» — ayollar ko'pligi: xabar «ـَاتٌ»."
+  },
+  {
+   "q": "«مُشْكِلَةٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "مُشْكِلُونَ",
+    "مُشْكِلَتَانِ",
+    "مُشْكِلَةَاتٌ",
+    "مُشْكِلَاتٌ"
+   ],
+   "correct": 3,
+   "izoh": "«ة» tushadi + «ـَاتٌ»: «مُشْكِلَاتٌ»."
+  },
+  {
+   "q": "«هَذِهِ طَالِبَةٌ مُجْتَهِدَةٌ» gapining ko'plik shakli qaysi?",
+   "opts": [
+    "هَؤُلَاءِ طَالِبَاتٌ مُجْتَهِدَاتٌ",
+    "هَؤُلَاءِ طَالِبَاتٌ مُجْتَهِدَةٌ",
+    "هَؤُلَاءِ طَالِبَاتٌ مُجْتَهِدُونَ",
+    "هَاتَانِ طَالِبَاتٌ مُجْتَهِدَاتٌ"
+   ],
+   "correct": 0,
+   "izoh": "Aqlli ayollar ko'pligi: ishora «هَؤُلَاءِ», ism va sifat «ـَاتٌ»."
+  }
+ ]
 }
