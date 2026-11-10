@@ -1,447 +1,722 @@
 {
-  "title": "Qovaid — A1 7-dars",
-  "otish": 80,
-  "vaqt": 40,
-  "questions": [
-    {
-      "q": "«___ سَيَقْرَأُ الدَّرْسَ؟ — أَخِي سَيَقْرَأُ». Bo‘sh o‘ringa mos so‘roq vositasini tanlang:",
-      "opts": [
-        "مَنْ",
-        "مَا",
-        "مَاذَا",
-        "أَيْنَ"
-      ],
-      "correct": 0,
-      "izoh": "Aqlli shaxs («أَخِي» — akam/ukam) haqida so‘ralganda «مَنْ» (kim) so‘roq vositasi ishlatiladi. «مَا» va «مَاذَا» aqlsiz narsalar uchun, «أَيْنَ» esa makon uchun ishlatiladi."
-    },
-    {
-      "q": "«Bu yangi yo‘lovchidir (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هُوَ مُسَافِرٌ جَدِيدٌ.",
-        "هَذَا مُسَافِرٌ جَدِيدٌ.",
-        "هَذِهِ مُسَافِرٌ جَدِيدٌ.",
-        "هِيَ مُسَافِرَةٌ جَدِيدَةٌ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-1): «Bu» — ko‘rsatish olmoshi bo‘lib, muzakkar ism uchun «هَذَا» ishlatiladi; «هُوَ» esa kishilik olmoshi («u») hisoblanadi."
-    },
-    {
-      "q": "«Ushbu chipta yo‘lovchi uchundir» gapining to‘g‘ri imlo va harakatli shaklini toping:",
-      "opts": [
-        "هَذِهِ التَّذْكِرَةُ لِالْمُسَافِرِ.",
-        "هَذِهِ التَّذْكِرَةُ لِلْمُسَافِرُ.",
-        "هَذِهِ التَّذْكِرَةُ لِلْمُسَافِرِ.",
-        "هَذِهِ التَّذْكِرَةُ لِلْمُسَافِرَ."
-      ],
-      "correct": 2,
-      "izoh": "«لِـ» jar harfi «الـ» artikli bilan boshlangan ismga qo‘shilganda alif tushib qoladi («لِلْـ») va ism majrur (kasrali) bo‘ladi: «لِلْمُسَافِرِ»."
-    },
-    {
-      "q": "«Ular ikkisi mohir uchuvchidir (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هَذَانِ طَيَّارَانِ مَاهِرَانِ.",
-        "هَاتَانِ طَيَّارَتَانِ مَاهِرَتَانِ.",
-        "هُمْ طَيَّارُونَ مَاهِرُونَ.",
-        "هُمَا طَيَّارَانِ مَاهِرَانِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-2): «Ular ikkisi» — uchinchi shaxs kishilik olmoshi «هُمَا»; «هَذَانِ» esa «bu ikkisi» degan ko‘rsatish olmoshidir."
-    },
-    {
-      "q": "«Yo‘lovchi o‘z pasportini qidirdi» jumlasi uchun mos jar harfini tanlang: «بَحَثَ الْمُسَافِرُ ___ جَوَازِ سَفَرِهِ».",
-      "opts": [
-        "عَنْ",
-        "إِلَى",
-        "عَلَى",
-        "مِنْ"
-      ],
-      "correct": 0,
-      "izoh": "«بَحَثَ» fe’li «qidirmoq» ma’nosida «عَنْ» jar harfi bilan birga keladi: «بَحَثَ عَنْ...»."
-    },
-    {
-      "q": "«Bular yangi talabalardir (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هُمْ طُلَّابٌ جُدُدٌ.",
-        "هَؤُلَاءِ طُلَّابٌ جُدُدٌ.",
-        "هَذِهِ طُلَّابٌ جُدُدٌ.",
-        "أَنْتُمْ طُلَّابٌ جُدُدٌ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-3): «Bular» — ko‘rsatish olmoshi «هَؤُلَاءِ»; «هُمْ» esa kishilik olmoshi («ular») hisoblanadi."
-    },
-    {
-      "q": "Bo‘sh o‘ringa mos so‘roq vositasini tanlang: «___ الرِّحْلَةُ؟ — فِي السَّاعَةِ الثَّامِنَةِ».",
-      "opts": [
-        "أَيْنَ",
-        "كَيْفَ",
-        "مَتَى",
-        "كَمْ"
-      ],
-      "correct": 2,
-      "izoh": "Javobda vaqt ko‘rsatilgani («فِي السَّاعَةِ الثَّامِنَةِ» — soat sakkizda) sababli vaqtni so‘rash uchun «مَتَى» (qachon) vositasi ishlatiladi."
-    },
-    {
-      "q": "«Safar pasporti» (izofa birikmasi)ning to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "جَوَازَ السَّفَرُ",
-        "الْجَوَازُ السَّفَرِ",
-        "جَوَازٌ السَّفَرِ",
-        "جَوَازُ السَّفَرِ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-4): Izofa birikmasida birinchi qism (muzaf) «الـ» va tanvin olmaydi («جَوَازُ»), ikkinchi qism (muzafun ilayh) esa majrur (kasrali) bo‘ladi: «جَوَازُ السَّفَرِ»."
-    },
-    {
-      "q": "«Yettinchi darvoza» birikmasining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "اَلْبَوَّابَةُ السَّابِعَةُ",
-        "اَلْبَوَّابَةُ السَّابِعُ",
-        "بَوَّابَةُ السَّابِعَةِ",
-        "اَلْبَوَّابَةُ سَبْعَةٌ"
-      ],
-      "correct": 0,
-      "izoh": "Tartib son sifat kabi o‘zidan oldingi ismga jinsda va aniqlikda ergashadi; «اَلْبَوَّابَةُ» muannas bo‘lgani sababli tartib son ham muannas va aniq shaklda «السَّابِعَةُ» bo‘ladi."
-    },
-    {
-      "q": "«Sen kutish zaliga kirding (muannas)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "دَخَلْتَ صَالَةَ الِانْتِظَارِ.",
-        "دَخَلْتِ صَالَةَ الِانْتِظَارِ.",
-        "دَخَلْتُ صَالَةَ الِانْتِظَارِ.",
-        "دَخَلَتْ صَالَةَ الِانْتِظَارِ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-5): Ikkinchi shaxs muannas («أَنْتِ») uchun o‘tgan zamon fe’li oxiriga kasrali «تِ» qo‘shimchasi qo‘shiladi: «دَخَلْتِ»."
-    },
-    {
-      "q": "«Pasport ish stoli ustidadir» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبُ.",
-        "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبَ.",
-        "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبِ.",
-        "جَوَازُ السَّفَرِ عَلَى مَكْتَبٌ."
-      ],
-      "correct": 2,
-      "izoh": "Jar harfidan («عَلَى») keyin kelgan ism majrur (kasrali) bo‘ladi: «عَلَى الْمَكْتَبِ»."
-    },
-    {
-      "q": "«Sen poyezdda safar qilasan (muannas)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "تُسَافِرُ بِالْقِطَارِ.",
-        "يُسَافِرُ بِالْقِطَارِ.",
-        "أُسَافِرُ بِالْقِطَارِ.",
-        "تُسَافِرِينَ بِالْقِطَارِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-6): Ikkinchi shaxs muannas («أَنْتِ») uchun hozirgi-kelasi zamon (muzore’) fe’li oxiriga «ـِينَ» qo‘shimchasi qo‘shiladi: «تُسَافِرِينَ»."
-    },
-    {
-      "q": "«Ofitser yo‘lovchiga qaradi va unga yaqinlashdi (muzakkar)» gapidagi bo‘sh joyga mos shaklni tanlang: «نَظَرَ الضَّابِطُ إِلَى الرَّاكِبِ وَاقْتَرَبَ ___».",
-      "opts": [
-        "مِنْهُ",
-        "مِنْهَا",
-        "مِنْهُمْ",
-        "مِنْكَ"
-      ],
-      "correct": 0,
-      "izoh": "«الرَّاكِبُ» muzakkar birlik ism bo‘lgani sababli unga qaytuvchi muttasil olmosh muzakkar «ـهُ» bo‘lib, «مِنْ» harfiga ulanganda «مِنْهُ» (unga / undan) bo‘ladi."
-    },
-    {
-      "q": "«Poyezd tezdir» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "اَلْقِطَارُ سَرِيعَةٌ.",
-        "اَلْقِطَارُ سَرِيعٌ.",
-        "اَلْقِطَارِ سَرِيعٍ.",
-        "قِطَارٌ السَّرِيعُ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-1): «اَلْقِطَارُ» muzakkar ism, shuning uchun uning xabari ham muzakkar va marfu‘ (zammali) bo‘ladi: «اَلْقِطَارُ سَرِيعٌ»."
-    },
-    {
-      "q": "«Samolyotni necha soat kutding? (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "كَمْ سَاعَةٍ انْتَظَرْتَ الطَّائِرَةَ؟",
-        "كَمْ سَاعَاتٍ انْتَظَرْتَ الطَّائِرَةَ؟",
-        "كَمْ سَاعَةً انْتَظَرْتَ الطَّائِرَةَ؟",
-        "كَمْ سَاعَةٌ انْتَظَرْتَ الطَّائِرَةَ؟"
-      ],
-      "correct": 2,
-      "izoh": "«كَمْ» (nechta/necha) so‘roq vositasidan keyin kelgan ism (tamyiz) doimo birlikda va mansub (fathali tanvin bilan) bo‘ladi: «كَمْ سَاعَةً»."
-    },
-    {
-      "q": "«Bu ikkisi tez samolyotdir» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هَذَانِ طَائِرَتَانِ سَرِيعَتَانِ.",
-        "هَاتَانِ طَائِرَتَانِ سَرِيعَانِ.",
-        "هُمَا طَائِرَتَانِ سَرِيعَةٌ.",
-        "هَاتَانِ طَائِرَتَانِ سَرِيعَتَانِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-2): «طَائِرَةٌ» muannas ism, uning ikkiligi «طَائِرَتَانِ», unga mos ko‘rsatish olmoshi «هَاتَانِ» va sifati ham muannas ikkilik «سَرِيعَتَانِ» bo‘ladi."
-    },
-    {
-      "q": "«Ofitser tekshiruv apparatiga qaradi» gapidagi bo‘sh joyga mos jar harfini qo‘ying: «نَظَرَ الضَّابِطُ ___ جِهَازِ التَّفْتِيشِ».",
-      "opts": [
-        "إِلَى",
-        "عَنْ",
-        "عَلَى",
-        "مِنْ"
-      ],
-      "correct": 0,
-      "izoh": "«نَظَرَ» fe’li «biror narsaga qaramoq» ma’nosida «إِلَى» jar harfi bilan ishlatiladi: «نَظَرَ إِلَى...»."
-    },
-    {
-      "q": "«Bular uzoq safarlardir» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هَؤُلَاءِ رِحْلَاتٌ بَعِيدَةٌ.",
-        "هَذِهِ رِحْلَاتٌ بَعِيدَةٌ.",
-        "هِيَ رِحْلَاتٌ بَعِيدَةٌ.",
-        "هُمْ رِحْلَاتٌ بَعِيدَةٌ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-3): Aqlsiz narsalarning ko‘pligi («رِحْلَاتٌ») birlik muannas hukmida bo‘ladi; «bular» ma’nosidagi ko‘rsatish olmoshi «هَذِهِ» ishlatiladi («هَؤُلَاءِ» faqat aqlli insonlar uchun, «هِيَ» esa kishilik olmoshidir)."
-    },
-    {
-      "q": "«Qohiradan Riyodga safar qildim» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "سَافَرْتُ مِنْ الْقَاهِرَةِ إِلَى الرِّيَاضِ.",
-        "سَافَرْتُ مِنِ الْقَاهِرَةِ إِلَى الرِّيَاضِ.",
-        "سَافَرْتُ مِنَ الْقَاهِرَةِ إِلَى الرِّيَاضِ.",
-        "سَافَرْتُ عَنَ الْقَاهِرَةِ إِلَى الرِّيَاضِ."
-      ],
-      "correct": 2,
-      "izoh": "«مِنْ» jar harfi sukunli «الـ» artikliga ulanganda, ikki sukun to‘qnashuvini oldini olish uchun nunning sukuni fathaga aylanadi: «مِنَ الْقَاهِرَةِ»."
-    },
-    {
-      "q": "«Uning (muannas) pasporti kutish zalida» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "جَوَازُهُ فِي صَالَةِ الِانْتِظَارِ.",
-        "جَوَازُكِ فِي صَالَةِ الِانْتِظَارِ.",
-        "جَوَازُنَا فِي صَالَةِ الِانْتِظَارِ.",
-        "جَوَازُهَا فِي صَالَةِ الِانْتِظَارِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-4): Uchinchi shaxs ayol kishi uchun ismga qo‘shiladigan egalik olmoshi «ـهَا» hisoblanadi: «جَوَازُهَا»."
-    },
-    {
-      "q": "Bo‘sh o‘ringa mos so‘roq vositasini tanlang: «___ جَوَازُ السَّفَرِ؟ — فِي الْحَقِيبَةِ».",
-      "opts": [
-        "أَيْنَ",
-        "مَتَى",
-        "كَيْفَ",
-        "مَنْ"
-      ],
-      "correct": 0,
-      "izoh": "Javobda o‘rin-joy ko‘rsatilgani («فِي الْحَقِيبَةِ» — sumkaning ichida) sababli makonni so‘rash uchun «أَيْنَ» (qayerda) ishlatiladi."
-    },
-    {
-      "q": "«Muallima ayol aeroportga yetib keldi» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "وَصَلَ الْمُعَلِّمَةُ إِلَى الْمَطَارِ.",
-        "وَصَلَتِ الْمُعَلِّمَةُ إِلَى الْمَطَارِ.",
-        "وَصَلَتْ الْمُعَلِّمَةُ إِلَى الْمَطَارِ.",
-        "وَصَلَتَ الْمُعَلِّمَةُ إِلَى الْمَطَارِ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-5): Foil muannas («الْمُعَلِّمَةُ») bo‘lgani uchun fe’lga «تْ» qo‘shiladi; ketidan «الـ» kelganda ikki sukun to‘qnashmasligi uchun «تِ» kasra bilan o‘qiladi: «وَصَلَتِ الْمُعَلِّمَةُ»."
-    },
-    {
-      "q": "Quyidagi jumlalardan qaysi birida imlo XATO yozilgan?",
-      "opts": [
-        "كَتَبْتُ وَاجِبِي بِالْقَلَمِ.",
-        "سَافَرْتُ بِالسَّفِينَةِ.",
-        "اللَّاعِبُ سَرِيعٌ كَلْغَزَالِ.",
-        "صَدِيقِي قَوِيٌّ كَالْأَسَدِ."
-      ],
-      "correct": 2,
-      "izoh": "«بِـ» va «كَـ» jar harflari «الـ» bilan boshlangan ismga qo‘shilganda alif harfi yozuvda saqlanadi: «كَالْغَزَالِ»; «كَلْغَزَالِ» deb alifni tushirib qoldirish xatodir (alif faqat «لِـ» harfida tushadi: «لِلْمُسَافِرِ»)."
-    },
-    {
-      "q": "«Biz aeroportga ertalab yetib keldik» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "وَصَلْنَا إِلَى الْمَطَارِ صَبَاحٌ.",
-        "وَصَلْنَا إِلَى الْمَطَارِ صَبَاحٍ.",
-        "وَصَلْنَا إِلَى الْمَطَارِ فِي صَبَاحًا.",
-        "وَصَلْنَا إِلَى الْمَطَارِ صَبَاحًا."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-6): Payt ravishi (ظَرْفُ الزَّمَانِ) jumla ichida mansub (fathali tanvin bilan) keladi: «صَبَاحًا»."
-    },
-    {
-      "q": "«Musofir o‘z oilasiga qo‘ng‘iroq qildi» gapidagi bo‘sh joyga mos jar harfini qo‘ying: «اِتَّصَلَ الْمُسَافِرُ ___ أُسْرَتِهِ».",
-      "opts": [
-        "بِـ",
-        "إِلَى",
-        "عَنْ",
-        "فِي"
-      ],
-      "correct": 0,
-      "izoh": "«اِتَّصَلَ» fe’li «qo‘ng‘iroq qilmoq, bog‘lanmoq» ma’nosida «بِـ» jar harfi bilan birga keladi: «اِتَّصَلَ بِـ...»."
-    },
-    {
-      "q": "«Siz ikkingiz yangi yo‘lovchisiz (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هُمَا مُسَافِرَانِ جَدِيدَانِ.",
-        "أَنْتُمَا مُسَافِرَانِ جَدِيدَانِ.",
-        "أَنْتُمْ مُسَافِرُونَ جُدُدٌ.",
-        "نَحْنُ مُسَافِرَانِ جَدِيدَانِ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-2): Ikki kishiga qaratilgan murojaatda «أَنْتُمَا» olmoshi ishlatiladi; xabar va sifat ham ikkilikda bo‘ladi."
-    },
-    {
-      "q": "«Biz yettinchi qavatda yashaymiz» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "نَسْكُنُ فِي الدَّوْرِ السَّابِعَةِ.",
-        "نَسْكُنُ فِي دَوْرِ السَّابِعِ.",
-        "نَسْكُنُ فِي الدَّوْرِ السَّابِعِ.",
-        "نَسْكُنُ فِي الدَّوْرِ سَبْعَةٍ."
-      ],
-      "correct": 2,
-      "izoh": "«اَلدَّوْرُ» muzakkar ism bo‘lgani sababli tartib son ham muzakkar va jar harfidan keyin majrur bo‘lib «السَّابِعِ» shaklida keladi."
-    },
-    {
-      "q": "«Musofirlar kutish zalida o‘tirishibdi» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "اَلْمُسَافِرُونَ جَالِسَاتٌ فِي صَالَةِ الِانْتِظَارِ.",
-        "اَلْمُسَافِرُونَ جَالِسٌ فِي صَالَةِ الِانْتِظَارِ.",
-        "اَلْمُسَافِرُونَ جَالِسِينَ فِي صَالَةِ الِانْتِظَارِ.",
-        "اَلْمُسَافِرُونَ جَالِسُونَ فِي صَالَةِ الِانْتِظَارِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-3): «اَلْمُسَافِرُونَ» muzakkar ko‘plik mubtado bo‘lgani uchun, xabar ham muzakkar sog‘lom ko‘plikda va marfu‘ («ـونَ») bo‘ladi: «جَالِسُونَ»."
-    },
-    {
-      "q": "«Qaysi darajani xohlaysiz? (muzakkar)» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "أَيَّ دَرَجَةٍ تُرِيدُ؟",
-        "أَيَّ دَرَجَةً تُرِيدُ؟",
-        "أَيُّ دَرَجَةٌ تُرِيدُ؟",
-        "أَيِّ دَرَجَةٍ تُرِيدُ؟"
-      ],
-      "correct": 0,
-      "izoh": "«أَيَّ» fe’l oldida maf‘ul bo‘lib mansub keladi, undan keyingi ism esa doimo majrur (kasrali tanvin bilan) bo‘ladi: «أَيَّ دَرَجَةٍ تُرِيدُ؟»."
-    },
-    {
-      "q": "«Mening yangi mashinam bor» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "لَكَ سَيَّارَةٌ جَدِيدَةٌ.",
-        "لِي سَيَّارَةٌ جَدِيدَةٌ.",
-        "لَهُ سَيَّارَةٌ جَدِيدَةٌ.",
-        "لَنَا سَيَّارَةٌ جَدِيدَةٌ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-4): Birinchi shaxs («mening ... bor») uchun «لِـ» harf-i jariga «ي» qo‘shilib «لِي» hosil bo‘ladi."
-    },
-    {
-      "q": "«Ofitser safar haqida gapirdi» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "تَحَدَّثَ الضَّابِطُ عَنْ الْسَّفَرِ.",
-        "تَحَدَّثَ الضَّابِطُ عَنَ السَّفَرِ.",
-        "تَحَدَّثَ الضَّابِطُ عَنِ السَّفَرِ.",
-        "تَحَدَّثَ الضَّابِطُ عَنُ السَّفَرِ."
-      ],
-      "correct": 2,
-      "izoh": "«عَنْ» jar harfi sukunli «الـ» artikliga ulanganda, ikki sukun to‘qnashuvini oldini olish uchun nunning sukuni kasraga aylanadi: «عَنِ السَّفَرِ» (faqat «مِنْ» harfida fatha: «مِنَ»)."
-    },
-    {
-      "q": "Quyidagi gaplardan qaysi biri fe’liy gap (الْجُمْلَةُ الْفِعْلِيَّةُ) hisoblanadi?",
-      "opts": [
-        "اَلْقِطَارُ تَحَرَّكَ فِي الْمَوْعِدِ.",
-        "اَلْمُسَافِرُ وَصَلَ سَالِمًا.",
-        "هَذَا الْقِطَارُ سَرِيعٌ جِدًّا.",
-        "تَحَرَّكَ الْقِطَارُ فِي الْمَوْعِدِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-5): Fe’liy gap fe’l bilan boshlanadi: «تَحَرَّكَ الْقِطَارُ...»; fe’ldan oldin ism kelsa («اَلْقِطَارُ تَحَرَّكَ...»), u ismiy gap hisoblanadi."
-    },
-    {
-      "q": "«Sumka qayerda va uning ichida nima bor?» gapidagi bo‘sh joyga mos shaklni tanlang: «أَيْنَ الْحَقِيبَةُ، وَمَاذَا ___؟».",
-      "opts": [
-        "فِيهَا",
-        "فِيهِ",
-        "عَلَيْهِ",
-        "عَنْهَا"
-      ],
-      "correct": 0,
-      "izoh": "«الْحَقِيبَةُ» muannas ism bo‘lgani sababli unga qaytuvchi muttasil olmosh «ـهَا» bo‘lib, «فِي» harfiga ulanganda «فِيهَا» (uning ichida) bo‘ladi."
-    },
-    {
-      "q": "«Avtobus bekatning oldida to‘xtadi» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "وَقَفَتِ الْحَافِلَةُ أَمَامُ الْمَحَطَّةِ.",
-        "وَقَفَتِ الْحَافِلَةُ أَمَامَ الْمَحَطَّةِ.",
-        "وَقَفَتِ الْحَافِلَةُ أَمَامِ الْمَحَطَّةِ.",
-        "وَقَفَتِ الْحَافِلَةُ أَمَامَ الْمَحَطَّةُ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-6): O‘rin ravishi «أَمَامَ» mansub (fathali) bo‘ladi, undan keyin kelgan ism esa izofa qoidasiga ko‘ra majrur (kasrali) bo‘ladi: «أَمَامَ الْمَحَطَّةِ»."
-    },
-    {
-      "q": "«Yo‘lovchi tekshiruv apparatidan uzoqlashdi» gapidagi bo‘sh joyga mos jar harfini qo‘ying: «اِبْتَعَدَ الْمُسَافِرُ ___ جِهَازِ التَّفْتِيشِ».",
-      "opts": [
-        "إِلَى",
-        "عَلَى",
-        "عَنْ",
-        "فِي"
-      ],
-      "correct": 2,
-      "izoh": "«اِبْتَعَدَ» fe’li «biror narsadan uzoqlashmoq» ma’nosida «عَنْ» jar harfi bilan birga keladi: «اِبْتَعَدَ عَنْ...»."
-    },
-    {
-      "q": "«Bu qulay kvartiradir» gapining arabcha to‘g‘ri shaklini toping:",
-      "opts": [
-        "هِيَ شَقَّةٌ مُرِيحَةٌ.",
-        "هَذَا شَقَّةٌ مُرِيحَةٌ.",
-        "هُمَا شَقَّةٌ مُرِيحَةٌ.",
-        "هَذِهِ شَقَّةٌ مُرِيحَةٌ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-4): «Bu» — ko‘rsatish olmoshi bo‘lib, muannas ism («شَقَّةٌ») uchun «هَذِهِ» ishlatiladi; «هِيَ» esa kishilik olmoshidir («u»)."
-    },
-    {
-      "q": "Bo‘sh o‘ringa mos so‘roq vositasini tanlang: «___ تُسَافِرُ إِلَى الْقَاهِرَةِ؟ — بِالطَّائِرَةِ».",
-      "opts": [
-        "كَيْفَ",
-        "أَيْنَ",
-        "مَتَى",
-        "مَنْ"
-      ],
-      "correct": 0,
-      "izoh": "Javobda harakatlanish vositasi/holati («بِالطَّائِرَةِ» — samolyotda) ko‘rsatilgani sababli, harakat holati va vositasini so‘rash uchun «كَيْفَ» (qanday / nima bilan) ishlatiladi."
-    },
-    {
-      "q": "«Hamza samolyot chiptasini sotib oldi» gapining to‘g‘ri shaklini toping:",
-      "opts": [
-        "اِشْتَرَتْ حَمْزَةُ تَذْكِرَةَ الطَّائِرَةِ.",
-        "اِشْتَرَى حَمْزَةُ تَذْكِرَةَ الطَّائِرَةِ.",
-        "اِشْتَرَيْتَ حَمْزَةُ تَذْكِرَةَ الطَّائِرَةِ.",
-        "تَشْتَرِي حَمْزَةُ تَذْكِرَةَ الطَّائِرَةِ."
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-5): «حَمْزَةُ» oxirida «ة» bo‘lsa ham erkak kishining ismi (muzakkar), shuning uchun fe’l uchinchi shaxs muzakkar shaklida bo‘ladi: «اِشْتَرَى حَمْزَةُ»."
-    },
-    {
-      "q": "Quyidagi gaplardan qaysi birida jar harfi XATO qo‘llangan?",
-      "opts": [
-        "يَبْحَثُ الْمُسَافِرُ عَنْ حَافِلَةٍ.",
-        "نَظَرَ الرَّاكِبُ إِلَى الطَّائِرَةِ.",
-        "اِتَّصَلَ الطَّالِبُ إِلَى الْمُعَلِّمِ.",
-        "سَافَرْتُ مِنَ الْقَاهِرَةِ إِلَى الرِّيَاضِ."
-      ],
-      "correct": 2,
-      "izoh": "«اِتَّصَلَ» fe’li «إِلَى» bilan emas, balki «بِـ» jar harfi bilan ishlatiladi: «اِتَّصَلَ الطَّالِبُ بِالْمُعَلِّمِ»."
-    },
-    {
-      "q": "«Tarozi kirish darvozasining yonidadir» gapining to‘g‘ri harakatli shaklini toping:",
-      "opts": [
-        "اَلْمِيزَانُ بِجَانِبَ بَوَّابَةُ الدُّخُولِ.",
-        "اَلْمِيزَانُ بِجَانِبُ بَوَّابَةِ الدُّخُولِ.",
-        "اَلْمِيزَانُ بِجَانِبِ بَوَّابَةَ الدُّخُولَ.",
-        "اَلْمِيزَانُ بِجَانِبِ بَوَّابَةِ الدُّخُولِ."
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-6): «بِـ» harf-i jari sababli «بِجَانِبِ» majrur (kasrali), undan keyin kelgan «بَوَّابَةِ» va «الدُّخُولِ» esa izofa qoidasiga ko‘ra majrur bo‘ladi."
-    }
-  ]
+ "title": "Qovaid — A1 7-dars",
+ "otish": 80,
+ "vaqt": 65,
+ "questions": [
+  {
+   "q": "«هَذِهِ الْهَدِيَّةُ ___ أُمِّي»",
+   "opts": [
+    "لِـ",
+    "عَلَى",
+    "كَـ",
+    "فِي"
+   ],
+   "correct": 0,
+   "izoh": "Kimgadir tegishlilik — «لِـ»: «لِأُمِّي» (onam uchun)."
+  },
+  {
+   "q": "«___ وَضَعْتَ فِي الْحَقِيبَةِ؟ — وَضَعْتُ الْمَلَابِسَ»",
+   "opts": [
+    "مَاذَا",
+    "مَتَى",
+    "أَيْنَ",
+    "مَنْ"
+   ],
+   "correct": 0,
+   "izoh": "Javob — narsa (kiyimlar); fe'ldan oldin «مَاذَا» (nimani)."
+  },
+  {
+   "q": "«اِقْتَرَبَتِ الطَّائِرَةُ ___»",
+   "opts": [
+    "عَلَى الْمَطَارِ",
+    "عَنِ الْمَطَارِ",
+    "مِنَ الْمَطَارِ",
+    "كَالْمَطَارِ"
+   ],
+   "correct": 2,
+   "izoh": "«اِقْتَرَبَ مِنْ» — …ga yaqinlashdi."
+  },
+  {
+   "q": "«مَتَى وَصَلْتَ إِلَى الْمَطَارِ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "وَصَلْتُ مَعَ أُسْرَتِي",
+    "وَصَلْتُ بِالْحَافِلَةِ",
+    "نَعَمْ، وَصَلْتُ",
+    "وَصَلْتُ عَصْرًا"
+   ],
+   "correct": 3,
+   "izoh": "«مَتَى» — qachon; javobda vaqt: «عَصْرًا»."
+  },
+  {
+   "q": "«يَنْتَظِرُ الْمُسَافِرُ خَارِجَ ___»",
+   "opts": [
+    "الْمَطَارَ",
+    "الْمَطَارِ",
+    "الْمَطَارُ",
+    "مَطَارٌ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-6): zarfdan («خَارِجَ») keyingi ism ham kasrali."
+  },
+  {
+   "q": "Qaysi savol ADAD (son) haqida so'rayapti?",
+   "opts": [
+    "مَنْ مَعَكَ؟",
+    "كَمْ تَذْكِرَةً مَعَكَ؟",
+    "هَلْ مَعَكَ تَذْكِرَةٌ؟",
+    "أَيْنَ تَذْكِرَتُكَ؟"
+   ],
+   "correct": 1,
+   "izoh": "«كَمْ» — nechta: son haqida."
+  },
+  {
+   "q": "«نَظَرْتُ إِلَى ___»",
+   "opts": [
+    "بَوَّابَةُ الدُّخُولِ",
+    "بَوَّابَةٍ الدُّخُولِ",
+    "بَوَّابَةِ الدُّخُولِ",
+    "بَوَّابَةَ الدُّخُولِ"
+   ],
+   "correct": 2,
+   "izoh": "«إِلَى» dan keyin kasra; izofada birinchi so'z tanvinsiz: «بَوَّابَةِ الدُّخُولِ»."
+  },
+  {
+   "q": "«وَضَعَ الْمُسَافِرُ الْحَقِيبَةَ ___ الْمِيزَانِ»",
+   "opts": [
+    "عَلَى",
+    "مِنَ",
+    "عَنِ",
+    "إِلَى"
+   ],
+   "correct": 0,
+   "izoh": "Ustiga qo'yish — «عَلَى»."
+  },
+  {
+   "q": "«أَيَّ فَصْلٍ تُفَضِّلُ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "أَرْبَعَةُ فُصُولٍ",
+    "لِأَنَّ الْجَوَّ حَارٌّ",
+    "نَعَمْ، أُفَضِّلُهُ",
+    "أُفَضِّلُ الرَّبِيعَ"
+   ],
+   "correct": 3,
+   "izoh": "«أَيّ» — qaysi; javobda bittasi tanlanadi."
+  },
+  {
+   "q": "Qaysi gapda zarfu zamon (payt ravishi) bor?",
+   "opts": [
+    "الْحَقِيبَةُ دَاخِلَ السَّيَّارَةِ",
+    "الضَّابِطُ عِنْدَ الْبَوَّابَةِ",
+    "تَصِلُ الطَّائِرَةُ لَيْلًا",
+    "الْمَحَطَّةُ بِجَانِبِ الْفُنْدُقِ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A1-6): «لَيْلًا» (kechasi) — vaqt; qolganlari joyni bildiradi."
+  },
+  {
+   "q": "«كَمْ ___ سَافَرْتَ إِلَى مِصْرَ؟»",
+   "opts": [
+    "مَرَّاتٍ",
+    "مَرَّتَانِ",
+    "مَرَّةٌ",
+    "مَرَّةً"
+   ],
+   "correct": 3,
+   "izoh": "«كَمْ» dan keyin birlik va ikki fatha: «كَمْ مَرَّةً» (necha marta)."
+  },
+  {
+   "q": "«وَضَعْتُ الْجَوَازَ عَلَى الْمَكْتَبِ» gapida qaysi so'z harfi jar tufayli kasra olgan?",
+   "opts": [
+    "الْمَكْتَبِ",
+    "الْجَوَازَ",
+    "وَضَعْتُ",
+    "عَلَى"
+   ],
+   "correct": 0,
+   "izoh": "«عَلَى» — harfi jar, undan keyingi «الْمَكْتَبِ» kasrali."
+  },
+  {
+   "q": "«أَسْكُنُ فِي ___ قَرِيبٍ مِنَ الْمَطَارِ»",
+   "opts": [
+    "فُنْدُقٌ",
+    "فُنْدُقٍ",
+    "فُنْدُقًا",
+    "الْفُنْدُقِ"
+   ],
+   "correct": 1,
+   "izoh": "«فِي» dan keyin kasra; ism nakira — ikki kasra: «فِي فُنْدُقٍ» (sifati ham nakira: «قَرِيبٍ»)."
+  },
+  {
+   "q": "«مَاذَا وَضَعَ الْمُسَافِرُ عَلَى الْمِيزَانِ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "نَعَمْ، وَضَعَ",
+    "الضَّابِطَ",
+    "الْحَقِيبَةَ",
+    "فِي الْمَطَارِ"
+   ],
+   "correct": 2,
+   "izoh": "«مَاذَا» — nimani; javob narsa (aqlsiz) bo'ladi."
+  },
+  {
+   "q": "«أُسَافِرُ ___» (kechasi)",
+   "opts": [
+    "لَيْلًا",
+    "لَيْلٍ",
+    "اللَّيْلُ",
+    "لَيْلٌ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-6): payt ravishi ikki fathali — «لَيْلًا»."
+  },
+  {
+   "q": "Javob: «لِأَنَّ الْجَوَّ بَارِدٌ». Savol qaysi?",
+   "opts": [
+    "كَيْفَ رَجَعْتَ إِلَى الْبَيْتِ؟",
+    "لِمَاذَا رَجَعْتَ إِلَى الْبَيْتِ؟",
+    "مَتَى رَجَعْتَ إِلَى الْبَيْتِ؟",
+    "هَلْ رَجَعْتَ إِلَى الْبَيْتِ؟"
+   ],
+   "correct": 1,
+   "izoh": "«لِأَنَّ …» (chunki) — «لِمَاذَا» savoliga javob."
+  },
+  {
+   "q": "«يَبْحَثُ الرَّاكِبُ عَنْ ___»",
+   "opts": [
+    "مَقْعَدُهُ",
+    "مَقْعَدَهُ",
+    "الْمَقْعَدِهِ",
+    "مَقْعَدِهِ"
+   ],
+   "correct": 3,
+   "izoh": "«عَنْ» dan keyin kasra: «مَقْعَدِهِ»; zamirli ism «الْـ» olmaydi."
+  },
+  {
+   "q": "Javob: «الْمُسَافِرُونَ فِي صَالَةِ الِانْتِظَارِ». Savol qaysi?",
+   "opts": [
+    "مَنِ الْمُسَافِرُونَ؟",
+    "كَمْ مُسَافِرًا فِي الصَّالَةِ؟",
+    "مَتَى يَصِلُ الْمُسَافِرُونَ؟",
+    "أَيْنَ الْمُسَافِرُونَ؟"
+   ],
+   "correct": 3,
+   "izoh": "Javobda joy aytilgan — «أَيْنَ»."
+  },
+  {
+   "q": "«___ خَتَمَ جَوَازَ السَّفَرِ؟ — الضَّابِطُ»",
+   "opts": [
+    "أَيْنَ",
+    "كَيْفَ",
+    "مَنْ",
+    "مَتَى"
+   ],
+   "correct": 2,
+   "izoh": "Javob — odam (ofitser). Aqlli uchun «مَنْ» (kim)."
+  },
+  {
+   "q": "«أَنْتِ ___ بِالْقِطَارِ يَا مَرْيَمُ»",
+   "opts": [
+    "تُسَافِرِينَ",
+    "أُسَافِرُ",
+    "يُسَافِرُ",
+    "تُسَافِرُ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-6): «أَنْتِ» bilan muzori' — «تُـ…ـِينَ»."
+  },
+  {
+   "q": "«أَيَّ ___ تَرْكَبُ؟»",
+   "opts": [
+    "حَافِلَةٌ",
+    "حَافِلَةٍ",
+    "حَافِلَةً",
+    "حَافِلَاتٌ"
+   ],
+   "correct": 1,
+   "izoh": "«أَيّ» dan keyingi ism kasrali: «أَيَّ حَافِلَةٍ». «كَمْ» dan keyin esa fatha («كَمْ حَافِلَةً»)."
+  },
+  {
+   "q": "Qaysi so'z harfi jar?",
+   "opts": [
+    "مَا",
+    "مَتَى",
+    "مِنْ",
+    "مَنْ"
+   ],
+   "correct": 2,
+   "izoh": "«مِنْ» (…dan) — harfi jar; «مَنْ» (kim), «مَا», «مَتَى» — so'roq vositalari."
+  },
+  {
+   "q": "«اِبْتَعَدَتِ السَّفِينَةُ ___»",
+   "opts": [
+    "عَنِ الشَّاطِئِ",
+    "إِلَى الشَّاطِئِ",
+    "كَالشَّاطِئِ",
+    "بِالشَّاطِئِ"
+   ],
+   "correct": 0,
+   "izoh": "«اِبْتَعَدَ عَنْ» — …dan uzoqlashdi."
+  },
+  {
+   "q": "«كَمْ ___ فِي الْمَطَارِ؟»",
+   "opts": [
+    "طَائِرَةٌ",
+    "الطَّائِرَةَ",
+    "طَائِرَاتٍ",
+    "طَائِرَةً"
+   ],
+   "correct": 3,
+   "izoh": "«كَمْ» dan keyin ism birlikda, ikki fathali: «كَمْ طَائِرَةً»."
+  },
+  {
+   "q": "«هِيَ ___ عَنْ جَوَازِ سَفَرِهَا»",
+   "opts": [
+    "أَبْحَثُ",
+    "تَبْحَثُ",
+    "يَبْحَثُ",
+    "تَبْحَثِينَ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-6): «هِيَ» bilan muzori' «تَـ» bilan boshlanadi."
+  },
+  {
+   "q": "«هَذِهِ التَّذْكِرَةُ ___» (yo'lovchi uchun)",
+   "opts": [
+    "لِلرَّاكِبِ",
+    "لِلرَّاكِبَ",
+    "لِلرَّاكِبُ",
+    "لِالرَّاكِبِ"
+   ],
+   "correct": 0,
+   "izoh": "«لِـ» + «الرَّاكِبِ» = «لِلرَّاكِبِ»: alif tushadi, oxiri kasra."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan?",
+   "opts": [
+    "جَوَازُ السَّفَرِ عَلَى مَكْتَبٌ",
+    "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبِ",
+    "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبُ",
+    "جَوَازُ السَّفَرِ عَلَى الْمَكْتَبَ"
+   ],
+   "correct": 1,
+   "izoh": "«عَلَى» dan keyin kasra: «عَلَى الْمَكْتَبِ»."
+  },
+  {
+   "q": "Javob: «نَعَمْ، وَجَدْتُ تَذْكِرَتِي». Savol qaysi?",
+   "opts": [
+    "مَتَى وَجَدْتَ تَذْكِرَتَكَ؟",
+    "مَنْ وَجَدَ تَذْكِرَتَكَ؟",
+    "أَيْنَ وَجَدْتَ تَذْكِرَتَكَ؟",
+    "هَلْ وَجَدْتَ تَذْكِرَتَكَ؟"
+   ],
+   "correct": 3,
+   "izoh": "«نَعَمْ» — «هَلْ» savoliga javob."
+  },
+  {
+   "q": "Qaysi savol to'g'ri tuzilgan?",
+   "opts": [
+    "الطَّائِرَةُ تَصِلُ مَتَى؟",
+    "تَصِلُ مَتَى الطَّائِرَةُ؟",
+    "مَتَى تَصِلُ الطَّائِرَةُ؟",
+    "تَصِلُ الطَّائِرَةُ مَتَى؟"
+   ],
+   "correct": 2,
+   "izoh": "So'roq vositasi gap boshida keladi."
+  },
+  {
+   "q": "«يَا فَاطِمَةُ، هَلْ ___ بِشَرِكَةِ الطَّيَرَانِ؟»",
+   "opts": [
+    "اِتَّصَلْتِ",
+    "اِتَّصَلَتْ",
+    "اِتَّصَلْتُ",
+    "اِتَّصَلْتَ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-5): ayolga murojaat (sen) — moziy «ـْتِ»."
+  },
+  {
+   "q": "«أَسْتَمْتِعُ ___ الْبَحْرِيَّةِ»",
+   "opts": [
+    "عَنِ الرِّحْلَةِ",
+    "إِلَى الرِّحْلَةِ",
+    "عَلَى الرِّحْلَةِ",
+    "بِالرِّحْلَةِ"
+   ],
+   "correct": 3,
+   "izoh": "«اِسْتَمْتَعَ بِـ» — …dan zavqlandi."
+  },
+  {
+   "q": "«أُسَافِرُ ___» (poyezdda)",
+   "opts": [
+    "بِالْقِطَارُ",
+    "بِالْقِطَارِ",
+    "بِالْقِطَارَ",
+    "بِلْقِطَارِ"
+   ],
+   "correct": 1,
+   "izoh": "«بِـ» + «الْقِطَارِ» = «بِالْقِطَارِ»: alif yozilaveradi, oxiri kasra."
+  },
+  {
+   "q": "Qaysi gap to'g'ri?",
+   "opts": [
+    "أَنَا عَنِ الْمَطَارِ",
+    "أَنَا عَلَى الْمَطَارِ",
+    "أَنَا فِي الْمَطَارِ",
+    "أَنَا إِلَى الْمَطَارِ"
+   ],
+   "correct": 2,
+   "izoh": "Biror joyning ichida bo'lish — «فِي»."
+  },
+  {
+   "q": "Qaysi savol SABAB haqida so'rayapti?",
+   "opts": [
+    "مَتَى وَصَلَ الْقِطَارُ؟",
+    "أَيْنَ مَحَطَّةُ الْقِطَارِ؟",
+    "كَمْ رَاكِبًا فِي الْقِطَارِ؟",
+    "لِمَاذَا تَأَخَّرَ الْقِطَارُ؟"
+   ],
+   "correct": 3,
+   "izoh": "«لِمَاذَا» — nima uchun: sabab haqida."
+  },
+  {
+   "q": "Qaysi gap jumla fi'liyya?",
+   "opts": [
+    "الرَّاكِبُ يَبْحَثُ عَنْ مَقْعَدِهِ",
+    "مَقْعَدُ الرَّاكِبِ قَرِيبٌ مِنَ النَّافِذَةِ",
+    "يَبْحَثُ الرَّاكِبُ عَنْ مَقْعَدِهِ",
+    "الرَّاكِبُ فِي مَقْعَدِهِ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A1-5): fe'liy gap fe'l bilan boshlanadi."
+  },
+  {
+   "q": "«هَذَا الْمَقْعَدُ ___» (mehmon uchun)",
+   "opts": [
+    "لِلضَّيْفِ",
+    "لِالضَّيْفِ",
+    "لِلضَّيْفُ",
+    "لِضَّيْفِ"
+   ],
+   "correct": 0,
+   "izoh": "«لِـ» + «الْـ»: alif tushadi — «لِلضَّيْفِ»."
+  },
+  {
+   "q": "«___ إِقْلَاعُ الطَّائِرَةِ؟ — فِي السَّاعَةِ السَّابِعَةِ»",
+   "opts": [
+    "أَيْنَ",
+    "مَتَى",
+    "كَيْفَ",
+    "مَنْ"
+   ],
+   "correct": 1,
+   "izoh": "Javob vaqtni bildiradi — «مَتَى» (qachon)."
+  },
+  {
+   "q": "«___ هَذِهِ؟ — هَذِهِ بَوَّابَةُ الدُّخُولِ»",
+   "opts": [
+    "مَا",
+    "مَتَى",
+    "مَنْ",
+    "كَمْ"
+   ],
+   "correct": 0,
+   "izoh": "Darvoza — narsa (aqlsiz): «مَا» (nima)."
+  },
+  {
+   "q": "«كَمْ حَقِيبَةً مَعَكَ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "حَقِيبَتِي عَلَى الْمِيزَانِ",
+    "نَعَمْ، مَعِي حَقِيبَةٌ",
+    "هَذِهِ حَقِيبَتِي",
+    "مَعِي حَقِيبَتَانِ"
+   ],
+   "correct": 3,
+   "izoh": "«كَمْ» — nechta; javobda son: ikkita sumka."
+  },
+  {
+   "q": "«هَؤُلَاءِ ___ مِنْ تُونُسَ»",
+   "opts": [
+    "مُسَافِرٌ",
+    "مُسَافِرُونَ",
+    "مُسَافِرَانِ",
+    "مُسَافِرَةٌ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-3): «هَؤُلَاءِ» — ko'plikka: «مُسَافِرُونَ»."
+  },
+  {
+   "q": "«___ سَبَبُ التَّأَخُّرِ؟ — اِزْدِحَامُ الطَّرِيقِ»",
+   "opts": [
+    "أَيْنَ",
+    "مَنْ",
+    "مَا",
+    "مَتَى"
+   ],
+   "correct": 2,
+   "izoh": "Javob narsa-hodisa — «مَا». Ismdan oldin «مَا» keladi."
+  },
+  {
+   "q": "«أَبْحَثُ ___ تَذْكِرَتِي»",
+   "opts": [
+    "لِـ",
+    "إِلَى",
+    "عَلَى",
+    "عَنْ"
+   ],
+   "correct": 3,
+   "izoh": "«بَحَثَ عَنْ» — …ni qidirdi."
+  },
+  {
+   "q": "Javob: «أُسَافِرُ غَدًا». Savol qaysi?",
+   "opts": [
+    "لِمَاذَا تُسَافِرُ؟",
+    "كَيْفَ تُسَافِرُ؟",
+    "مَتَى تُسَافِرُ؟",
+    "مَعَ مَنْ تُسَافِرُ؟"
+   ],
+   "correct": 2,
+   "izoh": "«غَدًا» (ertaga) — vaqt; savol «مَتَى» bilan."
+  },
+  {
+   "q": "«نَظَرَ الضَّابِطُ ___ جَوَازِ السَّفَرِ»",
+   "opts": [
+    "إِلَى",
+    "عَنْ",
+    "كَـ",
+    "بِـ"
+   ],
+   "correct": 0,
+   "izoh": "«نَظَرَ إِلَى» — …ga qaradi."
+  },
+  {
+   "q": "«تَذْكِرَةٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "تَذْكِرُونَ",
+    "تَذَاكِرُ",
+    "تَذْكِرَاتٌ",
+    "تَذْكِرَتَانِ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-3): siniq ko'plik — «تَذَاكِرُ»."
+  },
+  {
+   "q": "Qaysi savol ZAMON (vaqt) haqida so'rayapti?",
+   "opts": [
+    "لِمَاذَا تَأَخَّرَتِ الْحَافِلَةُ؟",
+    "مَتَى تَصِلُ الْحَافِلَةُ؟",
+    "كَيْفَ الرِّحْلَةُ؟",
+    "أَيْنَ مَحَطَّةُ الْحَافِلَاتِ؟"
+   ],
+   "correct": 1,
+   "izoh": "«مَتَى» — qachon: zamon haqida."
+  },
+  {
+   "q": "«سَافَرْتُ إِلَى ___»",
+   "opts": [
+    "الْمَدِينَةَ",
+    "الْمَدِينَةُ",
+    "الْمَدِينَةِ",
+    "الْمَدِينَةٌ"
+   ],
+   "correct": 2,
+   "izoh": "Harfi jardan keyingi ism kasrali: «إِلَى الْمَدِينَةِ»."
+  },
+  {
+   "q": "Javob: «خَمْسَةَ أَيَّامٍ». Savol qaysi?",
+   "opts": [
+    "كَمْ يَوْمًا تَسْتَغْرِقُ الرِّحْلَةُ الْبَحْرِيَّةُ؟",
+    "أَيْنَ الرِّحْلَةُ الْبَحْرِيَّةُ؟",
+    "كَيْفَ الرِّحْلَةُ الْبَحْرِيَّةُ؟",
+    "مَتَى تَبْدَأُ الرِّحْلَةُ الْبَحْرِيَّةُ؟"
+   ],
+   "correct": 0,
+   "izoh": "Javob — son (besh kun): «كَمْ يَوْمًا»."
+  },
+  {
+   "q": "«كَيْفَ الْجَوُّ الْيَوْمَ؟» savoliga to'g'ri javob qaysi?",
+   "opts": [
+    "فِي الشِّتَاءِ",
+    "نَعَمْ، الْجَوُّ حَارٌّ",
+    "لِأَنَّ الْجَوَّ بَارِدٌ",
+    "الْجَوُّ مُعْتَدِلٌ"
+   ],
+   "correct": 3,
+   "izoh": "«كَيْفَ» — qanday; javobda holat aytiladi."
+  },
+  {
+   "q": "«هَذِهِ طَائِرَةٌ جَدِيدَةٌ، وَ___ سَرِيعَةٌ»",
+   "opts": [
+    "هَذَا",
+    "هُوَ",
+    "هُمْ",
+    "هِيَ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-1): «طَائِرَةٌ» muannas birlik — «هِيَ»."
+  },
+  {
+   "q": "«___ رَاكِبًا فِي الْحَافِلَةِ؟ — عِشْرُونَ رَاكِبًا»",
+   "opts": [
+    "أَيْنَ",
+    "هَلْ",
+    "كَمْ",
+    "مَنْ"
+   ],
+   "correct": 2,
+   "izoh": "Javob — son; sonni «كَمْ» so'raydi."
+  },
+  {
+   "q": "«___ تُفَضِّلُ الْقِطَارَ؟ — لِأَنَّهُ أَسْرَعُ مِنَ الْحَافِلَةِ»",
+   "opts": [
+    "كَمْ",
+    "لِمَاذَا",
+    "أَيْنَ",
+    "مَتَى"
+   ],
+   "correct": 1,
+   "izoh": "Javob «لِأَنَّ» (chunki) bilan boshlangan — sabab so'ralgan: «لِمَاذَا»."
+  },
+  {
+   "q": "Qaysi gap to'g'ri?",
+   "opts": [
+    "هَذِهِ الْحَقِيبَةُ لِزَمِيلِي",
+    "هَذِهِ الْحَقِيبَةُ عَنْ زَمِيلِي",
+    "هَذِهِ الْحَقِيبَةُ فِي زَمِيلِي",
+    "هَذِهِ الْحَقِيبَةُ إِلَى زَمِيلِي"
+   ],
+   "correct": 0,
+   "izoh": "Egalik-tegishlilik «لِـ» bilan: «لِزَمِيلِي» (hamkasbimniki)."
+  },
+  {
+   "q": "Qaysi jumlada XATO bor?",
+   "opts": [
+    "اِقْتَرَبْتُ مِنَ الْمَطَارِ",
+    "رَجَعْتُ مِنَ الْمَطَارِ",
+    "أَنَا فِي الْمَطَارِ",
+    "ذَهَبْتُ إِلَى الْمَطَارُ"
+   ],
+   "correct": 3,
+   "izoh": "«إِلَى» dan keyin «الْمَطَارِ» (kasra) bo'lishi kerak."
+  },
+  {
+   "q": "«عَلَى الْمَكْتَبِ ___» (stol ustida chipta bor)",
+   "opts": [
+    "تَذْكِرَةٌ",
+    "تَذْكِرَةٍ",
+    "التَّذْكِرَةِ",
+    "تَذْكِرَةً"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A0-5): harfi jar oldinga chiqqan «bor» gapida keyingi ism nakira va zammali."
+  },
+  {
+   "q": "«___ وَصَلَ الْقِطَارُ؟ — نَعَمْ، وَصَلَ»",
+   "opts": [
+    "مَتَى",
+    "هَلْ",
+    "أَيْنَ",
+    "كَيْفَ"
+   ],
+   "correct": 1,
+   "izoh": "Javob «نَعَمْ / لَا» bo'lsa, savol «هَلْ» bilan boshlanadi."
+  },
+  {
+   "q": "«___ صَالَةُ الِانْتِظَارِ؟ — بِجَانِبِ بَوَّابَةِ الدُّخُولِ»",
+   "opts": [
+    "مَتَى",
+    "مَنْ",
+    "أَيْنَ",
+    "كَمْ"
+   ],
+   "correct": 2,
+   "izoh": "Javob joyni bildiradi — «أَيْنَ» (qayerda)."
+  },
+  {
+   "q": "«اِتَّصَلْتُ ___ صَدِيقِي»",
+   "opts": [
+    "مِنْ",
+    "بِـ",
+    "عَنْ",
+    "كَـ"
+   ],
+   "correct": 1,
+   "izoh": "«اِتَّصَلَ بِـ» — …ga qo'ng'iroq qildi: «بِصَدِيقِي»."
+  },
+  {
+   "q": "«الطَّائِرَةُ سَرِيعَةٌ ___» (shamoldek)",
+   "opts": [
+    "عَنِ الرِّيحِ",
+    "فِي الرِّيحِ",
+    "كَالرِّيحِ",
+    "إِلَى الرِّيحِ"
+   ],
+   "correct": 2,
+   "izoh": "O'xshatish — «كَـ» (…dek)."
+  },
+  {
+   "q": "«فِي الْيَوْمِ خَمْسُ ___ إِلَى الرِّيَاضِ»",
+   "opts": [
+    "رِحْلَاتٍ",
+    "رِحْلَةً",
+    "رِحْلَةٍ",
+    "رِحْلَتَانِ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A0-3): 3–10 dan keyin ko'plik, kasrali."
+  },
+  {
+   "q": "«___ أَيْنَ تُسَافِرُ؟ — إِلَى إِسْطَنْبُولَ»",
+   "opts": [
+    "مِنْ",
+    "عَلَى",
+    "فِي",
+    "إِلَى"
+   ],
+   "correct": 3,
+   "izoh": "Javob «إِلَى …» — savol ham «إِلَى أَيْنَ» (qayerga). Harfi jar so'roq vositasidan oldin keladi."
+  },
+  {
+   "q": "«___ هَؤُلَاءِ؟ — هَؤُلَاءِ مُسَافِرُونَ»",
+   "opts": [
+    "مَنْ",
+    "مَا",
+    "مَتَى",
+    "كَيْفَ"
+   ],
+   "correct": 0,
+   "izoh": "Odamlar haqida «مَنْ» so'raladi; «مَا» — aqlsiz narsaga."
+  },
+  {
+   "q": "«___ تُسَافِرُ إِلَى الرِّيَاضِ؟ — بِالْقِطَارِ»",
+   "opts": [
+    "لِمَاذَا",
+    "كَمْ",
+    "كَيْفَ",
+    "مَتَى"
+   ],
+   "correct": 2,
+   "izoh": "Javob qanday (nimada) borishni bildiradi — «كَيْفَ»."
+  },
+  {
+   "q": "«الْقِطَارُ سَرِيعٌ ___» (samolyotdek)",
+   "opts": [
+    "كَالطَّائِرَةُ",
+    "كَالطَّائِرَةِ",
+    "كَطَّائِرَةِ",
+    "كَلطَّائِرَةِ"
+   ],
+   "correct": 1,
+   "izoh": "«كَـ» + «الطَّائِرَةِ» = «كَالطَّائِرَةِ»: alif yoziladi (faqat «لِـ» da tushadi)."
+  },
+  {
+   "q": "«___ قِطَارٍ تَرْكَبُ؟ — أَرْكَبُ الْقِطَارَ السَّرِيعَ»",
+   "opts": [
+    "كَمْ",
+    "هَلْ",
+    "مَا",
+    "أَيَّ"
+   ],
+   "correct": 3,
+   "izoh": "Bir nechtadan birini tanlash — «أَيّ» (qaysi); undan keyingi ism kasrali: «أَيَّ قِطَارٍ»."
+  }
+ ]
 }
