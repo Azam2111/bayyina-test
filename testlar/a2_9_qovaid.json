@@ -1,557 +1,975 @@
 {
-  "title": "Qovaid — A2 9-dars",
-  "otish": 80,
-  "vaqt": 40,
-  "questions": [
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nرَأَيْتُ فَقِيرًا وَأَعْطَيْتُهُ نُقُودًا. Gapidagi \"فَقِيرًا\" va \"نُقُودًا\" so'zlari qaysi turga kiradi?",
-      "opts": [
-        "فَقِيرًا - Ma'rifa, نُقُودًا - Nakira",
-        "Ikkalasi ham Nakira (النكرة)",
-        "فَقِيرًا - Nakira, نُقُودًا - Ma'rifa",
-        "Ikkalasi ham Ma'rifa (المعرفة)"
-      ],
-      "correct": 1,
-      "izoh": "«فَقِيرًا», «نُقُودًا» — tanvinli, ikkalasi ham nakira."
-    },
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nهُوَ طَالِبٌ فِي الجَامِعَةِ. Gapidagi ma'rifa (المعرفة) so'zlarni aniqlang:",
-      "opts": [
-        "هُوَ va الجَامِعَةِ",
-        "Faqat طَالِبٌ",
-        "طَالِبٌ va الجَامِعَةِ",
-        "Faqat هُوَ"
-      ],
-      "correct": 0,
-      "izoh": "Maʼrifa: «هُوَ» (olmosh) va «الجَامِعَةِ»."
-    },
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nسَمِعْتُ بَرْنَامَجًا عِلْمِيًّا فِي المِذْياعِ. Gapidagi nakira (النكرة) so'zlar qaysilar?",
-      "opts": [
-        "بَرْنَامَجًا va عِلْمِيًّا",
-        "Faqat المِذْياعِ",
-        "عِلْمِيًّا va المِذْياعِ",
-        "بَرْنَامَجًا va المِذْياعِ"
-      ],
-      "correct": 0,
-      "izoh": "Nakira: «بَرْنَامَجًا», «عِلْمِيًّا»."
-    },
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nسَأَشْتَرِي سَيَّارَةً جَدِيدَةً. Gapini butunlay ma'rifa ko'rinishiga keltirilgan to'g'ri variantni toping:",
-      "opts": [
-        "سَأَشْتَرِي سَيَّارَةً الجَدِيدَةَ",
-        "سَأَشْتَرِي سَيَّارَةٌ جَدِيدَةٌ",
-        "سَأَشْتَرِي السَّيَّارَةَ جَدِيدَةً",
-        "سَأَشْتَرِي السَّيَّارَةَ الجَدِيدَةَ"
-      ],
-      "correct": 3,
-      "izoh": "Toʻliq maʼrifa: «السَّيَّارَةَ الجَدِيدَةَ»."
-    },
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nالحَدائِقُ المُغْلَقَةُ مَلِيئَةٌ بِالآثَارِ. Gapidagi nakira (النكرة) so'z qaysi?",
-      "opts": [
-        "مَلِيئَةٌ",
-        "الحَدائِقُ",
-        "الآثَارِ",
-        "المُغْلَقَةُ"
-      ],
-      "correct": 0,
-      "izoh": "Nakira: «مَلِيئَةٌ»."
-    },
-    {
-      "q": "Gapdagi soʻzlarning maʼrifa/nakira holatini aniqlang:\nتَنَاوَلْتُ الفُطُورَ فِي مَطْعَمٍ صَغِيرٍ. Gapidagi ma'rifa va nakira tarkibi to'g'ri berilgan variantni toping:",
-      "opts": [
-        "الفُطُورَ (Ma'rifa) / مَطْعَمٍ، صَغِيرٍ (Nakira)",
-        "Barcha so'zlar Ma'rifa holatida",
-        "الفُطُورَ (Nakira) / مَطْعَمٍ (Ma'rifa)",
-        "مَطْعَمٍ (Ma'rifa) / صَغِيرٍ (Nakira)"
-      ],
-      "correct": 0,
-      "izoh": "«الفُطُورَ» maʼrifa; «مَطْعَمٍ, صَغِيرٍ» nakira."
-    },
-    {
-      "q": "Boʻsh joylarga maʼno va eʼrob jihatidan mos soʻzlarni tanlang:\nنَزَلَ ............ وَنَحْنُ قَرِيبُونَ مِنَ ............",
-      "opts": [
-        "المَطَارُ / المَطَارِ",
-        "المَطَرُ / المَطَرِ",
-        "المَطَارُ / المَطَرِ",
-        "المَطَرُ / المَطَارِ"
-      ],
-      "correct": 3,
-      "izoh": "«نَزَلَ المَطَرُ ... مِنَ المَطَارِ»."
-    },
-    {
-      "q": "Boʻsh joylarga maʼno va eʼrob jihatidan mos soʻzlarni tanlang:\nأَكَلْتُ ............ فِي ............",
-      "opts": [
-        "الفُنْدُقَ / البُنْدُقِ",
-        "البُنْدُقَ / البُنْدُقِ",
-        "البُنْدُقَ / الفُنْدُقِ",
-        "الفُنْدُقَ / الفُنْدُقِ"
-      ],
-      "correct": 2,
-      "izoh": "«أَكَلْتُ البُنْدُقَ فِي الفُنْدُقِ»."
-    },
-    {
-      "q": "Boʻsh joylarga maʼno va eʼrob jihatidan mos soʻzlarni tanlang:\nذَهَبْنَا إِلَى رِحْلَةٍ ............ فِي السَّاعَةِ ............",
-      "opts": [
-        "رَائِعَةٍ / رَائِعَةٍ",
-        "الرَّابِعَةِ / الرَّابِعَةِ",
-        "الرَّابِعَةِ / رَائِعَةٍ",
-        "رَائِعَةٍ / الرَّابِعَةِ"
-      ],
-      "correct": 3,
-      "izoh": "«رِحْلَةٍ رَائِعَةٍ ... السَّاعَةِ الرَّابِعَةِ»."
-    },
-    {
-      "q": "Boʻsh joylarga maʼno va eʼrob jihatidan mos soʻzlarni tanlang:\nتَكَلَّمَ ............ عَنْ رِحْلَاتِهِ حَوْلَ ............",
-      "opts": [
-        "العَالِمُ / العَالَمِ",
-        "العَالَمُ / العَالَمِ",
-        "العَالِمُ / العَالِمِ",
-        "العَالَمُ / العَالِمِ"
-      ],
-      "correct": 0,
-      "izoh": "«العَالِمُ» (olim) ... «العَالَمِ» (dunyo)."
-    },
-    {
-      "q": "Boʻsh joylarga maʼno va eʼrob jihatidan mos soʻzlarni tanlang:\nتَنَاوَلْنَا ............ بَعْدَ صَلَاةِ ............",
-      "opts": [
-        "العِشَاءَ / العَشَاءِ",
-        "العَشَاءَ / العِشَاءِ",
-        "العَشَاءَ / العَشَاءِ",
-        "العِشَاءَ / العِشَاءِ"
-      ],
-      "correct": 1,
-      "izoh": "«العَشَاءَ» (kechki ovqat) ... «العِشَاءِ» (xufton)."
-    },
-    {
-      "q": "Soʻzlardan toʻgʻri tartibli gap tuzing:\n\"أَجْمَلَ - عَنْ - سَأُحَدِّثُكُمْ - فِي - الرِّحْلَاتِ - حَيَاتِي\" so'zlarining to'g'ri tartibi qaysi javobda berilgan?",
-      "opts": [
-        "سَأُحَدِّثُكُمْ عَنْ أَجْمَلِ الرِّحْلَاتِ فِي حَيَاتِي.",
-        "أَجْمَلِ الرِّحْلَاتِ سَأُحَدِّثُكُمْ فِي حَيَاتِي عَنْ.",
-        "فِي حَيَاتِي سَأُحَدِّثُكُمْ عَنْ الرِّحْلَاتِ أَجْمَلَ.",
-        "عَنْ أَجْمَلِ الرِّحْلَاتِ فِي حَيَاتِي سَأُحَدِّثُكُمْ."
-      ],
-      "correct": 0,
-      "izoh": "«سَأُحَدِّثُكُمْ عَنْ أَجْمَلِ الرِّحْلَاتِ فِي حَيَاتِي»."
-    },
-    {
-      "q": "Soʻzlardan toʻgʻri tartibli gap tuzing:\n\"الصِّنَاعَاتُ - يَشْتَمِلُ - السُّوقُ - عَلَى - الجَمِيلَةِ - اليَدَوِيَّةِ\" so'zlarining to'g'ri ketma-ketligi:",
-      "opts": [
-        "يَشْتَمِلُ عَلَى السُّوقُ الصِّنَاعَاتِ الجَمِيلَةِ اليَدَوِيَّةِ.",
-        "الصِّنَاعَاتِ اليَدَوِيَّةِ الجَمِيلَةِ يَشْتَمِلُ عَلَى السُّوقُ.",
-        "يَشْتَمِلُ السُّوقُ عَلَى الصِّنَاعَاتِ اليَدَوِيَّةِ الجَمِيلَةِ.",
-        "السُّوقُ عَلَى الصِّنَاعَاتِ يَشْتَمِلُ اليَدَوِيَّةِ الجَمِيلَةِ."
-      ],
-      "correct": 2,
-      "izoh": "«يَشْتَمِلُ السُّوقُ عَلَى الصِّنَاعَاتِ اليَدَوِيَّةِ الجَمِيلَةِ»."
-    },
-    {
-      "q": "Soʻzlardan toʻgʻri tartibli gap tuzing:\n\"مَدِينَةِ - تَقَعُ - مِنَ - الأَهْرَامَاتُ - بِالقُرْبِ - الجِيزَةِ\" so'zlarining to'g'ri strukturasi:",
-      "opts": [
-        "الأَهْرَامَاتُ مِنْ مَدِينَةِ تَقَعُ بِالقُرْبِ الجِيزَةِ.",
-        "مِنْ مَدِينَةِ الجِيزَةِ بِالقُرْبِ تَقَعُ الأَهْرَامَاتُ.",
-        "بِالقُرْبِ تَقَعُ الأَهْرَامَاتُ مَدِينَةِ مِنْ الجِيزَةِ.",
-        "تَقَعُ الأَهْرَامَاتُ بِالقُرْبِ مِنْ مَدِينَةِ الجِيزَةِ."
-      ],
-      "correct": 3,
-      "izoh": "«تَقَعُ الأَهْرَامَاتُ بِالقُرْبِ مِنْ مَدِينَةِ الجِيزَةِ»."
-    },
-    {
-      "q": "Soʻzlardan toʻgʻri tartibli gap tuzing:\n\"العُمَّالُ - وَ - كَانَ - مَسَاءً - يَعْمَلُونَ - صَبَاحًا\" so'zlarining to'g'ri birikuvi:",
-      "opts": [
-        "صَبَاحًا وَمَسَاءً كَانَ يَعْمَلُونَ العُمَّالُ.",
-        "العُمَّالُ كَانَ صَبَاحًا يَعْمَلُونَ وَمَسَاءً.",
-        "يَعْمَلُونَ العُمَّالُ كَانَ صَبَاحًا وَمَسَاءً.",
-        "كَانَ العُمَّالُ يَعْمَلُونَ صَبَاحًا وَمَسَاءً."
-      ],
-      "correct": 3,
-      "izoh": "«كَانَ العُمَّالُ يَعْمَلُونَ صَبَاحًا وَمَسَاءً»."
-    },
-    {
-      "q": "Mos kelmaydigan (begona) variantni toping:\n(Mavzuga oid ochiq savol testi) Quyidagi variantlardan qaysi biri tarixiy va sayyohlik maskani (مَكَان تَارِيخِيّ وَسِيَاحِيّ) hisoblanmaydi?",
-      "opts": [
-        "المَطَارُ الدَّوْلِيُّ (Xalqaro aeroport)",
-        "القَلْعَةُ التَّارِيخِيَّةُ (Tarixiy qal'a)",
-        "المَتْحَفُ المِصْرِيُّ (Misr muzeyi)",
-        "الأَهْرَامَاتُ (Ehromlar)"
-      ],
-      "correct": 0,
-      "izoh": "«المَطَارُ» — tarixiy/sayyohlik maskani emas."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nأَنَا أُحِبُّ يَوْمَ العُطْلَةِ؛ ............ لَهُ يَوْمُ الرَّاحَةِ عِنْدِي.",
-      "opts": [
-        "كَيْ",
-        "لِأَنَّهُ",
-        "لِأَنْ",
-        "لِيَكُونَ"
-      ],
-      "correct": 1,
-      "izoh": "Sabab (ism): «لِأَنَّهُ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nأَخْرُجُ مُبَكِّرًا مِنَ البَيْتِ؛ ............ أُمَارِسَ الرِّيَاضَةَ.",
-      "opts": [
-        "لِأَنَّنِي",
-        "لِأَنَّ",
-        "لِأَنَّهُ",
-        "لِأُمارِسَ"
-      ],
-      "correct": 3,
-      "izoh": "Maqsad (لِ + muzori): «لِأُمَارِسَ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nتَأَخَّرْتُ عَنِ الدَّرْسِ؛ ............ الطَّرِيقَ كَانَ مُزْدَحِمًا.",
-      "opts": [
-        "لِـ",
-        "لِأَنَّ",
-        "كَيْ",
-        "لِأَنْ"
-      ],
-      "correct": 1,
-      "izoh": "Sabab + jumla: «لِأَنَّ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nسَيَذْهَبُ سَعِيدٌ إِلَى البَحْرِ؛ ............ يَسْتَمْتِعَ بِالمَنْظَرِ الجَمِيلِ.",
-      "opts": [
-        "لِأَنَّ الَّذِي",
-        "لِيَسْتَمْتِعَ",
-        "لِأَنَّهُ",
-        "لِأَنَّ"
-      ],
-      "correct": 1,
-      "izoh": "Maqsad: «لِيَسْتَمْتِعَ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nانْتَظِرْنِي سَاعَةً؛ ............ مَشْغُولٌ الآنَ.",
-      "opts": [
-        "كَيْ",
-        "لِأَنَّنِي",
-        "لِأُمَارِسَ",
-        "لِـ"
-      ],
-      "correct": 1,
-      "izoh": "Sabab: «لِأَنَّنِي»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nوَهُنَاكَ أَنْوَاعٌ كَثِيرَةٌ مِنَ الرِّيَاضَةِ؛ ............ تُنَاسِبَ جَمِيعَ النَّاسِ.",
-      "opts": [
-        "لِتُنَاسِبَ",
-        "كَيْ لَا",
-        "لِأَنَّهَا",
-        "لِأَنَّ"
-      ],
-      "correct": 0,
-      "izoh": "Maqsad: «لِتُنَاسِبَ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nسَنَذْهَبُ إِلَى المَطْعَمِ؛ ............ نَتَنَاوَلَ فِيهِ طَعَامَ العَشَاءِ.",
-      "opts": [
-        "لِأَنَّهُ",
-        "لِأَنَّنَا",
-        "لِأَنَّ",
-        "لِنَتَنَاوَلَ"
-      ],
-      "correct": 3,
-      "izoh": "Maqsad: «لِنَتَنَاوَلَ»."
-    },
-    {
-      "q": "Boʻsh joyga mos sabab/maqsad bogʻlovchisini tanlang:\nTarkibida \"كَيْ\" bog'lovchisi to'g'ri qo'llanilgan va oxiri nasb bo'lgan grammatik jumlani aniqlang:",
-      "opts": [
-        "سَافَرْتُ إِلَى القَاهِرَةِ لِأَنَّ كَيْ أَتَعَلَّمَ.",
-        "سَافَرْتُ إِلَى القَاهِرَةِ كَيْ أَتَعَلَّمُ العَرَبِيَّةَ.",
-        "سَافَرْتُ إِلَى القَاهِرَةِ كَيْ أَتَعَلَّمَ العَرَبِيَّةَ.",
-        "سَافَرْتُ إِلَى القَاهِرَةِ كَيْ العَرَبِيَّةِ."
-      ],
-      "correct": 2,
-      "izoh": "«كَيْ» + muzori mansub: «كَيْ أَتَعَلَّمَ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"شَرِبَ طِفْلٌ عَصِيرًا\" gapidagi \"طِفْلٌ\" so'zini \"أَلْ\" artikli bilan ma'rifa qiling:",
-      "opts": [
-        "شَرِبَ الطِّفْلٌ عَصِيرًا.",
-        "شَرِبَ الطِّفْلُ عَصِيرًا.",
-        "شَرِبَ طِفْلٌ العَصِيرَ.",
-        "شَرِبَ طِفْلًا عَصِيرًا."
-      ],
-      "correct": 1,
-      "izoh": "«ال» bilan maʼrifa: «الطِّفْلُ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"اشْتَرَتِ امْرَأَةٌ فَاكِهَةً وَخُبْزًا\" gapidagi \"امْرَأَةٌ\" o'rniga atoqli ism (اسم علم) qo'ying:",
-      "opts": [
-        "اشْتَرَتْ هَذِهِ فَاكِهَةً وَخُبْزًا.",
-        "اشْتَرَتِ المَرْأَةُ فَاكِهَةً وَخُبْزًا.",
-        "اشْتَرَتِ الَّتِي فَاكِهَةً وَخُبْزًا.",
-        "اشْتَرَتْ فَاطِمَةُ فَاكِهَةً وَخُبْزًا."
-      ],
-      "correct": 3,
-      "izoh": "Atoqli ism: «فَاطِمَةُ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"هُمْ عَامِلُونَ نَشِيطُونَ\" gapidagi kishilik olmoshi o'rniga mos ko'rsatish olmoshini (اسم إشارة) qo'ying:",
-      "opts": [
-        "هَذِهِ عَامِلُونَ نَشِيطُونَ.",
-        "هَذَا عَامِلُونَ نَشِيطُونَ.",
-        "هَؤُلَاءِ عَامِلُونَ نَشِيطُونَ.",
-        "اللَّذَانِ عَامِلُونَ نَشِيطُونَ."
-      ],
-      "correct": 2,
-      "izoh": "Ishora olmoshi: «هَؤُلَاءِ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"فَعَلْتُ وَاجِبًا أَعْطَاهُ مُعَلِّمِي أَمْسِ\" gapiga qaysi nisbiy olmosh (اسم موصول) mos keladi?",
-      "opts": [
-        "فَعَلْتُ الوَاجِبَ الَّذِينَ أَعْطَاهُ مُعَلِّمِي أَمْسِ.",
-        "فَعَلْتُ وَاجِبًا هَذَا أَعْطَاهُ مُعَلِّمِي أَمْسِ.",
-        "فَعَلْتُ الوَاجِبَ الَّذِي أَعْطَاهُ مُعَلِّمِي أَمْسِ.",
-        "فَعَلْتُ وَاجِبًا الَّتِي أَعْطَاهُ مُعَلِّمِي أَمْسِ."
-      ],
-      "correct": 2,
-      "izoh": "Nisbiy olmosh: «الَّذِي»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"سَمِعْتُ أَخْبَارًا جَدِيدَةً\" gapidagi \"أَخْبَارًا\" so'zini \"أَلْ\" artikli orqali ma'rifa qiling:",
-      "opts": [
-        "سَمِعْتُ أَخْبَارَ الجَدِيدَةِ.",
-        "سَمِعْتُ الأَخْبَارَ الجَدِيدَةَ.",
-        "سَمِعْتُ أَخْبَارًا الجَدِيدَةَ.",
-        "سَمِعْتُ الأَخْبَارٌ جَدِيدَةً."
-      ],
-      "correct": 1,
-      "izoh": "«ال» bilan: «الأَخْبَارَ الجَدِيدَةَ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"اشْتَرَتْ فَاطِمَةُ نَظَّارَةً\" gapidagi \"نَظَّارَةً\" so'ziga ko'rsatish olmoshi (اسم إشارة) qo'shilgan to'g'ri variantni toping:",
-      "opts": [
-        "اشْتَرَتْ فَاطِمَةُ ذَلِكَ نَظَّارَةً.",
-        "اشْتَرَتْ فَاطِمَةُ هَذِهِ النَّظَّارَةَ.",
-        "اشْتَرَتْ فَاطِمَةُ هَؤُلَاءِ نَظَّارَةً.",
-        "اشْتَرَتْ فَاطِمَةُ هَذَا نَظَّارَةً."
-      ],
-      "correct": 1,
-      "izoh": "Ishora: «هَذِهِ النَّظَّارَةَ»."
-    },
-    {
-      "q": "Koʻrsatilgan oʻzgartirishni toʻgʻri bajaring:\n\"وَصَلَ مُوَظَّفٌ إِلَى الشَّرِكَةِ\" gapidagi \"مُوَظَّفٌ\" so'zi o'rniga atoqli ot (اسم علم) qo'ying:",
-      "opts": [
-        "وَصَلَ الَّذِي إِلَى الشَّرِكَةِ.",
-        "وَصَلَ هَذَا إِلَى الشَّرِكَةِ.",
-        "وَصَلَ المُوَظَّفُ إِلَى الشَّرِكَةِ.",
-        "وَصَلَ أَحْمَدُ إِلَى الشَّرِكَةِ."
-      ],
-      "correct": 3,
-      "izoh": "Atoqli ism: «أَحْمَدُ»."
-    },
-    {
-      "q": "Grammatik xatolik bor gapni toping:\nQaysi gapda \"Alif-Lam (ال)\" artikli va \"Tanween\" bitta so'zda kelib, xatolik yuzaga keltirgan? (Qoidaga ko'ra, bular birga kelmaydi)",
-      "opts": [
-        "ذَهَبَ الأَطْفَالٌ إِلَى حَدِيقَةٍ.",
-        "تَعِيشُ العَائِلَةُ فِي بَيْتٍ وَاسِعٍ.",
-        "ذَهَبَ الأَطْفَالُ إِلَى الحَدِيقَةِ.",
-        "صَدِيقِي مَاهِرٌ فِي عَمَلِهِ."
-      ],
-      "correct": 0,
-      "izoh": "Xato: «الأَطْفَالٌ» — «ال» va tanvin birga kelmaydi."
-    },
-    {
-      "q": "Grammatik xatolik bor gapni toping:\nQaysi gapda \"Alif-Lam (ال)\" va \"Egalik olmoshi (ضمير متصل)\" noto'g'ri jamlangan?",
-      "opts": [
-        "الصَّدِيقُ يُكْرِمُنِي.",
-        "صَدِيقِي مَاهِرٌ فِي عَمَلِهِ.",
-        "تَعِيشُ العَائِلَةُ فِي البَيْتِ.",
-        "صَدِيقِي مَاهِرٌ فِي العَمَلِهِ."
-      ],
-      "correct": 3,
-      "izoh": "Xato: «العَمَلِهِ» — «ال» va egalik olmoshi birga kelmaydi."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"هَؤُلَاءِ أَصْدِقَاءُ مُخْلِصُونَ\" gapidagi \"هَؤُلَاءِ\" so'zining turi nima?",
-      "opts": [
-        "Atoqli ot (اسم علم)",
-        "Ko'rsatish olmoshi (اسم إشارة)",
-        "Kishilik olmoshi (ضمير)",
-        "Nisbiy olmosh (اسم موصول)"
-      ],
-      "correct": 1,
-      "izoh": "«هَؤُلَاءِ» — ishora olmoshi."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"رَأَى الطِّفْلُ حُلْمًا جَمِيلًا\" gapidagi \"الطِّفْلُ\" so'zining turi nima?",
-      "opts": [
-        "Atoqli ot (اسم علم)",
-        "Kishilik olmoshi (ضمير)",
-        "\"ال\" artikli bilan aniqlangan ot (معرف بـ أل)",
-        "Izofa (المضاف)"
-      ],
-      "correct": 2,
-      "izoh": "«الطِّفْلُ» — «ال» bilan aniqlangan ot."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"أَنْتَ كَتَبْتَ شِعْرًا جَيِّدًا\" gapidagi \"أَنْتَ\" so'zining turi nima?",
-      "opts": [
-        "Nisbiy olmosh (اسم موصول)",
-        "Kishilik olmoshi (ضمير)",
-        "Ko'rsatish olmoshi (اسم إشارة)",
-        "Atoqli ot (اسم علم)"
-      ],
-      "correct": 1,
-      "izoh": "«أَنْتَ» — kishilik olmoshi."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"الَّذِي يَسْتَيْقِظُ مُبَكِّرًا نَشِيطٌ\" gapidagi \"الَّذِي\" so'zining turi nima?",
-      "opts": [
-        "Kishilik olmoshi (ضمير)",
-        "Nisbiy olmosh (اسم موصول)",
-        "Ma'lum ot",
-        "Ko'rsatish olmoshi (اسم إشارة)"
-      ],
-      "correct": 1,
-      "izoh": "«الَّذِي» — nisbiy olmosh."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"هَذَا كُرْسِيٌّ جَدِيدٌ\" gapidagi \"هَذَا\" so'zining turi nima?",
-      "opts": [
-        "Atoqli ot (اسم علم)",
-        "Ko'rsatish olmoshi (اسم إشارة)",
-        "Nisbiy olmosh (اسم موصول)",
-        "Kishilik olmoshi (ضمير)"
-      ],
-      "correct": 1,
-      "izoh": "«هَذَا» — ishora olmoshi."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"سَامِرٌ يَدْرُسُ فِي مِصْرَ\" gapidagi \"سَامِرٌ\" va \"مِصْرَ\" so'zlarining turi nima?",
-      "opts": [
-        "Atoqli otlar (اسم علم)",
-        "\"ال\" artikli bilan kelgan otlar",
-        "Ko'rsatish olmoshlari",
-        "Kishilik olmoshlari"
-      ],
-      "correct": 0,
-      "izoh": "«سَامِرٌ», «مِصْرَ» — atoqli otlar."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"أَنْتُنَّ مُصِيفَاتٌ\" gapidagi \"أَنْتُنَّ\" so'zining turi nima?",
-      "opts": [
-        "Nisbiy olmosh (اسم موصول)",
-        "Ko'rsatish olmoshi (اسم إشارة)",
-        "Atoqli ot (اسم علم)",
-        "Kishilik olmoshi (ضمير)"
-      ],
-      "correct": 3,
-      "izoh": "«أَنْتُنَّ» — kishilik olmoshi."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"المُعَلِّمَانِ جَدِيدَانِ\" gapidagi \"المُعَلِّمَانِ\" so'zining turi nima?",
-      "opts": [
-        "Kishilik olmoshi (ضمير)",
-        "\"ال\" artikli bilan aniqlangan ot (معرف بـ أل)",
-        "Izofa (المضاف إلى معرفة)",
-        "Atoqli ot (اسم علم)"
-      ],
-      "correct": 1,
-      "izoh": "«المُعَلِّمَانِ» — «ال» bilan aniqlangan ot."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"قَلَمِي لَوْنُهُ أَخْضَرُ\" gapidagi \"قَلَمِي\" so'zining ma'rifa bo'lish sababi nima?",
-      "opts": [
-        "Ma'rifa olmoshga izofa qilingani uchun (المضاف إلى معرفة)",
-        "\"ال\" artikli borligi uchun",
-        "Kishilik olmoshi bo'lgani uchun",
-        "Atoqli ot bo'lgani uchun"
-      ],
-      "correct": 0,
-      "izoh": "«قَلَمِي» — maʼrifa olmoshga izofa."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"الشَّقَّةُ فِي الطَّابِقِ الخَامِسِ\" gapidagi \"الشَّقَّةُ، الطَّابِقِ، الخَامِسِ\" otlarining turi nima?",
-      "opts": [
-        "Nisbiy olmoshlar",
-        "Kishilik olmoshlari",
-        "\"ال\" artikli bilan aniqlangan otlar (معرف بـ أل)",
-        "Izofa qilingan otlar"
-      ],
-      "correct": 2,
-      "izoh": "«ال» bilan aniqlangan otlar."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"رِحْلَتِي مَعَ أَصْدِقَائِي مُمْتِعَةٌ\" gapidagi \"رِحْلَتِي\" va \"أَصْدِقَائِي\" qaysi guruhga kiradi?",
-      "opts": [
-        "\"ال\" artikli bilan kelgan otlar",
-        "Izofa orqali aniqlangan otlar (المضاف إلى معرفة)",
-        "Ko'rsatish olmoshlari",
-        "Atoqli otlar (اسم علم)"
-      ],
-      "correct": 1,
-      "izoh": "«رِحْلَتِي», «أَصْدِقَائِي» — izofa orqali maʼrifa."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"هَذَا رَجُلٌ رِيَاضِيٌّ\" gapidagi yagona ma'rifa (aniq) so'zni toping:",
-      "opts": [
-        "Gapda ma'rifa so'z qatnashmagan",
-        "رِيَاضِيٌّ",
-        "رَجُلٌ",
-        "هَذَا"
-      ],
-      "correct": 3,
-      "izoh": "«هَذَا» — yagona maʼrifa (ishora)."
-    },
-    {
-      "q": "Koʻrsatilgan soʻzning turini yoki maʼrifa sababini aniqlang:\n\"مُعَلِّمُ الطُّلَّابِ نَشِيطٌ\" gapidagi \"مُعَلِّمُ\" so'zi qanday qilib ma'rifaga aylangan?",
-      "opts": [
-        "Ismi alam bo'lishi orqali",
-        "Ma'rifa otga (\"الطُّلَّابِ\" ga) izofa bo'lish orqali (المضاف إلى معرفة)",
-        "\"ال\" artikli qo'shilishi orqali",
-        "Ko'rsatish olmoshi bo'lishi orqali"
-      ],
-      "correct": 1,
-      "izoh": "«مُعَلِّمُ» — maʼrifa otga izofa orqali maʼrifa."
-    },
-    {
-      "q": "Nakira gapni toʻliq maʼrifa shakliga keltiring:\nأَكَلَ عَامِلٌ طَعَامًا.",
-      "opts": [
-        "أَكَلَ العَامِلٌ الطَّعَامٌ.",
-        "أَكَلَ عَامِلٌ الطَّعَامَ.",
-        "أَكَلَ العَامِلُ طَعَامًا.",
-        "أَكَلَ العَامِلُ الطَّعَامَ."
-      ],
-      "correct": 3,
-      "izoh": "«أَكَلَ العَامِلُ الطَّعَامَ»."
-    },
-    {
-      "q": "Nakira gapni toʻliq maʼrifa shakliga keltiring:\nبَيْتٌ صَغِيرٌ أَمَامَ مَسْجِدٍ.",
-      "opts": [
-        "البَيْتُ الصَّغِيرُ أَمَامَ المَسْجِدِ.",
-        "البَيْتِ الصَّغِيرِ أَمَامَ المَسْجِدَ.",
-        "البَيْتُ صَغِيرٌ أَمَامَ مَسْجِدٍ.",
-        "بَيْتٌ الصَّغِيرُ أَمَامَ مَسْجِدٍ."
-      ],
-      "correct": 0,
-      "izoh": "«البَيْتُ الصَّغِيرُ أَمَامَ المَسْجِدِ»."
-    },
-    {
-      "q": "Nakira gapni toʻliq maʼrifa shakliga keltiring:\nجَلَسَ طَالِبٌ عَلَى مَقْعَدٍ.",
-      "opts": [
-        "جَلَسَ طَالِبٌ عَلَى المَقْعَدِ.",
-        "جَلَسَ الطَّالِبٌ عَلَى المَقْعَدٌ.",
-        "جَلَسَ الطَّالِبُ عَلَى المَقْعَدِ.",
-        "جَلَسَ الطَّالِبُ عَلَى مَقْعَدٍ."
-      ],
-      "correct": 2,
-      "izoh": "«جَلَسَ الطَّالِبُ عَلَى المَقْعَدِ»."
-    },
-    {
-      "q": "Nakira gapni toʻliq maʼrifa shakliga keltiring:\nرَأَيْتُ عُصْفُورًا عَلَى شَجَرَةٍ.",
-      "opts": [
-        "رَأَيْتُ العُصْفُورَ عَلَى الشَّجَرَةِ.",
-        "رَأَيْتُ عُصْفُورًا عَلَى الشَّجَرَةِ.",
-        "رَأَيْتُ العُصْفُورٌ عَلَى الشَّجَرَةٌ.",
-        "رَأَيْتُ العُصْفُورَ عَلَى شَجَرَةٍ."
-      ],
-      "correct": 0,
-      "izoh": "«رَأَيْتُ العُصْفُورَ عَلَى الشَّجَرَةِ»."
-    }
-  ]
+ "title": "Qovaid — A2 9-dars",
+ "otish": 80,
+ "vaqt": 88,
+ "questions": [
+  {
+   "q": "«لِأَنَّ، لِـ، كَيْ» nimani bildiradi?",
+   "opts": [
+    "Makonni",
+    "Sabab yoki maqsadni",
+    "Inkorni",
+    "Zamonni"
+   ],
+   "correct": 1,
+   "izoh": "Darslik: «أَدَوَاتٌ تُفِيدُ مَعْنَى التَّعْلِيلِ»."
+  },
+  {
+   "q": "Qaysi gapda xato YO'Q?",
+   "opts": [
+    "فِي الْمَدِينَةِ حَدِيقَةٌ جَمِيلَةٌ",
+    "فِي الْمَدِينَةٍ حَدِيقَةٌ جَمِيلَةٌ",
+    "فِي مَدِينَةِ حَدِيقَةٌ الْجَمِيلَةُ",
+    "فِي الْمَدِينَةِ الْحَدِيقَةٌ جَمِيلَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "Alif-lomli ismda tanvin bo'lmaydi; nakira mavsufning sifati ham nakira."
+  },
+  {
+   "q": "«هَذَا رَجُلٌ رِيَاضِيٌّ» gapida ma'rifa qaysi?",
+   "opts": [
+    "رَجُلٌ رِيَاضِيٌّ",
+    "رِيَاضِيٌّ",
+    "رَجُلٌ",
+    "هَذَا"
+   ],
+   "correct": 3,
+   "izoh": "Ishora ismi — ma'rifa; «رَجُلٌ رِيَاضِيٌّ» — nakira xabar va sifati."
+  },
+  {
+   "q": "«ذَهَبَ الْأَطْفَالُ إِلَى ___»",
+   "opts": [
+    "حَدِيقَةِ",
+    "الْحَدِيقَتِهِمْ",
+    "الْحَدِيقَةِ",
+    "الْحَدِيقَةٍ"
+   ],
+   "correct": 2,
+   "izoh": "Alif-lomli — tanvinsiz kasra; alif-lom zamir bilan birga kelmaydi."
+  },
+  {
+   "q": "«قَرَأْتُ قِصَّةً قَصِيرَةً فِي الْمَكْتَبَةِ» gapida ma'rifa ism qaysi?",
+   "opts": [
+    "قِصَّةً",
+    "قَصِيرَةً",
+    "الْمَكْتَبَةِ",
+    "قِصَّةً قَصِيرَةً"
+   ],
+   "correct": 2,
+   "izoh": "Alif-lomli — ma'rifa."
+  },
+  {
+   "q": "«أُرِيدُ ___ هَذَا الْكِتَابِ»",
+   "opts": [
+    "الْقِرَاءَةَ",
+    "قِرَاءَةَ",
+    "قِرَاءَةً",
+    "قِرَاءَةُ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A2-8): masdar — maf'ul bih (mansub) va muzof (tanvinsiz, alif-lomsiz)."
+  },
+  {
+   "q": "«دَخَلَ رَجُلٌ طَوِيلٌ» — nakirani ma'rifaga aylantiring.",
+   "opts": [
+    "دَخَلَ الرَّجُلُ الطَّوِيلُ",
+    "دَخَلَ الرَّجُلُ طَوِيلٌ",
+    "دَخَلَ رَجُلٌ الطَّوِيلُ",
+    "دَخَلَ الرَّجُلٌ الطَّوِيلٌ"
+   ],
+   "correct": 0,
+   "izoh": "Mavsuf ma'rifa bo'lsa, sifati ham ma'rifa; alif-lom bilan tanvin birga kelmaydi."
+  },
+  {
+   "q": "«الطُّلَّابُ يَذْهَبُونَ إِلَى الْمَكْتَبَةِ ___»",
+   "opts": [
+    "لِأَنَّ يَقْرَؤُوا",
+    "لِيَقْرَؤُونَ",
+    "لِيَقْرَأَ",
+    "لِيَقْرَؤُوا"
+   ],
+   "correct": 3,
+   "izoh": "Mansubda nun tushadi: «لِيَقْرَؤُوا»."
+  },
+  {
+   "q": "«كِتَابٌ» so'zini ma'rifa qilishning qaysi usuli XATO?",
+   "opts": [
+    "كِتَابُ الطَّالِبِ",
+    "الْكِتَابُ",
+    "الْكِتَابُهُ",
+    "كِتَابُهُ"
+   ],
+   "correct": 2,
+   "izoh": "Alif-lom YOKI izofa — ikkalasi birga emas."
+  },
+  {
+   "q": "«يَا أَحْمَدُ، أَنَا أُحِبُّكَ ___ صَدِيقٌ مُخْلِصٌ»",
+   "opts": [
+    "لِأَنَّكَ",
+    "لِأَنَّكِ",
+    "لِأَنَّنَا",
+    "لِأَنَّهَا"
+   ],
+   "correct": 0,
+   "izoh": "Ahmadga murojaat — «لِأَنَّكَ»."
+  },
+  {
+   "q": "«يُحِبُّ الطُّلَّابُ أَنْ ___ فِي الْحَدِيقَةِ»",
+   "opts": [
+    "تَجْلِسُوا",
+    "يَجْلِسُونَ",
+    "يَجْلِسَ",
+    "يَجْلِسُوا"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A2-8): «أَنْ» dan keyin nun tushadi."
+  },
+  {
+   "q": "Qaysi gap to'g'ri?",
+   "opts": [
+    "يَسْكُنُ جَدِّي فِي قَرْيَةٍ الصَّغِيرَةِ",
+    "يَسْكُنُ جَدِّي فِي قَرْيَةٍ صَغِيرَةٍ",
+    "يَسْكُنُ جَدِّي فِي الْقَرْيَةٍ صَغِيرَةٍ",
+    "يَسْكُنُ الْجَدِّي فِي قَرْيَةٍ صَغِيرَةٍ"
+   ],
+   "correct": 1,
+   "izoh": "Zamirli ismga alif-lom qo'shilmaydi; alif-lom + tanvin bo'lmaydi; sifat mavsufga mos."
+  },
+  {
+   "q": "«لَمْ أَذْهَبْ إِلَى الْعَمَلِ ___ مَرِيضٌ، وَذَهَبْتُ إِلَى الطَّبِيبِ ___ يَفْحَصَنِي»",
+   "opts": [
+    "كَيْ … لِأَنَّهُ",
+    "لِـ … لِأَنَّنِي",
+    "لِأَنَّنِي … لِـ",
+    "لِأَنَّ … كَيْ"
+   ],
+   "correct": 2,
+   "izoh": "Sabab — «لِأَنَّنِي» + ism; maqsad — «لِـ» + mansub fe'l."
+  },
+  {
+   "q": "«فَاطِمَةُ لَمْ تَحْضُرْ؛ ___ مَرِيضَةٌ»",
+   "opts": [
+    "لِأَنَّهُ",
+    "لِأَنَّهَا",
+    "لِتَكُونَ",
+    "لِأَنَّهُمْ"
+   ],
+   "correct": 1,
+   "izoh": "«فَاطِمَةُ» — «لِأَنَّهَا»."
+  },
+  {
+   "q": "«هُمْ عَامِلُونَ نَشِيطُونَ» — zamir o'rniga ishora ismi qo'ying.",
+   "opts": [
+    "هَذَا عَامِلُونَ نَشِيطُونَ",
+    "ذَلِكَ عَامِلُونَ نَشِيطُونَ",
+    "الَّذِينَ عَامِلُونَ نَشِيطُونَ",
+    "هَؤُلَاءِ عَامِلُونَ نَشِيطُونَ"
+   ],
+   "correct": 3,
+   "izoh": "Aqlli ko'plik — «هَؤُلَاءِ»."
+  },
+  {
+   "q": "«أَنَا أَسْكُنُ فِي الْمَدِينَةِ، أَمَّا جَدِّي ___ فِي الْقَرْيَةِ»",
+   "opts": [
+    "فَيَسْكُنُ",
+    "فَأَسْكُنُ",
+    "فَتَسْكُنُ",
+    "يَسْكُنُ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A2-8): «أَمَّا … فَـ» + «جَدِّي» ga mos fe'l."
+  },
+  {
+   "q": "«أَخَذْتُ كِتَابَ اللُّغَةِ الْعَرَبِيَّةِ الْجَدِيدَ» gapida «الْجَدِيدَ» nimaning sifati?",
+   "opts": [
+    "«كِتَابَ» ning — mansub, muzakkar",
+    "«اللُّغَةِ» ning — majrur, muannas",
+    "«أَخَذْتُ» ning — maf'ul bih",
+    "«الْعَرَبِيَّةِ» ning — majrur"
+   ],
+   "correct": 0,
+   "izoh": "«الْجَدِيدَ» mansub va muzakkar — «كِتَابَ» ga ergashgan; «كِتَابَ» ma'rifa bo'lgani uchun sifat alif-lomli."
+  },
+  {
+   "q": "Qaysi gapda «لِـ» fe'l oldida kelib, maqsadni bildiradi?",
+   "opts": [
+    "هَذَا الْكِتَابُ لِخَالِدٍ",
+    "أَدْرُسُ لِأَنْجَحَ",
+    "قُلْتُ لِصَدِيقِي",
+    "هَذِهِ الْهَدِيَّةُ لِأُمِّي"
+   ],
+   "correct": 1,
+   "izoh": "Qolganlarida «لِـ» — ism oldidagi harfi jar."
+  },
+  {
+   "q": "«لِأَنَّ» + «أَنَا» qanday yoziladi?",
+   "opts": [
+    "لِأَنَّهُ",
+    "لِأَنَّ أَنَا",
+    "لِأَنَّنِي",
+    "لِأَنَّنَا"
+   ],
+   "correct": 2,
+   "izoh": "«لِأَنَّ» ga zamir muttasil qo'shiladi."
+  },
+  {
+   "q": "«الطُّلَّابُ نَجَحُوا؛ ___ دَرَسُوا كَثِيرًا»",
+   "opts": [
+    "لِأَنَّهُ",
+    "لِـ",
+    "لِأَنَّهَا",
+    "لِأَنَّهُمْ"
+   ],
+   "correct": 3,
+   "izoh": "«الطُّلَّابُ» — «لِأَنَّهُمْ»."
+  },
+  {
+   "q": "«هَلْ يُمْكِنُنِي أَنْ ___ هَاتِفَكَ؟»",
+   "opts": [
+    "آخُذَ",
+    "آخُذُ",
+    "يَأْخُذَ",
+    "أَخَذْتُ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A2-8): «يُمْكِنُنِي» — «أَنَا», mansub."
+  },
+  {
+   "q": "«أَنَا مُتْعَبٌ» + «سَأَنَامُ مُبَكِّرًا» — sabab bilan to'g'ri birlashtiring.",
+   "opts": [
+    "سَأَنَامُ مُبَكِّرًا كَيْ مُتْعَبٌ",
+    "أَنَا مُتْعَبٌ لِأَنَّنِي سَأَنَامُ مُبَكِّرًا",
+    "سَأَنَامُ مُبَكِّرًا لِأَكُونَ مُتْعَبًا",
+    "سَأَنَامُ مُبَكِّرًا لِأَنَّنِي مُتْعَبٌ"
+   ],
+   "correct": 3,
+   "izoh": "Charchoq — sabab: «لِأَنَّنِي مُتْعَبٌ»."
+  },
+  {
+   "q": "«لِمَاذَا لَمْ تَأْكُلْ؟ — ___ لَسْتُ جَائِعًا»",
+   "opts": [
+    "كَيْ",
+    "لِأَنَّنِي",
+    "لِـ",
+    "لِأَنَّهُ"
+   ],
+   "correct": 1,
+   "izoh": "«لَسْتُ» — «أَنَا»: «لِأَنَّنِي»."
+  },
+  {
+   "q": "«خَالِدٌ يَعْمَلُ فِي الْقَاهِرَةِ» gapida nechta alam bor?",
+   "opts": [
+    "Yo'q: «خَالِدٌ» tanvinli",
+    "Bitta: «خَالِدٌ»",
+    "Ikkita: «خَالِدٌ» va «الْقَاهِرَةِ»",
+    "Bitta: «الْقَاهِرَةِ»"
+   ],
+   "correct": 2,
+   "izoh": "Odam nomi ham, shahar nomi ham — alam."
+  },
+  {
+   "q": "Qaysi so'z nakira?",
+   "opts": [
+    "مُعَلِّمٌ",
+    "هَذَا",
+    "مُعَلِّمُنَا",
+    "الْمُعَلِّمُ"
+   ],
+   "correct": 0,
+   "izoh": "Alif-lomsiz, tanvinli."
+  },
+  {
+   "q": "«قَبْلَ ___ إِلَى الْمَدْرَسَةِ أَشْرَبُ الشَّايَ»",
+   "opts": [
+    "الذَّهَابَ",
+    "الذَّهَابِ",
+    "الذَّهَابُ",
+    "أَذْهَبَ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A2-8): zarfdan keyin masdar — muzofun ilayh, majrur."
+  },
+  {
+   "q": "«شَرِبَ طِفْلٌ عَصِيرًا» — «طِفْلٌ» ni alif-lom bilan ma'rifa qiling.",
+   "opts": [
+    "شَرِبَ هَذَا طِفْلٌ عَصِيرًا",
+    "شَرِبَ الطِّفْلٌ عَصِيرًا",
+    "شَرِبَ الطِّفْلُ عَصِيرًا",
+    "شَرِبَ طِفْلُهُ عَصِيرًا"
+   ],
+   "correct": 2,
+   "izoh": "Alif-lom keladi, tanvin tushadi."
+  },
+  {
+   "q": "«فَاطِمَةُ تَدْرُسُ فِي جَامِعَةٍ كَبِيرَةٍ» gapida ma'rifa ism va uning turi qaysi?",
+   "opts": [
+    "«كَبِيرَةٍ» — ishora ismi",
+    "«جَامِعَةٍ» — alif-lomli ism",
+    "«جَامِعَةٍ» — ma'rifaga muzof",
+    "«فَاطِمَةُ» — alam"
+   ],
+   "correct": 3,
+   "izoh": "Odam nomi — alam."
+  },
+  {
+   "q": "Qaysi biri to'liq gap (mubtado va xabar)?",
+   "opts": [
+    "بَيْتُ الْكَبِيرِ",
+    "بَيْتٌ كَبِيرٌ",
+    "الْبَيْتُ كَبِيرٌ",
+    "الْبَيْتُ الْكَبِيرُ"
+   ],
+   "correct": 2,
+   "izoh": "Ma'rifa + nakira = mubtado va xabar. Ikkalasi ma'rifa yoki ikkalasi nakira — sifatli birikma."
+  },
+  {
+   "q": "Qaysi so'z tanvinli bo'lsa ham ma'rifa?",
+   "opts": [
+    "كِتَابٌ",
+    "خَالِدٌ",
+    "بَيْتٌ",
+    "طَالِبٌ"
+   ],
+   "correct": 1,
+   "izoh": "«خَالِدٌ» — alam (atoqli ism): tanvini bo'lsa ham ma'rifa."
+  },
+  {
+   "q": "«اِشْتَرَيْتُ السَّيَّارَةَ الْجَدِيدَةَ» — ma'rifani nakiraga aylantiring.",
+   "opts": [
+    "اِشْتَرَيْتُ سَيَّارَةً جَدِيدَةً",
+    "اِشْتَرَيْتُ السَّيَّارَةً جَدِيدَةً",
+    "اِشْتَرَيْتُ سَيَّارَةَ جَدِيدَةٍ",
+    "اِشْتَرَيْتُ سَيَّارَةً الْجَدِيدَةَ"
+   ],
+   "correct": 0,
+   "izoh": "Alif-lom tushadi, tanvin keladi; sifat ham nakira bo'ladi."
+  },
+  {
+   "q": "«أَمَّا ___ فَيُحِبُّونَ كُرَةَ الْقَدَمِ»",
+   "opts": [
+    "أُخْتِي",
+    "أَنَا",
+    "نَحْنُ",
+    "إِخْوَتِي"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A2-8): «فَيُحِبُّونَ» — «هُمْ»: «إِخْوَتِي»."
+  },
+  {
+   "q": "Qaysi qatorda ma'rifa turlari to'g'ri sanalgan?",
+   "opts": [
+    "Alam, tanvinli ism, zamir, sifat",
+    "Fe'l, harf, zamir, ishora ismi",
+    "Alam, alif-lomli ism, zamir, ishora ismi, ism mavsul, ma'rifaga muzof",
+    "Alam, zarf, masdar, ism mavsul"
+   ],
+   "correct": 2,
+   "izoh": "Darslik: «مِنْ أَنْوَاعِ الْمَعَارِفِ: اسْمُ الْعَلَمِ، الْمُعَرَّفُ بِـ(ال)، الضَّمَائِرُ، اسْمُ الْإِشَارَةِ، الِاسْمُ الْمَوْصُولُ، الْمُضَافُ إِلَى مَعْرِفَةٍ»."
+  },
+  {
+   "q": "Ta'lil ma'nosidagi «لِـ» va «كَيْ» dan keyin darslikka ko'ra nima keladi?",
+   "opts": [
+    "Muzori' fe'l",
+    "Ishora ismi",
+    "Moziy fe'l",
+    "Zamir"
+   ],
+   "correct": 0,
+   "izoh": "«لِتَكُونَ»، «كَيْ تَحْمِيَهُمْ» — fe'l mansub."
+  },
+  {
+   "q": "Qaysi so'z xato yozilgan?",
+   "opts": [
+    "بَيْتُنَا",
+    "بَيْتٌ",
+    "الْبَيْتُ",
+    "الْبَيْتٌ"
+   ],
+   "correct": 3,
+   "izoh": "Bir so'zda alif-lom va tanvin birga kelmaydi."
+  },
+  {
+   "q": "«سَكَنْتُ فِي مَدِينَةٍ ___»",
+   "opts": [
+    "الْقَدِيمَةِ",
+    "قَدِيمَةٍ",
+    "قَدِيمَةٌ",
+    "قَدِيمَةً"
+   ],
+   "correct": 1,
+   "izoh": "Nakira mavsuf — sifat ham nakira, majrur."
+  },
+  {
+   "q": "«___ بَلَدٍ جَاءَ هَذَا الطَّالِبُ؟»",
+   "opts": [
+    "مِنْ أَيُّ",
+    "مِنْ أَيِّ",
+    "أَيْنَ",
+    "فِي أَيَّ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A2-7): harfi jardan keyin «أَيِّ» majrur."
+  },
+  {
+   "q": "Ma'rifa nima?",
+   "opts": [
+    "Faqat birlikdagi ism",
+    "Aniq, ma'lum narsani bildirmaydigan ism",
+    "Aniq, ma'lum narsani bildiradigan ism",
+    "Oxirida doim tanvin bo'ladigan ism"
+   ],
+   "correct": 2,
+   "izoh": "«الْمُعَلِّمُ» — ma'lum o'qituvchi."
+  },
+  {
+   "q": "«الطُّلَّابُ يَدْرُسُونَ فِي مَكْتَبَةٍ جَدِيدَةٍ قُرْبَ الْجَامِعَةِ» gapida nakira ismlar qaysi?",
+   "opts": [
+    "الطُّلَّابُ، جَدِيدَةٍ",
+    "الطُّلَّابُ، الْجَامِعَةِ",
+    "مَكْتَبَةٍ، الْجَامِعَةِ",
+    "مَكْتَبَةٍ، جَدِيدَةٍ"
+   ],
+   "correct": 3,
+   "izoh": "Tanvinli, alif-lomsiz ismlar."
+  },
+  {
+   "q": "«أَخِي مَاهِرٌ فِي ___»",
+   "opts": [
+    "عَمَلِهِ",
+    "الْعَمَلِهِ",
+    "عَمَلٍهِ",
+    "الْعَمَلٌ"
+   ],
+   "correct": 0,
+   "izoh": "Zamirga muzof ism alif-lomsiz va tanvinsiz."
+  },
+  {
+   "q": "«لِأَنَّ» dan keyin nima keladi?",
+   "opts": [
+    "Moziy fe'l",
+    "Harfi jar",
+    "Zamir yoki ism",
+    "Muzori' fe'l"
+   ],
+   "correct": 2,
+   "izoh": "«لِأَنَّنَا مُتْعَبُونَ»، «لِأَنَّ الثَّلْجَ قَطَعَ الطَّرِيقَ»."
+  },
+  {
+   "q": "«سَافَرَ خَالِدٌ ___ الْعِيدِ»",
+   "opts": [
+    "بَعْدًا",
+    "بَعْدَ",
+    "بَعْدُ",
+    "بَعْدِ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A2-7): zarf mansub, muzof — tanvinsiz."
+  },
+  {
+   "q": "«مُعَلِّمُ الطُّلَّابِ نَشِيطٌ» gapida «مُعَلِّمُ» qanday ism?",
+   "opts": [
+    "Ma'rifa — ma'rifaga muzof",
+    "Ma'rifa — alam",
+    "Nakira — alif-lomi yo'q",
+    "Nakira — tanvini yo'q"
+   ],
+   "correct": 0,
+   "izoh": "«الطُّلَّابِ» ma'rifa — unga muzof ham ma'rifa."
+  },
+  {
+   "q": "Qaysi so'z ma'rifa EMAS?",
+   "opts": [
+    "أَنْتَ",
+    "تِلْكَ",
+    "الَّتِي",
+    "طَالِبٌ"
+   ],
+   "correct": 3,
+   "izoh": "«طَالِبٌ» — nakira. Zamir, ism mavsul, ishora ismi — ma'rifa."
+  },
+  {
+   "q": "«لِمَاذَا تَدْرُسُ الْعَرَبِيَّةَ؟» — to'g'ri javob qaysi?",
+   "opts": [
+    "لِأَقْرَأَ الْكُتُبَ الْعَرَبِيَّةَ",
+    "لِأَنَّ أَقْرَأَ الْكُتُبَ الْعَرَبِيَّةَ",
+    "كَيْ أَقْرَأُ الْكُتُبَ الْعَرَبِيَّةَ",
+    "لِأَنَّنِي أَقْرَأَ الْكُتُبَ الْعَرَبِيَّةَ"
+   ],
+   "correct": 0,
+   "izoh": "«لِـ» + mansub muzori'."
+  },
+  {
+   "q": "«بَيْتِي بَابُهُ أَخْضَرُ» gapida «بَيْتِي» nega ma'rifa?",
+   "opts": [
+    "Alam bo'lgani uchun",
+    "Zamirga muzof bo'lgani uchun",
+    "Ishora ismi bo'lgani uchun",
+    "Alif-lomi borligi uchun"
+   ],
+   "correct": 1,
+   "izoh": "Ma'rifaga (zamirga) muzof — ma'rifa."
+  },
+  {
+   "q": "«الْقَاهِرَةُ مَدِينَةٌ كَبِيرَةٌ فِي مِصْرَ» gapida shibhi jumla qaysi?",
+   "opts": [
+    "الْقَاهِرَةُ",
+    "مَدِينَةٌ كَبِيرَةٌ",
+    "فِي مِصْرَ",
+    "كَبِيرَةٌ فِي"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A2-7): jar va majrur."
+  },
+  {
+   "q": "«نَدْرُسُ كَثِيرًا كَيْ ___ فِي الِامْتِحَانِ»",
+   "opts": [
+    "نَنْجَحْ",
+    "نَنْجَحُ",
+    "نَجَحْنَا",
+    "نَنْجَحَ"
+   ],
+   "correct": 3,
+   "izoh": "«كَيْ» + mansub muzori'."
+  },
+  {
+   "q": "«أُولَئِكَ مُهَنْدِسُونَ مَاهِرُونَ» gapida ma'rifa ism va uning turi qaysi?",
+   "opts": [
+    "«مَاهِرُونَ» — alif-lomli ism",
+    "«أُولَئِكَ» — ishora ismi",
+    "«مُهَنْدِسُونَ» — alam",
+    "«أُولَئِكَ» — ism mavsul"
+   ],
+   "correct": 1,
+   "izoh": "«أُولَئِكَ» — uzoq ishora ismi."
+  },
+  {
+   "q": "Qaysi gapda xato bor?",
+   "opts": [
+    "لَمْ يَحْضُرْ لِأَنَّهُ كَانَ مَرِيضًا",
+    "لَمْ تَحْضُرْ لِأَنَّهَا كَانَتْ مَرِيضَةً",
+    "لَمْ أَحْضُرْ لِأَنَّنِي كُنْتُ مَرِيضًا",
+    "لَمْ أَحْضُرْ لِأَنَّ كُنْتُ مَرِيضًا"
+   ],
+   "correct": 3,
+   "izoh": "«لِأَنَّ» dan keyin to'g'ridan-to'g'ri fe'l kelmaydi — zamir yoki ism kerak: «لِأَنَّنِي كُنْتُ»."
+  },
+  {
+   "q": "«كِتَابٌ مُفِيدٌ» — ishora ismi qo'shib gap tuzing.",
+   "opts": [
+    "هُوَ كِتَابٌ مُفِيدٌ",
+    "هَذَا الْكِتَابٌ مُفِيدٌ",
+    "هَذَا كِتَابٌ مُفِيدٌ",
+    "الَّذِي كِتَابٌ مُفِيدٌ"
+   ],
+   "correct": 2,
+   "izoh": "«هَذَا» — ishora ismi. «هُوَ» — zamir."
+  },
+  {
+   "q": "«قَرَأْتُ الْكِتَابَ ___ كَتَبَهُ هَذَا الْمُعَلِّمُ»",
+   "opts": [
+    "الَّذِي",
+    "هَذَا",
+    "الَّتِي",
+    "الَّذِينَ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A2-5): muzakkar birlik — «الَّذِي»."
+  },
+  {
+   "q": "«أَخَذْتُ كِتَابَ اللُّغَةِ الْعَرَبِيَّةِ الْجَدِيدَ» gapida «كِتَابَ» ma'rifaning qaysi turi?",
+   "opts": [
+    "Alam",
+    "Ishora ismi",
+    "Alif-lomli ism",
+    "Ma'rifaga muzof"
+   ],
+   "correct": 3,
+   "izoh": "«اللُّغَةِ» ma'rifa — unga muzof «كِتَابَ» ham ma'rifa."
+  },
+  {
+   "q": "«بَابُ بَيْتٍ» birikmasida «بَابُ» qanday ism?",
+   "opts": [
+    "Nakira — tanvini borligi uchun",
+    "Nakira — nakiraga muzof bo'lgan",
+    "Ma'rifa — muzof bo'lgani uchun",
+    "Ma'rifa — tanvini yo'qligi uchun"
+   ],
+   "correct": 1,
+   "izoh": "Muzof ma'rifalikni muzofun ilayhdan oladi; «بَيْتٍ» nakira — «بَابُ» ham nakira."
+  },
+  {
+   "q": "«ذَهَبْتُ إِلَى السُّوقِ لِشِرَاءِ الْفَاكِهَةِ» gapiga teng gap qaysi?",
+   "opts": [
+    "ذَهَبْتُ إِلَى السُّوقِ لِأَشْتَرِيَ الْفَاكِهَةَ",
+    "ذَهَبْتُ إِلَى السُّوقِ لِأَنَّ أَشْتَرِيَ الْفَاكِهَةَ",
+    "ذَهَبْتُ إِلَى السُّوقِ لِأَشْتَرِي الْفَاكِهَةَ",
+    "ذَهَبْتُ إِلَى السُّوقِ لِأَشْتَرِيَ الْفَاكِهَةِ"
+   ],
+   "correct": 0,
+   "izoh": "«لِـ» + masdar = «لِـ» + mansub muzori'; «الْفَاكِهَةَ» — maf'ul bih."
+  },
+  {
+   "q": "«أَذْهَبُ إِلَى الْمَكْتَبَةِ ___ أَقْرَأَ الْكُتُبَ»",
+   "opts": [
+    "أَمَّا",
+    "لِأَنَّنِي",
+    "لِـ",
+    "لِأَنَّ"
+   ],
+   "correct": 2,
+   "izoh": "Mansub muzori' oldidan — «لِـ»: «لِأَقْرَأَ»."
+  },
+  {
+   "q": "Nahy: «يَا طُلَّابُ، لَا ___ كُتُبَكُمْ فِي الْبَيْتِ»",
+   "opts": [
+    "تَتْرُكُونَ",
+    "تَتْرُكْ",
+    "يَتْرُكُوا",
+    "تَتْرُكُوا"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A2-5): ko'pchilikka nahy — nun tushadi."
+  },
+  {
+   "q": "«هِيَ تَسْكُنُ فِي سَكَنِ الطَّالِبَاتِ» gapidagi ma'rifalar qaysi qatorda to'g'ri?",
+   "opts": [
+    "«هِيَ» — zamir; «سَكَنِ» — nakira; «الطَّالِبَاتِ» — alif-lomli",
+    "«هِيَ» — zamir; «سَكَنِ» — ma'rifaga muzof; «الطَّالِبَاتِ» — alif-lomli",
+    "«هِيَ» — ishora ismi; «سَكَنِ» — nakira; «الطَّالِبَاتِ» — alam",
+    "«هِيَ» — alam; «سَكَنِ» — alif-lomli; «الطَّالِبَاتِ» — zamir"
+   ],
+   "correct": 1,
+   "izoh": "«سَكَنِ» alif-lomsiz, lekin ma'rifaga muzof — ma'rifa."
+  },
+  {
+   "q": "Nakira ismning oxirida odatda nima bo'ladi?",
+   "opts": [
+    "Tanvin",
+    "Alif-lom",
+    "Shadda",
+    "Sukun"
+   ],
+   "correct": 0,
+   "izoh": "Darslik: «الِاسْمُ النَّكِرَةُ يَكُونُ فِي آخِرِهِ تَنْوِينٌ عَادَةً»."
+  },
+  {
+   "q": "«الَّذِي يَدْرُسُ كَثِيرًا يَنْجَحُ» gapida «الَّذِي» ma'rifaning qaysi turi?",
+   "opts": [
+    "Alam",
+    "Zamir",
+    "Ism mavsul",
+    "Ishora ismi"
+   ],
+   "correct": 2,
+   "izoh": "«الَّذِي، الَّتِي، الَّذِينَ» — ism mavsullar."
+  },
+  {
+   "q": "Nakira nima?",
+   "opts": [
+    "Faqat ko'plikdagi ism",
+    "Aniq, ma'lum narsani bildiradigan ism",
+    "Aniq, ma'lum narsani bildirmaydigan ism",
+    "Faqat odam nomi bo'lgan ism"
+   ],
+   "correct": 2,
+   "izoh": "«مُعَلِّمٌ» — qandaydir o'qituvchi."
+  },
+  {
+   "q": "Qaysi so'z ma'rifa?",
+   "opts": [
+    "مَسْرَحِيَّةً",
+    "مَسْرَحِيَّةٌ",
+    "مَسْرَحِيَّاتٌ",
+    "الْمَسْرَحِيَّةُ"
+   ],
+   "correct": 3,
+   "izoh": "Alif-lomli ism — ma'rifa."
+  },
+  {
+   "q": "«حَضَرَ الْمُعَلِّمُونَ الْجُدُدُ» gapida foil qanday kelgan?",
+   "opts": [
+    "Ism zohir",
+    "Zamir mustatir",
+    "Zamir muttasil",
+    "Ism mavsul"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A2-2): foil — «الْمُعَلِّمُونَ»; fe'l oldinda — birlikda."
+  },
+  {
+   "q": "«جَلَسَتْ طَالِبَةٌ عَلَى كُرْسِيٍّ» — ikkala ismni ham ma'rifa qiling.",
+   "opts": [
+    "جَلَسَتِ الطَّالِبَةُ عَلَى كُرْسِيٍّ",
+    "جَلَسَتِ الطَّالِبَةُ عَلَى الْكُرْسِيِّ",
+    "جَلَسَتْ طَالِبَةٌ عَلَى الْكُرْسِيِّ",
+    "جَلَسَتِ الطَّالِبَةٌ عَلَى الْكُرْسِيٍّ"
+   ],
+   "correct": 1,
+   "izoh": "Alif-lom qo'shiladi, tanvin tushadi."
+  },
+  {
+   "q": "Qaysi so'z xato yozilgan?",
+   "opts": [
+    "الصَّدِيقُ",
+    "صَدِيقِي",
+    "الصَّدِيقِي",
+    "صَدِيقٌ"
+   ],
+   "correct": 2,
+   "izoh": "Bir so'zda alif-lom va zamir muttasil birga kelmaydi."
+  },
+  {
+   "q": "«قَرَأْتُ كِتَابًا اِشْتَرَيْتُهُ أَمْسِ» — ism mavsul qo'shib yozing.",
+   "opts": [
+    "قَرَأْتُ الَّذِي كِتَابًا اِشْتَرَيْتُهُ أَمْسِ",
+    "قَرَأْتُ الْكِتَابَ الَّذِي اِشْتَرَيْتُهُ أَمْسِ",
+    "قَرَأْتُ كِتَابًا الَّذِي اِشْتَرَيْتُهُ أَمْسِ",
+    "قَرَأْتُ الْكِتَابَ الَّتِي اِشْتَرَيْتُهُ أَمْسِ"
+   ],
+   "correct": 1,
+   "izoh": "Ism mavsul ma'rifa — u bog'lagan ism ham ma'rifa bo'ladi: «الْكِتَابَ الَّذِي»."
+  },
+  {
+   "q": "Qaysi qatorda hamma so'z nakira?",
+   "opts": [
+    "طَالِبٌ، مُعَلِّمُونَ، بَابُ بَيْتٍ",
+    "كِتَابٌ، كِتَابُهُ، كِتَابُ طَالِبٍ",
+    "طَالِبٌ، خَالِدٌ، بَابٌ",
+    "مُعَلِّمُونَ، الْمُعَلِّمُونَ، مُعَلِّمٌ"
+   ],
+   "correct": 0,
+   "izoh": "«خَالِدٌ» — alam; «الْمُعَلِّمُونَ» — alif-lomli; «كِتَابُهُ» — zamirga muzof."
+  },
+  {
+   "q": "«الْمُعَلِّمُونَ الْجُدُدُ ___ أَمْسِ»",
+   "opts": [
+    "حَضَرْنَ",
+    "حَضَرَ",
+    "حَضَرَا",
+    "حَضَرُوا"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A2-2): ism oldinda — fe'lga «ـُوا» qo'shiladi."
+  },
+  {
+   "q": "«لَا نَسْتَطِيعُ أَنْ نَخْرُجَ؛ ___ مَشْغُولُونَ»",
+   "opts": [
+    "لِأَنَّكَ",
+    "لِأَنَّنِي",
+    "لِأَنَّنَا",
+    "لِأَنَّهَا"
+   ],
+   "correct": 2,
+   "izoh": "«نَحْنُ» — «لِأَنَّنَا»."
+  },
+  {
+   "q": "Qaysi so'z tanvinsiz bo'lsa ham nakira?",
+   "opts": [
+    "مُعَلِّمُونَ",
+    "هَؤُلَاءِ",
+    "الْمُعَلِّمُونَ",
+    "مُعَلِّمُنَا"
+   ],
+   "correct": 0,
+   "izoh": "Solim ko'plikda tanvin bo'lmaydi, lekin alif-lomsiz — nakira."
+  },
+  {
+   "q": "Qaysi gapda xato bor?",
+   "opts": [
+    "أَدْرُسُ لِأَنَّنِي أُرِيدُ النَّجَاحَ",
+    "أَدْرُسُ كَيْ أَنْجَحَ",
+    "أَدْرُسُ لِأَنْجَحَ",
+    "أَدْرُسُ كَيْ أَنْجَحُ"
+   ],
+   "correct": 3,
+   "izoh": "«كَيْ» dan keyin mansub: «أَنْجَحَ»."
+  },
+  {
+   "q": "«هَذِهِ» / «الْمَدِينَةُ» / «الَّتِي» — ma'rifa turlari tartib bilan qaysi?",
+   "opts": [
+    "ishora ismi – alam – zamir",
+    "ishora ismi – alif-lomli ism – ism mavsul",
+    "zamir – alam – ism mavsul",
+    "ism mavsul – alif-lomli ism – ishora ismi"
+   ],
+   "correct": 1,
+   "izoh": "«هَذِهِ الْمَدِينَةُ الَّتِي ...»."
+  },
+  {
+   "q": "«هَذِهِ الْمَدِينَةُ ___ مِنْ تِلْكَ الْقَرْيَةِ»",
+   "opts": [
+    "أَكْبَرَةٌ",
+    "الْكُبْرَى",
+    "كَبِيرَةٌ",
+    "أَكْبَرُ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-12): «أَفْعَلُ مِنْ» — muannas uchun ham o'zgarmaydi."
+  },
+  {
+   "q": "«يَا مَرْيَمُ، اُدْرُسِي كَثِيرًا كَيْ ___»",
+   "opts": [
+    "تَنْجَحَ",
+    "تَنْجَحِينَ",
+    "تَنْجَحِي",
+    "يَنْجَحِي"
+   ],
+   "correct": 2,
+   "izoh": "«أَنْتِ» — mansubda nun tushadi."
+  },
+  {
+   "q": "Qaysi so'z alam?",
+   "opts": [
+    "لُبْنَانُ",
+    "بَلَدٌ",
+    "رَجُلٌ",
+    "مَدِينَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "Davlat nomi — alam."
+  },
+  {
+   "q": "Qaysi birikma ma'rifa?",
+   "opts": [
+    "بَابُ مَدْرَسَةٍ",
+    "بَابُ الْبَيْتِ",
+    "بَابُ بَيْتٍ",
+    "بَابٌ كَبِيرٌ"
+   ],
+   "correct": 1,
+   "izoh": "Ma'rifaga («الْبَيْتِ») muzof — ma'rifa."
+  },
+  {
+   "q": "«اِشْتَرَتِ امْرَأَةٌ فَاكِهَةً» — «اِمْرَأَةٌ» o'rniga alam qo'ying.",
+   "opts": [
+    "اِشْتَرَتْ هَذِهِ الْمَرْأَةُ فَاكِهَةً",
+    "اِشْتَرَتِ الْمَرْأَةُ فَاكِهَةً",
+    "اِشْتَرَتْ هِيَ فَاكِهَةً",
+    "اِشْتَرَتْ مَرْيَمُ فَاكِهَةً"
+   ],
+   "correct": 3,
+   "izoh": "«مَرْيَمُ» — alam. Qolganlari: alif-lomli ism, ishora ismi, zamir."
+  },
+  {
+   "q": "«قَابَلْتُ طَالِبًا ___»",
+   "opts": [
+    "مُجْتَهِدًا",
+    "الْمُجْتَهِدَ",
+    "مُجْتَهِدٌ",
+    "مُجْتَهِدٍ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-11): nakira mavsuf — sifat ham nakira, mansub."
+  },
+  {
+   "q": "«أُحِبُّ فَصْلَ الرَّبِيعِ؛ ___ جَمِيلٌ»",
+   "opts": [
+    "لِيَكُونَ",
+    "لِأَنَّهَا",
+    "لِأَنَّهُ",
+    "كَيْ"
+   ],
+   "correct": 2,
+   "izoh": "«فَصْلَ» — muzakkar: «لِأَنَّهُ»."
+  },
+  {
+   "q": "«الْمُعَلِّمَانِ جَدِيدَانِ» gapi haqida qaysi gap to'g'ri?",
+   "opts": [
+    "Birinchi so'z — ikkilik bo'lgani uchun nakira",
+    "Ikkinchi so'z — tanvinsiz bo'lsa ham nakira",
+    "Ikkalasi ham ma'rifa",
+    "Ikkalasi ham nakira"
+   ],
+   "correct": 1,
+   "izoh": "«الْمُعَلِّمَانِ» — alif-lomli (ma'rifa); «جَدِيدَانِ» — alif-lomsiz (nakira): ikkilikda tanvin bo'lmaydi."
+  },
+  {
+   "q": "«اِشْتَرَيْتُ هَذِهِ السَّاعَةَ ___ هَدِيَّةً لِأَبِي»",
+   "opts": [
+    "لِيَكُونَ",
+    "لِأَنَّهَا",
+    "لِتَكُونُ",
+    "لِتَكُونَ"
+   ],
+   "correct": 3,
+   "izoh": "Maqsad: «لِـ» + mansub; «السَّاعَةَ» muannas — «تَكُونَ»."
+  },
+  {
+   "q": "«جِئْتُ إِلَى مِصْرَ ___ الْعَرَبِيَّةَ»",
+   "opts": [
+    "لِأَتَعَلَّمَ",
+    "لِتَعَلُّمَ",
+    "لِأَتَعَلَّمُ",
+    "لِأَنَّ أَتَعَلَّمَ"
+   ],
+   "correct": 0,
+   "izoh": "«لِـ» + mansub muzori'."
+  },
+  {
+   "q": "«فِي الْمَدِينَةِ ثَلَاثُ ___ كَبِيرَةٍ»",
+   "opts": [
+    "جَامِعَةٍ",
+    "جَامِعَاتٍ",
+    "جَامِعَةً",
+    "جَامِعَاتٌ"
+   ],
+   "correct": 1,
+   "izoh": "Takror (A1-8): 3–10 — ma'dud ko'plik, majrur."
+  },
+  {
+   "q": "«نَحْنُ طُلَّابٌ جُدُدٌ» gapida «نَحْنُ» ma'rifaning qaysi turi?",
+   "opts": [
+    "Ishora ismi",
+    "Alam",
+    "Zamir",
+    "Ism mavsul"
+   ],
+   "correct": 2,
+   "izoh": "Zamirlar — ma'rifa."
+  },
+  {
+   "q": "«لَمْ أَخْرُجْ مِنَ الْبَيْتِ؛ ___ الْجَوَّ بَارِدٌ»",
+   "opts": [
+    "لِـ",
+    "لِأَنَّ",
+    "كَيْ",
+    "لِأَنَّهَا"
+   ],
+   "correct": 1,
+   "izoh": "Ismdan oldin — «لِأَنَّ»."
+  },
+  {
+   "q": "«زُرْتُ مَرِيضًا وَأَعْطَيْتُهُ هَدِيَّةً» gapida nechta nakira ism bor?",
+   "opts": [
+    "Bitta",
+    "To'rtta",
+    "Uchta",
+    "Ikkita"
+   ],
+   "correct": 3,
+   "izoh": "«مَرِيضًا» va «هَدِيَّةً». Zamirlar — ma'rifa."
+  },
+  {
+   "q": "Qaysi qatorda hamma so'z ma'rifa?",
+   "opts": [
+    "الْقَاهِرَةُ، بَيْتٌ، بَيْتُنَا، هُمْ",
+    "أَحْمَدُ، كِتَابٌ، هُوَ، الْبَيْتُ",
+    "أَحْمَدُ، هَذَا، الَّذِي، كِتَابُهُ",
+    "مَدِينَةٌ، هَذِهِ، نَحْنُ، الَّتِي"
+   ],
+   "correct": 2,
+   "izoh": "Alam, ishora ismi, ism mavsul, zamirga muzof."
+  },
+  {
+   "q": "«زُرْتُ الْمَدِينَةَ ___»",
+   "opts": [
+    "الْقَدِيمَةَ",
+    "الْقَدِيمَ",
+    "قَدِيمَةٌ",
+    "الْقَدِيمَةُ"
+   ],
+   "correct": 0,
+   "izoh": "Sifat mavsufga ma'rifalikda, e'robda va jinsda mos."
+  }
+ ]
 }
