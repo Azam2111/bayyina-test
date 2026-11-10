@@ -1,447 +1,689 @@
 {
-  "title": "Qovaid — A1 4-dars",
-  "otish": 80,
-  "vaqt": 40,
-  "questions": [
-    {
-      "q": "Vazifa (ish o‘rni) a‘lodir",
-      "opts": [
-        "الْوَظِيفَةُ مُمْتَازٌ",
-        "الْوَظِيفَةُ مُمْتَازَةٌ",
-        "الْوَظِيفَةُ مُمْتَازَانِ",
-        "الْوَظِيفَةُ مُمْتَازَاتٌ"
-      ],
-      "correct": 1,
-      "izoh": "«الْوَظِيفَةُ» — muannas ism, shuning uchun xabar ham muannas: مُمْتَازَةٌ."
-    },
-    {
-      "q": "Sen muallimsan (muzakkar)",
-      "opts": [
-        "أَنْتِ مُعَلِّمٌ",
-        "أَنْتَ مُعَلِّمَةٌ",
-        "أَنْتَ مُعَلِّمٌ",
-        "أَنْتِ مُعَلِّمَةٌ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-1): erkak kishiga «أَنْتَ», xabar ham muzakkar: مُعَلِّمٌ."
-    },
-    {
-      "q": "Sening ishing (muzakkar)",
-      "opts": [
-        "عَمَلُكِ",
-        "عَمَلُكَ",
-        "عَمَلُهُ",
-        "عَمَلِي"
-      ],
-      "correct": 1,
-      "izoh": "Erkak kishiga nisbatan egalik olmoshi — «ـكَ»: عَمَلُكَ."
-    },
-    {
-      "q": "Bu ikki muallim chaqqon",
-      "opts": [
-        "هَاتَانِ مُعَلِّمَانِ نَشِيطَانِ",
-        "هَذَانِ مُعَلِّمَانِ نَشِيطٌ",
-        "هَذَانِ مُعَلِّمَتَانِ نَشِيطَتَانِ",
-        "هَذَانِ مُعَلِّمَانِ نَشِيطَانِ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-2): muzakkar ikkilik — «هَذَانِ», sifat ham ikkilik: نَشِيطَانِ."
-    },
-    {
-      "q": "Ish qiyindir",
-      "opts": [
-        "الْعَمَلُ صَعْبٌ",
-        "الْعَمَلُ صَعْبَةٌ",
-        "الْعَمَلُ صَعْبَانِ",
-        "الْعَمَلُ صَعْبَاتٌ"
-      ],
-      "correct": 0,
-      "izoh": "«الْعَمَلُ» — muzakkar ism, shuning uchun xabar ham muzakkar: صَعْبٌ."
-    },
-    {
-      "q": "Ular yangi talabalar (muzakkar)",
-      "opts": [
-        "هَؤُلَاءِ طُلَّابٌ جُدُدٌ",
-        "هُنَّ طُلَّابٌ جُدُدٌ",
-        "هُمْ طُلَّابٌ جُدُدٌ",
-        "هُمَا طُلَّابٌ جُدُدٌ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-3): «Ular» — kishilik olmoshi «هُمْ»; «هَؤُلَاءِ» esa «bular» (ko'rsatish olmoshi)."
-    },
-    {
-      "q": "Sening do‘koning (muannas)",
-      "opts": [
-        "دُكَّانُكِ",
-        "دُكَّانُكَ",
-        "دُكَّانُهَا",
-        "دُكَّانُهُ"
-      ],
-      "correct": 0,
-      "izoh": "Ayol kishiga nisbatan egalik olmoshi — «ـكِ»: دُكَّانُكِ."
-    },
-    {
-      "q": "«___ يَعْمَلُ الطَّبِيبُ؟ — يَعْمَلُ فِي الْمُسْتَشْفَى»",
-      "opts": [
-        "مَنْ",
-        "كَيْفَ",
-        "مَاذَا",
-        "أَيْنَ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-1): ish joyini so'rash uchun «أَيْنَ» (qayerda) ishlatiladi."
-    },
-    {
-      "q": "Alloh senga oson qilsin (muzakkar)",
-      "opts": [
-        "سَهَّلَ اللهُ لَكَ",
-        "سَهَّلَ اللهُ لَكِ",
-        "سَهَّلَ اللهُ لَهُ",
-        "سَهَّلَ اللهُ لَنَا"
-      ],
-      "correct": 0,
-      "izoh": "Erkak kishiga qaratilgan duoda «لِـ» harf-i jariga «ـكَ» birikadi: لَكَ."
-    },
-    {
-      "q": "Bu ikki talaba qiz tirishqoq",
-      "opts": [
-        "هَذَانِ طَالِبَتَانِ مُجْتَهِدَتَانِ",
-        "هَاتَانِ طَالِبَتَانِ مُجْتَهِدَتَانِ",
-        "هَاتَانِ طَالِبَانِ مُجْتَهِدَانِ",
-        "هَاتَانِ طَالِبَتَانِ مُجْتَهِدَةٌ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-2): muannas ikkilik — «هَاتَانِ», sifat ham muannas ikkilik: مُجْتَهِدَتَانِ."
-    },
-    {
-      "q": "Mening maoshim",
-      "opts": [
-        "رَاتِبُكَ",
-        "رَاتِبُهُ",
-        "رَاتِبِي",
-        "رَاتِبُنَا"
-      ],
-      "correct": 2,
-      "izoh": "Birinchi shaxs (mening) egalik olmoshi — «ـي»: رَاتِبِي."
-    },
-    {
-      "q": "Bular muhandislar",
-      "opts": [
-        "هَؤُلَاءِ مُهَنْدِسُونَ",
-        "هُمْ مُهَنْدِسُونَ",
-        "هَذِهِ مُهَنْدِسُونَ",
-        "هُنَّ مُهَنْدِسُونَ"
-      ],
-      "correct": 0,
-      "izoh": "Takror (A1-3): «Bular» — ko'rsatish olmoshi «هَؤُلَاءِ»; «هُمْ» esa «ular»."
-    },
-    {
-      "q": "Qishloq yaqindir",
-      "opts": [
-        "الْقَرْيَةُ قَرِيبٌ",
-        "الْقَرْيَةُ قَرِيبَانِ",
-        "الْقَرْيَةُ قَرِيبَةٌ",
-        "الْقَرْيَةُ قَرِيبَاتٌ"
-      ],
-      "correct": 2,
-      "izoh": "«الْقَرْيَةُ» — muannas ism, shuning uchun xabar ham muannas: قَرِيبَةٌ."
-    },
-    {
-      "q": "U shifokor (muannas)",
-      "opts": [
-        "هُوَ طَبِيبَةٌ",
-        "هِيَ طَبِيبَةٌ",
-        "أَنْتَ طَبِيبَةٌ",
-        "هِيَ طَبِيبٌ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-1): uchinchi shaxs ayol uchun «هِيَ», xabar ham muannas: طَبِيبَةٌ."
-    },
-    {
-      "q": "Uning (muzakkar) lavozimi",
-      "opts": [
-        "وَظِيفَتُهَا",
-        "وَظِيفَتُكَ",
-        "وَظِيفَتِي",
-        "وَظِيفَتُهُ"
-      ],
-      "correct": 3,
-      "izoh": "Uchinchi shaxs muzakkar (erkak) uchun egalik olmoshi — «ـهُ»: وَظِيفَتُهُ."
-    },
-    {
-      "q": "Ular ikkisi do‘st (muzakkar)",
-      "opts": [
-        "هَذَانِ صَدِيقَانِ",
-        "هُمَا صَدِيقَانِ",
-        "هُمْ صَدِيقَانِ",
-        "هَاتَانِ صَدِيقَانِ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-2): «Ular ikkisi» — kishilik olmoshi «هُمَا»; «هَذَانِ» esa «bu ikkisi»."
-    },
-    {
-      "q": "«كَمْ سَاعَةً تَعْمَلُ؟» savoliga to‘g‘ri javob",
-      "opts": [
-        "أَعْمَلُ ثَمَانِيَ سَاعَاتٍ",
-        "أَعْمَلُ فِي الْمَدْرَسَةِ",
-        "أَعْمَلُ طَيَّارًا",
-        "الْعَمَلُ صَعْبٌ"
-      ],
-      "correct": 0,
-      "izoh": "«Necha soat ishlaysan?» savoliga soat miqdori bilan javob beriladi: ثَمَانِيَ سَاعَاتٍ."
-    },
-    {
-      "q": "«___ بُيُوتٌ جَدِيدَةٌ» (Bular yangi uylar)",
-      "opts": [
-        "هَؤُلَاءِ",
-        "هَذَا",
-        "هَذِهِ",
-        "هَاتَانِ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-3): aqlsiz narsalar ko'pligi (بُيُوتٌ) birlik-muannas hisoblanib, «هَذِهِ» oladi."
-    },
-    {
-      "q": "Do‘kon ochiqdir",
-      "opts": [
-        "الدُّكَّانُ مَفْتُوحَةٌ",
-        "الدُّكَّانُ مَفْتُوحَانِ",
-        "الدُّكَّانُ مَفْتُوحَاتٌ",
-        "الدُّكَّانُ مَفْتُوحٌ"
-      ],
-      "correct": 3,
-      "izoh": "«الدُّكَّانُ» — muzakkar ism, shuning uchun xabar ham muzakkar: مَفْتُوحٌ."
-    },
-    {
-      "q": "«مَاذَا تَعْمَلُ؟» savoliga to‘g‘ri javob",
-      "opts": [
-        "أَعْمَلُ مُهَنْدِسًا",
-        "أَعْمَلُ فِي الْمُهَنْدِسِ",
-        "تَعْمَلُ مُهَنْدِسًا",
-        "أَعْمَلُ فِي الْمَدِينَةِ"
-      ],
-      "correct": 0,
-      "izoh": "Takror (A1-1): kasb so'ralganda «أَعْمَلُ ...-ًا» shaklida javob beriladi."
-    },
-    {
-      "q": "Uning (muannas) xonadoni (kvartirasi)",
-      "opts": [
-        "شُقَّتُهَا",
-        "شُقَّتُهُ",
-        "شُقَّتُكِ",
-        "شُقَّتِي"
-      ],
-      "correct": 0,
-      "izoh": "Uchinchi shaxs muannas (ayol) uchun egalik olmoshi — «ـهَا»: شُقَّتُهَا."
-    },
-    {
-      "q": "Siz ikkingiz shifokorsiz (muannas)",
-      "opts": [
-        "هُمَا طَبِيبَتَانِ",
-        "أَنْتُمْ طَبِيبَاتٌ",
-        "أَنْتُمَا طَبِيبَتَانِ",
-        "أَنْتُمَا طَبِيبَانِ"
-      ],
-      "correct": 2,
-      "izoh": "Takror (A1-2): ikkilik ayollarga «أَنْتُمَا», ism ham muannas ikkilik: طَبِيبَتَانِ."
-    },
-    {
-      "q": "Alloh senga yordam bersin (muzakkar)",
-      "opts": [
-        "أَعَانَكِ اللهُ",
-        "أَعَانَهُ اللهُ",
-        "أَعَانَنَا اللهُ",
-        "أَعَانَكَ اللهُ"
-      ],
-      "correct": 3,
-      "izoh": "Erkak kishiga qaratilgan duoda olmosh fatha bilan — «أَعَانَكَ اللهُ»."
-    },
-    {
-      "q": "Ular muallima ayollar",
-      "opts": [
-        "هَؤُلَاءِ مُعَلِّمَاتٌ",
-        "هُمْ مُعَلِّمَاتٌ",
-        "هِيَ مُعَلِّمَاتٌ",
-        "هُنَّ مُعَلِّمَاتٌ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-3): «Ular» (ayollar) — kishilik olmoshi «هُنَّ»; «هَؤُلَاءِ» esa «bular»."
-    },
-    {
-      "q": "Bizning qishlog‘imiz",
-      "opts": [
-        "قَرْيَتُكُمْ",
-        "قَرْيَتُنَا",
-        "قَرْيَتُهُمْ",
-        "قَرْيَتِي"
-      ],
-      "correct": 1,
-      "izoh": "Birinchi shaxs ko'plik (bizning) egalik olmoshi — «ـنَا»: قَرْيَتُنَا."
-    },
-    {
-      "q": "«___؟ — هَذَا طَبِيبٌ»",
-      "opts": [
-        "مَنْ هَذَا؟",
-        "مَا هَذَا؟",
-        "كَيْفَ هَذَا؟",
-        "مَنْ هَذِهِ؟"
-      ],
-      "correct": 0,
-      "izoh": "Takror (A1-1): inson (طَبِيبٌ) haqida «مَنْ» va muzakkar bo'lgani uchun «هَذَا»."
-    },
-    {
-      "q": "Maosh kamdir",
-      "opts": [
-        "الرَّاتِبُ قَلِيلَةٌ",
-        "الرَّاتِبُ قَلِيلٌ",
-        "الرَّاتِبُ قَلِيلَانِ",
-        "الرَّاتِبُ قَلِيلَاتٌ"
-      ],
-      "correct": 1,
-      "izoh": "«الرَّاتِبُ» — muzakkar ism, shuning uchun xabar ham muzakkar: قَلِيلٌ."
-    },
-    {
-      "q": "«Ota-ona nima ish qiladi?»",
-      "opts": [
-        "مَنْ يَعْمَلُ الْوَالِدَانِ؟",
-        "أَيْنَ يَعْمَلُ الْوَالِدَانِ؟",
-        "كَمْ يَعْمَلُ الْوَالِدَانِ؟",
-        "مَاذَا يَعْمَلُ الْوَالِدَانِ؟"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-2): kasb/faoliyat haqida «مَاذَا», «الْوَالِدَانِ» = ota-ona."
-    },
-    {
-      "q": "Sizlarning manzilingiz (muzakkar ko'plik)",
-      "opts": [
-        "عُنْوَانُكُنَّ",
-        "عُنْوَانُهُمْ",
-        "عُنْوَانُكُمْ",
-        "عُنْوَانُنَا"
-      ],
-      "correct": 2,
-      "izoh": "Ikkinchi shaxs ko'plik muzakkar uchun egalik olmoshi — «ـكُمْ»: عُنْوَانُكُمْ."
-    },
-    {
-      "q": "Ular mohir muhandislar (muzakkar)",
-      "opts": [
-        "هُنَّ مُهَنْدِسَاتٌ مَاهِرَاتٌ",
-        "هُمْ مُهَنْدِسُونَ مَاهِرُونَ",
-        "هُمْ مُهَنْدِسُونَ مَاهِرٌ",
-        "هُمَا مُهَنْدِسَانِ مَاهِرَانِ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-3): erkaklar ko'pligi — «هُمْ», ism va sifat ham ـُونَ bilan."
-    },
-    {
-      "q": "Men sizlardan mamnunman (muzakkar ko'plik)",
-      "opts": [
-        "أَنَا سَعِيدٌ بِكَ",
-        "أَنَا سَعِيدٌ بِكِ",
-        "أَنَا سَعِيدٌ بِكُمْ",
-        "أَنَا سَعِيدٌ بِهِ"
-      ],
-      "correct": 2,
-      "izoh": "Ko'plikdagi shaxslarga «بِـ» harf-i jariga «ـكُمْ» qo'shiladi: بِكُمْ."
-    },
-    {
-      "q": "Bu talaba (muzakkar)",
-      "opts": [
-        "هُوَ طَالِبٌ",
-        "هَذِهِ طَالِبَةٌ",
-        "هِيَ طَالِبَةٌ",
-        "هَذَا طَالِبٌ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-1): «Bu» — ko'rsatish olmoshi «هَذَا»; «هُوَ» esa «u» (kishilik olmoshi)."
-    },
-    {
-      "q": "Sening kasbing nima? (muzakkar)",
-      "opts": [
-        "مَا مِهْنَتُكِ؟",
-        "مَا مِهْنَتُكَ؟",
-        "مَا مِهْنَتُهُ؟",
-        "مَا مِهْنَتُنَا؟"
-      ],
-      "correct": 1,
-      "izoh": "Erkak kishining kasbini so'rashda «ـكَ» birikadi: مَا مِهْنَتُكَ؟"
-    },
-    {
-      "q": "«مَدِينَةٌ» so‘zining ikkilik shakli",
-      "opts": [
-        "مَدِينَتَانِ",
-        "مَدِينَانِ",
-        "مُدُنٌ",
-        "مَدِينَةَانِ"
-      ],
-      "correct": 0,
-      "izoh": "Takror (A1-2): muannas ism oxiridagi «ة» harfi «ت»ga aylanib, «ـَانِ» qo'shiladi: مَدِينَتَانِ."
-    },
-    {
-      "q": "Qaysi jumla grammatik jihatdan XATO?",
-      "opts": [
-        "الدُّكَّانُ مَفْتُوحٌ",
-        "الْقَرْيَةُ قَرِيبَةٌ",
-        "الشُّقَّةُ وَاسِعٌ",
-        "الْعَمَلُ صَعْبٌ"
-      ],
-      "correct": 2,
-      "izoh": "«الشُّقَّةُ» — muannas ism, xabar «وَاسِعَةٌ» bo'lishi kerak edi, «وَاسِعٌ» xato."
-    },
-    {
-      "q": "«رَجُلٌ» so‘zining ko‘plik shakli",
-      "opts": [
-        "رَجُلُونَ",
-        "رِجَالٌ",
-        "رَجُلَاتٌ",
-        "رَجُلَانِ"
-      ],
-      "correct": 1,
-      "izoh": "Takror (A1-3): «رَجُلٌ» so'zining ko'pligi siniq shaklda — «رِجَالٌ»."
-    },
-    {
-      "q": "Ularning ishi (muzakkar ko'plik)",
-      "opts": [
-        "عَمَلُهُمْ",
-        "عَمَلُهُنَّ",
-        "عَمَلُكُمْ",
-        "عَمَلُنَا"
-      ],
-      "correct": 0,
-      "izoh": "Uchinchi shaxs ko'plik muzakkar uchun egalik olmoshi — «ـهُمْ»: عَمَلُهُمْ."
-    },
-    {
-      "q": "«___ أَوْلَادٌ صِغَارٌ» (Bular kichkina bolalar)",
-      "opts": [
-        "هَذَا",
-        "هَذِهِ",
-        "هَذَانِ",
-        "هَؤُلَاءِ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-3): insonlar ko'pligi uchun yaqin ko'rsatish olmoshi — «هَؤُلَاءِ»."
-    },
-    {
-      "q": "Alloh senga oson qilsin (muannas)",
-      "opts": [
-        "سَهَّلَ اللهُ لَكَ",
-        "سَهَّلَ اللهُ لَهُ",
-        "سَهَّلَ اللهُ لَكِ",
-        "سَهَّلَ اللهُ لَهَا"
-      ],
-      "correct": 2,
-      "izoh": "Ayol kishiga qaratilgan duoda «لِـ» ga «ـكِ» qo'shilib «لَكِ» bo'ladi."
-    },
-    {
-      "q": "Qaysi jumla grammatik jihatdan XATO?",
-      "opts": [
-        "هَؤُلَاءِ طُلَّابٌ",
-        "هَؤُلَاءِ مُعَلِّمَاتٌ",
-        "هَذِهِ كُتُبٌ",
-        "هَؤُلَاءِ كُتُبٌ"
-      ],
-      "correct": 3,
-      "izoh": "Takror (A1-3): «كُتُبٌ» aqlsiz narsalar ko'pligi bo'lgani uchun «هَؤُلَاءِ» emas, «هَذِهِ» bilan kelishi shart."
-    }
-  ]
+ "title": "Qovaid — A1 4-dars",
+ "otish": 80,
+ "vaqt": 62,
+ "questions": [
+  {
+   "q": "«سَهَّلَ اللهُ ___ يَا أَوْلَادُ»",
+   "opts": [
+    "لَكُمْ",
+    "لَكَ",
+    "لَكُنَّ",
+    "لَهُمْ"
+   ],
+   "correct": 0,
+   "izoh": "Ko'p erkakka murojaat — «لَكُمْ»."
+  },
+  {
+   "q": "«الْمُوَظَّفُونَ ___»",
+   "opts": [
+    "مَسْرُورَاتٌ",
+    "مَسْرُورُونَ",
+    "مَسْرُورٌ",
+    "مَسْرُورَانِ"
+   ],
+   "correct": 1,
+   "izoh": "Mubtado erkaklar ko'pligi — xabar ham «ـُونَ»."
+  },
+  {
+   "q": "«هَذِهِ الشُّقَّةُ ___» (meniki)",
+   "opts": [
+    "لِأَنَا",
+    "لِي",
+    "لَكَ",
+    "لَهُ"
+   ],
+   "correct": 1,
+   "izoh": "Harfdan keyin alohida zamir («أَنَا») kelmaydi — qo'shiladigani keladi: «لِي»."
+  },
+  {
+   "q": "«الطَّيَّارُ فِي الشَّرِكَةِ. الْمُدِيرُ يَذْهَبُ ___» (uning oldiga)",
+   "opts": [
+    "إِلَيْهُ",
+    "إِلَى هُوَ",
+    "إِلَيْهَا",
+    "إِلَيْهِ"
+   ],
+   "correct": 3,
+   "izoh": "«إِلَى» zamir bilan «إِلَيْـ» bo'ladi; erkak — «إِلَيْهِ»."
+  },
+  {
+   "q": "«وَظِيفَةٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "وَظَائِفُ",
+    "وَظِيفَتَانِ",
+    "وَظِيفَاتٌ",
+    "وَظِيفُونَ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-3): «وَظِيفَةٌ» — siniq ko'plik: «وَظَائِفُ»."
+  },
+  {
+   "q": "«أَنَا مُوَظَّفٌ فِي شَرِكَةِ طَيَرَانٍ» gapida mubtado qaysi?",
+   "opts": [
+    "شَرِكَةِ",
+    "مُوَظَّفٌ",
+    "أَنَا",
+    "طَيَرَانٍ"
+   ],
+   "correct": 2,
+   "izoh": "Zamir ham mubtado bo'ladi: «أَنَا». «مُوَظَّفٌ» — xabar."
+  },
+  {
+   "q": "Xabarga mos mubtadoni tanlang: «___ مَفْتُوحَانِ»",
+   "opts": [
+    "الْمَتْجَرَانِ",
+    "الْمَتْجَرُ",
+    "الشَّرِكَتَانِ",
+    "الْمَتَاجِرُ"
+   ],
+   "correct": 0,
+   "izoh": "«مَفْتُوحَانِ» — muzakkar ikkilik: «الْمَتْجَرَانِ»."
+  },
+  {
+   "q": "«يَا مَرْيَمُ، أَيْنَ ___؟» (sening kvartirang)",
+   "opts": [
+    "شُقَّتُكَ",
+    "شُقَّةُكِ",
+    "شُقَّتُهَا",
+    "شُقَّتُكِ"
+   ],
+   "correct": 3,
+   "izoh": "Bitta ayolga — «ـكِ»; «ة» → «ت»."
+  },
+  {
+   "q": "«رَاتِبُ الطَّيَّارِ كَثِيرٌ» gapida xabar qaysi?",
+   "opts": [
+    "رَاتِبُ الطَّيَّارِ",
+    "كَثِيرٌ",
+    "رَاتِبُ",
+    "الطَّيَّارِ"
+   ],
+   "correct": 1,
+   "izoh": "Xabar — mubtado haqida aytilgan gap: «كَثِيرٌ» (ko'p). «رَاتِبُ الطَّيَّارِ» — mubtado."
+  },
+  {
+   "q": "Qaysi so'z jam' taksir (siniq ko'plik)?",
+   "opts": [
+    "طَبَّاخَاتٌ",
+    "مُوَظَّفُونَ",
+    "دَكَاكِينُ",
+    "طَيَّارَانِ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A1-3): «دُكَّانٌ → دَكَاكِينُ» — so'z shakli o'zgargan."
+  },
+  {
+   "q": "«الطَّبَّاخَةُ مَاهِرَةٌ» gapining ko'plik shakli qaysi?",
+   "opts": [
+    "الطَّبَّاخُونَ مَاهِرَاتٌ",
+    "الطَّبَّاخَاتُ مَاهِرَةٌ",
+    "الطَّبَّاخَاتُ مَاهِرُونَ",
+    "الطَّبَّاخَاتُ مَاهِرَاتٌ"
+   ],
+   "correct": 3,
+   "izoh": "Aqlli ayollar ko'pligi — xabar ham «ـَاتٌ»."
+  },
+  {
+   "q": "Xabarga mos mubtadoni tanlang: «___ كَثِيرَةٌ فِي هَذِهِ الْمَدِينَةِ»",
+   "opts": [
+    "الْمَتَاجِرُ",
+    "الْمَتْجَرُ",
+    "الْمُوَظَّفُونَ",
+    "الْمَتْجَرَانِ"
+   ],
+   "correct": 0,
+   "izoh": "«كَثِيرَةٌ» — aqlsiz ko'plikning xabari: «الْمَتَاجِرُ»."
+  },
+  {
+   "q": "Gap to'liq bo'lishi uchun: «الْمُوَظَّفُ ___»",
+   "opts": [
+    "نَشِيطَةٌ",
+    "نَشِيطًا",
+    "نَشِيطٌ",
+    "النَّشِيطُ"
+   ],
+   "correct": 2,
+   "izoh": "Xabar — nakira, marfu', mubtadoga jinsda mos: «نَشِيطٌ». «الْمُوَظَّفُ النَّشِيطُ» — gap emas, birikma (faol xodim)."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan?",
+   "opts": [
+    "بَابُ الْمَتْجَرُ مَفْتُوحٌ",
+    "بَابُ الْمَتْجَرِ مَفْتُوحٌ",
+    "بَابَ الْمَتْجَرِ مَفْتُوحٌ",
+    "بَابُ الْمَتْجَرِ مَفْتُوحٍ"
+   ],
+   "correct": 1,
+   "izoh": "Mubtado marfu' («بَابُ»), muzofun ilayh majrur («الْمَتْجَرِ»), xabar marfu' («مَفْتُوحٌ»)."
+  },
+  {
+   "q": "«هَؤُلَاءِ ___»",
+   "opts": [
+    "طَيَّارُونَ",
+    "مَتْجَرٌ",
+    "طَيَّارٌ",
+    "طَيَّارَانِ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-3): «هَؤُلَاءِ» — aqlli ko'plikka."
+  },
+  {
+   "q": "«أَنَا أَحْتَاجُ ___ يَا أُمِّي» (senga)",
+   "opts": [
+    "إِلَيْكَ",
+    "إِلَيْكِ",
+    "إِلَيْهَا",
+    "إِلَى أَنْتِ"
+   ],
+   "correct": 1,
+   "izoh": "«اِحْتَاجَ إِلَى» + onaga murojaat: «إِلَيْكِ»."
+  },
+  {
+   "q": "«يَا أَحْمَدُ، مَا ___؟» (sening manziling)",
+   "opts": [
+    "عُنْوَانُكِ",
+    "عُنْوَانِي",
+    "عُنْوَانُهُ",
+    "عُنْوَانُكَ"
+   ],
+   "correct": 3,
+   "izoh": "Bitta erkakka — «ـكَ»."
+  },
+  {
+   "q": "Xabarga mos mubtadoni tanlang: «___ صَعْبٌ»",
+   "opts": [
+    "الْوَظِيفَةُ",
+    "الْأَسْئِلَةُ",
+    "الِامْتِحَانُ",
+    "الْمُشْكِلَةُ"
+   ],
+   "correct": 2,
+   "izoh": "«صَعْبٌ» muzakkar birlik — faqat «الِامْتِحَانُ» mos. Qolganlariga «صَعْبَةٌ» kerak."
+  },
+  {
+   "q": "Gap to'liq bo'lishi uchun: «هَذَا الدُّكَّانُ ___»",
+   "opts": [
+    "خَاصَّةٌ",
+    "الْخَاصُّ",
+    "خَاصٌّ",
+    "خَاصًّا"
+   ],
+   "correct": 2,
+   "izoh": "Xabar nakira, marfu', muzakkar: «خَاصٌّ»."
+  },
+  {
+   "q": "«الطَّبَّاخَاتُ؟ ___ فِي الْبَيْتِ»",
+   "opts": [
+    "هُنَّ",
+    "هِيَ",
+    "هُمْ",
+    "هُمَا"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-3): ayollar ko'pligi haqida — «هُنَّ»."
+  },
+  {
+   "q": "Ma'no va jinsga mos xabarni tanlang: «رَاتِبُ الْمُوَظَّفِ ___»",
+   "opts": [
+    "نَحِيفٌ",
+    "قَلِيلٌ",
+    "قَلِيلَةٌ",
+    "حَزِينٌ"
+   ],
+   "correct": 1,
+   "izoh": "«رَاتِبُ» muzakkar; maosh kam yoki ko'p bo'ladi: «قَلِيلٌ»."
+  },
+  {
+   "q": "«الْقَرْيَةُ جَمِيلَةٌ، وَ___ مَسْجِدٌ كَبِيرٌ» (unda)",
+   "opts": [
+    "فِيهِ",
+    "فِي هِيَ",
+    "فِيهِمْ",
+    "فِيهَا"
+   ],
+   "correct": 3,
+   "izoh": "«الْقَرْيَةُ» muannas — «فِيهَا»."
+  },
+  {
+   "q": "«الطَّبِيبَانِ فِي الْقَرْيَةِ، وَ___ هُنَاكَ» (ikkovining uyi)",
+   "opts": [
+    "بَيْتُهُ",
+    "بَيْتُهُمْ",
+    "بَيْتُهُمَا",
+    "بَيْتُكُمَا"
+   ],
+   "correct": 2,
+   "izoh": "Ikki kishi haqida — «ـهُمَا»."
+  },
+  {
+   "q": "«مَرِيضٌ» so'zining ko'plik shakli qaysi?",
+   "opts": [
+    "مَرِيضَانِ",
+    "مَرِيضَاتٌ",
+    "مَرِيضُونَ",
+    "مَرْضَى"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-3): «مَرِيضٌ» — siniq ko'plik: «مَرْضَى»."
+  },
+  {
+   "q": "«يَا طَبِيبَاتُ، هَلْ ___ صَعْبٌ؟» (sizlarning ishingiz)",
+   "opts": [
+    "عَمَلُكُنَّ",
+    "عَمَلُكُمْ",
+    "عَمَلُهُنَّ",
+    "عَمَلُكِ"
+   ],
+   "correct": 0,
+   "izoh": "Ko'p ayolga murojaat — «ـكُنَّ»."
+  },
+  {
+   "q": "«الطَّبِيبَةُ فِي الْمُسْتَشْفَى، وَ___ قَرِيبَةٌ» (uning kvartirasi)",
+   "opts": [
+    "شُقَّتُهُ",
+    "شُقَّتُهَا",
+    "شُقَّتُهُنَّ",
+    "شُقَّةُهَا"
+   ],
+   "correct": 1,
+   "izoh": "Ayol haqida — «ـهَا»; «ة» → «ت»."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan? (Dars — uch soat)",
+   "opts": [
+    "الدَّرْسَ ثَلَاثُ سَاعَاتٍ",
+    "الدَّرْسُ ثَلَاثُ سَاعَاتٍ",
+    "الدَّرْسُ ثَلَاثَ سَاعَاتٍ",
+    "الدَّرْسُ ثَلَاثِ سَاعَاتٍ"
+   ],
+   "correct": 1,
+   "izoh": "Xabar son bo'lsa ham marfu': «ثَلَاثُ». Mubtado — «الدَّرْسُ»."
+  },
+  {
+   "q": "«الْمَتْجَرُ كَبِيرٌ، وَ___ مَأْكُولَاتٌ كَثِيرَةٌ» (unda)",
+   "opts": [
+    "فِيهِ",
+    "فِيهُ",
+    "فِيهَا",
+    "فِي هُوَ"
+   ],
+   "correct": 0,
+   "izoh": "«الْمَتْجَرُ» muzakkar — «فِيهِ». «ي» dan keyin «ـهُ» → «ـهِ» o'qiladi."
+  },
+  {
+   "q": "«هَاتَانِ ___»",
+   "opts": [
+    "قَرْيَةٌ",
+    "مَتْجَرَانِ",
+    "قُرًى",
+    "قَرْيَتَانِ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-2): «هَاتَانِ» — muannas ikkilikka."
+  },
+  {
+   "q": "Qaysi birikma XATO yozilgan?",
+   "opts": [
+    "وَظِيفَتُهَا",
+    "رَاتِبِي",
+    "الْعُنْوَانُكَ",
+    "عُنْوَانُكَ"
+   ],
+   "correct": 2,
+   "izoh": "Zamir qo'shilgan ism «الْـ» olmaydi."
+  },
+  {
+   "q": "«السَّلَامُ ___ يَا طُلَّابُ»",
+   "opts": [
+    "عَلَيْكُمْ",
+    "عَلَيْهِمْ",
+    "عَلَى أَنْتُمْ",
+    "عَلَيْكُنَّ"
+   ],
+   "correct": 0,
+   "izoh": "«عَلَى» zamir bilan «عَلَيْـ»; ko'p erkakka — «عَلَيْكُمْ»."
+  },
+  {
+   "q": "«عُنْوَانُ الشَّرِكَةِ ___»",
+   "opts": [
+    "جَدِيدَاتٌ",
+    "جَدِيدَانِ",
+    "جَدِيدَةٌ",
+    "جَدِيدٌ"
+   ],
+   "correct": 3,
+   "izoh": "Mubtado — «عُنْوَانُ» (muzakkar): «جَدِيدٌ». «الشَّرِكَةِ» — muzofun ilayh."
+  },
+  {
+   "q": "Ma'no va jinsga mos xabarni tanlang: «الطَّبَّاخَةُ ___»",
+   "opts": [
+    "مَاهِرٌ",
+    "مَاهِرَةٌ",
+    "مَفْتُوحَةٌ",
+    "قَرِيبٌ"
+   ],
+   "correct": 1,
+   "izoh": "«الطَّبَّاخَةُ» muannas, odam: «مَاهِرَةٌ»."
+  },
+  {
+   "q": "«الطَّيَّارُ وَالطَّبِيبُ؟ ___ صَدِيقَانِ»",
+   "opts": [
+    "أَنْتُمَا",
+    "هُوَ",
+    "هُمَا",
+    "هُمْ"
+   ],
+   "correct": 2,
+   "izoh": "Takror (A1-2): ikki kishi haqida — «هُمَا»."
+  },
+  {
+   "q": "«الدَّكَاكِينُ ___»",
+   "opts": [
+    "مَفْتُوحٌ",
+    "مَفْتُوحُونَ",
+    "مَفْتُوحَانِ",
+    "مَفْتُوحَةٌ"
+   ],
+   "correct": 3,
+   "izoh": "Aqlsiz narsalar ko'pligi xabarni muannas birlikda oladi: «مَفْتُوحَةٌ»."
+  },
+  {
+   "q": "Xabarga mos mubtadoni tanlang: «___ طَوِيلَةٌ»",
+   "opts": [
+    "الْعُطْلَةُ",
+    "الْمُوَظَّفُونَ",
+    "الرَّجُلُ",
+    "الدَّرْسُ"
+   ],
+   "correct": 0,
+   "izoh": "«طَوِيلَةٌ» muannas birlik — «الْعُطْلَةُ»."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan? (Shifokor ishidan mamnun)",
+   "opts": [
+    "الطَّبِيبَ مَسْرُورٌ بِعَمَلِهِ",
+    "الطَّبِيبُ مَسْرُورٍ بِعَمَلِهِ",
+    "الطَّبِيبُ مَسْرُورٌ بِعَمَلِهِ",
+    "الطَّبِيبُ مَسْرُورًا بِعَمَلِهِ"
+   ],
+   "correct": 2,
+   "izoh": "Mubtado ham, xabar ham marfu': «الطَّبِيبُ مَسْرُورٌ»."
+  },
+  {
+   "q": "«الْمُوَظَّفُونَ مَسْرُورُونَ، وَ___ كَثِيرَةٌ» (ularning maoshlari)",
+   "opts": [
+    "رَوَاتِبُكُمْ",
+    "رَوَاتِبُهُمْ",
+    "رَوَاتِبُهُنَّ",
+    "رَوَاتِبُهُمَا"
+   ],
+   "correct": 1,
+   "izoh": "Erkaklar ko'pligi haqida — «ـهُمْ»."
+  },
+  {
+   "q": "«___ دُكَّانٌ وَ___ شُقَّةٌ»",
+   "opts": [
+    "هَذَا … هَذَا",
+    "هَذِهِ … هَذَا",
+    "هَذِهِ … هَذِهِ",
+    "هَذَا … هَذِهِ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A1-1): «دُكَّانٌ» muzakkar, «شُقَّةٌ» muannas."
+  },
+  {
+   "q": "«أَنَا سَعِيدٌ ___ يَا خَالِدُ» (sendan)",
+   "opts": [
+    "بِكِ",
+    "بِكَ",
+    "بِأَنْتَ",
+    "بِهِ"
+   ],
+   "correct": 1,
+   "izoh": "«سَعِيدٌ بِـ» + erkakka «ـكَ»: «بِكَ»."
+  },
+  {
+   "q": "«أَنَا طَيَّارٌ، وَ___ فِي شَرِكَةِ طَيَرَانٍ» (mening ishim)",
+   "opts": [
+    "الْعَمَلِي",
+    "عَمَلُهُ",
+    "عَمَلِي",
+    "عَمَلُنَا"
+   ],
+   "correct": 2,
+   "izoh": "«Mening» — «ـي», oldidagi harf kasrali."
+  },
+  {
+   "q": "Ma'no va jinsga mos xabarni tanlang: «مَكَانُ الْعَمَلِ ___»",
+   "opts": [
+    "قَرِيبٌ",
+    "مَرِيضٌ",
+    "مُتَزَوِّجٌ",
+    "قَرِيبَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "«مَكَانُ» muzakkar — «قَرِيبٌ». «مَرِيضٌ», «مُتَزَوِّجٌ» joy haqida aytilmaydi."
+  },
+  {
+   "q": "«___ عُطْلَتُكَ؟ — يَوْمَ الْجُمُعَةِ»",
+   "opts": [
+    "مَتَى",
+    "كَمْ",
+    "مَنْ",
+    "أَيْنَ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A1-1): javob vaqtni bildiradi — «مَتَى»."
+  },
+  {
+   "q": "«مَتْجَرُهُمْ» so'zining tarjimasi qaysi?",
+   "opts": [
+    "Sizlarning do'koningiz",
+    "Uning do'koni",
+    "Bizning do'konimiz",
+    "Ularning do'koni"
+   ],
+   "correct": 3,
+   "izoh": "«ـهُمْ» — ularning."
+  },
+  {
+   "q": "«الْمُدِيرُ يَعْمَلُ ___» (biz bilan)",
+   "opts": [
+    "مَعِي",
+    "مَعَنَا",
+    "مَعَهُمْ",
+    "مَعَ نَحْنُ"
+   ],
+   "correct": 1,
+   "izoh": "«مَعَ» + «ـنَا»: «مَعَنَا»."
+  },
+  {
+   "q": "«يَا مُوَظَّفُونَ، ___ يَوْمَ الْجُمُعَةِ» (sizlarning ta'tilingiz)",
+   "opts": [
+    "عُطْلَتُهُمْ",
+    "عُطْلَتُكُنَّ",
+    "عُطْلَتُكُمْ",
+    "عُطْلَتُكُمَا"
+   ],
+   "correct": 2,
+   "izoh": "Ko'p erkakka murojaat — «ـكُمْ»."
+  },
+  {
+   "q": "«الْعَمَلُ فِي الْقَرْيَةِ صَعْبٌ» gapida mubtado qaysi?",
+   "opts": [
+    "صَعْبٌ",
+    "الْعَمَلُ",
+    "الْقَرْيَةِ",
+    "فِي"
+   ],
+   "correct": 1,
+   "izoh": "Mubtado — gap boshidagi ma'rifa, marfu' ism: «الْعَمَلُ». «صَعْبٌ» — xabar."
+  },
+  {
+   "q": "«كَمْ ___ تَعْمَلُ؟»",
+   "opts": [
+    "سَاعَةً",
+    "سَاعَتَانِ",
+    "سَاعَةٌ",
+    "سَاعَاتٍ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A0-3): «كَمْ» dan keyin birlik, mansub."
+  },
+  {
+   "q": "«الطَّيَّارُ مَشْهُورٌ، وَ___ كَثِيرٌ» (uning maoshi)",
+   "opts": [
+    "رَاتِبُهَا",
+    "الرَّاتِبُهُ",
+    "رَاتِبُهُ",
+    "رَاتِبُهُمْ"
+   ],
+   "correct": 2,
+   "izoh": "Erkak haqida — «ـهُ». Zamirli ism «الْـ» olmaydi."
+  },
+  {
+   "q": "«يَسَّرَ اللهُ ___ يَا مَرْيَمُ»",
+   "opts": [
+    "لَهَا",
+    "لَكَ",
+    "لِأَنْتِ",
+    "لَكِ"
+   ],
+   "correct": 3,
+   "izoh": "Bitta ayolga murojaat — «لَكِ»."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan? (Xodimning ta'tili qisqa)",
+   "opts": [
+    "عُطْلَةُ الْمُوَظَّفِ قَصِيرَةً",
+    "عُطْلَةُ الْمُوَظَّفُ قَصِيرَةٌ",
+    "عُطْلَةُ الْمُوَظَّفِ قَصِيرَةٌ",
+    "عُطْلَةِ الْمُوَظَّفِ قَصِيرَةٌ"
+   ],
+   "correct": 2,
+   "izoh": "Mubtado — zamma, undan keyingi ism — kasra, xabar — tanvinli zamma."
+  },
+  {
+   "q": "«الْمُوَظَّفُونَ؟ الْمُدِيرُ سَعِيدٌ ___»",
+   "opts": [
+    "بِهِنَّ",
+    "بِهِمْ",
+    "بِهُمْ",
+    "بِكُمْ"
+   ],
+   "correct": 1,
+   "izoh": "Erkaklar ko'pligi haqida — «ـهُمْ», kasradan keyin «بِهِمْ» o'qiladi."
+  },
+  {
+   "q": "«أَعْمَلُ ثَمَانِيَ ___»",
+   "opts": [
+    "سَاعَةً",
+    "سَاعَةٍ",
+    "سَاعَتَانِ",
+    "سَاعَاتٍ"
+   ],
+   "correct": 3,
+   "izoh": "Takror (A0-3): 3–10 dan keyin ko'plik, kasrali."
+  },
+  {
+   "q": "«شُقَّةُ الطَّيَّارِ ___»",
+   "opts": [
+    "وَاسِعَةٌ",
+    "وَاسِعُونَ",
+    "وَاسِعَانِ",
+    "وَاسِعٌ"
+   ],
+   "correct": 0,
+   "izoh": "Xabar mubtadoga — «شُقَّةُ» ga moslashadi (muannas), «الطَّيَّارِ» ga emas."
+  },
+  {
+   "q": "«أَنَا سَعِيدَةٌ ___ يَا بَنَاتُ» (sizlardan)",
+   "opts": [
+    "بِأَنْتُنَّ",
+    "بِكُنَّ",
+    "بِكُمْ",
+    "بِهِنَّ"
+   ],
+   "correct": 1,
+   "izoh": "Ko'p ayolga murojaat — «بِكُنَّ»."
+  },
+  {
+   "q": "«نَحْنُ مُوَظَّفُونَ، وَ___ خَاصَّةٌ» (bizning kompaniyamiz)",
+   "opts": [
+    "شَرِكَةُنَا",
+    "شَرِكَتِي",
+    "شَرِكَتُنَا",
+    "شَرِكَتُهُمْ"
+   ],
+   "correct": 2,
+   "izoh": "«Bizning» — «ـنَا»."
+  },
+  {
+   "q": "Qaysi gap to'g'ri harakatlangan? (Qishloq shaharga yaqin)",
+   "opts": [
+    "الْقَرْيَةُ قَرِيبَةً مِنَ الْمَدِينَةِ",
+    "الْقَرْيَةُ قَرِيبَةٌ مِنَ الْمَدِينَةُ",
+    "الْقَرْيَةَ قَرِيبَةٌ مِنَ الْمَدِينَةِ",
+    "الْقَرْيَةُ قَرِيبَةٌ مِنَ الْمَدِينَةِ"
+   ],
+   "correct": 3,
+   "izoh": "Mubtado va xabar marfu'; «مِنْ» dan keyingi ism majrur: «الْمَدِينَةِ»."
+  },
+  {
+   "q": "«الْمَتْجَرُ بِجِوَارِ ___»",
+   "opts": [
+    "الْمَسْجِدِ",
+    "مَسْجِدٌ",
+    "الْمَسْجِدَ",
+    "الْمَسْجِدُ"
+   ],
+   "correct": 0,
+   "izoh": "Takror (A0-5): zarfdan keyingi so'z kasrali."
+  },
+  {
+   "q": "Qaysi biri to'liq gap (jumla ismiyya)?",
+   "opts": [
+    "الرَّاتِبُ قَلِيلٌ",
+    "الرَّاتِبُ الْقَلِيلُ",
+    "رَاتِبٌ قَلِيلٌ",
+    "رَاتِبُ الْمُوَظَّفِ"
+   ],
+   "correct": 0,
+   "izoh": "Mubtado ma'rifa + xabar nakira = gap: «الرَّاتِبُ قَلِيلٌ» (Maosh kam). Qolganlari — birikma."
+  },
+  {
+   "q": "«الشُّقَّةُ وَاسِعَةٌ» gapining ko'plik shakli qaysi?",
+   "opts": [
+    "الشُّقَقُ وَاسِعُونَ",
+    "الشُّقَقُ وَاسِعٌ",
+    "الشُّقَقُ وَاسِعَتَانِ",
+    "الشُّقَقُ وَاسِعَةٌ"
+   ],
+   "correct": 3,
+   "izoh": "«الشُّقَقُ» — aqlsiz ko'plik: xabar muannas birlikda qoladi."
+  },
+  {
+   "q": "Qaysi gap jumla ismiyya?",
+   "opts": [
+    "تَعْمَلُ الطَّبِيبَةُ فِي الْمُسْتَشْفَى",
+    "يَسْكُنُ الطَّيَّارُ فِي الْمَدِينَةِ",
+    "الطَّبِيبَةُ فِي الْمُسْتَشْفَى",
+    "يَذْهَبُ الْمُوَظَّفُ إِلَى الْعَمَلِ"
+   ],
+   "correct": 2,
+   "izoh": "Jumla ismiyya ism bilan boshlanadi. Qolganlari fe'l bilan boshlangan."
+  },
+  {
+   "q": "«لَهُمْ بَيْتٌ فِي الْقَرْيَةِ» gapining tarjimasi qaysi?",
+   "opts": [
+    "Bizning qishloqda uyimiz bor",
+    "Ularning qishloqda uyi bor",
+    "Sizlarning qishloqda uyingiz bor",
+    "Uning qishloqda uyi bor"
+   ],
+   "correct": 1,
+   "izoh": "«لَهُمْ» — ularda / ularning ... bor."
+  }
+ ]
 }
