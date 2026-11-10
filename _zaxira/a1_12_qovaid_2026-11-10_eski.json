@@ -1,0 +1,777 @@
+{
+  "title": "Qovaid — A1 12-dars",
+  "otish": 80,
+  "vaqt": 50,
+  "questions": [
+    {
+      "q": "«اُدْرُسْ» qanday ma’noda?",
+      "opts": [
+        "Sen (erkak) o‘rganma!",
+        "Sen (erkak) o‘rgan!",
+        "U (erkak) o‘rgandi.",
+        "U (erkak) o‘rganmaydi."
+      ],
+      "correct": 1,
+      "izoh": "اُدْرُسْ — bir erkakka buyruq."
+    },
+    {
+      "q": "Avtobus mashinadan kattaroq.",
+      "opts": [
+        "الْحَافِلَةُ كَبِيرَةٌ مِنَ السَّيَّارَةِ",
+        "الْحَافِلَةُ أَكْبَرَ مِنَ السَّيَّارَةِ",
+        "الْحَافِلَةُ أَكْبَرُ مِنَ السَّيَّارَةِ",
+        "الْحَافِلَةُ أَكْبَرُ إِلَى السَّيَّارَةِ"
+      ],
+      "correct": 2,
+      "izoh": "أَكْبَرُ مِنْ — ...dan kattaroq."
+    },
+    {
+      "q": "Sizlar (ayollar) suv ichmanglar!",
+      "opts": [
+        "لَا تَشْرَبْنَ الْمَاءَ",
+        "لَا تَشْرَبُوا الْمَاءَ",
+        "لَا تَشْرَبَا الْمَاءَ",
+        "لَا تَشْرَبِي الْمَاءَ"
+      ],
+      "correct": 0,
+      "izoh": "Ayollar ko‘pligidagi نَ nahiyda saqlanadi."
+    },
+    {
+      "q": "«Kitob sumkaning ichida» gapini toping.",
+      "opts": [
+        "الْكِتَابُ إِلَى الْحَقِيبَةِ",
+        "الْكِتَابُ فِي الْحَقِيبَةِ",
+        "الْكِتَابُ مِنَ الْحَقِيبَةِ",
+        "الْكِتَابُ عَلَى الْحَقِيبَةِ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-7): Ichida ma’nosida فِي ishlatiladi; undan keyingi ot majrur keladi."
+    },
+    {
+      "q": "«Men ertaga darsni yozaman» gapini toping.",
+      "opts": [
+        "أَكْتُبُ الدَّرْسَ أَمْسِ",
+        "سَأَكْتُبُ الدَّرْسَ غَدًا",
+        "كَتَبْتُ الدَّرْسَ غَدًا",
+        "سَيَكْتُبُ الدَّرْسَ غَدًا"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-9): سَـ + أَكْتُبُ birinchi shaxsdagi kelasi zamonni bildiradi."
+    },
+    {
+      "q": "«الْبَيْتُ أَكْبَرُ مِنَ الشُّقَّةِ» nimani bildiradi?",
+      "opts": [
+        "Kvartira uydan kattaroq.",
+        "Uy kvartiradan kichikroq.",
+        "Uy kvartiradan kattaroq.",
+        "Uy kvartiradek katta."
+      ],
+      "correct": 2,
+      "izoh": "أَكْبَرُ مِنْ — ...dan kattaroq."
+    },
+    {
+      "q": "«السَّيَّارَةُ أَسْرَعُ مِنَ الْحَافِلَةِ» nimani bildiradi?",
+      "opts": [
+        "Avtobus mashinadan tezroq.",
+        "Mashina avtobusdan sekinroq.",
+        "Mashina avtobusdan tezroq.",
+        "Mashina avtobusdek tez."
+      ],
+      "correct": 2,
+      "izoh": "Birinchi narsa ikkinchisidan tezroq."
+    },
+    {
+      "q": "«U ikkovi talaba qiz» gapining boshiga mos olmoshni qo‘ying: «___ طَالِبَتَانِ».",
+      "opts": [
+        "هُنَّ",
+        "هِيَ",
+        "هُمْ",
+        "هُمَا"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-2): هُمَا ikki shaxs uchun jinsdan qat’i nazar ishlatiladi."
+    },
+    {
+      "q": "Samolyot avtobusdan tezroq.",
+      "opts": [
+        "الطَّائِرَةُ سَرِيعَةٌ مِنَ الْحَافِلَةِ",
+        "الطَّائِرَةُ أَسْرَعَ مِنَ الْحَافِلَةِ",
+        "الطَّائِرَةُ أَسْرَعُ مِنَ الْحَافِلَةِ",
+        "الطَّائِرَةُ أَسْرَعُ إِلَى الْحَافِلَةِ"
+      ],
+      "correct": 2,
+      "izoh": "Qiyos: أَسْرَعُ مِنَ — ...dan tezroq."
+    },
+    {
+      "q": "«لَا تَكْتُبُوا» qanday ma’noda?",
+      "opts": [
+        "Sizlar (erkaklar) yozinglar!",
+        "Siz ikkovingiz yozmang!",
+        "Sizlar (erkaklar) yozmanglar!",
+        "Sizlar (ayollar) yozmanglar!"
+      ],
+      "correct": 2,
+      "izoh": "لَا تَكْتُبُوا — erkaklar ko‘pligiga taqiq."
+    },
+    {
+      "q": "«الطَّالِبُ أَطْوَلُ مِنْ أَخِيهِ» nimani bildiradi?",
+      "opts": [
+        "Birodari talabadan uzunroq.",
+        "Talaba birodaridan uzunroq.",
+        "Talaba birodaridan pastroq.",
+        "Talaba va birodari teng bo‘yli."
+      ],
+      "correct": 1,
+      "izoh": "Birinchi shaxs birodaridan uzunroq deyilmoqda."
+    },
+    {
+      "q": "Bu uy o‘sha uydan kattaroq.",
+      "opts": [
+        "هَذَا الْبَيْتُ كَبِيرٌ مِنْ ذَلِكَ الْبَيْتِ",
+        "هَذَا الْبَيْتُ أَكْبَرُ مِنْ ذَلِكَ الْبَيْتِ",
+        "هَذَا الْبَيْتُ أَكْبَرَ مِنْ ذَلِكَ الْبَيْتِ",
+        "هَذَا الْبَيْتُ أَكْبَرُ إِلَى ذَلِكَ الْبَيْتِ"
+      ],
+      "correct": 1,
+      "izoh": "Qiyoslanadigan ikkinchi qism مِنْ bilan keladi."
+    },
+    {
+      "q": "Sen (erkak) klinikaga bor!",
+      "opts": [
+        "اِذْهَبِي إِلَى الْعِيَادَةِ",
+        "اِذْهَبُوا إِلَى الْعِيَادَةِ",
+        "اِذْهَبْنَ إِلَى الْعِيَادَةِ",
+        "اِذْهَبْ إِلَى الْعِيَادَةِ"
+      ],
+      "correct": 3,
+      "izoh": "Bir erkakka اِذْهَبْ."
+    },
+    {
+      "q": "«Ular (ayollar) tirishqoq talabalar» gapini toping.",
+      "opts": [
+        "هُنَّ طَالِبَاتٌ مُجْتَهِدَاتٌ",
+        "هُمْ طَالِبَاتٌ مُجْتَهِدَاتٌ",
+        "هُنَّ طُلَّابٌ مُجْتَهِدُونَ",
+        "هِيَ طَالِبَاتٌ مُجْتَهِدَاتٌ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-3): Ayollar ko‘pligi olmoshi هُنَّ; ot va sifat ham muannas ko‘plikda keladi."
+    },
+    {
+      "q": "Bu mashina u mashinadan tezroq.",
+      "opts": [
+        "هَذِهِ السَّيَّارَةُ أَسْرَعُ مِنْ تِلْكَ السَّيَّارَةِ",
+        "هَذِهِ السَّيَّارَةُ سَرِيعَةٌ مِنْ تِلْكَ السَّيَّارَةِ",
+        "هَذِهِ السَّيَّارَةُ أَسْرَعَ مِنْ تِلْكَ السَّيَّارَةِ",
+        "هَذِهِ السَّيَّارَةُ أَسْرَعُ إِلَى تِلْكَ السَّيَّارَةِ"
+      ],
+      "correct": 0,
+      "izoh": "أَسْرَعُ مِنْ bilan ikkita mashina qiyoslanmoqda."
+    },
+    {
+      "q": "Sizlar (erkaklar) xatni yozinglar!",
+      "opts": [
+        "اُكْتُبَا الرِّسَالَةَ",
+        "اُكْتُبِي الرِّسَالَةَ",
+        "اُكْتُبُوا الرِّسَالَةَ",
+        "اُكْتُبْنَ الرِّسَالَةَ"
+      ],
+      "correct": 2,
+      "izoh": "كَتَبَ–يَكْتُبُ dan buyruq اُكْتُبُوا."
+    },
+    {
+      "q": "«Sizlar (ayollar) uyda o‘tirdingizlar» gapidagi mos fe’lni tanlang: «أَنْتُنَّ ___ فِي الْبَيْتِ».",
+      "opts": [
+        "جَلَسْتُنَّ",
+        "جَلَسْتُمْ",
+        "جَلَسْنَ",
+        "جَلَسَتَا"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-5): أَنْتُنَّ uchun moziy ـْتُنَّ bilan tuslanadi."
+    },
+    {
+      "q": "Sizlar (ayollar) derazani ochinglar!",
+      "opts": [
+        "اِفْتَحْنَ النَّافِذَةَ",
+        "اِفْتَحُوا النَّافِذَةَ",
+        "اِفْتَحَا النَّافِذَةَ",
+        "اِفْتَحِي النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "Ayollar ko‘pligi buyrug‘i اِفْتَحْنَ."
+    },
+    {
+      "q": "«Bu tirishqoq talaba» (muannas) gapini toping.",
+      "opts": [
+        "هَذَا طَالِبَةٌ مُجْتَهِدَةٌ",
+        "هَذِهِ طَالِبٌ مُجْتَهِدٌ",
+        "هُوَ طَالِبَةٌ مُجْتَهِدَةٌ",
+        "هَذِهِ طَالِبَةٌ مُجْتَهِدَةٌ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-1): Muannas birlik uchun هَذِهِ, ot va sifat ham muannas shaklda keladi."
+    },
+    {
+      "q": "«Ana ular muhandislar» (erkaklar) gapini toping.",
+      "opts": [
+        "ذَلِكَ مُهَنْدِسُونَ",
+        "أُولَئِكَ مُهَنْدِسُونَ",
+        "تِلْكَ مُهَنْدِسُونَ",
+        "هَؤُلَاءِ مُهَنْدِسُونَ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-11): Uzoqdagi oqila ko‘plik uchun أُولَئِكَ ishlatiladi."
+    },
+    {
+      "q": "Talaba darsdan keyin qaytdi.",
+      "opts": [
+        "رَجَعَ الطَّالِبُ قَبْلَ الدَّرْسِ",
+        "رَجَعَ الطَّالِبُ أَمَامَ الدَّرْسِ",
+        "رَجَعَ الطَّالِبُ تَحْتَ الدَّرْسِ",
+        "رَجَعَ الطَّالِبُ بَعْدَ الدَّرْسِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-6): بَعْدَ — keyin ma’nosidagi vaqt zarfi."
+    },
+    {
+      "q": "Siz ikkovingiz xatni yozmang!",
+      "opts": [
+        "لَا تَكْتُبُوا الرِّسَالَةَ",
+        "لَا تَكْتُبِي الرِّسَالَةَ",
+        "لَا تَكْتُبَا الرِّسَالَةَ",
+        "لَا تَكْتُبْنَ الرِّسَالَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Ikkilik nahiy لَا تَكْتُبَا."
+    },
+    {
+      "q": "Sizlar (erkaklar) darsni o‘rganmanglar!",
+      "opts": [
+        "لَا تَدْرُسُوا الدَّرْسَ",
+        "لَا تَدْرُسَا الدَّرْسَ",
+        "لَا تَدْرُسِي الدَّرْسَ",
+        "لَا تَدْرُسْنَ الدَّرْسَ"
+      ],
+      "correct": 0,
+      "izoh": "Erkaklar ko‘pligida لَا تَدْرُسُوا."
+    },
+    {
+      "q": "«Bular faol o‘qituvchilar» (erkaklar) gapini toping.",
+      "opts": [
+        "هَذَا مُدَرِّسُونَ نَشِيطُونَ",
+        "هَؤُلَاءِ مُدَرِّسَاتٌ نَشِيطَاتٌ",
+        "هُمْ مُدَرِّسُونَ نَشِيطُونَ",
+        "هَؤُلَاءِ مُدَرِّسُونَ نَشِيطُونَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-3): Yaqindagi insonlar ko‘pligi uchun هَؤُلَاءِ ishlatiladi."
+    },
+    {
+      "q": "«كَتَبَ الطَّالِبُ الدَّرْسَ فِي الْفَصْلِ» gapida maf’ulun bih qaysi?",
+      "opts": [
+        "الدَّرْسَ",
+        "الطَّالِبُ",
+        "فِي الْفَصْلِ",
+        "كَتَبَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-10): Yozish harakati bevosita tushgan narsa — الدَّرْسَ; u maf’ulun bihdir."
+    },
+    {
+      "q": "Sen (ayol) klinikaga borma!",
+      "opts": [
+        "لَا تَذْهَبْ إِلَى الْعِيَادَةِ",
+        "لَا تَذْهَبِي إِلَى الْعِيَادَةِ",
+        "لَا تَذْهَبُوا إِلَى الْعِيَادَةِ",
+        "لَا تَذْهَبْنَ إِلَى الْعِيَادَةِ"
+      ],
+      "correct": 1,
+      "izoh": "Ayol birlik nahiyi لَا تَذْهَبِي."
+    },
+    {
+      "q": "Bu shahar o‘sha shahardan kattaroq.",
+      "opts": [
+        "هَذِهِ الْمَدِينَةُ كَبِيرَةٌ مِنْ تِلْكَ الْمَدِينَةِ",
+        "هَذِهِ الْمَدِينَةُ أَكْبَرُ مِنْ تِلْكَ الْمَدِينَةِ",
+        "هَذِهِ الْمَدِينَةُ أَكْبَرَ مِنْ تِلْكَ الْمَدِينَةِ",
+        "هَذِهِ الْمَدِينَةُ أَكْبَرُ إِلَى تِلْكَ الْمَدِينَةِ"
+      ],
+      "correct": 1,
+      "izoh": "مِنْ bilan qiyosda muannas ega uchun ham أَكْبَرُ keladi."
+    },
+    {
+      "q": "«السُّلَحْفَاةُ أَبْطَأُ مِنَ الْبَطَّةِ» nimani bildiradi?",
+      "opts": [
+        "O‘rdak toshbaqadan sekinroq.",
+        "Toshbaqa o‘rdakdan tezroq.",
+        "Toshbaqa o‘rdakdek tez.",
+        "Toshbaqa o‘rdakdan sekinroq."
+      ],
+      "correct": 3,
+      "izoh": "أَبْطَأُ مِنْ — ...dan sekinroq."
+    },
+    {
+      "q": "Sen (erkak) hisobni to‘la!",
+      "opts": [
+        "اِدْفَعِي الْحِسَابَ",
+        "اِدْفَعِ الْحِسَابَ",
+        "اِدْفَعُوا الْحِسَابَ",
+        "اِدْفَعْنَ الْحِسَابَ"
+      ],
+      "correct": 1,
+      "izoh": "اِدْفَعْ buyrug‘i الْحِسَابَ bilan tutashganda oxiri kasra bilan o‘qiladi."
+    },
+    {
+      "q": "«هُوَ طَبِيبٌ نَشِيطٌ» gapini «sen» (ayolga) shakliga to‘liq o‘zgartiring.",
+      "opts": [
+        "أَنْتِ طَبِيبَةٌ نَشِيطَةٌ",
+        "أَنْتَ طَبِيبَةٌ نَشِيطَةٌ",
+        "أَنْتِ طَبِيبٌ نَشِيطٌ",
+        "هِيَ طَبِيبَةٌ نَشِيطَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-1): Ayol tinglovchi uchun أَنْتِ; ot va sifat ham muannas shaklga o‘tadi."
+    },
+    {
+      "q": "Sen (ayol) suv ichma!",
+      "opts": [
+        "لَا تَشْرَبِ الْمَاءَ",
+        "لَا تَشْرَبُوا الْمَاءَ",
+        "لَا تَشْرَبْنَ الْمَاءَ",
+        "لَا تَشْرَبِي الْمَاءَ"
+      ],
+      "correct": 3,
+      "izoh": "Ayol birlik nahiyi لَا تَشْرَبِي."
+    },
+    {
+      "q": "«Yangi ikkita mashina» birikmasini toping.",
+      "opts": [
+        "سَيَّارَتَانِ جَدِيدَتَانِ",
+        "سَيَّارَتَانِ جَدِيدَةٌ",
+        "سَيَّارَةٌ جَدِيدَتَانِ",
+        "سَيَّارَتَانِ جَدِيدَانِ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-11): Sifat mavsuf bilan jins va sonda moslashadi: ikkisi ham muannas ikkilik."
+    },
+    {
+      "q": "«Universitet yaqin» gapini toping.",
+      "opts": [
+        "الْجَامِعَةُ قَرِيبٌ",
+        "الْجَامِعَةَ قَرِيبَةٌ",
+        "الْجَامِعَةُ قَرِيبَةٌ",
+        "الْجَامِعَةُ قَرِيبَةً"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-4): Ismiy gapda muannas mubtadoga muannas xabar mos keladi; ikkalasi ham marfu’."
+    },
+    {
+      "q": "«لَا تَجْلِسِي» qanday ma’noda?",
+      "opts": [
+        "Sen (ayol) o‘tir!",
+        "Sen (ayol) o‘tirma!",
+        "Sen (ayol) o‘tirmading.",
+        "U (ayol) o‘tirmaydi."
+      ],
+      "correct": 1,
+      "izoh": "لَا تَجْلِسِي — bir ayolga nahiy."
+    },
+    {
+      "q": "Sen (ayol) hisobni to‘lama!",
+      "opts": [
+        "لَا تَدْفَعِ الْحِسَابَ",
+        "لَا تَدْفَعُوا الْحِسَابَ",
+        "لَا تَدْفَعْنَ الْحِسَابَ",
+        "لَا تَدْفَعِي الْحِسَابَ"
+      ],
+      "correct": 3,
+      "izoh": "Ayol birlik nahiyi لَا تَدْفَعِي."
+    },
+    {
+      "q": "Qaysi gap «Men xatni yozmayman» degan ma’noni bildiradi?",
+      "opts": [
+        "مَا كَتَبْتُ الرِّسَالَةَ",
+        "لَنْ أَكْتُبَ الرِّسَالَةَ",
+        "لَا تَكْتُبِ الرِّسَالَةَ",
+        "لَا أَكْتُبُ الرِّسَالَةَ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-10): لَا + muzori odatiy yoki hozirgi zamon inkorini bildiradi."
+    },
+    {
+      "q": "«الْمَدْرَسَةُ أَقْرَبُ مِنَ الْمَعْهَدِ» nimani bildiradi?",
+      "opts": [
+        "Institut maktabdan yaqinroq.",
+        "Maktab institutdan yaqinroq.",
+        "Maktab institutdan uzoqroq.",
+        "Maktab institutdek yaqin."
+      ],
+      "correct": 1,
+      "izoh": "أَقْرَبُ مِنْ — ...dan yaqinroq."
+    },
+    {
+      "q": "Sen (erkak) derazani och!",
+      "opts": [
+        "اِفْتَحِ النَّافِذَةَ",
+        "اِفْتَحِي النَّافِذَةَ",
+        "اِفْتَحُوا النَّافِذَةَ",
+        "اِفْتَحْنَ النَّافِذَةَ"
+      ],
+      "correct": 0,
+      "izoh": "Bir erkakka buyruq اِفْتَحْ; ال bilan tutashganda حِ o‘qiladi."
+    },
+    {
+      "q": "«هِيَ أَصْغَرُ مِنْ أُخْتِهَا» nimani bildiradi?",
+      "opts": [
+        "U opasidan kattaroq.",
+        "Opasi undan kichikroq.",
+        "Ular teng yoshda.",
+        "U opasidan kichikroq."
+      ],
+      "correct": 3,
+      "izoh": "أَصْغَرُ مِنْ kichiklikni qiyoslaydi."
+    },
+    {
+      "q": "«Tirishqoq talaba qizlar» birikmasini toping.",
+      "opts": [
+        "طَالِبَاتٌ مُجْتَهِدَاتٌ",
+        "طَالِبَاتٌ مُجْتَهِدُونَ",
+        "طَالِبَةٌ مُجْتَهِدَاتٌ",
+        "طَالِبَاتٌ مُجْتَهِدَةٌ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-11): Oqila muannas ko‘plikda sifat ham muannas ko‘plikda keladi."
+    },
+    {
+      "q": "«اِجْلِسْ» qanday ma’noda?",
+      "opts": [
+        "Sen (erkak) o‘tirma!",
+        "Sen (erkak) o‘tir!",
+        "U (erkak) o‘tirdi.",
+        "U (erkak) o‘tirmaydi."
+      ],
+      "correct": 1,
+      "izoh": "اِجْلِسْ — erkak birlik uchun buyruq."
+    },
+    {
+      "q": "Sen (erkak) darsni o‘rgan!",
+      "opts": [
+        "اُدْرُسِي الدَّرْسَ",
+        "اُدْرُسِ الدَّرْسَ",
+        "اُدْرُسُوا الدَّرْسَ",
+        "اُدْرُسْنَ الدَّرْسَ"
+      ],
+      "correct": 1,
+      "izoh": "دَرَسَ–يَدْرُسُ: اُدْرُسْ; ال bilan tutashda سِ."
+    },
+    {
+      "q": "Sen (erkak) suv ichma!",
+      "opts": [
+        "لَا تَشْرَبِي الْمَاءَ",
+        "لَا تَشْرَبُوا الْمَاءَ",
+        "لَا تَشْرَبِ الْمَاءَ",
+        "لَا تَشْرَبْنَ الْمَاءَ"
+      ],
+      "correct": 2,
+      "izoh": "لَا تَشْرَبْ taqiqi ال bilan tutashganda oxirgi بِ kasra bilan o‘qiladi."
+    },
+    {
+      "q": "Bu ko‘cha o‘sha ko‘chadan uzunroq.",
+      "opts": [
+        "هَذَا الشَّارِعُ طَوِيلٌ مِنْ ذَلِكَ الشَّارِعِ",
+        "هَذَا الشَّارِعُ أَطْوَلُ مِنْ ذَلِكَ الشَّارِعِ",
+        "هَذَا الشَّارِعُ أَطْوَلَ مِنْ ذَلِكَ الشَّارِعِ",
+        "هَذَا الشَّارِعُ أَطْوَلُ إِلَى ذَلِكَ الشَّارِعِ"
+      ],
+      "correct": 1,
+      "izoh": "أَطْوَلُ مِنْ — ...dan uzunroq."
+    },
+    {
+      "q": "«Bu ikki muhandis» (muzakkar) gapini toping.",
+      "opts": [
+        "هَاتَانِ مُهَنْدِسَانِ",
+        "هَذَانِ مُهَنْدِسَانِ",
+        "هَذَا مُهَنْدِسَانِ",
+        "هَؤُلَاءِ مُهَنْدِسَانِ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-2): Muzakkar ikkilikka هَذَانِ va ـَانِ qo‘llanadi."
+    },
+    {
+      "q": "«اِغْسِلُوا» qanday ma’noda?",
+      "opts": [
+        "Sizlar (erkaklar) yuvinglar!",
+        "Sizlar (erkaklar) yuvmanglar!",
+        "Siz ikkovingiz yuving!",
+        "Sizlar (ayollar) yuvinglar!"
+      ],
+      "correct": 0,
+      "izoh": "غَسَلَ–يَغْسِلُ dan erkak ko‘plik amri اِغْسِلُوا."
+    },
+    {
+      "q": "Siz ikkovingiz sharbat ichmang!",
+      "opts": [
+        "لَا تَشْرَبُوا الْعَصِيرَ",
+        "لَا تَشْرَبَا الْعَصِيرَ",
+        "لَا تَشْرَبِي الْعَصِيرَ",
+        "لَا تَشْرَبْنَ الْعَصِيرَ"
+      ],
+      "correct": 1,
+      "izoh": "Ikkilik nahiyda nun tushadi: لَا تَشْرَبَا."
+    },
+    {
+      "q": "Mening xonam sening xonangdan kengroq (erkakka).",
+      "opts": [
+        "غُرْفَتِي وَاسِعَةٌ مِنْ غُرْفَتِكَ",
+        "غُرْفَتِي أَوْسَعَ مِنْ غُرْفَتِكَ",
+        "غُرْفَتِي أَوْسَعُ مِنْ غُرْفَتِكَ",
+        "غُرْفَتِي أَوْسَعُ إِلَى غُرْفَتِكَ"
+      ],
+      "correct": 2,
+      "izoh": "أَوْسَعُ مِنْ — ...dan kengroq."
+    },
+    {
+      "q": "Institut maktabdan uzoqroq.",
+      "opts": [
+        "الْمَعْهَدُ أَبْعَدُ مِنَ الْمَدْرَسَةِ",
+        "الْمَعْهَدُ بَعِيدٌ مِنَ الْمَدْرَسَةِ",
+        "الْمَعْهَدُ أَبْعَدَ مِنَ الْمَدْرَسَةِ",
+        "الْمَعْهَدُ أَبْعَدُ إِلَى الْمَدْرَسَةِ"
+      ],
+      "correct": 0,
+      "izoh": "أَبْعَدُ مِنْ — ...dan uzoqroq."
+    },
+    {
+      "q": "«U universitetga bordi» gapini toping.",
+      "opts": [
+        "ذَهَبَ فِي الْجَامِعَةِ",
+        "ذَهَبَ مِنَ الْجَامِعَةِ",
+        "ذَهَبَ عَلَى الْجَامِعَةِ",
+        "ذَهَبَ إِلَى الْجَامِعَةِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-7): Yo‘nalish ma’nosida إِلَى ishlatiladi."
+    },
+    {
+      "q": "Sizlar (ayollar) xatni yozmanglar!",
+      "opts": [
+        "لَا تَكْتُبُوا الرِّسَالَةَ",
+        "لَا تَكْتُبَا الرِّسَالَةَ",
+        "لَا تَكْتُبْنَ الرِّسَالَةَ",
+        "لَا تَكْتُبِي الرِّسَالَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Ayollar ko‘pligidagi ـْنَ saqlanadi."
+    },
+    {
+      "q": "«الْحَدِيقَةُ أَجْمَلُ مِنَ الشَّارِعِ» nimani bildiradi?",
+      "opts": [
+        "Bog‘ ko‘chadan chiroyliroq.",
+        "Ko‘cha bog‘dan chiroyliroq.",
+        "Bog‘ ko‘chadek chiroyli.",
+        "Bog‘ ko‘chadan kattaroq."
+      ],
+      "correct": 0,
+      "izoh": "أَجْمَلُ مِنْ — ...dan chiroyliroq."
+    },
+    {
+      "q": "«Ular (ayollar) darsni yozyaptilar» gapidagi mos fe’lni tanlang: «هُنَّ ___ الدَّرْسَ».",
+      "opts": [
+        "يَكْتُبْنَ",
+        "يَكْتُبُونَ",
+        "تَكْتُبُونَ",
+        "تَكْتُبْنَ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-9): هُنَّ uchun muzori fe’l يَـ bilan boshlanib, ـْنَ bilan tugaydi."
+    },
+    {
+      "q": "Akam mendan kattaroq.",
+      "opts": [
+        "أَخِي كَبِيرٌ مِنِّي",
+        "أَخِي أَكْبَرُ مِنِّي",
+        "أَخِي أَكْبَرَ مِنِّي",
+        "أَخِي أَكْبَرُ فِيَّ"
+      ],
+      "correct": 1,
+      "izoh": "أَكْبَرُ مِنِّي — mendan kattaroq."
+    },
+    {
+      "q": "«Bu bizning kitobimiz» gapini toping.",
+      "opts": [
+        "هَذَا كِتَابُنَا",
+        "هَذَا كِتَابِي",
+        "هَذَا كِتَابُكُمْ",
+        "هَذَا كِتَابُهُمْ"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-4): نَحْنُ olmoshining ismga birikkan shakli ـنَا: كِتَابُنَا."
+    },
+    {
+      "q": "«Biz kecha darsni yozdik» gapidagi mos fe’lni tanlang: «نَحْنُ ___ الدَّرْسَ أَمْسِ».",
+      "opts": [
+        "كَتَبْنَا",
+        "كَتَبُوا",
+        "كَتَبْتُمْ",
+        "كَتَبَتَا"
+      ],
+      "correct": 0,
+      "izoh": "Takror (A1-5): نَحْنُ uchun moziy fe’l ـْنَا bilan tugaydi: كَتَبْنَا."
+    },
+    {
+      "q": "Sizlar (erkaklar) sharbat ichmanglar!",
+      "opts": [
+        "لَا تَشْرَبَا الْعَصِيرَ",
+        "لَا تَشْرَبِي الْعَصِيرَ",
+        "لَا تَشْرَبُوا الْعَصِيرَ",
+        "لَا تَشْرَبْنَ الْعَصِيرَ"
+      ],
+      "correct": 2,
+      "izoh": "Erkaklar ko‘pligida لَا تَشْرَبُوا."
+    },
+    {
+      "q": "Sen (ayol) xatni yoz!",
+      "opts": [
+        "اُكْتُبِ الرِّسَالَةَ",
+        "اُكْتُبُوا الرِّسَالَةَ",
+        "اُكْتُبِي الرِّسَالَةَ",
+        "اُكْتُبْنَ الرِّسَالَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Ayol birlik buyruq اُكْتُبِي."
+    },
+    {
+      "q": "Siz ikkovingiz eshikni oching!",
+      "opts": [
+        "اِفْتَحُوا الْبَابَ",
+        "اِفْتَحِي الْبَابَ",
+        "اِفْتَحْنَ الْبَابَ",
+        "اِفْتَحَا الْبَابَ"
+      ],
+      "correct": 3,
+      "izoh": "Ikkilik buyruqda اِفْتَحَا ishlatiladi."
+    },
+    {
+      "q": "Qaysi gap «Men xatni yozmadim» degan ma’noni bildiradi?",
+      "opts": [
+        "لَا أَكْتُبُ الرِّسَالَةَ",
+        "لَنْ أَكْتُبَ الرِّسَالَةَ",
+        "مَا كَتَبْتُ الرِّسَالَةَ",
+        "لَا تَكْتُبِ الرِّسَالَةَ"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-10): مَا + moziy o‘tgan zamon inkorini bildiradi."
+    },
+    {
+      "q": "Mening opam mendan uzunroq.",
+      "opts": [
+        "أُخْتِي طَوِيلَةٌ مِنِّي",
+        "أُخْتِي أَطْوَلَ مِنِّي",
+        "أُخْتِي أَطْوَلُ فِيَّ",
+        "أُخْتِي أَطْوَلُ مِنِّي"
+      ],
+      "correct": 3,
+      "izoh": "أَطْوَلُ مِنِّي — mendan uzunroq."
+    },
+    {
+      "q": "«Uchta qalam» birikmasini toping.",
+      "opts": [
+        "ثَلَاثَةُ قَلَمٍ",
+        "ثَلَاثُ أَقْلَامٍ",
+        "ثَلَاثَةُ أَقْلَامٍ",
+        "ثَلَاثَةُ أَقْلَامًا"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-8): 3–10 dan keyin sanalmish ko‘plik va majrur keladi; قَلَمٌ muzakkar bo‘lgani uchun son muannas shaklda."
+    },
+    {
+      "q": "U (ayol) opasidan kichikroq.",
+      "opts": [
+        "هِيَ صَغِيرَةٌ مِنْ أُخْتِهَا",
+        "هِيَ أَصْغَرَ مِنْ أُخْتِهَا",
+        "هِيَ أَصْغَرُ إِلَى أُخْتِهَا",
+        "هِيَ أَصْغَرُ مِنْ أُخْتِهَا"
+      ],
+      "correct": 3,
+      "izoh": "مِنْ bilan qiyosda أَصْغَرُ shakli ishlatiladi."
+    },
+    {
+      "q": "Sen (ayol) derazani och!",
+      "opts": [
+        "اِفْتَحِ النَّافِذَةَ",
+        "اِفْتَحُوا النَّافِذَةَ",
+        "اِفْتَحْنَ النَّافِذَةَ",
+        "اِفْتَحِي النَّافِذَةَ"
+      ],
+      "correct": 3,
+      "izoh": "Ayol birlik buyrug‘i اِفْتَحِي."
+    },
+    {
+      "q": "Sizlar (erkaklar) eshikni ochinglar!",
+      "opts": [
+        "اِفْتَحَا الْبَابَ",
+        "اِفْتَحِي الْبَابَ",
+        "اِفْتَحُوا الْبَابَ",
+        "اِفْتَحْنَ الْبَابَ"
+      ],
+      "correct": 2,
+      "izoh": "Erkaklar ko‘pligi buyrug‘i اِفْتَحُوا."
+    },
+    {
+      "q": "Kitob stolning ustida.",
+      "opts": [
+        "الْكِتَابُ تَحْتَ الْمَكْتَبِ",
+        "الْكِتَابُ أَمَامَ الْمَكْتَبِ",
+        "الْكِتَابُ خَلْفَ الْمَكْتَبِ",
+        "الْكِتَابُ فَوْقَ الْمَكْتَبِ"
+      ],
+      "correct": 3,
+      "izoh": "Takror (A1-6): فَوْقَ — ustida ma’nosidagi makon zarfi."
+    },
+    {
+      "q": "Toshbaqa o‘rdakdan sekinroq.",
+      "opts": [
+        "السُّلَحْفَاةُ بَطِيئَةٌ مِنَ الْبَطَّةِ",
+        "السُّلَحْفَاةُ أَبْطَأَ مِنَ الْبَطَّةِ",
+        "السُّلَحْفَاةُ أَبْطَأُ إِلَى الْبَطَّةِ",
+        "السُّلَحْفَاةُ أَبْطَأُ مِنَ الْبَطَّةِ"
+      ],
+      "correct": 3,
+      "izoh": "أَبْطَأُ مِنْ — ...dan sekinroq."
+    },
+    {
+      "q": "«O‘sha erkak talaba» gapini toping.",
+      "opts": [
+        "تِلْكَ طَالِبٌ",
+        "ذَلِكَ طَالِبٌ",
+        "أُولَئِكَ طَالِبٌ",
+        "هَذَا طَالِبٌ"
+      ],
+      "correct": 1,
+      "izoh": "Takror (A1-11): Uzoqdagi muzakkar birlik uchun ذَلِكَ ishlatiladi."
+    },
+    {
+      "q": "Mashina avtobusdan kichikroq.",
+      "opts": [
+        "السَّيَّارَةُ أَصْغَرُ مِنَ الْحَافِلَةِ",
+        "السَّيَّارَةُ صَغِيرَةٌ مِنَ الْحَافِلَةِ",
+        "السَّيَّارَةُ أَصْغَرَ مِنَ الْحَافِلَةِ",
+        "السَّيَّارَةُ أَصْغَرُ إِلَى الْحَافِلَةِ"
+      ],
+      "correct": 0,
+      "izoh": "أَصْغَرُ مِنْ qiyos bildiradi."
+    },
+    {
+      "q": "«Ellikta kitob» birikmasini toping.",
+      "opts": [
+        "خَمْسُونَ كُتُبٍ",
+        "خَمْسُونَ كِتَابٍ",
+        "خَمْسُونَ كِتَابًا",
+        "خَمْسِينَ كُتُبًا"
+      ],
+      "correct": 2,
+      "izoh": "Takror (A1-8): 11–99 dan keyin sanalmish birlik va mansub keladi: كِتَابًا."
+    }
+  ]
+}
