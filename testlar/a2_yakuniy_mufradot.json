@@ -6,10 +6,10 @@
   {
    "q": "«Holdan toygan» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "مُرْتَفِعٌ",
-    "مُشْرِقٌ",
+    "قَلِقٌ",
+    "كَسْلَانُ",
     "مُرْهَقٌ",
-    "مُرِيحٌ"
+    "جَائِعٌ"
    ],
    "correct": 2,
    "izoh": "مُرْهَقٌ — holdan toygan, charchagan degani."
@@ -39,10 +39,10 @@
   {
    "q": "«Doimiy ravishda, uzluksiz» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "بِسُرْعَةٍ",
+    "غَالِبًا",
     "بِاسْتِمْرَارٍ",
-    "بِمُفْرَدِهِ",
-    "بِالضَّبْطِ"
+    "بِسُرْعَةٍ",
+    "بِمُفْرَدِهِ"
    ],
    "correct": 1,
    "izoh": "بِاسْتِمْرَارٍ — doimiy ravishda, uzluksiz degani."
@@ -139,9 +139,9 @@
    "q": "«O'rmon» soʻzining arabcha tarjimasini toping",
    "opts": [
     "جَبَلٌ",
-    "حَدِيقَةٌ",
+    "نَهْرٌ",
     "غَابَةٌ",
-    "بَحْرٌ"
+    "شَاطِئٌ"
    ],
    "correct": 2,
    "izoh": "غَابَةٌ — o'rmon degani."
@@ -226,9 +226,9 @@
   {
    "q": "«Bezak naqsh» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "قُبَّةٌ",
+    "حَجَرٌ",
+    "أَثَرٌ",
     "تِمْثَالٌ",
-    "زَهْرَةٌ",
     "زُخْرُفٌ"
    ],
    "correct": 3,
@@ -325,10 +325,10 @@
   {
    "q": "«Nishonlash, bayram qilish» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "اَلتَّسَوُّقُ",
-    "اَلتَّعْلِيقُ",
+    "رِحْلَةٌ",
+    "عُطْلَةٌ",
     "اَلِاحْتِفَالُ",
-    "اَلِاهْتِمَامُ"
+    "اِسْتِقْبَالٌ"
    ],
    "correct": 2,
    "izoh": "اَلِاحْتِفَالُ — nishonlash, bayram qilish degani."
@@ -414,7 +414,7 @@
    "q": "«Ichi to'ldirilgan (do'lma)» soʻzining arabcha tarjimasini toping",
    "opts": [
     "مَقْلِيٌّ",
-    "مَنْزِلِيٌّ",
+    "كُوسَا",
     "مَحْشِيٌّ",
     "مَسْلُوقٌ"
    ],
@@ -425,9 +425,9 @@
    "q": "«Peshtoq; vitrina» soʻzining arabcha tarjimasini toping",
    "opts": [
     "وَاجِهَةٌ",
-    "وَجْبَةٌ",
-    "وَرَقَةٌ",
-    "وَسِيلَةٌ"
+    "نَافِذَةٌ",
+    "مِرْآةٌ",
+    "بَابٌ"
    ],
    "correct": 0,
    "izoh": "وَاجِهَةٌ — peshtoq, old tomon; vitrina degani."
@@ -446,10 +446,10 @@
   {
    "q": "«Asr (100 yil)» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "قُرْصٌ",
+    "شَهْرٌ",
     "قَرْنٌ",
-    "فُرْنٌ",
-    "قَرْيَةٌ"
+    "يَوْمٌ",
+    "أُسْبُوعٌ"
    ],
    "correct": 1,
    "izoh": "قَرْنٌ — asr (100 yil) degani."
@@ -459,8 +459,8 @@
    "opts": [
     "ذَيْلٌ",
     "نَابٌ",
-    "أُذُنٌ",
-    "جِلْدٌ"
+    "جِلْدٌ",
+    "أُذُنٌ"
    ],
    "correct": 1,
    "izoh": "نَابٌ — qoziq tish, so'yloq degani."
@@ -546,9 +546,9 @@
    "q": "«Kredit kartasi» iborasining arabcha tarjimasini toping",
    "opts": [
     "بِطَاقَةُ الِائْتِمَانِ",
+    "خِدْمَةُ التَّوْصِيلِ",
     "بَوَّابَةُ الدُّخُولِ",
-    "بِطَاقَةُ الْمُوَاصَلَاتِ",
-    "خِدْمَةُ التَّوْصِيلِ"
+    "اَلسِّيرَةُ الذَّاتِيَّةُ"
    ],
    "correct": 0,
    "izoh": "بِطَاقَةُ الِائْتِمَانِ — kredit kartasi degani."
@@ -578,8 +578,8 @@
   {
    "q": "«Ha (inkor savolga tasdiq javob)» soʻzining arabcha tarjimasini toping",
    "opts": [
+    "هَلْ",
     "لَيْسَ",
-    "نَعَمْ",
     "إِلَّا",
     "بَلَى"
    ],
@@ -590,9 +590,9 @@
    "q": "«Soyabon» soʻzining arabcha tarjimasini toping",
    "opts": [
     "مِظَلَّةٌ",
-    "مِصْعَدٌ",
+    "حِذَاءٌ",
     "مِعْطَفٌ",
-    "مِكْوَاةٌ"
+    "بَدْلَةٌ"
    ],
    "correct": 0,
    "izoh": "مِظَلَّةٌ — soyabon degani."
@@ -611,24 +611,24 @@
   {
    "q": "«To'g'ridan-to'g'ri; darhol» soʻzining arabcha tarjimasini toping",
    "opts": [
-    "مُبَكِّرًا",
-    "تَحْدِيدًا",
+    "بِسُرْعَةٍ",
     "لَاحِقًا",
+    "حَالِيًّا",
     "مُبَاشَرَةً"
    ],
    "correct": 3,
    "izoh": "مُبَاشَرَةً — to'g'ridan-to'g'ri; darhol degani."
   },
   {
-   "q": "«يَتَرَاوَحُ بَيْنَ ... وَ ...» iborasining oʻzbekcha ma'nosini toping",
+   "q": "«لَيْسَ بَعْدُ» iborasining oʻzbekcha ma'nosini toping",
    "opts": [
-    "...lardan biri hisoblanadi",
-    "...dan tashkil topadi",
-    "...ga nisbat beriladi",
-    "...oralig'ida bo'ladi"
+    "Hech qachon, aslo",
+    "Allaqachon, bo'lib bo'ldi",
+    "Hozirning o'zida, darhol",
+    "Hali emas, hozircha yo'q"
    ],
    "correct": 3,
-   "izoh": "يَتَرَاوَحُ بَيْنَ ... وَ ... — ... bilan ... orasida bo'ladi degani."
+   "izoh": "لَيْسَ بَعْدُ — hali emas, hozircha yo'q degani."
   },
   {
    "q": "«مُسَكِّنَاتٌ» soʻzining oʻzbekcha ma'nosini toping",
@@ -939,15 +939,15 @@
    "izoh": "اِهْتَمَّ - يَهْتَمُّ — g'amxo'rlik qilmoq, e'tibor bermoq degani."
   },
   {
-   "q": "«To'la, to'lgan» soʻzining arabcha tarjimasini toping",
+   "q": "«To'la, to'lgan» iborasining arabcha tarjimasini toping",
    "opts": [
-    "مَلِيءٌ",
-    "قَلِيلٌ",
-    "غَلِيظٌ",
-    "ثَقِيلٌ"
+    "مَلِيءٌ بِـ",
+    "قَرِيبٌ مِنْ",
+    "مُخْتَصٌّ بِـ",
+    "مُتَّجِهٌ إِلَى"
    ],
    "correct": 0,
-   "izoh": "مَلِيءٌ — to'la, ...ga to'lgan degani."
+   "izoh": "مَلِيءٌ بِـ — to'la, ...ga to'lgan degani."
   },
   {
    "q": "«تَرْفِيهِيٌّ» soʻzining oʻzbekcha ma'nosini toping",
@@ -996,9 +996,9 @@
   {
    "q": "«Yolg'iz o'zi» soʻzining arabcha tarjimasini toping",
    "opts": [
+    "تَمَامًا",
+    "أَيْضًا",
     "مَعًا",
-    "لَدَيْهِ",
-    "وَاحِدٌ",
     "وَحْدَهُ"
    ],
    "correct": 3,
@@ -1085,8 +1085,8 @@
    "q": "«Shunday, shu tarzda» soʻzining arabcha tarjimasini toping",
    "opts": [
     "هُنَاكَ",
+    "تَحْدِيدًا",
     "لِذَلِكَ",
-    "ذَلِكَ",
     "هَكَذَا"
    ],
    "correct": 3,
