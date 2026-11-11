@@ -631,6 +631,7 @@ body.error-bg::after{box-shadow:inset 0 0 120px rgba(229,72,77,.20)}
 body.has-dock{padding-bottom:92px}
 .feedback-box{margin-top:8px;padding:9px 12px;font-size:13px;line-height:1.45}
 .feedback-box .fa{font-size:15px}
+.wh-resend{text-decoration:none;margin:12px 0}
 </style>
 </head>
 <body>
@@ -1829,7 +1830,12 @@ function sendToWebhook(lvl, pct, tot, max) {
   const closeBtn = '<button class="wh-close" onclick="if(window.Telegram&&Telegram.WebApp)Telegram.WebApp.close();else window.close();">Botga qaytish \u2713</button>';
   // bo'lim 241c (Azam): natija yetmasa o'quvchi emas, BIZ darhol bilamiz -- adminga avtomatik signal.
   const _code = 'Daraja: <b>' + lvl + '</b> \u00b7 Ball: <b>' + pct + '%</b> (' + tot + '/' + max + ')' + (tgId !== 'UNKNOWN' ? ' \u00b7 ID: <b>' + tgId + '</b>' : '');
-  const manual = 'Natijangiz botga avtomatik yetib bormadi. <b>Ustozga xabar berildi</b> \u2014 darsingiz qo\'lda ochiladi. Ehtiyot uchun shu ekranni skrinshot qilib qo\'ying.<div class="wh-code">' + _code + '</div>';
+  // bo'lim 252d (Azam, 01.11): Shahlo -- telefonidan Railway manzili ochilmadi, natija yo'qoldi. Zaxira: natija
+  // Telegram'ning O'ZI orqali botga boradi (t.me deep link, server manziliga bog'liq emas): bot /start r_<kod> ni oladi.
+  const _rc = ['r', String(lvl), String(currentLevel || lvl), pct, tot, max, levelScore.M, levelScore.Q, levelScore.R, levelScore.I, PL_T0 ? Math.round((Date.now() - PL_T0) / 1000) : 0].join('_');
+  const _rcLink = 'https://t.me/bayyina_tizimbot?start=' + _rc;
+  window._plResend = function(){ try { if(tg && typeof tg.openTelegramLink === 'function') { tg.openTelegramLink(_rcLink); return false; } } catch(e) {} return true; };
+  const manual = 'Natijangiz botga avtomatik yetib bormadi, lekin <b>yo\'qolmadi</b>. Pastdagi tugmani bosing \u2014 natija Telegram orqali botga yuboriladi (botda <b>START</b> tugmasini bosing).<a class="wh-close wh-resend" href="' + _rcLink + '" onclick="return window._plResend()">\ud83d\udce9 Natijani botga yuborish</a>Ehtiyot uchun shu ekranni skrinshot qilib qo\'ying.<div class="wh-code">' + _code + '</div>';
   let _failSent = false;
   function reportFail(reason) {
     if(_failSent) return; _failSent = true;
