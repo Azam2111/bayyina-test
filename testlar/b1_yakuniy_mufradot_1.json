@@ -1,0 +1,997 @@
+{
+ "title": "B1 — Chiqish imtihoni: Lug'at (mufradot) — 1-qism",
+ "otish": 80,
+ "vaqt": 65,
+ "questions": [
+  {
+   "q": "«Yo'qotmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "فَتَحَ",
+    "فَقَدَ",
+    "فَسَدَ",
+    "فَحَصَ"
+   ],
+   "correct": 1,
+   "izoh": "فَقَدَ — yo'qotmoq degani."
+  },
+  {
+   "q": "«اَلتَّعَرُّفُ عَلَى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...ga tayanish",
+    "... bilan tanishish",
+    "...ga e'tibor berish",
+    "...ga barham berish"
+   ],
+   "correct": 1,
+   "izoh": "اَلتَّعَرُّفُ عَلَى — ... bilan tanishish degani."
+  },
+  {
+   "q": "«Kechiktirmoq, keyinga surmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "أَدَّى",
+    "أَمَرَ",
+    "أَجَّلَ",
+    "أَتَى"
+   ],
+   "correct": 2,
+   "izoh": "أَجَّلَ — kechiktirmoq, keyinga surmoq degani."
+  },
+  {
+   "q": "«Qochmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "غَرَبَ",
+    "طَلَبَ",
+    "هَرَبَ",
+    "ذَهَبَ"
+   ],
+   "correct": 2,
+   "izoh": "هَرَبَ — qochmoq degani."
+  },
+  {
+   "q": "«وَالٍ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Lashkarboshi",
+    "Soliqchi",
+    "Hokim",
+    "Qozi"
+   ],
+   "correct": 2,
+   "izoh": "وَالٍ — hokim, voliy degani."
+  },
+  {
+   "q": "«Ko'mir» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلذَّهَبُ",
+    "اَلْمِلْحُ",
+    "اَلْفَحْمُ",
+    "اَلتَّمْرُ"
+   ],
+   "correct": 2,
+   "izoh": "اَلْفَحْمُ — ko'mir degani."
+  },
+  {
+   "q": "«Yondosh, tutash» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُجَاوِرٌ",
+    "مُقَابِلٌ",
+    "مُخْتَلِفٌ",
+    "مُعَاكِسٌ"
+   ],
+   "correct": 0,
+   "izoh": "مُجَاوِرٌ — yondosh, tutash (qo'shni turgan) degani."
+  },
+  {
+   "q": "«O'xshash» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُتَوَقَّعٌ",
+    "مُتَشَابِهٌ",
+    "مُتَقَلِّبٌ",
+    "مُتَنَوِّعٌ"
+   ],
+   "correct": 1,
+   "izoh": "مُتَشَابِهٌ — o'xshash degani."
+  },
+  {
+   "q": "«Pessimizm, badbinlik» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلتَّوَازُنُ",
+    "اَلتَّزَاوُجُ",
+    "اَلتَّعَامُلُ",
+    "اَلتَّشَاؤُمُ"
+   ],
+   "correct": 3,
+   "izoh": "اَلتَّشَاؤُمُ — pessimizm, badbinlik degani."
+  },
+  {
+   "q": "«Ega bo'lmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "اِشْتَمَلَ",
+    "اِعْتَقَدَ",
+    "اِمْتَلَكَ",
+    "اِنْتَفَعَ"
+   ],
+   "correct": 2,
+   "izoh": "اِمْتَلَكَ — ega bo'lmoq degani."
+  },
+  {
+   "q": "«Oddiy, sodda» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "بَسِيطٌ",
+    "ثَقِيلٌ",
+    "قَلِيلٌ",
+    "غَلِيظٌ"
+   ],
+   "correct": 0,
+   "izoh": "بَسِيطٌ — oddiy, sodda degani."
+  },
+  {
+   "q": "«مُبَكِّرٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Yangi",
+    "Tez",
+    "Erta",
+    "Kech"
+   ],
+   "correct": 2,
+   "izoh": "مُبَكِّرٌ — erta degani."
+  },
+  {
+   "q": "«تَتَمَيَّزُ بِـ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...bilan mashhur bo'ladi",
+    "...ga tayanadi",
+    "...bilan ajralib turadi",
+    "...ga yordam beradi"
+   ],
+   "correct": 2,
+   "izoh": "تَتَمَيَّزُ بِـ — ... bilan ajralib turadi degani."
+  },
+  {
+   "q": "«Yirtqich» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُبْتَسِمٌ",
+    "مُفْتَرِسٌ",
+    "مُرْتَفِعٌ",
+    "مُنْخَفِضٌ"
+   ],
+   "correct": 1,
+   "izoh": "مُفْتَرِسٌ — yirtqich degani."
+  },
+  {
+   "q": "«عَفَا عَلَيْهِ الزَّمَنُ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Eskirgan, zamoni o'tgan",
+    "Tez o'tgan, qisqa",
+    "Uzoq kutilgan, kechikkan",
+    "Yangi chiqqan, zamonaviy"
+   ],
+   "correct": 0,
+   "izoh": "عَفَا عَلَيْهِ الزَّمَنُ — eskirgan, zamoni o'tgan degani."
+  },
+  {
+   "q": "«اَلْمَشْرُوبَاتُ الْمُنَبِّهَةُ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Gazlangan ichimliklar",
+    "Shirin ichimliklar",
+    "Sovuq ichimliklar",
+    "Tetiklashtiruvchi ichimliklar"
+   ],
+   "correct": 3,
+   "izoh": "اَلْمَشْرُوبَاتُ الْمُنَبِّهَةُ — quvvatlantiruvchi ichimliklar (choy, qahva) degani."
+  },
+  {
+   "q": "«Shaxsiy munosabatlar» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "عَلَاقَاتٌ شَخْصِيَّةٌ",
+    "مَشَاعِرُ مُزَيَّفَةٌ",
+    "وَصْفَةٌ عِلَاجِيَّةٌ",
+    "مَوَادُّ حَافِظَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "عَلَاقَاتٌ شَخْصِيَّةٌ — shaxsiy munosabatlar degani."
+  },
+  {
+   "q": "«بِنَاءً عَلَى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...ning o'rniga",
+    "...ga qo'shimcha",
+    "...ga asosan",
+    "...ga qaramay"
+   ],
+   "correct": 2,
+   "izoh": "بِنَاءً عَلَى — ...ga asosan, ...ga ko'ra degani."
+  },
+  {
+   "q": "«لَا ... إِلَّا إِذَا ...» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "... bo'lmasa ham",
+    "Faqat ... bo'lsagina",
+    "... bo'lsa ham",
+    "... bo'lgani uchun"
+   ],
+   "correct": 1,
+   "izoh": "لَا ... إِلَّا إِذَا ... — ... bo'lmasa, ...ma degani."
+  },
+  {
+   "q": "«عَلَى الْأَبْوَابِ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Uzoqlashib ketdi",
+    "Kechikib qoldi",
+    "Tugab qoldi",
+    "Yaqinlashib qoldi"
+   ],
+   "correct": 3,
+   "izoh": "عَلَى الْأَبْوَابِ — eshik oldida (yaqinlashib qoldi) degani."
+  },
+  {
+   "q": "«Kerakdan ortiq» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "أَكْثَرُ مِنَ اللَّازِمِ",
+    "عَلَى الْأَقَلِّ",
+    "أَكْبَرُ قَدْرٍ مِنَ",
+    "أَكْثَرُ قُدْرَةٍ عَلَى"
+   ],
+   "correct": 0,
+   "izoh": "أَكْثَرُ مِنَ اللَّازِمِ — kerakdan ortiq degani."
+  },
+  {
+   "q": "«So'z erkinligi» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "حُرِّيَّةُ التَّعْبِيرِ",
+    "بِطَاقَةُ الِائْتِمَانِ",
+    "خِدْمَةُ التَّوْصِيلِ",
+    "حَلُّ الْأَلْغَازِ"
+   ],
+   "correct": 0,
+   "izoh": "حُرِّيَّةُ التَّعْبِيرِ — so'z erkinligi degani."
+  },
+  {
+   "q": "«غَزَارَةُ الْعِلْمِ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ilm ahli",
+    "Ilm yo'li",
+    "Ilmning foydasi",
+    "Ilmning mo'lligi"
+   ],
+   "correct": 3,
+   "izoh": "غَزَارَةُ الْعِلْمِ — ilmning chuqurligi/mo'lligi degani."
+  },
+  {
+   "q": "«...ga qaramay» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "مِنْ أَجْلِ",
+    "بِالْقُرْبِ مِنْ",
+    "بَدَلًا مِنْ",
+    "عَلَى الرَّغْمِ مِنْ"
+   ],
+   "correct": 3,
+   "izoh": "عَلَى الرَّغْمِ مِنْ — ...ga qaramay degani."
+  },
+  {
+   "q": "«Sayr, sayil» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "نَشْأَةٌ",
+    "نُزْهَةٌ",
+    "ثَرْوَةٌ",
+    "فَتْرَةٌ"
+   ],
+   "correct": 1,
+   "izoh": "نُزْهَةٌ — sayr, sayil degani."
+  },
+  {
+   "q": "«وَزَّعَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Yig'moq",
+    "Tashimoq",
+    "Sarflamoq",
+    "Tarqatmoq"
+   ],
+   "correct": 3,
+   "izoh": "وَزَّعَ — taqsimlamoq, tarqatmoq degani."
+  },
+  {
+   "q": "«Ko'ngilochar, dam olish» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلتَّرْفِيهُ",
+    "اَلتَّدْخِينُ",
+    "اَلتَّوْظِيفُ",
+    "اَلتَّشْجِيعُ"
+   ],
+   "correct": 0,
+   "izoh": "اَلتَّرْفِيهُ — ko'ngilochar, dam olish degani."
+  },
+  {
+   "q": "«Chekuvchi» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُشْرِفٌ",
+    "مُذِيعٌ",
+    "مُدَخِّنٌ",
+    "مُوَظَّفٌ"
+   ],
+   "correct": 2,
+   "izoh": "مُدَخِّنٌ — chekuvchi degani."
+  },
+  {
+   "q": "«تَحْقِيقٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Tasavvur qilish",
+    "Rejalashtirish",
+    "Kechiktirish",
+    "Amalga oshirish"
+   ],
+   "correct": 3,
+   "izoh": "تَحْقِيقٌ — amalga oshirish, ro'yobga chiqarish degani."
+  },
+  {
+   "q": "«To'y oshi, ziyofat» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "وَلِيمَةٌ",
+    "وَاجِهَةٌ",
+    "وَسِيلَةٌ",
+    "وَجْبَةٌ"
+   ],
+   "correct": 0,
+   "izoh": "وَلِيمَةٌ — to'y oshi, ziyofat degani."
+  },
+  {
+   "q": "«Ko'paymoq, ortmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "اِحْتَوَى",
+    "اِشْتَاقَ",
+    "اِعْتَنَى",
+    "اِزْدَادَ"
+   ],
+   "correct": 3,
+   "izoh": "اِزْدَادَ — ko'paymoq, ortmoq degani."
+  },
+  {
+   "q": "«رُبَّمَا تَخْتَلِفُ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Balki farq qiladi",
+    "Albatta farq qiladi",
+    "Doim bir xil bo'ladi",
+    "Hech farq qilmaydi"
+   ],
+   "correct": 0,
+   "izoh": "رُبَّمَا تَخْتَلِفُ — balki farq qiladi degani."
+  },
+  {
+   "q": "«لَيْسَ فِيهِ تَكَلُّفٌ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Unda hech qanday xato yo'q",
+    "Unda ortiqcha dabdaba yo'q",
+    "Unda hech qanday foyda yo'q",
+    "Unda hech qanday farq yo'q"
+   ],
+   "correct": 1,
+   "izoh": "لَيْسَ فِيهِ تَكَلُّفٌ — unda dabdaba/ortiqcha urinish yo'q degani."
+  },
+  {
+   "q": "«عِلْكَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ko'kat",
+    "Saqich",
+    "Yalpiz",
+    "Xurmo"
+   ],
+   "correct": 1,
+   "izoh": "عِلْكَةٌ — saqich degani."
+  },
+  {
+   "q": "«Quruq qo'l bilan» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "عَلَى غَيْرِ الْعَادَةِ",
+    "عَلَى سَبِيلِ الْمِثَالِ",
+    "فَارِغُو الْأَيْدِي",
+    "بِكُلِّ صِدْقٍ"
+   ],
+   "correct": 2,
+   "izoh": "فَارِغُو الْأَيْدِي — quruq qo'l bilan degani."
+  },
+  {
+   "q": "«بَلَغَ مُرَادَهُ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Orzusidan voz kechdi",
+    "Maqsadidan qaytdi",
+    "Maqsadiga yetdi",
+    "Yo'lidan adashdi"
+   ],
+   "correct": 2,
+   "izoh": "بَلَغَ مُرَادَهُ — maqsadiga yetdi degani."
+  },
+  {
+   "q": "«Foydalanuvchi» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُسْتَأْجِرٌ",
+    "مُتَزَوِّجٌ",
+    "مُتَقَاعِدٌ",
+    "مُسْتَخْدِمٌ"
+   ],
+   "correct": 3,
+   "izoh": "مُسْتَخْدِمٌ — foydalanuvchi degani."
+  },
+  {
+   "q": "«يُؤَدِّي إِلَى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...ga olib keladi",
+    "...dan kelib chiqadi",
+    "...dan qaytadi",
+    "...ga yo'l oladi"
+   ],
+   "correct": 0,
+   "izoh": "يُؤَدِّي إِلَى — ...ga olib keladi degani."
+  },
+  {
+   "q": "«Boshqa tomondan» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "مِنْ شَخْصٍ لِآخَرَ",
+    "وَفِي الْوَقْتِ نَفْسِهِ",
+    "خِلَالَ هَذِهِ الْمُدَّةِ",
+    "وَمِنْ نَاحِيَةٍ أُخْرَى"
+   ],
+   "correct": 3,
+   "izoh": "وَمِنْ نَاحِيَةٍ أُخْرَى — boshqa tomondan degani."
+  },
+  {
+   "q": "«تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...mamlakatdan mamlakatga farq qiladi",
+    "...mamlakatdan mamlakatga ko'chadi",
+    "...hamma mamlakatda bir xil",
+    "...faqat bitta mamlakatda bor"
+   ],
+   "correct": 0,
+   "izoh": "تَخْتَلِفُ ... مِنْ بَلَدٍ لِآخَرَ — ... mamlakatdan mamlakatga farq qiladi degani."
+  },
+  {
+   "q": "«E'tibor, qiziqish, g'amxo'rlik» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اِنْتِهَاءٌ",
+    "اِتِّجَاهٌ",
+    "اِهْتِمَامٌ",
+    "اِسْتِمَارَةٌ"
+   ],
+   "correct": 2,
+   "izoh": "اِهْتِمَامٌ — e'tibor, qiziqish, g'amxo'rlik degani."
+  },
+  {
+   "q": "«صَحِيفَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Maqola",
+    "Sahifa",
+    "Gazeta",
+    "Kitob jildi"
+   ],
+   "correct": 2,
+   "izoh": "صَحِيفَةٌ — gazeta degani."
+  },
+  {
+   "q": "«إِدْمَانُ الْهَاتِفِ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Telefon qo'ng'irog'i",
+    "Telefon raqami",
+    "Telefon narxi",
+    "Telefon qaramligi"
+   ],
+   "correct": 3,
+   "izoh": "إِدْمَانُ الْهَاتِفِ — telefon qaramligi degani."
+  },
+  {
+   "q": "«Marosimlar, urf-odatlar» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "طُقُوسٌ",
+    "نُقُودٌ",
+    "سُلُوكٌ",
+    "شُعُورٌ"
+   ],
+   "correct": 0,
+   "izoh": "طُقُوسٌ — marosimlar, urf-odatlar degani."
+  },
+  {
+   "q": "«بِمُجَرَّدِ أَنْ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...ishi uchun",
+    "...ishiga qaramay",
+    "...ishi bilanoq",
+    "...ishidan oldin"
+   ],
+   "correct": 2,
+   "izoh": "بِمُجَرَّدِ أَنْ — ...ishi bilanoq degani."
+  },
+  {
+   "q": "«Koshki edi» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "لَدَى",
+    "لَيْتَ",
+    "لَيْسَ",
+    "لَعَلَّ"
+   ],
+   "correct": 1,
+   "izoh": "لَيْتَ — koshki edi degani."
+  },
+  {
+   "q": "«اِسْتَمْتِعْ بِـ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...dan uzoqlash",
+    "...dan foydalan",
+    "...dan zavq ol",
+    "...dan ehtiyot bo'l"
+   ],
+   "correct": 2,
+   "izoh": "اِسْتَمْتِعْ بِـ — ...dan zavq ol, huzurlan degani."
+  },
+  {
+   "q": "«غَالِبًا مَا» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ba'zan",
+    "Hech qachon",
+    "Ko'pincha",
+    "Kamdan-kam"
+   ],
+   "correct": 2,
+   "izoh": "غَالِبًا مَا — ko'pincha degani."
+  },
+  {
+   "q": "«شَعَرْتُ بِالْخَجَلِ مِنْ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...dan charchadim",
+    "...dan qo'rqdim",
+    "...dan uyaldim",
+    "...dan xafa bo'ldim"
+   ],
+   "correct": 2,
+   "izoh": "شَعَرْتُ بِالْخَجَلِ مِنْ — ...dan uyaldim degani."
+  },
+  {
+   "q": "«تَكَافُلٌ اجْتِمَاعِيٌّ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "So'z erkinligi",
+    "Ijtimoiy tarmoq",
+    "Shaxsiy munosabatlar",
+    "Ijtimoiy hamjihatlik"
+   ],
+   "correct": 3,
+   "izoh": "تَكَافُلٌ اجْتِمَاعِيٌّ — ijtimoiy hamjihatlik, o'zaro yordam degani."
+  },
+  {
+   "q": "«Rivojlanmoq, taraqqiy etmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "تَعَلَّقَ",
+    "تَطَوَّرَ",
+    "تَغَيَّرَ",
+    "تَكَلَّفَ"
+   ],
+   "correct": 1,
+   "izoh": "تَطَوَّرَ — rivojlanmoq, taraqqiy etmoq degani."
+  },
+  {
+   "q": "«سَبَقَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ortda qolmoq",
+    "O'zib ketmoq",
+    "Yetib olmoq",
+    "To'xtab qolmoq"
+   ],
+   "correct": 1,
+   "izoh": "سَبَقَ — oldin kelmoq, o'zib ketmoq degani."
+  },
+  {
+   "q": "«Bezamoq, ziynatlamoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "سَهَّلَ",
+    "زَيَّنَ",
+    "نَشَّطَ",
+    "عَرَّفَ"
+   ],
+   "correct": 1,
+   "izoh": "زَيَّنَ — bezamoq, ziynatlamoq degani."
+  },
+  {
+   "q": "«... bilan to'la» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "مُتَّجِهٌ إِلَى",
+    "مُمْتَلِئَةٌ بِـ",
+    "مَنْسُوبٌ إِلَى",
+    "مُخَصَّصَةٌ لِـ"
+   ],
+   "correct": 1,
+   "izoh": "مُمْتَلِئَةٌ بِـ — ... bilan to'la degani."
+  },
+  {
+   "q": "«Soxta, qalbaki» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُعَطَّرٌ",
+    "مُلَوَّنٌ",
+    "مُزَيَّنٌ",
+    "مُزَيَّفٌ"
+   ],
+   "correct": 3,
+   "izoh": "مُزَيَّفٌ — soxta, qalbaki degani."
+  },
+  {
+   "q": "«مَاذَا أَفْعَلُ حَتَّى ...؟» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "... uchun kimdan so'ray?",
+    "... uchun qachon kelay?",
+    "... uchun nima qilay?",
+    "... uchun qayerga boray?"
+   ],
+   "correct": 2,
+   "izoh": "مَاذَا أَفْعَلُ حَتَّى ...؟ — ... uchun nima qilay? degani."
+  },
+  {
+   "q": "«أَصْبَحَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Boshlamoq, kirishmoq",
+    "Bo'lmoq, aylanmoq",
+    "Tugamoq, tamom bo'lmoq",
+    "Qolmoq, davom etmoq"
+   ],
+   "correct": 1,
+   "izoh": "أَصْبَحَ — bo'lmoq, aylanmoq degani."
+  },
+  {
+   "q": "«نَفْسِي تُحَدِّثُنِي أَنَّ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ko'nglim sezyaptiki, ...",
+    "Menga aytishdiki, ...",
+    "Esimda borki, ...",
+    "O'zimga aytdimki, ..."
+   ],
+   "correct": 0,
+   "izoh": "نَفْسِي تُحَدِّثُنِي أَنَّ — ko'nglim sezadi-ki... degani."
+  },
+  {
+   "q": "«مَقْصُورٌ عَلَى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Faqat ...ga xos",
+    "... uchun ajratilgan",
+    "...ga nisbat berilgan",
+    "...ga bog'liq"
+   ],
+   "correct": 0,
+   "izoh": "مَقْصُورٌ عَلَى — faqat ...ga xos, cheklangan degani."
+  },
+  {
+   "q": "«لَا مَحَالَةَ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Mumkin emas, muhol",
+    "Shubhasiz, muqarrar",
+    "Ehtimol, shoyad",
+    "Kamdan-kam, ahyonda"
+   ],
+   "correct": 1,
+   "izoh": "لَا مَحَالَةَ — shubhasiz, muqarrar degani."
+  },
+  {
+   "q": "«Qurbonlik (so'yiladigan hayvon)» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلْقِيَادَةُ",
+    "اَلْأُضْحِيَّةُ",
+    "اَلْهِوَايَةُ",
+    "اَلرِّيَاضَةُ"
+   ],
+   "correct": 1,
+   "izoh": "اَلْأُضْحِيَّةُ — qurbonlik (so'yiladigan hayvon) degani."
+  },
+  {
+   "q": "«Ayniqsa, xususan» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "لِذَلِكَ",
+    "وَخَاصَّةً",
+    "هَكَذَا",
+    "وَحْدَهُ"
+   ],
+   "correct": 1,
+   "izoh": "وَخَاصَّةً — ayniqsa, xususan degani."
+  },
+  {
+   "q": "«بَقِيَ فِي ... حَتَّى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "...gacha ...da qoldi",
+    "...dan beri ...da yashaydi",
+    "...dan keyin ...ga ketdi",
+    "...gacha ...ni kutdi"
+   ],
+   "correct": 0,
+   "izoh": "بَقِيَ فِي ... حَتَّى — ...gacha qoldi degani."
+  },
+  {
+   "q": "«Hazil-mutoyiba, kulgili» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "غِذَائِيٌّ",
+    "فُكَاهِيٌّ",
+    "ثَقَافِيٌّ",
+    "تَرْفِيهِيٌّ"
+   ],
+   "correct": 1,
+   "izoh": "فُكَاهِيٌّ — hazil-mutoyiba, kulgili degani."
+  },
+  {
+   "q": "«Safarga chiqmoq, ko'chmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "حَمَلَ",
+    "رَحَلَ",
+    "دَخَلَ",
+    "جَعَلَ"
+   ],
+   "correct": 1,
+   "izoh": "رَحَلَ — ko'chmoq, safarga chiqmoq degani."
+  },
+  {
+   "q": "«Latifa, qiziqarli voqea» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "غُرْفَةٌ",
+    "شُرْفَةٌ",
+    "فُرْصَةٌ",
+    "طُرْفَةٌ"
+   ],
+   "correct": 3,
+   "izoh": "طُرْفَةٌ — latifa, qiziqarli voqea degani."
+  },
+  {
+   "q": "«ضَيَاعُ الْوَقْتِ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Vaqtni behuda sarflash",
+    "Vaqtni rejalash",
+    "Vaqtni tejash",
+    "Vaqt yetishmasligi"
+   ],
+   "correct": 0,
+   "izoh": "ضَيَاعُ الْوَقْتِ — vaqtni behuda sarflash degani."
+  },
+  {
+   "q": "«Ro'zador» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "هَادِئٌ",
+    "غَائِمٌ",
+    "صَائِمٌ",
+    "جَائِعٌ"
+   ],
+   "correct": 2,
+   "izoh": "صَائِمٌ — ro'zador degani."
+  },
+  {
+   "q": "«مُنْتِجَةٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Foydalanuvchi",
+    "Chekuvchi",
+    "Sotuvchi",
+    "Ishlab chiqaruvchi"
+   ],
+   "correct": 3,
+   "izoh": "مُنْتِجَةٌ — ishlab chiqaruvchi degani."
+  },
+  {
+   "q": "«أَصْبَحَ ... وَلَيْسَ ...» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "... emas, balki ... bo'ladi",
+    "... ham, ... ham bo'ldi",
+    "... edi, endi ... emas",
+    "... bo'lib qoldi, ... emas"
+   ],
+   "correct": 3,
+   "izoh": "أَصْبَحَ ... وَلَيْسَ ... — ... bo'lib qoldi, ... emas degani."
+  },
+  {
+   "q": "«Achinarli, afsuslanarli» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مُرْهَقٌ",
+    "مُؤْسِفٌ",
+    "مُمْتِعٌ",
+    "مُرِيحٌ"
+   ],
+   "correct": 1,
+   "izoh": "مُؤْسِفٌ — achinarli, afsuslanarli degani."
+  },
+  {
+   "q": "«أَقَامَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Istiqomat qilmoq",
+    "Qaytmoq",
+    "Qurmoq",
+    "Uyg'onmoq"
+   ],
+   "correct": 0,
+   "izoh": "أَقَامَ — yashamoq, istiqomat qilmoq degani."
+  },
+  {
+   "q": "«Chetlanmoq, saqlanmoq» fe'lining arabcha tarjimasini toping",
+   "opts": [
+    "تَحَمَّلَ",
+    "تَخَيَّلَ",
+    "تَغَلَّبَ",
+    "تَجَنَّبَ"
+   ],
+   "correct": 3,
+   "izoh": "تَجَنَّبَ — chetlanmoq, saqlanmoq degani."
+  },
+  {
+   "q": "«Mahbus, qamoqdagi» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "مَوْعِدٌ",
+    "مَسْجُونٌ",
+    "مَدْعُوٌّ",
+    "مَشْرُوعٌ"
+   ],
+   "correct": 1,
+   "izoh": "مَسْجُونٌ — mahbus, qamoqdagi degani."
+  },
+  {
+   "q": "«اَلثَّرْوَةُ السَّمَكِيَّةُ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Baliq boyligi",
+    "Baliq bozori",
+    "Baliq taomi",
+    "Baliq ovi"
+   ],
+   "correct": 0,
+   "izoh": "اَلثَّرْوَةُ السَّمَكِيَّةُ — baliq boyligi degani."
+  },
+  {
+   "q": "«اَلْمُسَحِّرَاتِيُّ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Saharlikka uyg'otuvchi",
+    "Iftorga chorlovchi",
+    "Hayit puli beruvchi",
+    "Ro'za tutuvchi"
+   ],
+   "correct": 0,
+   "izoh": "اَلْمُسَحِّرَاتِيُّ — saharlikka uyg'otuvchi degani."
+  },
+  {
+   "q": "«اَلرَّحَّالَةُ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Sayyoh",
+    "Haydovchi",
+    "Uchuvchi",
+    "Yo'lovchi"
+   ],
+   "correct": 0,
+   "izoh": "اَلرَّحَّالَةُ — sayyoh, sayohatchi degani."
+  },
+  {
+   "q": "«سَامِحْنِي عَلَى» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "... uchun menga rahmat",
+    "... uchun meni kut",
+    "... uchun meni kechir",
+    "... uchun menga yordam ber"
+   ],
+   "correct": 2,
+   "izoh": "سَامِحْنِي عَلَى — ... uchun meni kechir degani."
+  },
+  {
+   "q": "«اِسْتَأْجَرَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Ijaraga olmoq",
+    "Ijaraga bermoq",
+    "Sotib olmoq",
+    "Qarzga olmoq"
+   ],
+   "correct": 0,
+   "izoh": "اِسْتَأْجَرَ — ijaraga olmoq degani."
+  },
+  {
+   "q": "«...dan foydalandi» iborasining arabcha tarjimasini toping",
+   "opts": [
+    "اِسْتَفَادَ مِنْ",
+    "تَوَجَّهَ إِلَى",
+    "نُسِبَتْ إِلَى",
+    "اِتَّجَهَ إِلَى"
+   ],
+   "correct": 0,
+   "izoh": "اِسْتَفَادَ مِنْ — ...dan foydalandi degani."
+  },
+  {
+   "q": "«اِلْتَحَقَ» fe'lining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "O'qishni davom ettirmoq",
+    "O'qishni bitirmoq",
+    "O'qishni tashlamoq",
+    "O'qishga kirmoq"
+   ],
+   "correct": 3,
+   "izoh": "اِلْتَحَقَ — (O'qishga, ishga) kirmoq, qo'shilmoq degani."
+  },
+  {
+   "q": "«Qishloq joy, qishloq hududi» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلشَّعْبُ",
+    "اَلرِّيفُ",
+    "اَلْجَيْشُ",
+    "اَلسِّجْنُ"
+   ],
+   "correct": 1,
+   "izoh": "اَلرِّيفُ — qishloq joy, qishloq hududi degani."
+  },
+  {
+   "q": "«لَنَا أَنْ نَتَسَاءَلَ!» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "O'zimizni tekshirib ko'raylik!",
+    "Bir-birimizga yordam beraylik!",
+    "Birga javob topaylik!",
+    "O'zimizga savol beraylik!"
+   ],
+   "correct": 3,
+   "izoh": "لَنَا أَنْ نَتَسَاءَلَ! — o'zimizga savol beraylik! degani."
+  },
+  {
+   "q": "«اَلْكَسَلُ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Kasallik",
+    "Qo'rquv",
+    "Dangasalik",
+    "Ochlik"
+   ],
+   "correct": 2,
+   "izoh": "اَلْكَسَلُ — dangasalik, hurunlik degani."
+  },
+  {
+   "q": "«Ochko'zlik bilan, to'ymay» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "بِلُطْفٍ",
+    "بِسُرْعَةٍ",
+    "بِاسْتِمْرَارٍ",
+    "بِشَرَاهَةٍ"
+   ],
+   "correct": 3,
+   "izoh": "بِشَرَاهَةٍ — ochko'zlik bilan, to'ymay degani."
+  },
+  {
+   "q": "«اَلْمُعَدَّلُ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Eng yuqori ko'rsatkich",
+    "Oxirgi natija",
+    "Umumiy miqdor",
+    "O'rtacha ko'rsatkich"
+   ],
+   "correct": 3,
+   "izoh": "اَلْمُعَدَّلُ — o'rtacha ko'rsatkich, me'yor degani."
+  },
+  {
+   "q": "«عَائِدٌ مَادِّيٌّ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Moddiy daromad",
+    "Moddiy ahvol",
+    "Moddiy yordam",
+    "Moddiy zarar"
+   ],
+   "correct": 0,
+   "izoh": "عَائِدٌ مَادِّيٌّ — moddiy daromad degani."
+  },
+  {
+   "q": "«جَلْسَةُ صُلْحٍ» iborasining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "To'y marosimi",
+    "Maslahat yig'ini",
+    "Yarashtirish yig'ini",
+    "Sud majlisi"
+   ],
+   "correct": 2,
+   "izoh": "جَلْسَةُ صُلْحٍ — sulh majlisi, yarashtirish yig'ini degani."
+  },
+  {
+   "q": "«Mehr, shafqat» soʻzining arabcha tarjimasini toping",
+   "opts": [
+    "اَلْكَرَمُ",
+    "اَلْعَطْفُ",
+    "اَلْخَجَلُ",
+    "اَلتَّعَبُ"
+   ],
+   "correct": 1,
+   "izoh": "اَلْعَطْفُ — mehr, shafqat degani."
+  },
+  {
+   "q": "«مُمَيَّزٌ» soʻzining oʻzbekcha ma'nosini toping",
+   "opts": [
+    "Oddiy",
+    "O'xshash",
+    "Barqaror",
+    "O'ziga xos"
+   ],
+   "correct": 3,
+   "izoh": "مُمَيَّزٌ — o'ziga xos, ajralib turuvchi degani."
+  }
+ ]
+}
