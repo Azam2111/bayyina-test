@@ -71,6 +71,9 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .fscale button{width:44px; height:44px; border-radius:50%; border:none; background:var(--brown); color:var(--cream); font-weight:800; font-size:19px; box-shadow:0 3px 12px rgba(0,0,0,.28); cursor:pointer; font-family:inherit}
 .fscale button:active{transform:scale(.94)}
 .q-prompt.ar{font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:clamp(38px,11vw,58px); text-align:center; line-height:2; color:var(--ink); font-weight:700; padding:8px 4px; word-break:break-word}
+/* 2026-11-12: uzun sof arabcha savol (C1 qovaid — buyruq + gap) yirik «so'z» shriftida 4-5 qator bo'lib, variantlarni ekrandan chiqarardi */
+.q-prompt.ar.ar-m{font-size:clamp(27px,7.6vw,38px); line-height:1.9}
+.q-prompt.ar.ar-s{font-size:clamp(21px,5.9vw,28px); line-height:1.9}
 .q-prompt.uz{font-size:clamp(16px,4.4vw,21px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
 .ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.55em; line-height:1.4}
 .lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600}
@@ -368,6 +371,8 @@ body.has-dock{padding-bottom:96px}
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
   function hasLatin(t){return /[A-Za-z]/.test(t||'');}
   const ARX=/[«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿][«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*/g;
+  // Sof arabcha savol uzunligiga qarab shrift: <=24 harf — yirik (so'z/qisqa ibora), 25..48 — o'rta, >48 — kichik.
+  function arLenCls(t){ var n=String(t).replace(/[^\u0621-\u064A]/g,'').length; return n>48?' ar-s':(n>24?' ar-m':''); }
   function wrapAr(t){return String(t).replace(ARX,function(m){return '<span class="ar-in">'+m+'</span>';});}
   // Aralash (arabcha+lotincha) matn: har yozuvni alohida span+izolyatsiya bilan o'rab,
   // konteyner dir="auto" bilan to'g'ri tartibda (arabcha RTL buzilmaydi) chiqaradi.
@@ -446,7 +451,7 @@ body.has-dock{padding-bottom:96px}
 
     let promptHtml;
     if(item.img){ promptHtml='<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>'; }
-    else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar">'+item.q+'</div>'; }
+    else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar'+arLenCls(item.q)+'">'+item.q+'</div>'; }
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
     const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? renderMatn(item.matn) : '';
@@ -505,7 +510,7 @@ body.has-dock{padding-bottom:96px}
   // ====== ISTIMA: BARCHA SAVOLLAR BITTA EKRANDA ======
   function buildPromptHtml(item){
     if(item.img) return '<div class="q-prompt img"><div class="q-img-box">'+item.img+'</div></div>';
-    if(isAr(item.q) && !hasLatin(item.q)) return '<div class="q-prompt ar">'+item.q+'</div>';
+    if(isAr(item.q) && !hasLatin(item.q)) return '<div class="q-prompt ar'+arLenCls(item.q)+'">'+item.q+'</div>';
     if(isAr(item.q)) return '<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>';
     return '<div class="q-prompt uz">'+item.q+'</div>';
   }
