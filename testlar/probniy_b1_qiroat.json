@@ -1,43 +1,55 @@
 {
-  "title": "B1 · Qiroat namoyish",
-  "otish": 80,
-  "vaqt": 3,
-  "questions": [
-    {
-      "q": "Voqea qachon sodir bo'lmoqda?",
-      "opts": [
-        "Ramazon hayitida",
-        "Qurbon hayitida",
-        "Navro'zda",
-        "Juma kuni"
-      ],
-      "correct": 1,
-      "izoh": "عِيدُ الأَضْحَى = Qurbon hayiti",
-      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
-    },
-    {
-      "q": "Go'sht kimga tarqatildi?",
-      "opts": [
-        "Qo'shnilarga",
-        "Bolalarga",
-        "Kambag'allarga",
-        "Mehmonlarga"
-      ],
-      "correct": 2,
-      "izoh": "وَزَّعَ ... عَلَى الفُقَرَاءِ = kambag'allarga tarqatdi",
-      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
-    },
-    {
-      "q": "«ذَبَحَ» fe'lining ma'nosi?",
-      "opts": [
-        "So'ydi",
-        "Sotdi",
-        "Pishirdi",
-        "Olib keldi"
-      ],
-      "correct": 0,
-      "izoh": "ذَبَحَ = So'ydi (qurbonlik)",
-      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
-    }
-  ]
+ "title": "B1 · Qiroat namoyish",
+ "otish": 80,
+ "vaqt": 3,
+ "questions": [
+  {
+   "q": "Kishi ishlarni qanday tartibda qildi?",
+   "opts": [
+    "Avval tarqatdi, keyin so'ydi",
+    "Avval so'ydi, keyin tarqatdi",
+    "Faqat so'ydi",
+    "Faqat tarqatdi"
+   ],
+   "correct": 1,
+   "izoh": "«ذَبَحَ … وَوَزَّعَ» — so'ydi va tarqatdi.",
+   "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+  },
+  {
+   "q": "Go'sht kimlarga tarqatildi?",
+   "opts": [
+    "Kambag'allarga",
+    "Mehmonlarga",
+    "Qarindoshlarga",
+    "Qo'shnilarga"
+   ],
+   "correct": 0,
+   "izoh": "«عَلَى الفُقَرَاءِ» — kambag'allarga.",
+   "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+  },
+  {
+   "q": "«لَحْمَهَا» so'zidagi «هَا» nimaga qaytadi?",
+   "opts": [
+    "Qurbonlikka",
+    "Kambag'allarga",
+    "Kishiga",
+    "Hayitga"
+   ],
+   "correct": 0,
+   "izoh": "«الأُضْحِيَّة» muannas — «هَا»: uning (qurbonlikning) go'shti.",
+   "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+  },
+  {
+   "q": "Voqea qachon bo'ldi?",
+   "opts": [
+    "Juma kuni",
+    "Ramazon hayitida",
+    "Ramazon oyida",
+    "Qurbon hayitida"
+   ],
+   "correct": 3,
+   "izoh": "«عِيدُ الأَضْحَى» — Qurbon hayiti.",
+   "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+  }
+ ]
 }

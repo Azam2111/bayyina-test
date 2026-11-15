@@ -1,0 +1,43 @@
+{
+  "title": "B1 · Qiroat namoyish",
+  "otish": 80,
+  "vaqt": 3,
+  "questions": [
+    {
+      "q": "Voqea qachon sodir bo'lmoqda?",
+      "opts": [
+        "Ramazon hayitida",
+        "Qurbon hayitida",
+        "Navro'zda",
+        "Juma kuni"
+      ],
+      "correct": 1,
+      "izoh": "عِيدُ الأَضْحَى = Qurbon hayiti",
+      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+    },
+    {
+      "q": "Go'sht kimga tarqatildi?",
+      "opts": [
+        "Qo'shnilarga",
+        "Bolalarga",
+        "Kambag'allarga",
+        "Mehmonlarga"
+      ],
+      "correct": 2,
+      "izoh": "وَزَّعَ ... عَلَى الفُقَرَاءِ = kambag'allarga tarqatdi",
+      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+    },
+    {
+      "q": "«ذَبَحَ» fe'lining ma'nosi?",
+      "opts": [
+        "So'ydi",
+        "Sotdi",
+        "Pishirdi",
+        "Olib keldi"
+      ],
+      "correct": 0,
+      "izoh": "ذَبَحَ = So'ydi (qurbonlik)",
+      "matn": "فِي عِيدِ الأَضْحَى، ذَبَحَ الرَّجُلُ الأُضْحِيَّةَ وَوَزَّعَ لَحْمَهَا عَلَى الفُقَرَاءِ."
+    }
+  ]
+}

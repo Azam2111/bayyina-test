@@ -1,43 +1,55 @@
 {
-  "title": "A0 · Qiroat namoyish",
-  "otish": 80,
-  "vaqt": 3,
-  "questions": [
-    {
-      "q": "«كَيْفَ حَالُكَ؟» iborasi nimani anglatadi?",
-      "opts": [
-        "Ismingiz nima?",
-        "Ahvolingiz qanday?",
-        "Qayerdansiz?",
-        "Xayr"
-      ],
-      "correct": 1,
-      "izoh": "كَيْفَ حَالُكَ؟ = Ahvolingiz qanday?",
-      "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
-    },
-    {
-      "q": "Ahvol so'ralganda qanday javob berilgan?",
-      "opts": [
-        "أَهْلًا وَسَهْلًا",
-        "مَا اسْمُكَ",
-        "بِخَيْرٍ وَالْحَمْدُ لِلَّهِ",
-        "مِنْ أَيْنَ أَنْتَ"
-      ],
-      "correct": 2,
-      "izoh": "بِخَيْرٍ وَالْحَمْدُ لِلَّهِ = Yaxshi, Allohga shukr",
-      "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
-    },
-    {
-      "q": "«أَهْلًا وَسَهْلًا» nima ma'noda?",
-      "opts": [
-        "Xush kelibsiz!",
-        "Xayrli tun",
-        "Rahmat",
-        "Kechirasiz"
-      ],
-      "correct": 0,
-      "izoh": "أَهْلًا وَسَهْلًا = Xush kelibsiz",
-      "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
-    }
-  ]
+ "title": "A0 · Qiroat namoyish",
+ "otish": 80,
+ "vaqt": 3,
+ "questions": [
+  {
+   "q": "Suhbat nima bilan boshlandi?",
+   "opts": [
+    "Ism so'rash bilan",
+    "Salomlashish bilan",
+    "Xayrlashish bilan",
+    "Tanishtirish bilan"
+   ],
+   "correct": 1,
+   "izoh": "Birinchi ibora — salom.",
+   "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
+  },
+  {
+   "q": "Matnda nima so'ralgan?",
+   "opts": [
+    "Yosh",
+    "Manzil",
+    "Ahvol",
+    "Ism"
+   ],
+   "correct": 2,
+   "izoh": "«كَيْفَ حَالُكَ؟» — ahvol so'ralgan.",
+   "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
+  },
+  {
+   "q": "Javob bergan kishining ahvoli qanday ekan?",
+   "opts": [
+    "Xafa",
+    "Yaxshi",
+    "Charchagan",
+    "Yomon"
+   ],
+   "correct": 1,
+   "izoh": "«بِخَيْرٍ» — yaxshi.",
+   "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
+  },
+  {
+   "q": "Suhbat qaysi ibora bilan tugadi?",
+   "opts": [
+    "كَيْفَ حَالُكَ؟",
+    "اَلسَّلَامُ عَلَيْكُمْ",
+    "أَهْلًا وَسَهْلًا",
+    "بِخَيْرٍ"
+   ],
+   "correct": 2,
+   "izoh": "Oxirgi ibora — «أَهْلًا وَسَهْلًا».",
+   "matn": "اَلسَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟ — بِخَيْرٍ، وَالْحَمْدُ لِلَّهِ. أَهْلًا وَسَهْلًا!"
+  }
+ ]
 }

@@ -1,85 +1,117 @@
 {
-  "title": "B1 · Qovaid namoyish",
-  "otish": 80,
-  "vaqt": 4,
-  "questions": [
-    {
-      "q": "Arab tilida tartib qanday?",
-      "opts": [
-        "Avval mavsuf, keyin sifat",
-        "Avval sifat, keyin mavsuf"
-      ],
-      "correct": 0,
-      "izoh": "Avval mavsuf (ot), keyin sifat keladi."
-    },
-    {
-      "q": "Qaysi sifat-mavsuf birikmasi to'g'ri?",
-      "opts": [
-        "الطَّالِبَةُ الْمُجْتَهِدَةُ",
-        "الطَّالِبَةُ الْمُجْتَهِدُ",
-        "طَالِبَةٌ الْمُجْتَهِدَةُ",
-        "الطَّالِبَةُ الْمُجْتَهِدَاتُ"
-      ],
-      "correct": 0,
-      "izoh": "Sifat mavsufga jinsda, sonda, e'robda va ma'rifalikda mos keladi."
-    },
-    {
-      "q": "«البِنْتُ الجَمِيلَةُ» — bu qaysi moslik namunasi?",
-      "opts": [
-        "Jinsda (ayol)",
-        "Sonda",
-        "E'robda"
-      ],
-      "correct": 0,
-      "izoh": "Mavsuf ayol → sifat ham ayol (ة): jinsda moslik."
-    },
-    {
-      "q": "«الكِتَابُ الجَدِيدُ» — ikkisida ham «ال» bor. Bu qaysi moslik?",
-      "opts": [
-        "Ma'rifalikda",
-        "Sonda",
-        "Jinsda"
-      ],
-      "correct": 0,
-      "izoh": "Ikkisida «ال» → ma'rifalikda moslik."
-    },
-    {
-      "q": "«طُلَّابٌ مُجْتَهِدُونَ» — qaysi moslikni ko'rsatadi?",
-      "opts": [
-        "Sonda (ko'plik)",
-        "Jinsda",
-        "Ma'rifalikda"
-      ],
-      "correct": 0,
-      "izoh": "Mavsuf ko'plik → sifat ham ko'plik: sonda moslik."
-    },
-    {
-      "q": "Sifat-mavsuf 4 mosligi qaysilar?",
-      "opts": [
-        "Sonda, jinsda, e'robda, ma'rifalikda",
-        "Faqat jins va son",
-        "Faqat e'rob"
-      ],
-      "correct": 0,
-      "izoh": "To'rt moslik: sonda, jinsda, e'robda, ma'rifalikda."
-    },
-    {
-      "q": "«رَجُلٌ كَرِيمٌ» (nakira) — sifatda «ال» bormi?",
-      "opts": [
-        "Yo'q (ikkisi ham ال'siz)",
-        "Ha, sifatda ال bor"
-      ],
-      "correct": 0,
-      "izoh": "Mavsuf nakira → sifat ham nakira (ال'siz)."
-    },
-    {
-      "q": "Mavsuf ayol bo'lsa, sifat qanday bo'ladi?",
-      "opts": [
-        "Ayol shaklida (oxiri ة)",
-        "O'zgarmaydi"
-      ],
-      "correct": 0,
-      "izoh": "Jinsda moslik: mavsuf ayol → sifat ayol (ة)."
-    }
-  ]
+ "title": "B1 · Qovaid namoyish",
+ "otish": 80,
+ "vaqt": 4,
+ "questions": [
+  {
+   "q": "Bo'sh joyni to'ldiring: هَذَا بَيْتٌ ___.",
+   "opts": [
+    "كَبِيرًا",
+    "كَبِيرَةٌ",
+    "الْكَبِيرُ",
+    "كَبِيرٌ"
+   ],
+   "correct": 3,
+   "izoh": "Mavsuf nakira, muzakkar, marfu' — sifat ham shunday."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: قَرَأْتُ الْكِتَابَ ___.",
+   "opts": [
+    "الْجَدِيدَةَ",
+    "الْجَدِيدُ",
+    "جَدِيدٌ",
+    "الْجَدِيدَ"
+   ],
+   "correct": 3,
+   "izoh": "Mavsuf ma'rifa va mansub — sifat ham «ال» li va mansub."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: دَرَسْتُ فِي الْمَدْرَسَةِ ___.",
+   "opts": [
+    "الْكَبِيرَةُ",
+    "الْكَبِيرَةِ",
+    "الْكَبِيرِ",
+    "كَبِيرَةٍ"
+   ],
+   "correct": 1,
+   "izoh": "Mavsuf majrur, muannas, ma'rifa — sifat to'rttasida mos."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: جَاءَ طَالِبَانِ ___.",
+   "opts": [
+    "مُجْتَهِدَيْنِ",
+    "الْمُجْتَهِدَانِ",
+    "مُجْتَهِدَانِ",
+    "مُجْتَهِدُونَ"
+   ],
+   "correct": 2,
+   "izoh": "Mavsuf ikkilik, marfu', nakira — sifat ham."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: رَأَيْتُ رَجُلًا ___.",
+   "opts": [
+    "كَرِيمًا",
+    "كَرِيمَةً",
+    "الْكَرِيمَ",
+    "كَرِيمٌ"
+   ],
+   "correct": 0,
+   "izoh": "Mavsuf mansub, nakira, muzakkar — sifat ham."
+  },
+  {
+   "q": "Qaysi birikmada XATO bor?",
+   "opts": [
+    "الْبِنْتُ الصَّغِيرُ",
+    "الْوَلَدُ الصَّغِيرُ",
+    "بِنْتٌ صَغِيرَةٌ",
+    "الْبِنْتُ الصَّغِيرَةُ"
+   ],
+   "correct": 0,
+   "izoh": "Mavsuf muannas — sifat ham muannas bo'lishi kerak: «الصَّغِيرَةُ»."
+  },
+  {
+   "q": "«اَلْبَيْتُ كَبِيرٌ» va «اَلْبَيْتُ الْكَبِيرُ» ning farqi nima?",
+   "opts": [
+    "Birinchisi birikma, ikkinchisi gap",
+    "Birinchisi gap, ikkinchisi birikma",
+    "Ikkalasi ham birikma",
+    "Ikkalasi ham gap"
+   ],
+   "correct": 1,
+   "izoh": "«Uy katta» (gap) — «katta uy» (sifat ma'rifalikda moslashgan birikma)."
+  },
+  {
+   "q": "«Yangi mashinada» arabchada qaysi?",
+   "opts": [
+    "فِي السَّيَّارَةِ الْجَدِيدَةِ",
+    "فِي السَّيَّارَةِ الْجَدِيدَةُ",
+    "فِي الْجَدِيدَةِ السَّيَّارَةِ",
+    "فِي السَّيَّارَةِ الْجَدِيدِ"
+   ],
+   "correct": 0,
+   "izoh": "Avval mavsuf, keyin sifat; sifat jinsda va e'robda mos."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: هَؤُلَاءِ طُلَّابٌ ___.",
+   "opts": [
+    "الْمُجْتَهِدُونَ",
+    "مُجْتَهِدٌ",
+    "مُجْتَهِدَانِ",
+    "مُجْتَهِدُونَ"
+   ],
+   "correct": 3,
+   "izoh": "Mavsuf ko'plik va nakira — sifat ham."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: هَذِهِ مُعَلِّمَةٌ ___.",
+   "opts": [
+    "مَاهِرٌ",
+    "الْمَاهِرَةُ",
+    "مَاهِرَةً",
+    "مَاهِرَةٌ"
+   ],
+   "correct": 3,
+   "izoh": "Mavsuf muannas, nakira, marfu' — sifat ham."
+  }
+ ]
 }

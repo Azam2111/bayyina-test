@@ -1,90 +1,117 @@
 {
-  "title": "A1 · Qovaid namoyish",
-  "otish": 80,
-  "vaqt": 4,
-  "questions": [
-    {
-      "q": "Quyidagilardan qaysi biri ISMning belgisi?",
-      "opts": [
-        "Jar harfi bilan kelishi",
-        "«قد» qabul qilishi",
-        "«سوف» qabul qilishi",
-        "Ta'kid nuni"
-      ],
-      "correct": 0,
-      "izoh": "Jar harfi bilan kelish — ism belgisi."
-    },
-    {
-      "q": "«فِي البَيْتِ» — «البَيْتِ» oxiri qanday tugagan?",
-      "opts": [
-        "Kasra (ـِ)",
-        "Dammah (ـُ)",
-        "Fatha (ـَ)"
-      ],
-      "correct": 0,
-      "izoh": "Jar harfidan keyin ism kasra bilan tugaydi."
-    },
-    {
-      "q": "Quyidagilardan qaysi biri FE'Lning belgisi?",
-      "opts": [
-        "«قد» qabul qilishi",
-        "Alif-lom qabul qilishi",
-        "Tanvin olishi",
-        "Nido harfi"
-      ],
-      "correct": 0,
-      "izoh": "«قد» — fe'l belgisi."
-    },
-    {
-      "q": "«ضَرَبْتُ» dagi «ـتُ» nimani bildiradi?",
-      "opts": [
-        "Men (foil)",
-        "Sen",
-        "U",
-        "Ular"
-      ],
-      "correct": 0,
-      "izoh": "Oxiridagi «تُ» — «men» (foil ت)."
-    },
-    {
-      "q": "«الطَّالِبُ» so'zi qaysi ism belgisini ko'rsatadi?",
-      "opts": [
-        "Alif-lom (ال) qabul qilishi",
-        "Nido harfi",
-        "Ta'kid nuni"
-      ],
-      "correct": 0,
-      "izoh": "«ال» — alif-lomni qabul qilgan."
-    },
-    {
-      "q": "«سَأُسَافِرُ» dagi «سَ» nimani bildiradi?",
-      "opts": [
-        "Kelasi zamon (fe'l belgisi)",
-        "O'tgan zamon",
-        "Inkor"
-      ],
-      "correct": 0,
-      "izoh": "«سَـ/سوف» — fe'lning kelasi zamon belgisi."
-    },
-    {
-      "q": "«يَا تِلْمِيذُ» dagi «يَا» qaysi belgi?",
-      "opts": [
-        "Nido harfi (ism belgisi)",
-        "Jar harfi",
-        "Ta'kid nuni"
-      ],
-      "correct": 0,
-      "izoh": "«يا» — nido harfi, ism belgisi."
-    },
-    {
-      "q": "«لَمْ تَنْكَسِرْ» — «لَمْ» nima vazifa bajaradi?",
-      "opts": [
-        "Fe'lni inkor qiladi",
-        "Ismni ta'riflaydi",
-        "Nido bildiradi"
-      ],
-      "correct": 0,
-      "izoh": "«لم» — fe'l oldida inkor (fe'l belgisi)."
-    }
-  ]
+ "title": "A1 · Qovaid namoyish",
+ "otish": 80,
+ "vaqt": 4,
+ "questions": [
+  {
+   "q": "Qaysi so'z ism? (belgisiga qarang)",
+   "opts": [
+    "اُكْتُبْ",
+    "اَلْبَيْتُ",
+    "ذَهَبَ",
+    "يَكْتُبُ"
+   ],
+   "correct": 1,
+   "izoh": "«ال» faqat ismga qo'shiladi."
+  },
+  {
+   "q": "Qaysi so'z fe'l? (belgisiga qarang)",
+   "opts": [
+    "كِتَابٌ",
+    "اَلطَّالِبُ",
+    "سَيَذْهَبُ",
+    "بَيْتٍ"
+   ],
+   "correct": 2,
+   "izoh": "«سَـ» (kelasi zamon) faqat fe'l oldidan keladi."
+  },
+  {
+   "q": "Qaysi so'zda tanvin bor?",
+   "opts": [
+    "كَتَبَ",
+    "كِتَابٌ",
+    "اَلْكِتَابُ",
+    "يَكْتُبُ"
+   ],
+   "correct": 1,
+   "izoh": "Oxiridagi ikki zamma — tanvin, ism belgisi."
+  },
+  {
+   "q": "«فِي الْمَدْرَسَةِ» — «الْمَدْرَسَةِ» so'zida ismning qaysi belgilari bor?",
+   "opts": [
+    "Nido va jar",
+    "Alif-lom va tanvin",
+    "Tanvin va jar",
+    "Alif-lom va jar"
+   ],
+   "correct": 3,
+   "izoh": "Boshida «ال», jar harfidan keyin oxiri kasra."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: قَدْ ___.",
+   "opts": [
+    "نَجَحَ",
+    "كِتَابٍ",
+    "بَيْتٌ",
+    "اَلطَّالِبُ"
+   ],
+   "correct": 0,
+   "izoh": "«قَدْ» dan keyin faqat fe'l keladi."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: لَمْ ___.",
+   "opts": [
+    "بَيْتٍ",
+    "يَذْهَبْ",
+    "كِتَابٌ",
+    "اَلْوَلَدُ"
+   ],
+   "correct": 1,
+   "izoh": "«لَمْ» dan keyin faqat fe'l keladi."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: يَا ___!",
+   "opts": [
+    "اُكْتُبْ",
+    "يَكْتُبُ",
+    "خَالِدُ",
+    "ذَهَبَ"
+   ],
+   "correct": 2,
+   "izoh": "Nido harfi «يَا» dan keyin faqat ism keladi."
+  },
+  {
+   "q": "Bo'sh joyni to'ldiring: فِي ___.",
+   "opts": [
+    "الْبَيْتُ",
+    "الْبَيْتَ",
+    "بَيْتٌ",
+    "الْبَيْتِ"
+   ],
+   "correct": 3,
+   "izoh": "Jar harfidan keyin ism oxiri kasra."
+  },
+  {
+   "q": "«كَتَبْتُ» so'zi fe'l ekanini qaysi belgi ko'rsatadi?",
+   "opts": [
+    "Oxiridagi zamir",
+    "Oldidagi jar harfi",
+    "Oxiridagi tanvin",
+    "Boshidagi alif-lom"
+   ],
+   "correct": 0,
+   "izoh": "Oxiridagi «تُ» — «men» zamiri (foil), u faqat fe'lga ulanadi."
+  },
+  {
+   "q": "Qaysi qatorda ikkala so'z ham fe'l?",
+   "opts": [
+    "كِتَابٌ، قَلَمٌ",
+    "ذَهَبَ، بَيْتٌ",
+    "اَلْوَلَدُ، يَكْتُبُ",
+    "ذَهَبَ، يَكْتُبُ"
+   ],
+   "correct": 3,
+   "izoh": "«ذَهَبَ» — o'tgan zamon, «يَكْتُبُ» — hozirgi-kelasi zamon fe'li."
+  }
+ ]
 }

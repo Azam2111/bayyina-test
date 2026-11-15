@@ -1,43 +1,55 @@
 {
-  "title": "A1 · Qiroat namoyish",
-  "otish": 80,
-  "vaqt": 3,
-  "questions": [
-    {
-      "q": "Jumla nima haqida?",
-      "opts": [
-        "Maktab",
-        "Oila",
-        "Bozor",
-        "Safar"
-      ],
-      "correct": 1,
-      "izoh": "أُسْرَة = Oila",
-      "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
-    },
-    {
-      "q": "Kimlar uyda?",
-      "opts": [
-        "Ota, ona va aka",
-        "Do'stlar",
-        "O'qituvchilar",
-        "Qo'shnilar"
-      ],
-      "correct": 0,
-      "izoh": "أَبِي وَأُمِّي وَأَخِي = Otam, onam va akam",
-      "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
-    },
-    {
-      "q": "«بَيْت» so'zining ma'nosi?",
-      "opts": [
-        "Bog'",
-        "Uy",
-        "Maktab",
-        "Do'kon"
-      ],
-      "correct": 1,
-      "izoh": "بَيْت = Uy",
-      "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
-    }
-  ]
+ "title": "A1 · Qiroat namoyish",
+ "otish": 80,
+ "vaqt": 3,
+ "questions": [
+  {
+   "q": "Muallifning oilasi qanday?",
+   "opts": [
+    "Kichik va baxtli",
+    "Katta va band",
+    "Katta va baxtli",
+    "Kichik va tinch"
+   ],
+   "correct": 2,
+   "izoh": "«كَبِيرَةٌ» — katta, «سَعِيدَةٌ» — baxtli.",
+   "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
+  },
+  {
+   "q": "Uyda nechta kishi tilga olingan?",
+   "opts": [
+    "Ikki",
+    "To'rt",
+    "Besh",
+    "Uch"
+   ],
+   "correct": 3,
+   "izoh": "Ota, ona va aka (uka).",
+   "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
+  },
+  {
+   "q": "Matnda kim tilga OLINMAGAN?",
+   "opts": [
+    "Ona",
+    "Opa (singil)",
+    "Aka (uka)",
+    "Ota"
+   ],
+   "correct": 1,
+   "izoh": "«أُخْت» so'zi matnda yo'q.",
+   "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
+  },
+  {
+   "q": "Ular qayerda?",
+   "opts": [
+    "Uyda",
+    "Maktabda",
+    "Masjidda",
+    "Bozorda"
+   ],
+   "correct": 0,
+   "izoh": "«فِي الْبَيْتِ» — uyda.",
+   "matn": "أُسْرَتِي كَبِيرَةٌ. أَبِي وَأُمِّي وَأَخِي فِي الْبَيْتِ. عَائِلَتُنَا سَعِيدَةٌ."
+  }
+ ]
 }

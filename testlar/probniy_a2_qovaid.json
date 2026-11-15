@@ -1,83 +1,117 @@
 {
-  "title": "A2 · Qovaid namoyish",
-  "otish": 80,
-  "vaqt": 4,
-  "questions": [
-    {
-      "q": "Amr fe'li qaysi fe'ldan yasaladi?",
-      "opts": [
-        "Muzoriy fe'ldan",
-        "Mozi fe'ldan"
-      ],
-      "correct": 0,
-      "izoh": "Amr fe'li muzoriy fe'lidan olinadi."
-    },
-    {
-      "q": "«تَكْتُبُ» dan amr yasashda 1-qadam nima?",
-      "opts": [
-        "Muzoroat harfini olib tashlash",
-        "Oxirini damma qilish"
-      ],
-      "correct": 0,
-      "izoh": "Avval muzoroat harfi (تَ) olib tashlanadi."
-    },
-    {
-      "q": "«Yoz» — «اُكْتُبْ». O'rta harf zamma bo'lsa, hamza harakati qanday?",
-      "opts": [
-        "Zamma",
-        "Kasra",
-        "Fatha"
-      ],
-      "correct": 0,
-      "izoh": "O'rta harf zamma → hamza zamma (ZAMMAGA ZAMMA)."
-    },
-    {
-      "q": "«تَفْتَحُ» ning amr shakli qaysi?",
-      "opts": [
-        "اِفْتَحْ",
-        "اُفْتَحْ",
-        "اَفْتَحْ"
-      ],
-      "correct": 0,
-      "izoh": "O'rta fatha → hamza kasra: اِفْتَحْ."
-    },
-    {
-      "q": "«تَجْلِسُ» ning amr shakli qaysi?",
-      "opts": [
-        "اِجْلِسْ",
-        "اُجْلِسْ"
-      ],
-      "correct": 0,
-      "izoh": "O'rta kasra → hamza kasra: اِجْلِسْ."
-    },
-    {
-      "q": "«اُدْخُلْ» so'zining ma'nosi?",
-      "opts": [
-        "Sen kir",
-        "Sizlar kiring",
-        "Siz ikkingiz kiring"
-      ],
-      "correct": 0,
-      "izoh": "اُدْخُلْ — sen kir (birlik)."
-    },
-    {
-      "q": "«اُدْخُلُوا» kimga qaratilgan?",
-      "opts": [
-        "Sizlar (ko'plik)",
-        "Sen (birlik)",
-        "U"
-      ],
-      "correct": 0,
-      "izoh": "اُدْخُلُوا — sizlar kiringlar (ko'plik)."
-    },
-    {
-      "q": "Vasliy hamza qachon KERAK EMAS?",
-      "opts": [
-        "Muzoroat harfidan keyingi harf sukunli bo'lmasa",
-        "Har doim kerak"
-      ],
-      "correct": 0,
-      "izoh": "Keyingi harf harakatli bo'lsa hamza kerak emas (mas. عَلِّمْ)."
-    }
-  ]
+ "title": "A2 · Qovaid namoyish",
+ "otish": 80,
+ "vaqt": 4,
+ "questions": [
+  {
+   "q": "«تَكْتُبُ» fe'lidan amr yasang.",
+   "opts": [
+    "اِكْتُبْ",
+    "اَكْتُبْ",
+    "اُكْتُبْ",
+    "اُكْتُبُ"
+   ],
+   "correct": 2,
+   "izoh": "O'rta harf zammali — hamza zammali; oxiri sukun."
+  },
+  {
+   "q": "«تَفْتَحُ» fe'lidan amr yasang.",
+   "opts": [
+    "اَفْتَحْ",
+    "اُفْتَحْ",
+    "اِفْتَحْ",
+    "اِفْتَحُ"
+   ],
+   "correct": 2,
+   "izoh": "O'rta harf fathali — hamza kasrali."
+  },
+  {
+   "q": "«تَجْلِسُ» fe'lidan amr yasang.",
+   "opts": [
+    "اِجْلِسُ",
+    "اَجْلِسْ",
+    "اِجْلِسْ",
+    "اُجْلِسْ"
+   ],
+   "correct": 2,
+   "izoh": "O'rta harf kasrali — hamza kasrali."
+  },
+  {
+   "q": "«تُعَلِّمُ» fe'lidan amr yasang.",
+   "opts": [
+    "اُعَلِّمْ",
+    "عَلِّمْ",
+    "اِعَلِّمْ",
+    "عَلِّمُ"
+   ],
+   "correct": 1,
+   "izoh": "Muzoroat harfidan keyingi harf harakatli — hamza kerak emas."
+  },
+  {
+   "q": "Qaysi fe'ldan yasalgan amrda hamza zammali bo'ladi?",
+   "opts": [
+    "تَفْتَحُ",
+    "تَذْهَبُ",
+    "تَجْلِسُ",
+    "تَخْرُجُ"
+   ],
+   "correct": 3,
+   "izoh": "Faqat o'rta harfi zammali fe'lda: اُخْرُجْ."
+  },
+  {
+   "q": "Bir necha kishiga (sizlar) «kiringlar» deymiz. Qaysi shakl?",
+   "opts": [
+    "اُدْخُلُوا",
+    "اِدْخُلُوا",
+    "اُدْخُلَا",
+    "اُدْخُلْ"
+   ],
+   "correct": 0,
+   "izoh": "Ko'plik — oxirida «وا»; hamza zammali."
+  },
+  {
+   "q": "Ikki kishiga «o'tiringlar» deymiz. Qaysi shakl?",
+   "opts": [
+    "اِجْلِسَا",
+    "اِجْلِسُوا",
+    "اِجْلِسْ",
+    "اُجْلِسَا"
+   ],
+   "correct": 0,
+   "izoh": "Ikkilik — oxirida alif; hamza kasrali."
+  },
+  {
+   "q": "Qaysi amr to'g'ri yasalgan?",
+   "opts": [
+    "تَشْرَبُ ← اُشْرَبْ",
+    "تَضْرِبُ ← اُضْرِبْ",
+    "تَشْرَبُ ← اِشْرَبْ",
+    "تَنْصُرُ ← اِنْصُرْ"
+   ],
+   "correct": 2,
+   "izoh": "O'rta harf fathali yoki kasrali — hamza kasrali; zammali — zammali."
+  },
+  {
+   "q": "Qaysi amr XATO yasalgan?",
+   "opts": [
+    "تَكْتُبُ ← اُكْتُبْ",
+    "تَجْلِسُ ← اِجْلِسْ",
+    "تَسْمَعُ ← اُسْمَعْ",
+    "تُعَلِّمُ ← عَلِّمْ"
+   ],
+   "correct": 2,
+   "izoh": "«تَسْمَعُ» — o'rta harf fathali: to'g'risi «اِسْمَعْ»."
+  },
+  {
+   "q": "Bir kishiga aytilgan amr qaysi?",
+   "opts": [
+    "تَنْصُرُ",
+    "اُنْصُرْ",
+    "اُنْصُرَا",
+    "اُنْصُرُوا"
+   ],
+   "correct": 1,
+   "izoh": "Birlik — oxiri sukun, qo'shimchasiz."
+  }
+ ]
 }

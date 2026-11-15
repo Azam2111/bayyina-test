@@ -1,43 +1,55 @@
 {
-  "title": "A2 · Qiroat namoyish",
-  "otish": 80,
-  "vaqt": 3,
-  "questions": [
-    {
-      "q": "Muallif nimani yaxshi ko'radi?",
-      "opts": [
-        "Kitob o'qishni",
-        "Ijtimoiy tarmoqlarni",
-        "Sport bilan shug'ullanishni",
-        "Sayohatni"
-      ],
-      "correct": 1,
-      "izoh": "مَوَاقِعُ التَّوَاصُلِ الِاجْتِمَاعِيِّ = Ijtimoiy tarmoqlar",
-      "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
-    },
-    {
-      "q": "Muallif nimadan norozi?",
-      "opts": [
-        "Ba'zi xatti-harakatlardan",
-        "Narxlardan",
-        "Ob-havodan",
-        "Trafikdan"
-      ],
-      "correct": 0,
-      "izoh": "بَعْضُ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ = ba'zi xatti-harakatlar nojo'ya",
-      "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
-    },
-    {
-      "q": "«التَّصَرُّفَات» so'zining ma'nosi?",
-      "opts": [
-        "Fikrlar",
-        "Xatti-harakatlar",
-        "Rasmlar",
-        "So'zlar"
-      ],
-      "correct": 1,
-      "izoh": "تَصَرُّفَاتٌ = Xatti-harakatlar",
-      "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
-    }
-  ]
+ "title": "A2 · Qiroat namoyish",
+ "otish": 80,
+ "vaqt": 3,
+ "questions": [
+  {
+   "q": "Muallifning ijtimoiy tarmoqlarga munosabati qanday?",
+   "opts": [
+    "Unga farqi yo'q",
+    "Umuman yoqtirmaydi",
+    "Yoqtiradi, lekin e'tirozi bor",
+    "E'tirozsiz yoqtiradi"
+   ],
+   "correct": 2,
+   "izoh": "«أُحِبُّ … لٰكِنَّ …» — yoqtiraman, lekin…",
+   "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
+  },
+  {
+   "q": "Muallif nimani nojo'ya deb biladi?",
+   "opts": [
+    "Ba'zi saytlarni",
+    "Barcha saytlarni",
+    "Ba'zi xatti-harakatlarni",
+    "Barcha xatti-harakatlarni"
+   ],
+   "correct": 2,
+   "izoh": "«بَعْضَ التَّصَرُّفَاتِ» — ba'zi xatti-harakatlar.",
+   "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
+  },
+  {
+   "q": "«لٰكِنَّ» so'zi gapda nimani bildiradi?",
+   "opts": [
+    "Oldingi fikrga qarshi fikrni",
+    "Oldingi fikrning natijasini",
+    "Oldingi fikrning sababini",
+    "Oldingi fikrning vaqtini"
+   ],
+   "correct": 0,
+   "izoh": "«Lekin» — qarama-qarshi fikrga o'tish.",
+   "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
+  },
+  {
+   "q": "Gapning ikkinchi qismi nima haqida?",
+   "opts": [
+    "Muallifning sayti",
+    "Muallifga yoqmaydigan narsa",
+    "Muallifning do'stlari",
+    "Muallifga yoqadigan narsa"
+   ],
+   "correct": 1,
+   "izoh": "«غَيْرُ لَائِقَةٍ» — nojo'ya: bu uning e'tirozi.",
+   "matn": "أُحِبُّ مَوَاقِعَ التَّوَاصُلِ الِاجْتِمَاعِيِّ، لٰكِنَّ بَعْضَ التَّصَرُّفَاتِ غَيْرُ لَائِقَةٍ."
+  }
+ ]
 }
