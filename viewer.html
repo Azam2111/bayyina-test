@@ -67,6 +67,17 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .probniy .qmatn.mix .pl-ar{font-size:calc(clamp(25px,7vw,32px)*var(--mscale,1)); line-height:2.05; color:var(--ink)}
 .probniy .qmatn.mix .pl-lat{font-size:calc(16px*var(--mscale,1))}
 .probniy .qmatn{font-size:calc(17px*var(--mscale,1))}
+/* 16.11.2026: qiroat matni — aniq ajralgan oq blok, to'q yozuv, sarlavhada matn raqami va A−/A+ */
+.matn-wrap{margin-bottom:16px; border:1.5px solid #cdb893; border-radius:12px; overflow:hidden; background:#fffefb; box-shadow:0 2px 10px rgba(58,39,22,.08)}
+.matn-hdr{display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 12px; background:var(--brown-deep); color:#fff; font-weight:800; font-size:13.5px; letter-spacing:.5px}
+.matn-hdr small{font-weight:600; opacity:.75}
+.matn-hdr .matn-fs{display:flex; gap:6px}
+.matn-hdr .matn-fs button{min-width:40px; height:32px; border-radius:8px; border:1px solid rgba(255,255,255,.45); background:rgba(255,255,255,.12); color:#fff; font-weight:800; font-size:15px; cursor:pointer; font-family:inherit}
+.matn-new{padding:7px 12px; background:#f3e3bd; color:#3a2716; font-weight:700; font-size:13.5px; text-align:center}
+.matn-wrap .qmatn, .matn-wrap .qmatn.mix{margin:0; border:0; border-radius:0; background:#fffefb; color:#1c140c}
+.matn-wrap .qmatn.ar{font-size:calc(22px*var(--mscale,1)); line-height:2.1; color:#1c140c}
+.matn-wrap .qmatn{max-height:52vh; overflow-y:auto; -webkit-overflow-scrolling:touch}   /* uzun matn o'z ichida aylanadi — savol pastda ko'rinib turadi */
+.matn-wrap .qmatn.mix .pl-ar, .matn-wrap .qmatn.mix .pl-lat{color:#1c140c}
 .fscale{position:fixed; left:12px; bottom:16px; z-index:60; display:flex; gap:8px}
 .fscale button{width:44px; height:44px; border-radius:50%; border:none; background:var(--brown); color:var(--cream); font-weight:800; font-size:19px; box-shadow:0 3px 12px rgba(0,0,0,.28); cursor:pointer; font-family:inherit}
 .fscale button:active{transform:scale(.94)}
@@ -312,6 +323,7 @@ body.has-dock{padding-bottom:96px}
   let MINUTES = parseInt(P.get("vaqt") || "10", 10);
   let hasBook = !!P.get("kitob");
   let READING_TEXT = "";
+  let MATN_N = 0;   // qiroat: alohida matnlar soni (savollar matn chegarasida aralashadi)
   let audioUrl = "";
   let audioPlaysLeft = 2;
 
@@ -364,6 +376,18 @@ body.has-dock{padding-bottom:96px}
     // Savollarni har yuklanishda (ya'ni har urinishda) tasodifiy tartibda aralashtiramiz.
     // Variantlar ensureOrder() ichida alohida aralashadi → savol ham, javob ham har safar har xil tartibda.
     if(!(SINGLE && READING_TEXT)) for(let i=QUESTIONS.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));const t=QUESTIONS[i];QUESTIONS[i]=QUESTIONS[j];QUESTIONS[j]=t;}
+    // 16.11.2026 (Azam): qiroatda savollar MATN CHEGARASIDA aralashadi — avval 1-matn savollari, keyin 2-matn.
+    // Matn tartibi fayldagi asl tartib (_i) bo'yicha; guruh ichida yuqoridagi tasodifiy tartib saqlanadi.
+    if(IS_QIROAT && !READING_TEXT){
+      var _seen={}, _n=0;
+      QUESTIONS.slice().sort(function(a,b){return a._i-b._i;}).forEach(function(q){ if(q&&q.matn&&!_seen[q.matn]){ _seen[q.matn]=++_n; } });
+      if(_n>=1){
+        QUESTIONS.forEach(function(q){ q._mi = (q&&q.matn) ? _seen[q.matn] : _n+1; });
+        var _g=[]; for(var _k=1;_k<=_n+1;_k++){ QUESTIONS.forEach(function(q){ if(q._mi===_k) _g.push(q); }); }
+        QUESTIONS=_g; MATN_N=_n;
+        var _fs2=document.getElementById('fscale'); if(_fs2) _fs2.style.display='none';   // tugmalar endi matn sarlavhasida
+      }
+    }
     renderAudio();
     if(SINGLE || (IS_QIROAT && READING_TEXT)){ renderAllSingle(); } else { renderQuestion(0); }
   }
@@ -407,6 +431,16 @@ body.has-dock{padding-bottom:96px}
     h+='<div class="pl pl-ar" dir="rtl">'+arab+'</div>';
     if(after) h+='<div class="pl pl-lat" dir="auto">'+after+'</div>';
     return h;
+  }
+  // Qiroat matni bloki: sarlavha (n-MATN / N), shrift tugmalari, yangi matn boshlanganda ogohlantirish.
+  function matnBlock(item,i){
+    if(!(IS_QIROAT && MATN_N>=1 && item._mi && item._mi<=MATN_N)) return renderMatn(item.matn);
+    var first = (i>0 && QUESTIONS[i-1] && QUESTIONS[i-1]._mi!==item._mi);
+    var label = MATN_N>=2 ? (item._mi+'-MATN <small>/ '+MATN_N+'</small>') : 'MATN';
+    return '<div class="matn-wrap"><div class="matn-hdr"><span>📖 '+label+'</span>'+
+      '<span class="matn-fs"><button type="button" onclick="adjScale(-0.12)" aria-label="Kichraytirish">A−</button><button type="button" onclick="adjScale(0.12)" aria-label="Kattalashtirish">A+</button></span></div>'+
+      (first?'<div class="matn-new">⬇ Yangi matn boshlandi — avval o‘qib chiqing</div>':'')+
+      renderMatn(item.matn)+'</div>';
   }
   // Izoh-matn (qmatn) uchun ham bir xil aralash-ishlov
   function renderMatn(t){
@@ -454,7 +488,7 @@ body.has-dock{padding-bottom:96px}
     else if(isAr(item.q) && !hasLatin(item.q)){ promptHtml='<div class="q-prompt ar'+arLenCls(item.q)+'">'+item.q+'</div>'; }
     else if(isAr(item.q)){ promptHtml='<div class="q-prompt mix">'+splitPrompt(item.q)+'</div>'; }
     else{ promptHtml='<div class="q-prompt uz">'+item.q+'</div>'; }
-    const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? renderMatn(item.matn) : '';
+    const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? matnBlock(item,i) : '';
     const betHint  = (item.bet && !(IS_QIROAT && READING_TEXT)) ? '<div class="bet-hint">📄 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — 📖 tugmasi yuqorida':'')+'</div>' : '';
     const optsHtml = item._order.map(function(orig,oi){
       const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
@@ -524,7 +558,7 @@ body.has-dock{padding-bottom:96px}
     }
     QUESTIONS.forEach(function(item,i){
       ensureOrder(item);
-      const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? renderMatn(item.matn) : '';
+      const matnHtml = (item.matn && (!IS_QIROAT || (!hasBook && !READING_TEXT))) ? matnBlock(item,i) : '';
       const betHint  = (item.bet && !(IS_QIROAT && READING_TEXT)) ? '<div class="bet-hint">\U0001F4C4 '+displayBet(item.bet)+'-betga qarang'+(hasBook?' — \U0001F4D6 tugmasi yuqorida':'')+'</div>' : '';
       const optsHtml = item._order.map(function(orig,oi){
         const o=item.opts[orig]; const letter=String.fromCharCode(65+oi);
