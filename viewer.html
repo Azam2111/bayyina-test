@@ -68,7 +68,7 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .probniy .qmatn.mix .pl-lat{font-size:calc(16px*var(--mscale,1))}
 .probniy .qmatn{font-size:calc(17px*var(--mscale,1))}
 /* 16.11.2026: qiroat matni — aniq ajralgan oq blok, to'q yozuv, sarlavhada matn raqami va A−/A+ */
-.matn-wrap{margin-bottom:16px; border:1.5px solid #cdb893; border-radius:12px; overflow:hidden; background:#fffefb; box-shadow:0 2px 10px rgba(58,39,22,.08)}
+.matn-wrap{touch-action:pan-y; margin-bottom:16px; border:1.5px solid #cdb893; border-radius:12px; overflow:hidden; background:#fffefb; box-shadow:0 2px 10px rgba(58,39,22,.08)}
 .matn-hdr{display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 12px; background:var(--brown-deep); color:#fff; font-weight:800; font-size:13.5px; letter-spacing:.5px}
 .matn-hdr small{font-weight:600; opacity:.75}
 .matn-hdr .matn-fs{display:flex; gap:6px}
@@ -345,6 +345,23 @@ body.has-dock{padding-bottom:96px}
   try{ MSCALE=parseFloat(localStorage.getItem('bayyina_mscale'))||1; }catch(e){}
   document.documentElement.style.setProperty('--mscale',MSCALE);
   function adjScale(d){ MSCALE=Math.max(0.7,Math.min(2.4,Math.round((MSCALE+d)*100)/100)); document.documentElement.style.setProperty('--mscale',MSCALE); try{localStorage.setItem('bayyina_mscale',MSCALE);}catch(e){} }
+  // 16.11.2026 (Azam): matnni rasm kabi IKKI BARMOQ bilan kattalashtirish/kichraytirish (pinch).
+  // Sahifa emas, faqat matn shrifti (--mscale) o'zgaradi — satrlar qayta joylashadi, yon tomonga surish kerak bo'lmaydi.
+  (function(){
+    var on=false, d0=0, s0=1;
+    function dist(t){ var dx=t[0].clientX-t[1].clientX, dy=t[0].clientY-t[1].clientY; return Math.sqrt(dx*dx+dy*dy)||1; }
+    function inMatn(e){ var t=e.target; return !!(t && t.closest && t.closest('.matn-wrap, .qiroat-reading')); }
+    document.addEventListener('touchstart',function(e){ if(e.touches.length===2 && inMatn(e)){ on=true; d0=dist(e.touches); s0=MSCALE; } },{passive:true});
+    document.addEventListener('touchmove',function(e){
+      if(!on || e.touches.length!==2) return;
+      e.preventDefault();
+      MSCALE=Math.max(0.7,Math.min(2.4,Math.round(s0*dist(e.touches)/d0*100)/100));
+      document.documentElement.style.setProperty('--mscale',MSCALE);
+    },{passive:false});
+    function end(e){ if(on && (!e.touches || e.touches.length<2)){ on=false; try{localStorage.setItem('bayyina_mscale',MSCALE);}catch(_){} } }
+    document.addEventListener('touchend',end,{passive:true}); document.addEventListener('touchcancel',end,{passive:true});
+    document.addEventListener('gesturestart',function(e){ if(inMatn(e)) e.preventDefault(); },{passive:false});   // iOS: sahifaning o'zi kattalashib ketmasin
+  })();
   async function loadConfig(){
     if(TAKROR.length){ await loadTakror(); return; }
     if(MINI.length){ await loadMini(); return; }
