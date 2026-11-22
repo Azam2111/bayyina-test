@@ -1837,13 +1837,17 @@ function sendToWebhook(lvl, pct, tot, max) {
   function reportFail(reason) {
     if(_failSent) return; _failSent = true;
     try {
-      const fp = {type:'placement_fail', reason: reason,
-        telegram_id: tgId, full_name: name, username: un,
-        recommended_level: lvl, reached_level: currentLevel, total_score_pct: pct, correct: tot, total: max,
-        mode: PL_MODE, platform: (tg && tg.platform) || 'browser', has_init: init ? 1 : 0,
-        ua: String(navigator.userAgent || '').slice(0, 120)};
+      // bo'lim 400: hisobot TO'LIQ natija + Telegram imzosi (init) bilan ketadi -- imzo to'g'ri bo'lsa
+      // bot natijani o'zi qo'llaydi (qo'lda /boshla shart emas); imzosiz bo'lsa -- faqat adminga signal.
+      const fp = Object.assign({}, payload, {type:'placement_fail', reason: reason,
+        correct: tot, total: max, init: init || '',
+        platform: (tg && tg.platform) || 'browser', has_init: init ? 1 : 0,
+        ua: String(navigator.userAgent || '').slice(0, 120)});
+      let js = JSON.stringify(fp);
+      if(js.length > 50000) { delete fp.w; js = JSON.stringify(fp); }
+      if(js.length > 50000) { delete fp.a; js = JSON.stringify(fp); }
       // text/plain -- CORS preflight'siz oddiy so'rov; keepalive -- oyna yopilsa ham yetadi
-      fetch(PLACEMENT_API, {method:'POST', headers:{'Content-Type':'text/plain'}, body: JSON.stringify(fp), keepalive: true}).catch(function(){});
+      fetch(PLACEMENT_API, {method:'POST', headers:{'Content-Type':'text/plain'}, body: js, keepalive: true}).catch(function(){});
     } catch(e) {}
   }
   // sendData muvaffaqiyatli bo'lsa Telegram oynani o'zi yopadi. 3.5 s dan keyin ham ochiq turgan bo'lsak -- yetmagan.
@@ -1888,28 +1892,39 @@ function sendToWebhook(lvl, pct, tot, max) {
 
   say('Natijalar botga yuborilmoqda...');
   let done = false;
-  const ctrl = (typeof AbortController === 'function') ? new AbortController() : null;
-  const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 12000);
-  fetch(PLACEMENT_API, {
-    method: 'POST',
-    headers: {'Content-Type':'application/json', 'X-Telegram-Init-Data': init},
-    body: JSON.stringify(payload),
-    signal: ctrl ? ctrl.signal : undefined
-  }).then(function(r){
-    clearTimeout(timer);
-    if(r.ok) {
-      done = true;
-      say(PL_DIAG
-          ? '\u2705 Natijangiz ustozga yetib bordi! Ustoz natijangizni ko\'rib chiqib, sizga shaxsan yozadi.' + closeBtn
-          : '\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
-      setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
-    } else { throw new Error('status ' + r.status); }
-  }).catch(function(){
-    clearTimeout(timer);
-    if(done) return;
-    if(viaSendData()) watchSendData('api_xato_senddata_jim');
-    else { reportFail('api_xato'); say(manual, true); }
-  });
+  // bo'lim 400 (22.11): imzo (initData) header'da emas, body'da; Content-Type text/plain --
+  // brauzer CORS "preflight" (OPTIONS) so'rovini yubormaydi: zaif mobil internetda bitta qadam kam.
+  // Tarmoq xatosi yoki 5xx bo'lsa 2 s kutib yana bir marta urinadi.
+  const apiBody = JSON.stringify(Object.assign({}, payload, {init: init}));
+  function attempt(n) {
+    const ctrl = (typeof AbortController === 'function') ? new AbortController() : null;
+    const timer = setTimeout(function(){ if(ctrl) ctrl.abort(); }, 10000);
+    fetch(PLACEMENT_API, {
+      method: 'POST',
+      headers: {'Content-Type':'text/plain'},
+      body: apiBody,
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function(r){
+      clearTimeout(timer);
+      if(r.ok) {
+        done = true;
+        say(PL_DIAG
+            ? '\u2705 Natijangiz ustozga yetib bordi! Ustoz natijangizni ko\'rib chiqib, sizga shaxsan yozadi.' + closeBtn
+            : '\u2705 Natijangiz botga yetib bordi! Botga qayting \u2014 keyingi qadam o\'sha yerda.' + closeBtn);
+        setTimeout(function(){ try { tg.close(); } catch(e) {} }, 4000);
+      } else {
+        const err = new Error('status ' + r.status); err.status = r.status; throw err;
+      }
+    }).catch(function(e){
+      clearTimeout(timer);
+      if(done) return;
+      const retryable = !(e && e.status && e.status < 500);   // 4xx (imzo xato va h.k.) -- qayta urinish befoyda
+      if(n < 2 && retryable) { setTimeout(function(){ attempt(n + 1); }, 2000); return; }
+      if(viaSendData()) watchSendData('api_xato_senddata_jim');
+      else { reportFail('api_xato'); say(manual, true); }
+    });
+  }
+  attempt(1);
 }
 </script>
 </body>
