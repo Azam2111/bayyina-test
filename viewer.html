@@ -88,6 +88,18 @@ body{font-family:'Inter',system-ui,sans-serif; color:var(--ink); -webkit-font-sm
 .q-prompt.uz{font-size:clamp(16px,4.4vw,21px); text-align:center; line-height:1.6; color:var(--ink); font-weight:700; padding:8px 4px}
 .ar-in{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700; font-size:1.55em; line-height:1.4}
 .lat-in{font-family:'Inter',system-ui,sans-serif; font-weight:600}
+/* 28.11.2026 (Azam): bir gapda 2+ arabcha so'z -- har biri izolyatsiya qilinadi, tartib chapdan o'ngga saqlanadi */
+.ar-in{unicode-bidi:isolate}
+/* arabcha bo'lak bitta quti: qatorga sig'masa BUTUNICHA keyingi qatorga o'tadi, ikki qatorga bo'linib aralashmaydi */
+bdi.ar-in.ib{display:inline-block; max-width:100%; vertical-align:baseline}
+.nb{white-space:nowrap} .nb>bdi{white-space:normal; max-width:calc(100% - 1.5em)}
+.pl-mix{font-family:'Inter',system-ui,sans-serif; font-weight:700; color:var(--ink); direction:ltr; unicode-bidi:isolate}
+.pl-mix .ar-in{font-weight:700}
+.q-prompt.mix .pl-mix{font-size:clamp(16px,4.4vw,21px); line-height:2}
+.q-prompt.mix .pl-mix .ar-in{font-size:1.75em}
+.opt .pl-mix{font-size:1em; line-height:1.9}
+.opt .pl-mix .ar-in{font-size:1.5em}
+.qmatn.mix .pl-mix{font-size:calc(14px*var(--mscale,1)); line-height:1.9; color:#5a4326}
 .q-prompt.mix{padding:10px 4px}
 .pl{display:block; text-align:center; word-break:break-word; margin:4px 0}
 .pl-ar{font-family:'Noto Naskh Arabic','Scheherazade New',serif; font-weight:700}
@@ -410,7 +422,9 @@ body.has-dock{padding-bottom:96px}
   }
 
   function isAr(t){return /[؀-ۿݐ-ݿﭐ-﷿ﹰ-﻿]/.test(t||'');}
-  function hasLatin(t){return /[A-Za-z]/.test(t||'');}
+  // 28.11.2026: «1) …, 2) …» raqamli belgilar ham lotincha deb sanaladi -- raqamlangan arabcha
+  // variantlar (masalan «1) اِنْفَعَلَ, 2) اِفْتَعَلَ») chapdan o'ngga, tartib bilan chiqsin.
+  function hasLatin(t){t=t||''; return /[A-Za-z]/.test(t) || /(^|[\s,;:(])\d+\)\s/.test(t);}
   const ARX=/[«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿][«»\s؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]*/g;
   // Sof arabcha savol uzunligiga qarab shrift: <=24 harf — yirik (so'z/qisqa ibora), 25..48 — o'rta, >48 — kichik.
   function arLenCls(t){ var n=String(t).replace(/[^\u0621-\u064A]/g,'').length; return n>48?' ar-s':(n>24?' ar-m':''); }
@@ -418,37 +432,87 @@ body.has-dock{padding-bottom:96px}
   // Aralash (arabcha+lotincha) matn: har yozuvni alohida span+izolyatsiya bilan o'rab,
   // konteyner dir="auto" bilan to'g'ri tartibda (arabcha RTL buzilmaydi) chiqaradi.
   var ARCHAR=/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
-  function wrapMixed(t){
-    t=String(t); var out='', buf='', cur=null, i, n=t.length;
-    function flush(){ if(buf==='')return;
-      if(cur==='A') out+='<span class="ar-in">'+buf+'</span>';
-      else if(/^\s+$/.test(buf)) out+=buf;
-      else out+='<span class="lat-in">'+buf+'</span>';
-      buf=''; }
-    for(i=0;i<n;i++){ var ch=t[i];
-      if(/\s/.test(ch)){ buf+=ch; continue; }
-      var k=ARCHAR.test(ch)?'A':'L';
-      if(cur===null) cur=k;
-      if(k!==cur){ flush(); cur=k; }
-      buf+=ch; }
-    flush(); return out;
+  // 28.11.2026 (b.457): YAGONA aralash-matn qoidasi (savol, variant, izoh, xatolar tahlili -- hammasi shu orqali).
+  //  * matnda lotincha harf yo'q -> butun matn BITTA o'ngdan-chapga bo'lak (arabcha gap bo'linmaydi,
+  //    oxiridagi . ! : ham joyida);
+  //  * «...» ichida lotincha yo'q -> qo'shtirnoq ichi butun bitta RTL bo'lak, «» tashqarida;
+  //  * qolgan joyda arabcha bo'lak = arabcha harfdan keyingi lotincha harf/raqamgacha bo'lgan oxirgi
+  //    arabcha harfgacha (orasidagi - / ___ ... , bilan birga) -- bitta RTL bo'lak; bo'shliq tashqarida.
+  var ARS='\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF';
+  // bo'lak ichida faqat: bo'shliq, arabcha harf/tinish belgisi, ___ , ... , - (moziy - muzori' jufti).
+  // Lotincha vergul, nuqta-vergul, —, /, +, =, qavs bo'lakni UZADI (o'zbekcha gap tartibi chapdan o'ngga).
+  var RUNX=new RegExp('['+ARS+'](?:[ \\t'+ARS+'_.\\u2026\\-]*['+ARS+'])?','g');
+  var MIXX=new RegExp('«[^«»<>\\n]*['+ARS+'][^«»<>\\n]*»|'+RUNX.source,'g');
+  // qisqa bo'lak (<=3 so'z) -- bitta quti («ib»): qatorga sig'masa butunicha keyingi qatorga o'tadi
+  function bdiAr(x){ var n=String(x).replace(/[«»]/g,' ').trim().split(/\s+/).length;
+    return '<bdi class="ar-in'+(n<=3?' ib':'')+'" dir="rtl">'+x+'</bdi>'; }
+  function mixInline(t){
+    t=String(t);
+    if(ARCHAR.test(t) && !hasLatin(t) && t.indexOf('<')<0) return bdiAr(t.trim());
+    var h=t.replace(MIXX,function(m){
+      if(m.charAt(0)!=='«') return bdiAr(m);
+      var inner=m.slice(1,-1);
+      // sof arabcha «...» -- qo'shtirnog'i bilan BITTA quti (qo'shtirnoq qator oxirida yolg'iz qolmaydi)
+      if(!/[A-Za-z]/.test(inner)) return bdiAr('«'+inner.trim()+'»');
+      return '«'+inner.replace(RUNX,bdiAr)+'»';
+    });
+    // qutidan oldingi ( va keyingi . , ; : ! ? ) belgilar qutidan uzilib, boshqa qatorga tushmasin
+    return h.replace(/([(\[]?)(<bdi class="ar-in ib" dir="rtl">[^<]*<\/bdi>)([.,;:!?)\]]*)/g,function(m,a,b,c){
+      return (a||c) ? '<span class="nb">'+a+b+c+'</span>' : b; });
   }
+  function wrapMixed(t){ return mixInline(t); }
   // Aralash savol: arabcha va lotincha qismlarni ALOHIDA markazlangan qatorlarga ajratadi.
   // Shunda uzun lotincha izoh arabcha bilan o'ralib (bidi) tartib buzilmaydi.
-  function splitPrompt(t){
-    t=String(t); var first=-1,last=-1,i;
-    for(i=0;i<t.length;i++){ if(ARCHAR.test(t[i])){ if(first<0)first=i; last=i; } }
-    if(first<0) return '<div class="pl pl-lat" dir="auto">'+t.trim()+'</div>';
-    var a0=first,a1=last;
-    while(a0>0 && /[«»‹›"'(\s]/.test(t[a0-1])) a0--;
-    while(a1<t.length-1 && /[«»‹›"')\u061F?!.,\u061B:\s]/.test(t[a1+1])) a1++;
-    var before=t.slice(0,a0).trim(), arab=t.slice(a0,a1+1).trim(), after=t.slice(a1+1).trim();
-    var h='';
-    if(before) h+='<div class="pl pl-lat" dir="auto">'+before+'</div>';
-    h+='<div class="pl pl-ar" dir="rtl">'+arab+'</div>';
-    if(after) h+='<div class="pl pl-lat" dir="auto">'+after+'</div>';
-    return h;
+  // 28.11.2026 (Azam, A0 chiqish imtihoni: «Birinchisi «هُنَّ», ikkinchisi «أَنْتُنَّ»» variantida
+  // «birinchisi/ikkinchisi» joyi almashib ko'rindi -- o'quvchi bilib turib xato qildi).
+  // Sabab: splitPrompt birinchi arabcha harfdan oxirgisigacha BITTA RTL qatorga olardi --
+  // o'rtadagi lotincha so'zlar ham RTL ichida qolib, tartib teskari chiqardi.
+  // Endi: arabcha bo'laklar lotincha so'z bilan ajralgan bo'lsa (2+ bo'lak), gap LTR qoladi,
+  // har arabcha bo'lak alohida izolyatsiya (<bdi dir=rtl>) bilan; vergul/nuqta-vergulda yangi qator.
+  var LATW=/[A-Za-z0-9\u0400-\u04FF\u02BB\u02BC\u2018\u2019]/;
+  function arRunCount(t){
+    var n=0, inA=false, i, ch;
+    for(i=0;i<t.length;i++){ ch=t[i];
+      if(ARCHAR.test(ch)){ if(!inA){ n++; inA=true; } }
+      else if(LATW.test(ch)){ inA=false; } }
+    return n;
   }
+  function isMultiAr(t){ t=String(t||''); return hasLatin(t) && arRunCount(t)>=2; }
+  function arWordN(x){ return String(x).replace(/[«»]/g,' ').trim().split(/\s+/).filter(function(y){return ARCHAR.test(y);}).length; }
+  function mixLines(t){
+    var lines=[];
+    String(t).split(/\n+/).forEach(function(blk){
+      // faqat keyingi bo'lak raqam bilan boshlansa («, 2) …», «, 2-so'z …») yangi qator
+      var parts=blk.split(/([,;])\s+(?=\d+[)\-])/), i;
+      for(i=0;i<parts.length;i+=2){ lines.push((parts[i]||'')+(parts[i+1]||'')); }
+    });
+    return lines.filter(function(x){return x.trim()!=='';}).map(function(ln){
+      if(!hasLatin(ln)) return '<div class="pl pl-ar" dir="rtl">'+ln.trim()+'</div>';   // sof arabcha qator (masalan, misol gap)
+      // uzun arabcha gap («...» ichida 4+ so'z) doim O'Z qatorida, o'ngdan chapga -- o'zbekcha gap ichida
+      // ikki qatorga bo'linib, bo'laklari aralashmasin; qisqa so'zlar gap ichida qoladi.
+      var segs=ln.trim().split(/(«[^«»<>\n]*»)/), out='', buf='';
+      function flush(){ var b=buf.trim(); buf=''; if(b==='' || /^[.,;:!?…—–\-]+$/.test(b)) return;
+        out+='<div class="pl pl-mix" dir="ltr">'+mixInline(b)+'</div>'; }
+      segs.forEach(function(sg){
+        if(sg.charAt(0)==='«' && ARCHAR.test(sg) && !/[A-Za-z]/.test(sg) && arWordN(sg)>=3){
+          // «1) », «2-gap: » kabi raqam yorlig'i gapdan uzilmaydi
+          if(/^\d+(\)|\.|-[A-Za-z'\u02BB\u2018\u2019]+:)$/.test(buf.trim())){ out+='<div class="pl pl-mix" dir="ltr">'+mixInline(buf.trim()+' '+sg)+'</div>'; buf=''; }
+          else { flush(); out+='<div class="pl pl-ar" dir="rtl">'+sg+'</div>'; } }
+        else buf+=sg; });
+      flush(); return out;
+    }).join('');
+  }
+  // 28.11.2026 (Azam: «o'zbekcha va arabcha so'z bir gapda kelsa so'z boshi-oxiri aralashmasin»):
+  // qisqa arabcha bo'lak (<=3 so'z) gapdan ALOHIDA qatorga ajratilmaydi -- gap ichida, o'z joyida
+  // izolyatsiya bilan qoladi («ال»siz, «كَمْ» dan keyin ... bo'linib ketmaydi). Uzun arabcha gap
+  // (4+ so'z) avvalgidek o'z qatorida, katta shriftda.
+  function maxArWords(t){
+    var m=(String(t).match(MIXX)||[]).filter(function(x){return !/[A-Za-z]/.test(x);}), mx=0;
+    m.forEach(function(x){ var w=x.replace(/[«»]/g,' ').trim().split(/\s+/).filter(function(y){return ARCHAR.test(y);}).length; if(w>mx) mx=w; });
+    return mx;
+  }
+  // Hamma aralash matn bitta yo'ldan: qatorma-qator (mixLines).
+  function splitPrompt(t){ return mixLines(t); }
   // Qiroat matni bloki: sarlavha (n-MATN / N), shrift tugmalari, yangi matn boshlanganda ogohlantirish.
   function matnBlock(item,i){
     if(!(IS_QIROAT && MATN_N>=1 && item._mi && item._mi<=MATN_N)) return renderMatn(item.matn);
@@ -461,7 +525,10 @@ body.has-dock{padding-bottom:96px}
   }
   // Izoh-matn (qmatn) uchun ham bir xil aralash-ishlov
   function renderMatn(t){
-    if(isAr(t)&&hasLatin(t)) return '<div class="qmatn mix">'+splitPrompt(t)+'</div>';
+    if(isAr(t)&&hasLatin(t)){
+      var _a=(String(t).match(/[\u0600-\u06FF]/g)||[]).length, _l=(String(t).match(/[A-Za-z]/g)||[]).length;
+      if(_l*20<_a) return '<div class="qmatn ar">'+t.replace(/\n/g,"<br>")+'</div>';   // arabcha matn, ichida bir-ikki lotincha so'z
+      return '<div class="qmatn mix">'+splitPrompt(t)+'</div>'; }
     if(isAr(t)) return '<div class="qmatn ar">'+t.replace(/\n/g,"<br>")+'</div>';
     return '<div class="qmatn">'+t.replace(/\n/g,"<br>")+'</div>';
   }
@@ -554,7 +621,7 @@ body.has-dock{padding-bottom:96px}
     });
     const ok=item._answered===item._correct;
     const fb=document.getElementById('fb');
-    if(fb){ const izoh=item.izoh?' — '+item.izoh:'';
+    if(fb){ const izoh=item.izoh?' — '+wrapMixed(item.izoh):'';
       fb.innerHTML='<div class="feedback-box '+(ok?'fb-ok':'fb-no')+'">'+(ok?"✅ To'g'ri":"❌ Noto'g'ri")+izoh+'</div>'; }
     document.getElementById('gfill').style.width=(answeredCount/QUESTIONS.length*100)+'%';
   }
@@ -607,7 +674,7 @@ body.has-dock{padding-bottom:96px}
     });
     const ok=(oi===item._correct);
     const fb=document.getElementById('fb'+i);
-    if(fb){ const izoh=item.izoh?' — '+item.izoh:'';
+    if(fb){ const izoh=item.izoh?' — '+wrapMixed(item.izoh):'';
       fb.innerHTML='<div class="feedback-box '+(ok?'fb-ok':'fb-no')+'">'+(ok?"✅ To'g'ri":"❌ Noto'g'ri")+izoh+'</div>'; }
     updateSingleProgress();
     if(!ok){
@@ -864,7 +931,7 @@ body.has-dock{padding-bottom:96px}
 
   // ====== NATIJA ======
   // Xato/javob berilmagan savollar uchun tahlil kartalarini quradi
-  function fmtRev(t){ return wrapMixed(String(t==null?'':t)); }
+  function fmtRev(t){ return String(t==null?'':t).split(/\n+/).map(function(x){return wrapMixed(x);}).join('<br>'); }
   function buildReview(){
     const total=QUESTIONS.length;
     const wrong=total-correctCount;

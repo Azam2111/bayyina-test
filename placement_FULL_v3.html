@@ -230,6 +230,11 @@ body.on-dark .grain{mix-blend-mode:screen;opacity:.06}
 .pl{display:block;text-align:center;word-break:break-word;margin:4px 0}
 .pl-ar{font-family:var(--ar);font-weight:700;font-size:30px;line-height:1.75;color:var(--espresso)}
 .pl-lat{font-family:var(--sans);font-weight:700;font-size:18px;line-height:1.45;color:var(--ink)}
+.pl-mix{font-family:var(--sans);font-weight:700;font-size:18px;line-height:1.9;color:var(--ink);direction:ltr;unicode-bidi:isolate}
+.pl-mix .ar-in{font-family:var(--ar);font-weight:700;font-size:1.6em;unicode-bidi:isolate}
+bdi.ar-in.ib{display:inline-block;max-width:100%;vertical-align:baseline}
+.nb{white-space:nowrap} .nb>bdi{white-space:normal;max-width:calc(100% - 1.5em)}
+.optmix .pl-mix{font-size:15.5px}
 
 .opts{display:flex;flex-direction:column;gap:10px}
 .opt{position:relative;width:100%;display:flex;align-items:center;gap:14px;padding:13px 14px;min-height:62px;border-radius:18px;background:#fff;border:1.5px solid var(--beige);text-align:left;font-size:16.5px;font-weight:600;line-height:1.4;color:var(--ink);white-space:pre-line;overflow:hidden;transition:transform .25s var(--ease),border-color .25s,background .35s,box-shadow .3s;animation:optIn .55s var(--ease) both}
@@ -262,7 +267,7 @@ body.on-dark .grain{mix-blend-mode:screen;opacity:.06}
 .opts.locked .opt{pointer-events:none}
 .opts.locked .opt:not(.ok):not(.no){opacity:.45;transition:opacity .4s}
 .feedback-box{display:flex;gap:10px;margin-top:14px;padding:13px 14px;border-radius:16px;background:#FBF4E2;border:1px solid #EBD9A8;font-size:14px;line-height:1.55;color:#5B4422;font-weight:600;animation:rise .45s var(--ease) both;direction:ltr;text-align:left;unicode-bidi:isolate}
-.feedback-box .fa{font-family:var(--ar);font-size:17px;font-weight:700;color:var(--espresso);unicode-bidi:isolate;direction:rtl}
+.feedback-box .fa,.feedback-box .ar-in{font-family:var(--ar);font-size:17px;font-weight:700;color:var(--espresso);unicode-bidi:isolate;direction:rtl}
 
 /* javob paytidagi yengil chegaraviy nur */
 body::after{content:'';position:fixed;inset:0;z-index:50;pointer-events:none;opacity:0;transition:opacity .45s ease}
@@ -531,7 +536,7 @@ body{color:var(--ink);background:
 .opt .mark{box-shadow:0 4px 12px rgba(0,0,0,.12)}
 .opts.locked .opt:not(.ok):not(.no){opacity:.5}
 .feedback-box{background:#FFF6EC;border:0;color:#7A4A1A;box-shadow:inset 0 0 0 1px rgba(255,138,43,.25)}
-.feedback-box .fa{color:#B2510C}
+.feedback-box .fa,.feedback-box .ar-in{color:#B2510C}
 .next-btn{background:linear-gradient(180deg,#4A7FFF,var(--blue) 60%,var(--blue-d));color:#fff;border-radius:18px;box-shadow:0 14px 30px rgba(47,107,255,.35),0 1px 0 rgba(255,255,255,.3) inset}
 .next-btn .i{color:#fff}
 body.success-bg::after{box-shadow:inset 0 0 120px rgba(20,164,77,.22)}
@@ -633,7 +638,7 @@ body.error-bg::after{box-shadow:inset 0 0 120px rgba(229,72,77,.20)}
 .next-btn.dock{position:fixed;left:16px;right:16px;bottom:calc(14px + var(--safe-b));width:auto;max-width:448px;margin:0 auto;z-index:70;box-shadow:0 0 0 8px rgba(238,240,245,.92),0 14px 30px rgba(47,107,255,.35)}
 body.has-dock{padding-bottom:92px}
 .feedback-box{margin-top:8px;padding:9px 12px;font-size:13px;line-height:1.45}
-.feedback-box .fa{font-size:15px}
+.feedback-box .fa,.feedback-box .ar-in{font-size:15px}
 </style>
 </head>
 <body>
@@ -1386,17 +1391,59 @@ function startLevel(lvl) {
 
 var PL_ARCHAR=/[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\uFB50-\uFDFF\uFE70-\uFEFF]/;
 function plMix(t){return PL_ARCHAR.test(t||'')&&/[A-Za-z]/.test(t||'');}
-function plSplit(t){t=String(t);var f=-1,l=-1,i;
-  for(i=0;i<t.length;i++){if(PL_ARCHAR.test(t[i])){if(f<0)f=i;l=i;}}
-  if(f<0)return '<div class="pl pl-lat" dir="auto">'+t.trim()+'</div>';
-  var a0=f,a1=l;
-  while(a0>0 && /[\u00AB\u00BB\u2039\u203A"'(\s]/.test(t[a0-1]))a0--;
-  while(a1<t.length-1 && /[\u00AB\u00BB\u2039\u203A"')\u061F?!.,\u061B:\s]/.test(t[a1+1]))a1++;
-  var b=t.slice(0,a0).trim(),ar=t.slice(a0,a1+1).trim(),af=t.slice(a1+1).trim(),h='';
-  if(b)h+='<div class="pl pl-lat" dir="auto">'+b+'</div>';
-  h+='<div class="pl pl-ar" dir="rtl">'+ar+'</div>';
-  if(af)h+='<div class="pl pl-lat" dir="auto">'+af+'</div>';
-  return h;}
+// 28.11.2026 (b.457): aralash (o'zbekcha+arabcha) matn -- viewer.html bilan AYNAN bir xil qoida.
+var plSplit=(function(){
+  var ARCHAR=PL_ARCHAR;
+  function hasLatin(t){t=t||''; return /[A-Za-z]/.test(t) || /(^|[\s,;:(])\d+\)\s/.test(t);}
+  var ARS='\\u0600-\\u06FF\\u0750-\\u077F\\u08A0-\\u08FF\\uFB50-\\uFDFF\\uFE70-\\uFEFF';
+  // bo'lak ichida faqat: bo'shliq, arabcha harf/tinish belgisi, ___ , ... , - (moziy - muzori' jufti).
+  // Lotincha vergul, nuqta-vergul, —, /, +, =, qavs bo'lakni UZADI (o'zbekcha gap tartibi chapdan o'ngga).
+  var RUNX=new RegExp('['+ARS+'](?:[ \\t'+ARS+'_.\\u2026\\-]*['+ARS+'])?','g');
+  var MIXX=new RegExp('«[^«»<>\\n]*['+ARS+'][^«»<>\\n]*»|'+RUNX.source,'g');
+  // qisqa bo'lak (<=3 so'z) -- bitta quti («ib»): qatorga sig'masa butunicha keyingi qatorga o'tadi
+  function bdiAr(x){ var n=String(x).replace(/[«»]/g,' ').trim().split(/\s+/).length;
+    return '<bdi class="ar-in'+(n<=3?' ib':'')+'" dir="rtl">'+x+'</bdi>'; }
+  function mixInline(t){
+    t=String(t);
+    if(ARCHAR.test(t) && !hasLatin(t) && t.indexOf('<')<0) return bdiAr(t.trim());
+    var h=t.replace(MIXX,function(m){
+      if(m.charAt(0)!=='«') return bdiAr(m);
+      var inner=m.slice(1,-1);
+      // sof arabcha «...» -- qo'shtirnog'i bilan BITTA quti (qo'shtirnoq qator oxirida yolg'iz qolmaydi)
+      if(!/[A-Za-z]/.test(inner)) return bdiAr('«'+inner.trim()+'»');
+      return '«'+inner.replace(RUNX,bdiAr)+'»';
+    });
+    // qutidan oldingi ( va keyingi . , ; : ! ? ) belgilar qutidan uzilib, boshqa qatorga tushmasin
+    return h.replace(/([(\[]?)(<bdi class="ar-in ib" dir="rtl">[^<]*<\/bdi>)([.,;:!?)\]]*)/g,function(m,a,b,c){
+      return (a||c) ? '<span class="nb">'+a+b+c+'</span>' : b; });
+  }
+  function arWordN(x){ return String(x).replace(/[«»]/g,' ').trim().split(/\s+/).filter(function(y){return ARCHAR.test(y);}).length; }
+  function mixLines(t){
+    var lines=[];
+    String(t).split(/\n+/).forEach(function(blk){
+      // faqat keyingi bo'lak raqam bilan boshlansa («, 2) …», «, 2-so'z …») yangi qator
+      var parts=blk.split(/([,;])\s+(?=\d+[)\-])/), i;
+      for(i=0;i<parts.length;i+=2){ lines.push((parts[i]||'')+(parts[i+1]||'')); }
+    });
+    return lines.filter(function(x){return x.trim()!=='';}).map(function(ln){
+      if(!hasLatin(ln)) return '<div class="pl pl-ar" dir="rtl">'+ln.trim()+'</div>';   // sof arabcha qator (masalan, misol gap)
+      // uzun arabcha gap («...» ichida 4+ so'z) doim O'Z qatorida, o'ngdan chapga -- o'zbekcha gap ichida
+      // ikki qatorga bo'linib, bo'laklari aralashmasin; qisqa so'zlar gap ichida qoladi.
+      var segs=ln.trim().split(/(«[^«»<>\n]*»)/), out='', buf='';
+      function flush(){ var b=buf.trim(); buf=''; if(b==='' || /^[.,;:!?…—–\-]+$/.test(b)) return;
+        out+='<div class="pl pl-mix" dir="ltr">'+mixInline(b)+'</div>'; }
+      segs.forEach(function(sg){
+        if(sg.charAt(0)==='«' && ARCHAR.test(sg) && !/[A-Za-z]/.test(sg) && arWordN(sg)>=3){
+          // «1) », «2-gap: » kabi raqam yorlig'i gapdan uzilmaydi
+          if(/^\d+(\)|\.|-[A-Za-z'\u02BB\u2018\u2019]+:)$/.test(buf.trim())){ out+='<div class="pl pl-mix" dir="ltr">'+mixInline(buf.trim()+' '+sg)+'</div>'; buf=''; }
+          else { flush(); out+='<div class="pl pl-ar" dir="rtl">'+sg+'</div>'; } }
+        else buf+=sg; });
+      flush(); return out;
+    }).join('');
+  }
+  window.plInline=mixInline;
+  return function(t){ return mixLines(t); };
+})();
 function renderQuestion() {
   if(currentQIndex >= allQuestions.length) {
     checkLevelResult();
@@ -1541,7 +1588,8 @@ function selectOption(el, isCorrect, type, qIdx) {
   if(feedbackText) {
     let fb = document.createElement('div');
     fb.className = 'feedback-box';
-    fb.innerHTML = String(feedbackText).replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch])).replace(/([\u0600-\u06FF][\u0600-\u06FF\u064B-\u0652\s/،]*[\u0600-\u06FF\u064B-\u0652])/g, '<bdi class="fa">$1</bdi>');
+    fb.textContent = ''; fb.innerHTML = String(feedbackText).replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch]));
+    fb.innerHTML = '<div>' + plInline(fb.innerHTML) + '</div>';   // bitta oqim: matn bo'laklari flex ustunlarga bo'linib ketmasin
     optsDiv.parentElement.appendChild(fb);
   }
 

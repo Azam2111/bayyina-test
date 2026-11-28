@@ -224,12 +224,12 @@
    "izoh": "«تَفْعَلُ» — «أَنْتَ» va «هِيَ» uchun bir xil."
   },
   {
-   "q": "«كَتَبْتُنَّ الدَّرْسَ» gapidan buyruq va taqiq yasang.",
+   "q": "«كَتَبْتُنَّ الدَّرْسَ» gapidan\n1) buyruq va 2) taqiq yasang.",
    "opts": [
-    "اُكْتُبُوا … لَا تَكْتُبُوا",
-    "اُكْتُبْنَ … لَا تَكْتُبُوا",
-    "اُكْتُبْنَ … لَا اُكْتُبْنَ",
-    "اُكْتُبْنَ … لَا تَكْتُبْنَ"
+    "1) اُكْتُبُوا, 2) لَا تَكْتُبُوا",
+    "1) اُكْتُبْنَ, 2) لَا تَكْتُبُوا",
+    "1) اُكْتُبْنَ, 2) لَا اُكْتُبْنَ",
+    "1) اُكْتُبْنَ, 2) لَا تَكْتُبْنَ"
    ],
    "correct": 3,
    "izoh": "«أَنْتُنَّ»: buyruq «اُكْتُبْنَ», taqiq «لَا تَكْتُبْنَ»."
@@ -400,12 +400,12 @@
    "izoh": "Mubtado aqlsiz ko'plik — xabar muannas birlik."
   },
   {
-   "q": "«___ أَيْنَ أَنْتَ؟» va «___ أَنْتَ؟»",
+   "q": "1) «___ أَيْنَ أَنْتَ؟» va 2) «___ أَنْتَ؟»",
    "opts": [
-    "مَنْ … مِنْ",
-    "مِنْ … مِنْ",
-    "مَنْ … مَنْ",
-    "مِنْ … مَنْ"
+    "1) مَنْ, 2) مِنْ",
+    "1) مِنْ, 2) مِنْ",
+    "1) مَنْ, 2) مَنْ",
+    "1) مِنْ, 2) مَنْ"
    ],
    "correct": 3,
    "izoh": "«مِنْ» — harfi jar («…dan»); «مَنْ» — «kim?»."
@@ -785,12 +785,12 @@
    "izoh": "Ular (ayollar)ning — «ـهُنَّ»."
   },
   {
-   "q": "«كَتَبْنَا» va «كَتَبْنَ» ning farqi nimada?",
+   "q": "1) «كَتَبْنَا» va 2) «كَتَبْنَ» ning farqi nimada?",
    "opts": [
     "Ikkalasi ham «biz yozdik»",
     "Ikkalasi ham «ular (ayollar) yozdi»",
-    "Birinchisi «ular (ayollar) yozdi», ikkinchisi «biz yozdik»",
-    "Birinchisi «biz yozdik», ikkinchisi «ular (ayollar) yozdi»"
+    "1) «ular (ayollar) yozdi», 2) «biz yozdik»",
+    "1) «biz yozdik», 2) «ular (ayollar) yozdi»"
    ],
    "correct": 3,
    "izoh": "«ـْنَا» — biz; «ـْنَ» — ular (ayollar)."
@@ -1005,10 +1005,10 @@
    "izoh": "«ة» tushmaydi, «ت» ga aylanadi: «مَدْرَسَتَانِ»."
   },
   {
-   "q": "«كَتَبَتْ» va «كَتَبْتُ» ning farqi nimada?",
+   "q": "1) «كَتَبَتْ» va 2) «كَتَبْتُ» ning farqi nimada?",
    "opts": [
-    "Birinchisi «u (ayol) yozdi», ikkinchisi «men yozdim»",
-    "Birinchisi «men yozdim», ikkinchisi «u (ayol) yozdi»",
+    "1) «u (ayol) yozdi», 2) «men yozdim»",
+    "1) «men yozdim», 2) «u (ayol) yozdi»",
     "Ikkalasi ham «sen yozding»",
     "Ikkalasi ham «men yozdim»"
    ],

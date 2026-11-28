@@ -114,12 +114,12 @@
    "izoh": "Takror (A2-5): «وَجَدْتُهُ» — gap kalit haqida: «الَّذِي»."
   },
   {
-   "q": "«بَيْتُكُمْ أَقْرَبُ مِنْ بَيْتِنَا» gapida «ـكُمْ» va «ـنَا» nima?",
+   "q": "«بَيْتُكُمْ أَقْرَبُ مِنْ بَيْتِنَا» gapida 1) «ـكُمْ» va 2) «ـنَا» nima?",
    "opts": [
-    "Birinchisi muzofun ilayh, ikkinchisi maf'ul bih",
+    "1) muzofun ilayh, 2) maf'ul bih",
     "Ikkalasi ham muzofun ilayh",
     "Ikkalasi ham maf'ul bih",
-    "Birinchisi maf'ul bih, ikkinchisi muzofun ilayh"
+    "1) maf'ul bih, 2) muzofun ilayh"
    ],
    "correct": 1,
    "izoh": "Ikkalasi ham ismga («بَيْت») qo'shilgan."
@@ -136,23 +136,23 @@
    "izoh": "Aqlsiz ko'plik — «ـهَا»."
   },
   {
-   "q": "«كِتَابِي جَدِيدٌ» / «قَرَأْتُ كِتَابِي» / «فِي كِتَابِي» — uch gapda nima o'zgaradi?",
+   "q": "1-gap: «كِتَابِي جَدِيدٌ»\n2-gap: «قَرَأْتُ كِتَابِي»\n3-gap: «فِي كِتَابِي»\nUch gapda «كِتَابِي» nima o'zgaradi?",
    "opts": [
-    "Ikkinchisida «كِتَابَنِي» bo'lishi kerak",
-    "Uchinchisida «كِتَابِنِي» bo'lishi kerak",
-    "Birinchisida «كِتَابُي» bo'lishi kerak",
+    "2-gapda «كِتَابَنِي» bo'lishi kerak",
+    "3-gapda «كِتَابِنِي» bo'lishi kerak",
+    "1-gapda «كِتَابُي» bo'lishi kerak",
     "Hech narsa — uchalasida ham «كِتَابِي»"
    ],
    "correct": 3,
    "izoh": "«ـِي» oldidan ism doim kasra bilan o'qiladi — e'rob ko'rinmaydi."
   },
   {
-   "q": "«دَرْسُنَا» / «دَرَسْنَا» / «دَرَّسَنَا» — «ـنَا» ning vazifasi tartib bilan qaysi?",
+   "q": "1) «دَرْسُنَا»\n2) «دَرَسْنَا»\n3) «دَرَّسَنَا»\n«ـنَا» ning vazifasi tartib bilan qaysi?",
    "opts": [
-    "maf'ul bih – foil – muzofun ilayh",
-    "foil – muzofun ilayh – maf'ul bih",
-    "muzofun ilayh – foil – maf'ul bih",
-    "muzofun ilayh – maf'ul bih – foil"
+    "1) maf'ul bih, 2) foil, 3) muzofun ilayh",
+    "1) foil, 2) muzofun ilayh, 3) maf'ul bih",
+    "1) muzofun ilayh, 2) foil, 3) maf'ul bih",
+    "1) muzofun ilayh, 2) maf'ul bih, 3) foil"
    ],
    "correct": 2,
    "izoh": "«دَرْسُنَا» — darsimiz; «دَرَسْنَا» — o'qidik; «دَرَّسَنَا» — bizni o'qitdi."
@@ -224,12 +224,12 @@
    "izoh": "Takror (A2-5): g'oyib, fe'l marfu' — nafiy."
   },
   {
-   "q": "«كَتَبْنَا دَرْسَنَا» gapidagi ikki «ـنَا» nima?",
+   "q": "«كَتَبْنَا دَرْسَنَا» gapidagi ikki «ـنَا»:\n1) «كَتَبْنَا» dagi\n2) «دَرْسَنَا» dagi\nHar biri nima?",
    "opts": [
-    "Birinchisi muzofun ilayh, ikkinchisi foil",
-    "Birinchisi foil, ikkinchisi muzofun ilayh",
+    "1) muzofun ilayh, 2) foil",
+    "1) foil, 2) muzofun ilayh",
     "Ikkalasi ham foil",
-    "Birinchisi maf'ul bih, ikkinchisi muzofun ilayh"
+    "1) maf'ul bih, 2) muzofun ilayh"
    ],
    "correct": 1,
    "izoh": "«كَتَبْـنَا» — foil; «دَرْسَـنَا» — muzofun ilayh."
@@ -367,12 +367,12 @@
    "izoh": "«حَقِيبَتُكِ» ma'rifa — sifat ham ma'rifa, marfu', muannas."
   },
   {
-   "q": "Izofada ismlar qanday ataladi?",
+   "q": "Izofada (masalan «أَسْبَابُ الْمَرَضِ»):\n1) «أَسْبَابُ»\n2) «الْمَرَضِ»\nHar biri qanday ataladi?",
    "opts": [
-    "Birinchisi muzof, ikkinchisi muzofun ilayh",
-    "Birinchisi mavsuf, ikkinchisi sifat",
-    "Birinchisi muzofun ilayh, ikkinchisi muzof",
-    "Birinchisi mubtado, ikkinchisi xabar"
+    "1) muzof, 2) muzofun ilayh",
+    "1) mavsuf, 2) sifat",
+    "1) muzofun ilayh, 2) muzof",
+    "1) mubtado, 2) xabar"
    ],
    "correct": 0,
    "izoh": "«أَسْبَابُ الْمَرَضِ»: «أَسْبَابُ» — muzof, «الْمَرَضِ» — muzofun ilayh."
@@ -576,12 +576,12 @@
    "izoh": "Fe'lda «ـنِي» — maf'ul bih; ismda «ـِي» — muzofun ilayh."
   },
   {
-   "q": "«زَارَنَا ضُيُوفُنَا فَاسْتَقْبَلْنَاهُمْ» — uchta «ـنَا» ning vazifasi tartib bilan qaysi?",
+   "q": "«زَارَنَا ضُيُوفُنَا فَاسْتَقْبَلْنَاهُمْ» gapidagi uchta «ـنَا»:\n1) «زَارَنَا» dagi\n2) «ضُيُوفُنَا» dagi\n3) «فَاسْتَقْبَلْنَاهُمْ» dagi\nVazifalari qaysi?",
    "opts": [
-    "maf'ul bih – foil – muzofun ilayh",
-    "muzofun ilayh – maf'ul bih – foil",
-    "foil – muzofun ilayh – maf'ul bih",
-    "maf'ul bih – muzofun ilayh – foil"
+    "1) maf'ul bih, 2) foil, 3) muzofun ilayh",
+    "1) muzofun ilayh, 2) maf'ul bih, 3) foil",
+    "1) foil, 2) muzofun ilayh, 3) maf'ul bih",
+    "1) maf'ul bih, 2) muzofun ilayh, 3) foil"
    ],
    "correct": 3,
    "izoh": "«زَارَنَا» — bizni; «ضُيُوفُنَا» — bizning; «اِسْتَقْبَلْنَا» — biz."
@@ -631,11 +631,11 @@
    "izoh": "«الْوَاسِعَةَ» — «غُرْفَةَ» ning sifati; muzofun ilayh baribir majrur."
   },
   {
-   "q": "«زَارَكَ جَدُّكَ» gapidagi ikki «ـكَ» nima?",
+   "q": "«زَارَكَ جَدُّكَ» gapidagi ikki «ـكَ»:\n1) «زَارَكَ» dagi\n2) «جَدُّكَ» dagi\nHar biri nima?",
    "opts": [
     "Ikkalasi ham muzofun ilayh",
-    "Birinchisi maf'ul bih, ikkinchisi muzofun ilayh",
-    "Birinchisi muzofun ilayh, ikkinchisi maf'ul bih",
+    "1) maf'ul bih, 2) muzofun ilayh",
+    "1) muzofun ilayh, 2) maf'ul bih",
     "Ikkalasi ham maf'ul bih"
    ],
    "correct": 1,
@@ -807,12 +807,12 @@
    "izoh": "«إِلَى» dan keyin muzof majrur; kasradan keyin «ـهُ» → «ـهِ»."
   },
   {
-   "q": "«سَأَلَنَا مُعَلِّمُنَا» gapidagi ikki «ـنَا» nima?",
+   "q": "«سَأَلَنَا مُعَلِّمُنَا» gapidagi ikki «ـنَا»:\n1) «سَأَلَنَا» dagi\n2) «مُعَلِّمُنَا» dagi\nHar biri nima?",
    "opts": [
     "Ikkalasi ham maf'ul bih",
-    "Birinchisi muzofun ilayh, ikkinchisi maf'ul bih",
-    "Birinchisi foil, ikkinchisi muzofun ilayh",
-    "Birinchisi maf'ul bih, ikkinchisi muzofun ilayh"
+    "1) muzofun ilayh, 2) maf'ul bih",
+    "1) foil, 2) muzofun ilayh",
+    "1) maf'ul bih, 2) muzofun ilayh"
    ],
    "correct": 3,
    "izoh": "«سَأَلَـنَا» (fe'l oxiri fathali) — maf'ul bih; foil — «مُعَلِّمُنَا»."

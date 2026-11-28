@@ -147,10 +147,10 @@
    "izoh": "Nahiyda nun tushadi."
   },
   {
-   "q": "«وَصَلْتُ قَبْلَ الْمَوْعِدِ وَجَلَسْتُ قَبْلَ الْبَابِ بِقَلِيلٍ» — ikki «قَبْلَ» qanday farq qiladi?",
+   "q": "«وَصَلْتُ قَبْلَ الْمَوْعِدِ وَجَلَسْتُ قَبْلَ الْبَابِ بِقَلِيلٍ» gapidagi ikki «قَبْلَ»:\n1) «قَبْلَ الْمَوْعِدِ»\n2) «قَبْلَ الْبَابِ»\nQanday farq qiladi?",
    "opts": [
-    "Birinchisi zarfi zamon, ikkinchisi zarfi makon",
-    "Birinchisi zarfi makon, ikkinchisi zarfi zamon",
+    "1) zarfi zamon, 2) zarfi makon",
+    "1) zarfi makon, 2) zarfi zamon",
     "Ikkalasi ham zarfi zamon",
     "Ikkalasi ham harfi jar"
    ],
@@ -180,12 +180,12 @@
    "izoh": "«الضُّيُوفُ» — ikkala fe'lda ham «ـهُمْ»."
   },
   {
-   "q": "«مُعَلِّمُ مَدْرَسَةٍ» / «مُعَلِّمُ الْمَدْرَسَةِ» / «مُعَلِّمُنَا» — tartib bilan qaysi?",
+   "q": "1) «مُعَلِّمُ مَدْرَسَةٍ»\n2) «مُعَلِّمُ الْمَدْرَسَةِ»\n3) «مُعَلِّمُنَا»\nTartib bilan qaysi?",
    "opts": [
-    "nakira – nakira – ma'rifa",
-    "ma'rifa – ma'rifa – ma'rifa",
-    "nakira – ma'rifa – ma'rifa",
-    "ma'rifa – nakira – ma'rifa"
+    "1) nakira, 2) nakira, 3) ma'rifa",
+    "1) ma'rifa, 2) ma'rifa, 3) ma'rifa",
+    "1) nakira, 2) ma'rifa, 3) ma'rifa",
+    "1) ma'rifa, 2) nakira, 3) ma'rifa"
    ],
    "correct": 2,
    "izoh": "Muzof ma'rifalikni muzofun ilayhdan oladi."
@@ -400,12 +400,12 @@
    "izoh": "«لَمْ» dan keyin majzum — nun tushadi."
   },
   {
-   "q": "«لَا تَفْتَحِ الْبَابَ» / «لَا يَفْتَحُ الْبَابَ» / «اِفْتَحِ الْبَابَ» / «مَنْ فَتَحَ الْبَابَ؟» — uslublar tartib bilan qaysi?",
+   "q": "1) «لَا تَفْتَحِ الْبَابَ»\n2) «لَا يَفْتَحُ الْبَابَ»\n3) «اِفْتَحِ الْبَابَ»\n4) «مَنْ فَتَحَ الْبَابَ؟»\nUslublar tartib bilan qaysi?",
    "opts": [
-    "nafiy – nahiy – amr – istifhom",
-    "nahiy – nafiy – isbot – istifhom",
-    "amr – nafiy – nahiy – istifhom",
-    "nahiy – nafiy – amr – istifhom"
+    "1) nafiy, 2) nahiy, 3) amr, 4) istifhom",
+    "1) nahiy, 2) nafiy, 3) isbot, 4) istifhom",
+    "1) amr, 2) nafiy, 3) nahiy, 4) istifhom",
+    "1) nahiy, 2) nafiy, 3) amr, 4) istifhom"
    ],
    "correct": 3,
    "izoh": "Majzum muxotab — nahiy; marfu' g'oyib — nafiy."
@@ -488,23 +488,23 @@
    "izoh": "Fe'l foildan oldin — birlikda; keyingi fe'lda foil — «ـْنَ»."
   },
   {
-   "q": "«الَّذِينَ يَدْرُسُونَ يَنْجَحُونَ» / «هَؤُلَاءِ نَاجِحُونَ» / «هُمْ نَاجِحُونَ» — mubtadolar ma'rifaning qaysi turi?",
+   "q": "1) «الَّذِينَ يَدْرُسُونَ يَنْجَحُونَ»\n2) «هَؤُلَاءِ نَاجِحُونَ»\n3) «هُمْ نَاجِحُونَ»\nMubtadolar ma'rifaning qaysi turi?",
    "opts": [
-    "ishora ismi – ism mavsul – zamir",
-    "ism mavsul – zamir – ishora ismi",
-    "ism mavsul – ishora ismi – zamir",
-    "zamir – ishora ismi – ism mavsul"
+    "1) ishora ismi, 2) ism mavsul, 3) zamir",
+    "1) ism mavsul, 2) zamir, 3) ishora ismi",
+    "1) ism mavsul, 2) ishora ismi, 3) zamir",
+    "1) zamir, 2) ishora ismi, 3) ism mavsul"
    ],
    "correct": 2,
    "izoh": "«الَّذِينَ», «هَؤُلَاءِ», «هُمْ»."
   },
   {
-   "q": "«أَبِي فِي الْعَمَلِ» / «أَبِي يَعْمَلُ» / «أَبِي عَمَلُهُ صَعْبٌ» / «أَبِي عَامِلٌ» — xabar turlari tartib bilan qaysi?",
+   "q": "1) «أَبِي فِي الْعَمَلِ»\n2) «أَبِي يَعْمَلُ»\n3) «أَبِي عَمَلُهُ صَعْبٌ»\n4) «أَبِي عَامِلٌ»\nXabar turlari tartib bilan qaysi?",
    "opts": [
-    "shibhi jumla – jumla fe'liya – mufrad – jumla ismiya",
-    "mufrad – jumla fe'liya – jumla ismiya – shibhi jumla",
-    "jumla fe'liya – shibhi jumla – jumla ismiya – mufrad",
-    "shibhi jumla – jumla fe'liya – jumla ismiya – mufrad"
+    "1) shibhi jumla, 2) jumla fe'liya, 3) mufrad, 4) jumla ismiya",
+    "1) mufrad, 2) jumla fe'liya, 3) jumla ismiya, 4) shibhi jumla",
+    "1) jumla fe'liya, 2) shibhi jumla, 3) jumla ismiya, 4) mufrad",
+    "1) shibhi jumla, 2) jumla fe'liya, 3) jumla ismiya, 4) mufrad"
    ],
    "correct": 3,
    "izoh": "Jar va majrur; fe'l; mubtado + xabar; bitta so'z."
@@ -752,12 +752,12 @@
    "izoh": "«أَمَّا» dan keyin marfu' ism; «فَيَدْرُسُونَ» — «هُمْ»."
   },
   {
-   "q": "Birinchisi nafiy, ikkinchisi nahiy: «أَنْتَ لَا ___ كَثِيرًا، فَلَا ___ قَبْلَ الِامْتِحَانِ»",
+   "q": "1-bo'shliq — nafiy, 2-bo'shliq — nahiy: «أَنْتَ لَا ___ كَثِيرًا، فَلَا ___ قَبْلَ الِامْتِحَانِ»",
    "opts": [
-    "تَدْرُسْ … تَلْعَبْ",
-    "تَدْرُسُ … تَلْعَبْ",
-    "تَدْرُسُ … تَلْعَبُ",
-    "تَدْرُسْ … تَلْعَبُ"
+    "1) تَدْرُسْ, 2) تَلْعَبْ",
+    "1) تَدْرُسُ, 2) تَلْعَبْ",
+    "1) تَدْرُسُ, 2) تَلْعَبُ",
+    "1) تَدْرُسْ, 2) تَلْعَبُ"
    ],
    "correct": 1,
    "izoh": "Nafiy — marfu'; nahiy — majzum."
@@ -950,12 +950,12 @@
    "izoh": "Teskarisi: foil «ـنَا» + maf'ul bih «ـهُمْ»; moziy «مَا» bilan inkor qilinadi («لَمْ» + moziy bo'lmaydi)."
   },
   {
-   "q": "«دَرَسْنَ» / «دَرَسْنَا» / «نَدْرُسُ» — foillar tartib bilan qaysi?",
+   "q": "1) «دَرَسْنَ»\n2) «دَرَسْنَا»\n3) «نَدْرُسُ»\nFoillar tartib bilan qaysi?",
    "opts": [
-    "«ـْنَ» (نَحْنُ) – «ـنَا» (هُنَّ) – mustatir «نَحْنُ»",
-    "«ـنَا» (نَحْنُ) – «ـْنَ» (هُنَّ) – mustatir «هُنَّ»",
-    "mustatir «هُنَّ» – «ـنَا» (نَحْنُ) – «نَـ» (نَحْنُ)",
-    "«ـْنَ» (هُنَّ) – «ـنَا» (نَحْنُ) – mustatir «نَحْنُ»"
+    "1) «ـْنَ» (نَحْنُ), 2) «ـنَا» (هُنَّ), 3) mustatir «نَحْنُ»",
+    "1) «ـنَا» (نَحْنُ), 2) «ـْنَ» (هُنَّ), 3) mustatir «هُنَّ»",
+    "1) mustatir «هُنَّ», 2) «ـنَا» (نَحْنُ), 3) «نَـ» (نَحْنُ)",
+    "1) «ـْنَ» (هُنَّ), 2) «ـنَا» (نَحْنُ), 3) mustatir «نَحْنُ»"
    ],
    "correct": 3,
    "izoh": "Ular (ayollar) o'qidi; biz o'qidik; biz o'qiymiz."
@@ -994,12 +994,12 @@
    "izoh": "Foil «ـُوا»; «إِلَى» + mutakallim zamiri = «إِلَيَّ» (harfi jardan keyin munfasil zamir kelmaydi)."
   },
   {
-   "q": "«سَأَلَنَا مُعَلِّمُنَا عَنْ دُرُوسِنَا فَأَجَبْنَاهُ» — to'rtta «ـنَا» ning vazifasi tartib bilan qaysi?",
+   "q": "«سَأَلَنَا مُعَلِّمُنَا عَنْ دُرُوسِنَا فَأَجَبْنَاهُ» gapidagi to'rtta «ـنَا»:\n1) «سَأَلَنَا» dagi\n2) «مُعَلِّمُنَا» dagi\n3) «دُرُوسِنَا» dagi\n4) «فَأَجَبْنَاهُ» dagi\nVazifalari qaysi?",
    "opts": [
-    "muzofun ilayh – maf'ul bih – muzofun ilayh – foil",
-    "foil – muzofun ilayh – muzofun ilayh – maf'ul bih",
-    "maf'ul bih – muzofun ilayh – muzofun ilayh – foil",
-    "maf'ul bih – foil – muzofun ilayh – foil"
+    "1) muzofun ilayh, 2) maf'ul bih, 3) muzofun ilayh, 4) foil",
+    "1) foil, 2) muzofun ilayh, 3) muzofun ilayh, 4) maf'ul bih",
+    "1) maf'ul bih, 2) muzofun ilayh, 3) muzofun ilayh, 4) foil",
+    "1) maf'ul bih, 2) foil, 3) muzofun ilayh, 4) foil"
    ],
    "correct": 2,
    "izoh": "«سَأَلَنَا» — bizdan; «مُعَلِّمُنَا», «دُرُوسِنَا» — bizning; «أَجَبْنَا» — biz."
